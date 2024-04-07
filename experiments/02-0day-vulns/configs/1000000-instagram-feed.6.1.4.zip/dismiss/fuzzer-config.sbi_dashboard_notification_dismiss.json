@@ -1,0 +1,45 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action",
+      "sbi_nonce"
+    ],
+    "fuzz": [
+      "sbi_ignore_rating_notice_nag",
+      "sbi_ignore_new_user_sale_notice",
+      "sbi_ignore_bfcm_sale_notice",
+      "sbi_dismiss"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "sbi_dashboard_notification_dismiss"
+      },
+      {
+        "name": "sbi_ignore_rating_notice_nag",
+        "value": "fuzz"
+      },
+      {
+        "name": "sbi_nonce",
+        "value": "fuzz"
+      },
+      {
+        "name": "sbi_ignore_new_user_sale_notice",
+        "value": "fuzz"
+      },
+      {
+        "name": "sbi_ignore_bfcm_sale_notice",
+        "value": "fuzz"
+      },
+      {
+        "name": "sbi_dismiss",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

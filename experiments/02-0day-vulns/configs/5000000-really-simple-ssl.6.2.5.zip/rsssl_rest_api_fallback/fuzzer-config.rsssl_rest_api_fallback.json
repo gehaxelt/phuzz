@@ -1,0 +1,40 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "rest_action",
+      "data",
+      "id",
+      "state"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "rsssl_rest_api_fallback"
+      },
+      {
+        "name": "rest_action",
+        "value": "fuzz"
+      },
+      {
+        "name": "data",
+        "value": "fuzz"
+      },
+      {
+        "name": "id",
+        "value": "fuzz"
+      },
+      {
+        "name": "state",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

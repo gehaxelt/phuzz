@@ -1,0 +1,52 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "lpage_id",
+      "lpage_template_id",
+      "lpage_type",
+      "lpage_name",
+      "lpage_slug"
+    ],
+    "data": [
+      {
+        "name": "lpage_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "lpage_template_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "lpage_type",
+        "value": "fuzz"
+      },
+      {
+        "name": "lpage_name",
+        "value": "fuzz"
+      },
+      {
+        "name": "lpage_slug",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "seedprod_lite_save_template"
+      }
+    ]
+  }
+}

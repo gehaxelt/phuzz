@@ -1,0 +1,35 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action",
+      "tracksNonce"
+    ],
+    "fuzz": [
+      "tracksEventName",
+      "tracksEventProp"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "jetpack_tracks"
+      },
+      {
+        "name": "tracksNonce",
+        "value": "fuzz"
+      },
+      {
+        "name": "tracksEventName",
+        "value": "fuzz"
+      },
+      {
+        "name": "tracksEventProp",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

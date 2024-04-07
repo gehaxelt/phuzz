@@ -1,0 +1,1 @@
+../phuzz-output/500000-ultimate-addons-for-gutenberg.2.5.1.zip/dismiss_notice/output/fuzzer-3/vulnerable-candidates.json,ae3a3fc3-6bc6-45a3-9e48-d5c92b5b59b1:  query_params:{"action": "astra-notice-dismiss"} body_params:{"nonce": "fuzz", "repeat_notice_after": "5fuzz", "notice_id": "fu"}

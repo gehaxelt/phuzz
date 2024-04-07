@@ -1,0 +1,1 @@
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/get_iso_list/output/fuzzer-1/vulnerable-candidates.json,215fb4c5-8aaf-43ce-93ab-29f38f2b7e64:  query_params:{"action": "wpvivid_get_iso_list"} body_params:{"page": "fuzz", "folder": "vfuzz", "search": "fuzz"}

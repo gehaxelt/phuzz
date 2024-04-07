@@ -1,0 +1,1 @@
+../phuzz-output/1000000-essential-addons-for-elementor-lite.5.7.1.zip/ajax_activate_plugin/output/fuzzer-1/vulnerable-candidates.json,26d2b19d-9035-4f14-aec7-1cc4dfface28:  query_params:{"action": "wpdeveloper_activate_plugin"} body_params:{"basename": "fuz"}

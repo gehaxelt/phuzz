@@ -1,0 +1,1 @@
+../phuzz-output/500000-mailchimp-for-woocommerce.2.8.3.zip/get_user_by_hash/output/fuzzer-3/vulnerable-candidates.json,7b61d036-b70f-44aa-bcec-6aacd885fcb2:  query_params:{"action": "mailchimp_get_user_by_hash", "hash": "fu"}

@@ -1,0 +1,1 @@
+../phuzz-output/300000-ad-inserter.2.7.28.zip/ai_ajax/output/fuzzer-3/vulnerable-candidates.json,81a7f73c-6849-4d43-b49d-b0f3a3f2bad7:  query_params:{"action": "ai_ajax", "block": "9uzz", "virtual": "fu", "cookie_check_url": "fuzz", "cookie_check": "fuzz"}

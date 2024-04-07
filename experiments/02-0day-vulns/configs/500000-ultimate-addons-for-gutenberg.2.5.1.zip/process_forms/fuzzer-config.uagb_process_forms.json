@@ -1,0 +1,47 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "post_id",
+      "block_id",
+      "captcha_response",
+      "form_data"
+    ],
+    "data": [
+      {
+        "name": "post_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "block_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "captcha_response",
+        "value": "fuzz"
+      },
+      {
+        "name": "form_data",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "uagb_process_forms"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+../phuzz-output/900000-ninja-forms.3.6.23.zip/ninja_forms_ajax_import_form/output/fuzzer-10/vulnerable-candidates.json,48778012-705a-42b2-93ae-ba0e169fbcd6:  query_params:{"action": "ninja_forms_ajax_import_form"} body_params:{"flagged": "fuzz", "formID": "fuzz", "import": "f<img src='x' onerror='alert(0xdeadbeef)'>uzz", "security": "fuzz"}

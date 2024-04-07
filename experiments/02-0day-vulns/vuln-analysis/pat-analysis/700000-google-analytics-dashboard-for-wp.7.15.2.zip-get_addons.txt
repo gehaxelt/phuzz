@@ -1,0 +1,1 @@
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/get_addons/output/fuzzer-10/vulnerable-candidates.json,edbd8aec-3fae-4c40-bca8-8a8711898cc6:  query_params:{"action": "exactmetrics_vue_get_addons"} body_params:{"network": "fun"}

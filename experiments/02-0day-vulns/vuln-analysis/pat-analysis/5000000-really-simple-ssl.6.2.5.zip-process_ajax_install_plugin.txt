@@ -1,0 +1,1 @@
+../phuzz-output/5000000-really-simple-ssl.6.2.5.zip/process_ajax_install_plugin/output/fuzzer-10/vulnerable-candidates.json,6806212c-2510-4f91-9cb5-3460ed6d44f6:  query_params:{"action": "rsp_upgrade_install_plugin", "token": "fuzz$", "download_link": "fu"}

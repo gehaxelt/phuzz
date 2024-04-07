@@ -1,0 +1,1 @@
+../phuzz-output/800000-siteorigin-panels.2.22.1.zip/action_export_layout/output/fuzzer-1/vulnerable-candidates.json,b326da6f-3a24-4406-b871-61cb76488502:  query_params:{"_panelsnonce": "fuzz", "action": "so_panels_export_layout"} body_params:{"panels_export_data": "(fu<script>alert(0xdeadbeef)</script>zz"}

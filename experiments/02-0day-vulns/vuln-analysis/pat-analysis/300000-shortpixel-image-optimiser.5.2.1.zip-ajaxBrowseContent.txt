@@ -1,0 +1,1 @@
+../phuzz-output/300000-shortpixel-image-optimiser.5.2.1.zip/ajaxBrowseContent/output/fuzzer-1/vulnerable-candidates.json,d721a7b2-762c-4790-ae94-0e0ffb2cdaaa:  query_params:{"action": "shortpixel_browse_content"} body_params:{"dir": "fuzzC"}

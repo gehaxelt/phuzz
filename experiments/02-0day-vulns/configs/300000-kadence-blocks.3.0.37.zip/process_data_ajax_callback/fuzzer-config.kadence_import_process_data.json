@@ -1,0 +1,72 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "import_content",
+      "import_library",
+      "import_type",
+      "import_item_id",
+      "import_style",
+      "api_key",
+      "package",
+      "url",
+      "key"
+    ],
+    "data": [
+      {
+        "name": "import_content",
+        "value": "fuzz"
+      },
+      {
+        "name": "import_library",
+        "value": "fuzz"
+      },
+      {
+        "name": "import_type",
+        "value": "fuzz"
+      },
+      {
+        "name": "import_item_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "import_style",
+        "value": "fuzz"
+      },
+      {
+        "name": "api_key",
+        "value": "fuzz"
+      },
+      {
+        "name": "package",
+        "value": "fuzz"
+      },
+      {
+        "name": "url",
+        "value": "fuzz"
+      },
+      {
+        "name": "key",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "kadence_import_process_data"
+      }
+    ]
+  }
+}

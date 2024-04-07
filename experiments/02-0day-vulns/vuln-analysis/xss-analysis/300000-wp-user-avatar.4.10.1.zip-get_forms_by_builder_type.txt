@@ -1,0 +1,1 @@
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/get_forms_by_builder_type/output/fuzzer-1/vulnerable-candidates.json,faf5374b-cfa8-4168-9739-fefa9140873b:  query_params:{"action": "pp_get_forms_by_builder_type"} body_params:{"data": "fu<a href='javascript:alert(0xdeadbeef)'zz"}

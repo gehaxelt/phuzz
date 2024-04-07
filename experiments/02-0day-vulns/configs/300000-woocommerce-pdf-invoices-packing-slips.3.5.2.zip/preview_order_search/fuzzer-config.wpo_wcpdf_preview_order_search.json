@@ -1,0 +1,37 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "search",
+      "document_type"
+    ],
+    "data": [
+      {
+        "name": "search",
+        "value": "fuzz"
+      },
+      {
+        "name": "document_type",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "wpo_wcpdf_preview_order_search"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+../phuzz-output/1000000-instagram-feed.6.1.4.zip/sbi_deactivate_addon/output/fuzzer-3/vulnerable-candidates.json,e7674619-0234-4fb5-9403-85233fdff8b8:  query_params:{"action": "sbi_deactivate_addon"} body_params:{"type": "f<script>alert(0xdeadbeef)</script>uzz", "plugin": "fu"}

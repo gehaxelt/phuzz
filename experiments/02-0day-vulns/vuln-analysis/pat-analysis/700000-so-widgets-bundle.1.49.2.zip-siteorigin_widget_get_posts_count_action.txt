@@ -1,0 +1,1 @@
+../phuzz-output/700000-so-widgets-bundle.1.49.2.zip/siteorigin_widget_get_posts_count_action/output/fuzzer-2/vulnerable-candidates.json,cb1e92ba-cb89-4faf-9b69-498ee1a3f131:  query_params:{"_widgets_nonce": "fuzz", "action": "sow_get_posts_count"} body_params:{"query": "fun"}

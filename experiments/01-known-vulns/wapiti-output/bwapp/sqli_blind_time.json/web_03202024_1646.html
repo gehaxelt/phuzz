@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wapiti scan report</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/kube.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/master.css" />
+</head>
+<body>
+    <div id="page">
+        <header style="text-align: center">
+        <h2 class="title" style="text-align: center">Wapiti vulnerability report</h2>
+        <h3>Target: http://web/sqli_15.php?title=fuzz&action=search</h3>
+        <p>Date of the scan: Wed, 20 Mar 2024 16:46:37 +0000. Scope of the scan: folder. Crawled pages: 5</p>
+        </header>
+        <hr />
+
+        <h4>Summary</h4>
+        <table class="width-100 hovered" style="background: url('logo_clear.png') no-repeat center;">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Number of vulnerabilities found</th>
+                </tr>
+            </thead>
+            <tbody id="summary">
+                    <tr>
+                        <td class="small">
+                            Backup file
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Weak credentials
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            CRLF Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_3">Content Security Policy Configuration</a>
+                        </td>
+                        <td class="small .text-centered">1</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Cross Site Request Forgery
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Potentially dangerous file
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Command execution
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Path Traversal
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web application framework
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web server
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Htaccess Bypass
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HTML Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_12">HTTP Secure Headers</a>
+                        </td>
+                        <td class="small .text-centered">2</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_13">HttpOnly Flag cookie</a>
+                        </td>
+                        <td class="small .text-centered">2</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Unencrypted Channels
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Log4Shell
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Open Redirect
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Reflected Cross Site Scripting
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_18">Secure Flag cookie</a>
+                        </td>
+                        <td class="small .text-centered">2</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Spring4Shell
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            SQL Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            TLS/SSL misconfigurations
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Server Side Request Forgery
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Stored HTML Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Stored Cross Site Scripting
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Subdomain takeover
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Blind SQL Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Unrestricted File Upload
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            XML External Entity
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Internal Server Error
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Resource consumption
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Review Webserver Metafiles for Information Leakage
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web technology
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HTTP Methods
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+            </tbody>
+        </table>
+        <hr />
+        <div id="details">
+                <h3 id="vuln_type_3">Content Security Policy Configuration</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks.</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /sqli_15.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-3-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-3-0-2">HTTP Request</a>
+                                <a href="#tab-vuln-3-0-3">HTTP Response</a>
+                            <a href="#tab-vuln-3-0-4">cURL command line</a>
+                            <a href="#tab-vuln-3-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-3-0-1" style="min-height: 124px;">
+                            <pre>CSP is not set</pre>
+                        </section>
+                        <section id="tab-vuln-3-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /sqli_15.php?title=fuzz&amp;action=search HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: security_level=0
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-3-0-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 16:46:46 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            set-cookie: PHPSESSID=c6uc8qvlojge9fkefe5vhhmulc; path=/<br />
+                                            expires: Thu, 19 Nov 1981 08:52:00 GMT<br />
+                                            cache-control: no-store, no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            set-cookie: PHPSESSID=o2s89o334d60mrf3v55ekge05i; path=/<br />
+                                            vary: Accept-Encoding<br />
+                                            content-length: 5188<br />
+                                            keep-alive: timeout=5, max=79<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=UTF-8<br />
+                                    <br />
+                                    
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+
+&lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=UTF-8&#34;&gt;
+
+&lt;!--&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;https://fonts.googleapis.com/css?family=Architects+Daughter&#34;&gt;--&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;stylesheets/stylesheet.css&#34; media=&#34;screen&#34; /&gt;
+&lt;link rel=&#34;shortcut icon&#34; href=&#34;images/favicon.ico&#34; type=&#34;image/x-icon&#34; /&gt;
+
+&lt;!--&lt;script src=&#34;//html5shiv.googlecode.com/svn/trunk/html5.js&#34;&gt;&lt;/script&gt;--&gt;
+&lt;script src=&#34;js/html5.js&#34;&gt;&lt;/script&gt;
+
+&lt;title&gt;bWAPP - SQL Injection&lt;/title&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;header&gt;
+
+&lt;h1&gt;bWAPP&lt;/h1&gt;
+
+&lt;h2&gt;an extremely buggy web app !&lt;/h2&gt;
+
+&lt;/header&gt;
+
+&lt;div id=&#34;menu&#34;&gt;
+
+    &lt;table&gt;
+
+        &lt;tr&gt;
+
+            &lt;td&gt;&lt;a href=&#34;portal.php&#34;&gt;Bugs&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;password_change.php&#34;&gt;Change Password&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;user_extra.php&#34;&gt;Create User&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;security_level_set.php&#34;&gt;Set Security Level&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;reset.php&#34; onclick=&#34;return confirm(&#39;All settings will be cleared. Are you sure?&#39;);&#34;&gt;Reset&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;credits.php&#34;&gt;Credits&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;http://itsecgames.blogspot.com&#34; target=&#34;_blank&#34;&gt;Blog&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;logout.php&#34; onclick=&#34;return confirm(&#39;Are you sure you want to leave?&#39;);&#34;&gt;Logout&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;font color=&#34;red&#34;&gt;Welcome Admin&lt;/font&gt;&lt;/td&gt;
+
+        &lt;/tr&gt;
+
+    &lt;/table&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;main&#34;&gt;
+
+    &lt;h1&gt;SQL Injection - Blind - Time-Based&lt;/h1&gt;
+
+    &lt;form action=&#34;/sqli_15.php&#34; method=&#34;GET&#34;&gt;
+
+        &lt;p&gt;
+
+        &lt;label for=&#34;title&#34;&gt;Search for a movie:&lt;/label&gt;
+        &lt;input type=&#34;text&#34; id=&#34;title&#34; name=&#34;title&#34; size=&#34;25&#34;&gt;
+
+        &lt;button type=&#34;submit&#34; name=&#34;action&#34; value=&#34;search&#34;&gt;Search&lt;/button&gt;
+
+        &lt;/p&gt;
+
+    &lt;/form&gt;
+
+    &lt;p&gt;The result will be sent by e-mail...&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;side&#34;&gt;
+
+    &lt;a href=&#34;http://twitter.com/MME_IT&#34; target=&#34;blank_&#34; class=&#34;button&#34;&gt;&lt;img src=&#34;./images/twitter.png&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://be.linkedin.com/in/malikmesellem&#34; target=&#34;blank_&#34; class=&#34;button&#34;&gt;&lt;img src=&#34;./images/linkedin.png&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://www.facebook.com/pages/MME-IT-Audits-Security/104153019664877&#34; target=&#34;blank_&#34; class=&#34;button&#34;&gt;&lt;img src=&#34;./images/facebook.png&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://itsecgames.blogspot.com&#34; target=&#34;blank_&#34; class=&#34;button&#34;&gt;&lt;img src=&#34;./images/blogger.png&#34;&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;disclaimer&#34;&gt;
+
+    &lt;p&gt;bWAPP is licensed under &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-nd/4.0/&#34; target=&#34;_blank&#34;&gt;&lt;img style=&#34;vertical-align:middle&#34; src=&#34;./images/cc.png&#34;&gt;&lt;/a&gt; &amp;copy; 2014 MME BVBA / Follow &lt;a href=&#34;http://twitter.com/MME_IT&#34; target=&#34;_blank&#34;&gt;@MME_IT&lt;/a&gt; on Twitter and ask for our cheat sheet, containing all solutions! / Need an exclusive &lt;a href=&#34;http://www.mmebvba.com&#34; target=&#34;_blank&#34;&gt;training&lt;/a&gt;?&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;bee&#34;&gt;
+
+    &lt;img src=&#34;./images/bee_1.png&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;security_level&#34;&gt;
+
+    &lt;form action=&#34;/sqli_15.php&#34; method=&#34;POST&#34;&gt;
+
+        &lt;label&gt;Set your security level:&lt;/label&gt;&lt;br /&gt;
+
+        &lt;select name=&#34;security_level&#34;&gt;
+
+            &lt;option value=&#34;0&#34;&gt;low&lt;/option&gt;
+            &lt;option value=&#34;1&#34;&gt;medium&lt;/option&gt;
+            &lt;option value=&#34;2&#34;&gt;high&lt;/option&gt;
+
+        &lt;/select&gt;
+
+        &lt;button type=&#34;submit&#34; name=&#34;form_security_level&#34; value=&#34;submit&#34;&gt;Set&lt;/button&gt;
+        &lt;font size=&#34;4&#34;&gt;Current: &lt;b&gt;low&lt;/b&gt;&lt;/font&gt;
+
+    &lt;/form&gt;
+
+&lt;/div&gt;
+
+&lt;style&gt;
+div#bug a {font-weight: bold; cursor: pointer;}
+#bug {bottom: 0; }
+#bug form {position: absolute; top: 0; bottom: 0; }
+#bug select.stretch {height: 80%; }
+#bug div {display: flex; height: 100%; align-items: flex-start;}
+#bug button {display: none;}
+#bug small {font-size: 70%}
+&lt;/style&gt;
+&lt;div id=&#34;bug&#34; class=&#34;bugs&#34;&gt;
+
+  &lt;form action=&#34;/sqli_15.php&#34; method=&#34;POST&#34; name=&#34;got_to_bug&#34; target=&#34;_blank&#34;&gt;
+
+    &lt;label&gt;Choose your bug: &lt;small&gt;&lt;input type=&#34;checkbox&#34; id=&#34;new_tab&#34; checked=&#34;checked&#34;&gt; open in new tab&lt;/small&gt;&lt;/label&gt;&lt;br /&gt;
+    &lt;div&gt;
+      &lt;a id=&#34;prev_bug&#34; title=&#34;Go to prev bug&#34;&gt;«««&lt;/a&gt;
+      &lt;select id=&#34;bug-select&#34; name=&#34;bug&#34; size=&#34;3&#34;&gt;
+
+        
+          &lt;option title=&#39;portal.php&#39; value=&#39;0&#39; &gt;----------------------  bWAPP v2.2  -----------------------&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;1&#39; &gt;/ A1 - Injection /&lt;/option&gt;
+          &lt;option title=&#39;htmli_get.php&#39; value=&#39;2&#39; &gt;HTML Injection - Reflected (GET)&lt;/option&gt;
+          &lt;option title=&#39;htmli_post.php&#39; value=&#39;3&#39; &gt;HTML Injection - Reflected (POST)&lt;/option&gt;
+          &lt;option title=&#39;htmli_current_url.php&#39; value=&#39;4&#39; &gt;HTML Injection - Reflected (Current URL)&lt;/option&gt;
+          &lt;option title=&#39;htmli_stored.php&#39; value=&#39;5&#39; &gt;HTML Injection - Stored (Blog)&lt;/option&gt;
+          &lt;option title=&#39; iframei.php&#39; value=&#39;6&#39; &gt;iFrame Injection&lt;/option&gt;
+          &lt;option title=&#39;ldapi.php&#39; value=&#39;7&#39; &gt;LDAP Injection (Search)&lt;/option&gt;
+          &lt;option title=&#39;maili.php&#39; value=&#39;8&#39; &gt;Mail Header Injection (SMTP)&lt;/option&gt;
+          &lt;option title=&#39;commandi.php&#39; value=&#39;9&#39; &gt;OS Command Injection&lt;/option&gt;
+          &lt;option title=&#39;commandi_blind.php&#39; value=&#39;10&#39; &gt;OS Command Injection - Blind&lt;/option&gt;
+          &lt;option title=&#39;phpi.php&#39; value=&#39;11&#39; &gt;PHP Code Injection&lt;/option&gt;
+          &lt;option title=&#39;ssii.php&#39; value=&#39;12&#39; &gt;Server-Side Includes (SSI) Injection&lt;/option&gt;
+          &lt;option title=&#39;sqli_1.php&#39; value=&#39;13&#39; &gt;SQL Injection (GET/Search)&lt;/option&gt;
+          &lt;option title=&#39;sqli_2.php&#39; value=&#39;14&#39; &gt;SQL Injection (GET/Select)&lt;/option&gt;
+          &lt;option title=&#39;sqli_6.php&#39; value=&#39;15&#39; &gt;SQL Injection (POST/Search)&lt;/option&gt;
+          &lt;option title=&#39;sqli_13.php&#39; value=&#39;16&#39; &gt;SQL Injection (POST/Select)&lt;/option&gt;
+          &lt;option title=&#39;sqli_10-1.php&#39; value=&#39;17&#39; &gt;SQL Injection (AJAX/JSON/jQuery)&lt;/option&gt;
+          &lt;option title=&#39;sqli_9.php&#39; value=&#39;18&#39; &gt;SQL Injection (CAPTCHA)&lt;/option&gt;
+          &lt;option title=&#39;sqli_3.php&#39; value=&#39;19&#39; &gt;SQL Injection (Login Form/Hero)&lt;/option&gt;
+          &lt;option title=&#39;sqli_16.php&#39; value=&#39;20&#39; &gt;SQL Injection (Login Form/User)&lt;/option&gt;
+          &lt;option title=&#39;sqli_11.php&#39; value=&#39;21&#39; &gt;SQL Injection (SQLite)&lt;/option&gt;
+          &lt;option title=&#39;sqli_drupal.php&#39; value=&#39;22&#39; &gt;SQL Injection (Drupal)&lt;/option&gt;
+          &lt;option title=&#39;sqli_7.php&#39; value=&#39;23&#39; &gt;SQL Injection - Stored (Blog)&lt;/option&gt;
+          &lt;option title=&#39;sqli_12.php&#39; value=&#39;24&#39; &gt;SQL Injection - Stored (SQLite)&lt;/option&gt;
+          &lt;option title=&#39;sqli_17.php&#39; value=&#39;25&#39; &gt;SQL Injection - Stored (User-Agent)&lt;/option&gt;
+          &lt;option title=&#39;sqli_8-1.php&#39; value=&#39;26&#39; &gt;SQL Injection - Stored (XML)&lt;/option&gt;
+          &lt;option title=&#39;sqli_4.php&#39; value=&#39;27&#39; &gt;SQL Injection - Blind - Boolean-Based&lt;/option&gt;
+          &lt;option title=&#39;sqli_15.php&#39; value=&#39;28&#39;  selected=&#34;selected&#34;&gt;SQL Injection - Blind - Time-Based&lt;/option&gt;
+          &lt;option title=&#39;sqli_14.php&#39; value=&#39;29&#39; &gt;SQL Injection - Blind (SQLite)&lt;/option&gt;
+          &lt;option title=&#39;sqli_5.php&#39; value=&#39;30&#39; &gt;SQL Injection - Blind (Web Services/SOAP)&lt;/option&gt;
+          &lt;option title=&#39;xmli_1.php&#39; value=&#39;31&#39; &gt;XML/XPath Injection (Login Form)&lt;/option&gt;
+          &lt;option title=&#39;xmli_2.php&#39; value=&#39;32&#39; &gt;XML/XPath Injection (Search)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;33&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;34&#39; &gt;/ A2 - Broken Auth. &amp; Session Mgmt. /&lt;/option&gt;
+          &lt;option title=&#39;ba_captcha_bypass.php&#39; value=&#39;35&#39; &gt;Broken Authentication - CAPTCHA Bypassing&lt;/option&gt;
+          &lt;option title=&#39;ba_forgotten.php&#39; value=&#39;36&#39; &gt;Broken Authentication - Forgotten Function&lt;/option&gt;
+          &lt;option title=&#39;ba_insecure_login.php&#39; value=&#39;37&#39; &gt;Broken Authentication - Insecure Login Forms&lt;/option&gt;
+          &lt;option title=&#39;ba_logout.php&#39; value=&#39;38&#39; &gt;Broken Authentication - Logout Management&lt;/option&gt;
+          &lt;option title=&#39;ba_pwd_attacks.php&#39; value=&#39;39&#39; &gt;Broken Authentication - Password Attacks&lt;/option&gt;
+          &lt;option title=&#39;ba_weak_pwd.php&#39; value=&#39;40&#39; &gt;Broken Authentication - Weak Passwords&lt;/option&gt;
+          &lt;option title=&#39;smgmt_admin_portal.php&#39; value=&#39;41&#39; &gt;Session Management - Administrative Portals&lt;/option&gt;
+          &lt;option title=&#39;smgmt_cookies_httponly.php&#39; value=&#39;42&#39; &gt;Session Management - Cookies (HTTPOnly)&lt;/option&gt;
+          &lt;option title=&#39;smgmt_cookies_secure.php&#39; value=&#39;43&#39; &gt;Session Management - Cookies (Secure)&lt;/option&gt;
+          &lt;option title=&#39;smgmt_sessionid_url.php&#39; value=&#39;44&#39; &gt;Session Management - Session ID in URL&lt;/option&gt;
+          &lt;option title=&#39;smgmt_strong_sessions.php&#39; value=&#39;45&#39; &gt;Session Management - Strong Sessions&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;46&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;47&#39; &gt;/ A3 - Cross-Site Scripting (XSS) /&lt;/option&gt;
+          &lt;option title=&#39;xss_get.php&#39; value=&#39;48&#39; &gt;Cross-Site Scripting - Reflected (GET)&lt;/option&gt;
+          &lt;option title=&#39;xss_post.php&#39; value=&#39;49&#39; &gt;Cross-Site Scripting - Reflected (POST)&lt;/option&gt;
+          &lt;option title=&#39;xss_json.php&#39; value=&#39;50&#39; &gt;Cross-Site Scripting - Reflected (JSON)&lt;/option&gt;
+          &lt;option title=&#39;xss_ajax_2-1.php&#39; value=&#39;51&#39; &gt;Cross-Site Scripting - Reflected (AJAX/JSON)&lt;/option&gt;
+          &lt;option title=&#39;xss_ajax_1-1.php&#39; value=&#39;52&#39; &gt;Cross-Site Scripting - Reflected (AJAX/XML)&lt;/option&gt;
+          &lt;option title=&#39;xss_back_button.php&#39; value=&#39;53&#39; &gt;Cross-Site Scripting - Reflected (Back Button)&lt;/option&gt;
+          &lt;option title=&#39;xss_custom_header.php&#39; value=&#39;54&#39; &gt;Cross-Site Scripting - Reflected (Custom Header)&lt;/option&gt;
+          &lt;option title=&#39;xss_eval.php?date=Date()&#39; value=&#39;55&#39; &gt;Cross-Site Scripting - Reflected (Eval)&lt;/option&gt;
+          &lt;option title=&#39;xss_href-1.php&#39; value=&#39;56&#39; &gt;Cross-Site Scripting - Reflected (HREF)&lt;/option&gt;
+          &lt;option title=&#39;xss_login.php&#39; value=&#39;57&#39; &gt;Cross-Site Scripting - Reflected (Login Form)&lt;/option&gt;
+          &lt;option title=&#39;xss_phpmyadmin.php&#39; value=&#39;58&#39; &gt;Cross-Site Scripting - Reflected (phpMyAdmin)&lt;/option&gt;
+          &lt;option title=&#39;xss_php_self.php&#39; value=&#39;59&#39; &gt;Cross-Site Scripting - Reflected (PHP_SELF)&lt;/option&gt;
+          &lt;option title=&#39;xss_referer.php&#39; value=&#39;60&#39; &gt;Cross-Site Scripting - Reflected (Referer)&lt;/option&gt;
+          &lt;option title=&#39;xss_user_agent.php&#39; value=&#39;61&#39; &gt;Cross-Site Scripting - Reflected (User-Agent)&lt;/option&gt;
+          &lt;option title=&#39;xss_stored_1.php&#39; value=&#39;62&#39; &gt;Cross-Site Scripting - Stored (Blog)&lt;/option&gt;
+          &lt;option title=&#39;xss_stored_3.php&#39; value=&#39;63&#39; &gt;Cross-Site Scripting - Stored (Change Secret)&lt;/option&gt;
+          &lt;option title=&#39;xss_stored_2.php&#39; value=&#39;64&#39; &gt;Cross-Site Scripting - Stored (Cookies)&lt;/option&gt;
+          &lt;option title=&#39;xss_sqlitemanager.php&#39; value=&#39;65&#39; &gt;Cross-Site Scripting - Stored (SQLiteManager)&lt;/option&gt;
+          &lt;option title=&#39;xss_stored_4.php&#39; value=&#39;66&#39; &gt;Cross-Site Scripting - Stored (User-Agent)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;67&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;68&#39; &gt;/ A4 - Insecure Direct Object References /&lt;/option&gt;
+          &lt;option title=&#39;insecure_direct_object_ref_1.php&#39; value=&#39;69&#39; &gt;Insecure DOR (Change Secret)&lt;/option&gt;
+          &lt;option title=&#39;insecure_direct_object_ref_3.php&#39; value=&#39;70&#39; &gt;Insecure DOR (Reset Secret)&lt;/option&gt;
+          &lt;option title=&#39;insecure_direct_object_ref_2.php&#39; value=&#39;71&#39; &gt;Insecure DOR (Order Tickets)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;72&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;73&#39; &gt;/ A5 - Security Misconfiguration /&lt;/option&gt;
+          &lt;option title=&#39;sm_samba.php&#39; value=&#39;74&#39; &gt;Arbitrary File Access (Samba)&lt;/option&gt;
+          &lt;option title=&#39;sm_cross_domain_policy.php&#39; value=&#39;75&#39; &gt;Cross-Domain Policy File (Flash)&lt;/option&gt;
+          &lt;option title=&#39;sm_cors.php&#39; value=&#39;76&#39; &gt;Cross-Origin Resource Sharing (AJAX)&lt;/option&gt;
+          &lt;option title=&#39;sm_xst.php&#39; value=&#39;77&#39; &gt;Cross-Site Tracing (XST)&lt;/option&gt;
+          &lt;option title=&#39;sm_dos_3.php&#39; value=&#39;78&#39; &gt;Denial-of-Service (Large Chunk Size)&lt;/option&gt;
+          &lt;option title=&#39;sm_dos_1.php&#39; value=&#39;79&#39; &gt;Denial-of-Service (Slow HTTP DoS)&lt;/option&gt;
+          &lt;option title=&#39;sm_dos_4.php&#39; value=&#39;80&#39; &gt;Denial-of-Service (SSL-Exhaustion)&lt;/option&gt;
+          &lt;option title=&#39;sm_dos_2.php&#39; value=&#39;81&#39; &gt;Denial-of-Service (XML Bomb)&lt;/option&gt;
+          &lt;option title=&#39;sm_ftp.php&#39; value=&#39;82&#39; &gt;Insecure FTP Configuration&lt;/option&gt;
+          &lt;option title=&#39;sm_snmp.php&#39; value=&#39;83&#39; &gt;Insecure SNMP Configuration&lt;/option&gt;
+          &lt;option title=&#39;sm_webdav.php&#39; value=&#39;84&#39; &gt;Insecure WebDAV Configuration&lt;/option&gt;
+          &lt;option title=&#39;sm_local_priv_esc_1.php&#39; value=&#39;85&#39; &gt;Local Privilege Escalation (sendpage)&lt;/option&gt;
+          &lt;option title=&#39;sm_local_priv_esc_2.php&#39; value=&#39;86&#39; &gt;Local Privilege Escalation (udev)&lt;/option&gt;
+          &lt;option title=&#39;sm_mitm_1.php&#39; value=&#39;87&#39; &gt;Man-in-the-Middle Attack (HTTP)&lt;/option&gt;
+          &lt;option title=&#39;sm_mitm_2.php&#39; value=&#39;88&#39; &gt;Man-in-the-Middle Attack (SMTP)&lt;/option&gt;
+          &lt;option title=&#39;sm_obu_files.php&#39; value=&#39;89&#39; &gt;Old/Backup &amp; Unreferenced Files&lt;/option&gt;
+          &lt;option title=&#39;sm_robots.php&#39; value=&#39;90&#39; &gt;Robots File&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;91&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;92&#39; &gt;/ A6 - Sensitive Data Exposure /&lt;/option&gt;
+          &lt;option title=&#39;insecure_crypt_storage_3.php&#39; value=&#39;93&#39; &gt;Base64 Encoding (Secret)&lt;/option&gt;
+          &lt;option title=&#39;insuff_transp_layer_protect_3.php&#39; value=&#39;94&#39; &gt;BEAST/CRIME/BREACH Attacks&lt;/option&gt;
+          &lt;option title=&#39;insuff_transp_layer_protect_1.php&#39; value=&#39;95&#39; &gt;Clear Text HTTP (Credentials)&lt;/option&gt;
+          &lt;option title=&#39;heartbleed.php&#39; value=&#39;96&#39; &gt;Heartbleed Vulnerability&lt;/option&gt;
+          &lt;option title=&#39;hostheader_2.php&#39; value=&#39;97&#39; &gt;Host Header Attack (Reset Poisoning)&lt;/option&gt;
+          &lt;option title=&#39;insecure_crypt_storage_1.php&#39; value=&#39;98&#39; &gt;HTML5 Web Storage (Secret)&lt;/option&gt;
+          &lt;option title=&#39;insuff_transp_layer_protect_4.php&#39; value=&#39;99&#39; &gt;POODLE Vulnerability&lt;/option&gt;
+          &lt;option title=&#39;insuff_transp_layer_protect_2.php&#39; value=&#39;100&#39; &gt;SSL 2.0 Deprecated Protocol&lt;/option&gt;
+          &lt;option title=&#39;insecure_crypt_storage_2.php&#39; value=&#39;101&#39; &gt;Text Files (Accounts)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;102&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;103&#39; &gt;/ A7 - Missing Functional Level Access Control /&lt;/option&gt;
+          &lt;option title=&#39;directory_traversal_2.php?directory=documents&#39; value=&#39;104&#39; &gt;Directory Traversal - Directories&lt;/option&gt;
+          &lt;option title=&#39;directory_traversal_1.php?page=message.txt&#39; value=&#39;105&#39; &gt;Directory Traversal - Files&lt;/option&gt;
+          &lt;option title=&#39;hostheader_1.php&#39; value=&#39;106&#39; &gt;Host Header Attack (Cache Poisoning)&lt;/option&gt;
+          &lt;option title=&#39;hostheader_2.php&#39; value=&#39;107&#39; &gt;Host Header Attack (Reset Poisoning)&lt;/option&gt;
+          &lt;option title=&#39;lfi_sqlitemanager.php&#39; value=&#39;108&#39; &gt;Local File Inclusion (SQLiteManager)&lt;/option&gt;
+          &lt;option title=&#39;rlfi.php&#39; value=&#39;109&#39; &gt;Remote &amp; Local File Inclusion (RFI/LFI)&lt;/option&gt;
+          &lt;option title=&#39;restrict_device_access.php&#39; value=&#39;110&#39; &gt;Restrict Device Access&lt;/option&gt;
+          &lt;option title=&#39;restrict_folder_access.php&#39; value=&#39;111&#39; &gt;Restrict Folder Access&lt;/option&gt;
+          &lt;option title=&#39;ssrf.php&#39; value=&#39;112&#39; &gt;Server Side Request Forgery (SSRF)&lt;/option&gt;
+          &lt;option title=&#39;xxe-1.php&#39; value=&#39;113&#39; &gt;XML External Entity Attacks (XXE)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;114&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;115&#39; &gt;/ A8 - Cross-Site Request Forgery (CSRF) /&lt;/option&gt;
+          &lt;option title=&#39;csrf_1.php&#39; value=&#39;116&#39; &gt;Cross-Site Request Forgery (Change Password)&lt;/option&gt;
+          &lt;option title=&#39;csrf_3.php&#39; value=&#39;117&#39; &gt;Cross-Site Request Forgery (Change Secret)&lt;/option&gt;
+          &lt;option title=&#39;csrf_2.php&#39; value=&#39;118&#39; &gt;Cross-Site Request Forgery (Transfer Amount)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;119&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;120&#39; &gt;/ A9 - Using Known Vulnerable Components /&lt;/option&gt;
+          &lt;option title=&#39;bof_1.php&#39; value=&#39;121&#39; &gt;Buffer Overflow (Local)&lt;/option&gt;
+          &lt;option title=&#39;bof_2.php&#39; value=&#39;122&#39; &gt;Buffer Overflow (Remote)&lt;/option&gt;
+          &lt;option title=&#39;sqli_drupal.php&#39; value=&#39;123&#39; &gt;Drupal SQL Injection (Drupageddon)&lt;/option&gt;
+          &lt;option title=&#39;heartbleed.php&#39; value=&#39;124&#39; &gt;Heartbleed Vulnerability&lt;/option&gt;
+          &lt;option title=&#39;php_cgi.php&#39; value=&#39;125&#39; &gt;PHP CGI Remote Code Execution&lt;/option&gt;
+          &lt;option title=&#39;php_eval.php&#39; value=&#39;126&#39; &gt;PHP Eval Function&lt;/option&gt;
+          &lt;option title=&#39;xss_phpmyadmin.php&#39; value=&#39;127&#39; &gt;phpMyAdmin BBCode Tag XSS&lt;/option&gt;
+          &lt;option title=&#39;shellshock.php&#39; value=&#39;128&#39; &gt;Shellshock Vulnerability (CGI)&lt;/option&gt;
+          &lt;option title=&#39;lfi_sqlitemanager.php&#39; value=&#39;129&#39; &gt;SQLiteManager Local File Inclusion&lt;/option&gt;
+          &lt;option title=&#39;phpi_sqlitemanager.php&#39; value=&#39;130&#39; &gt;SQLiteManager PHP Code Injection&lt;/option&gt;
+          &lt;option title=&#39;xss_sqlitemanager.php&#39; value=&#39;131&#39; &gt;SQLiteManager XSS&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;132&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;133&#39; &gt;/ A10 - Unvalidated Redirects &amp; Forwards /&lt;/option&gt;
+          &lt;option title=&#39;unvalidated_redir_fwd_1.php&#39; value=&#39;134&#39; &gt;Unvalidated Redirects &amp; Forwards (1)&lt;/option&gt;
+          &lt;option title=&#39;unvalidated_redir_fwd_2.php&#39; value=&#39;135&#39; &gt;Unvalidated Redirects &amp; Forwards (2)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;136&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;137&#39; &gt;/ Other bugs... /&lt;/option&gt;
+          &lt;option title=&#39;clickjacking.php&#39; value=&#39;138&#39; &gt;ClickJacking (Movie Tickets)&lt;/option&gt;
+          &lt;option title=&#39;cs_validation.php&#39; value=&#39;139&#39; &gt;Client-Side Validation (Password)&lt;/option&gt;
+          &lt;option title=&#39;hpp-1.php&#39; value=&#39;140&#39; &gt;HTTP Parameter Pollution&lt;/option&gt;
+          &lt;option title=&#39;http_response_splitting.php&#39; value=&#39;141&#39; &gt;HTTP Response Splitting&lt;/option&gt;
+          &lt;option title=&#39;http_verb_tampering.php&#39; value=&#39;142&#39; &gt;HTTP Verb Tampering&lt;/option&gt;
+          &lt;option title=&#39;information_disclosure_4.php&#39; value=&#39;143&#39; &gt;Information Disclosure - Favicon&lt;/option&gt;
+          &lt;option title=&#39;information_disclosure_2.php&#39; value=&#39;144&#39; &gt;Information Disclosure - Headers&lt;/option&gt;
+          &lt;option title=&#39;information_disclosure_1.php&#39; value=&#39;145&#39; &gt;Information Disclosure - PHP version&lt;/option&gt;
+          &lt;option title=&#39;information_disclosure_3.php&#39; value=&#39;146&#39; &gt;Information Disclosure - Robots File&lt;/option&gt;
+          &lt;option title=&#39;insecure_iframe.php&#39; value=&#39;147&#39; &gt;Insecure iFrame (Login Form)&lt;/option&gt;
+          &lt;option title=&#39;unrestricted_file_upload.php&#39; value=&#39;148&#39; &gt;Unrestricted File Upload&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;149&#39; &gt;---------------------------  Extras  --------------------------&lt;/option&gt;
+          &lt;option title=&#39;aim.php&#39; value=&#39;150&#39; &gt;A.I.M. - No-authentication Mode&lt;/option&gt;
+          &lt;option title=&#39;../ClientAccessPolicy.xml&#39; value=&#39;151&#39; &gt;Client Access Policy File&lt;/option&gt;
+          &lt;option title=&#39;../crossdomain.xml&#39; value=&#39;152&#39; &gt;Cross-Domain Policy File&lt;/option&gt;
+          &lt;option title=&#39;666&#39; value=&#39;153&#39; &gt;Evil 666 Fuzzing Page&lt;/option&gt;
+          &lt;option title=&#39;manual_interv.php&#39; value=&#39;154&#39; &gt;Manual Intervention Required!&lt;/option&gt;
+          &lt;option title=&#39;admin/index.php&#39; value=&#39;155&#39; &gt;Unprotected Admin Portal&lt;/option&gt;
+          &lt;option title=&#39;secret_html.php&#39; value=&#39;156&#39; &gt;We Steal Secrets... (html)&lt;/option&gt;
+          &lt;option title=&#39;secret.php&#39; value=&#39;157&#39; &gt;We Steal Secrets... (plain)&lt;/option&gt;
+          &lt;option title=&#39;ws_soap.php&#39; value=&#39;158&#39; &gt;WSDL File (Web Services/SOAP)&lt;/option&gt;
+
+      &lt;/select&gt;
+      &lt;a id=&#34;next_bug&#34; title=&#34;Go to next bug&#34;&gt;»»»&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;button name=&#34;form_bug&#34;&gt;&lt;/button&gt;
+
+  &lt;/form&gt;
+&lt;script&gt;
+  function adjust_size() {
+    var select = document.getElementById(&#39;bug-select&#39;);
+    console.log(window.innerWidth,window.innerHeight,select.getAttribute(&#39;size&#39;));
+    if(window.innerWidth &lt; 1665) { select.setAttribute(&#39;size&#39;, 1); select.classList.remove(&#39;stretch&#39;); }
+    else  { select.setAttribute(&#39;size&#39;, 3);  select.classList.add(&#39;stretch&#39;); }
+    console.log(select.getAttribute(&#39;size&#39;));
+    var same_tab = localStorage.getItem(&#39;same_tab&#39;);
+    if(same_tab) {
+      document.querySelector(&#39;form[name=&#34;got_to_bug&#34;]&#39;).setAttribute(&#39;target&#39;,same_tab);
+      if (same_tab == &#39;_self&#39;) document.getElementById(&#39;new_tab&#39;).removeAttribute(&#39;checked&#39;);
+    }
+  }
+  document.getElementById(&#39;prev_bug&#39;).addEventListener(&#39;click&#39;, function (e) {document.getElementById(&#39;bug-select&#39;).value = parseInt(document.getElementById(&#39;bug-select&#39;).value)-1;});
+  document.getElementById(&#39;next_bug&#39;).addEventListener(&#39;click&#39;, function (e) {document.getElementById(&#39;bug-select&#39;).value = parseInt(document.getElementById(&#39;bug-select&#39;).value)+1;});
+  document.getElementById(&#39;bug-select&#39;).addEventListener(&#39;change&#39;, function (e) {document.querySelector(&#39;button[name=\&#39;form_bug\&#39;]&#39;).click();});
+  document.getElementById(&#39;new_tab&#39;).addEventListener(&#39;change&#39;, function (e) {
+    localStorage.setItem(&#39;same_tab&#39;,e.target.checked?&#39;_blank&#39;:&#39;_self&#39;);
+    document.querySelector(&#39;form[name=&#34;got_to_bug&#34;]&#39;).setAttribute(&#39;target&#39;,localStorage.getItem(&#39;same_tab&#39;));
+  });
+  window.addEventListener(&#39;resize&#39;, adjust_size);
+  document.addEventListener(&#39;DOMContentLoaded&#39;, adjust_size);
+&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-3-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/sqli_15.php?title=fuzz&amp;action=search&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-3-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-CONF-12&#39;, &#39;OSHP-Content-Security-Policy&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>Configuring Content Security Policy involves adding the Content-Security-Policy HTTP header to a web page and giving it values to control what resources the user agent is allowed to load for that page.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Mozilla: Content Security Policy (CSP)</a></li>
+                    <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">OWASP: Content Security Policy Cheat Sheet</a></li>
+                    <li><a href="https://owasp.org/www-pdf-archive/2019-02-22_-_How_do_I_Content_Security_Policy_-_Print.pdf">OWASP: How to do Content Security Policy (PDF)</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/12-Test_for_Content_Security_Policy">OWASP: Content Security Policy</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_12">HTTP Secure Headers</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>HTTP security headers tell the browser how to behave when handling the website&#39;s content.</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /sqli_15.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-12-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-12-0-2">HTTP Request</a>
+                                <a href="#tab-vuln-12-0-3">HTTP Response</a>
+                            <a href="#tab-vuln-12-0-4">cURL command line</a>
+                            <a href="#tab-vuln-12-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-12-0-1" style="min-height: 124px;">
+                            <pre>X-Frame-Options is not set</pre>
+                        </section>
+                        <section id="tab-vuln-12-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /sqli_15.php?title=fuzz&amp;action=search HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: security_level=0
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-12-0-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 16:46:46 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            set-cookie: PHPSESSID=g1ajkdv8nu9p6305v5om39nk4c; path=/<br />
+                                            expires: Thu, 19 Nov 1981 08:52:00 GMT<br />
+                                            cache-control: no-store, no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            set-cookie: PHPSESSID=apms9k9h1aoguhbeub99kcpjqu; path=/<br />
+                                            vary: Accept-Encoding<br />
+                                            content-length: 5188<br />
+                                            keep-alive: timeout=5, max=78<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=UTF-8<br />
+                                    <br />
+                                    
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+
+&lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=UTF-8&#34;&gt;
+
+&lt;!--&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;https://fonts.googleapis.com/css?family=Architects+Daughter&#34;&gt;--&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;stylesheets/stylesheet.css&#34; media=&#34;screen&#34; /&gt;
+&lt;link rel=&#34;shortcut icon&#34; href=&#34;images/favicon.ico&#34; type=&#34;image/x-icon&#34; /&gt;
+
+&lt;!--&lt;script src=&#34;//html5shiv.googlecode.com/svn/trunk/html5.js&#34;&gt;&lt;/script&gt;--&gt;
+&lt;script src=&#34;js/html5.js&#34;&gt;&lt;/script&gt;
+
+&lt;title&gt;bWAPP - SQL Injection&lt;/title&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;header&gt;
+
+&lt;h1&gt;bWAPP&lt;/h1&gt;
+
+&lt;h2&gt;an extremely buggy web app !&lt;/h2&gt;
+
+&lt;/header&gt;
+
+&lt;div id=&#34;menu&#34;&gt;
+
+    &lt;table&gt;
+
+        &lt;tr&gt;
+
+            &lt;td&gt;&lt;a href=&#34;portal.php&#34;&gt;Bugs&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;password_change.php&#34;&gt;Change Password&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;user_extra.php&#34;&gt;Create User&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;security_level_set.php&#34;&gt;Set Security Level&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;reset.php&#34; onclick=&#34;return confirm(&#39;All settings will be cleared. Are you sure?&#39;);&#34;&gt;Reset&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;credits.php&#34;&gt;Credits&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;http://itsecgames.blogspot.com&#34; target=&#34;_blank&#34;&gt;Blog&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;logout.php&#34; onclick=&#34;return confirm(&#39;Are you sure you want to leave?&#39;);&#34;&gt;Logout&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;font color=&#34;red&#34;&gt;Welcome Admin&lt;/font&gt;&lt;/td&gt;
+
+        &lt;/tr&gt;
+
+    &lt;/table&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;main&#34;&gt;
+
+    &lt;h1&gt;SQL Injection - Blind - Time-Based&lt;/h1&gt;
+
+    &lt;form action=&#34;/sqli_15.php&#34; method=&#34;GET&#34;&gt;
+
+        &lt;p&gt;
+
+        &lt;label for=&#34;title&#34;&gt;Search for a movie:&lt;/label&gt;
+        &lt;input type=&#34;text&#34; id=&#34;title&#34; name=&#34;title&#34; size=&#34;25&#34;&gt;
+
+        &lt;button type=&#34;submit&#34; name=&#34;action&#34; value=&#34;search&#34;&gt;Search&lt;/button&gt;
+
+        &lt;/p&gt;
+
+    &lt;/form&gt;
+
+    &lt;p&gt;The result will be sent by e-mail...&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;side&#34;&gt;
+
+    &lt;a href=&#34;http://twitter.com/MME_IT&#34; target=&#34;blank_&#34; class=&#34;button&#34;&gt;&lt;img src=&#34;./images/twitter.png&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://be.linkedin.com/in/malikmesellem&#34; target=&#34;blank_&#34; class=&#34;button&#34;&gt;&lt;img src=&#34;./images/linkedin.png&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://www.facebook.com/pages/MME-IT-Audits-Security/104153019664877&#34; target=&#34;blank_&#34; class=&#34;button&#34;&gt;&lt;img src=&#34;./images/facebook.png&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://itsecgames.blogspot.com&#34; target=&#34;blank_&#34; class=&#34;button&#34;&gt;&lt;img src=&#34;./images/blogger.png&#34;&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;disclaimer&#34;&gt;
+
+    &lt;p&gt;bWAPP is licensed under &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-nd/4.0/&#34; target=&#34;_blank&#34;&gt;&lt;img style=&#34;vertical-align:middle&#34; src=&#34;./images/cc.png&#34;&gt;&lt;/a&gt; &amp;copy; 2014 MME BVBA / Follow &lt;a href=&#34;http://twitter.com/MME_IT&#34; target=&#34;_blank&#34;&gt;@MME_IT&lt;/a&gt; on Twitter and ask for our cheat sheet, containing all solutions! / Need an exclusive &lt;a href=&#34;http://www.mmebvba.com&#34; target=&#34;_blank&#34;&gt;training&lt;/a&gt;?&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;bee&#34;&gt;
+
+    &lt;img src=&#34;./images/bee_1.png&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;security_level&#34;&gt;
+
+    &lt;form action=&#34;/sqli_15.php&#34; method=&#34;POST&#34;&gt;
+
+        &lt;label&gt;Set your security level:&lt;/label&gt;&lt;br /&gt;
+
+        &lt;select name=&#34;security_level&#34;&gt;
+
+            &lt;option value=&#34;0&#34;&gt;low&lt;/option&gt;
+            &lt;option value=&#34;1&#34;&gt;medium&lt;/option&gt;
+            &lt;option value=&#34;2&#34;&gt;high&lt;/option&gt;
+
+        &lt;/select&gt;
+
+        &lt;button type=&#34;submit&#34; name=&#34;form_security_level&#34; value=&#34;submit&#34;&gt;Set&lt;/button&gt;
+        &lt;font size=&#34;4&#34;&gt;Current: &lt;b&gt;low&lt;/b&gt;&lt;/font&gt;
+
+    &lt;/form&gt;
+
+&lt;/div&gt;
+
+&lt;style&gt;
+div#bug a {font-weight: bold; cursor: pointer;}
+#bug {bottom: 0; }
+#bug form {position: absolute; top: 0; bottom: 0; }
+#bug select.stretch {height: 80%; }
+#bug div {display: flex; height: 100%; align-items: flex-start;}
+#bug button {display: none;}
+#bug small {font-size: 70%}
+&lt;/style&gt;
+&lt;div id=&#34;bug&#34; class=&#34;bugs&#34;&gt;
+
+  &lt;form action=&#34;/sqli_15.php&#34; method=&#34;POST&#34; name=&#34;got_to_bug&#34; target=&#34;_blank&#34;&gt;
+
+    &lt;label&gt;Choose your bug: &lt;small&gt;&lt;input type=&#34;checkbox&#34; id=&#34;new_tab&#34; checked=&#34;checked&#34;&gt; open in new tab&lt;/small&gt;&lt;/label&gt;&lt;br /&gt;
+    &lt;div&gt;
+      &lt;a id=&#34;prev_bug&#34; title=&#34;Go to prev bug&#34;&gt;«««&lt;/a&gt;
+      &lt;select id=&#34;bug-select&#34; name=&#34;bug&#34; size=&#34;3&#34;&gt;
+
+        
+          &lt;option title=&#39;portal.php&#39; value=&#39;0&#39; &gt;----------------------  bWAPP v2.2  -----------------------&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;1&#39; &gt;/ A1 - Injection /&lt;/option&gt;
+          &lt;option title=&#39;htmli_get.php&#39; value=&#39;2&#39; &gt;HTML Injection - Reflected (GET)&lt;/option&gt;
+          &lt;option title=&#39;htmli_post.php&#39; value=&#39;3&#39; &gt;HTML Injection - Reflected (POST)&lt;/option&gt;
+          &lt;option title=&#39;htmli_current_url.php&#39; value=&#39;4&#39; &gt;HTML Injection - Reflected (Current URL)&lt;/option&gt;
+          &lt;option title=&#39;htmli_stored.php&#39; value=&#39;5&#39; &gt;HTML Injection - Stored (Blog)&lt;/option&gt;
+          &lt;option title=&#39; iframei.php&#39; value=&#39;6&#39; &gt;iFrame Injection&lt;/option&gt;
+          &lt;option title=&#39;ldapi.php&#39; value=&#39;7&#39; &gt;LDAP Injection (Search)&lt;/option&gt;
+          &lt;option title=&#39;maili.php&#39; value=&#39;8&#39; &gt;Mail Header Injection (SMTP)&lt;/option&gt;
+          &lt;option title=&#39;commandi.php&#39; value=&#39;9&#39; &gt;OS Command Injection&lt;/option&gt;
+          &lt;option title=&#39;commandi_blind.php&#39; value=&#39;10&#39; &gt;OS Command Injection - Blind&lt;/option&gt;
+          &lt;option title=&#39;phpi.php&#39; value=&#39;11&#39; &gt;PHP Code Injection&lt;/option&gt;
+          &lt;option title=&#39;ssii.php&#39; value=&#39;12&#39; &gt;Server-Side Includes (SSI) Injection&lt;/option&gt;
+          &lt;option title=&#39;sqli_1.php&#39; value=&#39;13&#39; &gt;SQL Injection (GET/Search)&lt;/option&gt;
+          &lt;option title=&#39;sqli_2.php&#39; value=&#39;14&#39; &gt;SQL Injection (GET/Select)&lt;/option&gt;
+          &lt;option title=&#39;sqli_6.php&#39; value=&#39;15&#39; &gt;SQL Injection (POST/Search)&lt;/option&gt;
+          &lt;option title=&#39;sqli_13.php&#39; value=&#39;16&#39; &gt;SQL Injection (POST/Select)&lt;/option&gt;
+          &lt;option title=&#39;sqli_10-1.php&#39; value=&#39;17&#39; &gt;SQL Injection (AJAX/JSON/jQuery)&lt;/option&gt;
+          &lt;option title=&#39;sqli_9.php&#39; value=&#39;18&#39; &gt;SQL Injection (CAPTCHA)&lt;/option&gt;
+          &lt;option title=&#39;sqli_3.php&#39; value=&#39;19&#39; &gt;SQL Injection (Login Form/Hero)&lt;/option&gt;
+          &lt;option title=&#39;sqli_16.php&#39; value=&#39;20&#39; &gt;SQL Injection (Login Form/User)&lt;/option&gt;
+          &lt;option title=&#39;sqli_11.php&#39; value=&#39;21&#39; &gt;SQL Injection (SQLite)&lt;/option&gt;
+          &lt;option title=&#39;sqli_drupal.php&#39; value=&#39;22&#39; &gt;SQL Injection (Drupal)&lt;/option&gt;
+          &lt;option title=&#39;sqli_7.php&#39; value=&#39;23&#39; &gt;SQL Injection - Stored (Blog)&lt;/option&gt;
+          &lt;option title=&#39;sqli_12.php&#39; value=&#39;24&#39; &gt;SQL Injection - Stored (SQLite)&lt;/option&gt;
+          &lt;option title=&#39;sqli_17.php&#39; value=&#39;25&#39; &gt;SQL Injection - Stored (User-Agent)&lt;/option&gt;
+          &lt;option title=&#39;sqli_8-1.php&#39; value=&#39;26&#39; &gt;SQL Injection - Stored (XML)&lt;/option&gt;
+          &lt;option title=&#39;sqli_4.php&#39; value=&#39;27&#39; &gt;SQL Injection - Blind - Boolean-Based&lt;/option&gt;
+          &lt;option title=&#39;sqli_15.php&#39; value=&#39;28&#39;  selected=&#34;selected&#34;&gt;SQL Injection - Blind - Time-Based&lt;/option&gt;
+          &lt;option title=&#39;sqli_14.php&#39; value=&#39;29&#39; &gt;SQL Injection - Blind (SQLite)&lt;/option&gt;
+          &lt;option title=&#39;sqli_5.php&#39; value=&#39;30&#39; &gt;SQL Injection - Blind (Web Services/SOAP)&lt;/option&gt;
+          &lt;option title=&#39;xmli_1.php&#39; value=&#39;31&#39; &gt;XML/XPath Injection (Login Form)&lt;/option&gt;
+          &lt;option title=&#39;xmli_2.php&#39; value=&#39;32&#39; &gt;XML/XPath Injection (Search)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;33&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;34&#39; &gt;/ A2 - Broken Auth. &amp; Session Mgmt. /&lt;/option&gt;
+          &lt;option title=&#39;ba_captcha_bypass.php&#39; value=&#39;35&#39; &gt;Broken Authentication - CAPTCHA Bypassing&lt;/option&gt;
+          &lt;option title=&#39;ba_forgotten.php&#39; value=&#39;36&#39; &gt;Broken Authentication - Forgotten Function&lt;/option&gt;
+          &lt;option title=&#39;ba_insecure_login.php&#39; value=&#39;37&#39; &gt;Broken Authentication - Insecure Login Forms&lt;/option&gt;
+          &lt;option title=&#39;ba_logout.php&#39; value=&#39;38&#39; &gt;Broken Authentication - Logout Management&lt;/option&gt;
+          &lt;option title=&#39;ba_pwd_attacks.php&#39; value=&#39;39&#39; &gt;Broken Authentication - Password Attacks&lt;/option&gt;
+          &lt;option title=&#39;ba_weak_pwd.php&#39; value=&#39;40&#39; &gt;Broken Authentication - Weak Passwords&lt;/option&gt;
+          &lt;option title=&#39;smgmt_admin_portal.php&#39; value=&#39;41&#39; &gt;Session Management - Administrative Portals&lt;/option&gt;
+          &lt;option title=&#39;smgmt_cookies_httponly.php&#39; value=&#39;42&#39; &gt;Session Management - Cookies (HTTPOnly)&lt;/option&gt;
+          &lt;option title=&#39;smgmt_cookies_secure.php&#39; value=&#39;43&#39; &gt;Session Management - Cookies (Secure)&lt;/option&gt;
+          &lt;option title=&#39;smgmt_sessionid_url.php&#39; value=&#39;44&#39; &gt;Session Management - Session ID in URL&lt;/option&gt;
+          &lt;option title=&#39;smgmt_strong_sessions.php&#39; value=&#39;45&#39; &gt;Session Management - Strong Sessions&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;46&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;47&#39; &gt;/ A3 - Cross-Site Scripting (XSS) /&lt;/option&gt;
+          &lt;option title=&#39;xss_get.php&#39; value=&#39;48&#39; &gt;Cross-Site Scripting - Reflected (GET)&lt;/option&gt;
+          &lt;option title=&#39;xss_post.php&#39; value=&#39;49&#39; &gt;Cross-Site Scripting - Reflected (POST)&lt;/option&gt;
+          &lt;option title=&#39;xss_json.php&#39; value=&#39;50&#39; &gt;Cross-Site Scripting - Reflected (JSON)&lt;/option&gt;
+          &lt;option title=&#39;xss_ajax_2-1.php&#39; value=&#39;51&#39; &gt;Cross-Site Scripting - Reflected (AJAX/JSON)&lt;/option&gt;
+          &lt;option title=&#39;xss_ajax_1-1.php&#39; value=&#39;52&#39; &gt;Cross-Site Scripting - Reflected (AJAX/XML)&lt;/option&gt;
+          &lt;option title=&#39;xss_back_button.php&#39; value=&#39;53&#39; &gt;Cross-Site Scripting - Reflected (Back Button)&lt;/option&gt;
+          &lt;option title=&#39;xss_custom_header.php&#39; value=&#39;54&#39; &gt;Cross-Site Scripting - Reflected (Custom Header)&lt;/option&gt;
+          &lt;option title=&#39;xss_eval.php?date=Date()&#39; value=&#39;55&#39; &gt;Cross-Site Scripting - Reflected (Eval)&lt;/option&gt;
+          &lt;option title=&#39;xss_href-1.php&#39; value=&#39;56&#39; &gt;Cross-Site Scripting - Reflected (HREF)&lt;/option&gt;
+          &lt;option title=&#39;xss_login.php&#39; value=&#39;57&#39; &gt;Cross-Site Scripting - Reflected (Login Form)&lt;/option&gt;
+          &lt;option title=&#39;xss_phpmyadmin.php&#39; value=&#39;58&#39; &gt;Cross-Site Scripting - Reflected (phpMyAdmin)&lt;/option&gt;
+          &lt;option title=&#39;xss_php_self.php&#39; value=&#39;59&#39; &gt;Cross-Site Scripting - Reflected (PHP_SELF)&lt;/option&gt;
+          &lt;option title=&#39;xss_referer.php&#39; value=&#39;60&#39; &gt;Cross-Site Scripting - Reflected (Referer)&lt;/option&gt;
+          &lt;option title=&#39;xss_user_agent.php&#39; value=&#39;61&#39; &gt;Cross-Site Scripting - Reflected (User-Agent)&lt;/option&gt;
+          &lt;option title=&#39;xss_stored_1.php&#39; value=&#39;62&#39; &gt;Cross-Site Scripting - Stored (Blog)&lt;/option&gt;
+          &lt;option title=&#39;xss_stored_3.php&#39; value=&#39;63&#39; &gt;Cross-Site Scripting - Stored (Change Secret)&lt;/option&gt;
+          &lt;option title=&#39;xss_stored_2.php&#39; value=&#39;64&#39; &gt;Cross-Site Scripting - Stored (Cookies)&lt;/option&gt;
+          &lt;option title=&#39;xss_sqlitemanager.php&#39; value=&#39;65&#39; &gt;Cross-Site Scripting - Stored (SQLiteManager)&lt;/option&gt;
+          &lt;option title=&#39;xss_stored_4.php&#39; value=&#39;66&#39; &gt;Cross-Site Scripting - Stored (User-Agent)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;67&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;68&#39; &gt;/ A4 - Insecure Direct Object References /&lt;/option&gt;
+          &lt;option title=&#39;insecure_direct_object_ref_1.php&#39; value=&#39;69&#39; &gt;Insecure DOR (Change Secret)&lt;/option&gt;
+          &lt;option title=&#39;insecure_direct_object_ref_3.php&#39; value=&#39;70&#39; &gt;Insecure DOR (Reset Secret)&lt;/option&gt;
+          &lt;option title=&#39;insecure_direct_object_ref_2.php&#39; value=&#39;71&#39; &gt;Insecure DOR (Order Tickets)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;72&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;73&#39; &gt;/ A5 - Security Misconfiguration /&lt;/option&gt;
+          &lt;option title=&#39;sm_samba.php&#39; value=&#39;74&#39; &gt;Arbitrary File Access (Samba)&lt;/option&gt;
+          &lt;option title=&#39;sm_cross_domain_policy.php&#39; value=&#39;75&#39; &gt;Cross-Domain Policy File (Flash)&lt;/option&gt;
+          &lt;option title=&#39;sm_cors.php&#39; value=&#39;76&#39; &gt;Cross-Origin Resource Sharing (AJAX)&lt;/option&gt;
+          &lt;option title=&#39;sm_xst.php&#39; value=&#39;77&#39; &gt;Cross-Site Tracing (XST)&lt;/option&gt;
+          &lt;option title=&#39;sm_dos_3.php&#39; value=&#39;78&#39; &gt;Denial-of-Service (Large Chunk Size)&lt;/option&gt;
+          &lt;option title=&#39;sm_dos_1.php&#39; value=&#39;79&#39; &gt;Denial-of-Service (Slow HTTP DoS)&lt;/option&gt;
+          &lt;option title=&#39;sm_dos_4.php&#39; value=&#39;80&#39; &gt;Denial-of-Service (SSL-Exhaustion)&lt;/option&gt;
+          &lt;option title=&#39;sm_dos_2.php&#39; value=&#39;81&#39; &gt;Denial-of-Service (XML Bomb)&lt;/option&gt;
+          &lt;option title=&#39;sm_ftp.php&#39; value=&#39;82&#39; &gt;Insecure FTP Configuration&lt;/option&gt;
+          &lt;option title=&#39;sm_snmp.php&#39; value=&#39;83&#39; &gt;Insecure SNMP Configuration&lt;/option&gt;
+          &lt;option title=&#39;sm_webdav.php&#39; value=&#39;84&#39; &gt;Insecure WebDAV Configuration&lt;/option&gt;
+          &lt;option title=&#39;sm_local_priv_esc_1.php&#39; value=&#39;85&#39; &gt;Local Privilege Escalation (sendpage)&lt;/option&gt;
+          &lt;option title=&#39;sm_local_priv_esc_2.php&#39; value=&#39;86&#39; &gt;Local Privilege Escalation (udev)&lt;/option&gt;
+          &lt;option title=&#39;sm_mitm_1.php&#39; value=&#39;87&#39; &gt;Man-in-the-Middle Attack (HTTP)&lt;/option&gt;
+          &lt;option title=&#39;sm_mitm_2.php&#39; value=&#39;88&#39; &gt;Man-in-the-Middle Attack (SMTP)&lt;/option&gt;
+          &lt;option title=&#39;sm_obu_files.php&#39; value=&#39;89&#39; &gt;Old/Backup &amp; Unreferenced Files&lt;/option&gt;
+          &lt;option title=&#39;sm_robots.php&#39; value=&#39;90&#39; &gt;Robots File&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;91&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;92&#39; &gt;/ A6 - Sensitive Data Exposure /&lt;/option&gt;
+          &lt;option title=&#39;insecure_crypt_storage_3.php&#39; value=&#39;93&#39; &gt;Base64 Encoding (Secret)&lt;/option&gt;
+          &lt;option title=&#39;insuff_transp_layer_protect_3.php&#39; value=&#39;94&#39; &gt;BEAST/CRIME/BREACH Attacks&lt;/option&gt;
+          &lt;option title=&#39;insuff_transp_layer_protect_1.php&#39; value=&#39;95&#39; &gt;Clear Text HTTP (Credentials)&lt;/option&gt;
+          &lt;option title=&#39;heartbleed.php&#39; value=&#39;96&#39; &gt;Heartbleed Vulnerability&lt;/option&gt;
+          &lt;option title=&#39;hostheader_2.php&#39; value=&#39;97&#39; &gt;Host Header Attack (Reset Poisoning)&lt;/option&gt;
+          &lt;option title=&#39;insecure_crypt_storage_1.php&#39; value=&#39;98&#39; &gt;HTML5 Web Storage (Secret)&lt;/option&gt;
+          &lt;option title=&#39;insuff_transp_layer_protect_4.php&#39; value=&#39;99&#39; &gt;POODLE Vulnerability&lt;/option&gt;
+          &lt;option title=&#39;insuff_transp_layer_protect_2.php&#39; value=&#39;100&#39; &gt;SSL 2.0 Deprecated Protocol&lt;/option&gt;
+          &lt;option title=&#39;insecure_crypt_storage_2.php&#39; value=&#39;101&#39; &gt;Text Files (Accounts)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;102&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;103&#39; &gt;/ A7 - Missing Functional Level Access Control /&lt;/option&gt;
+          &lt;option title=&#39;directory_traversal_2.php?directory=documents&#39; value=&#39;104&#39; &gt;Directory Traversal - Directories&lt;/option&gt;
+          &lt;option title=&#39;directory_traversal_1.php?page=message.txt&#39; value=&#39;105&#39; &gt;Directory Traversal - Files&lt;/option&gt;
+          &lt;option title=&#39;hostheader_1.php&#39; value=&#39;106&#39; &gt;Host Header Attack (Cache Poisoning)&lt;/option&gt;
+          &lt;option title=&#39;hostheader_2.php&#39; value=&#39;107&#39; &gt;Host Header Attack (Reset Poisoning)&lt;/option&gt;
+          &lt;option title=&#39;lfi_sqlitemanager.php&#39; value=&#39;108&#39; &gt;Local File Inclusion (SQLiteManager)&lt;/option&gt;
+          &lt;option title=&#39;rlfi.php&#39; value=&#39;109&#39; &gt;Remote &amp; Local File Inclusion (RFI/LFI)&lt;/option&gt;
+          &lt;option title=&#39;restrict_device_access.php&#39; value=&#39;110&#39; &gt;Restrict Device Access&lt;/option&gt;
+          &lt;option title=&#39;restrict_folder_access.php&#39; value=&#39;111&#39; &gt;Restrict Folder Access&lt;/option&gt;
+          &lt;option title=&#39;ssrf.php&#39; value=&#39;112&#39; &gt;Server Side Request Forgery (SSRF)&lt;/option&gt;
+          &lt;option title=&#39;xxe-1.php&#39; value=&#39;113&#39; &gt;XML External Entity Attacks (XXE)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;114&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;115&#39; &gt;/ A8 - Cross-Site Request Forgery (CSRF) /&lt;/option&gt;
+          &lt;option title=&#39;csrf_1.php&#39; value=&#39;116&#39; &gt;Cross-Site Request Forgery (Change Password)&lt;/option&gt;
+          &lt;option title=&#39;csrf_3.php&#39; value=&#39;117&#39; &gt;Cross-Site Request Forgery (Change Secret)&lt;/option&gt;
+          &lt;option title=&#39;csrf_2.php&#39; value=&#39;118&#39; &gt;Cross-Site Request Forgery (Transfer Amount)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;119&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;120&#39; &gt;/ A9 - Using Known Vulnerable Components /&lt;/option&gt;
+          &lt;option title=&#39;bof_1.php&#39; value=&#39;121&#39; &gt;Buffer Overflow (Local)&lt;/option&gt;
+          &lt;option title=&#39;bof_2.php&#39; value=&#39;122&#39; &gt;Buffer Overflow (Remote)&lt;/option&gt;
+          &lt;option title=&#39;sqli_drupal.php&#39; value=&#39;123&#39; &gt;Drupal SQL Injection (Drupageddon)&lt;/option&gt;
+          &lt;option title=&#39;heartbleed.php&#39; value=&#39;124&#39; &gt;Heartbleed Vulnerability&lt;/option&gt;
+          &lt;option title=&#39;php_cgi.php&#39; value=&#39;125&#39; &gt;PHP CGI Remote Code Execution&lt;/option&gt;
+          &lt;option title=&#39;php_eval.php&#39; value=&#39;126&#39; &gt;PHP Eval Function&lt;/option&gt;
+          &lt;option title=&#39;xss_phpmyadmin.php&#39; value=&#39;127&#39; &gt;phpMyAdmin BBCode Tag XSS&lt;/option&gt;
+          &lt;option title=&#39;shellshock.php&#39; value=&#39;128&#39; &gt;Shellshock Vulnerability (CGI)&lt;/option&gt;
+          &lt;option title=&#39;lfi_sqlitemanager.php&#39; value=&#39;129&#39; &gt;SQLiteManager Local File Inclusion&lt;/option&gt;
+          &lt;option title=&#39;phpi_sqlitemanager.php&#39; value=&#39;130&#39; &gt;SQLiteManager PHP Code Injection&lt;/option&gt;
+          &lt;option title=&#39;xss_sqlitemanager.php&#39; value=&#39;131&#39; &gt;SQLiteManager XSS&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;132&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;133&#39; &gt;/ A10 - Unvalidated Redirects &amp; Forwards /&lt;/option&gt;
+          &lt;option title=&#39;unvalidated_redir_fwd_1.php&#39; value=&#39;134&#39; &gt;Unvalidated Redirects &amp; Forwards (1)&lt;/option&gt;
+          &lt;option title=&#39;unvalidated_redir_fwd_2.php&#39; value=&#39;135&#39; &gt;Unvalidated Redirects &amp; Forwards (2)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;136&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;137&#39; &gt;/ Other bugs... /&lt;/option&gt;
+          &lt;option title=&#39;clickjacking.php&#39; value=&#39;138&#39; &gt;ClickJacking (Movie Tickets)&lt;/option&gt;
+          &lt;option title=&#39;cs_validation.php&#39; value=&#39;139&#39; &gt;Client-Side Validation (Password)&lt;/option&gt;
+          &lt;option title=&#39;hpp-1.php&#39; value=&#39;140&#39; &gt;HTTP Parameter Pollution&lt;/option&gt;
+          &lt;option title=&#39;http_response_splitting.php&#39; value=&#39;141&#39; &gt;HTTP Response Splitting&lt;/option&gt;
+          &lt;option title=&#39;http_verb_tampering.php&#39; value=&#39;142&#39; &gt;HTTP Verb Tampering&lt;/option&gt;
+          &lt;option title=&#39;information_disclosure_4.php&#39; value=&#39;143&#39; &gt;Information Disclosure - Favicon&lt;/option&gt;
+          &lt;option title=&#39;information_disclosure_2.php&#39; value=&#39;144&#39; &gt;Information Disclosure - Headers&lt;/option&gt;
+          &lt;option title=&#39;information_disclosure_1.php&#39; value=&#39;145&#39; &gt;Information Disclosure - PHP version&lt;/option&gt;
+          &lt;option title=&#39;information_disclosure_3.php&#39; value=&#39;146&#39; &gt;Information Disclosure - Robots File&lt;/option&gt;
+          &lt;option title=&#39;insecure_iframe.php&#39; value=&#39;147&#39; &gt;Insecure iFrame (Login Form)&lt;/option&gt;
+          &lt;option title=&#39;unrestricted_file_upload.php&#39; value=&#39;148&#39; &gt;Unrestricted File Upload&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;149&#39; &gt;---------------------------  Extras  --------------------------&lt;/option&gt;
+          &lt;option title=&#39;aim.php&#39; value=&#39;150&#39; &gt;A.I.M. - No-authentication Mode&lt;/option&gt;
+          &lt;option title=&#39;../ClientAccessPolicy.xml&#39; value=&#39;151&#39; &gt;Client Access Policy File&lt;/option&gt;
+          &lt;option title=&#39;../crossdomain.xml&#39; value=&#39;152&#39; &gt;Cross-Domain Policy File&lt;/option&gt;
+          &lt;option title=&#39;666&#39; value=&#39;153&#39; &gt;Evil 666 Fuzzing Page&lt;/option&gt;
+          &lt;option title=&#39;manual_interv.php&#39; value=&#39;154&#39; &gt;Manual Intervention Required!&lt;/option&gt;
+          &lt;option title=&#39;admin/index.php&#39; value=&#39;155&#39; &gt;Unprotected Admin Portal&lt;/option&gt;
+          &lt;option title=&#39;secret_html.php&#39; value=&#39;156&#39; &gt;We Steal Secrets... (html)&lt;/option&gt;
+          &lt;option title=&#39;secret.php&#39; value=&#39;157&#39; &gt;We Steal Secrets... (plain)&lt;/option&gt;
+          &lt;option title=&#39;ws_soap.php&#39; value=&#39;158&#39; &gt;WSDL File (Web Services/SOAP)&lt;/option&gt;
+
+      &lt;/select&gt;
+      &lt;a id=&#34;next_bug&#34; title=&#34;Go to next bug&#34;&gt;»»»&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;button name=&#34;form_bug&#34;&gt;&lt;/button&gt;
+
+  &lt;/form&gt;
+&lt;script&gt;
+  function adjust_size() {
+    var select = document.getElementById(&#39;bug-select&#39;);
+    console.log(window.innerWidth,window.innerHeight,select.getAttribute(&#39;size&#39;));
+    if(window.innerWidth &lt; 1665) { select.setAttribute(&#39;size&#39;, 1); select.classList.remove(&#39;stretch&#39;); }
+    else  { select.setAttribute(&#39;size&#39;, 3);  select.classList.add(&#39;stretch&#39;); }
+    console.log(select.getAttribute(&#39;size&#39;));
+    var same_tab = localStorage.getItem(&#39;same_tab&#39;);
+    if(same_tab) {
+      document.querySelector(&#39;form[name=&#34;got_to_bug&#34;]&#39;).setAttribute(&#39;target&#39;,same_tab);
+      if (same_tab == &#39;_self&#39;) document.getElementById(&#39;new_tab&#39;).removeAttribute(&#39;checked&#39;);
+    }
+  }
+  document.getElementById(&#39;prev_bug&#39;).addEventListener(&#39;click&#39;, function (e) {document.getElementById(&#39;bug-select&#39;).value = parseInt(document.getElementById(&#39;bug-select&#39;).value)-1;});
+  document.getElementById(&#39;next_bug&#39;).addEventListener(&#39;click&#39;, function (e) {document.getElementById(&#39;bug-select&#39;).value = parseInt(document.getElementById(&#39;bug-select&#39;).value)+1;});
+  document.getElementById(&#39;bug-select&#39;).addEventListener(&#39;change&#39;, function (e) {document.querySelector(&#39;button[name=\&#39;form_bug\&#39;]&#39;).click();});
+  document.getElementById(&#39;new_tab&#39;).addEventListener(&#39;change&#39;, function (e) {
+    localStorage.setItem(&#39;same_tab&#39;,e.target.checked?&#39;_blank&#39;:&#39;_self&#39;);
+    document.querySelector(&#39;form[name=&#34;got_to_bug&#34;]&#39;).setAttribute(&#39;target&#39;,localStorage.getItem(&#39;same_tab&#39;));
+  });
+  window.addEventListener(&#39;resize&#39;, adjust_size);
+  document.addEventListener(&#39;DOMContentLoaded&#39;, adjust_size);
+&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-12-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/sqli_15.php?title=fuzz&amp;action=search&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-12-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;OSHP-X-Frame-Options&#39;]</pre>
+                        </section>
+                        <h4>🟡 Vulnerability found in /sqli_15.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-12-1-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-12-1-2">HTTP Request</a>
+                                <a href="#tab-vuln-12-1-3">HTTP Response</a>
+                            <a href="#tab-vuln-12-1-4">cURL command line</a>
+                            <a href="#tab-vuln-12-1-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-12-1-1" style="min-height: 124px;">
+                            <pre>X-Content-Type-Options is not set</pre>
+                        </section>
+                        <section id="tab-vuln-12-1-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /sqli_15.php?title=fuzz&amp;action=search HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: security_level=0
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-12-1-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 16:46:46 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            set-cookie: PHPSESSID=g1ajkdv8nu9p6305v5om39nk4c; path=/<br />
+                                            expires: Thu, 19 Nov 1981 08:52:00 GMT<br />
+                                            cache-control: no-store, no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            set-cookie: PHPSESSID=apms9k9h1aoguhbeub99kcpjqu; path=/<br />
+                                            vary: Accept-Encoding<br />
+                                            content-length: 5188<br />
+                                            keep-alive: timeout=5, max=78<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=UTF-8<br />
+                                    <br />
+                                    
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+
+&lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=UTF-8&#34;&gt;
+
+&lt;!--&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;https://fonts.googleapis.com/css?family=Architects+Daughter&#34;&gt;--&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;stylesheets/stylesheet.css&#34; media=&#34;screen&#34; /&gt;
+&lt;link rel=&#34;shortcut icon&#34; href=&#34;images/favicon.ico&#34; type=&#34;image/x-icon&#34; /&gt;
+
+&lt;!--&lt;script src=&#34;//html5shiv.googlecode.com/svn/trunk/html5.js&#34;&gt;&lt;/script&gt;--&gt;
+&lt;script src=&#34;js/html5.js&#34;&gt;&lt;/script&gt;
+
+&lt;title&gt;bWAPP - SQL Injection&lt;/title&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;header&gt;
+
+&lt;h1&gt;bWAPP&lt;/h1&gt;
+
+&lt;h2&gt;an extremely buggy web app !&lt;/h2&gt;
+
+&lt;/header&gt;
+
+&lt;div id=&#34;menu&#34;&gt;
+
+    &lt;table&gt;
+
+        &lt;tr&gt;
+
+            &lt;td&gt;&lt;a href=&#34;portal.php&#34;&gt;Bugs&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;password_change.php&#34;&gt;Change Password&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;user_extra.php&#34;&gt;Create User&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;security_level_set.php&#34;&gt;Set Security Level&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;reset.php&#34; onclick=&#34;return confirm(&#39;All settings will be cleared. Are you sure?&#39;);&#34;&gt;Reset&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;credits.php&#34;&gt;Credits&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;http://itsecgames.blogspot.com&#34; target=&#34;_blank&#34;&gt;Blog&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;a href=&#34;logout.php&#34; onclick=&#34;return confirm(&#39;Are you sure you want to leave?&#39;);&#34;&gt;Logout&lt;/a&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;font color=&#34;red&#34;&gt;Welcome Admin&lt;/font&gt;&lt;/td&gt;
+
+        &lt;/tr&gt;
+
+    &lt;/table&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;main&#34;&gt;
+
+    &lt;h1&gt;SQL Injection - Blind - Time-Based&lt;/h1&gt;
+
+    &lt;form action=&#34;/sqli_15.php&#34; method=&#34;GET&#34;&gt;
+
+        &lt;p&gt;
+
+        &lt;label for=&#34;title&#34;&gt;Search for a movie:&lt;/label&gt;
+        &lt;input type=&#34;text&#34; id=&#34;title&#34; name=&#34;title&#34; size=&#34;25&#34;&gt;
+
+        &lt;button type=&#34;submit&#34; name=&#34;action&#34; value=&#34;search&#34;&gt;Search&lt;/button&gt;
+
+        &lt;/p&gt;
+
+    &lt;/form&gt;
+
+    &lt;p&gt;The result will be sent by e-mail...&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;side&#34;&gt;
+
+    &lt;a href=&#34;http://twitter.com/MME_IT&#34; target=&#34;blank_&#34; class=&#34;button&#34;&gt;&lt;img src=&#34;./images/twitter.png&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://be.linkedin.com/in/malikmesellem&#34; target=&#34;blank_&#34; class=&#34;button&#34;&gt;&lt;img src=&#34;./images/linkedin.png&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://www.facebook.com/pages/MME-IT-Audits-Security/104153019664877&#34; target=&#34;blank_&#34; class=&#34;button&#34;&gt;&lt;img src=&#34;./images/facebook.png&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://itsecgames.blogspot.com&#34; target=&#34;blank_&#34; class=&#34;button&#34;&gt;&lt;img src=&#34;./images/blogger.png&#34;&gt;&lt;/a&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;disclaimer&#34;&gt;
+
+    &lt;p&gt;bWAPP is licensed under &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-nd/4.0/&#34; target=&#34;_blank&#34;&gt;&lt;img style=&#34;vertical-align:middle&#34; src=&#34;./images/cc.png&#34;&gt;&lt;/a&gt; &amp;copy; 2014 MME BVBA / Follow &lt;a href=&#34;http://twitter.com/MME_IT&#34; target=&#34;_blank&#34;&gt;@MME_IT&lt;/a&gt; on Twitter and ask for our cheat sheet, containing all solutions! / Need an exclusive &lt;a href=&#34;http://www.mmebvba.com&#34; target=&#34;_blank&#34;&gt;training&lt;/a&gt;?&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;bee&#34;&gt;
+
+    &lt;img src=&#34;./images/bee_1.png&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;security_level&#34;&gt;
+
+    &lt;form action=&#34;/sqli_15.php&#34; method=&#34;POST&#34;&gt;
+
+        &lt;label&gt;Set your security level:&lt;/label&gt;&lt;br /&gt;
+
+        &lt;select name=&#34;security_level&#34;&gt;
+
+            &lt;option value=&#34;0&#34;&gt;low&lt;/option&gt;
+            &lt;option value=&#34;1&#34;&gt;medium&lt;/option&gt;
+            &lt;option value=&#34;2&#34;&gt;high&lt;/option&gt;
+
+        &lt;/select&gt;
+
+        &lt;button type=&#34;submit&#34; name=&#34;form_security_level&#34; value=&#34;submit&#34;&gt;Set&lt;/button&gt;
+        &lt;font size=&#34;4&#34;&gt;Current: &lt;b&gt;low&lt;/b&gt;&lt;/font&gt;
+
+    &lt;/form&gt;
+
+&lt;/div&gt;
+
+&lt;style&gt;
+div#bug a {font-weight: bold; cursor: pointer;}
+#bug {bottom: 0; }
+#bug form {position: absolute; top: 0; bottom: 0; }
+#bug select.stretch {height: 80%; }
+#bug div {display: flex; height: 100%; align-items: flex-start;}
+#bug button {display: none;}
+#bug small {font-size: 70%}
+&lt;/style&gt;
+&lt;div id=&#34;bug&#34; class=&#34;bugs&#34;&gt;
+
+  &lt;form action=&#34;/sqli_15.php&#34; method=&#34;POST&#34; name=&#34;got_to_bug&#34; target=&#34;_blank&#34;&gt;
+
+    &lt;label&gt;Choose your bug: &lt;small&gt;&lt;input type=&#34;checkbox&#34; id=&#34;new_tab&#34; checked=&#34;checked&#34;&gt; open in new tab&lt;/small&gt;&lt;/label&gt;&lt;br /&gt;
+    &lt;div&gt;
+      &lt;a id=&#34;prev_bug&#34; title=&#34;Go to prev bug&#34;&gt;«««&lt;/a&gt;
+      &lt;select id=&#34;bug-select&#34; name=&#34;bug&#34; size=&#34;3&#34;&gt;
+
+        
+          &lt;option title=&#39;portal.php&#39; value=&#39;0&#39; &gt;----------------------  bWAPP v2.2  -----------------------&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;1&#39; &gt;/ A1 - Injection /&lt;/option&gt;
+          &lt;option title=&#39;htmli_get.php&#39; value=&#39;2&#39; &gt;HTML Injection - Reflected (GET)&lt;/option&gt;
+          &lt;option title=&#39;htmli_post.php&#39; value=&#39;3&#39; &gt;HTML Injection - Reflected (POST)&lt;/option&gt;
+          &lt;option title=&#39;htmli_current_url.php&#39; value=&#39;4&#39; &gt;HTML Injection - Reflected (Current URL)&lt;/option&gt;
+          &lt;option title=&#39;htmli_stored.php&#39; value=&#39;5&#39; &gt;HTML Injection - Stored (Blog)&lt;/option&gt;
+          &lt;option title=&#39; iframei.php&#39; value=&#39;6&#39; &gt;iFrame Injection&lt;/option&gt;
+          &lt;option title=&#39;ldapi.php&#39; value=&#39;7&#39; &gt;LDAP Injection (Search)&lt;/option&gt;
+          &lt;option title=&#39;maili.php&#39; value=&#39;8&#39; &gt;Mail Header Injection (SMTP)&lt;/option&gt;
+          &lt;option title=&#39;commandi.php&#39; value=&#39;9&#39; &gt;OS Command Injection&lt;/option&gt;
+          &lt;option title=&#39;commandi_blind.php&#39; value=&#39;10&#39; &gt;OS Command Injection - Blind&lt;/option&gt;
+          &lt;option title=&#39;phpi.php&#39; value=&#39;11&#39; &gt;PHP Code Injection&lt;/option&gt;
+          &lt;option title=&#39;ssii.php&#39; value=&#39;12&#39; &gt;Server-Side Includes (SSI) Injection&lt;/option&gt;
+          &lt;option title=&#39;sqli_1.php&#39; value=&#39;13&#39; &gt;SQL Injection (GET/Search)&lt;/option&gt;
+          &lt;option title=&#39;sqli_2.php&#39; value=&#39;14&#39; &gt;SQL Injection (GET/Select)&lt;/option&gt;
+          &lt;option title=&#39;sqli_6.php&#39; value=&#39;15&#39; &gt;SQL Injection (POST/Search)&lt;/option&gt;
+          &lt;option title=&#39;sqli_13.php&#39; value=&#39;16&#39; &gt;SQL Injection (POST/Select)&lt;/option&gt;
+          &lt;option title=&#39;sqli_10-1.php&#39; value=&#39;17&#39; &gt;SQL Injection (AJAX/JSON/jQuery)&lt;/option&gt;
+          &lt;option title=&#39;sqli_9.php&#39; value=&#39;18&#39; &gt;SQL Injection (CAPTCHA)&lt;/option&gt;
+          &lt;option title=&#39;sqli_3.php&#39; value=&#39;19&#39; &gt;SQL Injection (Login Form/Hero)&lt;/option&gt;
+          &lt;option title=&#39;sqli_16.php&#39; value=&#39;20&#39; &gt;SQL Injection (Login Form/User)&lt;/option&gt;
+          &lt;option title=&#39;sqli_11.php&#39; value=&#39;21&#39; &gt;SQL Injection (SQLite)&lt;/option&gt;
+          &lt;option title=&#39;sqli_drupal.php&#39; value=&#39;22&#39; &gt;SQL Injection (Drupal)&lt;/option&gt;
+          &lt;option title=&#39;sqli_7.php&#39; value=&#39;23&#39; &gt;SQL Injection - Stored (Blog)&lt;/option&gt;
+          &lt;option title=&#39;sqli_12.php&#39; value=&#39;24&#39; &gt;SQL Injection - Stored (SQLite)&lt;/option&gt;
+          &lt;option title=&#39;sqli_17.php&#39; value=&#39;25&#39; &gt;SQL Injection - Stored (User-Agent)&lt;/option&gt;
+          &lt;option title=&#39;sqli_8-1.php&#39; value=&#39;26&#39; &gt;SQL Injection - Stored (XML)&lt;/option&gt;
+          &lt;option title=&#39;sqli_4.php&#39; value=&#39;27&#39; &gt;SQL Injection - Blind - Boolean-Based&lt;/option&gt;
+          &lt;option title=&#39;sqli_15.php&#39; value=&#39;28&#39;  selected=&#34;selected&#34;&gt;SQL Injection - Blind - Time-Based&lt;/option&gt;
+          &lt;option title=&#39;sqli_14.php&#39; value=&#39;29&#39; &gt;SQL Injection - Blind (SQLite)&lt;/option&gt;
+          &lt;option title=&#39;sqli_5.php&#39; value=&#39;30&#39; &gt;SQL Injection - Blind (Web Services/SOAP)&lt;/option&gt;
+          &lt;option title=&#39;xmli_1.php&#39; value=&#39;31&#39; &gt;XML/XPath Injection (Login Form)&lt;/option&gt;
+          &lt;option title=&#39;xmli_2.php&#39; value=&#39;32&#39; &gt;XML/XPath Injection (Search)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;33&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;34&#39; &gt;/ A2 - Broken Auth. &amp; Session Mgmt. /&lt;/option&gt;
+          &lt;option title=&#39;ba_captcha_bypass.php&#39; value=&#39;35&#39; &gt;Broken Authentication - CAPTCHA Bypassing&lt;/option&gt;
+          &lt;option title=&#39;ba_forgotten.php&#39; value=&#39;36&#39; &gt;Broken Authentication - Forgotten Function&lt;/option&gt;
+          &lt;option title=&#39;ba_insecure_login.php&#39; value=&#39;37&#39; &gt;Broken Authentication - Insecure Login Forms&lt;/option&gt;
+          &lt;option title=&#39;ba_logout.php&#39; value=&#39;38&#39; &gt;Broken Authentication - Logout Management&lt;/option&gt;
+          &lt;option title=&#39;ba_pwd_attacks.php&#39; value=&#39;39&#39; &gt;Broken Authentication - Password Attacks&lt;/option&gt;
+          &lt;option title=&#39;ba_weak_pwd.php&#39; value=&#39;40&#39; &gt;Broken Authentication - Weak Passwords&lt;/option&gt;
+          &lt;option title=&#39;smgmt_admin_portal.php&#39; value=&#39;41&#39; &gt;Session Management - Administrative Portals&lt;/option&gt;
+          &lt;option title=&#39;smgmt_cookies_httponly.php&#39; value=&#39;42&#39; &gt;Session Management - Cookies (HTTPOnly)&lt;/option&gt;
+          &lt;option title=&#39;smgmt_cookies_secure.php&#39; value=&#39;43&#39; &gt;Session Management - Cookies (Secure)&lt;/option&gt;
+          &lt;option title=&#39;smgmt_sessionid_url.php&#39; value=&#39;44&#39; &gt;Session Management - Session ID in URL&lt;/option&gt;
+          &lt;option title=&#39;smgmt_strong_sessions.php&#39; value=&#39;45&#39; &gt;Session Management - Strong Sessions&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;46&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;47&#39; &gt;/ A3 - Cross-Site Scripting (XSS) /&lt;/option&gt;
+          &lt;option title=&#39;xss_get.php&#39; value=&#39;48&#39; &gt;Cross-Site Scripting - Reflected (GET)&lt;/option&gt;
+          &lt;option title=&#39;xss_post.php&#39; value=&#39;49&#39; &gt;Cross-Site Scripting - Reflected (POST)&lt;/option&gt;
+          &lt;option title=&#39;xss_json.php&#39; value=&#39;50&#39; &gt;Cross-Site Scripting - Reflected (JSON)&lt;/option&gt;
+          &lt;option title=&#39;xss_ajax_2-1.php&#39; value=&#39;51&#39; &gt;Cross-Site Scripting - Reflected (AJAX/JSON)&lt;/option&gt;
+          &lt;option title=&#39;xss_ajax_1-1.php&#39; value=&#39;52&#39; &gt;Cross-Site Scripting - Reflected (AJAX/XML)&lt;/option&gt;
+          &lt;option title=&#39;xss_back_button.php&#39; value=&#39;53&#39; &gt;Cross-Site Scripting - Reflected (Back Button)&lt;/option&gt;
+          &lt;option title=&#39;xss_custom_header.php&#39; value=&#39;54&#39; &gt;Cross-Site Scripting - Reflected (Custom Header)&lt;/option&gt;
+          &lt;option title=&#39;xss_eval.php?date=Date()&#39; value=&#39;55&#39; &gt;Cross-Site Scripting - Reflected (Eval)&lt;/option&gt;
+          &lt;option title=&#39;xss_href-1.php&#39; value=&#39;56&#39; &gt;Cross-Site Scripting - Reflected (HREF)&lt;/option&gt;
+          &lt;option title=&#39;xss_login.php&#39; value=&#39;57&#39; &gt;Cross-Site Scripting - Reflected (Login Form)&lt;/option&gt;
+          &lt;option title=&#39;xss_phpmyadmin.php&#39; value=&#39;58&#39; &gt;Cross-Site Scripting - Reflected (phpMyAdmin)&lt;/option&gt;
+          &lt;option title=&#39;xss_php_self.php&#39; value=&#39;59&#39; &gt;Cross-Site Scripting - Reflected (PHP_SELF)&lt;/option&gt;
+          &lt;option title=&#39;xss_referer.php&#39; value=&#39;60&#39; &gt;Cross-Site Scripting - Reflected (Referer)&lt;/option&gt;
+          &lt;option title=&#39;xss_user_agent.php&#39; value=&#39;61&#39; &gt;Cross-Site Scripting - Reflected (User-Agent)&lt;/option&gt;
+          &lt;option title=&#39;xss_stored_1.php&#39; value=&#39;62&#39; &gt;Cross-Site Scripting - Stored (Blog)&lt;/option&gt;
+          &lt;option title=&#39;xss_stored_3.php&#39; value=&#39;63&#39; &gt;Cross-Site Scripting - Stored (Change Secret)&lt;/option&gt;
+          &lt;option title=&#39;xss_stored_2.php&#39; value=&#39;64&#39; &gt;Cross-Site Scripting - Stored (Cookies)&lt;/option&gt;
+          &lt;option title=&#39;xss_sqlitemanager.php&#39; value=&#39;65&#39; &gt;Cross-Site Scripting - Stored (SQLiteManager)&lt;/option&gt;
+          &lt;option title=&#39;xss_stored_4.php&#39; value=&#39;66&#39; &gt;Cross-Site Scripting - Stored (User-Agent)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;67&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;68&#39; &gt;/ A4 - Insecure Direct Object References /&lt;/option&gt;
+          &lt;option title=&#39;insecure_direct_object_ref_1.php&#39; value=&#39;69&#39; &gt;Insecure DOR (Change Secret)&lt;/option&gt;
+          &lt;option title=&#39;insecure_direct_object_ref_3.php&#39; value=&#39;70&#39; &gt;Insecure DOR (Reset Secret)&lt;/option&gt;
+          &lt;option title=&#39;insecure_direct_object_ref_2.php&#39; value=&#39;71&#39; &gt;Insecure DOR (Order Tickets)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;72&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;73&#39; &gt;/ A5 - Security Misconfiguration /&lt;/option&gt;
+          &lt;option title=&#39;sm_samba.php&#39; value=&#39;74&#39; &gt;Arbitrary File Access (Samba)&lt;/option&gt;
+          &lt;option title=&#39;sm_cross_domain_policy.php&#39; value=&#39;75&#39; &gt;Cross-Domain Policy File (Flash)&lt;/option&gt;
+          &lt;option title=&#39;sm_cors.php&#39; value=&#39;76&#39; &gt;Cross-Origin Resource Sharing (AJAX)&lt;/option&gt;
+          &lt;option title=&#39;sm_xst.php&#39; value=&#39;77&#39; &gt;Cross-Site Tracing (XST)&lt;/option&gt;
+          &lt;option title=&#39;sm_dos_3.php&#39; value=&#39;78&#39; &gt;Denial-of-Service (Large Chunk Size)&lt;/option&gt;
+          &lt;option title=&#39;sm_dos_1.php&#39; value=&#39;79&#39; &gt;Denial-of-Service (Slow HTTP DoS)&lt;/option&gt;
+          &lt;option title=&#39;sm_dos_4.php&#39; value=&#39;80&#39; &gt;Denial-of-Service (SSL-Exhaustion)&lt;/option&gt;
+          &lt;option title=&#39;sm_dos_2.php&#39; value=&#39;81&#39; &gt;Denial-of-Service (XML Bomb)&lt;/option&gt;
+          &lt;option title=&#39;sm_ftp.php&#39; value=&#39;82&#39; &gt;Insecure FTP Configuration&lt;/option&gt;
+          &lt;option title=&#39;sm_snmp.php&#39; value=&#39;83&#39; &gt;Insecure SNMP Configuration&lt;/option&gt;
+          &lt;option title=&#39;sm_webdav.php&#39; value=&#39;84&#39; &gt;Insecure WebDAV Configuration&lt;/option&gt;
+          &lt;option title=&#39;sm_local_priv_esc_1.php&#39; value=&#39;85&#39; &gt;Local Privilege Escalation (sendpage)&lt;/option&gt;
+          &lt;option title=&#39;sm_local_priv_esc_2.php&#39; value=&#39;86&#39; &gt;Local Privilege Escalation (udev)&lt;/option&gt;
+          &lt;option title=&#39;sm_mitm_1.php&#39; value=&#39;87&#39; &gt;Man-in-the-Middle Attack (HTTP)&lt;/option&gt;
+          &lt;option title=&#39;sm_mitm_2.php&#39; value=&#39;88&#39; &gt;Man-in-the-Middle Attack (SMTP)&lt;/option&gt;
+          &lt;option title=&#39;sm_obu_files.php&#39; value=&#39;89&#39; &gt;Old/Backup &amp; Unreferenced Files&lt;/option&gt;
+          &lt;option title=&#39;sm_robots.php&#39; value=&#39;90&#39; &gt;Robots File&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;91&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;92&#39; &gt;/ A6 - Sensitive Data Exposure /&lt;/option&gt;
+          &lt;option title=&#39;insecure_crypt_storage_3.php&#39; value=&#39;93&#39; &gt;Base64 Encoding (Secret)&lt;/option&gt;
+          &lt;option title=&#39;insuff_transp_layer_protect_3.php&#39; value=&#39;94&#39; &gt;BEAST/CRIME/BREACH Attacks&lt;/option&gt;
+          &lt;option title=&#39;insuff_transp_layer_protect_1.php&#39; value=&#39;95&#39; &gt;Clear Text HTTP (Credentials)&lt;/option&gt;
+          &lt;option title=&#39;heartbleed.php&#39; value=&#39;96&#39; &gt;Heartbleed Vulnerability&lt;/option&gt;
+          &lt;option title=&#39;hostheader_2.php&#39; value=&#39;97&#39; &gt;Host Header Attack (Reset Poisoning)&lt;/option&gt;
+          &lt;option title=&#39;insecure_crypt_storage_1.php&#39; value=&#39;98&#39; &gt;HTML5 Web Storage (Secret)&lt;/option&gt;
+          &lt;option title=&#39;insuff_transp_layer_protect_4.php&#39; value=&#39;99&#39; &gt;POODLE Vulnerability&lt;/option&gt;
+          &lt;option title=&#39;insuff_transp_layer_protect_2.php&#39; value=&#39;100&#39; &gt;SSL 2.0 Deprecated Protocol&lt;/option&gt;
+          &lt;option title=&#39;insecure_crypt_storage_2.php&#39; value=&#39;101&#39; &gt;Text Files (Accounts)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;102&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;103&#39; &gt;/ A7 - Missing Functional Level Access Control /&lt;/option&gt;
+          &lt;option title=&#39;directory_traversal_2.php?directory=documents&#39; value=&#39;104&#39; &gt;Directory Traversal - Directories&lt;/option&gt;
+          &lt;option title=&#39;directory_traversal_1.php?page=message.txt&#39; value=&#39;105&#39; &gt;Directory Traversal - Files&lt;/option&gt;
+          &lt;option title=&#39;hostheader_1.php&#39; value=&#39;106&#39; &gt;Host Header Attack (Cache Poisoning)&lt;/option&gt;
+          &lt;option title=&#39;hostheader_2.php&#39; value=&#39;107&#39; &gt;Host Header Attack (Reset Poisoning)&lt;/option&gt;
+          &lt;option title=&#39;lfi_sqlitemanager.php&#39; value=&#39;108&#39; &gt;Local File Inclusion (SQLiteManager)&lt;/option&gt;
+          &lt;option title=&#39;rlfi.php&#39; value=&#39;109&#39; &gt;Remote &amp; Local File Inclusion (RFI/LFI)&lt;/option&gt;
+          &lt;option title=&#39;restrict_device_access.php&#39; value=&#39;110&#39; &gt;Restrict Device Access&lt;/option&gt;
+          &lt;option title=&#39;restrict_folder_access.php&#39; value=&#39;111&#39; &gt;Restrict Folder Access&lt;/option&gt;
+          &lt;option title=&#39;ssrf.php&#39; value=&#39;112&#39; &gt;Server Side Request Forgery (SSRF)&lt;/option&gt;
+          &lt;option title=&#39;xxe-1.php&#39; value=&#39;113&#39; &gt;XML External Entity Attacks (XXE)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;114&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;115&#39; &gt;/ A8 - Cross-Site Request Forgery (CSRF) /&lt;/option&gt;
+          &lt;option title=&#39;csrf_1.php&#39; value=&#39;116&#39; &gt;Cross-Site Request Forgery (Change Password)&lt;/option&gt;
+          &lt;option title=&#39;csrf_3.php&#39; value=&#39;117&#39; &gt;Cross-Site Request Forgery (Change Secret)&lt;/option&gt;
+          &lt;option title=&#39;csrf_2.php&#39; value=&#39;118&#39; &gt;Cross-Site Request Forgery (Transfer Amount)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;119&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;120&#39; &gt;/ A9 - Using Known Vulnerable Components /&lt;/option&gt;
+          &lt;option title=&#39;bof_1.php&#39; value=&#39;121&#39; &gt;Buffer Overflow (Local)&lt;/option&gt;
+          &lt;option title=&#39;bof_2.php&#39; value=&#39;122&#39; &gt;Buffer Overflow (Remote)&lt;/option&gt;
+          &lt;option title=&#39;sqli_drupal.php&#39; value=&#39;123&#39; &gt;Drupal SQL Injection (Drupageddon)&lt;/option&gt;
+          &lt;option title=&#39;heartbleed.php&#39; value=&#39;124&#39; &gt;Heartbleed Vulnerability&lt;/option&gt;
+          &lt;option title=&#39;php_cgi.php&#39; value=&#39;125&#39; &gt;PHP CGI Remote Code Execution&lt;/option&gt;
+          &lt;option title=&#39;php_eval.php&#39; value=&#39;126&#39; &gt;PHP Eval Function&lt;/option&gt;
+          &lt;option title=&#39;xss_phpmyadmin.php&#39; value=&#39;127&#39; &gt;phpMyAdmin BBCode Tag XSS&lt;/option&gt;
+          &lt;option title=&#39;shellshock.php&#39; value=&#39;128&#39; &gt;Shellshock Vulnerability (CGI)&lt;/option&gt;
+          &lt;option title=&#39;lfi_sqlitemanager.php&#39; value=&#39;129&#39; &gt;SQLiteManager Local File Inclusion&lt;/option&gt;
+          &lt;option title=&#39;phpi_sqlitemanager.php&#39; value=&#39;130&#39; &gt;SQLiteManager PHP Code Injection&lt;/option&gt;
+          &lt;option title=&#39;xss_sqlitemanager.php&#39; value=&#39;131&#39; &gt;SQLiteManager XSS&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;132&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;133&#39; &gt;/ A10 - Unvalidated Redirects &amp; Forwards /&lt;/option&gt;
+          &lt;option title=&#39;unvalidated_redir_fwd_1.php&#39; value=&#39;134&#39; &gt;Unvalidated Redirects &amp; Forwards (1)&lt;/option&gt;
+          &lt;option title=&#39;unvalidated_redir_fwd_2.php&#39; value=&#39;135&#39; &gt;Unvalidated Redirects &amp; Forwards (2)&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;136&#39; &gt;/&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;137&#39; &gt;/ Other bugs... /&lt;/option&gt;
+          &lt;option title=&#39;clickjacking.php&#39; value=&#39;138&#39; &gt;ClickJacking (Movie Tickets)&lt;/option&gt;
+          &lt;option title=&#39;cs_validation.php&#39; value=&#39;139&#39; &gt;Client-Side Validation (Password)&lt;/option&gt;
+          &lt;option title=&#39;hpp-1.php&#39; value=&#39;140&#39; &gt;HTTP Parameter Pollution&lt;/option&gt;
+          &lt;option title=&#39;http_response_splitting.php&#39; value=&#39;141&#39; &gt;HTTP Response Splitting&lt;/option&gt;
+          &lt;option title=&#39;http_verb_tampering.php&#39; value=&#39;142&#39; &gt;HTTP Verb Tampering&lt;/option&gt;
+          &lt;option title=&#39;information_disclosure_4.php&#39; value=&#39;143&#39; &gt;Information Disclosure - Favicon&lt;/option&gt;
+          &lt;option title=&#39;information_disclosure_2.php&#39; value=&#39;144&#39; &gt;Information Disclosure - Headers&lt;/option&gt;
+          &lt;option title=&#39;information_disclosure_1.php&#39; value=&#39;145&#39; &gt;Information Disclosure - PHP version&lt;/option&gt;
+          &lt;option title=&#39;information_disclosure_3.php&#39; value=&#39;146&#39; &gt;Information Disclosure - Robots File&lt;/option&gt;
+          &lt;option title=&#39;insecure_iframe.php&#39; value=&#39;147&#39; &gt;Insecure iFrame (Login Form)&lt;/option&gt;
+          &lt;option title=&#39;unrestricted_file_upload.php&#39; value=&#39;148&#39; &gt;Unrestricted File Upload&lt;/option&gt;
+          &lt;option title=&#39;portal.php&#39; value=&#39;149&#39; &gt;---------------------------  Extras  --------------------------&lt;/option&gt;
+          &lt;option title=&#39;aim.php&#39; value=&#39;150&#39; &gt;A.I.M. - No-authentication Mode&lt;/option&gt;
+          &lt;option title=&#39;../ClientAccessPolicy.xml&#39; value=&#39;151&#39; &gt;Client Access Policy File&lt;/option&gt;
+          &lt;option title=&#39;../crossdomain.xml&#39; value=&#39;152&#39; &gt;Cross-Domain Policy File&lt;/option&gt;
+          &lt;option title=&#39;666&#39; value=&#39;153&#39; &gt;Evil 666 Fuzzing Page&lt;/option&gt;
+          &lt;option title=&#39;manual_interv.php&#39; value=&#39;154&#39; &gt;Manual Intervention Required!&lt;/option&gt;
+          &lt;option title=&#39;admin/index.php&#39; value=&#39;155&#39; &gt;Unprotected Admin Portal&lt;/option&gt;
+          &lt;option title=&#39;secret_html.php&#39; value=&#39;156&#39; &gt;We Steal Secrets... (html)&lt;/option&gt;
+          &lt;option title=&#39;secret.php&#39; value=&#39;157&#39; &gt;We Steal Secrets... (plain)&lt;/option&gt;
+          &lt;option title=&#39;ws_soap.php&#39; value=&#39;158&#39; &gt;WSDL File (Web Services/SOAP)&lt;/option&gt;
+
+      &lt;/select&gt;
+      &lt;a id=&#34;next_bug&#34; title=&#34;Go to next bug&#34;&gt;»»»&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;button name=&#34;form_bug&#34;&gt;&lt;/button&gt;
+
+  &lt;/form&gt;
+&lt;script&gt;
+  function adjust_size() {
+    var select = document.getElementById(&#39;bug-select&#39;);
+    console.log(window.innerWidth,window.innerHeight,select.getAttribute(&#39;size&#39;));
+    if(window.innerWidth &lt; 1665) { select.setAttribute(&#39;size&#39;, 1); select.classList.remove(&#39;stretch&#39;); }
+    else  { select.setAttribute(&#39;size&#39;, 3);  select.classList.add(&#39;stretch&#39;); }
+    console.log(select.getAttribute(&#39;size&#39;));
+    var same_tab = localStorage.getItem(&#39;same_tab&#39;);
+    if(same_tab) {
+      document.querySelector(&#39;form[name=&#34;got_to_bug&#34;]&#39;).setAttribute(&#39;target&#39;,same_tab);
+      if (same_tab == &#39;_self&#39;) document.getElementById(&#39;new_tab&#39;).removeAttribute(&#39;checked&#39;);
+    }
+  }
+  document.getElementById(&#39;prev_bug&#39;).addEventListener(&#39;click&#39;, function (e) {document.getElementById(&#39;bug-select&#39;).value = parseInt(document.getElementById(&#39;bug-select&#39;).value)-1;});
+  document.getElementById(&#39;next_bug&#39;).addEventListener(&#39;click&#39;, function (e) {document.getElementById(&#39;bug-select&#39;).value = parseInt(document.getElementById(&#39;bug-select&#39;).value)+1;});
+  document.getElementById(&#39;bug-select&#39;).addEventListener(&#39;change&#39;, function (e) {document.querySelector(&#39;button[name=\&#39;form_bug\&#39;]&#39;).click();});
+  document.getElementById(&#39;new_tab&#39;).addEventListener(&#39;change&#39;, function (e) {
+    localStorage.setItem(&#39;same_tab&#39;,e.target.checked?&#39;_blank&#39;:&#39;_self&#39;);
+    document.querySelector(&#39;form[name=&#34;got_to_bug&#34;]&#39;).setAttribute(&#39;target&#39;,localStorage.getItem(&#39;same_tab&#39;));
+  });
+  window.addEventListener(&#39;resize&#39;, adjust_size);
+  document.addEventListener(&#39;DOMContentLoaded&#39;, adjust_size);
+&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-12-1-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/sqli_15.php?title=fuzz&amp;action=search&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-12-1-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;OSHP-X-Content-Type-Options&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>Use the recommendations for hardening your HTTP Security Headers.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-project-secure-headers/#div-bestpractices">OSHP: OWASP Secure Headers Project Best Practices</a></li>
+                    <li><a href="https://www.netsparker.com/blog/web-security/http-security-headers/">Netsparker: HTTP Security Headers: An Easy Way to Harden Your Web Applications</a></li>
+                    <li><a href="https://www.keycdn.com/blog/http-security-headers">KeyCDN: Hardening Your HTTP Security Headers</a></li>
+                    <li><a href="https://owasp.org/www-chapter-ghana/assets/slides/HTTP_Header_Security.pdf">OWASP: HTTP SECURITY HEADERS (Protection For Browsers) (PDF)</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/09-Testing_for_Clickjacking">OWASP: Clickjacking</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting">OWASP: Reflected Cross Site Scripting</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting">OWASP: Stored Cross Site Scripting</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/07-Test_HTTP_Strict_Transport_Security">OWASP: HTTP Strict Transport Security</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_13">HttpOnly Flag cookie</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>HttpOnly is an additional flag included in a Set-Cookie HTTP response header. Using the HttpOnly flag when generating a cookie helps mitigate the risk of client side script accessing the protected cookie (if the browser supports it).</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /sqli_15.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-13-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-13-0-2">HTTP Request</a>
+                            <a href="#tab-vuln-13-0-4">cURL command line</a>
+                            <a href="#tab-vuln-13-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-13-0-1" style="min-height: 124px;">
+                            <pre>HttpOnly flag is not set in the cookie : PHPSESSID</pre>
+                        </section>
+                        <section id="tab-vuln-13-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /sqli_15.php?title=fuzz&amp;action=search HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: security_level=0
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-13-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/sqli_15.php?title=fuzz&amp;action=search&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-13-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-SESS-02&#39;]</pre>
+                        </section>
+                        <h4>🟡 Vulnerability found in /sqli_15.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-13-1-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-13-1-2">HTTP Request</a>
+                            <a href="#tab-vuln-13-1-4">cURL command line</a>
+                            <a href="#tab-vuln-13-1-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-13-1-1" style="min-height: 124px;">
+                            <pre>HttpOnly flag is not set in the cookie : security_level</pre>
+                        </section>
+                        <section id="tab-vuln-13-1-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /sqli_15.php?title=fuzz&amp;action=search HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: security_level=0
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-13-1-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/sqli_15.php?title=fuzz&amp;action=search&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-13-1-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-SESS-02&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>While creation of the cookie, make sure to set the HttpOnly Flag to True.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html">OWASP: Testing for Cookies Attributes</a></li>
+                    <li><a href="https://owasp.org/www-community/HttpOnly">OWASP: HttpOnly</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_18">Secure Flag cookie</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>The secure flag is an option that can be set by the application server when sending a new cookie to the user within an HTTP Response. The purpose of the secure flag is to prevent cookies from being observed by unauthorized parties due to the transmission of a the cookie in clear text.</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /sqli_15.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-18-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-18-0-2">HTTP Request</a>
+                            <a href="#tab-vuln-18-0-4">cURL command line</a>
+                            <a href="#tab-vuln-18-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-18-0-1" style="min-height: 124px;">
+                            <pre>Secure flag is not set in the cookie : PHPSESSID</pre>
+                        </section>
+                        <section id="tab-vuln-18-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /sqli_15.php?title=fuzz&amp;action=search HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: security_level=0
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-18-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/sqli_15.php?title=fuzz&amp;action=search&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-18-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-SESS-02&#39;]</pre>
+                        </section>
+                        <h4>🟡 Vulnerability found in /sqli_15.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-18-1-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-18-1-2">HTTP Request</a>
+                            <a href="#tab-vuln-18-1-4">cURL command line</a>
+                            <a href="#tab-vuln-18-1-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-18-1-1" style="min-height: 124px;">
+                            <pre>Secure flag is not set in the cookie : security_level</pre>
+                        </section>
+                        <section id="tab-vuln-18-1-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /sqli_15.php?title=fuzz&amp;action=search HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: security_level=0
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-18-1-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/sqli_15.php?title=fuzz&amp;action=search&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-18-1-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-SESS-02&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>When generating the cookie, make sure to set the Secure Flag to True.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html">OWASP: Testing for Cookies Attributes</a></li>
+                    <li><a href="https://owasp.org/www-community/controls/SecureCookieAttribute">OWASP: Secure Cookie Attribute</a></li>
+                </ul>
+                <br />
+                <hr>
+        </div>
+        <footer class="small" id="footer"><a href="https://wapiti-scanner.github.io/" id="wapiti_link">Wapiti 3.1.8</a> &copy; Nicolas SURRIBAS 2006-2022</footer>
+	</div>
+    <script type="text/javascript" src="js/kube.min.js"></script>
+    <script>$K.init();</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+../phuzz-output/700000-backwpup.4.0.0.zip/ajax_working/output/fuzzer-1/vulnerable-candidates.json,c187c7a7-103a-4a14-9767-208db18cad24:  query_params:{"action": "backwpup_working", "logpos": "f?zz", "logfile": "fuzz"}

@@ -1,0 +1,1 @@
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/download_restore_progress/output/fuzzer-1/vulnerable-candidates.json,5253c0a6-7520-4cfa-a997-106099bdb7b9:  query_params:{"action": "wpvivid_get_download_restore_progress"} body_params:{"size": "fuzz", "file_name": "uzz"}

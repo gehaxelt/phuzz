@@ -1,0 +1,1 @@
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/wpfc_save_timeout_pages_callback/output/fuzzer-4/vulnerable-candidates.json,3d353a36-2028-4474-b3b6-af3caf8c58de:  query_params:{"action": "wpfc_save_timeout_pages"} body_params:{"security": "fusz", "rules": "fu"}

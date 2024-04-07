@@ -1,0 +1,37 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "field",
+      "snippet"
+    ],
+    "data": [
+      {
+        "name": "field",
+        "value": "fuzz"
+      },
+      {
+        "name": "snippet",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "update_code_snippet"
+      }
+    ]
+  }
+}

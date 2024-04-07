@@ -1,0 +1,41 @@
+2024-03-20 12:45:10.175 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/vulnerabilities/sqli_blind/ (0)
+2024-03-20 12:45:10.325 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-20 12:45:10.325 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_26d808c1.db
+2024-03-20 12:45:10.328 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 1 URLs and forms during the scan
+2024-03-20 12:45:10.358 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-20 12:45:10.358 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-20 12:45:10.432 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-20 12:45:10.468 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-20 12:45:10.468 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-20 12:45:10.483 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/sqli_blind/ (0)
+2024-03-20 12:45:10.483 | BLUE     | wapitiCore.attack.mod_cookieflags:attack:55 - Checking cookie : PHPSESSID
+2024-03-20 12:45:10.483 | RED      | wapitiCore.attack.mod_cookieflags:attack:57 - HttpOnly flag is not set in the cookie : PHPSESSID
+2024-03-20 12:45:10.520 | RED      | wapitiCore.attack.mod_cookieflags:attack:66 - Secure flag is not set in the cookie : PHPSESSID
+2024-03-20 12:45:10.565 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-20 12:45:10.577 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/sqli_blind/ (0)
+2024-03-20 12:45:10.591 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-20 12:45:10.592 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-20 12:45:10.636 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-20 12:45:10.636 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-20 12:45:10.697 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-20 12:45:10.710 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/sqli_blind/ (0)
+2024-03-20 12:45:10.724 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-20 12:45:10.738 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/sqli_blind/ (0)
+2024-03-20 12:45:10.753 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=yurr68 for results, please wait...
+2024-03-20 12:45:12.845 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-20 12:45:12.863 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/sqli_blind/ (0)
+2024-03-20 12:45:12.913 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-20 12:45:12.929 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/sqli_blind/ (0)
+2024-03-20 12:45:12.953 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-20 12:45:12.968 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/sqli_blind/ (0)
+2024-03-20 12:45:12.976 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-20 12:45:13.038 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-20 12:45:13.051 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/sqli_blind/ (0)
+2024-03-20 12:45:13.067 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-20 12:45:13.098 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-20 12:45:13.109 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/sqli_blind/ (0)
+2024-03-20 12:45:13.125 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-20 12:45:13.137 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/sqli_blind/ (0)
+2024-03-20 12:45:13.199 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-20 12:45:13.221 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//sqli_blind_high.json/
+2024-03-20 12:45:13.221 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//sqli_blind_high.json/web_03202024_1245.html with a browser to see this report.

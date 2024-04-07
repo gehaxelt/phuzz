@@ -1,0 +1,10 @@
+# OpenRedirect / Files: 9 / Candidates total: 1026
+../phuzz-output/900000-ninja-forms.3.6.23.zip/connect/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/900000-ninja-forms.3.6.23.zip/connect/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/900000-ninja-forms.3.6.23.zip/connect/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/900000-ninja-forms.3.6.23.zip/connect/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/900000-ninja-forms.3.6.23.zip/connect/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/900000-ninja-forms.3.6.23.zip/connect/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/900000-ninja-forms.3.6.23.zip/connect/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/900000-ninja-forms.3.6.23.zip/connect/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/900000-ninja-forms.3.6.23.zip/connect/output/fuzzer-9/vulnerable-candidates.json

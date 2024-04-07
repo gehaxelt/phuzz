@@ -1,0 +1,25 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "notice_name"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "wp_reset_dismiss_notice"
+      },
+      {
+        "name": "notice_name",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

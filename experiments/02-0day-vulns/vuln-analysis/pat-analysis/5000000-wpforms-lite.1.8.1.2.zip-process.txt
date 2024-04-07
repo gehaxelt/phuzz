@@ -1,0 +1,1 @@
+../phuzz-output/5000000-wpforms-lite.1.8.1.2.zip/process/output/fuzzer-5/vulnerable-candidates.json,a455ef2b-2f8d-48fb-9b91-16064f2b9c7f:  query_params:{"action": "wpforms_connect_process"} body_params:{"__amp_form_verify": "f7zz", "wpforms": "fu"}

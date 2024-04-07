@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<!DOCTYPE issues [
+<!ELEMENT issues (issue*)>
+<!ATTLIST issues burpVersion CDATA "">
+<!ATTLIST issues exportTime CDATA "">
+<!ELEMENT issue (serialNumber, type, name, host, path, location, severity, confidence, issueBackground?, remediationBackground?, references?, vulnerabilityClassifications?, issueDetail?, issueDetailItems?, remediationDetail?, requestresponse*, collaboratorEvent*, infiltratorEvent*, staticAnalysis*, dynamicAnalysis*, prototypePollution*)>
+<!ELEMENT serialNumber (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT severity (#PCDATA)>
+<!ELEMENT confidence (#PCDATA)>
+<!ELEMENT issueBackground (#PCDATA)>
+<!ELEMENT remediationBackground (#PCDATA)>
+<!ELEMENT references (#PCDATA)>
+<!ELEMENT vulnerabilityClassifications (#PCDATA)>
+<!ELEMENT issueDetail (#PCDATA)>
+<!ELEMENT issueDetailItems (issueDetailItem*)>
+<!ELEMENT issueDetailItem (#PCDATA)>
+<!ELEMENT remediationDetail (#PCDATA)>
+<!ELEMENT requestresponse (request?, response?, responseRedirected?)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request method CDATA "">
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT responseRedirected (#PCDATA)>
+<!ELEMENT sender (#PCDATA)>
+<!ELEMENT message (#PCDATA)>
+<!ELEMENT conversation (#PCDATA)>
+<!ELEMENT recipient (#PCDATA)>
+<!ELEMENT recipients (recipient*)>
+<!ELEMENT smtp (sender, recipients, message, conversation)>
+<!ELEMENT collaboratorEvent (interactionType, originIp, time, lookupType?, lookupHost?, requestresponse?, smtp?)>
+<!ELEMENT interactionType (#PCDATA)>
+<!ELEMENT originIp (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT lookupType (#PCDATA)>
+<!ELEMENT lookupHost (#PCDATA)>
+<!ELEMENT infiltratorEvent (parameterName, platform, signature, stackTrace?, parameterValue?, collaboratorEvent)>
+<!ELEMENT parameterName (#PCDATA)>
+<!ELEMENT platform (#PCDATA)>
+<!ELEMENT signature (#PCDATA)>
+<!ELEMENT stackTrace (#PCDATA)>
+<!ELEMENT parameterValue (#PCDATA)>
+<!ELEMENT dynamicAnalysis (source, sink, sourceStackTrace, sinkStackTrace, eventListenerStackTrace, sourceValue, sinkValue, eventHandlerData, eventHandlerDataType, eventHandlerManipulatedData, poc, origin, isOriginChecked, sourceElementId, sourceElementName, eventFiredEventName, eventFiredElementId, eventFiredElementName, eventFiredOuterHtml)>
+<!ELEMENT prototypePollution (poc, pollutionTechnique, pollutionType)>
+<!ELEMENT staticAnalysis (source, sink, codeSnippets)>
+<!ELEMENT source (#PCDATA)>
+<!ELEMENT sink (#PCDATA)>
+<!ELEMENT sourceStackTrace (#PCDATA)>
+<!ELEMENT sinkStackTrace (#PCDATA)>
+<!ELEMENT eventListenerStackTrace (#PCDATA)>
+<!ELEMENT sourceValue (#PCDATA)>
+<!ELEMENT sinkValue (#PCDATA)>
+<!ELEMENT eventHandlerData (#PCDATA)>
+<!ELEMENT eventHandlerDataType (#PCDATA)>
+<!ELEMENT sourceElementId (#PCDATA)>
+<!ELEMENT sourceElementName (#PCDATA)>
+<!ELEMENT eventFiredEventName (#PCDATA)>
+<!ELEMENT eventFiredElementId (#PCDATA)>
+<!ELEMENT eventFiredElementName (#PCDATA)>
+<!ELEMENT eventFiredOuterHtml (#PCDATA)>
+<!ELEMENT eventHandlerManipulatedData (#PCDATA)>
+<!ELEMENT poc (#PCDATA)>
+<!ELEMENT origin (#PCDATA)>
+<!ELEMENT isOriginChecked (#PCDATA)>
+<!ELEMENT codeSnippets (codeSnippet*)>
+<!ELEMENT codeSnippet (#PCDATA)>
+<!ELEMENT pollutionTechnique (#PCDATA)>
+<!ELEMENT pollutionType (#PCDATA)>
+]>
+<issues burpVersion="2023.8.1" exportTime="Thu Aug 10 20:18:14 GMT 2023">
+  <issue>
+    <serialNumber>2075918162932361216</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Private IP addresses disclosed]]></name>
+    <host ip="192.168.16.2">http://web</host>
+    <path><![CDATA[/wp-content/plugins/phastpress/phast.php]]></path>
+    <location><![CDATA[/wp-content/plugins/phastpress/phast.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>RFC 1918 specifies ranges of IP addresses that are reserved for use in private networks and cannot be routed on the public Internet. Although various methods exist by which an attacker can determine the public IP addresses in use by an organization, the private addresses used internally cannot usually be determined in the same ways.</p>
+<p>Discovering the private addresses used within an organization can help an attacker in carrying out network-layer attacks aiming to penetrate the organization's internal infrastructure. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>There is not usually any good reason to disclose the internal IP addresses used within an organization's infrastructure. If these are being returned in service banners or debug messages, then the relevant services should be configured to mask the private addresses. If they are being used to track back-end servers for load balancing purposes, then the addresses should be rewritten with innocuous identifiers from which an attacker cannot infer any useful information about the infrastructure.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[The following RFC 1918 IP address was disclosed in the response:<ul><li>192.168.16.2</li></ul>]]></issueDetail>
+    <issueDetailItems>
+      <issueDetailItem><![CDATA[192.168.16.2]]></issueDetailItem>
+    </issueDetailItems>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC93cC1jb250ZW50L3BsdWdpbnMvcGhhc3RwcmVzcy9waGFzdC5waHA/c3JjPWZ1enomc2VydmljZT1zY3JpcHRzIEhUVFAvMS4wDQpIb3N0OiB3ZWINCkFjY2VwdDogdGV4dC9odG1sLGFwcGxpY2F0aW9uL3hodG1sK3htbCxhcHBsaWNhdGlvbi94bWw7cT0wLjksaW1hZ2UvYXZpZixpbWFnZS93ZWJwLCovKjtxPTAuOA0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0OyBydjoxMDkuMCkgR2Vja28vMjAxMDAxMDEgRmlyZWZveC8xMTAuMA0KU2VjLUZldGNoLURlc3Q6IGRvY3VtZW50DQpTZWMtRmV0Y2gtU2l0ZTogbm9uZQ0KQWNjZXB0LUVuY29kaW5nOiBnemlwLCBkZWZsYXRlLCBicg0KRE5UOiAxDQpTZWMtRmV0Y2gtTW9kZTogbmF2aWdhdGUNClVwZ3JhZGUtSW5zZWN1cmUtUmVxdWVzdHM6IDENClNlYy1GZXRjaC1Vc2VyOiA/MQ0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUyxlbjtxPTAuNQ0KDQo=]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgNDAwIEJhZCBSZXF1ZXN0DQpEYXRlOiBUaHUsIDEwIEF1ZyAyMDIzIDIwOjE1OjEyIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpDb250ZW50LUxlbmd0aDogMzA0DQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjQwMCBCYWQgUmVxdWVzdDwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPkJhZCBSZXF1ZXN0PC9oMT4KPHA+WW91ciBicm93c2VyIHNlbnQgYSByZXF1ZXN0IHRoYXQgdGhpcyBzZXJ2ZXIgY291bGQgbm90IHVuZGVyc3RhbmQuPGJyIC8+CjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjU3IChEZWJpYW4pIFNlcnZlciBhdCAxOTIuMTY4LjE2LjIgUG9ydCA4MDwvYWRkcmVzcz4KPC9ib2R5PjwvaHRtbD4K]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>5230578934095110144</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Input returned in response (reflected)]]></name>
+    <host ip="192.168.16.2">http://web</host>
+    <path><![CDATA[/wp-content/plugins/phastpress/phast.php]]></path>
+    <location><![CDATA[/wp-content/plugins/phastpress/phast.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>Reflection of input arises when data is copied from a request and echoed into the application's immediate response.</p><p>Input being returned in application responses is not a vulnerability in its own right. However, it is a prerequisite for many client-side vulnerabilities, including cross-site scripting, open redirection, content spoofing, and response header injection. Additionally, some server-side vulnerabilities such as SQL injection are often easier to identify and exploit when input is returned in responses. In applications where input retrieval is rare and the environment is resistant to automated testing (for example, due to a web application firewall), it might be worth subjecting instances of it to focused manual testing. </p>]]></issueBackground>
+    <issueDetail><![CDATA[The value of the <b>src</b> request parameter is copied into the application's response.]]></issueDetail>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC93cC1jb250ZW50L3BsdWdpbnMvcGhhc3RwcmVzcy9waGFzdC5waHA/c3JjPWZ1enp6cDZkMzIybTByJnNlcnZpY2U9c2NyaXB0cyBIVFRQLzEuMA0KSG9zdDogd2ViDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LGltYWdlL2F2aWYsaW1hZ2Uvd2VicCwqLyo7cT0wLjgNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NDsgcnY6MTA5LjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTEwLjANClNlYy1GZXRjaC1EZXN0OiBkb2N1bWVudA0KU2VjLUZldGNoLVNpdGU6IG5vbmUNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZSwgYnINCkROVDogMQ0KU2VjLUZldGNoLU1vZGU6IG5hdmlnYXRlDQpVcGdyYWRlLUluc2VjdXJlLVJlcXVlc3RzOiAxDQpTZWMtRmV0Y2gtVXNlcjogPzENCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMsZW47cT0wLjUNCg0K]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMzAxIE1vdmVkIFBlcm1hbmVudGx5DQpEYXRlOiBUaHUsIDEwIEF1ZyAyMDIzIDIwOjE1OjE3IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMjINCkxvY2F0aW9uOiBmdXp6enA2ZDMyMm0wcg0KQ2FjaGUtQ29udHJvbDogbWF4LWFnZT04NjQwMA0KQ29udGVudC1MZW5ndGg6IDE0DQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9VVRGLTgNCg0KClVuYXV0aG9yaXplZAo=]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>5513553198809773056</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Open redirection (reflected)]]></name>
+    <host ip="192.168.16.2">http://web</host>
+    <path><![CDATA[/wp-content/plugins/phastpress/phast.php]]></path>
+    <location><![CDATA[/wp-content/plugins/phastpress/phast.php]]></location>
+    <severity>Low</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>Open redirection vulnerabilities arise when an application incorporates user-controllable data into the target of a redirection in an unsafe way. An attacker can construct a URL within the application that causes a redirection to an arbitrary external domain. This behavior can be leveraged to facilitate phishing attacks against users of the application. The ability to use an authentic application URL, targeting the correct domain and with a valid SSL certificate (if SSL is used), lends credibility to the phishing attack because many users, even if they verify these features, will not notice the subsequent redirection to a different domain.</p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>If possible, applications should avoid incorporating user-controllable data into redirection targets. In many cases, this behavior can be avoided in two ways:</p>
+<ul>
+  <li>Remove the redirection function from the application, and replace links to it with direct links to the relevant target URLs.</li>
+  <li>Maintain a server-side list of all URLs that are permitted for redirection. Instead of passing the target URL as a parameter to the redirector, pass an index into this list.</li>
+</ul>
+<p>If it is considered unavoidable for the redirection function to receive user-controllable input and incorporate this into the redirection target, one of the following measures should be used to minimize the risk of redirection attacks:</p>
+<ul>
+  <li>The application should use relative URLs in all of its redirects, and the redirection function should strictly validate that the URL received is a relative URL.</li>
+  <li>The application should use URLs relative to the web root for all of its redirects, and the redirection function should validate that the URL received starts with a slash character. It should then prepend http://yourdomainname.com to the URL before issuing the redirect.</li>
+  <li>The application should use absolute URLs for all of its redirects, and the redirection function should verify that the user-supplied URL begins with http://yourdomainname.com/ before issuing the redirect.</li>
+</ul>]]></remediationBackground>
+    <issueDetail><![CDATA[The value of the <b>src</b> request parameter is used to perform an HTTP redirect. The payload <b>http://atrwhr7popn/a?fuzz</b> was submitted in the src parameter. This caused a redirection to the following URL:<ul><li>http://atrwhr7popn/a?fuzz</li></ul>]]></issueDetail>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC93cC1jb250ZW50L3BsdWdpbnMvcGhhc3RwcmVzcy9waGFzdC5waHA/c3JjPWh0dHAlM2ElMmYlMmZhdHJ3aHI3cG9wbiUyZmElM2ZmdXp6JnNlcnZpY2U9c2NyaXB0cyBIVFRQLzEuMA0KSG9zdDogd2ViDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LGltYWdlL2F2aWYsaW1hZ2Uvd2VicCwqLyo7cT0wLjgNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NDsgcnY6MTA5LjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTEwLjANClNlYy1GZXRjaC1EZXN0OiBkb2N1bWVudA0KU2VjLUZldGNoLVNpdGU6IG5vbmUNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZSwgYnINCkROVDogMQ0KU2VjLUZldGNoLU1vZGU6IG5hdmlnYXRlDQpVcGdyYWRlLUluc2VjdXJlLVJlcXVlc3RzOiAxDQpTZWMtRmV0Y2gtVXNlcjogPzENCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMsZW47cT0wLjUNCg0K]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMzAxIE1vdmVkIFBlcm1hbmVudGx5DQpEYXRlOiBUaHUsIDEwIEF1ZyAyMDIzIDIwOjE1OjE5IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMjINCkxvY2F0aW9uOiBodHRwOi8vYXRyd2hyN3BvcG4vYT9mdXp6DQpDYWNoZS1Db250cm9sOiBtYXgtYWdlPTg2NDAwDQpDb250ZW50LUxlbmd0aDogMTQNCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD1VVEYtOA0KDQoKVW5hdXRob3JpemVkCg==]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>8488387445835223040</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Input returned in response (reflected)]]></name>
+    <host ip="192.168.16.2">http://web</host>
+    <path><![CDATA[/wp-content/plugins/phastpress/phast.php]]></path>
+    <location><![CDATA[/wp-content/plugins/phastpress/phast.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>Reflection of input arises when data is copied from a request and echoed into the application's immediate response.</p><p>Input being returned in application responses is not a vulnerability in its own right. However, it is a prerequisite for many client-side vulnerabilities, including cross-site scripting, open redirection, content spoofing, and response header injection. Additionally, some server-side vulnerabilities such as SQL injection are often easier to identify and exploit when input is returned in responses. In applications where input retrieval is rare and the environment is resistant to automated testing (for example, due to a web application firewall), it might be worth subjecting instances of it to focused manual testing. </p>]]></issueBackground>
+    <issueDetail><![CDATA[The name of an arbitrarily supplied URL parameter is copied into the application's response.]]></issueDetail>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC93cC1jb250ZW50L3BsdWdpbnMvcGhhc3RwcmVzcy9waGFzdC5waHAvZmtieDRicXgwcD9zcmM9ZnV6eiZzZXJ2aWNlPXNjcmlwdHMgSFRUUC8xLjANCkhvc3Q6IHdlYg0KQWNjZXB0OiB0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSxpbWFnZS9hdmlmLGltYWdlL3dlYnAsKi8qO3E9MC44DQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQ7IHJ2OjEwOS4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzExMC4wDQpTZWMtRmV0Y2gtRGVzdDogZG9jdW1lbnQNClNlYy1GZXRjaC1TaXRlOiBub25lDQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUsIGJyDQpETlQ6IDENClNlYy1GZXRjaC1Nb2RlOiBuYXZpZ2F0ZQ0KVXBncmFkZS1JbnNlY3VyZS1SZXF1ZXN0czogMQ0KU2VjLUZldGNoLVVzZXI6ID8xDQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTLGVuO3E9MC41DQoNCg==]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgNDA0IE5vdCBGb3VuZA0KRGF0ZTogVGh1LCAxMCBBdWcgMjAyMyAyMDoxNToyNSBHTVQNClNlcnZlcjogQXBhY2hlLzIuNC41NyAoRGViaWFuKQ0KWC1Qb3dlcmVkLUJ5OiBQSFAvOC4xLjIyDQpDb250ZW50LUxlbmd0aDogMTMyOA0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sOyBjaGFyc2V0PVVURi04DQoNCgogICAgICAgIDwhZG9jdHlwZSBodG1sPgogICAgICAgIDxodG1sPgogICAgICAgIDxoZWFkPgogICAgICAgIDxtZXRhIGNoYXJzZXQ9InV0Zi04Ij4KICAgICAgICA8dGl0bGU+U2VydmljZSBwYXJhbWV0ZXIgYWJzZW50ICZtaWRkb3Q7IFBoYXN0IG9uIHdlYjwvdGl0bGU+CiAgICAgICAgPHN0eWxlPgogICAgICAgIGh0bWwsIGJvZHkgeyBtaW4taGVpZ2h0OiAxMDAlOyB9CiAgICAgICAgYm9keSB7IGRpc3BsYXk6IGZsZXg7IGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47IGFsaWduLWl0ZW1zOiBjZW50ZXI7IH0KICAgICAgICAuY29udGFpbmVyIHsgbWF4LXdpZHRoOiA5NjBweDsgfQogICAgICAgIDwvc3R5bGU+CiAgICAgICAgPC9oZWFkPgogICAgICAgIDxib2R5PgogICAgICAgIDxkaXYgY2xhc3M9ImNvbnRhaW5lciI+CiAgICAgICAgPGgxPlNlcnZpY2UgcGFyYW1ldGVyIGFic2VudDwvaDE+CiAgICAgICAgPHA+UGhhc3Qgd2FzIG5vdCBhYmxlIHRvIGRldGVybWluZSB0aGUgcmVxdWVzdCBwYXJhbWV0ZXJzLiBUaGlzIG1pZ2h0IGJlIGJlY2F1c2UgeW91IGFyZSBhY2Nlc3NpbmcgdGhlIFBoYXN0IHNlcnZpY2UgZmlsZSBkaXJlY3RseSB3aXRob3V0IHBhcmFtZXRlcnMsIG9yIGJlY2F1c2UgeW91ciBzZXJ2ZXIgY29uZmlndXJhdGlvbiBjYXVzZXMgdGhlIFBBVEhfSU5GTyBlbnZpcm9ubWVudCB2YXJpYWJsZSB0byBiZSBtaXNzaW5nLjwvcD48cD5UaGlzIHJlcXVlc3QgaGFzIFBBVEhfSU5GTyBzZXQgdG86ICI8Y29kZT4vZmtieDRicXgwcDwvY29kZT4iPC9wPjxwPlRoaXMgcmVxdWVzdCBoYXMgUVVFUllfU1RSSU5HIHNldCB0bzogIjxjb2RlPjwvY29kZT4iPC9wPjxwPkVpdGhlciBQQVRIX0lORk8gb3IgUVVFUllfU1RSSU5HIG11c3QgY29udGFpbiB0aGUgcGFyYW1ldGVycyBmb3IgUGhhc3QgY29udGFpbmVkIGluIHRoZSBVUkwuIElmIHRoZSBVUkwgZW5kcyB3aXRoIHBhcmFtZXRlcnMgYWZ0ZXIgYSA8Y29kZT4vPC9jb2RlPiBjaGFyYWN0ZXIsIHRob3NlIHNob3VsZCBlbmQgdXAgaW4gUEFUSF9JTkZPLiBJZiB0aGUgVVJMIGVuZHMgd2l0aCBwYXJhbWV0ZXJzIGFmdGVyIGEgPGNvZGU+PzwvY29kZT4gY2hhcmFjdGVyLCB0aG9zZSBzaG91bGQgZW5kIHVwIGluIFFVRVJZX1NUUklORy48L3A+PHA+SWYgdGhlIFVSTCBjb250YWlucyBwYXJhbWV0ZXJzLCBidXQgdGhvc2UgYXJlIG5vdCB2aXNpYmxlIGFib3ZlLCB5b3VyIHNlcnZlciBpcyBtaXNjb25maWd1cmVkLjwvcD4gICAgICAgIDxocj4KICAgICAgICBQaGFzdCBvbiB3ZWIgICAgICAgIDwvZGl2PgogICAgICAgIDwvYm9keT4KICAgICAgICA8L2h0bWw+CiAgICAgICAg]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>7094715236401614848</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Suspicious input transformation (reflected)]]></name>
+    <host ip="192.168.16.2">http://web</host>
+    <path><![CDATA[/wp-content/plugins/phastpress/phast.php]]></path>
+    <location><![CDATA[/wp-content/plugins/phastpress/phast.php]]></location>
+    <severity>Information</severity>
+    <confidence>Firm</confidence>
+    <issueBackground><![CDATA[<p>Suspicious input transformation arises when an application receives user input, transforms it in some way, and then performs further processing on the result. The types of transformations that can lead to problems include decoding common formats, such as UTF-8 and URL-encoding, or processing of escape sequences, such as backslash escaping. </p>
+<p>Performing these input transformations does not constitute a vulnerability in its own right, but might lead to problems in conjunction with other application behaviors. An attacker might be able to bypass input filters by suitably encoding their payloads, if the input is decoded after the input filters have been applied. Or an attacker might be able to interfere with other data that is concatenated onto their input, by finishing their input with the start of a multi-character encoding or escape sequence, the transformation of which will consume the start of the following data.</p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>Review the transformation that is being applied, to understand whether this is intended and desirable behavior given the nature of the application functionality, and whether it gives rise to any vulnerabilities in relation to  bypassing of input filters or character consumption.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[The application appears to URL-decode the name of an arbitrarily supplied URL parameter, and echo the result in the response.<br><br>The payload <strong>si8ftm8s0p%4160k8dwk84a</strong> was submitted in the name of an arbitrarily supplied URL parameter. This payload contains the %41 sequence, corresponding to the character 'A'. The input was copied into the application's response as <strong>si8ftm8s0pA60k8dwk84a</strong> indicating that the application URL-decoded the sequence.<br><br>It might be possible to use this behavior to bypass input validation by submitting superfluous URL-encodings of any filtered characters.]]></issueDetail>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC93cC1jb250ZW50L3BsdWdpbnMvcGhhc3RwcmVzcy9waGFzdC5waHAvc2k4ZnRtOHMwcCUyNTQxNjBrOGR3azg0YT9zcmM9ZnV6eiZzZXJ2aWNlPXNjcmlwdHMgSFRUUC8xLjANCkhvc3Q6IHdlYg0KQWNjZXB0OiB0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSxpbWFnZS9hdmlmLGltYWdlL3dlYnAsKi8qO3E9MC44DQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQ7IHJ2OjEwOS4wKSBHZWNrby8yMDEwMDEwMSBGaXJlZm94LzExMC4wDQpTZWMtRmV0Y2gtRGVzdDogZG9jdW1lbnQNClNlYy1GZXRjaC1TaXRlOiBub25lDQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUsIGJyDQpETlQ6IDENClNlYy1GZXRjaC1Nb2RlOiBuYXZpZ2F0ZQ0KVXBncmFkZS1JbnNlY3VyZS1SZXF1ZXN0czogMQ0KU2VjLUZldGNoLVVzZXI6ID8xDQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTLGVuO3E9MC41DQoNCg==]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgNDA0IE5vdCBGb3VuZA0KRGF0ZTogVGh1LCAxMCBBdWcgMjAyMyAyMDoxNToyNiBHTVQNClNlcnZlcjogQXBhY2hlLzIuNC41NyAoRGViaWFuKQ0KWC1Qb3dlcmVkLUJ5OiBQSFAvOC4xLjIyDQpDb250ZW50LUxlbmd0aDogMTMzOQ0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sOyBjaGFyc2V0PVVURi04DQoNCgogICAgICAgIDwhZG9jdHlwZSBodG1sPgogICAgICAgIDxodG1sPgogICAgICAgIDxoZWFkPgogICAgICAgIDxtZXRhIGNoYXJzZXQ9InV0Zi04Ij4KICAgICAgICA8dGl0bGU+U2VydmljZSBwYXJhbWV0ZXIgYWJzZW50ICZtaWRkb3Q7IFBoYXN0IG9uIHdlYjwvdGl0bGU+CiAgICAgICAgPHN0eWxlPgogICAgICAgIGh0bWwsIGJvZHkgeyBtaW4taGVpZ2h0OiAxMDAlOyB9CiAgICAgICAgYm9keSB7IGRpc3BsYXk6IGZsZXg7IGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47IGFsaWduLWl0ZW1zOiBjZW50ZXI7IH0KICAgICAgICAuY29udGFpbmVyIHsgbWF4LXdpZHRoOiA5NjBweDsgfQogICAgICAgIDwvc3R5bGU+CiAgICAgICAgPC9oZWFkPgogICAgICAgIDxib2R5PgogICAgICAgIDxkaXYgY2xhc3M9ImNvbnRhaW5lciI+CiAgICAgICAgPGgxPlNlcnZpY2UgcGFyYW1ldGVyIGFic2VudDwvaDE+CiAgICAgICAgPHA+UGhhc3Qgd2FzIG5vdCBhYmxlIHRvIGRldGVybWluZSB0aGUgcmVxdWVzdCBwYXJhbWV0ZXJzLiBUaGlzIG1pZ2h0IGJlIGJlY2F1c2UgeW91IGFyZSBhY2Nlc3NpbmcgdGhlIFBoYXN0IHNlcnZpY2UgZmlsZSBkaXJlY3RseSB3aXRob3V0IHBhcmFtZXRlcnMsIG9yIGJlY2F1c2UgeW91ciBzZXJ2ZXIgY29uZmlndXJhdGlvbiBjYXVzZXMgdGhlIFBBVEhfSU5GTyBlbnZpcm9ubWVudCB2YXJpYWJsZSB0byBiZSBtaXNzaW5nLjwvcD48cD5UaGlzIHJlcXVlc3QgaGFzIFBBVEhfSU5GTyBzZXQgdG86ICI8Y29kZT4vc2k4ZnRtOHMwcEE2MGs4ZHdrODRhPC9jb2RlPiI8L3A+PHA+VGhpcyByZXF1ZXN0IGhhcyBRVUVSWV9TVFJJTkcgc2V0IHRvOiAiPGNvZGU+PC9jb2RlPiI8L3A+PHA+RWl0aGVyIFBBVEhfSU5GTyBvciBRVUVSWV9TVFJJTkcgbXVzdCBjb250YWluIHRoZSBwYXJhbWV0ZXJzIGZvciBQaGFzdCBjb250YWluZWQgaW4gdGhlIFVSTC4gSWYgdGhlIFVSTCBlbmRzIHdpdGggcGFyYW1ldGVycyBhZnRlciBhIDxjb2RlPi88L2NvZGU+IGNoYXJhY3RlciwgdGhvc2Ugc2hvdWxkIGVuZCB1cCBpbiBQQVRIX0lORk8uIElmIHRoZSBVUkwgZW5kcyB3aXRoIHBhcmFtZXRlcnMgYWZ0ZXIgYSA8Y29kZT4/PC9jb2RlPiBjaGFyYWN0ZXIsIHRob3NlIHNob3VsZCBlbmQgdXAgaW4gUVVFUllfU1RSSU5HLjwvcD48cD5JZiB0aGUgVVJMIGNvbnRhaW5zIHBhcmFtZXRlcnMsIGJ1dCB0aG9zZSBhcmUgbm90IHZpc2libGUgYWJvdmUsIHlvdXIgc2VydmVyIGlzIG1pc2NvbmZpZ3VyZWQuPC9wPiAgICAgICAgPGhyPgogICAgICAgIFBoYXN0IG9uIHdlYiAgICAgICAgPC9kaXY+CiAgICAgICAgPC9ib2R5PgogICAgICAgIDwvaHRtbD4KICAgICAgICA=]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>5365110984732737536</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Open redirection (reflected)]]></name>
+    <host ip="192.168.16.2">http://web</host>
+    <path><![CDATA[/wp-content/plugins/phastpress/phast.php]]></path>
+    <location><![CDATA[/wp-content/plugins/phastpress/phast.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>Open redirection vulnerabilities arise when an application incorporates user-controllable data into the target of a redirection in an unsafe way. An attacker can construct a URL within the application that causes a redirection to an arbitrary external domain. This behavior can be leveraged to facilitate phishing attacks against users of the application. The ability to use an authentic application URL, targeting the correct domain and with a valid SSL certificate (if SSL is used), lends credibility to the phishing attack because many users, even if they verify these features, will not notice the subsequent redirection to a different domain.</p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>If possible, applications should avoid incorporating user-controllable data into redirection targets. In many cases, this behavior can be avoided in two ways:</p>
+<ul>
+  <li>Remove the redirection function from the application, and replace links to it with direct links to the relevant target URLs.</li>
+  <li>Maintain a server-side list of all URLs that are permitted for redirection. Instead of passing the target URL as a parameter to the redirector, pass an index into this list.</li>
+</ul>
+<p>If it is considered unavoidable for the redirection function to receive user-controllable input and incorporate this into the redirection target, one of the following measures should be used to minimize the risk of redirection attacks:</p>
+<ul>
+  <li>The application should use relative URLs in all of its redirects, and the redirection function should strictly validate that the URL received is a relative URL.</li>
+  <li>The application should use URLs relative to the web root for all of its redirects, and the redirection function should validate that the URL received starts with a slash character. It should then prepend http://yourdomainname.com to the URL before issuing the redirect.</li>
+  <li>The application should use absolute URLs for all of its redirects, and the redirection function should verify that the user-supplied URL begins with http://yourdomainname.com/ before issuing the redirect.</li>
+</ul>]]></remediationBackground>
+    <issueDetail><![CDATA[The name of an arbitrarily supplied URL parameter is used to perform an HTTP redirect. The payload <b>%2f%2fantd942gza8%2fa%3f1</b> was submitted in the name of an arbitrarily supplied URL parameter. This caused a redirection to the following URL:<ul><li>//antd942gza8/a?1</li></ul><br><br>The application attempts to prevent redirection attacks by blocking absolute redirection targets starting with http:// or https://. However, an attacker can defeat this defense by omitting the protocol prefix from their absolute URL. If a redirection target starting with // is specified, then the browser will use the same protocol as the page which issued the redirection.<br><br>The application attempts to block redirection attacks but this can be circumvented by applying superfluous URL-encoding to special characters in the absolute redirection target - for example, by submitting %252f instead of the slash character.]]></issueDetail>
+    <remediationDetail><![CDATA[When attempting to block absolute redirection targets, the application should verify that the target begins with a single slash followed by a letter, and should reject any input containing a sequence of two slash characters. There is probably no need to perform a URL-decode of the name of an arbitrarily supplied URL parameter as the web server will have already carried out one decode. In any case, the application should perform its input validation <i>after</i> any custom canonicalization has been carried out. ]]></remediationDetail>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC93cC1jb250ZW50L3BsdWdpbnMvcGhhc3RwcmVzcy9waGFzdC5waHAvJTI1MmYlMjUyZmFudGQ5NDJnemE4JTI1MmZhJTI1M2YxP3NyYz1mdXp6JnNlcnZpY2U9c2NyaXB0cyBIVFRQLzEuMA0KSG9zdDogd2ViDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LGltYWdlL2F2aWYsaW1hZ2Uvd2VicCwqLyo7cT0wLjgNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NDsgcnY6MTA5LjApIEdlY2tvLzIwMTAwMTAxIEZpcmVmb3gvMTEwLjANClNlYy1GZXRjaC1EZXN0OiBkb2N1bWVudA0KU2VjLUZldGNoLVNpdGU6IG5vbmUNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZSwgYnINCkROVDogMQ0KU2VjLUZldGNoLU1vZGU6IG5hdmlnYXRlDQpVcGdyYWRlLUluc2VjdXJlLVJlcXVlc3RzOiAxDQpTZWMtRmV0Y2gtVXNlcjogPzENCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMsZW47cT0wLjUNCg0K]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMzAxIE1vdmVkIFBlcm1hbmVudGx5DQpEYXRlOiBUaHUsIDEwIEF1ZyAyMDIzIDIwOjE1OjI3IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMjINCkxvY2F0aW9uOiAvL2FudGQ5NDJnemE4L2E/MQ0KQ2FjaGUtQ29udHJvbDogbWF4LWFnZT04NjQwMA0KQ29udGVudC1MZW5ndGg6IDE0DQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9VVRGLTgNCg0KClVuYXV0aG9yaXplZAo=]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+</issues>

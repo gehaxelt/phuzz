@@ -1,0 +1,1 @@
+../phuzz-output/1000000-ewww-image-optimizer.6.9.3.zip/ewww_image_optimizer_aux_images_table/output/fuzzer-1/vulnerable-candidates.json,5e6c671b-3bc1-4b57-af83-6479f25e5467:  query_params:{"ewww_wpnonce": "fuzz", "action": "bulk_aux_images_table", "ewww_debug": "uzz"} body_params:{"ewww_total_pages": "fuzz", "ewww_search": "fuzz", "ewww_offset": "fuzz"}

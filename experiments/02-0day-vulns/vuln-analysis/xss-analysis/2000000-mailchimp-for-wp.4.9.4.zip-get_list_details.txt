@@ -1,0 +1,1 @@
+../phuzz-output/2000000-mailchimp-for-wp.4.9.4.zip/get_list_details/output/fuzzer-10/vulnerable-candidates.json,a4560aec-c434-4665-9e34-370a4f746451:  query_params:{"action": "mc4wp_get_list_details", "format": "fuzz", "ids": "fu<img src='x' onerror='alert(0xdeadbeef)'>zz"}

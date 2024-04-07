@@ -1,0 +1,1 @@
+../phuzz-output/700000-imagify.2.1.1.zip/missing_webp_callback/output/fuzzer-6/vulnerable-candidates.json,4a9aa622-42fa-4bd6-85d2-24121371ecf2:  query_params:{"action": "imagify_missing_webp_generation", "context": "fun"}

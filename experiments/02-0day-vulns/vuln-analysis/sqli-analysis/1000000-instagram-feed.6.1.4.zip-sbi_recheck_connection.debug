@@ -1,0 +1,2 @@
+{"function":"mysqli_query","params":["DELETE FROM `wp_options` WHERE `option_name` = 'sbi_license_status_fuz\u0007z'"],"errno":1213,"errstr":"Deadlock found when trying to get lock; try restarting transaction"}
+{"function":"mysqli_query","params":["DELETE FROM `wp_options` WHERE `option_name` = 'sbi_license_status_fuzz'"],"errno":1213,"errstr":"Deadlock found when trying to get lock; try restarting transaction"}

@@ -1,0 +1,42 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "post_id",
+      "panels_data"
+    ],
+    "data": [
+      {
+        "name": "post_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "panels_data",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action",
+      "_panelsnonce"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "so_panels_builder_content"
+      },
+      {
+        "name": "_panelsnonce",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

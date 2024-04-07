@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<!DOCTYPE issues [
+<!ELEMENT issues (issue*)>
+<!ATTLIST issues burpVersion CDATA "">
+<!ATTLIST issues exportTime CDATA "">
+<!ELEMENT issue (serialNumber, type, name, host, path, location, severity, confidence, issueBackground?, remediationBackground?, references?, vulnerabilityClassifications?, issueDetail?, issueDetailItems?, remediationDetail?, requestresponse*, collaboratorEvent*, infiltratorEvent*, staticAnalysis*, dynamicAnalysis*, prototypePollution*)>
+<!ELEMENT serialNumber (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT severity (#PCDATA)>
+<!ELEMENT confidence (#PCDATA)>
+<!ELEMENT issueBackground (#PCDATA)>
+<!ELEMENT remediationBackground (#PCDATA)>
+<!ELEMENT references (#PCDATA)>
+<!ELEMENT vulnerabilityClassifications (#PCDATA)>
+<!ELEMENT issueDetail (#PCDATA)>
+<!ELEMENT issueDetailItems (issueDetailItem*)>
+<!ELEMENT issueDetailItem (#PCDATA)>
+<!ELEMENT remediationDetail (#PCDATA)>
+<!ELEMENT requestresponse (request?, response?, responseRedirected?)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request method CDATA "">
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT responseRedirected (#PCDATA)>
+<!ELEMENT sender (#PCDATA)>
+<!ELEMENT message (#PCDATA)>
+<!ELEMENT conversation (#PCDATA)>
+<!ELEMENT recipient (#PCDATA)>
+<!ELEMENT recipients (recipient*)>
+<!ELEMENT smtp (sender, recipients, message, conversation)>
+<!ELEMENT collaboratorEvent (interactionType, originIp, time, lookupType?, lookupHost?, requestresponse?, smtp?)>
+<!ELEMENT interactionType (#PCDATA)>
+<!ELEMENT originIp (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT lookupType (#PCDATA)>
+<!ELEMENT lookupHost (#PCDATA)>
+<!ELEMENT infiltratorEvent (parameterName, platform, signature, stackTrace?, parameterValue?, collaboratorEvent)>
+<!ELEMENT parameterName (#PCDATA)>
+<!ELEMENT platform (#PCDATA)>
+<!ELEMENT signature (#PCDATA)>
+<!ELEMENT stackTrace (#PCDATA)>
+<!ELEMENT parameterValue (#PCDATA)>
+<!ELEMENT dynamicAnalysis (source, sink, sourceStackTrace, sinkStackTrace, eventListenerStackTrace, sourceValue, sinkValue, eventHandlerData, eventHandlerDataType, eventHandlerManipulatedData, poc, origin, isOriginChecked, sourceElementId, sourceElementName, eventFiredEventName, eventFiredElementId, eventFiredElementName, eventFiredOuterHtml)>
+<!ELEMENT prototypePollution (poc, pollutionTechnique, pollutionType)>
+<!ELEMENT staticAnalysis (source, sink, codeSnippets)>
+<!ELEMENT source (#PCDATA)>
+<!ELEMENT sink (#PCDATA)>
+<!ELEMENT sourceStackTrace (#PCDATA)>
+<!ELEMENT sinkStackTrace (#PCDATA)>
+<!ELEMENT eventListenerStackTrace (#PCDATA)>
+<!ELEMENT sourceValue (#PCDATA)>
+<!ELEMENT sinkValue (#PCDATA)>
+<!ELEMENT eventHandlerData (#PCDATA)>
+<!ELEMENT eventHandlerDataType (#PCDATA)>
+<!ELEMENT sourceElementId (#PCDATA)>
+<!ELEMENT sourceElementName (#PCDATA)>
+<!ELEMENT eventFiredEventName (#PCDATA)>
+<!ELEMENT eventFiredElementId (#PCDATA)>
+<!ELEMENT eventFiredElementName (#PCDATA)>
+<!ELEMENT eventFiredOuterHtml (#PCDATA)>
+<!ELEMENT eventHandlerManipulatedData (#PCDATA)>
+<!ELEMENT poc (#PCDATA)>
+<!ELEMENT origin (#PCDATA)>
+<!ELEMENT isOriginChecked (#PCDATA)>
+<!ELEMENT codeSnippets (codeSnippet*)>
+<!ELEMENT codeSnippet (#PCDATA)>
+<!ELEMENT pollutionTechnique (#PCDATA)>
+<!ELEMENT pollutionType (#PCDATA)>
+]>
+<issues burpVersion="2023.8.1" exportTime="Thu Aug 10 11:08:31 GMT 2023">
+  <issue>
+    <serialNumber>4716334222620047360</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Input returned in response (reflected)]]></name>
+    <host ip="192.168.10.128">http://192.168.10.128:8000</host>
+    <path><![CDATA[/xss1.php]]></path>
+    <location><![CDATA[/xss1.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>Reflection of input arises when data is copied from a request and echoed into the application's immediate response.</p><p>Input being returned in application responses is not a vulnerability in its own right. However, it is a prerequisite for many client-side vulnerabilities, including cross-site scripting, open redirection, content spoofing, and response header injection. Additionally, some server-side vulnerabilities such as SQL injection are often easier to identify and exploit when input is returned in responses. In applications where input retrieval is rare and the environment is resistant to automated testing (for example, due to a web application firewall), it might be worth subjecting instances of it to focused manual testing. </p>]]></issueBackground>
+    <issueDetail><![CDATA[The value of the <b>input</b> request parameter is copied into the application's response.]]></issueDetail>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC94c3MxLnBocD9pbnB1dD03anVubGt5am15IEhUVFAvMS4wDQpIb3N0OiAxOTIuMTY4LjEwLjEyODo4MDAwDQoNCg==]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBUaHUsIDEwIEF1ZyAyMDIzIDExOjA3OjQxIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMjINClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29udGVudC1MZW5ndGg6IDEwOA0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sOyBjaGFyc2V0PVVURi04DQoNCgo8aHRtbD4KCjxoZWFkPgogICAgPHRpdGxlPlhTUyAxPC90aXRsZT4KPC9oZWFkPgoKPGJvZHk+CiAgICA8cD4KICAgICAgICA3anVubGt5am15ICAgIDwvcD4KPC9ib2R5PgoKPC9odG1sPg==]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>704115751592243200</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Cross-site scripting (reflected)]]></name>
+    <host ip="192.168.10.128">http://192.168.10.128:8000</host>
+    <path><![CDATA[/xss1.php]]></path>
+    <location><![CDATA[/xss1.php]]></location>
+    <severity>High</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>Reflected cross-site scripting vulnerabilities arise when data is copied from a request and echoed into the application's immediate response in an unsafe way. An attacker can use the vulnerability to construct a request that, if issued by another application user, will cause JavaScript code supplied by the attacker to execute within the user's browser in the context of that user's session with the application.</p>
+<p>The attacker-supplied code can perform a wide variety of actions, such as stealing the victim's session token or login credentials, performing arbitrary actions on the victim's behalf, and logging their keystrokes.</p>
+<p>Users can be induced to issue the attacker's crafted request in various ways. For example, the attacker can send a victim a link containing a malicious URL in an email or instant message. They can submit the link to popular web sites that allow content authoring, for example in blog comments. And they can create an innocuous looking web site that causes anyone viewing it to make arbitrary cross-domain requests to the vulnerable application (using either the GET or the POST method).</p>
+<p>The security impact of cross-site scripting vulnerabilities is dependent upon the nature of the vulnerable application, the kinds of data and functionality that it contains, and the other applications that belong to the same domain and organization. If the application is used only to display non-sensitive public content, with no authentication or access control functionality, then a cross-site scripting flaw may be considered low risk. However, if the same application resides on a domain that can access cookies for other more security-critical applications, then the vulnerability could be used to attack those other applications, and so may be considered high risk. Similarly, if the organization that owns the application is a likely target for phishing attacks, then the vulnerability could be leveraged to lend credibility to such attacks, by injecting Trojan functionality into the vulnerable application and exploiting users' trust in the organization in order to capture credentials for other applications that it owns. In many kinds of application, such as those providing online banking functionality, cross-site scripting should always be considered high risk. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>In most situations where user-controllable data is copied into application responses, cross-site scripting 
+  attacks can be prevented using two layers of defenses:</p>
+<ul>
+  <li>Input should be validated as strictly as possible on arrival, given the kind of content that 
+it is expected to contain. For example, personal names should consist of alphabetical 
+and a small range of typographical characters, and be relatively short; a year of birth 
+should consist of exactly four numerals; email addresses should match a well-defined 
+regular expression. Input which fails the validation should be rejected, not sanitized.</li>
+<li>User input should be HTML-encoded at any point where it is copied into 
+application responses. All HTML metacharacters, including &lt; &gt; " ' and =, should be 
+replaced with the corresponding HTML entities (&amp;lt; &amp;gt; etc).</li></ul>
+<p>In cases where the application's functionality allows users to author content using 
+  a restricted subset of HTML tags and attributes (for example, blog comments which 
+  allow limited formatting and linking), it is necessary to parse the supplied HTML to 
+  validate that it does not use any dangerous syntax; this is a non-trivial task.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[The value of the <b>input</b> request parameter is copied into the HTML document as plain text between tags. The payload <b>n4ql8&lt;script&gt;alert(1)&lt;/script&gt;rqbu7</b> was submitted in the input parameter. This input was echoed unmodified in the application's response.<br><br>This proof-of-concept attack demonstrates that it is possible to inject arbitrary JavaScript into the application's response.]]></issueDetail>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC94c3MxLnBocD9pbnB1dD1uNHFsOCUzY3NjcmlwdCUzZWFsZXJ0KDEpJTNjJTJmc2NyaXB0JTNlcnFidTcgSFRUUC8xLjANCkhvc3Q6IDE5Mi4xNjguMTAuMTI4OjgwMDANCg0K]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBUaHUsIDEwIEF1ZyAyMDIzIDExOjA3OjQxIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMjINClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29udGVudC1MZW5ndGg6IDEzMw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sOyBjaGFyc2V0PVVURi04DQoNCgo8aHRtbD4KCjxoZWFkPgogICAgPHRpdGxlPlhTUyAxPC90aXRsZT4KPC9oZWFkPgoKPGJvZHk+CiAgICA8cD4KICAgICAgICBuNHFsODxzY3JpcHQ+YWxlcnQoMSk8L3NjcmlwdD5ycWJ1NyAgICA8L3A+CjwvYm9keT4KCjwvaHRtbD4=]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>1257794403732402176</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[HTTP request smuggling]]></name>
+    <host ip="192.168.10.128">http://192.168.10.128:8000</host>
+    <path><![CDATA[/xss1.php]]></path>
+    <location><![CDATA[/xss1.php]]></location>
+    <severity>Medium</severity>
+    <confidence>Tentative</confidence>
+    <issueBackground><![CDATA[<p>
+    HTTP request smuggling vulnerabilities arise when websites route HTTP requests through web servers with inconsistent HTTP parsing.
+</p>
+<p>
+    By supplying a request that different servers interpret as having different lengths, an attacker can poison the back-end TCP/TLS socket and prepend arbitrary data to the next request. Depending on the website's functionality, this can be used to bypass front-end security rules, access internal systems, poison web caches, and launch assorted attacks on users who are actively browsing the site.
+</p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>
+    You can resolve all variants of this vulnerability by configuring the front-end server to exclusively use HTTP/2 when communicating with back-end systems. Alternatively, you could ensure all servers in the chain run the same web server software with the same configuration. Disabling back-end connection reuse is likely to reduce the impact of this vulnerability, but does not mitigate all possible exploits.
+</p><p>
+    Specific instances of this vulnerability can be resolved by reconfiguring the front-end server to normalize ambiguous requests before routing them onward. Alternatively, you could configure the back-end server to reject the message and close the connection when it encounters an ambiguous request.
+</p>]]></remediationBackground>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAveHNzMS5waHA/azBKdj0zMDAzMTk0NTkgSFRUUC8xLjANCkhvc3Q6IDE5Mi4xNjguMTAuMTI4OjgwMDANCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkDQpUcmFuc2Zlci1FbmNvZGluZzogY2h1bmtlZA0KQ29udGVudC1MZW5ndGg6IDMzDQpDb25uZWN0aW9uOiBrZWVwLWFsaXZlDQoNCjE2DQpsdXFrMT14JmlucHV0PSZuNmdmdj14DQowDQoNCg==]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBUaHUsIDEwIEF1ZyAyMDIzIDExOjA4OjEzIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMjINClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29udGVudC1MZW5ndGg6IDk4DQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9VVRGLTgNCg0KCjxodG1sPgoKPGhlYWQ+CiAgICA8dGl0bGU+WFNTIDE8L3RpdGxlPgo8L2hlYWQ+Cgo8Ym9keT4KICAgIDxwPgogICAgICAgICAgICA8L3A+CjwvYm9keT4KCjwvaHRtbD4=]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAveHNzMS5waHA/M3dVUz0xNDA3NDUzMTAwIEhUVFAvMS4wDQpIb3N0OiAxOTIuMTY4LjEwLjEyODo4MDAwDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3gtd3d3LWZvcm0tdXJsZW5jb2RlZA0KVHJhbnNmZXItRW5jb2Rpbmc6IGNodW5rZWQNCkNvbnRlbnQtTGVuZ3RoOiAzMw0KQ29ubmVjdGlvbjoga2VlcC1hbGl2ZQ0KDQoxNg0KemNhOGY9eCZpbnB1dD0mZWJ6dGY9eA0KMQ0KWg0KUQ0KDQo=]]></request>
+    </requestresponse>
+  </issue>
+</issues>

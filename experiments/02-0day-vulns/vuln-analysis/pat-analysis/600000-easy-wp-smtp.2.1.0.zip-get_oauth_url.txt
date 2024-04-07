@@ -1,0 +1,1 @@
+../phuzz-output/600000-easy-wp-smtp.2.1.0.zip/get_oauth_url/output/fuzzer-2/vulnerable-candidates.json,9de8c433-8d3b-4850-81e1-8d5819362cb7:  query_params:{"action": "easy_wp_smtp_vue_get_oauth_url"} body_params:{"settings": "fuWz", "mailer": "fu"}

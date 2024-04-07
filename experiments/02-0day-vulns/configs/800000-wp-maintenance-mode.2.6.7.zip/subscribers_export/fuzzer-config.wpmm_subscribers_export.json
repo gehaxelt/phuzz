@@ -1,0 +1,24 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action",
+      "_wpnonce"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "wpmm_subscribers_export"
+      },
+      {
+        "name": "_wpnonce",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

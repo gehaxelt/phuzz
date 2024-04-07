@@ -1,0 +1,37 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "products",
+      "toggle"
+    ],
+    "data": [
+      {
+        "name": "products",
+        "value": "fuzz"
+      },
+      {
+        "name": "toggle",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "facebook_for_woocommerce_set_product_sync_bulk_action_prompt"
+      }
+    ]
+  }
+}

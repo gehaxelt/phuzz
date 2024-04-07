@@ -1,0 +1,287 @@
+# astra-sites - import_block
+- Candidate: ../phuzz-output/1000000-astra-sites.3.2.1.zip/import_block/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: action=ast_block_templates_import_block
+- Fuzzed params: content=fu<imgsrc='x' onerror='alert(0xdeadbeef)'>zz
+- Code: /inc/lib/gutenberg-templates/classes/class-ast-block-templates.php // import_block
+- Authenticated: Yes, with current_user_can with 'edit_posts' 
+- Nonce needed: Yes, check_ajax_referer( 'ast-block-templates-ajax-nonce', '_ajax_nonce' )
+- Exploitable: No
+- Impact: Nothing
+- False positive: Yes
+
+
+# kadence-blocks - process_data_ajax_callback
+- Candidate: ../phuzz-output/300000-kadence-blocks.3.0.37.zip/process_data_ajax_callback/output/fuzzer-6/vulnerable-candidates.json
+- Fixed params: action=kadence_import_process_data
+- Fuzzed params: key=fuzz url=fuzz package=fuzz api_key=fuzz import_style=fuzz import_item_id=fuzz import_type=fuzz import_library=fuzz import_content=f<img src='x' onerror='alert(0xdeadbeef)'>uzz
+- Code: /includes/class-kadence-blocks-prebuilt-library.php // prebuilt_templates_data_ajax_callback
+- Authenticated: Yes, with current_user_can with 'edit_posts' in the verify_ajax_call function
+- Nonce needed: Yes, check_ajax_referer( 'kadence-blocks-ajax-verification', 'security' ) in the verify_ajax_call function
+- Exploitable: No
+- Impact: Nothing
+- False positive: Yes
+
+
+# mailchimp-for-wp - get_list_details
+- Candidate: ../phuzz-output/2000000-mailchimp-for-wp.4.9.4.zip/get_list_details/output/fuzzer-2/vulnerable-candidates.json
+- Fixed params: action=mc4wp_get_list_details
+- Fuzzed params: format=fuzz ids=fuz<img src='x' onerror='alert(0xdeadbeef)'>z
+- Code: /includes/admin/class-admin-ajax.php // get_list_details
+- Authenticated: Yes, with current_user_can( $this->get_required_capability() ) in the is_user_authorized function
+- Nonce needed: No
+- Exploitable: No
+- Impact: Nothing
+- False positive: Yes
+
+
+# megamenu - ajax_add_widget
+- Candidate: ../phuzz-output/400000-megamenu.3.2.2.zip/ajax_add_widget/output/fuzzer-2/vulnerable-candidates.json
+- Fixed params: action=mm_add_widget
+- Fuzzed params: is_grid_widget=fuzz title=fuzz menu_item_id=fuzz id_base=f$<a href='javascript:alert(0xdeadbeef)'zz
+- Code: /classes/widget-manager.class.php // ajax_add_widget
+- Authenticated: Yes, current_user_can( $capability )
+- Nonce needed: Yes, check_ajax_referer( 'megamenu_edit' )
+- Exploitable: No
+- Impact: Nothing
+- False positive: Yes
+
+
+# megamenu - ajax_reorder_items
+- Candidate: ../phuzz-output/400000-megamenu.3.2.2.zip/ajax_reorder_items/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: action=mm_reorder_items
+- Fuzzed params: items=fuzz<img src='x' onerror='alert(0xdeadbeef)'>
+- Code: /classes/widget-manager.class.php // ajax_reorder_items
+- Authenticated: Yes, current_user_can( $capability )
+- Nonce needed: Yes, check_ajax_referer( 'megamenu_edit' )
+- Exploitable: No
+- Impact: Nothing
+- False positive: Yes
+
+
+# megamenu - ajax_save_grid_data
+- Candidate: ../phuzz-output/400000-megamenu.3.2.2.zip/ajax_save_grid_data/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: action=mm_save_grid_data
+- Fuzzed params: parent_menu_item=fuzz grid=Eu<img src='x' onerror='alert(0xdeadbeef)'>zz
+- Code: /classes/widget-manager.class.php // ajax_save_grid_data
+- Authenticated: Yes, current_user_can( $capability )
+- Nonce needed: Yes, check_ajax_referer( 'megamenu_edit' )
+- Exploitable: No
+- Impact: Nothing
+- False positive: Yes
+
+
+# megamenu - ajax_show_menu_item_form
+- Candidate: ../phuzz-output/400000-megamenu.3.2.2.zip/ajax_show_menu_item_form/output/fuzzer-4/vulnerable-candidates.json
+- Fixed params: action=mm_edit_menu_item
+- Fuzzed params: widget_id=fuzz<a href='javascript:alert(0xdeadbeef)'
+- Code: /classes/widget-manager.class.php // ajax_show_menu_item_form
+- Authenticated: Yes, current_user_can( $capability )
+- Nonce needed: Yes, check_ajax_referer( 'megamenu_edit' )
+- Exploitable:
+- Impact:
+- False positive: See CSV
+
+
+# megamenu - ajax_show_widget_form
+- Candidate: ../phuzz-output/400000-megamenu.3.2.2.zip/ajax_show_widget_form/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: action=mm_edit_widget
+- Fuzzed params: widget_id=fuzZ<a href='javascript:alert(0xdeadbeef)'z
+- Code: /classes/widget-manager.class.php // ajax_show_widget_form
+- Authenticated: Yes, current_user_can( $capability )
+- Nonce needed: Yes, check_ajax_referer( 'megamenu_edit' )
+- Exploitable:
+- Impact:
+- False positive: See CSV
+
+
+# ninja-forms - ninja_forms_ajax_import_form
+- Candidate: ../phuzz-output/900000-ninja-forms.3.6.23.zip/ninja_forms_ajax_import_form/output/fuzzer-9/vulnerable-candidates.json
+- Fixed params: action=ninja_forms_ajax_import_form
+- Fuzzed params: flagged=fuzz formID=fuzz import=fu<img src='x' onerror='alert(0xdeadbeef)'>zz security=fuzz
+- Code: /lib/NF_Upgrade.php // ninja_forms_ajax_import_form
+- Authenticated: Yes, current_user_can
+- Nonce needed: Yes, wp_verify_nonce( $_POST[ 'security' ], 'ninja_forms_upgrade_nonce' )
+- Exploitable:
+- Impact:
+- False positive: See CSV
+
+
+# popup-builder - changeConditionRuleRow
+- Candidate: ../phuzz-output/300000-popup-builder.4.1.14.zip/changeConditionRuleRow/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: action=change_condition_rule_row
+- Fuzzed params: paramValue=fuzz paramName=fuzz popupId=fuzz ruleId=fuzz groupId=fuzz conditionName=fuzz<a href='javascript:alert(0xdeadbeef)'
+- Code: /com/classes/Ajax.php // changeConditionRuleRow
+- Authenticated: No
+- Nonce needed: Yes, check_ajax_referer(SG_AJAX_NONCE, 'nonce_ajax')
+- Exploitable:
+- Impact:
+- False positive: See CSV
+
+
+# shortcodes-ultimate - settings
+- Candidate: ../phuzz-output/700000-shortcodes-ultimate.5.12.11.zip/settings/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: action=su_generator_settings
+- Fuzzed params: shortcode=fuzz\u0004
+- Code: /inc/core/generator.php // settings function
+- Authenticated: Yes, current_user_can( $required_capability ) via access_check()
+- Nonce needed: No
+- Exploitable:
+- Impact:
+- False positive: Yes
+
+
+
+# siteorigin-panels - action_export_layout
+- Candidate: ../phuzz-output/800000-siteorigin-panels.2.22.1.zip/action_export_layout/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: action=so_panels_export_layout
+- Fuzzed params: panels_export_data=fu<script>alert(0xdeadbeef)</script>zz
+- Code: /inc/admin-layouts.php // action_export_layout
+- Authenticated: No
+- Nonce needed: Yes, wp_verify_nonce( '_panelsnonce', 'panels_action' )
+- Exploitable:
+- Impact:
+- False positive: Yes
+
+
+# the-events-calendar - ajax_fetch_import
+- Candidate: ../phuzz-output/800000-the-events-calendar.6.0.12.zip/ajax_fetch_import/output/fuzzer-4/vulnerable-candidates.json
+- Fixed params: action=tribe_aggregator_fetch_import
+- Fuzzed params: import_id=f<img src='x' onerror='alert(0xdeadbeef)'>uzz
+- Code: /src/Tribe/Aggregator/Tabs/New.php // ajax_fetch_import
+- Authenticated: No
+- Nonce needed: No
+- Exploitable:
+- Impact:
+- False positive: Yes
+
+
+# ultimate-addons-for-gutenberg - import_block
+- Candidate: ../phuzz-output/500000-ultimate-addons-for-gutenberg.2.5.1.zip/import_block/output/fuzzer-2/vulnerable-candidates.json
+- Fixed params: action=ast_block_templates_import_block
+- Fuzzed params: content=fu<img src='x' onerror='alert(0xdeadbeef)'>zz
+- Code: /lib/gutenberg-templates/classes/class-ast-block-templates-sync-library.php // ajax_import_blocks
+- Authenticated: Yes, with current_user_can( 'edit_posts' )
+- Nonce needed: Yes, check_ajax_referer( 'ast-block-templates-ajax-nonce', '_ajax_nonce' )
+- Exploitable:
+- Impact:
+- False positive: Yes
+
+
+# updraftplus - wp_ajax_updraftcentral_receivepublickey
+- Candidate: ../phuzz-output/3000000-updraftplus.1.23.3.zip/wp_ajax_updraftcentral_receivepublickey/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: action=updraftcentral_receivepublickey
+- Fuzzed params: updraft_key_index=fuzz public_key=fu<script>alert(0xdeadbeef)</script>zz
+- Code: /central/bootstrap.php // wp_ajax_updraftcentral_receivepublickey
+- Authenticated: No
+- Nonce needed: No
+- Exploitable:
+- Impact:
+- False positive: No (Recheck)
+
+
+# wp-migrate-db - ajax_migrate_table
+- Candidate: ../phuzz-output/300000-wp-migrate-db.2.6.5.zip/ajax_migrate_table/output/fuzzer-2/vulnerable-candidates.json
+- Fixed params: action=wpmdb_migrate_table
+- Fuzzed params: form_data=fu<img src='x' onerror='alert(0xdeadbeef)'>zz
+- Code: /class/Common/Migration/MigrationManager.php // ajax_migrate_table
+- Authenticated: No
+- Nonce needed: Yes, $this->http->check_ajax_referer('migrate-table')
+- Exploitable:
+- Impact:
+- False positive: Yes
+
+
+# wp-user-avatar - get_forms_by_builder_type
+- Candidate: ../phuzz-output/300000-wp-user-avatar.4.10.1.zip/get_forms_by_builder_type/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: action=pp_get_forms_by_builder_type
+- Fuzzed params: data=fu<a href='javascript:alert(0xdeadbeef)'zz
+- Code: /src/Classes/AjaxHandler.php // get_forms_by_builder_type
+- Authenticated: No
+- Nonce needed: No
+- Exploitable:
+- Impact:
+- False positive: See CSV
+
+
+# wpvivid-backuprestore - check_import_file
+- Candidate: ../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/get_post_type_list/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: action=wpvivid_check_import_file
+- Fuzzed params: file_name=<img src='x' onerror='alert(0xdeadbeef)'>fuzz
+- Code: /class-wpvivid-export-import.php // check_import_file
+- Authenticated: Yes, is_admin()&&current_user_can('administrator') via wpvivid_plugin->ajax_check_security()
+- Nonce needed: Yes, check_ajax_referer( 'wpvivid_ajax', 'nonce' ); via wpvivid_plugin->ajax_check_security()
+- Exploitable:
+- Impact:
+- False positive: See CSV
+
+
+# wpvivid-backuprestore - export_post_step2
+- Candidate: ../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/export_post_step2/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: action=wpvivid_export_post_step2
+- Fuzzed params: post_type=<tcript>alert(0xdeadbeef)</script>fuzz
+- Code: /includes/class-wpvivid-export-import.php // export_post_step2
+- Authenticated: Yes, is_admin()&&current_user_can('administrator') via wpvivid_plugin->ajax_check_security()
+- Nonce needed: Yes, check_ajax_referer( 'wpvivid_ajax', 'nonce' ); via wpvivid_plugin->ajax_check_security()
+- Exploitable:
+- Impact:
+- False positive: Yes
+
+
+# wpvivid-backuprestore - export_post_step3
+- Candidate: ../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/export_post_step3/output/fuzzer-2/vulnerable-candidates.json
+- Fixed params: action=wpvivid_export_post_step3
+- Fuzzed params: post_ids=fuzz all=fuzz post_type=fuz<img src='x' onerror='alert(0xdeadbeef)'>z
+- Code: /includes/class-wpvivid-export-import.php // export_post_step3
+- Authenticated: Yes, is_admin()&&current_user_can('administrator') via wpvivid_plugin->ajax_check_security()
+- Nonce needed: Yes, check_ajax_referer( 'wpvivid_ajax', 'nonce' ); via wpvivid_plugin->ajax_check_security()
+- Exploitable:
+- Impact:
+- False positive: See CSV
+
+
+# wpvivid-backuprestore - get_exclude_files_list
+- Candidate: ../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/get_exclude_files_list/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: action=wpvivid_get_exclude_files_list
+- Fuzzed params: file_exclude=fuzzw page=5uiz
+- Code: /includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php // get_exclude_files_list
+- Authenticated: Yes, is_admin()&&current_user_can('administrator') via wpvivid_plugin->ajax_check_security()
+- Nonce needed: Yes, check_ajax_referer( 'wpvivid_ajax', 'nonce' ); via wpvivid_plugin->ajax_check_security()
+- Exploitable:
+- Impact:
+- False positive: See CSV
+
+
+# wpvivid-backuprestore - get_file_id
+- Candidate: ../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/get_file_id/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: action=wpvivid_get_file_id
+- Fuzzed params: file_name=fiuzz<img src='x' onerror='alert(0xdeadbeef)'>
+- Code: /includes/class-wpvivid-export-import.php // get_file_id
+- Authenticated: Yes, is_admin()&&current_user_can('administrator') via wpvivid_plugin->ajax_check_security()
+- Nonce needed: Yes, check_ajax_referer( 'wpvivid_ajax', 'nonce' ); via wpvivid_plugin->ajax_check_security()
+- Exploitable:
+- Impact:
+- False positive: See CSV
+
+
+# wpvivid-backuprestore - get_post_type_list
+- Candidate: ../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/get_post_type_list/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: action=wpvivid_get_post_type_list
+- Fuzzed params: page=fuzz post_type=fuz
+- Code: /includes/upload-cleaner/class-wpvivid-upload-cleaner-setting.php // get_post_type_list
+- Authenticated: Yes, is_admin()&&current_user_can('administrator') via wpvivid_plugin->ajax_check_security()
+- Nonce needed: Yes, check_ajax_referer( 'wpvivid_ajax', 'nonce' ); via wpvivid_plugin->ajax_check_security()
+- Exploitable:
+- Impact:
+- False positive: See CSV
+
+
+# wpvivid-backuprestore - is_backup_file_free
+- Candidate: ../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/is_backup_file_free/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: action=wpvivid_is_backup_file_free
+- Fuzzed params: file_name=fuz<img src='x' onerror='alert(0xdeadbeef)'>z
+- Code: /includes/class-wpvivid-backup-uploader.php // is_backup_file_free
+- Authenticated: Yes, is_admin()&&current_user_can('administrator') via wpvivid_plugin->ajax_check_security()
+- Nonce needed: Yes, check_ajax_referer( 'wpvivid_ajax', 'nonce' ); via wpvivid_plugin->ajax_check_security()
+- Exploitable:
+- Impact:
+- False positive: See CSV

@@ -1,0 +1,98 @@
+# ewww-image-optimizer
+- Candidate:  ../phuzz-output/1000000-ewww-image-optimizer.6.9.3.zip/ewww_image_optimizer_aux_images_table/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: "ewww_wpnonce": "fuzz","action": "bulk_aux_images_table"
+- Fuzzed params: "ewww_debug": "uzz","ewww_total_pages": "fuzz","ewww_search": "fuzz","ewww_offset": "fuzz"
+- Code: aux-optimize.php // function ewww_image_optimizer_aux_images_table() {
+- Authenticated: Yes, as admin? current_user_can( $permissions ) with $permissions = apply_filters( 'ewww_image_optimizer_bulk_permissions', '' );
+- Nonce needed: Yes, wp_verify_nonce( sanitize_key( $_REQUEST['ewww_wpnonce'] ), 'ewww-image-optimizer-tools' )
+- Exploitable: No, because of $wpdb->esc_like and correct use of 
+- Impact: None
+- False positive: Yes, ("Table 'db.wp_ewwwio_images' doesn't exist")
+
+# instagram-feed
+- Candidate: ../phuzz-output/1000000-instagram-feed.6.1.4.zip/sbi_recheck_connection/output/fuzzer-10/vulnerable-candidates.json
+- Fixed params: "action": "sbi_recheck_connection"
+- Fuzzed params: "option_name": "fuzz","item_name": "fuzz","license_key": "fuzz+"
+- Code: admin/SBI_Global_Settings.php // public function sbi_recheck_connection() {
+- Authenticated: Yes, as admin? sbi_current_user_can( 'manage_instagram_feed_options' )
+- Nonce needed: Yes, check_ajax_referer( 'sbi_admin_nonce', 'nonce'  );
+- Exploitable: No
+- Impact: None
+- False positive: Yes, Deadlock found when trying to get lock; try restarting transaction
+
+# wpvivid-backuprestore - add_exclude_files
+- Candidate: ../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/add_exclude_files/output/fuzzer-5/vulnerable-candidates.json
+- Fixed params: "action": "wpvivid_uc_add_exclude_files"
+- Fuzzed params: "folder": "fuzz","search": "f-zz","selected": "fuzz"
+- Code: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php //     public function add_exclude_files()
+- Authenticated: $check=is_admin()&&current_user_can($role); with $role='administrator'
+- Nonce needed: Yes, check_ajax_referer( 'wpvivid_ajax', 'nonce' );
+- Exploitable: Maybe (re-check!)
+- Impact: Maybe (re-check!)
+- False positive: Yes, "Table 'db.wp_wpvivid_unused_uploads_files' doesn't exist"
+
+# wpvivid-backuprestore - get_result_list
+- Candidate: ../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/get_result_list/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: "action": "wpvivid_get_result_list"
+- Fuzzed params: "folder": "fuzz","search": "f-zz","page": "fuzz"
+- Code: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php //     public function get_result_list()
+- Authenticated: $check=is_admin()&&current_user_can($role); with $role='administrator'
+- Nonce needed: Yes, check_ajax_referer( 'wpvivid_ajax', 'nonce' );
+- Exploitable: Maybe (re-check!)
+- Impact: Maybe (re-check!)
+- False positive: Yes, "Table 'db.wp_wpvivid_unused_uploads_files' doesn't exist"
+
+# wpvivid-backuprestore - isolate_selected_image
+- Candidate: ../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/isolate_selected_image/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: "action": "wpvivid_isolate_selected_image"
+- Fuzzed params: "page": "fuzz", "folder": "fuzz", "search": "fuzz/etc/passwd","selected": "fuzz"
+- Code: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php //     public function isolate_selected_image()
+- Authenticated: $check=is_admin()&&current_user_can($role); with $role='administrator'
+- Nonce needed: Yes, check_ajax_referer( 'wpvivid_ajax', 'nonce' );
+- Exploitable: Maybe (re-check!)
+- Impact: Maybe (re-check!)
+- False positive: Yes, "Table 'db.wp_wpvivid_unused_uploads_files' doesn't exist"
+
+# wpvivid-backuprestore - start_isolate_all_image
+- Candidate: ../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/start_isolate_all_image/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: "action": "wpvivid_start_isolate_all_image"
+- Fuzzed params: "folder": "fuzz","search": "f-zz"
+- Code: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php //     public function start_isolate_all_image()
+- Authenticated: $check=is_admin()&&current_user_can($role); with $role='administrator'
+- Nonce needed: Yes, check_ajax_referer( 'wpvivid_ajax', 'nonce' );
+- Exploitable: Maybe (re-check!)
+- Impact: Maybe (re-check!)
+- False positive: Yes, "Table 'db.wp_wpvivid_unused_uploads_files' doesn't exist"
+
+# google-analytics-for-wordpress
+- Candidate: ../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/get_posts/output/fuzzer-4/vulnerable-candidates.json
+- Fixed params:  "action": "monsterinsights_get_posts"
+- Fuzzed params: "numberposts": "fuzz", "keyword": "-fuzz", "post_type": "fuzz"
+- Code: includes/admin/routes.php // public function get_posts() {
+- Authenticated: Yes, as admin (?)
+- Nonce needed: Yes, check_ajax_referer( 'mi-admin-nonce', 'nonce' );
+- Exploitable: No
+- Impact: None
+- False positive: Yes (" use near 'DESC" => No ordering is provided, the query is broken by design.)
+
+# google-analytics-dashboard-for-wp
+- Candidate: ../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/get_posts/output/fuzzer-3/vulnerable-candidates.json
+- Fixed params: "action": "exactmetrics_get_posts"
+- Fuzzed params: "numberposts": "fuzz","keyword": "-uzz","post_type": "fuzz"
+- Code: includes/admin/routes.php // public function get_posts() {
+- Authenticated: Yes, as admin (?)
+- Nonce needed: Yes, check_ajax_referer( 'mi-admin-nonce', 'nonce' );
+- Exploitable: No
+- Impact: None
+- False positive: Yes (" use near 'DESC" => No ordering is provided, the query is broken by design.)
+
+# ninja-forms
+- Candidate: ../phuzz-output/900000-ninja-forms.3.6.23.zip/ninja_forms_ajax_migrate_database/output/fuzzer-4/vulnerable-candidates.json
+- Fixed params: "action": "ninja_forms_ajax_migrate_database"
+- Fuzzed params: "security": "f"
+- Code: lib/NF_Upgrade.php // function ninja_forms_ajax_migrate_database
+- Authenticated: Yes, as admin user: current_user_can( apply_filters( 'ninja_forms_admin_upgrade_migrate_database_capabilities', 'manage_options' ) )
+- Nonce needed: Yes, wp_verify_nonce( $_POST[ 'security' ], 'ninja_forms_upgrade_nonce' )
+- Exploitable: No
+- Impact: None
+- False positive: Yes ("Database table db.wp_nf3_forms does not exist.")

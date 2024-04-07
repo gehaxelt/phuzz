@@ -1,0 +1,25 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "feed_id"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "sbi_export_settings_json"
+      },
+      {
+        "name": "feed_id",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

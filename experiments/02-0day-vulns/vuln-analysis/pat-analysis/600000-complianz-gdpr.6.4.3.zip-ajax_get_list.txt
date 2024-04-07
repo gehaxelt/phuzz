@@ -1,0 +1,1 @@
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_get_list/output/fuzzer-7/vulnerable-candidates.json,da7d36a4-84ef-44f8-b852-614c4f6bcbda:  query_params:{"action": "cmplz_get_list", "language": "%fuzz", "deleted": "fu", "type": "fuzz"}

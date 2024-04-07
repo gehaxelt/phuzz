@@ -1,0 +1,30 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "context",
+      "shortcode"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "yith_plugin_fw_gutenberg_do_shortcode"
+      },
+      {
+        "name": "context",
+        "value": "fuzz"
+      },
+      {
+        "name": "shortcode",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

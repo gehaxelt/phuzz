@@ -1,0 +1,368 @@
+# install_plugin only (super) admins have this permission: https://wordpress.org/documentation/article/roles-and-capabilities/
+# only admins can have activate_plugin + manage_options capas
+
+# astra-sites - activate_plugin
+- Code: inc/lib/gutenberg-templates/classes/class-ast-block-templates.php
+- Authenticated: yes, if ( ! current_user_can( 'activate_plugins' ) ) {
+- Nonce needed: yes, check_ajax_referer( 'ast-block-templates-ajax-nonce', 'security' );
+- Vulnerable function use: No calls WP function which correctly sanitizes: activate_plugins -> validate_plugin -> validate_file
+- Exploitable: No
+- Impact: None
+- False positive: No
+
+
+# backwpup - ajax_working
+- Code : /inc/class-page-jobs.php // ajax_working
+- Authenticated: Yes, current_user_can( 'backwpup_jobs_start' )
+- Nonce needed: Yes, check_ajax_referer( 'backwpupworking_ajax_nonce' )
+- Vulnerable function use: yes
+- Exploitable: Yes, but only by users with backwpup_jobs_start role.
+- Impact: Minimal, can tell whether a file containing `backwpup_log_` exists or not.
+- False positive: No
+
+
+# coming-soon - seedprod_lite_activate_addon
+- Code: app/functions-addons.php
+- Authenticated: Yes, if ( ! current_user_can( 'activate_plugin' ) ) {
+- Nonce needed: Yes, if ( check_ajax_referer( 'seedprod_lite_activate_addon', 'nonce' ) ) {
+- Vulnerable function use: No, calls WP's activate_plugins
+- Exploitable: No
+- Impact: None
+- False positive: No
+
+# coming-soon - seedprod_lite_install_addon // TODO Test
+- Code: app/functions-addons.php
+- Authenticated: Yes, if ( ! current_user_can( 'install_plugins' ) ) {
+- Nonce needed: Yes, check_ajax_referer( 'seedprod_lite_install_addon', 'nonce' );
+- Vulnerable function use: Yes, passes param to WP's Plugin_Upgrader, which takes local path to zip file.
+- Exploitable: Only by admin.
+- Impact: Check for file path existence or install any plugin.
+- False positive: No
+
+
+# complianz-gdpr - ajax_delete_snapshot // TODO Test
+- Code: /proof-of-consent/class-proof-of-consent.php // delete_snapshot called from /proof-of-consent/class-proof-of-consent.php // ajax_delete_snapshot
+- Authenticated: Yes, current_user_can( apply_filters('cmplz_capability','manage_privacy') )
+- Nonce needed: No
+- Vulnerable function use: Yes, can delete any file 
+- Exploitable: No, only by users with role 'manage_privacy' (admin)
+- Impact: Delete any file on the filesystem.
+- False positive: No
+
+
+# complianz-gdpr - ajax_load_gridblock // TODO Test
+- Code : /functions.php // cmplz_get_template called from /class-admin.php // ajax_load_gridblock
+- Authenticated: Yes, current_user_can( apply_filters('cmplz_capability','manage_privacy') )
+- Nonce needed: No
+- Vulnerable function use: Yes
+- Exploitable: No, only by admins
+- Impact: Not clear
+- False positive: No?
+
+
+# enable-media-replace - emr_activate
+- Code: classes/external/upsell_installer.php
+- Authenticated: Yes, if ( ! current_user_can('activate_plugins'))
+- Nonce needed: Yes, check_admin_referer( 'emr-plugin-activate', 'nonce' );
+- Vulnerable function use: No, because it calls WP's activate_plugins
+- Exploitable: No
+- Impact: None
+- False positive: No
+
+
+# essential-addons-for-elementor-lite - ajax_activate_plugin
+- Code: includes/Classes/WPDeveloper_Plugin_Installer.php
+- Authenticated: Yes, if(!current_user_can( 'activate_plugins' )) {
+- Nonce needed: Yes, check_ajax_referer('essential-addons-elementor', 'security');
+- Vulnerable function use: No, because of WP's activate_plugins
+- Exploitable: No
+- Impact: None
+- False positive: None
+
+
+# google-analytics-dashboard-for-wp - exactmetrics_ajax_activate_addon
+- Code: includes/admin/ajax.php
+- Authenticated: Yes, if ( ! current_user_can( 'activate_plugins' ) ) {
+- Nonce needed: Yes, check_ajax_referer( 'exactmetrics-activate', 'nonce' );
+- Vulnerable function use: No, uses WP's activate_plugins
+- Exploitable: No
+- Impact: None
+- False positive: No
+
+
+# google-analytics-dashboard-for-wp - exactmetrics_ajax_install_addon
+- Code: includes/admin/ajax.php
+- Authenticated: Yes if ( ! exactmetrics_can_install_plugins() ) {
+- Nonce needed: Yes, check_ajax_referer( 'exactmetrics-install', 'nonce' );
+- Vulnerable function use: Yes, Plugin_Upgrader
+- Exploitable: No, only by admin
+- Impact: Check for file path existence or install any plugin.
+- False positive: No
+
+
+# google-analytics-for-wordpress - monsterinsights_ajax_activate_addon
+- Code: includes/admin/ajax.php
+- Authenticated: Yes, if ( ! current_user_can( 'activate_plugins' ) ) {
+- Nonce needed: Yes, check_ajax_referer( 'monsterinsights-activate', 'nonce' );
+- Vulnerable function use: No, uses activate_plugins
+- Exploitable: No
+- Impact: None
+- False positive: No
+
+
+# google-analytics-for-wordpress - monsterinsights_ajax_install_addon
+- Code: includes/admin/ajax.php
+- Authenticated: Yes, if ( ! monsterinsights_can_install_plugins() ) {
+- Nonce needed: Yes, check_ajax_referer( 'monsterinsights-install', 'nonce' );
+- Vulnerable function use: Yes, Plugin_Upgrader
+- Exploitable: No, only by admin.
+- Impact: Check for file path existence or install any plugin.
+- False positive: No
+
+
+# instagram-feed - sbi_activate_addon
+- Code: inc/admin/addon-functions.php
+- Authenticated: Yes, if ( ! current_user_can( 'activate_plugins' ) ) {
+- Nonce needed: Yes, check_ajax_referer( 'sbi-admin', 'nonce' );
+- Vulnerable function use: No, usees WP's activate_plugins
+- Exploitable: No
+- Impact: None
+- False positive: No
+
+
+# pdf-embedder - activate_partner
+- Code: core/core_pdf_embedder.php
+- Authenticated: Yes, is_admin
+- Nonce needed: Yes, check_admin_referer( 'pdfemb-activate-partner', 'nonce' );
+- Vulnerable function use: No, activate_plugins
+- Exploitable: No
+- Impact: None
+- False positive: No
+
+
+# pdf-embedder - install_partner
+- Code: core/core_pdf_embedder.php
+- Authenticated: Yes, is_admin
+- Nonce needed: Yes, check_admin_referer( 'pdfemb-install-partner', 'nonce' );
+- Vulnerable function use: Yes, uses Plugin_Upgrader but with esc_url_raw()
+- Exploitable: Only by admin.
+- Impact: None
+- False positive: No
+
+
+# popup-builder - importSubscribers
+- Code: com/classes/Ajax.php
+- Authenticated: Yes, $allowToAction = AdminHelper::userCanAccessTo();
+- Nonce needed: Yes, check_ajax_referer(SG_AJAX_NONCE, 'nonce');
+- Vulnerable function use: Yes
+- Exploitable: No, only by admins.
+- Impact: Read any file
+- False positive: no
+
+
+# pretty-link - ajax_addon_activate
+- Code: app/controllers/PrliAddonsController.php
+- Authenticated: Yes, if(!current_user_can('activate_plugins')) {
+- Nonce needed: Yes, if(!check_ajax_referer('prli_addons', false, false)) {
+- Vulnerable function use: No, activate_plugins
+- Exploitable: No
+- Impact: No
+- False positive: No
+
+
+# pretty-link - ajax_addon_install
+- Code: app/controllers/PrliAddonsController.php
+- Authenticated: Yes, if(!current_user_can('install_plugins') || !current_user_can('activate_plugins')) {
+- Nonce needed: Yes, if(!check_ajax_referer('prli_addons', false, false)) {
+- Vulnerable function use: Yes, Plugin_Upgrader
+- Exploitable: No, only admin
+- Impact: Check for file path existence or install any plugin.
+- False positive: No
+
+# shortpixel-image-optimiser - ajaxBrowseContent
+- Code: class/Controller/OtherMediaController.php
+- Authenticated: Yes, if ( ! $this->userIsAllowed )   => if ((current_user_can( 'manage_options' ) || current_user_can( 'upload_files' ) || current_user_can( 'edit_posts' )))
+- Nonce needed: No
+- Vulnerable function use: No, checks for if ($child == '.' || $child == '..') and WP directory: exit(esc_html(__('This directory seems not part of WordPress', 'shortpixel-image-optimiser')));
+- Exploitable: No
+- Impact: None
+- False positive: No
+
+# so-widgets-bundle - admin_ajax_manage_handler
+- Code: so-widgets-bundle.php
+- Authenticated: Yes, if ( ! current_user_can( apply_filters( 'siteorigin_widgets_admin_menu_capability', 'manage_options' ) ) ) {
+- Nonce needed: Yes, if ( ! wp_verify_nonce( $_GET['_wpnonce'], 'manage_so_widget' ) ) {
+- Vulnerable function use: Yes
+- Exploitable: No, only admin
+- Impact: None
+- False positive: No
+
+
+# ultimate-addons-for-gutenberg - activate_plugin
+- Code: lib/gutenberg-templates/classes/class-ast-block-templates.php
+- Authenticated: Yes, if ( ! current_user_can( 'edit_posts' ) ) {
+- Nonce needed: Yes, check_ajax_referer( 'ast-block-templates-ajax-nonce', 'security' );
+- Vulnerable function use: No, uses activate_plugin
+- Exploitable: No
+- Impact: None
+- False positive: No
+
+
+# woo-checkout-field-editor-pro - activate_themehigh_plugins
+- Code: admin/class-thwcfd-admin-settings-themehigh-plugins.php
+- Authenticated: Yes, if ( current_user_can( 'install_plugins' ) && current_user_can( 'activate_plugins' ) ) {
+- Nonce needed: Yes, check_ajax_referer( 'activate-plugin_' . $plugin_file ) ){
+- Vulnerable function use: No, activate_plugin
+- Exploitable: No
+- Impact: None
+- False positive: No
+
+# wp-fastest-cache - clear_cache_column
+- Code: inc/column.php
+- Authenticated: No 
+- Nonce needed: Yes, if(wp_verify_nonce($_GET["nonce"], 'clear-cache_'.$_GET["id"])){
+- Vulnerable function use: No
+- Exploitable: No
+- Impact: None
+- False positive: No
+
+
+# wp-fastest-cache - delete_current_page_cache
+- Code : wpFastestCache.php
+- Authenticated: No
+- Nonce needed: Yes, if(!wp_verify_nonce($_GET["nonce"], "wpfc")){
+- Vulnerable function use: No, if(preg_match("/\.{2,}/", $_GET["path"])){
+- Exploitable: No
+- Impact: None
+- False positive: No
+
+
+# wp-user-avatar - ppress_activate_plugin
+- Code: src/Admin/SettingsPages/MailOptin.php
+- Authenticated: Yes, if ( ! current_user_can('activate_plugins')) {
+- Nonce needed: Yes, check_ajax_referer('ppress-admin-nonce', 'nonce');
+- Vulnerable function use: No, activate_plugins
+- Exploitable: No
+- Impact: None
+- False positive: No
+
+
+# wp-user-avatar - ppress_install_plugin
+- Code: src/Admin/SettingsPages/MailOptin.php
+- Authenticated: Yes, if ( ! current_user_can('install_plugins')) {
+- Nonce needed: Yes, check_ajax_referer('ppress-admin-nonce', 'nonce');
+- Vulnerable function use: Yes, Plugin_Upgrader
+- Exploitable: No, because only admin can use it.
+- Impact: Check for file path existence or install any plugin.
+- False positive: No
+
+
+# wpforms-lite - wpforms_activate_addon
+- Code: includes/admin/ajax-actions.php
+- Authenticated: Yes, if ( ! current_user_can( 'activate_plugins' ) ) {
+- Nonce needed: Yes, check_ajax_referer( 'wpforms-admin', 'nonce' );
+- Vulnerable function use: No, activate_plugins
+- Exploitable: no
+- Impact: none
+- False positive: no
+
+
+# wpvivid-backuprestore - check_filesystem_permissions
+- Code: includes/staging/class-wpvivid-staging.php
+- Authenticated: Yes, is_admin()&&current_user_can($role);
+- Nonce needed: Yes, check_ajax_referer( 'wpvivid_ajax', 'nonce' );
+- Vulnerable function use: Yes
+- Exploitable: No, because only admin can use it.
+- Impact: Create dirs and do other file functions.
+- False positive: No
+
+
+# wpvivid-backuprestore - delete_all_image
+- Code: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php
+- Authenticated: Yes, see ajax_security()
+- Nonce needed: Yes, see ajax_security()
+- Vulnerable function use: No
+- Exploitable: No, because only admin can use it.
+- Impact: Delete files
+- False positive: No
+
+
+# wpvivid-backuprestore - delete_selected_image
+- Code: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php
+- Authenticated: Yes, see ajax_security()
+- Nonce needed: Yes, see ajax_security()
+- Vulnerable function use: Yes
+- Exploitable: No, because only admin can use it.
+- Impact: Delete files
+- False positive: No
+
+
+# wpvivid-backuprestore - download_restore_progress
+- Code: includes/class-wpvivid.php
+- Authenticated: Yes, see ajax_security()
+- Nonce needed: Yes, see ajax_security()
+- Vulnerable function use: Yes, check if file exists
+- Exploitable: No, because only admin can use it.
+- Impact: Check if file exists
+- False positive: No
+
+
+# wpvivid-backuprestore - get_iso_list
+- Code: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php
+- Authenticated: Yes, see ajax_security()
+- Nonce needed: Yes, see ajax_security()
+- Vulnerable function use: No
+- Exploitable: No, because only admin can use it.
+- Impact: None
+- False positive: No
+
+
+
+# wpvivid-backuprestore - read_last_backup_log
+- Code: includes/class-wpvivid.php
+- Authenticated: Yes, see ajax_security()
+- Nonce needed: Yes, see ajax_security()
+- Vulnerable function use: Yes, can file_exists and fopen() a file.
+- Exploitable: No, because only admin can use it.
+- Impact: Find existence of files and potentially read them.
+- False positive: No
+
+
+# wpvivid-backuprestore - restore_all_image
+- Code: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php
+- Authenticated: Yes, see ajax_security()
+- Nonce needed: Yes, see ajax_security()
+- Vulnerable function use: No
+- Exploitable: No, because only admin can use it.
+- Impact: None
+- False positive: No
+
+
+# wpvivid-backuprestore - restore_selected_image
+- Code: includes/upload-cleaner/class-wpvivid-uploads-cleaner.php
+- Authenticated: Yes, see ajax_security()
+- Nonce needed: Yes, see ajax_security()
+- Vulnerable function use: no
+- Exploitable: No, because only admin can use it.
+- Impact: Restore files
+- False positive: No
+
+
+# wpvivid-backuprestore - upload_files
+- Code: includes/class-wpvivid-backup-uploader.php
+- Authenticated: Yes, see ajax_security()
+- Nonce needed: Yes, see ajax_security()
+- Vulnerable function use: Yes
+- Exploitable: No, because only admin can use it.
+- Impact: write to file
+- False positive: no
+
+
+# wpvivid-backuprestore - wpvivid_download_export_backup
+- Code: includes/class-wpvivid-export-import.php
+- Authenticated: Yes, see ajax_security()
+- Nonce needed: Yes, see ajax_security()
+- Vulnerable function use: No
+- Exploitable: No
+- Impact: None
+- False positive: No

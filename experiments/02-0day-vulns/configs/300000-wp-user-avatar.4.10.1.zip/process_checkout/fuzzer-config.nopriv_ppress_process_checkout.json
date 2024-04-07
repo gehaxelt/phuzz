@@ -1,0 +1,52 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "plan_id",
+      "change_plan_sub_id",
+      "_ppress_timestamp",
+      "_ppress_honeypot",
+      "ppress_payment_method"
+    ],
+    "data": [
+      {
+        "name": "plan_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "change_plan_sub_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "_ppress_timestamp",
+        "value": "fuzz"
+      },
+      {
+        "name": "_ppress_honeypot",
+        "value": "fuzz"
+      },
+      {
+        "name": "ppress_payment_method",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "ppress_process_checkout"
+      }
+    ]
+  }
+}

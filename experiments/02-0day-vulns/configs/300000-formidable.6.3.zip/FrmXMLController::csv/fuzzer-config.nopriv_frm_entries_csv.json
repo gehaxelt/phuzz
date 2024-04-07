@@ -1,0 +1,25 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "s"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "frm_entries_csv"
+      },
+      {
+        "name": "s",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

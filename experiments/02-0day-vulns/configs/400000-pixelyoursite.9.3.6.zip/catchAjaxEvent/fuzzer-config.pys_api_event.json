@@ -1,0 +1,63 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "event",
+      "data",
+      "ids",
+      "eventID",
+      "woo_order",
+      "edd_order"
+    ],
+    "data": [
+      {
+        "name": "event",
+        "value": "fuzz"
+      },
+      {
+        "name": "data",
+        "value": "fuzz"
+      },
+      {
+        "name": "ids",
+        "value": "fuzz"
+      },
+      {
+        "name": "eventID",
+        "value": "fuzz"
+      },
+      {
+        "name": "woo_order",
+        "value": "fuzz"
+      },
+      {
+        "name": "edd_order",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "ajax_event"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "pys_api_event"
+      },
+      {
+        "name": "ajax_event",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

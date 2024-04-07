@@ -1,0 +1,52 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "todo",
+      "lokhal_email",
+      "lokhal_fname",
+      "lokhal_lname"
+    ],
+    "data": [
+      {
+        "name": "todo",
+        "value": "fuzz"
+      },
+      {
+        "name": "lokhal_email",
+        "value": "fuzz"
+      },
+      {
+        "name": "lokhal_fname",
+        "value": "fuzz"
+      },
+      {
+        "name": "lokhal_lname",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action",
+      "vle_nonce"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "mk_filemanager_verify_email"
+      },
+      {
+        "name": "vle_nonce",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

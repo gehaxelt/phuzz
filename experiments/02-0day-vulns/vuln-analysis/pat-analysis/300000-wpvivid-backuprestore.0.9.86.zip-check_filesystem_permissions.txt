@@ -1,0 +1,1 @@
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/check_filesystem_permissions/output/fuzzer-1/vulnerable-candidates.json,afb297ff-cf5b-43df-9f94-7480c462c49c:  query_params:{"action": "wpvividstg_check_filesystem_permissions_free"} body_params:{"root_dir": "fuz\u0001z", "path": "/etc/passwdfu+zz"}

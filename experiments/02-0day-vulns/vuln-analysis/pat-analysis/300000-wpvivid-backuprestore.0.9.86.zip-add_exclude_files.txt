@@ -1,0 +1,1 @@
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/add_exclude_files/output/fuzzer-4/vulnerable-candidates.json,79744e05-cfd0-43d0-8aea-5536d22b0919:  query_params:{"action": "wpvivid_uc_add_exclude_files"} body_params:{"folder": "fuz!", "search": "fu", "selected": "fuzz"}

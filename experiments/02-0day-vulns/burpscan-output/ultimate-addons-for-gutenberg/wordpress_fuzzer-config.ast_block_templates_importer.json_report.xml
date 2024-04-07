@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!DOCTYPE issues [
+<!ELEMENT issues (issue*)>
+<!ATTLIST issues burpVersion CDATA "">
+<!ATTLIST issues exportTime CDATA "">
+<!ELEMENT issue (serialNumber, type, name, host, path, location, severity, confidence, issueBackground?, remediationBackground?, references?, vulnerabilityClassifications?, issueDetail?, issueDetailItems?, remediationDetail?, requestresponse*, collaboratorEvent*, infiltratorEvent*, staticAnalysis*, dynamicAnalysis*, prototypePollution*)>
+<!ELEMENT serialNumber (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT severity (#PCDATA)>
+<!ELEMENT confidence (#PCDATA)>
+<!ELEMENT issueBackground (#PCDATA)>
+<!ELEMENT remediationBackground (#PCDATA)>
+<!ELEMENT references (#PCDATA)>
+<!ELEMENT vulnerabilityClassifications (#PCDATA)>
+<!ELEMENT issueDetail (#PCDATA)>
+<!ELEMENT issueDetailItems (issueDetailItem*)>
+<!ELEMENT issueDetailItem (#PCDATA)>
+<!ELEMENT remediationDetail (#PCDATA)>
+<!ELEMENT requestresponse (request?, response?, responseRedirected?)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request method CDATA "">
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT responseRedirected (#PCDATA)>
+<!ELEMENT sender (#PCDATA)>
+<!ELEMENT message (#PCDATA)>
+<!ELEMENT conversation (#PCDATA)>
+<!ELEMENT recipient (#PCDATA)>
+<!ELEMENT recipients (recipient*)>
+<!ELEMENT smtp (sender, recipients, message, conversation)>
+<!ELEMENT collaboratorEvent (interactionType, originIp, time, lookupType?, lookupHost?, requestresponse?, smtp?)>
+<!ELEMENT interactionType (#PCDATA)>
+<!ELEMENT originIp (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT lookupType (#PCDATA)>
+<!ELEMENT lookupHost (#PCDATA)>
+<!ELEMENT infiltratorEvent (parameterName, platform, signature, stackTrace?, parameterValue?, collaboratorEvent)>
+<!ELEMENT parameterName (#PCDATA)>
+<!ELEMENT platform (#PCDATA)>
+<!ELEMENT signature (#PCDATA)>
+<!ELEMENT stackTrace (#PCDATA)>
+<!ELEMENT parameterValue (#PCDATA)>
+<!ELEMENT dynamicAnalysis (source, sink, sourceStackTrace, sinkStackTrace, eventListenerStackTrace, sourceValue, sinkValue, eventHandlerData, eventHandlerDataType, eventHandlerManipulatedData, poc, origin, isOriginChecked, sourceElementId, sourceElementName, eventFiredEventName, eventFiredElementId, eventFiredElementName, eventFiredOuterHtml)>
+<!ELEMENT prototypePollution (poc, pollutionTechnique, pollutionType)>
+<!ELEMENT staticAnalysis (source, sink, codeSnippets)>
+<!ELEMENT source (#PCDATA)>
+<!ELEMENT sink (#PCDATA)>
+<!ELEMENT sourceStackTrace (#PCDATA)>
+<!ELEMENT sinkStackTrace (#PCDATA)>
+<!ELEMENT eventListenerStackTrace (#PCDATA)>
+<!ELEMENT sourceValue (#PCDATA)>
+<!ELEMENT sinkValue (#PCDATA)>
+<!ELEMENT eventHandlerData (#PCDATA)>
+<!ELEMENT eventHandlerDataType (#PCDATA)>
+<!ELEMENT sourceElementId (#PCDATA)>
+<!ELEMENT sourceElementName (#PCDATA)>
+<!ELEMENT eventFiredEventName (#PCDATA)>
+<!ELEMENT eventFiredElementId (#PCDATA)>
+<!ELEMENT eventFiredElementName (#PCDATA)>
+<!ELEMENT eventFiredOuterHtml (#PCDATA)>
+<!ELEMENT eventHandlerManipulatedData (#PCDATA)>
+<!ELEMENT poc (#PCDATA)>
+<!ELEMENT origin (#PCDATA)>
+<!ELEMENT isOriginChecked (#PCDATA)>
+<!ELEMENT codeSnippets (codeSnippet*)>
+<!ELEMENT codeSnippet (#PCDATA)>
+<!ELEMENT pollutionTechnique (#PCDATA)>
+<!ELEMENT pollutionType (#PCDATA)>
+]>
+<issues burpVersion="2023.8.1" exportTime="Mon Aug 14 21:34:34 GMT 2023">
+  <issue>
+    <serialNumber>4107703684388672512</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Private IP addresses disclosed]]></name>
+    <host ip="172.20.0.3">http://web</host>
+    <path><![CDATA[/wp-admin/admin-ajax.php]]></path>
+    <location><![CDATA[/wp-admin/admin-ajax.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>RFC 1918 specifies ranges of IP addresses that are reserved for use in private networks and cannot be routed on the public Internet. Although various methods exist by which an attacker can determine the public IP addresses in use by an organization, the private addresses used internally cannot usually be determined in the same ways.</p>
+<p>Discovering the private addresses used within an organization can help an attacker in carrying out network-layer attacks aiming to penetrate the organization's internal infrastructure. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>There is not usually any good reason to disclose the internal IP addresses used within an organization's infrastructure. If these are being returned in service banners or debug messages, then the relevant services should be configured to mask the private addresses. If they are being used to track back-end servers for load balancing purposes, then the addresses should be rewritten with innocuous identifiers from which an attacker cannot infer any useful information about the infrastructure.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[The following RFC 1918 IP address was disclosed in the response:<ul><li>172.20.0.3</li></ul>]]></issueDetail>
+    <issueDetailItems>
+      <issueDetailItem><![CDATA[172.20.0.3]]></issueDetailItem>
+    </issueDetailItems>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC93cC1hZG1pbi9hZG1pbi1hamF4LnBocD9hcGlfdXJpPWZ1enomYWN0aW9uPWFzdF9ibG9ja190ZW1wbGF0ZXNfaW1wb3J0ZXIgSFRUUC8xLjANCkhvc3Q6IHdlYg0KDQo=]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgNDAwIEJhZCBSZXF1ZXN0DQpEYXRlOiBNb24sIDE0IEF1ZyAyMDIzIDIxOjMxOjMzIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU2IChEZWJpYW4pDQpDb250ZW50LUxlbmd0aDogMzAyDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjQwMCBCYWQgUmVxdWVzdDwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPkJhZCBSZXF1ZXN0PC9oMT4KPHA+WW91ciBicm93c2VyIHNlbnQgYSByZXF1ZXN0IHRoYXQgdGhpcyBzZXJ2ZXIgY291bGQgbm90IHVuZGVyc3RhbmQuPGJyIC8+CjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjU2IChEZWJpYW4pIFNlcnZlciBhdCAxNzIuMjAuMC4zIFBvcnQgODA8L2FkZHJlc3M+CjwvYm9keT48L2h0bWw+Cg==]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>980554131124459520</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Input returned in response (reflected)]]></name>
+    <host ip="172.20.0.3">http://web</host>
+    <path><![CDATA[/wp-admin/admin-ajax.php]]></path>
+    <location><![CDATA[/wp-admin/admin-ajax.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>Reflection of input arises when data is copied from a request and echoed into the application's immediate response.</p><p>Input being returned in application responses is not a vulnerability in its own right. However, it is a prerequisite for many client-side vulnerabilities, including cross-site scripting, open redirection, content spoofing, and response header injection. Additionally, some server-side vulnerabilities such as SQL injection are often easier to identify and exploit when input is returned in responses. In applications where input retrieval is rare and the environment is resistant to automated testing (for example, due to a web application firewall), it might be worth subjecting instances of it to focused manual testing. </p>]]></issueBackground>
+    <issueDetail><![CDATA[The value of the <b>api_uri</b> request parameter is copied into the application's response.]]></issueDetail>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC93cC1hZG1pbi9hZG1pbi1hamF4LnBocD9hcGlfdXJpPWZ1enozaG1mNmdha3M5JmFjdGlvbj1hc3RfYmxvY2tfdGVtcGxhdGVzX2ltcG9ydGVyIEhUVFAvMS4wDQpIb3N0OiB3ZWINCg0K]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBNb24sIDE0IEF1ZyAyMDIzIDIxOjMxOjU3IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU2IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMTgNClgtUm9ib3RzLVRhZzogbm9pbmRleA0KWC1Db250ZW50LVR5cGUtT3B0aW9uczogbm9zbmlmZg0KRXhwaXJlczogV2VkLCAxMSBKYW4gMTk4NCAwNTowMDowMCBHTVQNCkNhY2hlLUNvbnRyb2w6IG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUsIG1heC1hZ2U9MA0KUmVmZXJyZXItUG9saWN5OiBzdHJpY3Qtb3JpZ2luLXdoZW4tY3Jvc3Mtb3JpZ2luDQpYLUZyYW1lLU9wdGlvbnM6IFNBTUVPUklHSU4NCkNvbnRlbnQtTGVuZ3RoOiA4MA0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD1VVEYtOA0KDQoKeyJzdWNjZXNzIjpmYWxzZSwiZGF0YSI6ImNVUkwgZXJyb3IgNjogQ291bGQgbm90IHJlc29sdmUgaG9zdDogZnV6ejNobWY2Z2FrczkifQ==]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>4727245000048475136</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Suspicious input transformation (reflected)]]></name>
+    <host ip="172.20.0.3">http://web</host>
+    <path><![CDATA[/wp-admin/admin-ajax.php]]></path>
+    <location><![CDATA[/wp-admin/admin-ajax.php]]></location>
+    <severity>Information</severity>
+    <confidence>Firm</confidence>
+    <issueBackground><![CDATA[<p>Suspicious input transformation arises when an application receives user input, transforms it in some way, and then performs further processing on the result. The types of transformations that can lead to problems include decoding common formats, such as UTF-8 and URL-encoding, or processing of escape sequences, such as backslash escaping. </p>
+<p>Performing these input transformations does not constitute a vulnerability in its own right, but might lead to problems in conjunction with other application behaviors. An attacker might be able to bypass input filters by suitably encoding their payloads, if the input is decoded after the input filters have been applied. Or an attacker might be able to interfere with other data that is concatenated onto their input, by finishing their input with the start of a multi-character encoding or escape sequence, the transformation of which will consume the start of the following data.</p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>Review the transformation that is being applied, to understand whether this is intended and desirable behavior given the nature of the application functionality, and whether it gives rise to any vulnerabilities in relation to  bypassing of input filters or character consumption.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[The application appears to URL-decode the value of the <b>api_uri</b> request parameter, and echo the result in the response.<br><br>The payload <strong>bx5gn9faui%41s5ykfsdf8b</strong> was submitted in the api_uri parameter. This payload contains the %41 sequence, corresponding to the character 'A'. The input was copied into the application's response as <strong>bx5gn9fauias5ykfsdf8b</strong> indicating that the application URL-decoded the sequence.<br><br>It might be possible to use this behavior to bypass input validation by submitting superfluous URL-encodings of any filtered characters.]]></issueDetail>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC93cC1hZG1pbi9hZG1pbi1hamF4LnBocD9hcGlfdXJpPWJ4NWduOWZhdWklMjU0MXM1eWtmc2RmOGImYWN0aW9uPWFzdF9ibG9ja190ZW1wbGF0ZXNfaW1wb3J0ZXIgSFRUUC8xLjANCkhvc3Q6IHdlYg0KDQo=]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBNb24sIDE0IEF1ZyAyMDIzIDIxOjMyOjE2IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU2IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMTgNClgtUm9ib3RzLVRhZzogbm9pbmRleA0KWC1Db250ZW50LVR5cGUtT3B0aW9uczogbm9zbmlmZg0KRXhwaXJlczogV2VkLCAxMSBKYW4gMTk4NCAwNTowMDowMCBHTVQNCkNhY2hlLUNvbnRyb2w6IG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUsIG1heC1hZ2U9MA0KUmVmZXJyZXItUG9saWN5OiBzdHJpY3Qtb3JpZ2luLXdoZW4tY3Jvc3Mtb3JpZ2luDQpYLUZyYW1lLU9wdGlvbnM6IFNBTUVPUklHSU4NCkNvbnRlbnQtTGVuZ3RoOiA4Nw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD1VVEYtOA0KDQoKeyJzdWNjZXNzIjpmYWxzZSwiZGF0YSI6ImNVUkwgZXJyb3IgNjogQ291bGQgbm90IHJlc29sdmUgaG9zdDogYng1Z245ZmF1aWFzNXlrZnNkZjhiIn0=]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+</issues>

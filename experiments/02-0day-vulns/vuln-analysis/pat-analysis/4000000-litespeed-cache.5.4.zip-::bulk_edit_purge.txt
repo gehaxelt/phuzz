@@ -1,0 +1,1 @@
+../phuzz-output/4000000-litespeed-cache.5.4.zip/::bulk_edit_purge/output/fuzzer-2/vulnerable-candidates.json,0366d1e6-11b5-44e4-ae13-dddd92d3ae11:  query_params:{"action": "wpmelon_adv_bulk_edit"} body_params:{"data": "fuSzz", "type": "fu"}

@@ -1,0 +1,57 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "url",
+      "slug",
+      "redirect_type",
+      "track_me",
+      "nofollow",
+      "sponsored"
+    ],
+    "data": [
+      {
+        "name": "url",
+        "value": "fuzz"
+      },
+      {
+        "name": "slug",
+        "value": "fuzz"
+      },
+      {
+        "name": "redirect_type",
+        "value": "fuzz"
+      },
+      {
+        "name": "track_me",
+        "value": "fuzz"
+      },
+      {
+        "name": "nofollow",
+        "value": "fuzz"
+      },
+      {
+        "name": "sponsored",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "prli_quick_create"
+      }
+    ]
+  }
+}

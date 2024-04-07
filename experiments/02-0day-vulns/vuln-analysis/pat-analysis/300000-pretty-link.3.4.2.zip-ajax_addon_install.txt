@@ -1,0 +1,1 @@
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_install/output/fuzzer-1/vulnerable-candidates.json,1626ba09-845b-4876-9c5b-04774d1bf749:  query_params:{"action": "prli_addon_install"} body_params:{"type": "fuzz", "plugin": "fuzz\t"}

@@ -1,0 +1,47 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "key",
+      "username",
+      "origin",
+      "deploy_snippet_id"
+    ],
+    "data": [
+      {
+        "name": "key",
+        "value": "fuzz"
+      },
+      {
+        "name": "username",
+        "value": "fuzz"
+      },
+      {
+        "name": "origin",
+        "value": "fuzz"
+      },
+      {
+        "name": "deploy_snippet_id",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "wpcode_library_store_auth"
+      }
+    ]
+  }
+}

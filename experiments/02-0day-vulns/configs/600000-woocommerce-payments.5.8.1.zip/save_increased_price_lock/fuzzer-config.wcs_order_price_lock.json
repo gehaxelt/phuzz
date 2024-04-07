@@ -1,0 +1,39 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [
+      "woocommerce_meta_nonce"
+    ],
+    "fuzz": [
+      "order_id",
+      "wcs_order_price_lock"
+    ],
+    "data": [
+      {
+        "name": "woocommerce_meta_nonce",
+        "value": "fuzz"
+      },
+      {
+        "name": "wcs_order_price_lock",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "wcs_order_price_lock"
+      }
+    ]
+  }
+}

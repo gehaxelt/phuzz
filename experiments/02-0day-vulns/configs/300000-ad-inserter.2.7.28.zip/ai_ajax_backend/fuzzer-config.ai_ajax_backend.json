@@ -1,0 +1,283 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "preview",
+      "name",
+      "code",
+      "alignment",
+      "horizontal",
+      "vertical",
+      "horizontal_margin",
+      "vertical_margin",
+      "animation",
+      "alignment_css",
+      "custom_css",
+      "php",
+      "close",
+      "background",
+      "body_background",
+      "background_image",
+      "background_color",
+      "background_size",
+      "background_repeat",
+      "label",
+      "sticky_block",
+      "sticky_height",
+      "read_only",
+      "iframe",
+      "check",
+      "count",
+      "rotate",
+      "viewport",
+      "fallback",
+      "slot_id",
+      "edit",
+      "placeholder",
+      "block",
+      "notice",
+      "click"
+    ],
+    "data": [
+      {
+        "name": "preview",
+        "value": "fuzz"
+      },
+      {
+        "name": "name",
+        "value": "fuzz"
+      },
+      {
+        "name": "code",
+        "value": "fuzz"
+      },
+      {
+        "name": "alignment",
+        "value": "fuzz"
+      },
+      {
+        "name": "horizontal",
+        "value": "fuzz"
+      },
+      {
+        "name": "vertical",
+        "value": "fuzz"
+      },
+      {
+        "name": "horizontal_margin",
+        "value": "fuzz"
+      },
+      {
+        "name": "vertical_margin",
+        "value": "fuzz"
+      },
+      {
+        "name": "animation",
+        "value": "fuzz"
+      },
+      {
+        "name": "alignment_css",
+        "value": "fuzz"
+      },
+      {
+        "name": "custom_css",
+        "value": "fuzz"
+      },
+      {
+        "name": "php",
+        "value": "fuzz"
+      },
+      {
+        "name": "close",
+        "value": "fuzz"
+      },
+      {
+        "name": "background",
+        "value": "fuzz"
+      },
+      {
+        "name": "body_background",
+        "value": "fuzz"
+      },
+      {
+        "name": "background_image",
+        "value": "fuzz"
+      },
+      {
+        "name": "background_color",
+        "value": "fuzz"
+      },
+      {
+        "name": "background_size",
+        "value": "fuzz"
+      },
+      {
+        "name": "background_repeat",
+        "value": "fuzz"
+      },
+      {
+        "name": "label",
+        "value": "fuzz"
+      },
+      {
+        "name": "sticky_block",
+        "value": "fuzz"
+      },
+      {
+        "name": "sticky_height",
+        "value": "fuzz"
+      },
+      {
+        "name": "read_only",
+        "value": "fuzz"
+      },
+      {
+        "name": "iframe",
+        "value": "fuzz"
+      },
+      {
+        "name": "check",
+        "value": "fuzz"
+      },
+      {
+        "name": "count",
+        "value": "fuzz"
+      },
+      {
+        "name": "rotate",
+        "value": "fuzz"
+      },
+      {
+        "name": "viewport",
+        "value": "fuzz"
+      },
+      {
+        "name": "fallback",
+        "value": "fuzz"
+      },
+      {
+        "name": "slot_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "edit",
+        "value": "fuzz"
+      },
+      {
+        "name": "placeholder",
+        "value": "fuzz"
+      },
+      {
+        "name": "block",
+        "value": "fuzz"
+      },
+      {
+        "name": "notice",
+        "value": "fuzz"
+      },
+      {
+        "name": "click",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "image",
+      "css",
+      "js",
+      "rating",
+      "list",
+      "all",
+      "start",
+      "end",
+      "active",
+      "settings",
+      "update",
+      "block_class_name",
+      "block_class",
+      "block_number_class",
+      "block_name_class",
+      "inline_styles"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "ai_ajax_backend"
+      },
+      {
+        "name": "image",
+        "value": "fuzz"
+      },
+      {
+        "name": "css",
+        "value": "fuzz"
+      },
+      {
+        "name": "js",
+        "value": "fuzz"
+      },
+      {
+        "name": "rating",
+        "value": "fuzz"
+      },
+      {
+        "name": "list",
+        "value": "fuzz"
+      },
+      {
+        "name": "all",
+        "value": "fuzz"
+      },
+      {
+        "name": "start",
+        "value": "fuzz"
+      },
+      {
+        "name": "end",
+        "value": "fuzz"
+      },
+      {
+        "name": "active",
+        "value": "fuzz"
+      },
+      {
+        "name": "settings",
+        "value": "fuzz"
+      },
+      {
+        "name": "update",
+        "value": "fuzz"
+      },
+      {
+        "name": "block_class_name",
+        "value": "fuzz"
+      },
+      {
+        "name": "block_class",
+        "value": "fuzz"
+      },
+      {
+        "name": "block_number_class",
+        "value": "fuzz"
+      },
+      {
+        "name": "block_name_class",
+        "value": "fuzz"
+      },
+      {
+        "name": "inline_styles",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "upgrade_id",
+      "step",
+      "form"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "pum_process_upgrade_request"
+      },
+      {
+        "name": "upgrade_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "step",
+        "value": "fuzz"
+      },
+      {
+        "name": "form",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

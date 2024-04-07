@@ -1,0 +1,37 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "is_staging",
+      "tree_node"
+    ],
+    "data": [
+      {
+        "name": "is_staging",
+        "value": "fuzz"
+      },
+      {
+        "name": "tree_node",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "wpvividstg_get_custom_exclude_path_free"
+      }
+    ]
+  }
+}

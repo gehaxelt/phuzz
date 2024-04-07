@@ -1,0 +1,1 @@
+../phuzz-output/1000000-autoptimize.3.1.7.zip/critcss_rm_callback/output/fuzzer-3/vulnerable-candidates.json,a60f8085-d40d-4885-9f82-4931c5f4c173:  query_params:{"action": "rm_critcss"} body_params:{"critcssfile": "fu"}

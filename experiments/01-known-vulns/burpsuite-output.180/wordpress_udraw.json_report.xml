@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!DOCTYPE issues [
+<!ELEMENT issues (issue*)>
+<!ATTLIST issues burpVersion CDATA "">
+<!ATTLIST issues exportTime CDATA "">
+<!ELEMENT issue (serialNumber, type, name, host, path, location, severity, confidence, issueBackground?, remediationBackground?, references?, vulnerabilityClassifications?, issueDetail?, issueDetailItems?, remediationDetail?, requestresponse*, collaboratorEvent*, infiltratorEvent*, staticAnalysis*, dynamicAnalysis*, prototypePollution*)>
+<!ELEMENT serialNumber (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT severity (#PCDATA)>
+<!ELEMENT confidence (#PCDATA)>
+<!ELEMENT issueBackground (#PCDATA)>
+<!ELEMENT remediationBackground (#PCDATA)>
+<!ELEMENT references (#PCDATA)>
+<!ELEMENT vulnerabilityClassifications (#PCDATA)>
+<!ELEMENT issueDetail (#PCDATA)>
+<!ELEMENT issueDetailItems (issueDetailItem*)>
+<!ELEMENT issueDetailItem (#PCDATA)>
+<!ELEMENT remediationDetail (#PCDATA)>
+<!ELEMENT requestresponse (request?, response?, responseRedirected?)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request method CDATA "">
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT responseRedirected (#PCDATA)>
+<!ELEMENT sender (#PCDATA)>
+<!ELEMENT message (#PCDATA)>
+<!ELEMENT conversation (#PCDATA)>
+<!ELEMENT recipient (#PCDATA)>
+<!ELEMENT recipients (recipient*)>
+<!ELEMENT smtp (sender, recipients, message, conversation)>
+<!ELEMENT collaboratorEvent (interactionType, originIp, time, lookupType?, lookupHost?, requestresponse?, smtp?)>
+<!ELEMENT interactionType (#PCDATA)>
+<!ELEMENT originIp (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT lookupType (#PCDATA)>
+<!ELEMENT lookupHost (#PCDATA)>
+<!ELEMENT infiltratorEvent (parameterName, platform, signature, stackTrace?, parameterValue?, collaboratorEvent)>
+<!ELEMENT parameterName (#PCDATA)>
+<!ELEMENT platform (#PCDATA)>
+<!ELEMENT signature (#PCDATA)>
+<!ELEMENT stackTrace (#PCDATA)>
+<!ELEMENT parameterValue (#PCDATA)>
+<!ELEMENT dynamicAnalysis (source, sink, sourceStackTrace, sinkStackTrace, eventListenerStackTrace, sourceValue, sinkValue, eventHandlerData, eventHandlerDataType, eventHandlerManipulatedData, poc, origin, isOriginChecked, sourceElementId, sourceElementName, eventFiredEventName, eventFiredElementId, eventFiredElementName, eventFiredOuterHtml)>
+<!ELEMENT prototypePollution (poc, pollutionTechnique, pollutionType)>
+<!ELEMENT staticAnalysis (source, sink, codeSnippets)>
+<!ELEMENT source (#PCDATA)>
+<!ELEMENT sink (#PCDATA)>
+<!ELEMENT sourceStackTrace (#PCDATA)>
+<!ELEMENT sinkStackTrace (#PCDATA)>
+<!ELEMENT eventListenerStackTrace (#PCDATA)>
+<!ELEMENT sourceValue (#PCDATA)>
+<!ELEMENT sinkValue (#PCDATA)>
+<!ELEMENT eventHandlerData (#PCDATA)>
+<!ELEMENT eventHandlerDataType (#PCDATA)>
+<!ELEMENT sourceElementId (#PCDATA)>
+<!ELEMENT sourceElementName (#PCDATA)>
+<!ELEMENT eventFiredEventName (#PCDATA)>
+<!ELEMENT eventFiredElementId (#PCDATA)>
+<!ELEMENT eventFiredElementName (#PCDATA)>
+<!ELEMENT eventFiredOuterHtml (#PCDATA)>
+<!ELEMENT eventHandlerManipulatedData (#PCDATA)>
+<!ELEMENT poc (#PCDATA)>
+<!ELEMENT origin (#PCDATA)>
+<!ELEMENT isOriginChecked (#PCDATA)>
+<!ELEMENT codeSnippets (codeSnippet*)>
+<!ELEMENT codeSnippet (#PCDATA)>
+<!ELEMENT pollutionTechnique (#PCDATA)>
+<!ELEMENT pollutionType (#PCDATA)>
+]>
+<issues burpVersion="2023.8.1" exportTime="Thu Aug 10 20:33:40 GMT 2023">
+  <issue>
+    <serialNumber>2555728277119033344</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Cookie without HttpOnly flag set]]></name>
+    <host ip="192.168.10.28">http://192.168.10.28:8000</host>
+    <path><![CDATA[/wp-admin/admin-ajax.php]]></path>
+    <location><![CDATA[/wp-admin/admin-ajax.php]]></location>
+    <severity>Low</severity>
+    <confidence>Firm</confidence>
+    <issueBackground><![CDATA[<p>If the HttpOnly attribute is set on a cookie, then the cookie's value cannot be read or set by client-side JavaScript. This measure makes certain client-side attacks, such as cross-site scripting, slightly harder to exploit by preventing them from trivially capturing the cookie's value via an injected script.</p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>There is usually no good reason not to set the HttpOnly flag on all cookies. Unless you specifically require legitimate client-side scripts within your application to read or set a cookie's value, you should set the HttpOnly flag by including this attribute within the relevant Set-cookie directive.</p>
+<p>You should be aware that the restrictions imposed by the HttpOnly flag can potentially be circumvented in some circumstances, and that numerous other serious attacks can be delivered by client-side script injection, aside from simple cookie stealing. </p>]]></remediationBackground>
+    <issueDetail><![CDATA[The following cookie was issued by the application and does not have the HttpOnly flag set:<ul><li><b>PHPSESSID</b></li></ul>The cookie appears to contain a session token, which may increase the risk associated with this issue. You should review the contents of the cookie to determine its function.]]></issueDetail>
+    <issueDetailItems>
+      <issueDetailItem><![CDATA[Session: PHPSESSID]]></issueDetailItem>
+    </issueDetailItems>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvd3AtYWRtaW4vYWRtaW4tYWpheC5waHAgSFRUUC8xLjANCkhvc3Q6IDE5Mi4xNjguMTAuMjg6ODAwMA0KQ29udGVudC1MZW5ndGg6IDQzDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3gtd3d3LWZvcm0tdXJsZW5jb2RlZA0KDQp1cmw9ZnV6eiZhY3Rpb249dWRyYXdfY29udmVydF91cmxfdG9fYmFzZTY0]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjAgNDAwIEJhZCBSZXF1ZXN0DQpEYXRlOiBUaHUsIDEwIEF1ZyAyMDIzIDIwOjMwOjQ4IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMjINClNldC1Db29raWU6IFBIUFNFU1NJRD1mOGlnbWV2M2IzZGZsYzFmMjBxNDczN2dtdTsgcGF0aD0vDQpFeHBpcmVzOiBXZWQsIDExIEphbiAxOTg0IDA1OjAwOjAwIEdNVA0KQ2FjaGUtQ29udHJvbDogbm8tY2FjaGUsIG11c3QtcmV2YWxpZGF0ZSwgbWF4LWFnZT0wDQpQcmFnbWE6IG5vLWNhY2hlDQpYLVJvYm90cy1UYWc6IG5vaW5kZXgNCkNvbnRlbnQtTGVuZ3RoOiAyDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9VVRGLTgNCg0KCjA=]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+</issues>

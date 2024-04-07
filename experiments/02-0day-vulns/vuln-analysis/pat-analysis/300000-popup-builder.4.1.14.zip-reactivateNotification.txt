@@ -1,0 +1,1 @@
+../phuzz-output/300000-popup-builder.4.1.14.zip/reactivateNotification/output/fuzzer-7/vulnerable-candidates.json,5117ebaa-147c-41e5-aa13-149b6b99f5a9:  query_params:{"action": "sgpb_reactivate_notification"} body_params:{"id": "fu"}

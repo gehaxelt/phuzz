@@ -1,0 +1,35 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action",
+      "nonce"
+    ],
+    "fuzz": [
+      "name",
+      "type"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "tribe_event_validation"
+      },
+      {
+        "name": "name",
+        "value": "fuzz"
+      },
+      {
+        "name": "nonce",
+        "value": "fuzz"
+      },
+      {
+        "name": "type",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

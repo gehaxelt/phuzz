@@ -1,0 +1,30 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "token",
+      "download_link"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "rsp_upgrade_install_plugin"
+      },
+      {
+        "name": "token",
+        "value": "fuzz"
+      },
+      {
+        "name": "download_link",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

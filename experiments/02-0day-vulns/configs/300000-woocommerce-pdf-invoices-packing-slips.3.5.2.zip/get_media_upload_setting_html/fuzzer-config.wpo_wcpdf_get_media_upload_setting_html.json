@@ -1,0 +1,37 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "args",
+      "attachment_id"
+    ],
+    "data": [
+      {
+        "name": "args",
+        "value": "fuzz"
+      },
+      {
+        "name": "attachment_id",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "wpo_wcpdf_get_media_upload_setting_html"
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "s"
+    ],
+    "data": [
+      {
+        "name": "s",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "current_page",
+      "filter",
+      "s",
+      "orderby",
+      "order"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "seedprod_lite_lpage_datatable"
+      },
+      {
+        "name": "current_page",
+        "value": "fuzz"
+      },
+      {
+        "name": "filter",
+        "value": "fuzz"
+      },
+      {
+        "name": "s",
+        "value": "fuzz"
+      },
+      {
+        "name": "orderby",
+        "value": "fuzz"
+      },
+      {
+        "name": "order",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

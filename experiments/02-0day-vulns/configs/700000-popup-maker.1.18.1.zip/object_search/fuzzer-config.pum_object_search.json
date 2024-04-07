@@ -1,0 +1,55 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action",
+      "nonce"
+    ],
+    "fuzz": [
+      "object_type",
+      "include",
+      "exclude",
+      "object_key",
+      "s",
+      "paged"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "pum_object_search"
+      },
+      {
+        "name": "nonce",
+        "value": "fuzz"
+      },
+      {
+        "name": "object_type",
+        "value": "fuzz"
+      },
+      {
+        "name": "include",
+        "value": "fuzz"
+      },
+      {
+        "name": "exclude",
+        "value": "fuzz"
+      },
+      {
+        "name": "object_key",
+        "value": "fuzz"
+      },
+      {
+        "name": "s",
+        "value": "fuzz"
+      },
+      {
+        "name": "paged",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

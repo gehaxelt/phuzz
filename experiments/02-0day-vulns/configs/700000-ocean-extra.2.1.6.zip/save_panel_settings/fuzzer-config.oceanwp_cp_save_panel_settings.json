@@ -1,0 +1,38 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [
+      "nonce"
+    ],
+    "fuzz": [
+      "form_fields"
+    ],
+    "data": [
+      {
+        "name": "form_fields",
+        "value": "fuzz"
+      },
+      {
+        "name": "nonce",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "oceanwp_cp_save_panel_settings"
+      }
+    ]
+  }
+}

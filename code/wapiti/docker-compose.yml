@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  wapiti:
+    build:
+      context: ./wapiti
+      dockerfile: Dockerfile
+    environment:
+      FUZZER_CONFIG: dvwa/sqli_blind_high
+    volumes:
+      - ./fuzzer:/app
+      - ./wapiti/data:/home/wapiti/data
+    stdin_open: true # docker run -i
+    tty: true # docker run -t

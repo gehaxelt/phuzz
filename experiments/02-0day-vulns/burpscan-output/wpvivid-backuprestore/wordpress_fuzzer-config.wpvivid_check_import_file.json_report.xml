@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<!DOCTYPE issues [
+<!ELEMENT issues (issue*)>
+<!ATTLIST issues burpVersion CDATA "">
+<!ATTLIST issues exportTime CDATA "">
+<!ELEMENT issue (serialNumber, type, name, host, path, location, severity, confidence, issueBackground?, remediationBackground?, references?, vulnerabilityClassifications?, issueDetail?, issueDetailItems?, remediationDetail?, requestresponse*, collaboratorEvent*, infiltratorEvent*, staticAnalysis*, dynamicAnalysis*, prototypePollution*)>
+<!ELEMENT serialNumber (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT severity (#PCDATA)>
+<!ELEMENT confidence (#PCDATA)>
+<!ELEMENT issueBackground (#PCDATA)>
+<!ELEMENT remediationBackground (#PCDATA)>
+<!ELEMENT references (#PCDATA)>
+<!ELEMENT vulnerabilityClassifications (#PCDATA)>
+<!ELEMENT issueDetail (#PCDATA)>
+<!ELEMENT issueDetailItems (issueDetailItem*)>
+<!ELEMENT issueDetailItem (#PCDATA)>
+<!ELEMENT remediationDetail (#PCDATA)>
+<!ELEMENT requestresponse (request?, response?, responseRedirected?)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request method CDATA "">
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT responseRedirected (#PCDATA)>
+<!ELEMENT sender (#PCDATA)>
+<!ELEMENT message (#PCDATA)>
+<!ELEMENT conversation (#PCDATA)>
+<!ELEMENT recipient (#PCDATA)>
+<!ELEMENT recipients (recipient*)>
+<!ELEMENT smtp (sender, recipients, message, conversation)>
+<!ELEMENT collaboratorEvent (interactionType, originIp, time, lookupType?, lookupHost?, requestresponse?, smtp?)>
+<!ELEMENT interactionType (#PCDATA)>
+<!ELEMENT originIp (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT lookupType (#PCDATA)>
+<!ELEMENT lookupHost (#PCDATA)>
+<!ELEMENT infiltratorEvent (parameterName, platform, signature, stackTrace?, parameterValue?, collaboratorEvent)>
+<!ELEMENT parameterName (#PCDATA)>
+<!ELEMENT platform (#PCDATA)>
+<!ELEMENT signature (#PCDATA)>
+<!ELEMENT stackTrace (#PCDATA)>
+<!ELEMENT parameterValue (#PCDATA)>
+<!ELEMENT dynamicAnalysis (source, sink, sourceStackTrace, sinkStackTrace, eventListenerStackTrace, sourceValue, sinkValue, eventHandlerData, eventHandlerDataType, eventHandlerManipulatedData, poc, origin, isOriginChecked, sourceElementId, sourceElementName, eventFiredEventName, eventFiredElementId, eventFiredElementName, eventFiredOuterHtml)>
+<!ELEMENT prototypePollution (poc, pollutionTechnique, pollutionType)>
+<!ELEMENT staticAnalysis (source, sink, codeSnippets)>
+<!ELEMENT source (#PCDATA)>
+<!ELEMENT sink (#PCDATA)>
+<!ELEMENT sourceStackTrace (#PCDATA)>
+<!ELEMENT sinkStackTrace (#PCDATA)>
+<!ELEMENT eventListenerStackTrace (#PCDATA)>
+<!ELEMENT sourceValue (#PCDATA)>
+<!ELEMENT sinkValue (#PCDATA)>
+<!ELEMENT eventHandlerData (#PCDATA)>
+<!ELEMENT eventHandlerDataType (#PCDATA)>
+<!ELEMENT sourceElementId (#PCDATA)>
+<!ELEMENT sourceElementName (#PCDATA)>
+<!ELEMENT eventFiredEventName (#PCDATA)>
+<!ELEMENT eventFiredElementId (#PCDATA)>
+<!ELEMENT eventFiredElementName (#PCDATA)>
+<!ELEMENT eventFiredOuterHtml (#PCDATA)>
+<!ELEMENT eventHandlerManipulatedData (#PCDATA)>
+<!ELEMENT poc (#PCDATA)>
+<!ELEMENT origin (#PCDATA)>
+<!ELEMENT isOriginChecked (#PCDATA)>
+<!ELEMENT codeSnippets (codeSnippet*)>
+<!ELEMENT codeSnippet (#PCDATA)>
+<!ELEMENT pollutionTechnique (#PCDATA)>
+<!ELEMENT pollutionType (#PCDATA)>
+]>
+<issues burpVersion="2023.8.1" exportTime="Tue Aug 15 20:51:36 GMT 2023">
+  <issue>
+    <serialNumber>9187811523324962816</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Private IP addresses disclosed]]></name>
+    <host ip="172.20.0.3">http://web</host>
+    <path><![CDATA[/wp-admin/admin-ajax.php]]></path>
+    <location><![CDATA[/wp-admin/admin-ajax.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>RFC 1918 specifies ranges of IP addresses that are reserved for use in private networks and cannot be routed on the public Internet. Although various methods exist by which an attacker can determine the public IP addresses in use by an organization, the private addresses used internally cannot usually be determined in the same ways.</p>
+<p>Discovering the private addresses used within an organization can help an attacker in carrying out network-layer attacks aiming to penetrate the organization's internal infrastructure. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>There is not usually any good reason to disclose the internal IP addresses used within an organization's infrastructure. If these are being returned in service banners or debug messages, then the relevant services should be configured to mask the private addresses. If they are being used to track back-end servers for load balancing purposes, then the addresses should be rewritten with innocuous identifiers from which an attacker cannot infer any useful information about the infrastructure.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[The following RFC 1918 IP address was disclosed in the response:<ul><li>172.20.0.3</li></ul>]]></issueDetail>
+    <issueDetailItems>
+      <issueDetailItem><![CDATA[172.20.0.3]]></issueDetailItem>
+    </issueDetailItems>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvd3AtYWRtaW4vYWRtaW4tYWpheC5waHA/YWN0aW9uPXdwdml2aWRfY2hlY2tfaW1wb3J0X2ZpbGUgSFRUUC8xLjANCkhvc3Q6IHdlYg0KQ29udGVudC1MZW5ndGg6IDE0DQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3gtd3d3LWZvcm0tdXJsZW5jb2RlZA0KDQpmaWxlX25hbWU9ZnV6eg==]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgNDAwIEJhZCBSZXF1ZXN0DQpEYXRlOiBUdWUsIDE1IEF1ZyAyMDIzIDIwOjQ4OjM1IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU2IChEZWJpYW4pDQpDb250ZW50LUxlbmd0aDogMzAyDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjQwMCBCYWQgUmVxdWVzdDwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPkJhZCBSZXF1ZXN0PC9oMT4KPHA+WW91ciBicm93c2VyIHNlbnQgYSByZXF1ZXN0IHRoYXQgdGhpcyBzZXJ2ZXIgY291bGQgbm90IHVuZGVyc3RhbmQuPGJyIC8+CjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjU2IChEZWJpYW4pIFNlcnZlciBhdCAxNzIuMjAuMC4zIFBvcnQgODA8L2FkZHJlc3M+CjwvYm9keT48L2h0bWw+Cg==]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>8707947826681219072</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Input returned in response (reflected)]]></name>
+    <host ip="172.20.0.3">http://web</host>
+    <path><![CDATA[/wp-admin/admin-ajax.php]]></path>
+    <location><![CDATA[/wp-admin/admin-ajax.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>Reflection of input arises when data is copied from a request and echoed into the application's immediate response.</p><p>Input being returned in application responses is not a vulnerability in its own right. However, it is a prerequisite for many client-side vulnerabilities, including cross-site scripting, open redirection, content spoofing, and response header injection. Additionally, some server-side vulnerabilities such as SQL injection are often easier to identify and exploit when input is returned in responses. In applications where input retrieval is rare and the environment is resistant to automated testing (for example, due to a web application firewall), it might be worth subjecting instances of it to focused manual testing. </p>]]></issueBackground>
+    <issueDetail><![CDATA[The value of the <b>file_name</b> request parameter is copied into the application's response.]]></issueDetail>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvd3AtYWRtaW4vYWRtaW4tYWpheC5waHA/YWN0aW9uPXdwdml2aWRfY2hlY2tfaW1wb3J0X2ZpbGUgSFRUUC8xLjANCkhvc3Q6IHdlYg0KQ29udGVudC1MZW5ndGg6IDE0DQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3gtd3d3LWZvcm0tdXJsZW5jb2RlZA0KDQpmaWxlX25hbWU9ZnV6em9kcng3Yzlrbmk=]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBUdWUsIDE1IEF1ZyAyMDIzIDIwOjQ5OjM0IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU2IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMTgNClgtUm9ib3RzLVRhZzogbm9pbmRleA0KWC1Db250ZW50LVR5cGUtT3B0aW9uczogbm9zbmlmZg0KRXhwaXJlczogV2VkLCAxMSBKYW4gMTk4NCAwNTowMDowMCBHTVQNCkNhY2hlLUNvbnRyb2w6IG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUsIG1heC1hZ2U9MA0KUmVmZXJyZXItUG9saWN5OiBzdHJpY3Qtb3JpZ2luLXdoZW4tY3Jvc3Mtb3JpZ2luDQpYLUZyYW1lLU9wdGlvbnM6IFNBTUVPUklHSU4NClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29udGVudC1MZW5ndGg6IDk2DQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9VVRGLTgNCg0KCnsicmVzdWx0IjoiZmFpbGVkIiwiZXJyb3IiOiJmdXp6b2RyeDdjOWtuaSBpcyBub3QgdGhlIGZpbGUgZXhwb3J0ZWQgYnkgV1B2aXZpZCBiYWNrdXAgcGx1Z2luLiJ9]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>1103845976188308480</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Cross-site scripting (reflected)]]></name>
+    <host ip="172.20.0.3">http://web</host>
+    <path><![CDATA[/wp-admin/admin-ajax.php]]></path>
+    <location><![CDATA[/wp-admin/admin-ajax.php]]></location>
+    <severity>High</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>Reflected cross-site scripting vulnerabilities arise when data is copied from a request and echoed into the application's immediate response in an unsafe way. An attacker can use the vulnerability to construct a request that, if issued by another application user, will cause JavaScript code supplied by the attacker to execute within the user's browser in the context of that user's session with the application.</p>
+<p>The attacker-supplied code can perform a wide variety of actions, such as stealing the victim's session token or login credentials, performing arbitrary actions on the victim's behalf, and logging their keystrokes.</p>
+<p>Users can be induced to issue the attacker's crafted request in various ways. For example, the attacker can send a victim a link containing a malicious URL in an email or instant message. They can submit the link to popular web sites that allow content authoring, for example in blog comments. And they can create an innocuous looking web site that causes anyone viewing it to make arbitrary cross-domain requests to the vulnerable application (using either the GET or the POST method).</p>
+<p>The security impact of cross-site scripting vulnerabilities is dependent upon the nature of the vulnerable application, the kinds of data and functionality that it contains, and the other applications that belong to the same domain and organization. If the application is used only to display non-sensitive public content, with no authentication or access control functionality, then a cross-site scripting flaw may be considered low risk. However, if the same application resides on a domain that can access cookies for other more security-critical applications, then the vulnerability could be used to attack those other applications, and so may be considered high risk. Similarly, if the organization that owns the application is a likely target for phishing attacks, then the vulnerability could be leveraged to lend credibility to such attacks, by injecting Trojan functionality into the vulnerable application and exploiting users' trust in the organization in order to capture credentials for other applications that it owns. In many kinds of application, such as those providing online banking functionality, cross-site scripting should always be considered high risk. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>In most situations where user-controllable data is copied into application responses, cross-site scripting 
+  attacks can be prevented using two layers of defenses:</p>
+<ul>
+  <li>Input should be validated as strictly as possible on arrival, given the kind of content that 
+it is expected to contain. For example, personal names should consist of alphabetical 
+and a small range of typographical characters, and be relatively short; a year of birth 
+should consist of exactly four numerals; email addresses should match a well-defined 
+regular expression. Input which fails the validation should be rejected, not sanitized.</li>
+<li>User input should be HTML-encoded at any point where it is copied into 
+application responses. All HTML metacharacters, including &lt; &gt; " ' and =, should be 
+replaced with the corresponding HTML entities (&amp;lt; &amp;gt; etc).</li></ul>
+<p>In cases where the application's functionality allows users to author content using 
+  a restricted subset of HTML tags and attributes (for example, blog comments which 
+  allow limited formatting and linking), it is necessary to parse the supplied HTML to 
+  validate that it does not use any dangerous syntax; this is a non-trivial task.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[The value of the <b>file_name</b> request parameter is copied into the HTML document as plain text between tags. The payload <b>g6lba&lt;img src=a onerror=alert(1)&gt;zr3w8</b> was submitted in the file_name parameter. This input was echoed unmodified in the application's response.<br><br>This proof-of-concept attack demonstrates that it is possible to inject arbitrary JavaScript into the application's response. The proof-of-concept attack demonstrated uses an event handler to introduce arbitrary JavaScript into the document.]]></issueDetail>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvd3AtYWRtaW4vYWRtaW4tYWpheC5waHA/YWN0aW9uPXdwdml2aWRfY2hlY2tfaW1wb3J0X2ZpbGUgSFRUUC8xLjANCkhvc3Q6IHdlYg0KQ29udGVudC1MZW5ndGg6IDE0DQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3gtd3d3LWZvcm0tdXJsZW5jb2RlZA0KDQpmaWxlX25hbWU9ZnV6emc2bGJhJTNjaW1nJTIwc3JjJTNkYSUyMG9uZXJyb3IlM2RhbGVydCgxKSUzZXpyM3c4]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBUdWUsIDE1IEF1ZyAyMDIzIDIwOjQ5OjQxIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU2IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMTgNClgtUm9ib3RzLVRhZzogbm9pbmRleA0KWC1Db250ZW50LVR5cGUtT3B0aW9uczogbm9zbmlmZg0KRXhwaXJlczogV2VkLCAxMSBKYW4gMTk4NCAwNTowMDowMCBHTVQNCkNhY2hlLUNvbnRyb2w6IG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUsIG1heC1hZ2U9MA0KUmVmZXJyZXItUG9saWN5OiBzdHJpY3Qtb3JpZ2luLXdoZW4tY3Jvc3Mtb3JpZ2luDQpYLUZyYW1lLU9wdGlvbnM6IFNBTUVPUklHSU4NClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29udGVudC1MZW5ndGg6IDEyNA0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sOyBjaGFyc2V0PVVURi04DQoNCgp7InJlc3VsdCI6ImZhaWxlZCIsImVycm9yIjoiZnV6emc2bGJhPGltZyBzcmM9YSBvbmVycm9yPWFsZXJ0KDEpPnpyM3c4IGlzIG5vdCB0aGUgZmlsZSBleHBvcnRlZCBieSBXUHZpdmlkIGJhY2t1cCBwbHVnaW4uIn0=]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+</issues>

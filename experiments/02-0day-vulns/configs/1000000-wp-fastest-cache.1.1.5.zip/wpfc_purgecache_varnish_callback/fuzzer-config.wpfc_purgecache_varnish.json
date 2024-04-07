@@ -1,0 +1,25 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "security"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "wpfc_purgecache_varnish"
+      },
+      {
+        "name": "security",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+../phuzz-output/300000-pdf-embedder.4.6.4.zip/activate_partner/output/fuzzer-1/vulnerable-candidates.json,e1144fda-9b67-43ae-8727-141c108422b1:  query_params:{"action": "pdfemb_partners_activate"} body_params:{"basename": "fuz6"}

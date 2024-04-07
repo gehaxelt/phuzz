@@ -1,0 +1,37 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "ppmb_user_login",
+      "ppmb_user_pass"
+    ],
+    "data": [
+      {
+        "name": "ppmb_user_login",
+        "value": "fuzz"
+      },
+      {
+        "name": "ppmb_user_pass",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "ppress_process_checkout_login"
+      }
+    ]
+  }
+}

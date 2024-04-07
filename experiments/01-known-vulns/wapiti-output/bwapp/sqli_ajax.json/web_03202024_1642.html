@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wapiti scan report</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/kube.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/master.css" />
+</head>
+<body>
+    <div id="page">
+        <header style="text-align: center">
+        <h2 class="title" style="text-align: center">Wapiti vulnerability report</h2>
+        <h3>Target: http://web/sqli_10-2.php?title=fuzz</h3>
+        <p>Date of the scan: Wed, 20 Mar 2024 16:42:44 +0000. Scope of the scan: folder. Crawled pages: 1</p>
+        </header>
+        <hr />
+
+        <h4>Summary</h4>
+        <table class="width-100 hovered" style="background: url('logo_clear.png') no-repeat center;">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Number of vulnerabilities found</th>
+                </tr>
+            </thead>
+            <tbody id="summary">
+                    <tr>
+                        <td class="small">
+                            Backup file
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Weak credentials
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            CRLF Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_3">Content Security Policy Configuration</a>
+                        </td>
+                        <td class="small .text-centered">1</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Cross Site Request Forgery
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Potentially dangerous file
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Command execution
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Path Traversal
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web application framework
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web server
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Htaccess Bypass
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HTML Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_12">HTTP Secure Headers</a>
+                        </td>
+                        <td class="small .text-centered">2</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_13">HttpOnly Flag cookie</a>
+                        </td>
+                        <td class="small .text-centered">1</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Unencrypted Channels
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Log4Shell
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Open Redirect
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Reflected Cross Site Scripting
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_18">Secure Flag cookie</a>
+                        </td>
+                        <td class="small .text-centered">1</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Spring4Shell
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            SQL Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            TLS/SSL misconfigurations
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Server Side Request Forgery
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Stored HTML Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Stored Cross Site Scripting
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Subdomain takeover
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Blind SQL Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Unrestricted File Upload
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            XML External Entity
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Internal Server Error
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Resource consumption
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Review Webserver Metafiles for Information Leakage
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web technology
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HTTP Methods
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+            </tbody>
+        </table>
+        <hr />
+        <div id="details">
+                <h3 id="vuln_type_3">Content Security Policy Configuration</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks.</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /sqli_10-2.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-3-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-3-0-2">HTTP Request</a>
+                                <a href="#tab-vuln-3-0-3">HTTP Response</a>
+                            <a href="#tab-vuln-3-0-4">cURL command line</a>
+                            <a href="#tab-vuln-3-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-3-0-1" style="min-height: 124px;">
+                            <pre>CSP is not set</pre>
+                        </section>
+                        <section id="tab-vuln-3-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /sqli_10-2.php?title=fuzz HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: security_level=0
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-3-0-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 16:42:44 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            set-cookie: PHPSESSID=5v2ngh7ntfpodb38pg3bat8cmu; path=/<br />
+                                            expires: Thu, 19 Nov 1981 08:52:00 GMT<br />
+                                            cache-control: no-store, no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            set-cookie: PHPSESSID=6r1354t2huvnbg71aauisq8l6a; path=/<br />
+                                            content-length: 3<br />
+                                            keep-alive: timeout=5, max=100<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/json; charset=utf-8<br />
+                                    <br />
+                                    
+[]
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-3-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/sqli_10-2.php?title=fuzz&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-3-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-CONF-12&#39;, &#39;OSHP-Content-Security-Policy&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>Configuring Content Security Policy involves adding the Content-Security-Policy HTTP header to a web page and giving it values to control what resources the user agent is allowed to load for that page.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Mozilla: Content Security Policy (CSP)</a></li>
+                    <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">OWASP: Content Security Policy Cheat Sheet</a></li>
+                    <li><a href="https://owasp.org/www-pdf-archive/2019-02-22_-_How_do_I_Content_Security_Policy_-_Print.pdf">OWASP: How to do Content Security Policy (PDF)</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/12-Test_for_Content_Security_Policy">OWASP: Content Security Policy</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_12">HTTP Secure Headers</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>HTTP security headers tell the browser how to behave when handling the website&#39;s content.</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /sqli_10-2.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-12-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-12-0-2">HTTP Request</a>
+                                <a href="#tab-vuln-12-0-3">HTTP Response</a>
+                            <a href="#tab-vuln-12-0-4">cURL command line</a>
+                            <a href="#tab-vuln-12-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-12-0-1" style="min-height: 124px;">
+                            <pre>X-Frame-Options is not set</pre>
+                        </section>
+                        <section id="tab-vuln-12-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /sqli_10-2.php?title=fuzz HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: security_level=0
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-12-0-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 16:42:47 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            set-cookie: PHPSESSID=6j4pa9e9si7silkgofe9tor2ps; path=/<br />
+                                            expires: Thu, 19 Nov 1981 08:52:00 GMT<br />
+                                            cache-control: no-store, no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            set-cookie: PHPSESSID=mna6ebp82r8503eggrrnhr25b7; path=/<br />
+                                            content-length: 3<br />
+                                            keep-alive: timeout=5, max=96<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/json; charset=utf-8<br />
+                                    <br />
+                                    
+[]
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-12-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/sqli_10-2.php?title=fuzz&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-12-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;OSHP-X-Frame-Options&#39;]</pre>
+                        </section>
+                        <h4>🟡 Vulnerability found in /sqli_10-2.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-12-1-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-12-1-2">HTTP Request</a>
+                                <a href="#tab-vuln-12-1-3">HTTP Response</a>
+                            <a href="#tab-vuln-12-1-4">cURL command line</a>
+                            <a href="#tab-vuln-12-1-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-12-1-1" style="min-height: 124px;">
+                            <pre>X-Content-Type-Options is not set</pre>
+                        </section>
+                        <section id="tab-vuln-12-1-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /sqli_10-2.php?title=fuzz HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: security_level=0
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-12-1-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 16:42:47 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            set-cookie: PHPSESSID=6j4pa9e9si7silkgofe9tor2ps; path=/<br />
+                                            expires: Thu, 19 Nov 1981 08:52:00 GMT<br />
+                                            cache-control: no-store, no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            set-cookie: PHPSESSID=mna6ebp82r8503eggrrnhr25b7; path=/<br />
+                                            content-length: 3<br />
+                                            keep-alive: timeout=5, max=96<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/json; charset=utf-8<br />
+                                    <br />
+                                    
+[]
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-12-1-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/sqli_10-2.php?title=fuzz&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-12-1-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;OSHP-X-Content-Type-Options&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>Use the recommendations for hardening your HTTP Security Headers.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-project-secure-headers/#div-bestpractices">OSHP: OWASP Secure Headers Project Best Practices</a></li>
+                    <li><a href="https://www.netsparker.com/blog/web-security/http-security-headers/">Netsparker: HTTP Security Headers: An Easy Way to Harden Your Web Applications</a></li>
+                    <li><a href="https://www.keycdn.com/blog/http-security-headers">KeyCDN: Hardening Your HTTP Security Headers</a></li>
+                    <li><a href="https://owasp.org/www-chapter-ghana/assets/slides/HTTP_Header_Security.pdf">OWASP: HTTP SECURITY HEADERS (Protection For Browsers) (PDF)</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/09-Testing_for_Clickjacking">OWASP: Clickjacking</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting">OWASP: Reflected Cross Site Scripting</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting">OWASP: Stored Cross Site Scripting</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/07-Test_HTTP_Strict_Transport_Security">OWASP: HTTP Strict Transport Security</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_13">HttpOnly Flag cookie</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>HttpOnly is an additional flag included in a Set-Cookie HTTP response header. Using the HttpOnly flag when generating a cookie helps mitigate the risk of client side script accessing the protected cookie (if the browser supports it).</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /sqli_10-2.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-13-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-13-0-2">HTTP Request</a>
+                            <a href="#tab-vuln-13-0-4">cURL command line</a>
+                            <a href="#tab-vuln-13-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-13-0-1" style="min-height: 124px;">
+                            <pre>HttpOnly flag is not set in the cookie : PHPSESSID</pre>
+                        </section>
+                        <section id="tab-vuln-13-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /sqli_10-2.php?title=fuzz HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: security_level=0
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-13-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/sqli_10-2.php?title=fuzz&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-13-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-SESS-02&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>While creation of the cookie, make sure to set the HttpOnly Flag to True.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html">OWASP: Testing for Cookies Attributes</a></li>
+                    <li><a href="https://owasp.org/www-community/HttpOnly">OWASP: HttpOnly</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_18">Secure Flag cookie</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>The secure flag is an option that can be set by the application server when sending a new cookie to the user within an HTTP Response. The purpose of the secure flag is to prevent cookies from being observed by unauthorized parties due to the transmission of a the cookie in clear text.</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /sqli_10-2.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-18-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-18-0-2">HTTP Request</a>
+                            <a href="#tab-vuln-18-0-4">cURL command line</a>
+                            <a href="#tab-vuln-18-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-18-0-1" style="min-height: 124px;">
+                            <pre>Secure flag is not set in the cookie : PHPSESSID</pre>
+                        </section>
+                        <section id="tab-vuln-18-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /sqli_10-2.php?title=fuzz HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: security_level=0
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-18-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/sqli_10-2.php?title=fuzz&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-18-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-SESS-02&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>When generating the cookie, make sure to set the Secure Flag to True.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html">OWASP: Testing for Cookies Attributes</a></li>
+                    <li><a href="https://owasp.org/www-community/controls/SecureCookieAttribute">OWASP: Secure Cookie Attribute</a></li>
+                </ul>
+                <br />
+                <hr>
+        </div>
+        <footer class="small" id="footer"><a href="https://wapiti-scanner.github.io/" id="wapiti_link">Wapiti 3.1.8</a> &copy; Nicolas SURRIBAS 2006-2022</footer>
+	</div>
+    <script type="text/javascript" src="js/kube.min.js"></script>
+    <script>$K.init();</script>
+</body>
+</html>

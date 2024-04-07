@@ -1,0 +1,1 @@
+../phuzz-output/1000000-wp-smushit.3.12.6.zip/scan_images/output/fuzzer-4/vulnerable-candidates.json,2b6c269f-5727-459b-a225-69a724f1c12c:  query_params:{"action": "scan_for_resmush", "type": "fuzz?", "process_settings": "fu"}

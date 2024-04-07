@@ -1,0 +1,1 @@
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/read_last_backup_log/output/fuzzer-1/vulnerable-candidates.json,66bc3ef0-0d11-4a33-b7e9-1e3f407fda25:  query_params:{"action": "wpvivid_read_last_backup_log"} body_params:{"log_file_name": "fu^zz"}

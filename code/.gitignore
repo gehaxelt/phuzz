@@ -1,0 +1,12 @@
+__pycache__
+*/coverage-reports/*.json
+*/error-reports/*.json
+*/exception-reports/*.json
+*/mysql-error-reports/*.json
+*/shell-error-reports/*.json
+*/unserialize-error-reports/*.json
+*/eval-error-reports/*.json
+*/output/*
+!*/output/.gitkeep
+cookies.json
+params.json

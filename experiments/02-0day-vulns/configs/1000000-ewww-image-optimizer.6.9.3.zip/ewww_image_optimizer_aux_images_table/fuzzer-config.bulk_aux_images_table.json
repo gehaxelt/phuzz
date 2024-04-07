@@ -1,0 +1,53 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "ewww_offset",
+      "ewww_search",
+      "ewww_total_pages"
+    ],
+    "data": [
+      {
+        "name": "ewww_offset",
+        "value": "fuzz"
+      },
+      {
+        "name": "ewww_search",
+        "value": "fuzz"
+      },
+      {
+        "name": "ewww_total_pages",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action",
+      "ewww_wpnonce"
+    ],
+    "fuzz": [
+      "ewww_debug"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "bulk_aux_images_table"
+      },
+      {
+        "name": "ewww_wpnonce",
+        "value": "fuzz"
+      },
+      {
+        "name": "ewww_debug",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

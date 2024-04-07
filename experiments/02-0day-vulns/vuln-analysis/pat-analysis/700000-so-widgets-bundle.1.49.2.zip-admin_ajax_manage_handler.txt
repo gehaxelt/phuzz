@@ -1,0 +1,1 @@
+../phuzz-output/700000-so-widgets-bundle.1.49.2.zip/admin_ajax_manage_handler/output/fuzzer-1/vulnerable-candidates.json,32721fc2-f7ef-4ea6-b007-ea40d72d1dc5:  query_params:{"_wpnonce": "fuzz", "action": "so_widgets_bundle_manage"} body_params:{"active": "fuz", "widget": "fuzz"}

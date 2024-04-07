@@ -1,0 +1,40 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "ua",
+      "v4",
+      "network",
+      "tt"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "exactmetrics_rauthenticate"
+      },
+      {
+        "name": "ua",
+        "value": "fuzz"
+      },
+      {
+        "name": "v4",
+        "value": "fuzz"
+      },
+      {
+        "name": "network",
+        "value": "fuzz"
+      },
+      {
+        "name": "tt",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

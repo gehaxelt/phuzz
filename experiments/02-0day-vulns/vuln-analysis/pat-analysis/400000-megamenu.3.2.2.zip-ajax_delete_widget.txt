@@ -1,0 +1,1 @@
+../phuzz-output/400000-megamenu.3.2.2.zip/ajax_delete_widget/output/fuzzer-7/vulnerable-candidates.json,c90e2422-4eba-44dd-baf9-55d951cb00dc:  query_params:{"action": "mm_delete_widget"} body_params:{"widget_id": "fu"}

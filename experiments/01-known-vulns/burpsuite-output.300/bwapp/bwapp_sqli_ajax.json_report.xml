@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<!DOCTYPE issues [
+<!ELEMENT issues (issue*)>
+<!ATTLIST issues burpVersion CDATA "">
+<!ATTLIST issues exportTime CDATA "">
+<!ELEMENT issue (serialNumber, type, name, host, path, location, severity, confidence, issueBackground?, remediationBackground?, references?, vulnerabilityClassifications?, issueDetail?, issueDetailItems?, remediationDetail?, requestresponse*, collaboratorEvent*, infiltratorEvent*, staticAnalysis*, dynamicAnalysis*, prototypePollution*)>
+<!ELEMENT serialNumber (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT severity (#PCDATA)>
+<!ELEMENT confidence (#PCDATA)>
+<!ELEMENT issueBackground (#PCDATA)>
+<!ELEMENT remediationBackground (#PCDATA)>
+<!ELEMENT references (#PCDATA)>
+<!ELEMENT vulnerabilityClassifications (#PCDATA)>
+<!ELEMENT issueDetail (#PCDATA)>
+<!ELEMENT issueDetailItems (issueDetailItem*)>
+<!ELEMENT issueDetailItem (#PCDATA)>
+<!ELEMENT remediationDetail (#PCDATA)>
+<!ELEMENT requestresponse (request?, response?, responseRedirected?)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request method CDATA "">
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT responseRedirected (#PCDATA)>
+<!ELEMENT sender (#PCDATA)>
+<!ELEMENT message (#PCDATA)>
+<!ELEMENT conversation (#PCDATA)>
+<!ELEMENT recipient (#PCDATA)>
+<!ELEMENT recipients (recipient*)>
+<!ELEMENT smtp (sender, recipients, message, conversation)>
+<!ELEMENT collaboratorEvent (interactionType, originIp, time, lookupType?, lookupHost?, requestresponse?, smtp?)>
+<!ELEMENT interactionType (#PCDATA)>
+<!ELEMENT originIp (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT lookupType (#PCDATA)>
+<!ELEMENT lookupHost (#PCDATA)>
+<!ELEMENT infiltratorEvent (parameterName, platform, signature, stackTrace?, parameterValue?, collaboratorEvent)>
+<!ELEMENT parameterName (#PCDATA)>
+<!ELEMENT platform (#PCDATA)>
+<!ELEMENT signature (#PCDATA)>
+<!ELEMENT stackTrace (#PCDATA)>
+<!ELEMENT parameterValue (#PCDATA)>
+<!ELEMENT dynamicAnalysis (source, sink, sourceStackTrace, sinkStackTrace, eventListenerStackTrace, sourceValue, sinkValue, eventHandlerData, eventHandlerDataType, eventHandlerManipulatedData, poc, origin, isOriginChecked, sourceElementId, sourceElementName, eventFiredEventName, eventFiredElementId, eventFiredElementName, eventFiredOuterHtml)>
+<!ELEMENT prototypePollution (poc, pollutionTechnique, pollutionType)>
+<!ELEMENT staticAnalysis (source, sink, codeSnippets)>
+<!ELEMENT source (#PCDATA)>
+<!ELEMENT sink (#PCDATA)>
+<!ELEMENT sourceStackTrace (#PCDATA)>
+<!ELEMENT sinkStackTrace (#PCDATA)>
+<!ELEMENT eventListenerStackTrace (#PCDATA)>
+<!ELEMENT sourceValue (#PCDATA)>
+<!ELEMENT sinkValue (#PCDATA)>
+<!ELEMENT eventHandlerData (#PCDATA)>
+<!ELEMENT eventHandlerDataType (#PCDATA)>
+<!ELEMENT sourceElementId (#PCDATA)>
+<!ELEMENT sourceElementName (#PCDATA)>
+<!ELEMENT eventFiredEventName (#PCDATA)>
+<!ELEMENT eventFiredElementId (#PCDATA)>
+<!ELEMENT eventFiredElementName (#PCDATA)>
+<!ELEMENT eventFiredOuterHtml (#PCDATA)>
+<!ELEMENT eventHandlerManipulatedData (#PCDATA)>
+<!ELEMENT poc (#PCDATA)>
+<!ELEMENT origin (#PCDATA)>
+<!ELEMENT isOriginChecked (#PCDATA)>
+<!ELEMENT codeSnippets (codeSnippet*)>
+<!ELEMENT codeSnippet (#PCDATA)>
+<!ELEMENT pollutionTechnique (#PCDATA)>
+<!ELEMENT pollutionType (#PCDATA)>
+]>
+<issues burpVersion="2023.8.1" exportTime="Thu Mar 21 09:48:45 GMT 2024">
+  <issue>
+    <serialNumber>9184093921468570624</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Private IP addresses disclosed]]></name>
+    <host ip="172.22.0.3">http://web</host>
+    <path><![CDATA[/sqli_10-2.php]]></path>
+    <location><![CDATA[/sqli_10-2.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>RFC 1918 specifies ranges of IP addresses that are reserved for use in private networks and cannot be routed on the public Internet. Although various methods exist by which an attacker can determine the public IP addresses in use by an organization, the private addresses used internally cannot usually be determined in the same ways.</p>
+<p>Discovering the private addresses used within an organization can help an attacker in carrying out network-layer attacks aiming to penetrate the organization's internal infrastructure. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>There is not usually any good reason to disclose the internal IP addresses used within an organization's infrastructure. If these are being returned in service banners or debug messages, then the relevant services should be configured to mask the private addresses. If they are being used to track back-end servers for load balancing purposes, then the addresses should be rewritten with innocuous identifiers from which an attacker cannot infer any useful information about the infrastructure.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[The following RFC 1918 IP address was disclosed in the response:<ul><li>172.22.0.3</li></ul>]]></issueDetail>
+    <issueDetailItems>
+      <issueDetailItem><![CDATA[172.22.0.3]]></issueDetailItem>
+    </issueDetailItems>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC9zcWxpXzEwLTIucGhwP3RpdGxlPWZ1enogSFRUUC8xLjANCkhvc3Q6IHdlYg0KQ29va2llOiBzZWN1cml0eV9sZXZlbD0wDQoNCg==]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgNDAwIEJhZCBSZXF1ZXN0DQpEYXRlOiBUaHUsIDIxIE1hciAyMDI0IDA5OjQzOjQ0IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpDb250ZW50LUxlbmd0aDogMzAyDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjQwMCBCYWQgUmVxdWVzdDwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPkJhZCBSZXF1ZXN0PC9oMT4KPHA+WW91ciBicm93c2VyIHNlbnQgYSByZXF1ZXN0IHRoYXQgdGhpcyBzZXJ2ZXIgY291bGQgbm90IHVuZGVyc3RhbmQuPGJyIC8+CjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjU3IChEZWJpYW4pIFNlcnZlciBhdCAxNzIuMjIuMC4zIFBvcnQgODA8L2FkZHJlc3M+CjwvYm9keT48L2h0bWw+Cg==]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>5519562180142349312</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[SQL injection]]></name>
+    <host ip="172.22.0.3">http://web</host>
+    <path><![CDATA[/sqli_10-2.php]]></path>
+    <location><![CDATA[/sqli_10-2.php]]></location>
+    <severity>High</severity>
+    <confidence>Firm</confidence>
+    <issueBackground><![CDATA[<p>SQL injection vulnerabilities arise when user-controllable data is incorporated into database SQL queries in an unsafe manner. An attacker can supply crafted input to break out of the data context in which their input appears and interfere with the structure of the surrounding query.</p>
+<p>A wide range of damaging attacks can often be delivered via SQL injection, including reading or modifying critical application data, interfering with application logic, escalating privileges within the database and taking control of the database server. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>The most effective way to prevent SQL injection attacks is to use parameterized queries (also known as prepared statements) for all database access. This method uses two steps to incorporate potentially tainted data into SQL queries: first, the application specifies the structure of the query, leaving placeholders for each item of user input; second, the application specifies the contents of each placeholder. Because the structure of the query has already been defined in the first step, it is not possible for malformed data in the second step to interfere with the query structure. You should review the documentation for your database and application platform to determine the appropriate APIs which you can use to perform parameterized queries. It is strongly recommended that you parameterize <i>every</i> variable data item that is incorporated into database queries, even if it is not obviously tainted, to prevent oversights occurring and avoid vulnerabilities being introduced by changes elsewhere within the code base of the application.</p>
+<p>You should be aware that some commonly employed and recommended mitigations for SQL injection vulnerabilities are not always effective: </p>
+<ul>
+  <li>One common defense is to double up any single quotation marks appearing within user input before incorporating that input into a SQL query. This defense is designed to prevent malformed data from terminating the string into which it is inserted. However, if the data being incorporated into queries is numeric, then the defense may fail, because numeric data may not be encapsulated within quotes, in which case only a space is required to break out of the data context and interfere with the query. Further, in second-order SQL injection attacks, data that has been safely escaped when initially inserted into the database is subsequently read from the database and then passed back to it again. Quotation marks that have been doubled up initially will return to their original form when the data is reused, allowing the defense to be bypassed.</li>
+  <li>Another often cited defense is to use stored procedures for database access. While stored procedures can provide security benefits, they are not guaranteed to prevent SQL injection attacks. The same kinds of vulnerabilities that arise within standard dynamic SQL queries can arise if any SQL is dynamically constructed within stored procedures. Further, even if the procedure is sound, SQL injection can arise if the procedure is invoked in an unsafe manner using user-controllable data.</li>
+</ul>]]></remediationBackground>
+    <issueDetail><![CDATA[The <b>title</b> parameter appears to be vulnerable to SQL injection attacks. The payloads <b>20474424' or 5441=5441-- </b> and <b>12782678' or 6019=6023-- </b> were each submitted in the title parameter. These two requests resulted in different responses, indicating that the input is being incorporated into a SQL query in an unsafe way. <br><br>Note that automated difference-based tests for SQL injection flaws can often be unreliable and are prone to false positive results. You should manually review the reported requests and responses to confirm whether a vulnerability is actually present.<br><br> Additionally, the payload <b>' and (select*from(select(sleep(20)))a)-- </b> was submitted in the title parameter. The application took <b>20009</b> milliseconds to respond to the request, compared with <b>1</b> milliseconds for the original request, indicating that the injected SQL command caused a time delay.<br><br>The database appears to be MySQL.]]></issueDetail>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC9zcWxpXzEwLTIucGhwP3RpdGxlPWZ1enoyMDQ3NDQyNCclMjBvciUyMDU0NDElM2Q1NDQxLS0lMjAgSFRUUC8xLjANCkhvc3Q6IHdlYg0KQ29va2llOiBzZWN1cml0eV9sZXZlbD0wDQoNCg==]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBUaHUsIDIxIE1hciAyMDI0IDA5OjQ1OjA1IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjIuMTANClNldC1Db29raWU6IFBIUFNFU1NJRD0wcHJkbGlqcGpjY3RsdHFmaHFudXZqZXBlbTsgcGF0aD0vDQpFeHBpcmVzOiBUaHUsIDE5IE5vdiAxOTgxIDA4OjUyOjAwIEdNVA0KQ2FjaGUtQ29udHJvbDogbm8tc3RvcmUsIG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUNClByYWdtYTogbm8tY2FjaGUNClNldC1Db29raWU6IFBIUFNFU1NJRD1qbTJyaGZyMjJyc2lwb3FoYzg2b2FtanRkazsgcGF0aD0vDQpDb250ZW50LUxlbmd0aDogMjUyMA0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9qc29uOyBjaGFyc2V0PXV0Zi04DQoNCgpbeyIwIjoiMSIsImlkIjoiMSIsIjEiOiJHLkkuIEpvZTogUmV0YWxpYXRpb24iLCJ0aXRsZSI6IkcuSS4gSm9lOiBSZXRhbGlhdGlvbiIsIjIiOiIyMDEzIiwicmVsZWFzZV95ZWFyIjoiMjAxMyIsIjMiOiJhY3Rpb24iLCJnZW5yZSI6ImFjdGlvbiIsIjQiOiJDb2JyYSBDb21tYW5kZXIiLCJtYWluX2NoYXJhY3RlciI6IkNvYnJhIENvbW1hbmRlciIsIjUiOiJ0dDE1ODM0MjEiLCJpbWRiIjoidHQxNTgzNDIxIiwiNiI6IjEwMCIsInRpY2tldHNfc3RvY2siOiIxMDAifSx7IjAiOiIyIiwiaWQiOiIyIiwiMSI6Iklyb24gTWFuIiwidGl0bGUiOiJJcm9uIE1hbiIsIjIiOiIyMDA4IiwicmVsZWFzZV95ZWFyIjoiMjAwOCIsIjMiOiJhY3Rpb24iLCJnZW5yZSI6ImFjdGlvbiIsIjQiOiJUb255IFN0YXJrIiwibWFpbl9jaGFyYWN0ZXIiOiJUb255IFN0YXJrIiwiNSI6InR0MDM3MTc0NiIsImltZGIiOiJ0dDAzNzE3NDYiLCI2IjoiNTMiLCJ0aWNrZXRzX3N0b2NrIjoiNTMifSx7IjAiOiIzIiwiaWQiOiIzIiwiMSI6Ik1hbiBvZiBTdGVlbCIsInRpdGxlIjoiTWFuIG9mIFN0ZWVsIiwiMiI6IjIwMTMiLCJyZWxlYXNlX3llYXIiOiIyMDEzIiwiMyI6ImFjdGlvbiIsImdlbnJlIjoiYWN0aW9uIiwiNCI6IkNsYXJrIEtlbnQiLCJtYWluX2NoYXJhY3RlciI6IkNsYXJrIEtlbnQiLCI1IjoidHQwNzcwODI4IiwiaW1kYiI6InR0MDc3MDgyOCIsIjYiOiI3OCIsInRpY2tldHNfc3RvY2siOiI3OCJ9LHsiMCI6IjQiLCJpZCI6IjQiLCIxIjoiVGVybWluYXRvciBTYWx2YXRpb24iLCJ0aXRsZSI6IlRlcm1pbmF0b3IgU2FsdmF0aW9uIiwiMiI6IjIwMDkiLCJyZWxlYXNlX3llYXIiOiIyMDA5IiwiMyI6InNjaS1maSIsImdlbnJlIjoic2NpLWZpIiwiNCI6IkpvaG4gQ29ubm9yIiwibWFpbl9jaGFyYWN0ZXIiOiJKb2huIENvbm5vciIsIjUiOiJ0dDA0Mzg0ODgiLCJpbWRiIjoidHQwNDM4NDg4IiwiNiI6IjEwMCIsInRpY2tldHNfc3RvY2siOiIxMDAifSx7IjAiOiI1IiwiaWQiOiI1IiwiMSI6IlRoZSBBbWF6aW5nIFNwaWRlci1NYW4iLCJ0aXRsZSI6IlRoZSBBbWF6aW5nIFNwaWRlci1NYW4iLCIyIjoiMjAxMiIsInJlbGVhc2VfeWVhciI6IjIwMTIiLCIzIjoiYWN0aW9uIiwiZ2VucmUiOiJhY3Rpb24iLCI0IjoiUGV0ZXIgUGFya2VyIiwibWFpbl9jaGFyYWN0ZXIiOiJQZXRlciBQYXJrZXIiLCI1IjoidHQwOTQ4NDcwIiwiaW1kYiI6InR0MDk0ODQ3MCIsIjYiOiIxMyIsInRpY2tldHNfc3RvY2siOiIxMyJ9LHsiMCI6IjYiLCJpZCI6IjYiLCIxIjoiVGhlIENhYmluIGluIHRoZSBXb29kcyIsInRpdGxlIjoiVGhlIENhYmluIGluIHRoZSBXb29kcyIsIjIiOiIyMDExIiwicmVsZWFzZV95ZWFyIjoiMjAxMSIsIjMiOiJob3Jyb3IiLCJnZW5yZSI6ImhvcnJvciIsIjQiOiJTb21lIHpvbWJpZXMiLCJtYWluX2NoYXJhY3RlciI6IlNvbWUgem9tYmllcyIsIjUiOiJ0dDEyNTk1MjEiLCJpbWRiIjoidHQxMjU5NTIxIiwiNiI6IjY2NiIsInRpY2tldHNfc3RvY2siOiI2NjYifSx7IjAiOiI3IiwiaWQiOiI3IiwiMSI6IlRoZSBEYXJrIEtuaWdodCBSaXNlcyIsInRpdGxlIjoiVGhlIERhcmsgS25pZ2h0IFJpc2VzIiwiMiI6IjIwMTIiLCJyZWxlYXNlX3llYXIiOiIyMDEyIiwiMyI6ImFjdGlvbiIsImdlbnJlIjoiYWN0aW9uIiwiNCI6IkJydWNlIFdheW5lIiwibWFpbl9jaGFyYWN0ZXIiOiJCcnVjZSBXYXluZSIsIjUiOiJ0dDEzNDU4MzYiLCJpbWRiIjoidHQxMzQ1ODM2IiwiNiI6IjMiLCJ0aWNrZXRzX3N0b2NrIjoiMyJ9LHsiMCI6IjgiLCJpZCI6IjgiLCIxIjoiVGhlIEZhc3QgYW5kIHRoZSBGdXJpb3VzIiwidGl0bGUiOiJUaGUgRmFzdCBhbmQgdGhlIEZ1cmlvdXMiLCIyIjoiMjAwMSIsInJlbGVhc2VfeWVhciI6IjIwMDEiLCIzIjoiYWN0aW9uIiwiZ2VucmUiOiJhY3Rpb24iLCI0IjoiQnJpYW4gTydDb25ub3IiLCJtYWluX2NoYXJhY3RlciI6IkJyaWFuIE8nQ29ubm9yIiwiNSI6InR0MDIzMjUwMCIsImltZGIiOiJ0dDAyMzI1MDAiLCI2IjoiNDAiLCJ0aWNrZXRzX3N0b2NrIjoiNDAifSx7IjAiOiI5IiwiaWQiOiI5IiwiMSI6IlRoZSBJbmNyZWRpYmxlIEh1bGsiLCJ0aXRsZSI6IlRoZSBJbmNyZWRpYmxlIEh1bGsiLCIyIjoiMjAwOCIsInJlbGVhc2VfeWVhciI6IjIwMDgiLCIzIjoiYWN0aW9uIiwiZ2VucmUiOiJhY3Rpb24iLCI0IjoiQnJ1Y2UgQmFubmVyIiwibWFpbl9jaGFyYWN0ZXIiOiJCcnVjZSBCYW5uZXIiLCI1IjoidHQwODAwMDgwIiwiaW1kYiI6InR0MDgwMDA4MCIsIjYiOiIyMyIsInRpY2tldHNfc3RvY2siOiIyMyJ9LHsiMCI6IjEwIiwiaWQiOiIxMCIsIjEiOiJXb3JsZCBXYXIgWiIsInRpdGxlIjoiV29ybGQgV2FyIFoiLCIyIjoiMjAxMyIsInJlbGVhc2VfeWVhciI6IjIwMTMiLCIzIjoiaG9ycm9yIiwiZ2VucmUiOiJob3Jyb3IiLCI0IjoiR2VycnkgTGFuZSIsIm1haW5fY2hhcmFjdGVyIjoiR2VycnkgTGFuZSIsIjUiOiJ0dDA4MTY3MTEiLCJpbWRiIjoidHQwODE2NzExIiwiNiI6IjAiLCJ0aWNrZXRzX3N0b2NrIjoiMCJ9XQ==]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC9zcWxpXzEwLTIucGhwP3RpdGxlPWZ1enoxMjc4MjY3OCclMjBvciUyMDYwMTklM2Q2MDIzLS0lMjAgSFRUUC8xLjANCkhvc3Q6IHdlYg0KQ29va2llOiBzZWN1cml0eV9sZXZlbD0wDQoNCg==]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBUaHUsIDIxIE1hciAyMDI0IDA5OjQ1OjA1IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjIuMTANClNldC1Db29raWU6IFBIUFNFU1NJRD02djljdXMzcjIxb2JtZDRxdGdkZG80OWNwNzsgcGF0aD0vDQpFeHBpcmVzOiBUaHUsIDE5IE5vdiAxOTgxIDA4OjUyOjAwIEdNVA0KQ2FjaGUtQ29udHJvbDogbm8tc3RvcmUsIG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUNClByYWdtYTogbm8tY2FjaGUNClNldC1Db29raWU6IFBIUFNFU1NJRD0wZXJ0ZTI1bDY4bWVia3ZhMG9kMDA4ZmlscjsgcGF0aD0vDQpDb250ZW50LUxlbmd0aDogMw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9qc29uOyBjaGFyc2V0PXV0Zi04DQoNCgpbXQ==]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC9zcWxpXzEwLTIucGhwP3RpdGxlPWZ1enonJTIwYW5kJTIwKHNlbGVjdCpmcm9tKHNlbGVjdChzbGVlcCgyMCkpKWEpLS0lMjAgSFRUUC8xLjANCkhvc3Q6IHdlYg0KQ29va2llOiBzZWN1cml0eV9sZXZlbD0wDQoNCg==]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBUaHUsIDIxIE1hciAyMDI0IDA5OjQzOjQ0IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjIuMTANClNldC1Db29raWU6IFBIUFNFU1NJRD00ZzNyZTBuN3NxcmZzcTVwbzF1dXA0ajhiYzsgcGF0aD0vDQpFeHBpcmVzOiBUaHUsIDE5IE5vdiAxOTgxIDA4OjUyOjAwIEdNVA0KQ2FjaGUtQ29udHJvbDogbm8tc3RvcmUsIG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUNClByYWdtYTogbm8tY2FjaGUNClNldC1Db29raWU6IFBIUFNFU1NJRD0zMmw0ZnAwZXFkYTFsNmI0Nm41ZGhvZHR1aTsgcGF0aD0vDQpDb250ZW50LUxlbmd0aDogMw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9qc29uOyBjaGFyc2V0PXV0Zi04DQoNCgpbXQ==]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+</issues>

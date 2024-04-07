@@ -1,0 +1,1 @@
+../phuzz-output/5000000-wpforms-lite.1.8.1.2.zip/wpforms_activate_addon/output/fuzzer-1/vulnerable-candidates.json,997e6ef0-9f15-4f4a-8fee-bfe5ab779537:  query_params:{"action": "wpforms_activate_addon"} body_params:{"type": "fuzz", "plugin": "fuzzI"}

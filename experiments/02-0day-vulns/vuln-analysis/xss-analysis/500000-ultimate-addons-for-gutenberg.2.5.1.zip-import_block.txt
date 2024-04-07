@@ -1,0 +1,1 @@
+../phuzz-output/500000-ultimate-addons-for-gutenberg.2.5.1.zip/import_block/output/fuzzer-2/vulnerable-candidates.json,654837f3-a008-4023-8291-5cf09ac8859b:  query_params:{"action": "ast_block_templates_import_block", "content": "fu<img src='x' onerror='alert(0xdeadbeef)'>zz"}

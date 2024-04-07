@@ -1,0 +1,1 @@
+../phuzz-output/400000-easy-table-of-contents.2.0.47.1.zip/eztoc_subscribe_for_newsletter/output/fuzzer-2/vulnerable-candidates.json,b6aabf56-c667-4397-a715-8c1a7d41a4b8:  query_params:{"action": "eztoc_subscribe_newsletter"} body_params:{"eztoc_security_nonce": "fuzz", "email": "guzz", "website": "fu"}

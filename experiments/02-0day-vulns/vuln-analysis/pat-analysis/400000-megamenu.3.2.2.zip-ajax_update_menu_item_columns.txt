@@ -1,0 +1,1 @@
+../phuzz-output/400000-megamenu.3.2.2.zip/ajax_update_menu_item_columns/output/fuzzer-9/vulnerable-candidates.json,327dea74-2dc0-40a6-8a99-8918f9de38b1:  query_params:{"action": "mm_update_menu_item_columns"} body_params:{"id": "7uzz", "columns": "fu"}

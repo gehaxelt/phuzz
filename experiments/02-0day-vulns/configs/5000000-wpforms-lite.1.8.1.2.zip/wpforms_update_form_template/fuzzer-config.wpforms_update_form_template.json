@@ -1,0 +1,42 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "form_id",
+      "template",
+      "title"
+    ],
+    "data": [
+      {
+        "name": "form_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "template",
+        "value": "fuzz"
+      },
+      {
+        "name": "title",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "wpforms_update_form_template"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+../phuzz-output/800000-the-events-calendar.6.0.12.zip/ajax_fetch_import/output/fuzzer-10/vulnerable-candidates.json,7de4b0f4-3f1f-475d-9824-85d90031a5ed:  query_params:{"action": "tribe_aggregator_fetch_import", "import_id": "<img src='x' onerror='alert(0xdeadbeef)'>fuzz"}

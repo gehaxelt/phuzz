@@ -1,0 +1,1 @@
+../phuzz-output/700000-popup-maker.1.18.1.zip/do_shortcode/output/fuzzer-2/vulnerable-candidates.json,6b29b337-0752-4193-a81a-7d65b48c34a1:  query_params:{"action": "pum_do_shortcode", "post_id": "2uzz", "shortcode": "fu", "tag": "fuzz"}

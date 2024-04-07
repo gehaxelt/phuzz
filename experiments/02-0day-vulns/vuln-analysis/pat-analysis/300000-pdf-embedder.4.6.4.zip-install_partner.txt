@@ -1,0 +1,1 @@
+../phuzz-output/300000-pdf-embedder.4.6.4.zip/install_partner/output/fuzzer-2/vulnerable-candidates.json,e1c4e82a-ccf0-4f14-84a1-d9a1a89ee4b1:  query_params:{"action": "pdfemb_partners_install"} body_params:{"download_url": "/etc/passwdfuzz"}

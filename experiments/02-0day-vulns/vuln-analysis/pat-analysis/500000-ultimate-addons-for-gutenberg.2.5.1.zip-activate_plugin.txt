@@ -1,0 +1,1 @@
+../phuzz-output/500000-ultimate-addons-for-gutenberg.2.5.1.zip/activate_plugin/output/fuzzer-1/vulnerable-candidates.json,5f3fc378-be4a-4df3-a6ed-e520d467e79f:  query_params:{"action": "ast_block_templates_activate_plugin"} body_params:{"init": "f}uzz"}

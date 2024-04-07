@@ -1,0 +1,1 @@
+../phuzz-output/400000-woo-checkout-field-editor-pro.zip/activate_themehigh_plugins/output/fuzzer-1/vulnerable-candidates.json,600b4861-3e46-4e32-9730-0b42deef4fb4:  query_params:{"action": "th_activate_plugin", "file": "f0zz"}

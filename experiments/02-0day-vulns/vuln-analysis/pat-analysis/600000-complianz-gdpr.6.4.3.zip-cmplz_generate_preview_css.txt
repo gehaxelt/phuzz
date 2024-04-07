@@ -1,0 +1,1 @@
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/cmplz_generate_preview_css/output/fuzzer-2/vulnerable-candidates.json,c1d5f807-7435-450c-885a-ab0a646eb6a4:  query_params:{"action": "cmplz_generate_preview_css"} body_params:{"id": "8uzz", "formData": "fu"}

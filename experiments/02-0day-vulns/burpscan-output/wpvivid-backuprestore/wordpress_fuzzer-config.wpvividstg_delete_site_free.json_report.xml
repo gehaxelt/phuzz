@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!DOCTYPE issues [
+<!ELEMENT issues (issue*)>
+<!ATTLIST issues burpVersion CDATA "">
+<!ATTLIST issues exportTime CDATA "">
+<!ELEMENT issue (serialNumber, type, name, host, path, location, severity, confidence, issueBackground?, remediationBackground?, references?, vulnerabilityClassifications?, issueDetail?, issueDetailItems?, remediationDetail?, requestresponse*, collaboratorEvent*, infiltratorEvent*, staticAnalysis*, dynamicAnalysis*, prototypePollution*)>
+<!ELEMENT serialNumber (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT severity (#PCDATA)>
+<!ELEMENT confidence (#PCDATA)>
+<!ELEMENT issueBackground (#PCDATA)>
+<!ELEMENT remediationBackground (#PCDATA)>
+<!ELEMENT references (#PCDATA)>
+<!ELEMENT vulnerabilityClassifications (#PCDATA)>
+<!ELEMENT issueDetail (#PCDATA)>
+<!ELEMENT issueDetailItems (issueDetailItem*)>
+<!ELEMENT issueDetailItem (#PCDATA)>
+<!ELEMENT remediationDetail (#PCDATA)>
+<!ELEMENT requestresponse (request?, response?, responseRedirected?)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request method CDATA "">
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT responseRedirected (#PCDATA)>
+<!ELEMENT sender (#PCDATA)>
+<!ELEMENT message (#PCDATA)>
+<!ELEMENT conversation (#PCDATA)>
+<!ELEMENT recipient (#PCDATA)>
+<!ELEMENT recipients (recipient*)>
+<!ELEMENT smtp (sender, recipients, message, conversation)>
+<!ELEMENT collaboratorEvent (interactionType, originIp, time, lookupType?, lookupHost?, requestresponse?, smtp?)>
+<!ELEMENT interactionType (#PCDATA)>
+<!ELEMENT originIp (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT lookupType (#PCDATA)>
+<!ELEMENT lookupHost (#PCDATA)>
+<!ELEMENT infiltratorEvent (parameterName, platform, signature, stackTrace?, parameterValue?, collaboratorEvent)>
+<!ELEMENT parameterName (#PCDATA)>
+<!ELEMENT platform (#PCDATA)>
+<!ELEMENT signature (#PCDATA)>
+<!ELEMENT stackTrace (#PCDATA)>
+<!ELEMENT parameterValue (#PCDATA)>
+<!ELEMENT dynamicAnalysis (source, sink, sourceStackTrace, sinkStackTrace, eventListenerStackTrace, sourceValue, sinkValue, eventHandlerData, eventHandlerDataType, eventHandlerManipulatedData, poc, origin, isOriginChecked, sourceElementId, sourceElementName, eventFiredEventName, eventFiredElementId, eventFiredElementName, eventFiredOuterHtml)>
+<!ELEMENT prototypePollution (poc, pollutionTechnique, pollutionType)>
+<!ELEMENT staticAnalysis (source, sink, codeSnippets)>
+<!ELEMENT source (#PCDATA)>
+<!ELEMENT sink (#PCDATA)>
+<!ELEMENT sourceStackTrace (#PCDATA)>
+<!ELEMENT sinkStackTrace (#PCDATA)>
+<!ELEMENT eventListenerStackTrace (#PCDATA)>
+<!ELEMENT sourceValue (#PCDATA)>
+<!ELEMENT sinkValue (#PCDATA)>
+<!ELEMENT eventHandlerData (#PCDATA)>
+<!ELEMENT eventHandlerDataType (#PCDATA)>
+<!ELEMENT sourceElementId (#PCDATA)>
+<!ELEMENT sourceElementName (#PCDATA)>
+<!ELEMENT eventFiredEventName (#PCDATA)>
+<!ELEMENT eventFiredElementId (#PCDATA)>
+<!ELEMENT eventFiredElementName (#PCDATA)>
+<!ELEMENT eventFiredOuterHtml (#PCDATA)>
+<!ELEMENT eventHandlerManipulatedData (#PCDATA)>
+<!ELEMENT poc (#PCDATA)>
+<!ELEMENT origin (#PCDATA)>
+<!ELEMENT isOriginChecked (#PCDATA)>
+<!ELEMENT codeSnippets (codeSnippet*)>
+<!ELEMENT codeSnippet (#PCDATA)>
+<!ELEMENT pollutionTechnique (#PCDATA)>
+<!ELEMENT pollutionType (#PCDATA)>
+]>
+<issues burpVersion="2023.8.1" exportTime="Tue Aug 15 19:53:31 GMT 2023">
+  <issue>
+    <serialNumber>7082529306499942400</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Private IP addresses disclosed]]></name>
+    <host ip="172.20.0.3">http://web</host>
+    <path><![CDATA[/wp-admin/admin-ajax.php]]></path>
+    <location><![CDATA[/wp-admin/admin-ajax.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>RFC 1918 specifies ranges of IP addresses that are reserved for use in private networks and cannot be routed on the public Internet. Although various methods exist by which an attacker can determine the public IP addresses in use by an organization, the private addresses used internally cannot usually be determined in the same ways.</p>
+<p>Discovering the private addresses used within an organization can help an attacker in carrying out network-layer attacks aiming to penetrate the organization's internal infrastructure. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>There is not usually any good reason to disclose the internal IP addresses used within an organization's infrastructure. If these are being returned in service banners or debug messages, then the relevant services should be configured to mask the private addresses. If they are being used to track back-end servers for load balancing purposes, then the addresses should be rewritten with innocuous identifiers from which an attacker cannot infer any useful information about the infrastructure.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[The following RFC 1918 IP address was disclosed in the response:<ul><li>172.20.0.3</li></ul>]]></issueDetail>
+    <issueDetailItems>
+      <issueDetailItem><![CDATA[172.20.0.3]]></issueDetailItem>
+    </issueDetailItems>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvd3AtYWRtaW4vYWRtaW4tYWpheC5waHA/YWN0aW9uPXdwdml2aWRzdGdfZGVsZXRlX3NpdGVfZnJlZSBIVFRQLzEuMA0KSG9zdDogd2ViDQpDb250ZW50LUxlbmd0aDogNw0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNCg0KaWQ9ZnV6eg==]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgNDAwIEJhZCBSZXF1ZXN0DQpEYXRlOiBUdWUsIDE1IEF1ZyAyMDIzIDE5OjUwOjMwIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU2IChEZWJpYW4pDQpDb250ZW50LUxlbmd0aDogMzAyDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjQwMCBCYWQgUmVxdWVzdDwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPkJhZCBSZXF1ZXN0PC9oMT4KPHA+WW91ciBicm93c2VyIHNlbnQgYSByZXF1ZXN0IHRoYXQgdGhpcyBzZXJ2ZXIgY291bGQgbm90IHVuZGVyc3RhbmQuPGJyIC8+CjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjU2IChEZWJpYW4pIFNlcnZlciBhdCAxNzIuMjAuMC4zIFBvcnQgODA8L2FkZHJlc3M+CjwvYm9keT48L2h0bWw+Cg==]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>3256636594668507136</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Cross-origin resource sharing]]></name>
+    <host ip="172.20.0.3">http://web</host>
+    <path><![CDATA[/wp-admin/admin-ajax.php]]></path>
+    <location><![CDATA[/wp-admin/admin-ajax.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>An HTML5 cross-origin resource sharing (CORS) policy controls whether and how content running on other domains can perform two-way interaction with the domain that publishes the policy. The policy is fine-grained and can apply access controls per-request based on the URL and other features of the request.</p><p>If another domain is allowed by the policy, then that domain can potentially attack users of the application. If a user is logged in to the application, and visits a domain allowed by the policy, then any malicious content running on that domain can potentially retrieve content from the application, and sometimes carry out actions within the security context of the logged in user.</p>
+<p>Even if an allowed domain is not overtly malicious in itself, security vulnerabilities within that domain could potentially be leveraged by an attacker to exploit the trust relationship and attack the application that allows access. CORS policies on pages containing sensitive information should be reviewed to determine whether it is appropriate for the application to trust both the intentions and security posture of any domains granted access.</p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>Any inappropriate domains should be removed from the CORS policy.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[The application implements an HTML5 cross-origin resource sharing (CORS) policy for this request.<br><br>Since the Vary: Origin header was not present in the response, reverse proxies and intermediate servers may cache it. This may enable an attacker to carry out cache poisoning attacks.]]></issueDetail>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvd3AtYWRtaW4vYWRtaW4tYWpheC5waHA/YWN0aW9uPXdwdml2aWRzdGdfZGVsZXRlX3NpdGVfZnJlZSBIVFRQLzEuMA0KSG9zdDogd2ViDQpDb250ZW50LUxlbmd0aDogNw0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNCk9yaWdpbjogaHR0cDovL3dlYg0KDQppZD1mdXp6]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBUdWUsIDE1IEF1ZyAyMDIzIDE5OjUzOjE3IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU2IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMTgNCkFjY2Vzcy1Db250cm9sLUFsbG93LU9yaWdpbjogaHR0cDovL3dlYg0KQWNjZXNzLUNvbnRyb2wtQWxsb3ctQ3JlZGVudGlhbHM6IHRydWUNClgtUm9ib3RzLVRhZzogbm9pbmRleA0KWC1Db250ZW50LVR5cGUtT3B0aW9uczogbm9zbmlmZg0KRXhwaXJlczogV2VkLCAxMSBKYW4gMTk4NCAwNTowMDowMCBHTVQNCkNhY2hlLUNvbnRyb2w6IG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUsIG1heC1hZ2U9MA0KUmVmZXJyZXItUG9saWN5OiBzdHJpY3Qtb3JpZ2luLXdoZW4tY3Jvc3Mtb3JpZ2luDQpYLUZyYW1lLU9wdGlvbnM6IFNBTUVPUklHSU4NClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29udGVudC1MZW5ndGg6IDQ4NjQNCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD1VVEYtOA0KDQoKeyJyZXN1bHQiOiJmYWlsZWQiLCJlcnJvciI6IlN0YWdpbmcgdGFzayBub3QgZm91bmQuIiwiaHRtbCI6IiAgICAgICAgPHRhYmxlIGNsYXNzPVwid3AtbGlzdC10YWJsZSB3aWRlZmF0IHBsdWdpbnMgc3RhZ2luZ1wiIHN0eWxlPVwiYm9yZGVyOiAxcHggc29saWQgI2YxZjFmMTsgYm9yZGVyLXRvcDogbm9uZTtcIj5cclxuICAgICAgICAgICAgPHRoZWFkPlxyXG4gICAgICAgICAgICA8dHI+XHJcbiAgICAgICAgICAgICAgICA8dGggc2NvcGU9XCJjb2xcIiBpZD0ncGljJyBjbGFzcz0nbWFuYWdlLWNvbHVtbiBjb2x1bW4tcGljIGhpZGRlbiBjb2x1bW4tcHJpbWFyeSc+PFwvdGg+PHRoIHNjb3BlPVwiY29sXCIgaWQ9J2luZm8nIGNsYXNzPSdtYW5hZ2UtY29sdW1uIGNvbHVtbi1pbmZvIGhpZGRlbic+PFwvdGg+ICAgICAgICAgICAgPFwvdHI+XHJcbiAgICAgICAgICAgIDxcL3RoZWFkPlxyXG5cclxuICAgICAgICAgICAgPHRib2R5IGlkPVwidGhlLWxpc3RcIlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPlxyXG4gICAgICAgICAgICAgICAgICAgIDx0ciBjbGFzcz1cIndwdml2aWQtNjRkYmQxN2U5NzE2NFwiPlxyXG4gICAgICAgICAgICA8dGQgY2xhc3M9XCJjb2x1bW4tcHJpbWFyeVwiIHN0eWxlPVwiYm9yZGVyLXRvcDoxcHggc29saWQgI2YxZjFmMTsgYm9yZGVyLWJvdHRvbToxcHggc29saWQgI2YxZjFmMTtcIiBjb2xzcGFuPVwiM1wiID5cclxuICAgICAgICAgICAgICAgIDxzcGFuPjxzdHJvbmc+U3RhZ2luZyBTaXRlIE5hbWU6IDxcL3N0cm9uZz48XC9zcGFuPjxzcGFuPmZ1eno8XC9zcGFuPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBzdHlsZT1cIm1hcmdpbi1sZWZ0OiAyMHB4O1wiPjxzdHJvbmc+TGl2ZSBTaXRlOiA8XC9zdHJvbmc+PFwvc3Bhbj48c3Bhbj5OXC9BPFwvc3Bhbj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8XC90ZD5cclxuICAgICAgICA8XC90cj5cclxuICAgICAgICA8dHIgaWQ9XCJ3cHZpdmlkLTY0ZGJkMTdlOTcxNjRcIiBjbGFzcz1cIndwdml2aWQtNjRkYmQxN2U5NzE2NFwiPlxyXG4gICAgICAgICAgICA8dGQgY2xhc3M9XCJjb2x1bW4tcHJpbWFyeVwiIHN0eWxlPVwibWFyZ2luOiAxMHB4O1wiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cIm1hcmdpbjphdXRvOyB3aWR0aDoxMDBweDsgaGVpZ2h0OjEwMHB4OyByaWdodDo1MCU7XCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aW1nIHNyYz1cImh0dHA6XC9cL3dlYlwvd3AtY29udGVudFwvcGx1Z2luc1wvd3B2aXZpZC1iYWNrdXByZXN0b3JlXC9hZG1pblwvcGFydGlhbHNcL2ltYWdlc1wvc3RhZ2luZ1wvbGl2aW5nLXNpdGUucG5nXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgPFwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJ3cHZpdmlkLTY0ZGJkMTdlOTcxNjRcIiBzdHlsZT1cIm1hcmdpbi10b3A6MTBweDtcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9XCJ3cHZpdmlkLWRlbGV0ZS1zdGFnaW5nLXNpdGVcIiBzdHlsZT1cIm1hcmdpbjogYXV0bzt3aWR0aDogNzBweDtiYWNrZ3JvdW5kLWNvbG9yOiNmMWYxZjE7IHBhZGRpbmctdG9wOjRweDtwYWRkaW5nLWJvdHRvbTo0cHg7IGN1cnNvcjpwb2ludGVyO3RleHQtYWxpZ246Y2VudGVyO1wiIHRpdGxlPVwiRGVsZXRlIHRoZSBzdGF0aW5nIHNpdGVcIj5EZWxldGU8XC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgPFwvZGl2PiAgICAgICAgICAgXHJcbiAgICAgICAgICAgICAgICAgICAgIDxcL2Rpdj5cclxuICAgICAgICAgICAgICA8XC90ZD48dGQgY2xhc3M9XCJjb2x1bW4tZGVzY3JpcHRpb24gZGVzY1wiIGNvbHNwYW49XCIyXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJib3JkZXItbGVmdDo0cHggc29saWQgIzAwYTBkMjtwYWRkaW5nLWxlZnQ6MTBweDtmbG9hdDpsZWZ0O1wiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cImhlaWdodDoyMHB4O2Rpc3BsYXk6YmxvY2s7ZmxvYXQ6bGVmdDtcIj48c3BhbiBjbGFzcz1cIndwdml2aWQtZWxlbWVudC1zcGFjZS1yaWdodFwiPjxzdHJvbmc+U3RhZ2luZyBTaXRlIFVSTDo8XC9zdHJvbmc+PFwvc3Bhbj48c3BhbiBjbGFzcz1cIndwdml2aWQtZWxlbWVudC1zcGFjZS1yaWdodFwiPk5cL0E8XC9zcGFuPjxcL2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJoZWlnaHQ6MjBweDtkaXNwbGF5OmJsb2NrO2Zsb2F0OmxlZnQ7XCI+PHNwYW4gY2xhc3M9XCJ3cHZpdmlkLWVsZW1lbnQtc3BhY2UtcmlnaHRcIj48c3Ryb25nPlN0YWdpbmcgU2l0ZSBBZG1pbiBVUkw6PFwvc3Ryb25nPjxcL3NwYW4+PHNwYW4gY2xhc3M9XCJ3cHZpdmlkLWVsZW1lbnQtc3BhY2UtcmlnaHRcIj5OXC9BPFwvc3Bhbj48XC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxcL2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cImNsZWFyOmJvdGhcIj48XC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgc3R5bGU9XCJib3JkZXItbGVmdDo0cHggc29saWQgIzAwYTBkMjtwYWRkaW5nLWxlZnQ6MTBweDtmbG9hdDpsZWZ0O1wiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT1cImhlaWdodDoyMHB4O2Rpc3BsYXk6YmxvY2s7ZmxvYXQ6bGVmdDtcIj48c3BhbiBjbGFzcz1cIndwdml2aWQtZWxlbWVudC1zcGFjZS1yaWdodFwiPjxzdHJvbmc+RGF0YWJhc2U6PFwvc3Ryb25nPjxcL3NwYW4+PHNwYW4gY2xhc3M9XCJ3cHZpdmlkLWVsZW1lbnQtc3BhY2UtcmlnaHRcIj5OXC9BPFwvc3Bhbj48XC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPVwiaGVpZ2h0OjIwcHg7ZGlzcGxheTpibG9jaztmbG9hdDpsZWZ0O1wiPjxzcGFuIGNsYXNzPVwid3B2aXZpZC1lbGVtZW50LXNwYWNlLXJpZ2h0XCI+PHN0cm9uZz5UYWJsZSBQcmVmaXg6PFwvc3Ryb25nPjxcL3NwYW4+PHNwYW4gY2xhc3M9XCJ3cHZpdmlkLWVsZW1lbnQtc3BhY2UtcmlnaHRcIj5OXC9BPFwvc3Bhbj48XC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPVwiaGVpZ2h0OjIwcHg7ZGlzcGxheTpibG9jaztmbG9hdDpsZWZ0O1wiPjxzcGFuIGNsYXNzPVwid3B2aXZpZC1lbGVtZW50LXNwYWNlLXJpZ2h0XCI+PHN0cm9uZz5TaXRlIERpcmVjdG9yeTo8XC9zdHJvbmc+PFwvc3Bhbj48c3BhbiBjbGFzcz1cIndwdml2aWQtZWxlbWVudC1zcGFjZS1yaWdodFwiPlwvdmFyXC93d3dcL2h0bWxcL3dwLWNvbnRlbnRcL2Z1eno8XC9zcGFuPjxcL2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPFwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPVwiY2xlYXI6Ym90aFwiPjxcL2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz1cIndwdml2aWQtY29weS1zdGFnaW5nLXRvLWxpdmUtYmxvY2sgc3RhZ2luZy1zaXRlIFwiIHN0eWxlPVwibWFyZ2luLXRvcDogMTBweDtcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGlucHV0IGNsYXNzPVwiYnV0dG9uLXByaW1hcnkgd3B2aXZpZC1jb3B5LXN0YWdpbmctdG8tbGl2ZSBzdGFnaW5nLXNpdGUgXCIgdHlwZT1cImJ1dHRvblwiIHZhbHVlPVwiQ29weSB0aGUgU3RhZ2luZyBTaXRlIHRvIExpdmVcIiBzdHlsZT1cIm1hcmdpbi1yaWdodDogMTBweDtcIiBcLz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aW5wdXQgY2xhc3M9XCJidXR0b24tcHJpbWFyeSB3cHZpdmlkLXVwZGF0ZS1saXZlLXRvLXN0YWdpbmcgc3RhZ2luZy1zaXRlIFwiIHR5cGU9XCJidXR0b25cIiB2YWx1ZT1cIlVwZGF0ZSB0aGUgU3RhZ2luZyBTaXRlXCIgXC8+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8XC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IHN0eWxlPVwiYm9yZGVyOiAxcHggc29saWQgI2YxZjFmMTsgYm9yZGVyLXJhZGl1czogNnB4OyBtYXJnaW4tdG9wOiAxMHB4O3BhZGRpbmc6NXB4O1wiPjxzcGFuPlRpcHM6IENsaWNrIHRoZSAnQ29weSB0aGUgU3RhZ2luZyBTaXRlIHRvIExpdmUnIGJ1dHRvbiBhYm92ZSB0byBtaWdyYXRlIHRoZSBzdGFnaW5nIHNpdGUgdG8geW91ciBsaXZlIHNpdGUuIENsaWNrIHRoZSAnVXBkYXRlIHRoZSBTdGFnaW5nIFNpdGUnIGJ1dHRvbiB0byB1cGRhdGUgdGhlIGxpdmUgc2l0ZSB0byB0aGUgc3RhZ2luZyBzaXRlLjxcL3NwYW4+PFwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8XC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgPFwvdGQ+ICAgICAgICA8XC90cj5cclxuICAgICAgICAgICAgICAgICAgICA8XC90Ym9keT5cclxuXHJcbiAgICAgICAgICAgIDx0Zm9vdD5cclxuICAgICAgICAgICAgPHRyPlxyXG4gICAgICAgICAgICAgICAgPHRoIHNjb3BlPVwiY29sXCIgIGNsYXNzPSdtYW5hZ2UtY29sdW1uIGNvbHVtbi1waWMgaGlkZGVuIGNvbHVtbi1wcmltYXJ5Jz48XC90aD48dGggc2NvcGU9XCJjb2xcIiAgY2xhc3M9J21hbmFnZS1jb2x1bW4gY29sdW1uLWluZm8gaGlkZGVuJz48XC90aD4gICAgICAgICAgICA8XC90cj5cclxuICAgICAgICAgICAgPFwvdGZvb3Q+XHJcblxyXG4gICAgICAgIDxcL3RhYmxlPlxyXG4gICAgICAgICJ9]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+</issues>

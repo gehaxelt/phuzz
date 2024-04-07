@@ -1,0 +1,25 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "isnetwork"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "exactmetrics_maybe_reauthenticate"
+      },
+      {
+        "name": "isnetwork",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

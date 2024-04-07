@@ -1,0 +1,32 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "incomplete_backup"
+    ],
+    "data": [
+      {
+        "name": "incomplete_backup",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "wpvivid_delete_upload_incomplete_backup_free"
+      }
+    ]
+  }
+}

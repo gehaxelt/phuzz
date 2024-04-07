@@ -1,0 +1,47 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "path",
+      "table_prefix",
+      "root_dir",
+      "additional_db"
+    ],
+    "data": [
+      {
+        "name": "path",
+        "value": "fuzz"
+      },
+      {
+        "name": "table_prefix",
+        "value": "fuzz"
+      },
+      {
+        "name": "root_dir",
+        "value": "fuzz"
+      },
+      {
+        "name": "additional_db",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "wpvividstg_check_staging_dir_free"
+      }
+    ]
+  }
+}

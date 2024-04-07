@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  zap:
+    build:
+      context: ./zap
+      dockerfile: Dockerfile
+    environment:
+      FUZZER_CONFIG: dvwa/sqli_blind_high
+    volumes:
+      - ./fuzzer:/app
+      - ./zap/data:/home/zap/data
+    stdin_open: true # docker run -i
+    tty: true # docker run -t

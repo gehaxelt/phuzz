@@ -1,0 +1,1 @@
+../phuzz-output/1000000-all-in-one-wp-security-and-firewall.5.1.8.zip/tfaInitLogin/output/fuzzer-9/vulnerable-candidates.json,f4939f03-41a9-40ba-b798-01a64843bc0f:  cookies:{"simbatfa_trust_token": "fu"} query_params:{"action": "simbatfa-init-otp"} body_params:{"user": "fuzz"}

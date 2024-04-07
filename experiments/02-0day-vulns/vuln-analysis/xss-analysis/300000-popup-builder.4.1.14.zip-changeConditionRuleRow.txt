@@ -1,0 +1,1 @@
+../phuzz-output/300000-popup-builder.4.1.14.zip/changeConditionRuleRow/output/fuzzer-1/vulnerable-candidates.json,b31160db-70e3-423d-bdb5-4260983d3aca:  query_params:{"action": "change_condition_rule_row"} body_params:{"paramValue": "fuzz", "paramName": "fuzz", "popupId": "fuzz", "ruleId": "fuzz", "groupId": "fuzz", "conditionName": "fuzz<a href='javascript:alert(0xdeadbeef)'"}

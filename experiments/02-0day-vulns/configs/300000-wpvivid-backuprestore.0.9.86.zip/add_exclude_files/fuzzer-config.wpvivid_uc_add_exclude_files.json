@@ -1,0 +1,42 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "selected",
+      "search",
+      "folder"
+    ],
+    "data": [
+      {
+        "name": "selected",
+        "value": "fuzz"
+      },
+      {
+        "name": "search",
+        "value": "fuzz"
+      },
+      {
+        "name": "folder",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "wpvivid_uc_add_exclude_files"
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "compress_api_key"
+    ],
+    "data": [
+      {
+        "name": "compress_api_key",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action",
+      "ewww_wpnonce"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "ewww_cloud_key_verify"
+      },
+      {
+        "name": "ewww_wpnonce",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

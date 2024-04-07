@@ -1,0 +1,40 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action",
+      "_sononce"
+    ],
+    "fuzz": [
+      "import_signature",
+      "full_url",
+      "post_id"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "so_widgets_image_import"
+      },
+      {
+        "name": "_sononce",
+        "value": "fuzz"
+      },
+      {
+        "name": "import_signature",
+        "value": "fuzz"
+      },
+      {
+        "name": "full_url",
+        "value": "fuzz"
+      },
+      {
+        "name": "post_id",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

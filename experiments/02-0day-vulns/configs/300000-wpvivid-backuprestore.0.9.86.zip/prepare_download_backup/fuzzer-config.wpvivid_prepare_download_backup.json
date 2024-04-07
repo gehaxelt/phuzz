@@ -1,0 +1,37 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "backup_id",
+      "file_name"
+    ],
+    "data": [
+      {
+        "name": "backup_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "file_name",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "wpvivid_prepare_download_backup"
+      }
+    ]
+  }
+}

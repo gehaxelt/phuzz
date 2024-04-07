@@ -1,0 +1,1 @@
+../phuzz-output/5000000-wordpress-seo.20.6.zip/wpseo_set_ignore/output/fuzzer-10/vulnerable-candidates.json,76b70e45-8b36-4f1a-b588-da99631f4327:  query_params:{"action": "wpseo_set_ignore"} body_params:{"option": "fun"}

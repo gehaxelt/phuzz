@@ -1,0 +1,35 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "post_type",
+      "source_name",
+      "term"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "eael_select2_search_post"
+      },
+      {
+        "name": "post_type",
+        "value": "fuzz"
+      },
+      {
+        "name": "source_name",
+        "value": "fuzz"
+      },
+      {
+        "name": "term",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

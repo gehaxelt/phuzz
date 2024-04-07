@@ -1,0 +1,38 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "manual_v4_code"
+    ],
+    "data": [
+      {
+        "name": "manual_v4_code",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "isnetwork"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "exactmetrics_update_manual_v4"
+      },
+      {
+        "name": "isnetwork",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

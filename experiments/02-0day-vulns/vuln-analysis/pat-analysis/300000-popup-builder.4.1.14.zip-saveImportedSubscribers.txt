@@ -1,0 +1,1 @@
+../phuzz-output/300000-popup-builder.4.1.14.zip/saveImportedSubscribers/output/fuzzer-2/vulnerable-candidates.json,b9987012-96b5-4958-ad22-bdf6d36b758c:  query_params:{"action": "sgpb_save_imported_subscribers"} body_params:{"importListURL": "fu{z", "namesMapping": "fu", "popupSubscriptionList": "fuzz"}

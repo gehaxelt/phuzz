@@ -1,0 +1,196 @@
+version: "3.7"
+services:
+  hargen:
+    build:
+      context: ./hargen
+      dockerfile: Dockerfile
+    volumes:
+      - ./hargen:/app:ro
+      - ./fuzzer/resources:/resources:ro
+      - ./fuzzer/configs:/configs
+    environment:
+      PYTHONUNBUFFERED: 1
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+
+  composegen:
+    build:
+      context: ./composegen
+      dockerfile: Dockerfile
+    volumes:
+      - ./composegen:/app
+      - ./fuzzer/configs:/configs
+    environment:
+      PYTHONUNBUFFERED: 1
+
+  web:
+    build:
+      context: ./php-instrumentation
+      dockerfile: Dockerfile
+    environment:
+      APPLICATION_TYPE: wordpress
+      FUZZER_COVERAGE_PATH: /var/www/html/wp-content/plugins/wp-user-avatar/
+      WP_TARGET_PLUGIN: 300000-wp-user-avatar.4.10.1
+    volumes:
+      - ./php-instrumentation/applications:/applications/
+      - shared-tmpfs:/shared-tmpfs
+    ports:
+      - 8080:80
+      - 8181:8181
+
+  db:
+    image: mysql:5
+    command: mysqld
+    environment:
+      MYSQL_DATABASE: db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_USER_HOST: "%"
+
+  fuzzer-1:
+    build:
+      context: ./fuzzer
+      dockerfile: Dockerfile
+    environment:
+      PYTHONUNBUFFERED: 1
+      FUZZER_NODE_ID: 1
+      FUZZER_CONFIG: wordpress/fuzzer-config.ppress_activate_plugin
+    volumes:
+      - ./fuzzer:/app
+      - shared-tmpfs:/shared-tmpfs
+      - sync-tmpfs:/sync-tmpfs
+
+  fuzzer-2:
+    build:
+      context: ./fuzzer
+      dockerfile: Dockerfile
+    environment:
+      PYTHONUNBUFFERED: 1
+      FUZZER_NODE_ID: 2
+      FUZZER_CONFIG: wordpress/fuzzer-config.ppress_activate_plugin
+    volumes:
+      - ./fuzzer:/app
+      - shared-tmpfs:/shared-tmpfs
+      - sync-tmpfs:/sync-tmpfs
+
+  fuzzer-3:
+    build:
+      context: ./fuzzer
+      dockerfile: Dockerfile
+    environment:
+      PYTHONUNBUFFERED: 1
+      FUZZER_NODE_ID: 3
+      FUZZER_CONFIG: wordpress/fuzzer-config.ppress_activate_plugin
+    volumes:
+      - ./fuzzer:/app
+      - shared-tmpfs:/shared-tmpfs
+      - sync-tmpfs:/sync-tmpfs
+
+  fuzzer-4:
+    build:
+      context: ./fuzzer
+      dockerfile: Dockerfile
+    environment:
+      PYTHONUNBUFFERED: 1
+      FUZZER_NODE_ID: 4
+      FUZZER_CONFIG: wordpress/fuzzer-config.ppress_activate_plugin
+    volumes:
+      - ./fuzzer:/app
+      - shared-tmpfs:/shared-tmpfs
+      - sync-tmpfs:/sync-tmpfs
+
+  fuzzer-5:
+    build:
+      context: ./fuzzer
+      dockerfile: Dockerfile
+    environment:
+      PYTHONUNBUFFERED: 1
+      FUZZER_NODE_ID: 5
+      FUZZER_CONFIG: wordpress/fuzzer-config.ppress_activate_plugin
+    volumes:
+      - ./fuzzer:/app
+      - shared-tmpfs:/shared-tmpfs
+      - sync-tmpfs:/sync-tmpfs
+
+  fuzzer-6:
+    build:
+      context: ./fuzzer
+      dockerfile: Dockerfile
+    environment:
+      PYTHONUNBUFFERED: 1
+      FUZZER_NODE_ID: 6
+      FUZZER_CONFIG: wordpress/fuzzer-config.ppress_activate_plugin
+    volumes:
+      - ./fuzzer:/app
+      - shared-tmpfs:/shared-tmpfs
+      - sync-tmpfs:/sync-tmpfs
+
+  fuzzer-7:
+    build:
+      context: ./fuzzer
+      dockerfile: Dockerfile
+    environment:
+      PYTHONUNBUFFERED: 1
+      FUZZER_NODE_ID: 7
+      FUZZER_CONFIG: wordpress/fuzzer-config.ppress_activate_plugin
+    volumes:
+      - ./fuzzer:/app
+      - shared-tmpfs:/shared-tmpfs
+      - sync-tmpfs:/sync-tmpfs
+
+  fuzzer-8:
+    build:
+      context: ./fuzzer
+      dockerfile: Dockerfile
+    environment:
+      PYTHONUNBUFFERED: 1
+      FUZZER_NODE_ID: 8
+      FUZZER_CONFIG: wordpress/fuzzer-config.ppress_activate_plugin
+    volumes:
+      - ./fuzzer:/app
+      - shared-tmpfs:/shared-tmpfs
+      - sync-tmpfs:/sync-tmpfs
+
+  fuzzer-9:
+    build:
+      context: ./fuzzer
+      dockerfile: Dockerfile
+    environment:
+      PYTHONUNBUFFERED: 1
+      FUZZER_NODE_ID: 9
+      FUZZER_CONFIG: wordpress/fuzzer-config.ppress_activate_plugin
+    volumes:
+      - ./fuzzer:/app
+      - shared-tmpfs:/shared-tmpfs
+      - sync-tmpfs:/sync-tmpfs
+
+  fuzzer-10:
+    build:
+      context: ./fuzzer
+      dockerfile: Dockerfile
+    environment:
+      PYTHONUNBUFFERED: 1
+      FUZZER_NODE_ID: 10
+      FUZZER_CONFIG: wordpress/fuzzer-config.ppress_activate_plugin
+    volumes:
+      - ./fuzzer:/app
+      - shared-tmpfs:/shared-tmpfs
+      - sync-tmpfs:/sync-tmpfs
+
+volumes:
+  shared-tmpfs:
+    driver: local
+    driver_opts:
+      type: "tmpfs"
+      device: "tmpfs"
+      o: "size=10240m,uid=1000"
+  sync-tmpfs:
+    driver: local
+    driver_opts:
+      type: "tmpfs"
+      device: "tmpfs"
+      o: "size=20240m,uid=1000"
+
+  

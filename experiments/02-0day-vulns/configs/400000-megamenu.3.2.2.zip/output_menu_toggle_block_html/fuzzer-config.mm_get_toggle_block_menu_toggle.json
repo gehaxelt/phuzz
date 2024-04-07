@@ -1,0 +1,25 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "theme"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "mm_get_toggle_block_menu_toggle"
+      },
+      {
+        "name": "theme",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

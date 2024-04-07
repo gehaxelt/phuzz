@@ -1,0 +1,1 @@
+../phuzz-output/3000000-wp-mail-smtp.3.8.0.zip/update_settings/output/fuzzer-4/vulnerable-candidates.json,b232518f-ab83-47d9-9cbb-042ea636d816:  query_params:{"action": "wp_mail_smtp_vue_update_settings"} body_params:{"value": "fuzz5", "overwrite": "fu"}

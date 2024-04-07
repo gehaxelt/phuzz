@@ -1,0 +1,1 @@
+../phuzz-output/300000-pretty-link.3.4.2.zip/save_bulk_edit/output/fuzzer-3/vulnerable-candidates.json,19d80c01-37ab-4612-9caf-b91f1d5d1a1a:  query_params:{"action": "prli_links_list_save_bulk_edit"} body_params:{"sponsored": "fu_z", "nofollow": "fuzz", "tracking": "fu", "post_ids": "fuzz"}

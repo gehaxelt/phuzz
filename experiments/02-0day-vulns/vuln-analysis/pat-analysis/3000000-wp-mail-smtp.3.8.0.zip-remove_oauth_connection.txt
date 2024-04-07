@@ -1,0 +1,1 @@
+../phuzz-output/3000000-wp-mail-smtp.3.8.0.zip/remove_oauth_connection/output/fuzzer-1/vulnerable-candidates.json,e57ea522-933e-4d74-a96f-f35f43476939:  query_params:{"action": "wp_mail_smtp_vue_remove_oauth_connection"} body_params:{"mailer": "fun"}

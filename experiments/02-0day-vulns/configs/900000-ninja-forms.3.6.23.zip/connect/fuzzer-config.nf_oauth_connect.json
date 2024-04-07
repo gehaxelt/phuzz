@@ -1,0 +1,35 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action",
+      "nonce"
+    ],
+    "fuzz": [
+      "client_id",
+      "redirect"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "nf_oauth_connect"
+      },
+      {
+        "name": "client_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "redirect",
+        "value": "fuzz"
+      },
+      {
+        "name": "nonce",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

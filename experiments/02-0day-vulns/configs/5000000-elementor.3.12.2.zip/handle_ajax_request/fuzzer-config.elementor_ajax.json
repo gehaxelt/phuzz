@@ -1,0 +1,30 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "editor_post_id",
+      "actions"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "elementor_ajax"
+      },
+      {
+        "name": "editor_post_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "actions",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

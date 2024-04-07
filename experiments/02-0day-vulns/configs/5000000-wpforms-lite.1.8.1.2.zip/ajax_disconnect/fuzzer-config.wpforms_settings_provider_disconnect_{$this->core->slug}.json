@@ -1,0 +1,37 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "provider",
+      "key"
+    ],
+    "data": [
+      {
+        "name": "provider",
+        "value": "fuzz"
+      },
+      {
+        "name": "key",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "wpforms_settings_provider_disconnect_{$this->core->slug}"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+../phuzz-output/900000-ninja-forms.3.6.23.zip/maybe_delete_field/output/fuzzer-5/vulnerable-candidates.json,3f455e73-294c-4260-bfcc-3105ddb8d92c:  query_params:{"action": "nf_maybe_delete_field", "fieldKey": "^uzz", "fieldID": "fuzz", "security": "fu"}

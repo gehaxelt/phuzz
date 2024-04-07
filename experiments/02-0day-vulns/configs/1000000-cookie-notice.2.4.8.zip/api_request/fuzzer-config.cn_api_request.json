@@ -1,0 +1,85 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [
+      "cn_payment_nonce",
+      "payment_nonce"
+    ],
+    "fuzz": [
+      "request",
+      "cn_nonce",
+      "subscriptionID",
+      "plan",
+      "method",
+      "cn_payment_identifier",
+      "terms",
+      "email",
+      "pass",
+      "pass2",
+      "language"
+    ],
+    "data": [
+      {
+        "name": "request",
+        "value": "fuzz"
+      },
+      {
+        "name": "cn_payment_nonce",
+        "value": "fuzz"
+      },
+      {
+        "name": "subscriptionID",
+        "value": "fuzz"
+      },
+      {
+        "name": "payment_nonce",
+        "value": "fuzz"
+      },
+      {
+        "name": "method",
+        "value": "fuzz"
+      },
+      {
+        "name": "cn_payment_identifier",
+        "value": "fuzz"
+      },
+      {
+        "name": "terms",
+        "value": "fuzz"
+      },
+      {
+        "name": "email",
+        "value": "fuzz"
+      },
+      {
+        "name": "pass",
+        "value": "fuzz"
+      },
+      {
+        "name": "pass2",
+        "value": "fuzz"
+      },
+      {
+        "name": "language",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "cn_api_request"
+      }
+    ]
+  }
+}

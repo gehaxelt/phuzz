@@ -1,0 +1,1 @@
+../phuzz-output/1000000-all-in-one-wp-security-and-firewall.5.1.8.zip/ajax/output/fuzzer-10/vulnerable-candidates.json,cac5628f-3fdb-44fa-9e5a-3c8f0974e8bd:  query_params:{"action": "tfa_frontend"} body_params:{"nonce": "fuzz", "subaction": "fu"}

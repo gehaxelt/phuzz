@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wapiti scan report</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/kube.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/master.css" />
+</head>
+<body>
+    <div id="page">
+        <header style="text-align: center">
+        <h2 class="title" style="text-align: center">Wapiti vulnerability report</h2>
+        <h3>Target: http://web/pictures/search.php?y=fuzz&x=fuzz&query=fuzz</h3>
+        <p>Date of the scan: Wed, 20 Mar 2024 14:30:50 +0000. Scope of the scan: folder. Crawled pages: 3</p>
+        </header>
+        <hr />
+
+        <h4>Summary</h4>
+        <table class="width-100 hovered" style="background: url('logo_clear.png') no-repeat center;">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Number of vulnerabilities found</th>
+                </tr>
+            </thead>
+            <tbody id="summary">
+                    <tr>
+                        <td class="small">
+                            Backup file
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Weak credentials
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            CRLF Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_3">Content Security Policy Configuration</a>
+                        </td>
+                        <td class="small .text-centered">1</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Cross Site Request Forgery
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Potentially dangerous file
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Command execution
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Path Traversal
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web application framework
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web server
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Htaccess Bypass
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HTML Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_12">HTTP Secure Headers</a>
+                        </td>
+                        <td class="small .text-centered">2</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_13">HttpOnly Flag cookie</a>
+                        </td>
+                        <td class="small .text-centered">1</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Unencrypted Channels
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Log4Shell
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Open Redirect
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_17">Reflected Cross Site Scripting</a>
+                        </td>
+                        <td class="small .text-centered">2</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_18">Secure Flag cookie</a>
+                        </td>
+                        <td class="small .text-centered">1</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Spring4Shell
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            SQL Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            TLS/SSL misconfigurations
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Server Side Request Forgery
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Stored HTML Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Stored Cross Site Scripting
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Subdomain takeover
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Blind SQL Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Unrestricted File Upload
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            XML External Entity
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Internal Server Error
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Resource consumption
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Review Webserver Metafiles for Information Leakage
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web technology
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HTTP Methods
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+            </tbody>
+        </table>
+        <hr />
+        <div id="details">
+                <h3 id="vuln_type_3">Content Security Policy Configuration</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks.</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /pictures/search.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-3-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-3-0-2">HTTP Request</a>
+                                <a href="#tab-vuln-3-0-3">HTTP Response</a>
+                            <a href="#tab-vuln-3-0-4">cURL command line</a>
+                            <a href="#tab-vuln-3-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-3-0-1" style="min-height: 124px;">
+                            <pre>CSP is not set</pre>
+                        </section>
+                        <section id="tab-vuln-3-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /pictures/search.php?y=fuzz&amp;x=fuzz&amp;query=fuzz HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: PHPSESSID=limfenie00dr53i6dmetlk2ljd
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-3-0-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 14:30:51 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            expires: Thu, 19 Nov 1981 08:52:00 GMT<br />
+                                            cache-control: no-store, no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            vary: Accept-Encoding<br />
+                                            content-length: 886<br />
+                                            keep-alive: timeout=5, max=100<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=UTF-8<br />
+                                    <br />
+                                    
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/screen.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/print.css&#34; type=&#34;text/css&#34; media=&#34;print&#34;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/ie.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/stylings.css&#34; type=&#34;text/css&#34; media=&#34;screen&#34;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&#34;container &#34; style=&#34;border: 2px solid #5c95cf;&#34;&gt;
+      &lt;div class=&#34;column span-24 first last&#34;&gt;
+	&lt;h1 id=&#34;title&#34;&gt;&lt;a href=&#34;/&#34;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&#34;menu&#34;&gt;
+	&lt;div class=&#34;column prepend-1 span-14 first&#34;&gt;
+	  &lt;ul class=&#34;menu&#34;&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/users/home.php&#34;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/upload.php&#34;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/recent.php&#34;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/guestbook.php&#34;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&#34;column prepend-1 span-7 first last&#34;&gt;
+	  &lt;ul class=&#34;menu top_login&#34; &gt;
+      	    &lt;li&gt;&lt;a href=&#34;/users/login.php&#34;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&#34;column span-24 first last&#34; id=&#34;search_bar_blue&#34;&gt;
+	&lt;div class=&#34;column prepend-17 span-7 first last&#34; id=&#34;search_box&#34;&gt;
+	  &lt;form action=&#34;/pictures/search.php&#34; method=&#34;get&#34; style=&#34;display:inline;&#34;&gt;
+	    &lt;input id=&#34;query2&#34; name=&#34;query&#34; size=&#34;15&#34; style=&#34;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&#34; type=&#34;text&#34; value=&#34;fuzz&#34;/&gt;
+	    &lt;input src=&#34;/images/search_button_white.gif&#34; type=&#34;image&#34; style=&#34;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&#34; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+&lt;div class=&#34;column prepend-1 span-24 first last&#34;&gt;
+&lt;h2&gt;Pictures that are tagged as &#39;fuzz&#39;&lt;/h2&gt;
+
+   &lt;div class=&#34;column prepend-1 span-21 first last&#34; style=&#34;margin-bottom: 2em;&#34;&gt;
+      &lt;h3 class=&#34;error&#34;&gt;No pictures here...&lt;/h3&gt;
+
+
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+       &lt;div class=&#34;column span-24 first last&#34; id=&#34;footer&#34; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&#34;/&#34;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&#34;/admin/index.php?page=login&#34;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;mailto:contact@wackopicko.com&#34;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;/tos.php&#34;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-3-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/pictures/search.php?y=fuzz&amp;x=fuzz&amp;query=fuzz&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-3-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-CONF-12&#39;, &#39;OSHP-Content-Security-Policy&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>Configuring Content Security Policy involves adding the Content-Security-Policy HTTP header to a web page and giving it values to control what resources the user agent is allowed to load for that page.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Mozilla: Content Security Policy (CSP)</a></li>
+                    <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">OWASP: Content Security Policy Cheat Sheet</a></li>
+                    <li><a href="https://owasp.org/www-pdf-archive/2019-02-22_-_How_do_I_Content_Security_Policy_-_Print.pdf">OWASP: How to do Content Security Policy (PDF)</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/12-Test_for_Content_Security_Policy">OWASP: Content Security Policy</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_12">HTTP Secure Headers</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>HTTP security headers tell the browser how to behave when handling the website&#39;s content.</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /pictures/search.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-12-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-12-0-2">HTTP Request</a>
+                                <a href="#tab-vuln-12-0-3">HTTP Response</a>
+                            <a href="#tab-vuln-12-0-4">cURL command line</a>
+                            <a href="#tab-vuln-12-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-12-0-1" style="min-height: 124px;">
+                            <pre>X-Frame-Options is not set</pre>
+                        </section>
+                        <section id="tab-vuln-12-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /pictures/search.php?y=fuzz&amp;x=fuzz&amp;query=fuzz HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: PHPSESSID=limfenie00dr53i6dmetlk2ljd
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-12-0-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 14:30:54 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            expires: Thu, 19 Nov 1981 08:52:00 GMT<br />
+                                            cache-control: no-store, no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            vary: Accept-Encoding<br />
+                                            content-length: 886<br />
+                                            keep-alive: timeout=5, max=38<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=UTF-8<br />
+                                    <br />
+                                    
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/screen.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/print.css&#34; type=&#34;text/css&#34; media=&#34;print&#34;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/ie.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/stylings.css&#34; type=&#34;text/css&#34; media=&#34;screen&#34;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&#34;container &#34; style=&#34;border: 2px solid #5c95cf;&#34;&gt;
+      &lt;div class=&#34;column span-24 first last&#34;&gt;
+	&lt;h1 id=&#34;title&#34;&gt;&lt;a href=&#34;/&#34;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&#34;menu&#34;&gt;
+	&lt;div class=&#34;column prepend-1 span-14 first&#34;&gt;
+	  &lt;ul class=&#34;menu&#34;&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/users/home.php&#34;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/upload.php&#34;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/recent.php&#34;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/guestbook.php&#34;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&#34;column prepend-1 span-7 first last&#34;&gt;
+	  &lt;ul class=&#34;menu top_login&#34; &gt;
+      	    &lt;li&gt;&lt;a href=&#34;/users/login.php&#34;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&#34;column span-24 first last&#34; id=&#34;search_bar_blue&#34;&gt;
+	&lt;div class=&#34;column prepend-17 span-7 first last&#34; id=&#34;search_box&#34;&gt;
+	  &lt;form action=&#34;/pictures/search.php&#34; method=&#34;get&#34; style=&#34;display:inline;&#34;&gt;
+	    &lt;input id=&#34;query2&#34; name=&#34;query&#34; size=&#34;15&#34; style=&#34;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&#34; type=&#34;text&#34; value=&#34;fuzz&#34;/&gt;
+	    &lt;input src=&#34;/images/search_button_white.gif&#34; type=&#34;image&#34; style=&#34;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&#34; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+&lt;div class=&#34;column prepend-1 span-24 first last&#34;&gt;
+&lt;h2&gt;Pictures that are tagged as &#39;fuzz&#39;&lt;/h2&gt;
+
+   &lt;div class=&#34;column prepend-1 span-21 first last&#34; style=&#34;margin-bottom: 2em;&#34;&gt;
+      &lt;h3 class=&#34;error&#34;&gt;No pictures here...&lt;/h3&gt;
+
+
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+       &lt;div class=&#34;column span-24 first last&#34; id=&#34;footer&#34; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&#34;/&#34;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&#34;/admin/index.php?page=login&#34;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;mailto:contact@wackopicko.com&#34;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;/tos.php&#34;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-12-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/pictures/search.php?y=fuzz&amp;x=fuzz&amp;query=fuzz&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-12-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;OSHP-X-Frame-Options&#39;]</pre>
+                        </section>
+                        <h4>🟡 Vulnerability found in /pictures/search.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-12-1-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-12-1-2">HTTP Request</a>
+                                <a href="#tab-vuln-12-1-3">HTTP Response</a>
+                            <a href="#tab-vuln-12-1-4">cURL command line</a>
+                            <a href="#tab-vuln-12-1-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-12-1-1" style="min-height: 124px;">
+                            <pre>X-Content-Type-Options is not set</pre>
+                        </section>
+                        <section id="tab-vuln-12-1-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /pictures/search.php?y=fuzz&amp;x=fuzz&amp;query=fuzz HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: PHPSESSID=limfenie00dr53i6dmetlk2ljd
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-12-1-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 14:30:54 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            expires: Thu, 19 Nov 1981 08:52:00 GMT<br />
+                                            cache-control: no-store, no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            vary: Accept-Encoding<br />
+                                            content-length: 886<br />
+                                            keep-alive: timeout=5, max=38<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=UTF-8<br />
+                                    <br />
+                                    
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/screen.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/print.css&#34; type=&#34;text/css&#34; media=&#34;print&#34;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/ie.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/stylings.css&#34; type=&#34;text/css&#34; media=&#34;screen&#34;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&#34;container &#34; style=&#34;border: 2px solid #5c95cf;&#34;&gt;
+      &lt;div class=&#34;column span-24 first last&#34;&gt;
+	&lt;h1 id=&#34;title&#34;&gt;&lt;a href=&#34;/&#34;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&#34;menu&#34;&gt;
+	&lt;div class=&#34;column prepend-1 span-14 first&#34;&gt;
+	  &lt;ul class=&#34;menu&#34;&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/users/home.php&#34;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/upload.php&#34;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/recent.php&#34;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/guestbook.php&#34;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&#34;column prepend-1 span-7 first last&#34;&gt;
+	  &lt;ul class=&#34;menu top_login&#34; &gt;
+      	    &lt;li&gt;&lt;a href=&#34;/users/login.php&#34;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&#34;column span-24 first last&#34; id=&#34;search_bar_blue&#34;&gt;
+	&lt;div class=&#34;column prepend-17 span-7 first last&#34; id=&#34;search_box&#34;&gt;
+	  &lt;form action=&#34;/pictures/search.php&#34; method=&#34;get&#34; style=&#34;display:inline;&#34;&gt;
+	    &lt;input id=&#34;query2&#34; name=&#34;query&#34; size=&#34;15&#34; style=&#34;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&#34; type=&#34;text&#34; value=&#34;fuzz&#34;/&gt;
+	    &lt;input src=&#34;/images/search_button_white.gif&#34; type=&#34;image&#34; style=&#34;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&#34; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+&lt;div class=&#34;column prepend-1 span-24 first last&#34;&gt;
+&lt;h2&gt;Pictures that are tagged as &#39;fuzz&#39;&lt;/h2&gt;
+
+   &lt;div class=&#34;column prepend-1 span-21 first last&#34; style=&#34;margin-bottom: 2em;&#34;&gt;
+      &lt;h3 class=&#34;error&#34;&gt;No pictures here...&lt;/h3&gt;
+
+
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+       &lt;div class=&#34;column span-24 first last&#34; id=&#34;footer&#34; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&#34;/&#34;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&#34;/admin/index.php?page=login&#34;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;mailto:contact@wackopicko.com&#34;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;/tos.php&#34;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-12-1-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/pictures/search.php?y=fuzz&amp;x=fuzz&amp;query=fuzz&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-12-1-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;OSHP-X-Content-Type-Options&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>Use the recommendations for hardening your HTTP Security Headers.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-project-secure-headers/#div-bestpractices">OSHP: OWASP Secure Headers Project Best Practices</a></li>
+                    <li><a href="https://www.netsparker.com/blog/web-security/http-security-headers/">Netsparker: HTTP Security Headers: An Easy Way to Harden Your Web Applications</a></li>
+                    <li><a href="https://www.keycdn.com/blog/http-security-headers">KeyCDN: Hardening Your HTTP Security Headers</a></li>
+                    <li><a href="https://owasp.org/www-chapter-ghana/assets/slides/HTTP_Header_Security.pdf">OWASP: HTTP SECURITY HEADERS (Protection For Browsers) (PDF)</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/09-Testing_for_Clickjacking">OWASP: Clickjacking</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting">OWASP: Reflected Cross Site Scripting</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting">OWASP: Stored Cross Site Scripting</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/07-Test_HTTP_Strict_Transport_Security">OWASP: HTTP Strict Transport Security</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_13">HttpOnly Flag cookie</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>HttpOnly is an additional flag included in a Set-Cookie HTTP response header. Using the HttpOnly flag when generating a cookie helps mitigate the risk of client side script accessing the protected cookie (if the browser supports it).</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /pictures/search.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-13-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-13-0-2">HTTP Request</a>
+                            <a href="#tab-vuln-13-0-4">cURL command line</a>
+                            <a href="#tab-vuln-13-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-13-0-1" style="min-height: 124px;">
+                            <pre>HttpOnly flag is not set in the cookie : PHPSESSID</pre>
+                        </section>
+                        <section id="tab-vuln-13-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /pictures/search.php?y=fuzz&amp;x=fuzz&amp;query=fuzz HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-13-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/pictures/search.php?y=fuzz&amp;x=fuzz&amp;query=fuzz&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-13-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-SESS-02&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>While creation of the cookie, make sure to set the HttpOnly Flag to True.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html">OWASP: Testing for Cookies Attributes</a></li>
+                    <li><a href="https://owasp.org/www-community/HttpOnly">OWASP: HttpOnly</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_17">Reflected Cross Site Scripting</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>Cross-site scripting (XSS) is a type of computer security vulnerability typically found in web applications which allow code injection by malicious web users into the web pages viewed by other users. Examples of such code include HTML code and client-side scripts.</dd>
+                </dl>
+
+                        <h4>🟠 Vulnerability found in /pictures/search.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-0-2">HTTP Request</a>
+                                <a href="#tab-vuln-17-0-3">HTTP Response</a>
+                            <a href="#tab-vuln-17-0-4">cURL command line</a>
+                            <a href="#tab-vuln-17-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-0-1" style="min-height: 124px;">
+                            <pre>Reflected Cross Site Scripting vulnerability found via injection in the parameter query</pre>
+                        </section>
+                        <section id="tab-vuln-17-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /pictures/search.php?y=fuzz&amp;x=fuzz&amp;query=%22%3E%3CScRiPt%3Ealert%28%27w04g58cg8j%27%29%3C%2FsCrIpT%3E HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: PHPSESSID=limfenie00dr53i6dmetlk2ljd
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-17-0-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 14:30:51 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            expires: Thu, 19 Nov 1981 08:52:00 GMT<br />
+                                            cache-control: no-store, no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            vary: Accept-Encoding<br />
+                                            content-length: 951<br />
+                                            keep-alive: timeout=5, max=96<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=UTF-8<br />
+                                    <br />
+                                    
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/screen.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/print.css&#34; type=&#34;text/css&#34; media=&#34;print&#34;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/ie.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/stylings.css&#34; type=&#34;text/css&#34; media=&#34;screen&#34;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&#34;container &#34; style=&#34;border: 2px solid #5c95cf;&#34;&gt;
+      &lt;div class=&#34;column span-24 first last&#34;&gt;
+	&lt;h1 id=&#34;title&#34;&gt;&lt;a href=&#34;/&#34;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&#34;menu&#34;&gt;
+	&lt;div class=&#34;column prepend-1 span-14 first&#34;&gt;
+	  &lt;ul class=&#34;menu&#34;&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/users/home.php&#34;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/upload.php&#34;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/recent.php&#34;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/guestbook.php&#34;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&#34;column prepend-1 span-7 first last&#34;&gt;
+	  &lt;ul class=&#34;menu top_login&#34; &gt;
+      	    &lt;li&gt;&lt;a href=&#34;/users/login.php&#34;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&#34;column span-24 first last&#34; id=&#34;search_bar_blue&#34;&gt;
+	&lt;div class=&#34;column prepend-17 span-7 first last&#34; id=&#34;search_box&#34;&gt;
+	  &lt;form action=&#34;/pictures/search.php&#34; method=&#34;get&#34; style=&#34;display:inline;&#34;&gt;
+	    &lt;input id=&#34;query2&#34; name=&#34;query&#34; size=&#34;15&#34; style=&#34;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&#34; type=&#34;text&#34; value=&#34;&amp;quot;&amp;gt;&amp;lt;ScRiPt&amp;gt;alert(&amp;#039;w04g58cg8j&amp;#039;)&amp;lt;/sCrIpT&amp;gt;&#34;/&gt;
+	    &lt;input src=&#34;/images/search_button_white.gif&#34; type=&#34;image&#34; style=&#34;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&#34; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+&lt;div class=&#34;column prepend-1 span-24 first last&#34;&gt;
+&lt;h2&gt;Pictures that are tagged as &#39;&#34;&gt;&lt;ScRiPt&gt;alert(&#39;w04g58cg8j&#39;)&lt;/sCrIpT&gt;&#39;&lt;/h2&gt;
+
+   &lt;div class=&#34;column prepend-1 span-21 first last&#34; style=&#34;margin-bottom: 2em;&#34;&gt;
+      &lt;h3 class=&#34;error&#34;&gt;No pictures here...&lt;/h3&gt;
+
+
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+       &lt;div class=&#34;column span-24 first last&#34; id=&#34;footer&#34; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&#34;/&#34;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&#34;/admin/index.php?page=login&#34;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;mailto:contact@wackopicko.com&#34;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;/tos.php&#34;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-17-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/pictures/search.php?y=fuzz&amp;x=fuzz&amp;query=%22%3E%3CScRiPt%3Ealert%28%27w04g58cg8j%27%29%3C%2FsCrIpT%3E&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-01&#39;]</pre>
+                        </section>
+                        <h4>🟠 Vulnerability found in /pictures/search.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-17-1-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-17-1-2">HTTP Request</a>
+                                <a href="#tab-vuln-17-1-3">HTTP Response</a>
+                            <a href="#tab-vuln-17-1-4">cURL command line</a>
+                            <a href="#tab-vuln-17-1-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-17-1-1" style="min-height: 124px;">
+                            <pre>Reflected Cross Site Scripting vulnerability found via injection in the parameter query</pre>
+                        </section>
+                        <section id="tab-vuln-17-1-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /pictures/search.php?query=%22%3E%3CScRiPt%3Ealert%28%27w0i35v3142%27%29%3C%2FsCrIpT%3E&amp;x=1&amp;y=1 HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: PHPSESSID=limfenie00dr53i6dmetlk2ljd
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-17-1-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 14:30:51 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            expires: Thu, 19 Nov 1981 08:52:00 GMT<br />
+                                            cache-control: no-store, no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            vary: Accept-Encoding<br />
+                                            content-length: 951<br />
+                                            keep-alive: timeout=5, max=94<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=UTF-8<br />
+                                    <br />
+                                    
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/screen.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/print.css&#34; type=&#34;text/css&#34; media=&#34;print&#34;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/blueprint/ie.css&#34; type=&#34;text/css&#34; media=&#34;screen, projection&#34;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&#34;stylesheet&#34; href=&#34;/css/stylings.css&#34; type=&#34;text/css&#34; media=&#34;screen&#34;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&#34;container &#34; style=&#34;border: 2px solid #5c95cf;&#34;&gt;
+      &lt;div class=&#34;column span-24 first last&#34;&gt;
+	&lt;h1 id=&#34;title&#34;&gt;&lt;a href=&#34;/&#34;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&#34;menu&#34;&gt;
+	&lt;div class=&#34;column prepend-1 span-14 first&#34;&gt;
+	  &lt;ul class=&#34;menu&#34;&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/users/home.php&#34;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/upload.php&#34;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/pictures/recent.php&#34;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&#34;&#34;&gt;&lt;a href=&#34;/guestbook.php&#34;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&#34;column prepend-1 span-7 first last&#34;&gt;
+	  &lt;ul class=&#34;menu top_login&#34; &gt;
+      	    &lt;li&gt;&lt;a href=&#34;/users/login.php&#34;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&#34;column span-24 first last&#34; id=&#34;search_bar_blue&#34;&gt;
+	&lt;div class=&#34;column prepend-17 span-7 first last&#34; id=&#34;search_box&#34;&gt;
+	  &lt;form action=&#34;/pictures/search.php&#34; method=&#34;get&#34; style=&#34;display:inline;&#34;&gt;
+	    &lt;input id=&#34;query2&#34; name=&#34;query&#34; size=&#34;15&#34; style=&#34;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&#34; type=&#34;text&#34; value=&#34;&amp;quot;&amp;gt;&amp;lt;ScRiPt&amp;gt;alert(&amp;#039;w0i35v3142&amp;#039;)&amp;lt;/sCrIpT&amp;gt;&#34;/&gt;
+	    &lt;input src=&#34;/images/search_button_white.gif&#34; type=&#34;image&#34; style=&#34;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&#34; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+&lt;div class=&#34;column prepend-1 span-24 first last&#34;&gt;
+&lt;h2&gt;Pictures that are tagged as &#39;&#34;&gt;&lt;ScRiPt&gt;alert(&#39;w0i35v3142&#39;)&lt;/sCrIpT&gt;&#39;&lt;/h2&gt;
+
+   &lt;div class=&#34;column prepend-1 span-21 first last&#34; style=&#34;margin-bottom: 2em;&#34;&gt;
+      &lt;h3 class=&#34;error&#34;&gt;No pictures here...&lt;/h3&gt;
+
+
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+       &lt;div class=&#34;column span-24 first last&#34; id=&#34;footer&#34; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&#34;/&#34;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&#34;/admin/index.php?page=login&#34;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;mailto:contact@wackopicko.com&#34;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&#34;/tos.php&#34;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-17-1-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/pictures/search.php?query=%22%3E%3CScRiPt%3Ealert%28%27w0i35v3142%27%29%3C%2FsCrIpT%3E&amp;x=1&amp;y=1&#34; -e &#34;http://web/pictures/search.php?y=fuzz&amp;x=fuzz&amp;query=fuzz&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-17-1-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-01&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>The best way to protect a web application from XSS attacks is ensure that the application performs validation of all headers, cookies, query strings, form fields, and hidden fields. Encoding user supplied output in the server side can also defeat XSS vulnerabilities by preventing inserted scripts from being transmitted to users in an executable form. Applications can gain significant protection from javascript based attacks by converting the following characters in all generated output to the appropriate HTML entity encoding:<, >, &, ', (, ), #, %, ; , +, -</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-community/attacks/xss/">OWASP: Cross Site Scripting (XSS)</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Cross-site_scripting">Wikipedia: Cross-site scripting</a></li>
+                    <li><a href="https://cwe.mitre.org/data/definitions/79.html">CWE-79: Improper Neutralization of Input During Web Page Generation (&#39;Cross-site Scripting&#39;)</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting">OWASP: Reflected Cross Site Scripting</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_18">Secure Flag cookie</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>The secure flag is an option that can be set by the application server when sending a new cookie to the user within an HTTP Response. The purpose of the secure flag is to prevent cookies from being observed by unauthorized parties due to the transmission of a the cookie in clear text.</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /pictures/search.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-18-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-18-0-2">HTTP Request</a>
+                            <a href="#tab-vuln-18-0-4">cURL command line</a>
+                            <a href="#tab-vuln-18-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-18-0-1" style="min-height: 124px;">
+                            <pre>Secure flag is not set in the cookie : PHPSESSID</pre>
+                        </section>
+                        <section id="tab-vuln-18-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /pictures/search.php?y=fuzz&amp;x=fuzz&amp;query=fuzz HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-18-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/pictures/search.php?y=fuzz&amp;x=fuzz&amp;query=fuzz&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-18-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-SESS-02&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>When generating the cookie, make sure to set the Secure Flag to True.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html">OWASP: Testing for Cookies Attributes</a></li>
+                    <li><a href="https://owasp.org/www-community/controls/SecureCookieAttribute">OWASP: Secure Cookie Attribute</a></li>
+                </ul>
+                <br />
+                <hr>
+        </div>
+        <footer class="small" id="footer"><a href="https://wapiti-scanner.github.io/" id="wapiti_link">Wapiti 3.1.8</a> &copy; Nicolas SURRIBAS 2006-2022</footer>
+	</div>
+    <script type="text/javascript" src="js/kube.min.js"></script>
+    <script>$K.init();</script>
+</body>
+</html>

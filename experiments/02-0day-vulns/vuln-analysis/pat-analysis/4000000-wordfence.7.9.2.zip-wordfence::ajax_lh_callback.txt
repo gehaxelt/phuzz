@@ -1,0 +1,1 @@
+../phuzz-output/4000000-wordfence.7.9.2.zip/wordfence::ajax_lh_callback/output/fuzzer-8/vulnerable-candidates.json,14dd068b-df68-4e16-a309-ed231daa4d6a:  query_params:{"action": "wordfence_lh", "hid": "fu"}

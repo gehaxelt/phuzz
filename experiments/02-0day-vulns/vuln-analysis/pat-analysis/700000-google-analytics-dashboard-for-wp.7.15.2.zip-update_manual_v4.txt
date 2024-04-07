@@ -1,0 +1,1 @@
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/update_manual_v4/output/fuzzer-4/vulnerable-candidates.json,5b9d80a6-fbd6-4e29-8650-5bd609a2e0ea:  query_params:{"action": "exactmetrics_update_manual_v4", "isnetwork": "fu"} body_params:{"manual_v4_code": "fuz{"}

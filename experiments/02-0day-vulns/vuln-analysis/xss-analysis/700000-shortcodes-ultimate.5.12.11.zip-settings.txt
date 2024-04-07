@@ -1,0 +1,1 @@
+../phuzz-output/700000-shortcodes-ultimate.5.12.11.zip/settings/output/fuzzer-1/vulnerable-candidates.json,f3831492-cfeb-4d70-83fa-5aa42f95387b:  query_params:{"action": "su_generator_settings", "shortcode": "fuzz\u0004"}

@@ -1,0 +1,30 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "type",
+      "process_settings"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "scan_for_resmush"
+      },
+      {
+        "name": "type",
+        "value": "fuzz"
+      },
+      {
+        "name": "process_settings",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

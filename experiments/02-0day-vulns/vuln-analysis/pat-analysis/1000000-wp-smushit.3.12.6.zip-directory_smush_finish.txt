@@ -1,0 +1,1 @@
+../phuzz-output/1000000-wp-smushit.3.12.6.zip/directory_smush_finish/output/fuzzer-9/vulnerable-candidates.json,8427ad3e-9b4e-4cb6-83aa-035d66db922a:  query_params:{"action": "directory_smush_finish"} body_params:{"failed": "6uzz", "skipped": "o3uzz", "items": "fu"}

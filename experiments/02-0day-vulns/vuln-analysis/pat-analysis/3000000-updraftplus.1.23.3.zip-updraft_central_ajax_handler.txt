@@ -1,0 +1,1 @@
+../phuzz-output/3000000-updraftplus.1.23.3.zip/updraft_central_ajax_handler/output/fuzzer-3/vulnerable-candidates.json,cf07467e-e801-43ff-8357-ef273cfe05f8:  query_params:{"nonce": "fuzz", "action": "updraft_central_ajax", "subaction": "ft"}

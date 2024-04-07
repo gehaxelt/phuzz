@@ -1,0 +1,30 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "template_id",
+      "conds"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "ha_condition_update"
+      },
+      {
+        "name": "template_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "conds",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

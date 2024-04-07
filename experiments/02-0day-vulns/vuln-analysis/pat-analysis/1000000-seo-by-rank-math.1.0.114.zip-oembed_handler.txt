@@ -1,0 +1,1 @@
+../phuzz-output/1000000-seo-by-rank-math.1.0.114.zip/oembed_handler/output/fuzzer-3/vulnerable-candidates.json,d46c39d5-302d-4712-a0a6-231706ee6be5:  query_params:{"cmb2_ajax_nonce": "fuzz", "action": "cmb2_oembed_handler", "object_type": "fuzj", "field_id": "fuzz", "object_id": "fuzz", "oembed_width": "fu", "oembed_url": "fuzz"}

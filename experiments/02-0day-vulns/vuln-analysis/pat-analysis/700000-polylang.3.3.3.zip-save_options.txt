@@ -1,0 +1,1 @@
+../phuzz-output/700000-polylang.3.3.3.zip/save_options/output/fuzzer-3/vulnerable-candidates.json,6b2adb14-b7ec-4ec6-90da-6678aaee8c08:  query_params:{"action": "pll_save_options"} body_params:{"licenses": "fuzHz", "module": "f"}

@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<!DOCTYPE issues [
+<!ELEMENT issues (issue*)>
+<!ATTLIST issues burpVersion CDATA "">
+<!ATTLIST issues exportTime CDATA "">
+<!ELEMENT issue (serialNumber, type, name, host, path, location, severity, confidence, issueBackground?, remediationBackground?, references?, vulnerabilityClassifications?, issueDetail?, issueDetailItems?, remediationDetail?, requestresponse*, collaboratorEvent*, infiltratorEvent*, staticAnalysis*, dynamicAnalysis*, prototypePollution*)>
+<!ELEMENT serialNumber (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT severity (#PCDATA)>
+<!ELEMENT confidence (#PCDATA)>
+<!ELEMENT issueBackground (#PCDATA)>
+<!ELEMENT remediationBackground (#PCDATA)>
+<!ELEMENT references (#PCDATA)>
+<!ELEMENT vulnerabilityClassifications (#PCDATA)>
+<!ELEMENT issueDetail (#PCDATA)>
+<!ELEMENT issueDetailItems (issueDetailItem*)>
+<!ELEMENT issueDetailItem (#PCDATA)>
+<!ELEMENT remediationDetail (#PCDATA)>
+<!ELEMENT requestresponse (request?, response?, responseRedirected?)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request method CDATA "">
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT responseRedirected (#PCDATA)>
+<!ELEMENT sender (#PCDATA)>
+<!ELEMENT message (#PCDATA)>
+<!ELEMENT conversation (#PCDATA)>
+<!ELEMENT recipient (#PCDATA)>
+<!ELEMENT recipients (recipient*)>
+<!ELEMENT smtp (sender, recipients, message, conversation)>
+<!ELEMENT collaboratorEvent (interactionType, originIp, time, lookupType?, lookupHost?, requestresponse?, smtp?)>
+<!ELEMENT interactionType (#PCDATA)>
+<!ELEMENT originIp (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT lookupType (#PCDATA)>
+<!ELEMENT lookupHost (#PCDATA)>
+<!ELEMENT infiltratorEvent (parameterName, platform, signature, stackTrace?, parameterValue?, collaboratorEvent)>
+<!ELEMENT parameterName (#PCDATA)>
+<!ELEMENT platform (#PCDATA)>
+<!ELEMENT signature (#PCDATA)>
+<!ELEMENT stackTrace (#PCDATA)>
+<!ELEMENT parameterValue (#PCDATA)>
+<!ELEMENT dynamicAnalysis (source, sink, sourceStackTrace, sinkStackTrace, eventListenerStackTrace, sourceValue, sinkValue, eventHandlerData, eventHandlerDataType, eventHandlerManipulatedData, poc, origin, isOriginChecked, sourceElementId, sourceElementName, eventFiredEventName, eventFiredElementId, eventFiredElementName, eventFiredOuterHtml)>
+<!ELEMENT prototypePollution (poc, pollutionTechnique, pollutionType)>
+<!ELEMENT staticAnalysis (source, sink, codeSnippets)>
+<!ELEMENT source (#PCDATA)>
+<!ELEMENT sink (#PCDATA)>
+<!ELEMENT sourceStackTrace (#PCDATA)>
+<!ELEMENT sinkStackTrace (#PCDATA)>
+<!ELEMENT eventListenerStackTrace (#PCDATA)>
+<!ELEMENT sourceValue (#PCDATA)>
+<!ELEMENT sinkValue (#PCDATA)>
+<!ELEMENT eventHandlerData (#PCDATA)>
+<!ELEMENT eventHandlerDataType (#PCDATA)>
+<!ELEMENT sourceElementId (#PCDATA)>
+<!ELEMENT sourceElementName (#PCDATA)>
+<!ELEMENT eventFiredEventName (#PCDATA)>
+<!ELEMENT eventFiredElementId (#PCDATA)>
+<!ELEMENT eventFiredElementName (#PCDATA)>
+<!ELEMENT eventFiredOuterHtml (#PCDATA)>
+<!ELEMENT eventHandlerManipulatedData (#PCDATA)>
+<!ELEMENT poc (#PCDATA)>
+<!ELEMENT origin (#PCDATA)>
+<!ELEMENT isOriginChecked (#PCDATA)>
+<!ELEMENT codeSnippets (codeSnippet*)>
+<!ELEMENT codeSnippet (#PCDATA)>
+<!ELEMENT pollutionTechnique (#PCDATA)>
+<!ELEMENT pollutionType (#PCDATA)>
+]>
+<issues burpVersion="2023.8.1" exportTime="Mon Aug 14 09:46:12 GMT 2023">
+  <issue>
+    <serialNumber>6932761143781039104</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Private IP addresses disclosed]]></name>
+    <host ip="172.20.0.3">http://web</host>
+    <path><![CDATA[/wp-admin/admin-ajax.php]]></path>
+    <location><![CDATA[/wp-admin/admin-ajax.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>RFC 1918 specifies ranges of IP addresses that are reserved for use in private networks and cannot be routed on the public Internet. Although various methods exist by which an attacker can determine the public IP addresses in use by an organization, the private addresses used internally cannot usually be determined in the same ways.</p>
+<p>Discovering the private addresses used within an organization can help an attacker in carrying out network-layer attacks aiming to penetrate the organization's internal infrastructure. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>There is not usually any good reason to disclose the internal IP addresses used within an organization's infrastructure. If these are being returned in service banners or debug messages, then the relevant services should be configured to mask the private addresses. If they are being used to track back-end servers for load balancing purposes, then the addresses should be rewritten with innocuous identifiers from which an attacker cannot infer any useful information about the infrastructure.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[The following RFC 1918 IP address was disclosed in the response:<ul><li>172.20.0.3</li></ul>]]></issueDetail>
+    <issueDetailItems>
+      <issueDetailItem><![CDATA[172.20.0.3]]></issueDetailItem>
+    </issueDetailItems>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvd3AtYWRtaW4vYWRtaW4tYWpheC5waHA/YWN0aW9uPWV4YWN0bWV0cmljc19pbnN0YWxsX2FkZG9uIEhUVFAvMS4wDQpIb3N0OiB3ZWINCkNvbnRlbnQtTGVuZ3RoOiAxMQ0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNCg0KcGx1Z2luPWZ1eno=]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgNDAwIEJhZCBSZXF1ZXN0DQpEYXRlOiBNb24sIDE0IEF1ZyAyMDIzIDA5OjQzOjExIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU2IChEZWJpYW4pDQpDb250ZW50LUxlbmd0aDogMzAyDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjQwMCBCYWQgUmVxdWVzdDwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPkJhZCBSZXF1ZXN0PC9oMT4KPHA+WW91ciBicm93c2VyIHNlbnQgYSByZXF1ZXN0IHRoYXQgdGhpcyBzZXJ2ZXIgY291bGQgbm90IHVuZGVyc3RhbmQuPGJyIC8+CjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjU2IChEZWJpYW4pIFNlcnZlciBhdCAxNzIuMjAuMC4zIFBvcnQgODA8L2FkZHJlc3M+CjwvYm9keT48L2h0bWw+Cg==]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>1897921325684342784</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Cross-origin resource sharing]]></name>
+    <host ip="172.20.0.3">http://web</host>
+    <path><![CDATA[/wp-admin/admin-ajax.php]]></path>
+    <location><![CDATA[/wp-admin/admin-ajax.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>An HTML5 cross-origin resource sharing (CORS) policy controls whether and how content running on other domains can perform two-way interaction with the domain that publishes the policy. The policy is fine-grained and can apply access controls per-request based on the URL and other features of the request.</p><p>If another domain is allowed by the policy, then that domain can potentially attack users of the application. If a user is logged in to the application, and visits a domain allowed by the policy, then any malicious content running on that domain can potentially retrieve content from the application, and sometimes carry out actions within the security context of the logged in user.</p>
+<p>Even if an allowed domain is not overtly malicious in itself, security vulnerabilities within that domain could potentially be leveraged by an attacker to exploit the trust relationship and attack the application that allows access. CORS policies on pages containing sensitive information should be reviewed to determine whether it is appropriate for the application to trust both the intentions and security posture of any domains granted access.</p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>Any inappropriate domains should be removed from the CORS policy.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[The application implements an HTML5 cross-origin resource sharing (CORS) policy for this request.<br><br>Since the Vary: Origin header was not present in the response, reverse proxies and intermediate servers may cache it. This may enable an attacker to carry out cache poisoning attacks.]]></issueDetail>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvd3AtYWRtaW4vYWRtaW4tYWpheC5waHA/YWN0aW9uPWV4YWN0bWV0cmljc19pbnN0YWxsX2FkZG9uIEhUVFAvMS4wDQpIb3N0OiB3ZWINCkNvbnRlbnQtTGVuZ3RoOiAxMQ0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNCk9yaWdpbjogaHR0cDovL3dlYg0KDQpwbHVnaW49ZnV6eg==]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBNb24sIDE0IEF1ZyAyMDIzIDA5OjQ1OjU2IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU2IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMTgNCkFjY2Vzcy1Db250cm9sLUFsbG93LU9yaWdpbjogaHR0cDovL3dlYg0KQWNjZXNzLUNvbnRyb2wtQWxsb3ctQ3JlZGVudGlhbHM6IHRydWUNClgtUm9ib3RzLVRhZzogbm9pbmRleA0KWC1Db250ZW50LVR5cGUtT3B0aW9uczogbm9zbmlmZg0KRXhwaXJlczogV2VkLCAxMSBKYW4gMTk4NCAwNTowMDowMCBHTVQNCkNhY2hlLUNvbnRyb2w6IG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUsIG1heC1hZ2U9MA0KUmVmZXJyZXItUG9saWN5OiBzdHJpY3Qtb3JpZ2luLXdoZW4tY3Jvc3Mtb3JpZ2luDQpYLUZyYW1lLU9wdGlvbnM6IFNBTUVPUklHSU4NCkNvbnRlbnQtTGVuZ3RoOiAzNTUNCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb247IGNoYXJzZXQ9VVRGLTgNCg0KCnsiZXJyb3IiOiJUaGVyZSB3YXMgYW4gZXJyb3IgaW5zdGFsbGluZyB0aGUgYWRkb24sIERvd25sb2FkIGZhaWxlZC4uIFBsZWFzZSB0cnkgYWdhaW4uIElmIHlvdSBhcmUgc3RpbGwgaGF2aW5nIGlzc3VlcywgcGxlYXNlIDxhIHRhcmdldD1cIl9ibGFua1wiIGhyZWY9XCJodHRwczpcL1wvd3d3LmV4YWN0bWV0cmljcy5jb21cL215LWFjY291bnRcL3N1cHBvcnRcLz91dG1fc291cmNlPWxpdGVwbHVnaW4mIzAzODt1dG1fbWVkaXVtPW5vdGljZSYjMDM4O3V0bV9jYW1wYWlnbj1lcnJvci1pbnN0YWxsaW5nLWFkZG9ucyYjMDM4O3V0bV9jb250ZW50PTcuMTUuMlwiPmNvbnRhY3Qgb3VyIHN1cHBvcnQ8XC9hPiB0ZWFtLiAifQ==]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>1017292339214343168</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[External service interaction (DNS)]]></name>
+    <host ip="172.20.0.3">http://web</host>
+    <path><![CDATA[/wp-admin/admin-ajax.php]]></path>
+    <location><![CDATA[/wp-admin/admin-ajax.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>The ability to induce an application to interact with an arbitrary external service, such as a web or mail server, does not constitute a vulnerability in its own right. This might even be the intended behavior of the application. However, in some cases, it can indicate a vulnerability with serious consequences.</p>
+<p>If you can trigger DNS-based interactions, it is normally possible to trigger interactions using other service types. Burp Scanner reports these as separate issues. You may find that a payload, such as a URL, only triggers a DNS-based interaction, even though you were expecting interactions with a different service as well. This could be due to egress filters on the network layer that prevent the application from connecting to these other services. However, some systems perform DNS lookups without any intention of connecting to the remote host. This behavior is typically harmless.</p>
+<p>The ability to send requests to other systems can allow the vulnerable server to be used as an attack proxy. By submitting suitable payloads, an attacker can cause the application server to attack other systems that it can interact with. This may include public third-party systems, internal systems within the same organization, or services available on the local loopback adapter of the application server itself. Depending on the network architecture, this may expose highly vulnerable internal services that are not otherwise accessible to external attackers.</p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>You should review the purpose and intended use of the relevant application functionality, 
+  and determine whether the ability to trigger arbitrary external service interactions is intended behavior. 
+  If so, you should be aware of the types of attacks that can be performed via this behavior and take appropriate measures. 
+  These measures might include blocking network access from the application server to other internal systems, and hardening the application server itself to remove any services available on the local loopback adapter.</p>
+<p>If the ability to trigger arbitrary external service interactions is not intended behavior, then you should implement a whitelist of permitted services and hosts, and block any interactions that do not appear on this whitelist.</p>
+
+<p>Out-of-Band Application Security Testing (OAST) is highly effective at uncovering high-risk features, to the point where finding the root cause of an interaction can be quite challenging. To find the source of an external service interaction, try to identify whether it is triggered by specific application functionality, or occurs indiscriminately on all requests. If it occurs on all endpoints, a front-end CDN or application firewall may be responsible, or a back-end analytics system parsing server logs. In some cases, interactions may originate from third-party systems; for example, a HTTP request may trigger a poisoned email which passes through a link-scanner on its way to the recipient.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[It is possible to induce the application to perform server-side DNS lookups of arbitrary domain names.<br><br>The payload <b>http://li773zjdd9e25psmtnug9popzg59tzhp5hs7gw.oastify.com/?fuzz</b> was submitted in the <b>plugin</b> parameter.<br><br>The application performed a DNS lookup of the specified domain.]]></issueDetail>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvd3AtYWRtaW4vYWRtaW4tYWpheC5waHA/YWN0aW9uPWV4YWN0bWV0cmljc19pbnN0YWxsX2FkZG9uIEhUVFAvMS4wDQpIb3N0OiB3ZWINCkNvbnRlbnQtTGVuZ3RoOiAxMQ0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNCg0KcGx1Z2luPWh0dHAlM2ElMmYlMmZsaTc3M3pqZGQ5ZTI1cHNtdG51Zzlwb3B6ZzU5dHpocDVoczdndy5vYXN0aWZ5LmNvbSUyZiUzZmZ1eno=]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBNb24sIDE0IEF1ZyAyMDIzIDA5OjQ1OjU4IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU2IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMTgNClgtUm9ib3RzLVRhZzogbm9pbmRleA0KWC1Db250ZW50LVR5cGUtT3B0aW9uczogbm9zbmlmZg0KRXhwaXJlczogV2VkLCAxMSBKYW4gMTk4NCAwNTowMDowMCBHTVQNCkNhY2hlLUNvbnRyb2w6IG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUsIG1heC1hZ2U9MA0KUmVmZXJyZXItUG9saWN5OiBzdHJpY3Qtb3JpZ2luLXdoZW4tY3Jvc3Mtb3JpZ2luDQpYLUZyYW1lLU9wdGlvbnM6IFNBTUVPUklHSU4NCkNvbnRlbnQtTGVuZ3RoOiAzNzQNCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb247IGNoYXJzZXQ9VVRGLTgNCg0KCnsiZXJyb3IiOiJUaGVyZSB3YXMgYW4gZXJyb3IgaW5zdGFsbGluZyB0aGUgYWRkb24sIFRoZSBwYWNrYWdlIGNvdWxkIG5vdCBiZSBpbnN0YWxsZWQuLiBQbGVhc2UgdHJ5IGFnYWluLiBJZiB5b3UgYXJlIHN0aWxsIGhhdmluZyBpc3N1ZXMsIHBsZWFzZSA8YSB0YXJnZXQ9XCJfYmxhbmtcIiBocmVmPVwiaHR0cHM6XC9cL3d3dy5leGFjdG1ldHJpY3MuY29tXC9teS1hY2NvdW50XC9zdXBwb3J0XC8/dXRtX3NvdXJjZT1saXRlcGx1Z2luJiMwMzg7dXRtX21lZGl1bT1ub3RpY2UmIzAzODt1dG1fY2FtcGFpZ249ZXJyb3ItaW5zdGFsbGluZy1hZGRvbnMmIzAzODt1dG1fY29udGVudD03LjE1LjJcIj5jb250YWN0IG91ciBzdXBwb3J0PFwvYT4gdGVhbS4gIn0=]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+    <collaboratorEvent>
+      <interactionType>DNS</interactionType>
+      <originIp>188.122.68.218</originIp>
+      <time>2023-Aug-14 09:44:50.164 UTC</time>
+      <lookupType>A</lookupType>
+      <lookupHost>li773zjdd9e25psmtnug9popzg59tzhp5hs7gw.oastify.com</lookupHost>
+    </collaboratorEvent>
+  </issue>
+  <issue>
+    <serialNumber>6965524286892341248</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[External service interaction (HTTP)]]></name>
+    <host ip="172.20.0.3">http://web</host>
+    <path><![CDATA[/wp-admin/admin-ajax.php]]></path>
+    <location><![CDATA[/wp-admin/admin-ajax.php]]></location>
+    <severity>High</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>External service interaction arises when it is possible to induce an application to interact with an arbitrary external service, such as a web or mail server. The ability to trigger arbitrary external service interactions does not constitute a vulnerability in its own right, and in some cases might even be the intended behavior of the application.
+However, in many cases, it can indicate a vulnerability with serious consequences.</p>
+<p>The ability to send requests to other systems can allow the vulnerable server to be used as an attack proxy.
+  By submitting suitable payloads, an attacker can cause the application server to attack other systems that it can interact with. 
+  This may include public third-party systems, internal systems within the same organization, or services available on the local loopback adapter of the application server itself. 
+  Depending on the network architecture, this may expose highly vulnerable internal services that are not otherwise accessible to external attackers. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>You should review the purpose and intended use of the relevant application functionality, 
+  and determine whether the ability to trigger arbitrary external service interactions is intended behavior. 
+  If so, you should be aware of the types of attacks that can be performed via this behavior and take appropriate measures. 
+  These measures might include blocking network access from the application server to other internal systems, and hardening the application server itself to remove any services available on the local loopback adapter.</p>
+<p>If the ability to trigger arbitrary external service interactions is not intended behavior, then you should implement a whitelist of permitted services and hosts, and block any interactions that do not appear on this whitelist.</p>
+
+<p>Out-of-Band Application Security Testing (OAST) is highly effective at uncovering high-risk features, to the point where finding the root cause of an interaction can be quite challenging. To find the source of an external service interaction, try to identify whether it is triggered by specific application functionality, or occurs indiscriminately on all requests. If it occurs on all endpoints, a front-end CDN or application firewall may be responsible, or a back-end analytics system parsing server logs. In some cases, interactions may originate from third-party systems; for example, a HTTP request may trigger a poisoned email which passes through a link-scanner on its way to the recipient.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[It is possible to induce the application to perform server-side HTTP requests to arbitrary domains.<br><br>The payload <b>http://jby5wxcb6770ynlkmlne2nhnsey7mxanyfl59u.oastify.com/?fuzz</b> was submitted in the <b>plugin</b> parameter.<br><br>The application performed an HTTP request to the specified domain.]]></issueDetail>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvd3AtYWRtaW4vYWRtaW4tYWpheC5waHA/YWN0aW9uPWV4YWN0bWV0cmljc19pbnN0YWxsX2FkZG9uIEhUVFAvMS4wDQpIb3N0OiB3ZWINCkNvbnRlbnQtTGVuZ3RoOiAxMQ0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNCg0KcGx1Z2luPWh0dHAlM2ElMmYlMmZqYnk1d3hjYjY3NzB5bmxrbWxuZTJuaG5zZXk3bXhhbnlmbDU5dS5vYXN0aWZ5LmNvbSUyZiUzZmZ1eno=]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBNb24sIDE0IEF1ZyAyMDIzIDA5OjQ1OjU5IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU2IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMTgNClgtUm9ib3RzLVRhZzogbm9pbmRleA0KWC1Db250ZW50LVR5cGUtT3B0aW9uczogbm9zbmlmZg0KRXhwaXJlczogV2VkLCAxMSBKYW4gMTk4NCAwNTowMDowMCBHTVQNCkNhY2hlLUNvbnRyb2w6IG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUsIG1heC1hZ2U9MA0KUmVmZXJyZXItUG9saWN5OiBzdHJpY3Qtb3JpZ2luLXdoZW4tY3Jvc3Mtb3JpZ2luDQpYLUZyYW1lLU9wdGlvbnM6IFNBTUVPUklHSU4NCkNvbnRlbnQtTGVuZ3RoOiAzNzQNCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb247IGNoYXJzZXQ9VVRGLTgNCg0KCnsiZXJyb3IiOiJUaGVyZSB3YXMgYW4gZXJyb3IgaW5zdGFsbGluZyB0aGUgYWRkb24sIFRoZSBwYWNrYWdlIGNvdWxkIG5vdCBiZSBpbnN0YWxsZWQuLiBQbGVhc2UgdHJ5IGFnYWluLiBJZiB5b3UgYXJlIHN0aWxsIGhhdmluZyBpc3N1ZXMsIHBsZWFzZSA8YSB0YXJnZXQ9XCJfYmxhbmtcIiBocmVmPVwiaHR0cHM6XC9cL3d3dy5leGFjdG1ldHJpY3MuY29tXC9teS1hY2NvdW50XC9zdXBwb3J0XC8/dXRtX3NvdXJjZT1saXRlcGx1Z2luJiMwMzg7dXRtX21lZGl1bT1ub3RpY2UmIzAzODt1dG1fY2FtcGFpZ249ZXJyb3ItaW5zdGFsbGluZy1hZGRvbnMmIzAzODt1dG1fY29udGVudD03LjE1LjJcIj5jb250YWN0IG91ciBzdXBwb3J0PFwvYT4gdGVhbS4gIn0=]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+    <collaboratorEvent>
+      <interactionType>HTTP</interactionType>
+      <originIp>130.149.230.61</originIp>
+      <time>2023-Aug-14 09:44:51.209 UTC</time>
+      <requestresponse>
+        <request method="GET" base64="true"><![CDATA[R0VUIC8/ZnV6eiBIVFRQLzEuMQ0KSG9zdDogamJ5NXd4Y2I2NzcweW5sa21sbmUybmhuc2V5N214YW55Zmw1OXUub2FzdGlmeS5jb20NClVzZXItQWdlbnQ6IFdvcmRQcmVzcy82LjEuMTsgaHR0cDovL3dlYg0KQWNjZXB0OiAqLyoNCkFjY2VwdC1FbmNvZGluZzogZGVmbGF0ZSwgZ3ppcCwgYnINClJlZmVyZXI6IGh0dHA6Ly9qYnk1d3hjYjY3NzB5bmxrbWxuZTJuaG5zZXk3bXhhbnlmbDU5dS5vYXN0aWZ5LmNvbS8/ZnV6eg0KQ29ubmVjdGlvbjogY2xvc2UNCg0K]]></request>
+        <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IEJ1cnAgQ29sbGFib3JhdG9yIGh0dHBzOi8vYnVycGNvbGxhYm9yYXRvci5uZXQvDQpYLUNvbGxhYm9yYXRvci1WZXJzaW9uOiA0DQpDb250ZW50LVR5cGU6IHRleHQvaHRtbA0KQ29udGVudC1MZW5ndGg6IDk2DQoNCjxodG1sPjxib2R5PmVkazg2bW90bGpmZnB0dHRsNzE3czN6amxnaWdpZ2tmaWd6ZWRrODZtb3RsamZmcHR0dGw3MTdzM3pqbGdpZ2lna2ZpZ3o8L2JvZHk+PC9odG1sPg==]]></response>
+        <responseRedirected>false</responseRedirected>
+      </requestresponse>
+    </collaboratorEvent>
+  </issue>
+</issues>

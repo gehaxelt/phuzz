@@ -1,0 +1,1 @@
+../phuzz-output/700000-ml-slider.3.30.1.zip/ajax_create_image_slides/output/fuzzer-5/vulnerable-candidates.json,6adaeab7-f464-4a21-a512-43a4267bef54:  query_params:{"_wpnonce": "fuzz", "action": "create_image_slide"} body_params:{"slider_id": "fuzzg", "selection": "fu"}

@@ -1,0 +1,1 @@
+../phuzz-output/900000-ninja-forms.3.6.23.zip/connect/output/fuzzer-1/vulnerable-candidates.json,32df2162-c7a3-4dbe-845f-9640cae290d0:  query_params:{"nonce": "fuzz", "action": "nf_oauth_connect", "redirect": "fuzz", "client_id": "fu>z"}

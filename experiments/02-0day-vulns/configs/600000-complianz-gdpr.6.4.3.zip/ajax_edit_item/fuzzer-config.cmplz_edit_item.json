@@ -1,0 +1,52 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "type",
+      "item_id",
+      "cmplz_action",
+      "data",
+      "language"
+    ],
+    "data": [
+      {
+        "name": "type",
+        "value": "fuzz"
+      },
+      {
+        "name": "item_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "cmplz_action",
+        "value": "fuzz"
+      },
+      {
+        "name": "data",
+        "value": "fuzz"
+      },
+      {
+        "name": "language",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "cmplz_edit_item"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/wpfc_wppolls_ajax_request/output/fuzzer-1/vulnerable-candidates.json,9b6a7cbb-14d1-4b1d-be17-919db71db7e0:  query_params:{"action": "wpfc_wppolls_ajax_request"} body_params:{"poll_id": "fe"}

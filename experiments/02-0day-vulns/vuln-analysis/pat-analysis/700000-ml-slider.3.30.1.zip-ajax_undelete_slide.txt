@@ -1,0 +1,1 @@
+../phuzz-output/700000-ml-slider.3.30.1.zip/ajax_undelete_slide/output/fuzzer-6/vulnerable-candidates.json,da21f3f5-e225-422a-a263-373cd394f0c6:  query_params:{"_wpnonce": "fuzz", "action": "undelete_slide"} body_params:{"slider_id": "fuz:z", "slide_id": "fu"}

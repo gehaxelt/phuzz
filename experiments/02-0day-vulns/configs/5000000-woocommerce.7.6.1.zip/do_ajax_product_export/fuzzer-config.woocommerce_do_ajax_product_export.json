@@ -1,0 +1,62 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "step",
+      "columns",
+      "selected_columns",
+      "export_meta",
+      "export_types",
+      "export_category",
+      "filename"
+    ],
+    "data": [
+      {
+        "name": "step",
+        "value": "fuzz"
+      },
+      {
+        "name": "columns",
+        "value": "fuzz"
+      },
+      {
+        "name": "selected_columns",
+        "value": "fuzz"
+      },
+      {
+        "name": "export_meta",
+        "value": "fuzz"
+      },
+      {
+        "name": "export_types",
+        "value": "fuzz"
+      },
+      {
+        "name": "export_category",
+        "value": "fuzz"
+      },
+      {
+        "name": "filename",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "woocommerce_do_ajax_product_export"
+      }
+    ]
+  }
+}

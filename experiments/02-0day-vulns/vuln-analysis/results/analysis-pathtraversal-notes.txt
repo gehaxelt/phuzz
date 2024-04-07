@@ -1,0 +1,41 @@
+file_exists https://www.php.net/manual/en/function.file-exists.php
+	- supports URL-wrappers stat() functionality - https://www.php.net/manual/en/wrappers.php
+	- => ftp://
+	- Interesting modes: equal, prefix
+
+is_dir https://www.php.net/manual/de/function.is-dir.php
+	- supports URL-wrappers stat() functionality - https://www.php.net/manual/en/wrappers.php
+	- => ftp://
+	- Interesting modes: equal, prefix
+
+file https://www.php.net/manual/de/function.file.php
+	- if fopen wrappers are active, any URL and protocol can be opened - https://www.php.net/manual/de/filesystem.configuration.php#ini.allow-url-fopen
+	- Interesting modes: equal, prefix
+
+
+is_file https://www.php.net/manual/de/function.is-file.php
+	- supports URL-wrappers stat() functionality - https://www.php.net/manual/en/wrappers.php
+	- => ftp://
+	- Interesting modes: equal, prefix
+
+realpath https://www.php.net/manual/de/function.realpath.php
+	- No so interesting by itself? 
+	- Returns resolved path (without ../) maybe used by other functions?
+	- Interesting modes: equal, suffix 
+
+mkdir https://www.php.net/manual/de/function.mkdir.php
+	- Creates a directory if it does not exist.
+	- Interesting modes: equal, prefix, suffix?
+
+is_readable https://www.php.net/manual/de/function.is-readable.php
+	- supports URL-wrappers stat() functionality - https://www.php.net/manual/en/wrappers.php
+	- => ftp://
+	- Interesting modes: equal, prefix
+
+fopen https://www.php.net/manual/de/function.fopen.php
+	- Can load remote resources if allow_url_fopen is active. https://www.php.net/manual/de/filesystem.configuration.php#ini.allow-url-fopen
+	- Interesting modes: equal, prefix
+
+unlink https://www.php.net/manual/de/function.unlink.php
+	- Deletes a file
+	- Interesting modes: equal, prefix, suffix

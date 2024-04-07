@@ -1,0 +1,1 @@
+../phuzz-output/5000000-jetpack.12.1.zip/ajax_tracks/output/fuzzer-7/vulnerable-candidates.json,ff85119c-c4b5-4198-a4e8-5ace752bea8b:  query_params:{"tracksNonce": "fuzz", "action": "jetpack_tracks", "tracksEventProp": "fuzz", "tracksEventType": "fuzz", "tracksEventName": "fu"}

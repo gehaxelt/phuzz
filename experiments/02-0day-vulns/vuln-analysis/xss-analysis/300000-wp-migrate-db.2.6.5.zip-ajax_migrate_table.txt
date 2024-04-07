@@ -1,0 +1,1 @@
+../phuzz-output/300000-wp-migrate-db.2.6.5.zip/ajax_migrate_table/output/fuzzer-2/vulnerable-candidates.json,2fc65425-b480-4ebc-b8f9-8056543b0622:  query_params:{"action": "wpmdb_migrate_table"} body_params:{"form_data": "fu<img src='x' onerror='alert(0xdeadbeef)'>zz"}

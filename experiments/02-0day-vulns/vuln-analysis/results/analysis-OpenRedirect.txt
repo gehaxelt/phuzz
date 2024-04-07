@@ -1,0 +1,10 @@
+# Ninja Forms
+- Candidate: ../phuzz-output/900000-ninja-forms.3.6.23.zip/connect/output/fuzzer-1/vulnerable-candidates.json
+- Fixed params: "action=nf_oauth_connect", "nonce=fuzz"
+- Fuzzed params: "redirect=fuzz","client_id=fu>z"
+- Code: services/oauth.php //  public function connect() {
+- Authenticated: Yes, as admin user: current_user_can('manage_options')
+- Nonce needed: Yes, wp_verify_nonce( $_REQUEST['nonce'], 'nf-oauth-connect' )
+- Exploitable: Yes, wp_redirect( $redirect );
+- Impact: None
+- False positive: No

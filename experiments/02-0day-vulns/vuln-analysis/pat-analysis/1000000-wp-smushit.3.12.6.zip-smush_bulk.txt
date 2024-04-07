@@ -1,0 +1,1 @@
+../phuzz-output/1000000-wp-smushit.3.12.6.zip/smush_bulk/output/fuzzer-10/vulnerable-candidates.json,aaca8673-2302-4bed-8668-24c5700cc014:  query_params:{"action": "wp_smushit_nextgen_bulk", "attachment_id": "fuzzAkQ", "is_bulk_resmush": "fu"}

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wapiti scan report</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/kube.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/master.css" />
+</head>
+<body>
+    <div id="page">
+        <header style="text-align: center">
+        <h2 class="title" style="text-align: center">Wapiti vulnerability report</h2>
+        <h3>Target: http://web/wp-content/plugins/phastpress/phast.php?src=fuzz&service=scripts</h3>
+        <p>Date of the scan: Thu, 21 Mar 2024 13:19:25 +0000. Scope of the scan: folder. Crawled pages: 1</p>
+        </header>
+        <hr />
+
+        <h4>Summary</h4>
+        <table class="width-100 hovered" style="background: url('logo_clear.png') no-repeat center;">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Number of vulnerabilities found</th>
+                </tr>
+            </thead>
+            <tbody id="summary">
+                    <tr>
+                        <td class="small">
+                            Backup file
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Weak credentials
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            CRLF Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_3">Content Security Policy Configuration</a>
+                        </td>
+                        <td class="small .text-centered">1</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Cross Site Request Forgery
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Potentially dangerous file
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Command execution
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Path Traversal
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web application framework
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web server
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Htaccess Bypass
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HTML Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_12">HTTP Secure Headers</a>
+                        </td>
+                        <td class="small .text-centered">2</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HttpOnly Flag cookie
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Unencrypted Channels
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Log4Shell
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_16">Open Redirect</a>
+                        </td>
+                        <td class="small .text-centered">2</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Reflected Cross Site Scripting
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Secure Flag cookie
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Spring4Shell
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            SQL Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            TLS/SSL misconfigurations
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Server Side Request Forgery
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Stored HTML Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Stored Cross Site Scripting
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Subdomain takeover
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Blind SQL Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Unrestricted File Upload
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            XML External Entity
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Internal Server Error
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Resource consumption
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Review Webserver Metafiles for Information Leakage
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web technology
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HTTP Methods
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+            </tbody>
+        </table>
+        <hr />
+        <div id="details">
+                <h3 id="vuln_type_3">Content Security Policy Configuration</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks.</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /wp-content/plugins/phastpress/phast.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-3-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-3-0-2">HTTP Request</a>
+                                <a href="#tab-vuln-3-0-3">HTTP Response</a>
+                            <a href="#tab-vuln-3-0-4">cURL command line</a>
+                            <a href="#tab-vuln-3-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-3-0-1" style="min-height: 124px;">
+                            <pre>CSP is not set</pre>
+                        </section>
+                        <section id="tab-vuln-3-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /wp-content/plugins/phastpress/phast.php?src=fuzz&amp;service=scripts HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0
+                                    <br>
+                                    accept-language: en-US,en;q=0.5
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+                                    <br>
+                                    sec-fetch-user: ?1
+                                    <br>
+                                    sec-fetch-site: none
+                                    <br>
+                                    sec-fetch-mode: navigate
+                                    <br>
+                                    sec-fetch-dest: document
+                                    <br>
+                                    upgrade-insecure-requests: 1
+                                    <br>
+                                    dnt: 1
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-3-0-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 404<br />
+                                            date: Thu, 21 Mar 2024 13:19:31 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            content-length: 265<br />
+                                            keep-alive: timeout=5, max=99<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=iso-8859-1<br />
+                                    <br />
+                                    &lt;!DOCTYPE HTML PUBLIC &#34;-//IETF//DTD HTML 2.0//EN&#34;&gt;
+&lt;html&gt;&lt;head&gt;
+&lt;title&gt;404 Not Found&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;Not Found&lt;/h1&gt;
+&lt;p&gt;The requested URL was not found on this server.&lt;/p&gt;
+&lt;hr&gt;
+&lt;address&gt;Apache/2.4.57 (Debian) Server at web Port 80&lt;/address&gt;
+&lt;/body&gt;&lt;/html&gt;
+
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-3-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/wp-content/plugins/phastpress/phast.php?src=fuzz&amp;service=scripts&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-3-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-CONF-12&#39;, &#39;OSHP-Content-Security-Policy&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>Configuring Content Security Policy involves adding the Content-Security-Policy HTTP header to a web page and giving it values to control what resources the user agent is allowed to load for that page.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Mozilla: Content Security Policy (CSP)</a></li>
+                    <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">OWASP: Content Security Policy Cheat Sheet</a></li>
+                    <li><a href="https://owasp.org/www-pdf-archive/2019-02-22_-_How_do_I_Content_Security_Policy_-_Print.pdf">OWASP: How to do Content Security Policy (PDF)</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/12-Test_for_Content_Security_Policy">OWASP: Content Security Policy</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_12">HTTP Secure Headers</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>HTTP security headers tell the browser how to behave when handling the website&#39;s content.</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /wp-content/plugins/phastpress/phast.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-12-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-12-0-2">HTTP Request</a>
+                                <a href="#tab-vuln-12-0-3">HTTP Response</a>
+                            <a href="#tab-vuln-12-0-4">cURL command line</a>
+                            <a href="#tab-vuln-12-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-12-0-1" style="min-height: 124px;">
+                            <pre>X-Frame-Options is not set</pre>
+                        </section>
+                        <section id="tab-vuln-12-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /wp-content/plugins/phastpress/phast.php?src=fuzz&amp;service=scripts HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0
+                                    <br>
+                                    accept-language: en-US,en;q=0.5
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+                                    <br>
+                                    sec-fetch-user: ?1
+                                    <br>
+                                    sec-fetch-site: none
+                                    <br>
+                                    sec-fetch-mode: navigate
+                                    <br>
+                                    sec-fetch-dest: document
+                                    <br>
+                                    upgrade-insecure-requests: 1
+                                    <br>
+                                    dnt: 1
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-12-0-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 301<br />
+                                            date: Thu, 21 Mar 2024 13:19:30 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            location: fuzz<br />
+                                            cache-control: max-age=86400<br />
+                                            content-length: 14<br />
+                                            keep-alive: timeout=5, max=57<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=UTF-8<br />
+                                    <br />
+                                    
+Unauthorized
+
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-12-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/wp-content/plugins/phastpress/phast.php?src=fuzz&amp;service=scripts&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-12-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;OSHP-X-Frame-Options&#39;]</pre>
+                        </section>
+                        <h4>🟡 Vulnerability found in /wp-content/plugins/phastpress/phast.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-12-1-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-12-1-2">HTTP Request</a>
+                                <a href="#tab-vuln-12-1-3">HTTP Response</a>
+                            <a href="#tab-vuln-12-1-4">cURL command line</a>
+                            <a href="#tab-vuln-12-1-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-12-1-1" style="min-height: 124px;">
+                            <pre>X-Content-Type-Options is not set</pre>
+                        </section>
+                        <section id="tab-vuln-12-1-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /wp-content/plugins/phastpress/phast.php?src=fuzz&amp;service=scripts HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0
+                                    <br>
+                                    accept-language: en-US,en;q=0.5
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+                                    <br>
+                                    sec-fetch-user: ?1
+                                    <br>
+                                    sec-fetch-site: none
+                                    <br>
+                                    sec-fetch-mode: navigate
+                                    <br>
+                                    sec-fetch-dest: document
+                                    <br>
+                                    upgrade-insecure-requests: 1
+                                    <br>
+                                    dnt: 1
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-12-1-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 301<br />
+                                            date: Thu, 21 Mar 2024 13:19:30 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            location: fuzz<br />
+                                            cache-control: max-age=86400<br />
+                                            content-length: 14<br />
+                                            keep-alive: timeout=5, max=57<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=UTF-8<br />
+                                    <br />
+                                    
+Unauthorized
+
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-12-1-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/wp-content/plugins/phastpress/phast.php?src=fuzz&amp;service=scripts&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-12-1-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;OSHP-X-Content-Type-Options&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>Use the recommendations for hardening your HTTP Security Headers.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-project-secure-headers/#div-bestpractices">OSHP: OWASP Secure Headers Project Best Practices</a></li>
+                    <li><a href="https://www.netsparker.com/blog/web-security/http-security-headers/">Netsparker: HTTP Security Headers: An Easy Way to Harden Your Web Applications</a></li>
+                    <li><a href="https://www.keycdn.com/blog/http-security-headers">KeyCDN: Hardening Your HTTP Security Headers</a></li>
+                    <li><a href="https://owasp.org/www-chapter-ghana/assets/slides/HTTP_Header_Security.pdf">OWASP: HTTP SECURITY HEADERS (Protection For Browsers) (PDF)</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/09-Testing_for_Clickjacking">OWASP: Clickjacking</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting">OWASP: Reflected Cross Site Scripting</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting">OWASP: Stored Cross Site Scripting</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/07-Test_HTTP_Strict_Transport_Security">OWASP: HTTP Strict Transport Security</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_16">Open Redirect</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>Unvalidated redirects and forwards are possible when a web application accepts untrusted input that could cause the web application to redirect the request to a URL contained within untrusted input. By modifying untrusted URL input to a malicious site, an attacker may successfully launch a phishing scam and steal user credentials.</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /wp-content/plugins/phastpress/phast.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-16-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-16-0-2">HTTP Request</a>
+                                <a href="#tab-vuln-16-0-3">HTTP Response</a>
+                            <a href="#tab-vuln-16-0-4">cURL command line</a>
+                            <a href="#tab-vuln-16-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-16-0-1" style="min-height: 124px;">
+                            <pre>Open Redirect via injection in the parameter src</pre>
+                        </section>
+                        <section id="tab-vuln-16-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /wp-content/plugins/phastpress/phast.php?src=https%3A%2F%2Fopenbugbounty.org%2F&amp;service=scripts HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0
+                                    <br>
+                                    accept-language: en-US,en;q=0.5
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+                                    <br>
+                                    sec-fetch-user: ?1
+                                    <br>
+                                    sec-fetch-site: none
+                                    <br>
+                                    sec-fetch-mode: navigate
+                                    <br>
+                                    sec-fetch-dest: document
+                                    <br>
+                                    upgrade-insecure-requests: 1
+                                    <br>
+                                    dnt: 1
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-16-0-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 301<br />
+                                            date: Thu, 21 Mar 2024 13:19:26 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            location: https://openbugbounty.org/<br />
+                                            cache-control: max-age=86400<br />
+                                            content-length: 14<br />
+                                            keep-alive: timeout=5, max=100<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=UTF-8<br />
+                                    <br />
+                                    
+Unauthorized
+
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-16-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/wp-content/plugins/phastpress/phast.php?src=https%3A%2F%2Fopenbugbounty.org%2F&amp;service=scripts&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-16-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-CLNT-04&#39;]</pre>
+                        </section>
+                        <h4>🟡 Vulnerability found in /wp-content/plugins/phastpress/phast.php</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-16-1-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-16-1-2">HTTP Request</a>
+                                <a href="#tab-vuln-16-1-3">HTTP Response</a>
+                            <a href="#tab-vuln-16-1-4">cURL command line</a>
+                            <a href="#tab-vuln-16-1-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-16-1-1" style="min-height: 124px;">
+                            <pre>Open Redirect via injection in the parameter src</pre>
+                        </section>
+                        <section id="tab-vuln-16-1-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /wp-content/plugins/phastpress/phast.php?src=%2F%2Fopenbugbounty.org%2F&amp;service=scripts HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0
+                                    <br>
+                                    accept-language: en-US,en;q=0.5
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+                                    <br>
+                                    sec-fetch-user: ?1
+                                    <br>
+                                    sec-fetch-site: none
+                                    <br>
+                                    sec-fetch-mode: navigate
+                                    <br>
+                                    sec-fetch-dest: document
+                                    <br>
+                                    upgrade-insecure-requests: 1
+                                    <br>
+                                    dnt: 1
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-16-1-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 301<br />
+                                            date: Thu, 21 Mar 2024 13:19:26 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            location: //openbugbounty.org/<br />
+                                            cache-control: max-age=86400<br />
+                                            content-length: 14<br />
+                                            keep-alive: timeout=5, max=99<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=UTF-8<br />
+                                    <br />
+                                    
+Unauthorized
+
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-16-1-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/wp-content/plugins/phastpress/phast.php?src=%2F%2Fopenbugbounty.org%2F&amp;service=scripts&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-16-1-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-CLNT-04&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>Force all redirects to first go through a page notifying users that they are going off of your site, and have them click a link to confirm.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html">Unvalidated Redirects and Forwards Cheat Sheet</a></li>
+                    <li><a href="https://www.acunetix.com/blog/web-security-zone/what-are-open-redirects/">Acunetix: What Are Open Redirects?</a></li>
+                    <li><a href="https://cwe.mitre.org/data/definitions/601.html">CWE-601: URL Redirection to Untrusted Site (&#39;Open Redirect&#39;)</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/04-Testing_for_Client-side_URL_Redirect">OWASP: Client-side URL Redirect</a></li>
+                </ul>
+                <br />
+                <hr>
+        </div>
+        <footer class="small" id="footer"><a href="https://wapiti-scanner.github.io/" id="wapiti_link">Wapiti 3.1.8</a> &copy; Nicolas SURRIBAS 2006-2022</footer>
+	</div>
+    <script type="text/javascript" src="js/kube.min.js"></script>
+    <script>$K.init();</script>
+</body>
+</html>

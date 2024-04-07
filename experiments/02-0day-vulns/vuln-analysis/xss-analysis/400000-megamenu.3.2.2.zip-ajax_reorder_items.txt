@@ -1,0 +1,1 @@
+../phuzz-output/400000-megamenu.3.2.2.zip/ajax_reorder_items/output/fuzzer-1/vulnerable-candidates.json,dd1f38d4-3843-4664-8422-798e84008643:  query_params:{"action": "mm_reorder_items"} body_params:{"items": "fuzz<img src='x' onerror='alert(0xdeadbeef)'>"}

@@ -1,0 +1,44 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [
+      "nonce"
+    ],
+    "fuzz": [
+      "notice_action",
+      "cn_network",
+      "param"
+    ],
+    "data": [
+      {
+        "name": "nonce",
+        "value": "fuzz"
+      },
+      {
+        "name": "cn_network",
+        "value": "fuzz"
+      },
+      {
+        "name": "param",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "cn_dismiss_notice"
+      }
+    ]
+  }
+}

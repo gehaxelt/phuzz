@@ -1,0 +1,1 @@
+../phuzz-output/3000000-updraftplus.1.23.3.zip/wp_ajax_updraftcentral_receivepublickey/output/fuzzer-1/vulnerable-candidates.json,a0044117-2d6b-48fa-82ab-7d8d42acfd1b:  query_params:{"_wpnonce": "fuzz", "action": "updraftcentral_receivepublickey", "updraft_key_index": "fuzz", "public_key": "fu<script>alert(0xdeadbeef)</script>zz"}

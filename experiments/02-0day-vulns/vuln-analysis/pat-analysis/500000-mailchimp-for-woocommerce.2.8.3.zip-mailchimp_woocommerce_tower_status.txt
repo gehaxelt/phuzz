@@ -1,0 +1,1 @@
+../phuzz-output/500000-mailchimp-for-woocommerce.2.8.3.zip/mailchimp_woocommerce_tower_status/output/fuzzer-7/vulnerable-candidates.json,0883d7a4-84de-4422-81c7-fa081035bf69:  query_params:{"action": "mailchimp_woocommerce_tower_status"} body_params:{"opt": "fu"}

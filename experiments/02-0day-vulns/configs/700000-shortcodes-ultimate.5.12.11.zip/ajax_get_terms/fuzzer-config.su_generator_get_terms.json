@@ -1,0 +1,45 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "tax",
+      "class",
+      "multiple",
+      "size",
+      "noselect"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "su_generator_get_terms"
+      },
+      {
+        "name": "tax",
+        "value": "fuzz"
+      },
+      {
+        "name": "class",
+        "value": "fuzz"
+      },
+      {
+        "name": "multiple",
+        "value": "fuzz"
+      },
+      {
+        "name": "size",
+        "value": "fuzz"
+      },
+      {
+        "name": "noselect",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

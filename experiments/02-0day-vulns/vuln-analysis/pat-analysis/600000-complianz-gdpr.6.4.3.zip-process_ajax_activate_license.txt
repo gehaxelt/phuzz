@@ -1,0 +1,1 @@
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/process_ajax_activate_license/output/fuzzer-2/vulnerable-candidates.json,13f3e7f6-8e9b-45fa-a617-6721cd405154:  query_params:{"action": "rsp_upgrade_activate_license", "item_id": "fuzz", "license": "fuzz", "token": "fu"}

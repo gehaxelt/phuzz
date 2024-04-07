@@ -1,0 +1,513 @@
+failed to open file:  # PathTraversal
+../phuzz-output/1000000-all-in-one-wp-security-and-firewall.5.1.8.zip/ajax/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/1000000-all-in-one-wp-security-and-firewall.5.1.8.zip/tfaInitLogin/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/1000000-astra-sites.3.2.1.zip/activate_plugin/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/1000000-astra-sites.3.2.1.zip/activate_plugin/output/fuzzer-10/vulnerable-candidates.json
+Failed to find vulnpath file:  c0ab8bd7-fbc3-4790-b460-3595af413258
+../phuzz-output/1000000-astra-sites.3.2.1.zip/activate_plugin/output/fuzzer-2/vulnerable-candidates.json
+Failed to find vulnpath file:  e3bf0b01-28c0-45f6-8f53-d34ae359bf9f
+../phuzz-output/1000000-astra-sites.3.2.1.zip/activate_plugin/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/1000000-astra-sites.3.2.1.zip/activate_plugin/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/1000000-astra-sites.3.2.1.zip/activate_plugin/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/1000000-astra-sites.3.2.1.zip/activate_plugin/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/1000000-astra-sites.3.2.1.zip/activate_plugin/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/1000000-astra-sites.3.2.1.zip/activate_plugin/output/fuzzer-8/vulnerable-candidates.json
+Failed to find vulnpath file:  aedd8485-ab1b-4b7f-a495-bcfc987f96bb
+../phuzz-output/1000000-astra-sites.3.2.1.zip/activate_plugin/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/1000000-astra-sites.3.2.1.zip/dismiss_notice/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/1000000-autoptimize.3.1.7.zip/critcss_rm_callback/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/1000000-autoptimize.3.1.7.zip/critcss_rm_callback/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_activate_addon/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_activate_addon/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_activate_addon/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_activate_addon/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_activate_addon/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_activate_addon/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_activate_addon/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_activate_addon/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_activate_addon/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_install_addon/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_install_addon/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_install_addon/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_install_addon/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_install_addon/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_install_addon/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_install_addon/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_install_addon/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_install_addon/output/fuzzer-8/vulnerable-candidates.json
+Failed to find vulnpath file:  027b6ffd-7e25-4d3e-85cc-c50791f6f9f2
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_install_addon/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/1000000-disable-comments.2.4.3.zip/get_sub_sites/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/1000000-essential-addons-for-elementor-lite.5.7.1.zip/ajax_activate_plugin/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/1000000-essential-addons-for-elementor-lite.5.7.1.zip/ajax_activate_plugin/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/1000000-essential-addons-for-elementor-lite.5.7.1.zip/ajax_activate_plugin/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/1000000-essential-addons-for-elementor-lite.5.7.1.zip/ajax_activate_plugin/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/1000000-essential-addons-for-elementor-lite.5.7.1.zip/ajax_activate_plugin/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/1000000-essential-addons-for-elementor-lite.5.7.1.zip/ajax_activate_plugin/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/1000000-essential-addons-for-elementor-lite.5.7.1.zip/ajax_activate_plugin/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/1000000-essential-addons-for-elementor-lite.5.7.1.zip/ajax_activate_plugin/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/1000000-essential-addons-for-elementor-lite.5.7.1.zip/ajax_activate_plugin/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/1000000-essential-addons-for-elementor-lite.5.7.1.zip/ajax_activate_plugin/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/1000000-instagram-feed.6.1.4.zip/sbi_activate_addon/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/1000000-instagram-feed.6.1.4.zip/sbi_activate_addon/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/1000000-instagram-feed.6.1.4.zip/sbi_activate_addon/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/1000000-instagram-feed.6.1.4.zip/sbi_activate_addon/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/1000000-instagram-feed.6.1.4.zip/sbi_activate_addon/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/1000000-instagram-feed.6.1.4.zip/sbi_activate_addon/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/1000000-instagram-feed.6.1.4.zip/sbi_activate_addon/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/1000000-instagram-feed.6.1.4.zip/sbi_activate_addon/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/1000000-instagram-feed.6.1.4.zip/sbi_activate_addon/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/1000000-instagram-feed.6.1.4.zip/sbi_activate_addon/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/1000000-instagram-feed.6.1.4.zip/sbi_deactivate_addon/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/1000000-seo-by-rank-math.1.0.114.zip/oembed_handler/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/1000000-seo-by-rank-math.1.0.114.zip/oembed_handler/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/clear_cache_column/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/clear_cache_column/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/clear_cache_column/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/clear_cache_column/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/clear_cache_column/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/delete_current_page_cache/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/delete_current_page_cache/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/delete_current_page_cache/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/delete_current_page_cache/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/delete_current_page_cache/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/delete_current_page_cache/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/delete_current_page_cache/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/delete_current_page_cache/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/delete_current_page_cache/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/delete_current_page_cache/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/wpfc_save_exclude_pages_callback/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/wpfc_save_exclude_pages_callback/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/wpfc_save_timeout_pages_callback/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/wpfc_wppolls_ajax_request/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/wpfc_wppolls_ajax_request/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/1000000-wp-smushit.3.12.6.zip/directory_smush_finish/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/1000000-wp-smushit.3.12.6.zip/scan_images/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/1000000-wp-smushit.3.12.6.zip/smush_bulk/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/300000-ad-inserter.2.7.28.zip/ai_ajax/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-ad-inserter.2.7.28.zip/ai_ajax/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/300000-ad-inserter.2.7.28.zip/ai_ajax/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-custom-fonts.1.3.7.zip/dismiss_notice/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/300000-custom-fonts.1.3.7.zip/dismiss_notice/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-imsanity.2.8.2.zip/imsanity_ajax_resize/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-imsanity.2.8.2.zip/imsanity_ajax_resize/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/300000-imsanity.2.8.2.zip/imsanity_ajax_resize/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-imsanity.2.8.2.zip/imsanity_get_images/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-pdf-embedder.4.6.4.zip/activate_partner/output/fuzzer-1/vulnerable-candidates.json
+Failed to find vulnpath file:  79df2448-1519-417b-b965-3f304cdb854b
+../phuzz-output/300000-pdf-embedder.4.6.4.zip/activate_partner/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/300000-pdf-embedder.4.6.4.zip/activate_partner/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-pdf-embedder.4.6.4.zip/activate_partner/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-pdf-embedder.4.6.4.zip/activate_partner/output/fuzzer-4/vulnerable-candidates.json
+Failed to find vulnpath file:  bbf6da88-1c95-4c5c-bf4a-95246180e5da
+../phuzz-output/300000-pdf-embedder.4.6.4.zip/activate_partner/output/fuzzer-5/vulnerable-candidates.json
+Failed to find vulnpath file:  6a3d7ed5-a92a-4baf-8e4d-73e0799d0d2b
+../phuzz-output/300000-pdf-embedder.4.6.4.zip/activate_partner/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/300000-pdf-embedder.4.6.4.zip/activate_partner/output/fuzzer-7/vulnerable-candidates.json
+Failed to find vulnpath file:  ddf6e85f-0322-4158-b0ed-d1eb3a105da9
+../phuzz-output/300000-pdf-embedder.4.6.4.zip/activate_partner/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/300000-pdf-embedder.4.6.4.zip/activate_partner/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-pdf-embedder.4.6.4.zip/install_partner/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-pdf-embedder.4.6.4.zip/install_partner/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-popup-builder.4.1.14.zip/addToCounter/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/300000-popup-builder.4.1.14.zip/importSubscribers/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/300000-popup-builder.4.1.14.zip/importSubscribers/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-popup-builder.4.1.14.zip/importSubscribers/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-popup-builder.4.1.14.zip/importSubscribers/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/300000-popup-builder.4.1.14.zip/importSubscribers/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/300000-popup-builder.4.1.14.zip/importSubscribers/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-popup-builder.4.1.14.zip/importSubscribers/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/300000-popup-builder.4.1.14.zip/importSubscribers/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-popup-builder.4.1.14.zip/reactivateNotification/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-popup-builder.4.1.14.zip/saveImportedSubscribers/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-popup-builder.4.1.14.zip/saveImportedSubscribers/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/300000-popup-builder.4.1.14.zip/saveImportedSubscribers/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-popup-builder.4.1.14.zip/sgpbAutosave/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_activate/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_activate/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_activate/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_activate/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_activate/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_activate/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_activate/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_activate/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_activate/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_activate/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_install/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_install/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_install/output/fuzzer-2/vulnerable-candidates.json
+Failed to find vulnpath file:  df5cc175-1553-42f8-ab71-988c0583a020
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_install/output/fuzzer-4/vulnerable-candidates.json
+Failed to find vulnpath file:  f19a04e8-ecef-4a81-ba5f-de133a0d7931
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_install/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_install/output/fuzzer-6/vulnerable-candidates.json
+Failed to find vulnpath file:  c467cb03-56cd-405e-bcb3-c12656981775
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_install/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_install/output/fuzzer-8/vulnerable-candidates.json
+Failed to find vulnpath file:  591019d7-c960-41d8-9858-a950a51516ba
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_addon_install/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_validate_pretty_link/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_validate_pretty_link/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/300000-pretty-link.3.4.2.zip/save_bulk_edit/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-shortpixel-image-optimiser.5.2.1.zip/ajaxBrowseContent/output/fuzzer-1/vulnerable-candidates.json
+Failed to find vulnpath file:  cf140a5c-3f78-4f31-929a-4e58260b14bb
+../phuzz-output/300000-shortpixel-image-optimiser.5.2.1.zip/ajaxBrowseContent/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/300000-shortpixel-image-optimiser.5.2.1.zip/ajaxBrowseContent/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-shortpixel-image-optimiser.5.2.1.zip/ajaxBrowseContent/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-shortpixel-image-optimiser.5.2.1.zip/ajaxBrowseContent/output/fuzzer-4/vulnerable-candidates.json
+Failed to find vulnpath file:  57457a2c-dfa8-4cc3-a71d-f70c069a9ba1
+../phuzz-output/300000-shortpixel-image-optimiser.5.2.1.zip/ajaxBrowseContent/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/300000-shortpixel-image-optimiser.5.2.1.zip/ajaxBrowseContent/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-shortpixel-image-optimiser.5.2.1.zip/ajaxBrowseContent/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_activate_plugin/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_activate_plugin/output/fuzzer-10/vulnerable-candidates.json
+Failed to find vulnpath file:  91eb37f6-f84c-4ceb-bc8d-661d0d09131c
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_activate_plugin/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_activate_plugin/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_activate_plugin/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_activate_plugin/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_activate_plugin/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_activate_plugin/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_activate_plugin/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_activate_plugin/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_install_plugin/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_install_plugin/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_install_plugin/output/fuzzer-2/vulnerable-candidates.json
+Failed to find vulnpath file:  586307df-edba-4bcf-8ef2-a5c161518f5f
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_install_plugin/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_install_plugin/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_install_plugin/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_install_plugin/output/fuzzer-6/vulnerable-candidates.json
+Failed to find vulnpath file:  d5de8e3d-3a2b-4e26-a4ef-2e5d722d6e88
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_install_plugin/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_install_plugin/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_install_plugin/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/add_exclude_files/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/check_filesystem_permissions/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/check_filesystem_permissions/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/check_filesystem_permissions/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/check_filesystem_permissions/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/check_filesystem_permissions/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/check_filesystem_permissions/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/check_filesystem_permissions/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/check_filesystem_permissions/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/check_filesystem_permissions/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/check_filesystem_permissions/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_all_image/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_all_image/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_all_image/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_all_image/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_all_image/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_all_image/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_all_image/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_all_image/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_all_image/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_selected_image/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_selected_image/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_selected_image/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_selected_image/output/fuzzer-3/vulnerable-candidates.json
+Failed to find vulnpath file:  21e49ec5-1db7-4cd5-bcd6-80cd0518a68b
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_selected_image/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_selected_image/output/fuzzer-5/vulnerable-candidates.json
+Failed to find vulnpath file:  ec1ad0c4-a1a0-4f8f-9197-f75b6f69269b
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_selected_image/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_selected_image/output/fuzzer-7/vulnerable-candidates.json
+Failed to find vulnpath file:  031928fc-1bb5-4f94-a9de-35aa0e2b05dc
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_selected_image/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_selected_image/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/download_restore_progress/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/download_restore_progress/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/download_restore_progress/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/download_restore_progress/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/download_restore_progress/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/download_restore_progress/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/download_restore_progress/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/download_restore_progress/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/download_restore_progress/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/download_restore_progress/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/generate_url/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/generate_url/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/get_iso_list/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/get_iso_list/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/get_iso_list/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/get_iso_list/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/get_iso_list/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/get_iso_list/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/get_iso_list/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/get_iso_list/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/init_download_page/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/init_download_page/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/migrate_now/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/migrate_now/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/migrate_now/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/migrate_now/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/migrate_now/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/migrate_now/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/migrate_now/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/migrate_now/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/migrate_now/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/migrate_now/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/prepare_download_backup/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/read_last_backup_log/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/read_last_backup_log/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/read_last_backup_log/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/read_last_backup_log/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/read_last_backup_log/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/read_last_backup_log/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/read_last_backup_log/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/read_last_backup_log/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/read_last_backup_log/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/read_last_backup_log/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_all_image/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_all_image/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_all_image/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_all_image/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_all_image/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_all_image/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_all_image/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_all_image/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_all_image/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_all_image/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_selected_image/output/fuzzer-1/vulnerable-candidates.json
+Failed to find vulnpath file:  c94739ab-9029-4d5e-840c-e1471ccdaa8c
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_selected_image/output/fuzzer-10/vulnerable-candidates.json
+Failed to find vulnpath file:  a9ac9024-0a1e-497a-a389-25b9e7f53f65
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_selected_image/output/fuzzer-2/vulnerable-candidates.json
+Failed to find vulnpath file:  389c4083-c680-4afe-af40-defaec50365f
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_selected_image/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_selected_image/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_selected_image/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_selected_image/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_selected_image/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/restore_selected_image/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/scan_uploads_files_from_post/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/upload_files/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/upload_files/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/upload_files/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/upload_files/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/upload_files/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/upload_files/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/upload_files/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/upload_files/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/upload_files/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/upload_files/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/view_backup_log/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/wpvivid_download_export_backup/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/wpvivid_download_export_backup/output/fuzzer-10/vulnerable-candidates.json
+Failed to find vulnpath file:  8c0356bb-3362-48a8-b905-d5d8d9e879a4
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/wpvivid_download_export_backup/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/wpvivid_download_export_backup/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/wpvivid_download_export_backup/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/wpvivid_download_export_backup/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/wpvivid_download_export_backup/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/wpvivid_download_export_backup/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/wpvivid_download_export_backup/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/install_plugin/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/maybe_delete/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_activate_addon/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_activate_addon/output/fuzzer-10/vulnerable-candidates.json
+Failed to find vulnpath file:  491643fa-2891-4cde-bd9f-2bddd7be4825
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_activate_addon/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_activate_addon/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_activate_addon/output/fuzzer-4/vulnerable-candidates.json
+Failed to find vulnpath file:  390340c4-cce7-492a-9d37-e184b6611333
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_activate_addon/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_activate_addon/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_activate_addon/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_activate_addon/output/fuzzer-8/vulnerable-candidates.json
+Failed to find vulnpath file:  33a47f40-a785-4423-b09c-6dc2124ccdb7
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_activate_addon/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_install_addon/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_install_addon/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_install_addon/output/fuzzer-2/vulnerable-candidates.json
+Failed to find vulnpath file:  9103dc19-ac34-405f-a439-76e669c6c815
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_install_addon/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_install_addon/output/fuzzer-4/vulnerable-candidates.json
+Failed to find vulnpath file:  6c32a86a-aed2-4387-898c-d15f826ced6c
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_install_addon/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_install_addon/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_install_addon/output/fuzzer-7/vulnerable-candidates.json
+Failed to find vulnpath file:  4e60fa0d-7a91-4813-b6f8-49c0464e2c7a
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_install_addon/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_install_addon/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/3000000-updraftplus.1.23.3.zip/updraft_ajax_handler/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/3000000-updraftplus.1.23.3.zip/updraft_ajax_handler/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/3000000-updraftplus.1.23.3.zip/updraft_central_ajax_handler/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/3000000-wp-mail-smtp.3.8.0.zip/ajax_generate_url/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/3000000-wp-mail-smtp.3.8.0.zip/remove_oauth_connection/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/3000000-wp-mail-smtp.3.8.0.zip/remove_oauth_connection/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/3000000-wp-mail-smtp.3.8.0.zip/send_feedback/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/3000000-wp-mail-smtp.3.8.0.zip/update_settings/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/400000-easy-table-of-contents.2.0.47.1.zip/eztoc_subscribe_for_newsletter/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/400000-easy-table-of-contents.2.0.47.1.zip/eztoc_subscribe_for_newsletter/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/400000-easy-table-of-contents.2.0.47.1.zip/eztoc_subscribe_for_newsletter/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/400000-forminator.1.23.3.zip/process_action/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/400000-megamenu.3.2.2.zip/ajax_delete_widget/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/400000-megamenu.3.2.2.zip/ajax_update_menu_item_columns/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/400000-woo-checkout-field-editor-pro.zip/activate_themehigh_plugins/output/fuzzer-1/vulnerable-candidates.json
+Failed to find vulnpath file:  ed611e30-acaf-4580-b447-a89e33af53e3
+../phuzz-output/400000-woo-checkout-field-editor-pro.zip/activate_themehigh_plugins/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/400000-woo-checkout-field-editor-pro.zip/activate_themehigh_plugins/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/400000-woo-checkout-field-editor-pro.zip/activate_themehigh_plugins/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/400000-woo-checkout-field-editor-pro.zip/activate_themehigh_plugins/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/400000-woo-checkout-field-editor-pro.zip/activate_themehigh_plugins/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/400000-woo-checkout-field-editor-pro.zip/activate_themehigh_plugins/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/400000-woo-checkout-field-editor-pro.zip/activate_themehigh_plugins/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/400000-woo-checkout-field-editor-pro.zip/activate_themehigh_plugins/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/400000-woo-checkout-field-editor-pro.zip/activate_themehigh_plugins/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/4000000-litespeed-cache.5.4.zip/::bulk_edit_purge/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/4000000-litespeed-cache.5.4.zip/::bulk_edit_purge/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/4000000-litespeed-cache.5.4.zip/::bulk_edit_purge/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/4000000-wordfence.7.9.2.zip/wordfence::ajax_lh_callback/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/500000-mailchimp-for-woocommerce.2.8.3.zip/get_user_by_hash/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/500000-mailchimp-for-woocommerce.2.8.3.zip/get_user_by_hash/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/500000-mailchimp-for-woocommerce.2.8.3.zip/mailchimp_woocommerce_ajax_create_account_signup/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/500000-mailchimp-for-woocommerce.2.8.3.zip/mailchimp_woocommerce_ajax_create_account_signup/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/500000-mailchimp-for-woocommerce.2.8.3.zip/mailchimp_woocommerce_ajax_delete_log_file/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/500000-mailchimp-for-woocommerce.2.8.3.zip/mailchimp_woocommerce_ajax_load_log_file/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/500000-mailchimp-for-woocommerce.2.8.3.zip/mailchimp_woocommerce_tower_status/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/500000-official-facebook-pixel.3.0.10.zip/saveFbeSettings/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/500000-ultimate-addons-for-gutenberg.2.5.1.zip/activate_plugin/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/500000-ultimate-addons-for-gutenberg.2.5.1.zip/activate_plugin/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/500000-ultimate-addons-for-gutenberg.2.5.1.zip/activate_plugin/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/500000-ultimate-addons-for-gutenberg.2.5.1.zip/activate_plugin/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/500000-ultimate-addons-for-gutenberg.2.5.1.zip/activate_plugin/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/500000-ultimate-addons-for-gutenberg.2.5.1.zip/activate_plugin/output/fuzzer-5/vulnerable-candidates.json
+Failed to find vulnpath file:  c991a3a2-df12-470a-92b4-ec7197f9ec89
+../phuzz-output/500000-ultimate-addons-for-gutenberg.2.5.1.zip/activate_plugin/output/fuzzer-6/vulnerable-candidates.json
+Failed to find vulnpath file:  89c7c903-db12-4462-8427-d2016bbe9284
+../phuzz-output/500000-ultimate-addons-for-gutenberg.2.5.1.zip/activate_plugin/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/500000-ultimate-addons-for-gutenberg.2.5.1.zip/activate_plugin/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/500000-ultimate-addons-for-gutenberg.2.5.1.zip/activate_plugin/output/fuzzer-9/vulnerable-candidates.json
+Failed to find vulnpath file:  0b151ae4-a19d-40d2-a4a3-ee1393e7b2ed
+../phuzz-output/500000-ultimate-addons-for-gutenberg.2.5.1.zip/dismiss_notice/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/5000000-jetpack.12.1.zip/ajax_tracks/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/5000000-really-simple-ssl.6.2.5.zip/process_ajax_install_plugin/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/5000000-really-simple-ssl.6.2.5.zip/process_ajax_install_plugin/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/5000000-really-simple-ssl.6.2.5.zip/process_ajax_package_information/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/5000000-wordpress-seo.20.6.zip/ajax_get_keyword_usage_and_post_types/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/5000000-wordpress-seo.20.6.zip/wpseo_set_ignore/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/5000000-wordpress-seo.20.6.zip/wpseo_set_ignore/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/5000000-wpforms-lite.1.8.1.2.zip/process/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/5000000-wpforms-lite.1.8.1.2.zip/wpforms_activate_addon/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/5000000-wpforms-lite.1.8.1.2.zip/wpforms_activate_addon/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/5000000-wpforms-lite.1.8.1.2.zip/wpforms_activate_addon/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/5000000-wpforms-lite.1.8.1.2.zip/wpforms_activate_addon/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/5000000-wpforms-lite.1.8.1.2.zip/wpforms_activate_addon/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/5000000-wpforms-lite.1.8.1.2.zip/wpforms_activate_addon/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/5000000-wpforms-lite.1.8.1.2.zip/wpforms_activate_addon/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/5000000-wpforms-lite.1.8.1.2.zip/wpforms_activate_addon/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/5000000-wpforms-lite.1.8.1.2.zip/wpforms_activate_addon/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_delete_snapshot/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_delete_snapshot/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_delete_snapshot/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_delete_snapshot/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_delete_snapshot/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_delete_snapshot/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_delete_snapshot/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_delete_snapshot/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_delete_snapshot/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_delete_snapshot/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_get_list/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_load_gridblock/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_load_gridblock/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_load_gridblock/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_load_gridblock/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_load_gridblock/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_load_gridblock/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_load_gridblock/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_load_gridblock/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_load_gridblock/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/cmplz_generate_preview_css/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/process_ajax_activate_license/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/600000-easy-wp-smtp.2.1.0.zip/get_oauth_url/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/600000-easy-wp-smtp.2.1.0.zip/get_oauth_url/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/600000-easy-wp-smtp.2.1.0.zip/get_oauth_url/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/600000-enable-media-replace.4.1.2.zip/emr_activate/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/600000-enable-media-replace.4.1.2.zip/emr_activate/output/fuzzer-10/vulnerable-candidates.json
+Failed to find vulnpath file:  f702a94b-3cd7-4b33-bc71-98e188ffb2fd
+../phuzz-output/600000-enable-media-replace.4.1.2.zip/emr_activate/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/600000-enable-media-replace.4.1.2.zip/emr_activate/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/600000-enable-media-replace.4.1.2.zip/emr_activate/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/600000-enable-media-replace.4.1.2.zip/emr_activate/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/600000-enable-media-replace.4.1.2.zip/emr_activate/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/600000-enable-media-replace.4.1.2.zip/emr_activate/output/fuzzer-7/vulnerable-candidates.json
+Failed to find vulnpath file:  ca2da4a5-d14f-4d06-a03c-1314566dbb62
+../phuzz-output/600000-enable-media-replace.4.1.2.zip/emr_activate/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/600000-enable-media-replace.4.1.2.zip/emr_activate/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/600000-under-construction-page.3.97.zip/submit_support_message_ajax/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/600000-under-construction-page.3.97.zip/submit_support_message_ajax/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/700000-backwpup.4.0.0.zip/ajax_working/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/700000-backwpup.4.0.0.zip/ajax_working/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/700000-backwpup.4.0.0.zip/ajax_working/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/700000-backwpup.4.0.0.zip/ajax_working/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/700000-backwpup.4.0.0.zip/ajax_working/output/fuzzer-4/vulnerable-candidates.json
+Failed to find vulnpath file:  2e675c06-e4ff-4e6b-ba2e-6fb504588942
+../phuzz-output/700000-backwpup.4.0.0.zip/ajax_working/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/700000-backwpup.4.0.0.zip/ajax_working/output/fuzzer-6/vulnerable-candidates.json
+Failed to find vulnpath file:  3147e3cf-e6ed-4e87-aede-76ed146ec4d1
+../phuzz-output/700000-backwpup.4.0.0.zip/ajax_working/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/700000-backwpup.4.0.0.zip/ajax_working/output/fuzzer-8/vulnerable-candidates.json
+Failed to find vulnpath file:  438a44be-b8b6-4941-9b10-67a3eb719dfa
+../phuzz-output/700000-backwpup.4.0.0.zip/ajax_working/output/fuzzer-9/vulnerable-candidates.json
+Failed to find vulnpath file:  164adda4-bbc9-4906-bcb9-7f212ebaa2c1
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_activate_addon/output/fuzzer-1/vulnerable-candidates.json
+Failed to find vulnpath file:  243f1f79-8f43-4d8e-a552-bfa14ba20600
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_activate_addon/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_activate_addon/output/fuzzer-2/vulnerable-candidates.json
+Failed to find vulnpath file:  fd51fc9c-e2a7-46b2-a0f9-26de8b3e5c6a
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_activate_addon/output/fuzzer-3/vulnerable-candidates.json
+Failed to find vulnpath file:  d001e17d-005a-4522-97c4-5c14e7191041
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_activate_addon/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_activate_addon/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_activate_addon/output/fuzzer-6/vulnerable-candidates.json
+Failed to find vulnpath file:  5785886d-58a0-43ed-9d2c-b2272224ac38
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_activate_addon/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_activate_addon/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_activate_addon/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_install_addon/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_install_addon/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_install_addon/output/fuzzer-2/vulnerable-candidates.json
+Failed to find vulnpath file:  4983a770-ca4e-4c86-82c1-00111cf1a981
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_install_addon/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_install_addon/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_install_addon/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_install_addon/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_install_addon/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_install_addon/output/fuzzer-8/vulnerable-candidates.json
+Failed to find vulnpath file:  513626e8-62e9-4bf0-9f10-49df1c23a16a
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/exactmetrics_ajax_install_addon/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/get_addons/output/fuzzer-10/vulnerable-candidates.json
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/get_addons/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/update_manual_v4/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/update_manual_v4/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/700000-imagify.2.1.1.zip/missing_webp_callback/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/700000-ml-slider.3.30.1.zip/ajax_create_image_slides/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/700000-ml-slider.3.30.1.zip/ajax_create_image_slides/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/700000-ml-slider.3.30.1.zip/ajax_delete_slide/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/700000-ml-slider.3.30.1.zip/ajax_undelete_slide/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/700000-polylang.3.3.3.zip/save_options/output/fuzzer-3/vulnerable-candidates.json
+../phuzz-output/700000-polylang.3.3.3.zip/save_options/output/fuzzer-7/vulnerable-candidates.json
+../phuzz-output/700000-polylang.3.3.3.zip/save_options/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/700000-popup-maker.1.18.1.zip/do_shortcode/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/700000-so-widgets-bundle.1.49.2.zip/admin_ajax_manage_handler/output/fuzzer-1/vulnerable-candidates.json
+Failed to find vulnpath file:  9e2497f3-e595-400a-8866-72b283ff336d
+../phuzz-output/700000-so-widgets-bundle.1.49.2.zip/admin_ajax_manage_handler/output/fuzzer-10/vulnerable-candidates.json
+Failed to find vulnpath file:  645b4b92-847b-4654-9a51-84874462cdfa
+../phuzz-output/700000-so-widgets-bundle.1.49.2.zip/admin_ajax_manage_handler/output/fuzzer-2/vulnerable-candidates.json
+Failed to find vulnpath file:  819eaba5-147c-43e7-903e-2ccef56783cb
+../phuzz-output/700000-so-widgets-bundle.1.49.2.zip/admin_ajax_manage_handler/output/fuzzer-4/vulnerable-candidates.json
+Failed to find vulnpath file:  ca664a3d-0043-4f70-a7a8-4f12c9c09d80
+../phuzz-output/700000-so-widgets-bundle.1.49.2.zip/admin_ajax_manage_handler/output/fuzzer-6/vulnerable-candidates.json
+../phuzz-output/700000-so-widgets-bundle.1.49.2.zip/admin_ajax_manage_handler/output/fuzzer-7/vulnerable-candidates.json
+Failed to find vulnpath file:  d62706aa-d864-470b-a70e-2d4ad0c3b4b0
+../phuzz-output/700000-so-widgets-bundle.1.49.2.zip/admin_ajax_manage_handler/output/fuzzer-8/vulnerable-candidates.json
+../phuzz-output/700000-so-widgets-bundle.1.49.2.zip/admin_ajax_manage_handler/output/fuzzer-9/vulnerable-candidates.json
+Failed to find vulnpath file:  43879a8a-bd2f-45e1-a53b-6358369280b1
+../phuzz-output/700000-so-widgets-bundle.1.49.2.zip/siteorigin_widget_get_posts_count_action/output/fuzzer-2/vulnerable-candidates.json
+../phuzz-output/700000-so-widgets-bundle.1.49.2.zip/siteorigin_widget_get_posts_count_action/output/fuzzer-9/vulnerable-candidates.json
+../phuzz-output/900000-ninja-forms.3.6.23.zip/maybe_delete_field/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/900000-ninja-forms.3.6.23.zip/ninja_forms_ajax_migrate_database/output/fuzzer-1/vulnerable-candidates.json
+../phuzz-output/900000-ninja-forms.3.6.23.zip/ninja_forms_ajax_migrate_database/output/fuzzer-4/vulnerable-candidates.json
+../phuzz-output/900000-ninja-forms.3.6.23.zip/ninja_forms_ajax_migrate_database/output/fuzzer-5/vulnerable-candidates.json
+../phuzz-output/900000-ninja-forms.3.6.23.zip/ninja_forms_ajax_migrate_database/output/fuzzer-6/vulnerable-candidates.json

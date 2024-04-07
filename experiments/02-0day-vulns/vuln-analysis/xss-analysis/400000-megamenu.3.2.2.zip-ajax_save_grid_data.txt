@@ -1,0 +1,1 @@
+../phuzz-output/400000-megamenu.3.2.2.zip/ajax_save_grid_data/output/fuzzer-1/vulnerable-candidates.json,d3c9f0a7-3f0c-4044-89e6-48db921b8606:  query_params:{"action": "mm_save_grid_data"} body_params:{"parent_menu_item": "fuzz", "grid": "Eu<img src='x' onerror='alert(0xdeadbeef)'>zz"}

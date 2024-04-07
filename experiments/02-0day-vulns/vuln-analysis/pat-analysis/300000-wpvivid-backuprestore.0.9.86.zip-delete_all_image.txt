@@ -1,0 +1,1 @@
+../phuzz-output/300000-wpvivid-backuprestore.0.9.86.zip/delete_all_image/output/fuzzer-1/vulnerable-candidates.json,5ab10eb8-43f0-4e44-a0d3-009f0b1b5cb1:  query_params:{"action": "wpvivid_start_delete_all_image"} body_params:{"folder": "fuzz", "search": "fuz7"}

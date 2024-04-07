@@ -1,0 +1,52 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "comment_ID",
+      "content",
+      "status",
+      "comment_status",
+      "position"
+    ],
+    "data": [
+      {
+        "name": "comment_ID",
+        "value": "fuzz"
+      },
+      {
+        "name": "content",
+        "value": "fuzz"
+      },
+      {
+        "name": "status",
+        "value": "fuzz"
+      },
+      {
+        "name": "comment_status",
+        "value": "fuzz"
+      },
+      {
+        "name": "position",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "edit-comment"
+      }
+    ]
+  }
+}

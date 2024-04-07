@@ -1,0 +1,37 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "link_reference",
+      "link_parameters"
+    ],
+    "data": [
+      {
+        "name": "link_reference",
+        "value": "fuzz"
+      },
+      {
+        "name": "link_parameters",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "ce4wp_request_sso"
+      }
+    ]
+  }
+}

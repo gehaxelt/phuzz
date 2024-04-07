@@ -1,0 +1,1 @@
+../phuzz-output/400000-megamenu.3.2.2.zip/ajax_show_menu_item_form/output/fuzzer-10/vulnerable-candidates.json,32398f3a-65bd-4021-bd3b-868e243549d8:  query_params:{"action": "mm_edit_menu_item"} body_params:{"widget_id": "<a href='javascript:alert(0xdeadbeef)'fuzz"}

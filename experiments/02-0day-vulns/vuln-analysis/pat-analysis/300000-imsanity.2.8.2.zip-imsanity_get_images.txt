@@ -1,0 +1,1 @@
+../phuzz-output/300000-imsanity.2.8.2.zip/imsanity_get_images/output/fuzzer-9/vulnerable-candidates.json,3848c8d9-bea4-4a7d-b463-b3d7de4a0d66:  query_params:{"_wpnonce": "fuzz", "action": "imsanity_get_images"} body_params:{"resume_id": "fu"}

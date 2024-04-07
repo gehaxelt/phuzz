@@ -1,0 +1,1 @@
+../phuzz-output/5000000-wordpress-seo.20.6.zip/ajax_get_keyword_usage_and_post_types/output/fuzzer-8/vulnerable-candidates.json,61bf16c9-b6d2-4e4b-b5f5-2c2feb1c11b9:  query_params:{"action": "get_focus_keyword_usage_and_post_types"} body_params:{"post_id": "1uzz", "keyword": "fu"}

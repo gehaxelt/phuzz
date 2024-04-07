@@ -1,0 +1,1 @@
+../phuzz-output/1000000-coming-soon.6.15.7.zip/seedprod_lite_activate_addon/output/fuzzer-1/vulnerable-candidates.json,419de8f9-4060-41f7-b5a3-6ac960f089e6:  query_params:{"action": "seedprod_lite_activate_addon"} body_params:{"type": "fuzz", "plugin": "f0zz"}

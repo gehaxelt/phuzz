@@ -1,0 +1,1 @@
+../phuzz-output/700000-google-analytics-dashboard-for-wp.7.15.2.zip/get_posts/output/fuzzer-3/vulnerable-candidates.json,68aeb5d6-0add-4cba-85e3-90a7ac2ac077:  query_params:{"action": "exactmetrics_get_posts"} body_params:{"numberposts": "fuzz", "keyword": "-uzz", "post_type": "fuzz"}

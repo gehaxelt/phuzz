@@ -1,0 +1,1 @@
+../phuzz-output/900000-ninja-forms.3.6.23.zip/ninja_forms_ajax_migrate_database/output/fuzzer-1/vulnerable-candidates.json,231f4c26-f903-4868-af36-4509499a44e7:  query_params:{"action": "ninja_forms_ajax_migrate_database"} body_params:{"security": ""}

@@ -1,0 +1,37 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "slug",
+      "wpgmza_security"
+    ],
+    "data": [
+      {
+        "name": "slug",
+        "value": "fuzz"
+      },
+      {
+        "name": "wpgmza_security",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "wpgmza_dismiss_persistent_notice"
+      }
+    ]
+  }
+}

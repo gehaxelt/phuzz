@@ -1,0 +1,40 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action",
+      "_widgets_nonce"
+    ],
+    "fuzz": [
+      "query",
+      "postTypes",
+      "language"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "so_widgets_search_posts"
+      },
+      {
+        "name": "query",
+        "value": "fuzz"
+      },
+      {
+        "name": "_widgets_nonce",
+        "value": "fuzz"
+      },
+      {
+        "name": "postTypes",
+        "value": "fuzz"
+      },
+      {
+        "name": "language",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

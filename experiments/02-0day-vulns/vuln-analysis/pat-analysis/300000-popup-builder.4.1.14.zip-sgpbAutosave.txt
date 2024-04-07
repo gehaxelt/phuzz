@@ -1,0 +1,1 @@
+../phuzz-output/300000-popup-builder.4.1.14.zip/sgpbAutosave/output/fuzzer-10/vulnerable-candidates.json,63e59002-7511-44e9-8c03-402d250bee40:  query_params:{"action": "sgpb_autosave"} body_params:{"allPopupData": "fuz2z", "post_ID": "fu"}

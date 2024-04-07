@@ -1,0 +1,1 @@
+../phuzz-output/300000-popup-builder.4.1.14.zip/addToCounter/output/fuzzer-5/vulnerable-candidates.json,b306e467-c861-43e7-b504-3c7438adc47f:  query_params:{"action": "sgpb_send_to_open_counter", "sg_popup_preview_id": "fu"} body_params:{"params": "fu^z"}

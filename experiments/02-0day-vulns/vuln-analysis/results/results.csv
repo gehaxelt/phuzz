@@ -1,0 +1,145 @@
+Vulnerability class,Plugin,API name,Authenticated?,Nonce or referrer?,Vulnerable function or Vulnerability,Exploitable (by non-admin),False positive,Bug?,Comment
+opre,ninja-forms,connect,yes,yes,yes,no,no,no,Exploit requires nonce :-(
+sqli,google-analytics-dashboard-for-wp,zip-get_posts,yes,yes,no,no,yes,yes,Query broken due to no ordering
+sqli,google-analytics-for-wordpress,zip-get_posts,yes,yes,no,no,yes,yes,Query broken due to no ordering
+sqli,instagram-feed,sbi_recheck_connection,yes,yes,no,no,yes,yes,Deadlock found
+sqli,ewww-image-optimizer,ewww_image_optimizer_aux_images_table,yes,yes,no,no,yes,yes,DB table does not exist – Plugin needs more steps to setup or use of specific functionality? https://wordpress.org/support/topic/version-5-3-2-table-ewwwio_images-doesnt-exist-errors/
+sqli,ninja-forms,ninja_forms_ajax_migrate_database,yes,yes,no,no,yes,yes,DB table does not exist // Wrong usage of describe IF
+sqli,wpvivid-backuprestore,add_exclude_files,yes,yes,no,no,yes,yes,DB table does not exist // Plugin needs more steps or functionality to create table. 
+sqli,wpvivid-backuprestore,get_result_list,yes,yes,no,no,yes,yes,DB table does not exist // Plugin needs more steps or functionality to create table. 
+sqli,wpvivid-backuprestore,isolate_selected_image,yes,yes,no,no,yes,yes,DB table does not exist // Plugin needs more steps or functionality to create table. 
+sqli,wpvivid-backuprestore,start_isolate_all_image,yes,yes,no,no,yes,yes,DB table does not exist // Plugin needs more steps or functionality to create table. 
+xss,astra-sites,import_block,yes,yes,no,no,yes,no,Content-Type: application/json
+xss,kadence-blocks,process_data_ajax_callback,yes,yes,no,no,yes,no,Content-Type: application/json
+xss,mailchimp-for-wp,get_list_details,yes,no,no,no,yes,no,Content-Type: application/json
+xss,megamenu,ajax_add_widget,yes,yes,no,no,yes,no,Content-Type: application/json
+xss,megamenu,ajax_reorder_items,yes,yes,no,no,yes,no,Content-Type: application/json
+xss,megamenu,ajax_save_grid_data,yes,yes,no,no,yes,no,Content-Type: application/json
+xss,megamenu,ajax_show_menu_item_form,yes,yes,no,no,yes,no,Encoded in Attribute
+xss,megamenu,ajax_show_widget_form,yes,yes,no,no,yes,no,Encoded in Attribute
+xss,ninja-forms,ninja_forms_ajax_import_form,yes,yes,yes,no,no,no,Exploit requires nonce :-(
+xss,popup-builder,changeConditionRuleRow,no,yes,no,no,yes,no,Encoded in Attribute
+xss,shortcodes-ultimate,settings,yes,no,no,no,yes,no,"Sufficient sanitation, just 0xdeadbeef"
+xss,siteorigin-panels,action_export_layout,no,yes,no,no,yes,no,Content-Type: application/json
+xss,the-events-calendar,ajax_fetch_import,no,no,no,no,yes,no,Content-Type: application/json
+xss,ultimate-addons-for-gutenberg,import_block,yes,yes,no,no,yes,no,Content-Type: application/json
+xss,updraftplus,wp_ajax_updraftcentral_receivepublickey,no,no,no,no,yes,no,Encoded in URL
+xss,wp-migrate-db,ajax_migrate_table,no,yes,no,no,yes,no,Content-Type: application/json
+xss,wp-user-avatar,get_forms_by_builder_type,no,no,no,no,yes,no,Encoded in Attribute
+xss,wpvivid-backuprestore,check_import_file,yes,yes,yes,no,no,no,Exploit requires referrer :-(
+xss,wpvivid-backuprestore,export_post_step2,yes,yes,no,no,yes,no,"Encoding seems to work, weird behavior"
+xss,wpvivid-backuprestore,export_post_step3,yes,yes,yes,no,no,no,Exploit requires referrer :-(
+xss,wpvivid-backuprestore,get_exclude_files_list,yes,yes,yes,no,no,no,Exploit requires referrer :-(
+xss,wpvivid-backuprestore,get_file_id,yes,yes,yes,no,no,no,Exploit requires referrer :-(
+xss,wpvivid-backuprestore,get_post_type_list,yes,yes,yes,no,no,no,Exploit requires referrer :-(
+xss,wpvivid-backuprestore,is_backup_file_free,yes,yes,yes,no,no,no,Exploit requires referrer :-(
+pat,ad-inserter,ai_ajax,-,-,no,no,yes,no,matches fixed path
+pat,all-in-one-wp-security-and-firewall,ajax,-,-,no,no,yes,no,matches fixed path
+pat,all-in-one-wp-security-and-firewall,tfaInitLogin,-,-,no,no,yes,no,matches fixed path
+pat,astra-sites,activate_plugin,yes,yes,no,no,no,no,file_exists // WP activate_plugin
+pat,astra-sites,dismiss_notice,-,-,no,no,yes,no,matches fixed path
+pat,autoptimize,critcss_rm_callback,-,-,no,no,yes,no,matches fixed path
+pat,backwpup,ajax_working,yes,yes,yes,no,no,no,"file_exists,is_readable // exploit requires special role: backwpup_jobs_start"
+pat,coming-soon,seedprod_lite_activate_addon,yes,yes,no,no,no,no,file_exists
+pat,coming-soon,seedprod_lite_install_addon,yes,yes,yes,no,no,no,file_exists // PluginUpgrader requires special role: install_plugins
+pat,complianz-gdpr,ajax_delete_snapshot,yes,no,yes,no,no,no,Unlink // requires special role: manage_privacy
+pat,complianz-gdpr,ajax_get_list,-,-,no,no,yes,no,matches fixed path
+pat,complianz-gdpr,ajax_load_gridblock,yes,no,yes,no,no,no,file_exists
+pat,complianz-gdpr,cmplz_generate_preview_css,-,-,no,no,yes,no,matches fixed path
+pat,complianz-gdpr,process_ajax_activate_license,-,-,no,no,yes,no,matches fixed path
+pat,custom-fonts,dismiss_notice,-,-,no,no,yes,no,matches fixed path
+pat,disable-comments,get_sub_sites,-,-,no,no,yes,no,matches fixed path
+pat,easy-table-of-contents,eztoc_subscribe_for_newsletter,-,-,no,no,yes,no,matches fixed path
+pat,easy-wp-smtp,get_oauth_url,-,-,no,no,yes,no,matches fixed path
+pat,enable-media-replace,emr_activate,yes,yes,no,no,no,no,file_exists // WP activate_plugin
+pat,essential-addons-for-elementor-lite,ajax_activate_plugin,yes,yes,no,no,no,no,file_exists // WP activate_plugin
+pat,forminator,process_action,-,-,no,no,yes,no,matches fixed path
+pat,google-analytics-dashboard-for-wp,exactmetrics_ajax_activate_addon,yes,yes,no,no,no,no,file_exists // WP activate_plugin
+pat,google-analytics-dashboard-for-wp,exactmetrics_ajax_install_addon,,yes,yes,no,no,no,file_exists // PluginUpgrader requires special role: install_plugins
+pat,google-analytics-dashboard-for-wp,get_addons,-,-,no,no,yes,no,matches fixed path
+pat,google-analytics-dashboard-for-wp,update_manual_v4,-,-,no,no,yes,no,matches fixed path
+pat,google-analytics-for-wordpress,install_plugin,-,-,no,no,yes,no,matches fixed path
+pat,google-analytics-for-wordpress,maybe_delete,-,-,no,no,yes,no,matches fixed path
+pat,google-analytics-for-wordpress,monsterinsights_ajax_activate_addon,yes,yes,no,no,no,no,file_exists // WP activate_plugin
+pat,google-analytics-for-wordpress,monsterinsights_ajax_install_addon,yes,yes,yes,no,no,no,file_exists // PluginUpgrader requires special role: install_plugins
+pat,imagify,missing_webp_callback,-,-,no,no,yes,no,matches fixed path
+pat,imsanity,imsanity_ajax_resize,-,-,no,no,yes,no,matches fixed path
+pat,imsanity,imsanity_get_images,-,-,no,no,yes,no,matches fixed path
+pat,instagram-feed,sbi_activate_addon,yes,yes,no,no,no,no,file_exists // WP activate_plugin
+pat,instagram-feed,sbi_deactivate_addon,-,-,no,no,yes,no,matches fixed path
+pat,jetpack,ajax_tracks,-,-,no,no,yes,no,matches fixed path
+pat,litespeed-cache,::bulk_edit_purge,-,-,no,no,yes,no,matches fixed path
+pat,mailchimp-for-woocommerce,get_user_by_hash,-,-,no,no,yes,no,matches fixed path
+pat,mailchimp-for-woocommerce,mailchimp_woocommerce_ajax_create_account_signup,-,-,no,no,yes,no,matches fixed path
+pat,mailchimp-for-woocommerce,mailchimp_woocommerce_ajax_delete_log_file,-,-,no,no,yes,no,matches fixed path
+pat,mailchimp-for-woocommerce,mailchimp_woocommerce_ajax_load_log_file,-,-,no,no,yes,no,matches fixed path
+pat,mailchimp-for-woocommerce,mailchimp_woocommerce_tower_status,-,-,no,no,yes,no,matches fixed path
+pat,megamenu,ajax_delete_widget,-,-,no,no,yes,no,matches fixed path
+pat,megamenu,ajax_update_menu_item_columns,-,-,no,no,yes,no,matches fixed path
+pat,ml-slider,ajax_create_image_slides,-,-,no,no,yes,no,matches fixed path
+pat,ml-slider,ajax_delete_slide,-,-,no,no,yes,no,matches fixed path
+pat,ml-slider,ajax_undelete_slide,-,-,no,no,yes,no,matches fixed path
+pat,ninja-forms,maybe_delete_field,-,-,no,no,yes,no,matches fixed path
+pat,ninja-forms,ninja_forms_ajax_migrate_database,-,-,no,no,yes,no,matches fixed path
+pat,official-facebook-pixel,saveFbeSettings,-,-,no,no,yes,no,matches fixed path
+pat,pdf-embedder,activate_partner,yes,yes,no,no,no,no,file_exists // WP activate_plugin
+pat,pdf-embedder,install_partner,yes,yes,yes,no,no,no,"file_exists // Pluginupgrader, only admin"
+pat,polylang,save_options,-,-,no,no,yes,no,matches fixed path
+pat,popup-builder,addToCounter,-,-,no,no,yes,no,matches fixed path
+pat,popup-builder,importSubscribers,yes,yes,yes,no,no,no,File // Requires special roles to get acces => Multisite-Admin exploitable
+pat,popup-builder,reactivateNotification,-,-,no,no,yes,no,matches fixed path
+pat,popup-builder,saveImportedSubscribers,-,-,no,no,yes,no,matches fixed path
+pat,popup-builder,sgpbAutosave,-,-,no,no,yes,no,matches fixed path
+pat,popup-maker,do_shortcode,-,-,no,no,yes,no,matches fixed path
+pat,pretty-link,ajax_addon_activate,yes,yes,no,no,no,no,file_exists // WP activate_plugin
+pat,pretty-link,ajax_addon_install,yes,yes,yes,no,no,no,file_exists // PluginUpgrader requires special role: install_plugins + activate_plugins
+pat,pretty-link,ajax_validate_pretty_link,-,-,no,no,yes,no,matches fixed path
+pat,pretty-link,save_bulk_edit,-,-,no,no,yes,no,matches fixed path
+pat,really-simple-ssl,process_ajax_install_plugin,-,-,no,no,yes,no,matches fixed path
+pat,really-simple-ssl,process_ajax_package_information,-,-,no,no,yes,no,matches fixed path
+pat,seo-by-rank-math,oembed_handler,-,-,no,no,yes,no,matches fixed path
+pat,shortpixel-image-optimiser,ajaxBrowseContent,yes,no,no,no,no,no,"file_exists, is_dir, is_file, realpath // Sanitation"
+pat,so-widgets-bundle,admin_ajax_manage_handler,yes,yes,yes,no,no,no,file_exists // Requires permission manage_options => Multisite-Admin exploitable
+pat,so-widgets-bundle,siteorigin_widget_get_posts_count_action,-,-,no,no,yes,no,matches fixed path
+pat,ultimate-addons-for-gutenberg,activate_plugin,yes,yes,no,no,no,no,file_exists // WP activate_plugin
+pat,ultimate-addons-for-gutenberg,dismiss_notice,-,-,no,no,yes,no,matches fixed path
+pat,under-construction-page,submit_support_message_ajax,-,-,no,no,yes,no,matches fixed path
+pat,updraftplus,updraft_ajax_handler,-,-,no,no,yes,no,matches fixed path
+pat,updraftplus,updraft_central_ajax_handler,-,-,no,no,yes,no,matches fixed path
+pat,woo-checkout-field-editor-pro,activate_themehigh_plugins,yes,yes,no,no,no,no,file_exists // WP activate_plugin
+pat,wordfence,wordfence::ajax_lh_callback,-,-,no,no,yes,no,matches fixed path
+pat,wordpress-seo,ajax_get_keyword_usage_and_post_types,-,-,no,no,yes,no,matches fixed path
+pat,wordpress-seo,wpseo_set_ignore,-,-,no,no,yes,no,matches fixed path
+pat,wp-fastest-cache,clear_cache_column,no,yes,no,no,no,no,is_dir
+pat,wp-fastest-cache,delete_current_page_cache,no,yes,no,no,no,no,file_exists
+pat,wp-fastest-cache,wpfc_save_exclude_pages_callback,-,-,no,no,yes,no,matches fixed path
+pat,wp-fastest-cache,wpfc_save_timeout_pages_callback,-,-,no,no,yes,no,matches fixed path
+pat,wp-fastest-cache,wpfc_wppolls_ajax_request,-,-,no,no,yes,no,matches fixed path
+pat,wp-mail-smtp,ajax_generate_url,-,-,no,no,yes,no,matches fixed path
+pat,wp-mail-smtp,remove_oauth_connection,-,-,no,no,yes,no,matches fixed path
+pat,wp-mail-smtp,send_feedback,-,-,no,no,yes,no,matches fixed path
+pat,wp-mail-smtp,update_settings,-,-,no,no,yes,no,matches fixed path
+pat,wp-smushit,directory_smush_finish,-,-,no,no,yes,no,matches fixed path
+pat,wp-smushit,scan_images,-,-,no,no,yes,no,matches fixed path
+pat,wp-smushit,smush_bulk,-,-,no,no,yes,no,matches fixed path
+pat,wp-user-avatar,ppress_activate_plugin,yes,yes,no,no,no,no,file_exists // WP activate_plugin
+pat,wp-user-avatar,ppress_install_plugin,yes,yes,yes,no,no,no,file_exists // PluginUpgrader
+pat,wpforms-lite,process,-,-,no,no,yes,no,matches fixed path
+pat,wpforms-lite,wpforms_activate_addon,yes,yes,no,no,no,no,file_exists // WP activate_plugin
+pat,wpvivid-backuprestore,add_exclude_files,-,-,no,no,yes,no,matches fixed path
+pat,wpvivid-backuprestore,check_filesystem_permissions,yes,yes,yes,no,no,no,mkdir // only admin
+pat,wpvivid-backuprestore,delete_all_image,yes,yes,no,no,no,no,is_dir
+pat,wpvivid-backuprestore,delete_selected_image,yes,yes,yes,no,no,no,is_dir
+pat,wpvivid-backuprestore,download_restore_progress,yes,yes,yes,no,no,no,file_exists
+pat,wpvivid-backuprestore,generate_url,-,-,no,no,yes,no,matches fixed path
+pat,wpvivid-backuprestore,get_iso_list,yes,yes,no,no,no,no,is_dir
+pat,wpvivid-backuprestore,init_download_page,-,-,no,no,yes,no,matches fixed path
+pat,wpvivid-backuprestore,migrate_now,-,-,no,no,yes,no,matches fixed path
+pat,wpvivid-backuprestore,prepare_download_backup,-,-,no,no,yes,no,matches fixed path
+pat,wpvivid-backuprestore,read_last_backup_log,yes,yes,yes,no,no,no,file_exists
+pat,wpvivid-backuprestore,restore_all_image,yes,yes,no,no,no,no,is_dir
+pat,wpvivid-backuprestore,restore_selected_image,yes,yes,no,no,no,no,is_dir
+pat,wpvivid-backuprestore,scan_uploads_files_from_post,-,-,no,no,yes,no,matches fixed path
+pat,wpvivid-backuprestore,upload_files,yes,yes,yes,no,no,no,fopen
+pat,wpvivid-backuprestore,view_backup_log,-,-,no,no,yes,no,matches fixed path
+pat,wpvivid-backuprestore,wpvivid_download_export_backup,yes,yes,no,no,no,no,file_exists

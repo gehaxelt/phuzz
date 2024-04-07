@@ -1,0 +1,1 @@
+../phuzz-output/300000-pretty-link.3.4.2.zip/ajax_validate_pretty_link/output/fuzzer-2/vulnerable-candidates.json,86184b32-c885-4f1b-b1b4-af2a8573b01d:  query_params:{"action": "validate_pretty_link"} body_params:{"prli_url": "/uzz", "id": "fSuzz", "url": "fu"}

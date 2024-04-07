@@ -1,0 +1,6 @@
+scripts/set_env.sh
+node_modules/
+.idea
+yarn-error.log
+yarn.lock
+package.json

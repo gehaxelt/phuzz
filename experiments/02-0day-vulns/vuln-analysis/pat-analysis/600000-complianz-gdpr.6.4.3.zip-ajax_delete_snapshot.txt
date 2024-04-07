@@ -1,0 +1,1 @@
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_delete_snapshot/output/fuzzer-1/vulnerable-candidates.json,22d39ed7-e2b5-4e87-ab00-f7a52a2904c7:  query_params:{"action": "cmplz_delete_snapshot"} body_params:{"snapshot_id": "fzz"}

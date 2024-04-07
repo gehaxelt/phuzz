@@ -1,0 +1,47 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "security",
+      "import",
+      "formID",
+      "flagged"
+    ],
+    "data": [
+      {
+        "name": "security",
+        "value": "fuzz"
+      },
+      {
+        "name": "import",
+        "value": "fuzz"
+      },
+      {
+        "name": "formID",
+        "value": "fuzz"
+      },
+      {
+        "name": "flagged",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "ninja_forms_ajax_import_form"
+      }
+    ]
+  }
+}

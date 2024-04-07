@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!DOCTYPE issues [
+<!ELEMENT issues (issue*)>
+<!ATTLIST issues burpVersion CDATA "">
+<!ATTLIST issues exportTime CDATA "">
+<!ELEMENT issue (serialNumber, type, name, host, path, location, severity, confidence, issueBackground?, remediationBackground?, references?, vulnerabilityClassifications?, issueDetail?, issueDetailItems?, remediationDetail?, requestresponse*, collaboratorEvent*, infiltratorEvent*, staticAnalysis*, dynamicAnalysis*, prototypePollution*)>
+<!ELEMENT serialNumber (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT severity (#PCDATA)>
+<!ELEMENT confidence (#PCDATA)>
+<!ELEMENT issueBackground (#PCDATA)>
+<!ELEMENT remediationBackground (#PCDATA)>
+<!ELEMENT references (#PCDATA)>
+<!ELEMENT vulnerabilityClassifications (#PCDATA)>
+<!ELEMENT issueDetail (#PCDATA)>
+<!ELEMENT issueDetailItems (issueDetailItem*)>
+<!ELEMENT issueDetailItem (#PCDATA)>
+<!ELEMENT remediationDetail (#PCDATA)>
+<!ELEMENT requestresponse (request?, response?, responseRedirected?)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request method CDATA "">
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT responseRedirected (#PCDATA)>
+<!ELEMENT sender (#PCDATA)>
+<!ELEMENT message (#PCDATA)>
+<!ELEMENT conversation (#PCDATA)>
+<!ELEMENT recipient (#PCDATA)>
+<!ELEMENT recipients (recipient*)>
+<!ELEMENT smtp (sender, recipients, message, conversation)>
+<!ELEMENT collaboratorEvent (interactionType, originIp, time, lookupType?, lookupHost?, requestresponse?, smtp?)>
+<!ELEMENT interactionType (#PCDATA)>
+<!ELEMENT originIp (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT lookupType (#PCDATA)>
+<!ELEMENT lookupHost (#PCDATA)>
+<!ELEMENT infiltratorEvent (parameterName, platform, signature, stackTrace?, parameterValue?, collaboratorEvent)>
+<!ELEMENT parameterName (#PCDATA)>
+<!ELEMENT platform (#PCDATA)>
+<!ELEMENT signature (#PCDATA)>
+<!ELEMENT stackTrace (#PCDATA)>
+<!ELEMENT parameterValue (#PCDATA)>
+<!ELEMENT dynamicAnalysis (source, sink, sourceStackTrace, sinkStackTrace, eventListenerStackTrace, sourceValue, sinkValue, eventHandlerData, eventHandlerDataType, eventHandlerManipulatedData, poc, origin, isOriginChecked, sourceElementId, sourceElementName, eventFiredEventName, eventFiredElementId, eventFiredElementName, eventFiredOuterHtml)>
+<!ELEMENT prototypePollution (poc, pollutionTechnique, pollutionType)>
+<!ELEMENT staticAnalysis (source, sink, codeSnippets)>
+<!ELEMENT source (#PCDATA)>
+<!ELEMENT sink (#PCDATA)>
+<!ELEMENT sourceStackTrace (#PCDATA)>
+<!ELEMENT sinkStackTrace (#PCDATA)>
+<!ELEMENT eventListenerStackTrace (#PCDATA)>
+<!ELEMENT sourceValue (#PCDATA)>
+<!ELEMENT sinkValue (#PCDATA)>
+<!ELEMENT eventHandlerData (#PCDATA)>
+<!ELEMENT eventHandlerDataType (#PCDATA)>
+<!ELEMENT sourceElementId (#PCDATA)>
+<!ELEMENT sourceElementName (#PCDATA)>
+<!ELEMENT eventFiredEventName (#PCDATA)>
+<!ELEMENT eventFiredElementId (#PCDATA)>
+<!ELEMENT eventFiredElementName (#PCDATA)>
+<!ELEMENT eventFiredOuterHtml (#PCDATA)>
+<!ELEMENT eventHandlerManipulatedData (#PCDATA)>
+<!ELEMENT poc (#PCDATA)>
+<!ELEMENT origin (#PCDATA)>
+<!ELEMENT isOriginChecked (#PCDATA)>
+<!ELEMENT codeSnippets (codeSnippet*)>
+<!ELEMENT codeSnippet (#PCDATA)>
+<!ELEMENT pollutionTechnique (#PCDATA)>
+<!ELEMENT pollutionType (#PCDATA)>
+]>
+<issues burpVersion="2023.8.1" exportTime="Thu Aug 10 18:13:16 GMT 2023">
+  <issue>
+    <serialNumber>5939256574710711296</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Private IP addresses disclosed]]></name>
+    <host ip="192.168.16.2">http://web</host>
+    <path><![CDATA[/passcheck.php]]></path>
+    <location><![CDATA[/passcheck.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>RFC 1918 specifies ranges of IP addresses that are reserved for use in private networks and cannot be routed on the public Internet. Although various methods exist by which an attacker can determine the public IP addresses in use by an organization, the private addresses used internally cannot usually be determined in the same ways.</p>
+<p>Discovering the private addresses used within an organization can help an attacker in carrying out network-layer attacks aiming to penetrate the organization's internal infrastructure. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>There is not usually any good reason to disclose the internal IP addresses used within an organization's infrastructure. If these are being returned in service banners or debug messages, then the relevant services should be configured to mask the private addresses. If they are being used to track back-end servers for load balancing purposes, then the addresses should be rewritten with innocuous identifiers from which an attacker cannot infer any useful information about the infrastructure.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[The following RFC 1918 IP address was disclosed in the response:<ul><li>192.168.16.2</li></ul>]]></issueDetail>
+    <issueDetailItems>
+      <issueDetailItem><![CDATA[192.168.16.2]]></issueDetailItem>
+    </issueDetailItems>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvcGFzc2NoZWNrLnBocCBIVFRQLzEuMA0KSG9zdDogd2ViDQpDb250ZW50LUxlbmd0aDogMTMNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkDQoNCnBhc3N3b3JkPWZ1eno=]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgNDAwIEJhZCBSZXF1ZXN0DQpEYXRlOiBUaHUsIDEwIEF1ZyAyMDIzIDE4OjEwOjE1IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpDb250ZW50LUxlbmd0aDogMzA0DQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjQwMCBCYWQgUmVxdWVzdDwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPkJhZCBSZXF1ZXN0PC9oMT4KPHA+WW91ciBicm93c2VyIHNlbnQgYSByZXF1ZXN0IHRoYXQgdGhpcyBzZXJ2ZXIgY291bGQgbm90IHVuZGVyc3RhbmQuPGJyIC8+CjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjU3IChEZWJpYW4pIFNlcnZlciBhdCAxOTIuMTY4LjE2LjIgUG9ydCA4MDwvYWRkcmVzcz4KPC9ib2R5PjwvaHRtbD4K]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>394452263820680192</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Input returned in response (reflected)]]></name>
+    <host ip="192.168.16.2">http://web</host>
+    <path><![CDATA[/passcheck.php]]></path>
+    <location><![CDATA[/passcheck.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>Reflection of input arises when data is copied from a request and echoed into the application's immediate response.</p><p>Input being returned in application responses is not a vulnerability in its own right. However, it is a prerequisite for many client-side vulnerabilities, including cross-site scripting, open redirection, content spoofing, and response header injection. Additionally, some server-side vulnerabilities such as SQL injection are often easier to identify and exploit when input is returned in responses. In applications where input retrieval is rare and the environment is resistant to automated testing (for example, due to a web application firewall), it might be worth subjecting instances of it to focused manual testing. </p>]]></issueBackground>
+    <issueDetail><![CDATA[The value of the <b>password</b> request parameter is copied into the application's response.]]></issueDetail>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvcGFzc2NoZWNrLnBocCBIVFRQLzEuMA0KSG9zdDogd2ViDQpDb250ZW50LUxlbmd0aDogMTMNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkDQoNCnBhc3N3b3JkPWZ1enoxd3p0MDFnbm44]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBUaHUsIDEwIEF1ZyAyMDIzIDE4OjEwOjE2IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMjINClNldC1Db29raWU6IFBIUFNFU1NJRD1pcHAzcjdvOXNicW9pdWZlNzR0MWczbmxxNDsgcGF0aD0vDQpFeHBpcmVzOiBUaHUsIDE5IE5vdiAxOTgxIDA4OjUyOjAwIEdNVA0KQ2FjaGUtQ29udHJvbDogbm8tc3RvcmUsIG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUNClByYWdtYTogbm8tY2FjaGUNClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29udGVudC1MZW5ndGg6IDI2MzINCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD1VVEYtOA0KDQoKCjxodG1sPgogIDxoZWFkPgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSIvY3NzL2JsdWVwcmludC9zY3JlZW4uY3NzIiB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9InNjcmVlbiwgcHJvamVjdGlvbiI+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Ii9jc3MvYmx1ZXByaW50L3ByaW50LmNzcyIgdHlwZT0idGV4dC9jc3MiIG1lZGlhPSJwcmludCI+CiAgICA8IS0tW2lmIElFXT48bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Ii9jc3MvYmx1ZXByaW50L2llLmNzcyIgdHlwZT0idGV4dC9jc3MiIG1lZGlhPSJzY3JlZW4sIHByb2plY3Rpb24iPjwhW2VuZGlmXS0tPgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSIvY3NzL3N0eWxpbmdzLmNzcyIgdHlwZT0idGV4dC9jc3MiIG1lZGlhPSJzY3JlZW4iPgogICAgPHRpdGxlPldhY2tvUGlja28uY29tPC90aXRsZT4KICA8L2hlYWQ+CiAgPGJvZHk+CiAgICA8ZGl2IGNsYXNzPSJjb250YWluZXIgIiBzdHlsZT0iYm9yZGVyOiAycHggc29saWQgIzVjOTVjZjsiPgogICAgICA8ZGl2IGNsYXNzPSJjb2x1bW4gc3Bhbi0yNCBmaXJzdCBsYXN0Ij4KCTxoMSBpZD0idGl0bGUiPjxhIGhyZWY9Ii8iPldhY2tvUGlja28uY29tPC9hPjwvaDE+CiAgICAgIDwvZGl2PgogICAgICA8ZGl2IGlkPSJtZW51Ij4KCTxkaXYgY2xhc3M9ImNvbHVtbiBwcmVwZW5kLTEgc3Bhbi0xNCBmaXJzdCI+CgkgIDx1bCBjbGFzcz0ibWVudSI+CgkgICAgPGxpIGNsYXNzPSJjdXJyZW50Ij48YSBocmVmPSIvdXNlcnMvaG9tZS5waHAiPjxzcGFuPkhvbWU8L3NwYW4+PC9hPjwvbGk+CgkgICAgPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii9waWN0dXJlcy91cGxvYWQucGhwIj48c3Bhbj5VcGxvYWQ8L3NwYW4+PC9hPjwvbGk+CgkgICAgPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii9waWN0dXJlcy9yZWNlbnQucGhwIj48c3Bhbj5SZWNlbnQ8L3NwYW4+PC9hPjwvbGk+CiAgICAgICAgICAgIDxsaSBjbGFzcz0iIj48YSBocmVmPSIvZ3Vlc3Rib29rLnBocCI+PHNwYW4+R3Vlc3Rib29rPC9zcGFuPjwvYT48L2xpPgoKICAgICAgCSAgPC91bD4KCTwvZGl2PgoJPGRpdiBjbGFzcz0iY29sdW1uIHByZXBlbmQtMSBzcGFuLTcgZmlyc3QgbGFzdCI+CgkgIDx1bCBjbGFzcz0ibWVudSB0b3BfbG9naW4iID4KICAgICAgCSAgICA8bGk+PGEgaHJlZj0iL3VzZXJzL2xvZ2luLnBocCI+PFNwYW4+TG9naW48L3NwYW4+PC9hPjwvbGk+CiAgICAgIAkgIDwvdWw+Cgk8L2Rpdj4KICAgICAgPC9kaXY+CgoKCiAgICAgIDxkaXYgY2xhc3M9ImNvbHVtbiBzcGFuLTI0IGZpcnN0IGxhc3QiIGlkPSJzZWFyY2hfYmFyX2JsdWUiPgoJPGRpdiBjbGFzcz0iY29sdW1uIHByZXBlbmQtMTcgc3Bhbi03IGZpcnN0IGxhc3QiIGlkPSJzZWFyY2hfYm94Ij4KCSAgPGZvcm0gYWN0aW9uPSIvcGljdHVyZXMvc2VhcmNoLnBocCIgbWV0aG9kPSJnZXQiIHN0eWxlPSJkaXNwbGF5OmlubGluZTsiPgoJICAgIDxpbnB1dCBpZD0icXVlcnkyIiBuYW1lPSJxdWVyeSIgc2l6ZT0iMTUiIHN0eWxlPSJwYWRkaW5nOiAycHg7IGZvbnQtc2l6ZTogMTZweDsgdGV4dC1kZWNvcmF0aW9uOm5vbmU7Ym9yZGVyOm5vbmU7dmVydGljYWwtYWxpZ246bWlkZGxlOyIgdHlwZT0idGV4dCIgdmFsdWU9IiIvPgoJICAgIDxpbnB1dCBzcmM9Ii9pbWFnZXMvc2VhcmNoX2J1dHRvbl93aGl0ZS5naWYiIHR5cGU9ImltYWdlIiBzdHlsZT0iYm9yZGVyOiAwcHQgbm9uZSA7IHBvc2l0aW9uOiByZWxhdGl2ZTsgdG9wOiAwcHg7dmVydGljYWwtYWxpZ246bWlkZGxlO21hcmdpbi1sZWZ0OiAxZW07IiAvPgoJICA8L2Zvcm0+Cgk8L2Rpdj4KICAgICAgPC9kaXY+CiAgIAoKPGRpdiBjbGFzcz0iY29sdW1uIHByZXBlbmQtMSBzcGFuLTI0IGZpcnN0IGxhc3QiPgo8aDI+Q2hlY2sgeW91ciBwYXNzd29yZCBzdHJlbmd0aDwvaDI+CjxwPgpUaGUgY29tbWFuZCAiZ3JlcCBeZnV6ejF3enQwMWdubjgkIC9ldGMvZGljdGlvbmFyaWVzLWNvbW1vbi93b3JkcyIgd2FzIHVzZWQgdG8gY2hlY2sgaWYgdGhlIHBhc3N3b3JkIHdhcyBpbiB0aGUgZGljdGlvbmFyeS48YnIgLz4gCmZ1enoxd3p0MDFnbm44IGlzIGEgCiAgICBCYWQKUGFzc3dvcmQKPC9wPgo8Zm9ybSBhY3Rpb249Ii9wYXNzY2hlY2sucGhwIiBtZXRob2Q9IlBPU1QiPgogICBQYXNzd29yZCB0byBjaGVjazogPGJyPgogICA8aW5wdXQgdHlwZT0icGFzc3dvcmQiIG5hbWU9InBhc3N3b3JkIiAvPjxicj4KICAgPGlucHV0IHR5cGU9InN1Ym1pdCIgdmFsdWU9IkNoZWNrISIgLz4KPC9mb3JtPgoKCgo8L2Rpdj4KCgogICAgICAgPGRpdiBjbGFzcz0iY29sdW1uIHNwYW4tMjQgZmlyc3QgbGFzdCIgaWQ9ImZvb3RlciIgPgoJPHVsPgoJICA8bGk+PGEgaHJlZj0iLyI+SG9tZTwvYT4gfDwvbGk+CiAgICAgICAgICA8bGk+PGEgaHJlZj0iL2FkbWluL2luZGV4LnBocD9wYWdlPWxvZ2luIj5BZG1pbjwvYT4gfDwvbGk+CgkgIDxsaT48YSBocmVmPSJtYWlsdG86Y29udGFjdEB3YWNrb3BpY2tvLmNvbSI+Q29udGFjdDwvYT4gfDwvbGk+CgkgIDxsaT48YSBocmVmPSIvdG9zLnBocCI+VGVybXMgb2YgU2VydmljZTwvYT48L2xpPgoJPC91bD4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICA8L2JvZHk+CjwvaHRtbD4KICAg]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+</issues>

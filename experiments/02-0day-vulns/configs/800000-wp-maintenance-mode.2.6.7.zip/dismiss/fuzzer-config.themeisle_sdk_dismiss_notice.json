@@ -1,0 +1,37 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "id",
+      "confirm"
+    ],
+    "data": [
+      {
+        "name": "id",
+        "value": "fuzz"
+      },
+      {
+        "name": "confirm",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "themeisle_sdk_dismiss_notice"
+      }
+    ]
+  }
+}

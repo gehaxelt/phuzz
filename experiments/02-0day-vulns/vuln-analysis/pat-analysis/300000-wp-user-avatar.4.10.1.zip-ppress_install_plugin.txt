@@ -1,0 +1,1 @@
+../phuzz-output/300000-wp-user-avatar.4.10.1.zip/ppress_install_plugin/output/fuzzer-1/vulnerable-candidates.json,ed04d1f7-325a-4f96-a1c4-158ec707ed10:  query_params:{"action": "ppress_install_plugin"} body_params:{"plugin": "fuzz", "type": "f(zz"}

@@ -1,0 +1,1 @@
+../phuzz-output/3000000-wp-mail-smtp.3.8.0.zip/ajax_generate_url/output/fuzzer-3/vulnerable-candidates.json,5ccbd3ee-3194-46de-9076-a31ce9db8e64:  query_params:{"action": "wp_mail_smtp_connect_url"} body_params:{"key": "fu"}

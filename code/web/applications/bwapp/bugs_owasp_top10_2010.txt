@@ -1,0 +1,88 @@
+----------------------  bWAPP v1.7  -----------------------,portal.php
+/ A1 - Injection /,portal.php
+HTML Injection - Reflected (GET),htmli_get.php
+HTML Injection - Reflected (POST),htmli_post.php
+HTML Injection - Reflected (Current URL),htmli_current_url.php
+HTML Injection - Stored (Blog),htmli_stored.php
+SQL Injection (Search),sqli_1.php
+SQL Injection (Select),sqli_2.php
+SQL Injection (Login),sqli_3.php
+SQL Injection - Blind,sqli_4.php
+LDAP Injection (Search),ldapi.php
+XML and XPath Injection (Login),xmli_1.php
+XML and XPath Injection (Search),xmli_2.php
+Command Injection,commandi.php
+Mail Injection (SMTP),maili.php
+/,portal.php
+/ A2 - Cross-Site Scripting (XSS) /,portal.php
+Cross-Site Scripting - Reflected (GET),xss_get.php
+Cross-Site Scripting - Reflected (POST),xss_post.php
+Cross-Site Scripting - Reflected (Back Button),xss_back_button.php
+Cross-Site Scripting - Reflected (Eval),xss_eval.php?date=Date()
+Cross-Site Scripting - Reflected (HREF),xss_href-1.php
+Cross-Site Scripting - Reflected (PHP_SELF),xss_php_self.php
+Cross-Site Scripting - Reflected (Referer),xss_referer.php
+Cross-Site Scripting - Reflected (User-Agent),xss_user_agent.php
+Cross-Site Scripting - Stored (Blog),xss_stored_1.php
+Cross-Site Scripting - Stored (Cookies),xss_stored_2.php
+/,portal.php
+/ A3 - Broken Auth. and Session Mgmt. /,portal.php
+Broken Authentication - Forgotten Function,ba_forgotten.php
+Broken Authentication - Insecure Login Forms,ba_insecure_login.php
+Broken Authentication - Logout Management,ba_logout.php
+Broken Authentication - Password Attacks,ba_pwd_attacks.php
+Session Management - Administrative Portals,smgmt_admin_portal.php
+Session Management - Cookies (HTTPOnly),smgmt_cookies_httponly.php
+Session Management - Cookies (Secure),smgmt_cookies_secure.php
+Session Management - Strong Sessions,smgmt_strong_sessions.php
+/,portal.php
+/ A4 - Insecure Direct Object References /,portal.php
+Insecure Direct Object References (Secret),insecure_direct_object_ref_1.php
+Insecure Direct Object References (Price),insecure_direct_object_ref_2.php
+/,portal.php
+/ A5 - Cross-Site Request Forgery (CSRF) /,portal.php
+Cross-Site Request Forgery (Password),csrf_1.php
+Cross-Site Request Forgery (Transfer Amount),csrf_2.php
+Cross-Site Request Forgery (Secret),csrf_3.php
+/,portal.php
+/ A6 - Security Misconfiguration /,portal.php
+Arbitrary File Access (Samba),sm_samba.php
+Cross-Domain Policy File (Flash),sm_cross_domain_policy.php
+Cross-Origin Resource Sharing (AJAX),sm_cors.php
+Cross-Site Tracing (XST),sm_xst.php
+Denial-of-Service (Slow HTTP DoS),sm_dos.php
+Local Privilege Escalation (udev),sm_local_priv_esc.php
+Man-in-the-Middle Attack (HTTP),sm_mitm_1.php
+Man-in-the-Middle Attack (SMTP),sm_mitm_2.php
+Robots File,sm_robots.php
+/,portal.php
+/ A7 - Insecure Cryptographic Storage /,portal.php
+HTML5 Web Storage (Secret),insecure_crypt_storage_1.php
+Text Files (Accounts),insecure_crypt_storage_2.php
+/,portal.php
+/ A8 - Failure to Restrict URL Access /,portal.php
+Authorization Testing - Restrict Device Access,restrict_device_access.php
+Authorization Testing - Restrict Folder Access,restrict_folder_access.php
+/,portal.php
+/ A9 - Insufficient Transport Layer Protection /,portal.php
+Insufficient Transport Layer Protection,insuff_transport_layer_protect.php
+/,portal.php
+/ A10 - Unvalidated Redirects and Forwards /,portal.php
+Unvalidated Redirects and Forwards,unvalidated_redir_fwd.php
+/,portal.php
+/ Other bugs... /,portal.php
+ClickJacking (Movie Tickets),clickjacking.php
+Client-Side Validation (Password),cs_validation.php
+Directory Traversal - Files,directory_traversal_1.php?page=message.txt
+Directory Traversal - Directories,directory_traversal_2.php?directory=documents
+HTTP Parameter Pollution,hpp-1.php
+HTTP Response Splitting,http_response_splitting.php
+Information Disclosure - Favicon,information_disclosure_4.php
+Information Disclosure - Headers,information_disclosure_2.php
+Information Disclosure - PHP version,information_disclosure_1.php
+Information Disclosure - Robots File,information_disclosure_3.php
+PHP Eval Function,php_eval.php
+Remote & Local File Inclusion,rlfi.php
+Unrestricted File Upload,unrestricted_file_upload.php
+----------------------  Coming soon  ----------------------,portal.php
+AJAX / JSON / Web Services,portal.php

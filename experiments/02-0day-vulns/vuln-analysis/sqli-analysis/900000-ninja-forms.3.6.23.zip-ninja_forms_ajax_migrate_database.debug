@@ -1,0 +1,1 @@
+{"function":"mysqli_query","params":["SELECT COUNT( `id` ) AS total FROM `wp_nf3_forms`;"],"errno":1146,"errstr":"Table 'db.wp_nf3_forms' doesn't exist"}

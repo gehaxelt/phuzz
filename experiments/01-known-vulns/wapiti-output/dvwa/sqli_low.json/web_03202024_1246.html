@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wapiti scan report</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/kube.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/master.css" />
+</head>
+<body>
+    <div id="page">
+        <header style="text-align: center">
+        <h2 class="title" style="text-align: center">Wapiti vulnerability report</h2>
+        <h3>Target: http://web/vulnerabilities/sqli/?id=fuzz&Submit=Submit</h3>
+        <p>Date of the scan: Wed, 20 Mar 2024 12:46:11 +0000. Scope of the scan: folder. Crawled pages: 3</p>
+        </header>
+        <hr />
+
+        <h4>Summary</h4>
+        <table class="width-100 hovered" style="background: url('logo_clear.png') no-repeat center;">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Number of vulnerabilities found</th>
+                </tr>
+            </thead>
+            <tbody id="summary">
+                    <tr>
+                        <td class="small">
+                            Backup file
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Weak credentials
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            CRLF Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_3">Content Security Policy Configuration</a>
+                        </td>
+                        <td class="small .text-centered">1</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Cross Site Request Forgery
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Potentially dangerous file
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Command execution
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Path Traversal
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web application framework
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web server
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Htaccess Bypass
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HTML Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_12">HTTP Secure Headers</a>
+                        </td>
+                        <td class="small .text-centered">2</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_13">HttpOnly Flag cookie</a>
+                        </td>
+                        <td class="small .text-centered">1</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Unencrypted Channels
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Log4Shell
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Open Redirect
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Reflected Cross Site Scripting
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_18">Secure Flag cookie</a>
+                        </td>
+                        <td class="small .text-centered">1</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Spring4Shell
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            <a href="#vuln_type_20">SQL Injection</a>
+                        </td>
+                        <td class="small .text-centered">1</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            TLS/SSL misconfigurations
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Server Side Request Forgery
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Stored HTML Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Stored Cross Site Scripting
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Subdomain takeover
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Blind SQL Injection
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Unrestricted File Upload
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            XML External Entity
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Internal Server Error
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Resource consumption
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Review Webserver Metafiles for Information Leakage
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            Fingerprint web technology
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+                    <tr>
+                        <td class="small">
+                            HTTP Methods
+                        </td>
+                        <td class="small .text-centered">0</td>
+                    </tr>
+            </tbody>
+        </table>
+        <hr />
+        <div id="details">
+                <h3 id="vuln_type_3">Content Security Policy Configuration</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks.</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /vulnerabilities/sqli/</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-3-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-3-0-2">HTTP Request</a>
+                                <a href="#tab-vuln-3-0-3">HTTP Response</a>
+                            <a href="#tab-vuln-3-0-4">cURL command line</a>
+                            <a href="#tab-vuln-3-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-3-0-1" style="min-height: 124px;">
+                            <pre>CSP is not set</pre>
+                        </section>
+                        <section id="tab-vuln-3-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /vulnerabilities/sqli/?id=fuzz&amp;Submit=Submit HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: security=low
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-3-0-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 12:46:11 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            set-cookie: PHPSESSID=cgil9hvs0ta9vromit3r7ci4j2; path=/<br />
+                                            expires: Tue, 23 Jun 2009 12:00:00 GMT<br />
+                                            cache-control: no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            vary: Accept-Encoding<br />
+                                            content-length: 1314<br />
+                                            keep-alive: timeout=5, max=100<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html;charset=utf-8<br />
+                                    <br />
+                                    
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang=&#34;en-GB&#34;&gt;
+
+	&lt;head&gt;
+		&lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=UTF-8&#34; /&gt;
+
+		&lt;title&gt;Vulnerability: SQL Injection :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*&lt;/title&gt;
+
+		&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;../../dvwa/css/main.css&#34; /&gt;
+
+		&lt;link rel=&#34;icon&#34; type=&#34;\image/ico&#34; href=&#34;../../favicon.ico&#34; /&gt;
+
+		&lt;script type=&#34;text/javascript&#34; src=&#34;../../dvwa/js/dvwaPage.js&#34;&gt;&lt;/script&gt;
+
+	&lt;/head&gt;
+
+	&lt;body class=&#34;home&#34;&gt;
+		&lt;div id=&#34;container&#34;&gt;
+
+			&lt;div id=&#34;header&#34;&gt;
+
+				&lt;img src=&#34;../../dvwa/images/logo.png&#34; alt=&#34;Damn Vulnerable Web Application&#34; /&gt;
+
+			&lt;/div&gt;
+
+			&lt;div id=&#34;main_menu&#34;&gt;
+
+				&lt;div id=&#34;main_menu_padded&#34;&gt;
+				&lt;ul class=&#34;menuBlocks&#34;&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../.&#34;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../instructions.php&#34;&gt;Instructions&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../setup.php&#34;&gt;Setup / Reset DB&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;ul class=&#34;menuBlocks&#34;&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/brute/&#34;&gt;Brute Force&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/exec/&#34;&gt;Command Injection&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/csrf/&#34;&gt;CSRF&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/fi/.?page=include.php&#34;&gt;File Inclusion&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/upload/&#34;&gt;File Upload&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/captcha/&#34;&gt;Insecure CAPTCHA&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;selected&#34;&gt;&lt;a href=&#34;../../vulnerabilities/sqli/&#34;&gt;SQL Injection&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/sqli_blind/&#34;&gt;SQL Injection (Blind)&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/weak_id/&#34;&gt;Weak Session IDs&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/xss_d/&#34;&gt;XSS (DOM)&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/xss_r/&#34;&gt;XSS (Reflected)&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/xss_s/&#34;&gt;XSS (Stored)&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/csp/&#34;&gt;CSP Bypass&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/javascript/&#34;&gt;JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;ul class=&#34;menuBlocks&#34;&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../security.php&#34;&gt;DVWA Security&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../phpinfo.php&#34;&gt;PHP Info&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../about.php&#34;&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;ul class=&#34;menuBlocks&#34;&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../logout.php&#34;&gt;Logout&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+				&lt;/div&gt;
+
+			&lt;/div&gt;
+
+			&lt;div id=&#34;main_body&#34;&gt;
+
+				
+&lt;div class=&#34;body_padded&#34;&gt;
+	&lt;h1&gt;Vulnerability: SQL Injection&lt;/h1&gt;
+
+	&lt;div class=&#34;vulnerable_code_area&#34;&gt;
+		&lt;form action=&#34;#&#34; method=&#34;GET&#34;&gt;
+			&lt;p&gt;
+				User ID:
+				&lt;input type=&#34;text&#34; size=&#34;15&#34; name=&#34;id&#34;&gt;
+				&lt;input type=&#34;submit&#34; name=&#34;Submit&#34; value=&#34;Submit&#34;&gt;
+			&lt;/p&gt;
+
+		&lt;/form&gt;
+		
+	&lt;/div&gt;
+
+	&lt;h2&gt;More Information&lt;/h2&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/SQL_injection&#34; target=&#34;_blank&#34;&gt;https://en.wikipedia.org/wiki/SQL_injection&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&#34;https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/&#34; target=&#34;_blank&#34;&gt;https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&#34;https://owasp.org/www-community/attacks/SQL_Injection&#34; target=&#34;_blank&#34;&gt;https://owasp.org/www-community/attacks/SQL_Injection&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&#34;https://bobby-tables.com/&#34; target=&#34;_blank&#34;&gt;https://bobby-tables.com/&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+				&lt;br /&gt;&lt;br /&gt;
+				
+
+			&lt;/div&gt;
+
+			&lt;div class=&#34;clear&#34;&gt;
+			&lt;/div&gt;
+
+			&lt;div id=&#34;system_info&#34;&gt;
+				&lt;input type=&#34;button&#34; value=&#34;View Help&#34; class=&#34;popup_button&#34; id=&#39;help_button&#39; data-help-url=&#39;../../vulnerabilities/view_help.php?id=sqli&amp;security=low&amp;locale=en&#39; )&#34;&gt; &lt;input type=&#34;button&#34; value=&#34;View Source&#34; class=&#34;popup_button&#34; id=&#39;source_button&#39; data-source-url=&#39;../../vulnerabilities/view_source.php?id=sqli&amp;security=low&#39; )&#34;&gt; &lt;div align=&#34;left&#34;&gt;&lt;em&gt;Username:&lt;/em&gt; admin&lt;br /&gt;&lt;em&gt;Security Level:&lt;/em&gt; low&lt;br /&gt;&lt;em&gt;Locale:&lt;/em&gt; en&lt;br /&gt;&lt;em&gt;PHPIDS:&lt;/em&gt; disabled&lt;br /&gt;&lt;em&gt;SQLi DB:&lt;/em&gt; mysql&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div id=&#34;footer&#34;&gt;
+
+				&lt;p&gt;Damn Vulnerable Web Application (DVWA) v1.10 *Development*&lt;/p&gt;
+				&lt;script src=&#39;../..//dvwa/js/add_event_listeners.js&#39;&gt;&lt;/script&gt;
+
+			&lt;/div&gt;
+
+		&lt;/div&gt;
+
+	&lt;/body&gt;
+
+&lt;/html&gt;
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-3-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/vulnerabilities/sqli/?id=fuzz&amp;Submit=Submit&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-3-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-CONF-12&#39;, &#39;OSHP-Content-Security-Policy&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>Configuring Content Security Policy involves adding the Content-Security-Policy HTTP header to a web page and giving it values to control what resources the user agent is allowed to load for that page.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Mozilla: Content Security Policy (CSP)</a></li>
+                    <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">OWASP: Content Security Policy Cheat Sheet</a></li>
+                    <li><a href="https://owasp.org/www-pdf-archive/2019-02-22_-_How_do_I_Content_Security_Policy_-_Print.pdf">OWASP: How to do Content Security Policy (PDF)</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/12-Test_for_Content_Security_Policy">OWASP: Content Security Policy</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_12">HTTP Secure Headers</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>HTTP security headers tell the browser how to behave when handling the website&#39;s content.</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /vulnerabilities/sqli/</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-12-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-12-0-2">HTTP Request</a>
+                                <a href="#tab-vuln-12-0-3">HTTP Response</a>
+                            <a href="#tab-vuln-12-0-4">cURL command line</a>
+                            <a href="#tab-vuln-12-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-12-0-1" style="min-height: 124px;">
+                            <pre>X-Frame-Options is not set</pre>
+                        </section>
+                        <section id="tab-vuln-12-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /vulnerabilities/sqli/?id=fuzz&amp;Submit=Submit HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: security=low
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-12-0-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 12:46:11 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            set-cookie: PHPSESSID=n40fvso4k0q73avvargkj3hmde; path=/<br />
+                                            expires: Tue, 23 Jun 2009 12:00:00 GMT<br />
+                                            cache-control: no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            vary: Accept-Encoding<br />
+                                            content-length: 1314<br />
+                                            keep-alive: timeout=5, max=99<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html;charset=utf-8<br />
+                                    <br />
+                                    
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang=&#34;en-GB&#34;&gt;
+
+	&lt;head&gt;
+		&lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=UTF-8&#34; /&gt;
+
+		&lt;title&gt;Vulnerability: SQL Injection :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*&lt;/title&gt;
+
+		&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;../../dvwa/css/main.css&#34; /&gt;
+
+		&lt;link rel=&#34;icon&#34; type=&#34;\image/ico&#34; href=&#34;../../favicon.ico&#34; /&gt;
+
+		&lt;script type=&#34;text/javascript&#34; src=&#34;../../dvwa/js/dvwaPage.js&#34;&gt;&lt;/script&gt;
+
+	&lt;/head&gt;
+
+	&lt;body class=&#34;home&#34;&gt;
+		&lt;div id=&#34;container&#34;&gt;
+
+			&lt;div id=&#34;header&#34;&gt;
+
+				&lt;img src=&#34;../../dvwa/images/logo.png&#34; alt=&#34;Damn Vulnerable Web Application&#34; /&gt;
+
+			&lt;/div&gt;
+
+			&lt;div id=&#34;main_menu&#34;&gt;
+
+				&lt;div id=&#34;main_menu_padded&#34;&gt;
+				&lt;ul class=&#34;menuBlocks&#34;&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../.&#34;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../instructions.php&#34;&gt;Instructions&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../setup.php&#34;&gt;Setup / Reset DB&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;ul class=&#34;menuBlocks&#34;&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/brute/&#34;&gt;Brute Force&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/exec/&#34;&gt;Command Injection&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/csrf/&#34;&gt;CSRF&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/fi/.?page=include.php&#34;&gt;File Inclusion&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/upload/&#34;&gt;File Upload&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/captcha/&#34;&gt;Insecure CAPTCHA&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;selected&#34;&gt;&lt;a href=&#34;../../vulnerabilities/sqli/&#34;&gt;SQL Injection&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/sqli_blind/&#34;&gt;SQL Injection (Blind)&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/weak_id/&#34;&gt;Weak Session IDs&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/xss_d/&#34;&gt;XSS (DOM)&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/xss_r/&#34;&gt;XSS (Reflected)&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/xss_s/&#34;&gt;XSS (Stored)&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/csp/&#34;&gt;CSP Bypass&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/javascript/&#34;&gt;JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;ul class=&#34;menuBlocks&#34;&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../security.php&#34;&gt;DVWA Security&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../phpinfo.php&#34;&gt;PHP Info&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../about.php&#34;&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;ul class=&#34;menuBlocks&#34;&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../logout.php&#34;&gt;Logout&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+				&lt;/div&gt;
+
+			&lt;/div&gt;
+
+			&lt;div id=&#34;main_body&#34;&gt;
+
+				
+&lt;div class=&#34;body_padded&#34;&gt;
+	&lt;h1&gt;Vulnerability: SQL Injection&lt;/h1&gt;
+
+	&lt;div class=&#34;vulnerable_code_area&#34;&gt;
+		&lt;form action=&#34;#&#34; method=&#34;GET&#34;&gt;
+			&lt;p&gt;
+				User ID:
+				&lt;input type=&#34;text&#34; size=&#34;15&#34; name=&#34;id&#34;&gt;
+				&lt;input type=&#34;submit&#34; name=&#34;Submit&#34; value=&#34;Submit&#34;&gt;
+			&lt;/p&gt;
+
+		&lt;/form&gt;
+		
+	&lt;/div&gt;
+
+	&lt;h2&gt;More Information&lt;/h2&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/SQL_injection&#34; target=&#34;_blank&#34;&gt;https://en.wikipedia.org/wiki/SQL_injection&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&#34;https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/&#34; target=&#34;_blank&#34;&gt;https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&#34;https://owasp.org/www-community/attacks/SQL_Injection&#34; target=&#34;_blank&#34;&gt;https://owasp.org/www-community/attacks/SQL_Injection&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&#34;https://bobby-tables.com/&#34; target=&#34;_blank&#34;&gt;https://bobby-tables.com/&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+				&lt;br /&gt;&lt;br /&gt;
+				
+
+			&lt;/div&gt;
+
+			&lt;div class=&#34;clear&#34;&gt;
+			&lt;/div&gt;
+
+			&lt;div id=&#34;system_info&#34;&gt;
+				&lt;input type=&#34;button&#34; value=&#34;View Help&#34; class=&#34;popup_button&#34; id=&#39;help_button&#39; data-help-url=&#39;../../vulnerabilities/view_help.php?id=sqli&amp;security=low&amp;locale=en&#39; )&#34;&gt; &lt;input type=&#34;button&#34; value=&#34;View Source&#34; class=&#34;popup_button&#34; id=&#39;source_button&#39; data-source-url=&#39;../../vulnerabilities/view_source.php?id=sqli&amp;security=low&#39; )&#34;&gt; &lt;div align=&#34;left&#34;&gt;&lt;em&gt;Username:&lt;/em&gt; admin&lt;br /&gt;&lt;em&gt;Security Level:&lt;/em&gt; low&lt;br /&gt;&lt;em&gt;Locale:&lt;/em&gt; en&lt;br /&gt;&lt;em&gt;PHPIDS:&lt;/em&gt; disabled&lt;br /&gt;&lt;em&gt;SQLi DB:&lt;/em&gt; mysql&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div id=&#34;footer&#34;&gt;
+
+				&lt;p&gt;Damn Vulnerable Web Application (DVWA) v1.10 *Development*&lt;/p&gt;
+				&lt;script src=&#39;../..//dvwa/js/add_event_listeners.js&#39;&gt;&lt;/script&gt;
+
+			&lt;/div&gt;
+
+		&lt;/div&gt;
+
+	&lt;/body&gt;
+
+&lt;/html&gt;
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-12-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/vulnerabilities/sqli/?id=fuzz&amp;Submit=Submit&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-12-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;OSHP-X-Frame-Options&#39;]</pre>
+                        </section>
+                        <h4>🟡 Vulnerability found in /vulnerabilities/sqli/</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-12-1-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-12-1-2">HTTP Request</a>
+                                <a href="#tab-vuln-12-1-3">HTTP Response</a>
+                            <a href="#tab-vuln-12-1-4">cURL command line</a>
+                            <a href="#tab-vuln-12-1-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-12-1-1" style="min-height: 124px;">
+                            <pre>X-Content-Type-Options is not set</pre>
+                        </section>
+                        <section id="tab-vuln-12-1-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /vulnerabilities/sqli/?id=fuzz&amp;Submit=Submit HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: security=low
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-12-1-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 12:46:11 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            set-cookie: PHPSESSID=n40fvso4k0q73avvargkj3hmde; path=/<br />
+                                            expires: Tue, 23 Jun 2009 12:00:00 GMT<br />
+                                            cache-control: no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            vary: Accept-Encoding<br />
+                                            content-length: 1314<br />
+                                            keep-alive: timeout=5, max=99<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html;charset=utf-8<br />
+                                    <br />
+                                    
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang=&#34;en-GB&#34;&gt;
+
+	&lt;head&gt;
+		&lt;meta http-equiv=&#34;Content-Type&#34; content=&#34;text/html; charset=UTF-8&#34; /&gt;
+
+		&lt;title&gt;Vulnerability: SQL Injection :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*&lt;/title&gt;
+
+		&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;../../dvwa/css/main.css&#34; /&gt;
+
+		&lt;link rel=&#34;icon&#34; type=&#34;\image/ico&#34; href=&#34;../../favicon.ico&#34; /&gt;
+
+		&lt;script type=&#34;text/javascript&#34; src=&#34;../../dvwa/js/dvwaPage.js&#34;&gt;&lt;/script&gt;
+
+	&lt;/head&gt;
+
+	&lt;body class=&#34;home&#34;&gt;
+		&lt;div id=&#34;container&#34;&gt;
+
+			&lt;div id=&#34;header&#34;&gt;
+
+				&lt;img src=&#34;../../dvwa/images/logo.png&#34; alt=&#34;Damn Vulnerable Web Application&#34; /&gt;
+
+			&lt;/div&gt;
+
+			&lt;div id=&#34;main_menu&#34;&gt;
+
+				&lt;div id=&#34;main_menu_padded&#34;&gt;
+				&lt;ul class=&#34;menuBlocks&#34;&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../.&#34;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../instructions.php&#34;&gt;Instructions&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../setup.php&#34;&gt;Setup / Reset DB&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;ul class=&#34;menuBlocks&#34;&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/brute/&#34;&gt;Brute Force&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/exec/&#34;&gt;Command Injection&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/csrf/&#34;&gt;CSRF&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/fi/.?page=include.php&#34;&gt;File Inclusion&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/upload/&#34;&gt;File Upload&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/captcha/&#34;&gt;Insecure CAPTCHA&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;selected&#34;&gt;&lt;a href=&#34;../../vulnerabilities/sqli/&#34;&gt;SQL Injection&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/sqli_blind/&#34;&gt;SQL Injection (Blind)&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/weak_id/&#34;&gt;Weak Session IDs&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/xss_d/&#34;&gt;XSS (DOM)&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/xss_r/&#34;&gt;XSS (Reflected)&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/xss_s/&#34;&gt;XSS (Stored)&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/csp/&#34;&gt;CSP Bypass&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../vulnerabilities/javascript/&#34;&gt;JavaScript&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;ul class=&#34;menuBlocks&#34;&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../security.php&#34;&gt;DVWA Security&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../phpinfo.php&#34;&gt;PHP Info&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../about.php&#34;&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;ul class=&#34;menuBlocks&#34;&gt;&lt;li class=&#34;&#34;&gt;&lt;a href=&#34;../../logout.php&#34;&gt;Logout&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+				&lt;/div&gt;
+
+			&lt;/div&gt;
+
+			&lt;div id=&#34;main_body&#34;&gt;
+
+				
+&lt;div class=&#34;body_padded&#34;&gt;
+	&lt;h1&gt;Vulnerability: SQL Injection&lt;/h1&gt;
+
+	&lt;div class=&#34;vulnerable_code_area&#34;&gt;
+		&lt;form action=&#34;#&#34; method=&#34;GET&#34;&gt;
+			&lt;p&gt;
+				User ID:
+				&lt;input type=&#34;text&#34; size=&#34;15&#34; name=&#34;id&#34;&gt;
+				&lt;input type=&#34;submit&#34; name=&#34;Submit&#34; value=&#34;Submit&#34;&gt;
+			&lt;/p&gt;
+
+		&lt;/form&gt;
+		
+	&lt;/div&gt;
+
+	&lt;h2&gt;More Information&lt;/h2&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/SQL_injection&#34; target=&#34;_blank&#34;&gt;https://en.wikipedia.org/wiki/SQL_injection&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&#34;https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/&#34; target=&#34;_blank&#34;&gt;https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&#34;https://owasp.org/www-community/attacks/SQL_Injection&#34; target=&#34;_blank&#34;&gt;https://owasp.org/www-community/attacks/SQL_Injection&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&#34;https://bobby-tables.com/&#34; target=&#34;_blank&#34;&gt;https://bobby-tables.com/&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+
+				&lt;br /&gt;&lt;br /&gt;
+				
+
+			&lt;/div&gt;
+
+			&lt;div class=&#34;clear&#34;&gt;
+			&lt;/div&gt;
+
+			&lt;div id=&#34;system_info&#34;&gt;
+				&lt;input type=&#34;button&#34; value=&#34;View Help&#34; class=&#34;popup_button&#34; id=&#39;help_button&#39; data-help-url=&#39;../../vulnerabilities/view_help.php?id=sqli&amp;security=low&amp;locale=en&#39; )&#34;&gt; &lt;input type=&#34;button&#34; value=&#34;View Source&#34; class=&#34;popup_button&#34; id=&#39;source_button&#39; data-source-url=&#39;../../vulnerabilities/view_source.php?id=sqli&amp;security=low&#39; )&#34;&gt; &lt;div align=&#34;left&#34;&gt;&lt;em&gt;Username:&lt;/em&gt; admin&lt;br /&gt;&lt;em&gt;Security Level:&lt;/em&gt; low&lt;br /&gt;&lt;em&gt;Locale:&lt;/em&gt; en&lt;br /&gt;&lt;em&gt;PHPIDS:&lt;/em&gt; disabled&lt;br /&gt;&lt;em&gt;SQLi DB:&lt;/em&gt; mysql&lt;/div&gt;
+			&lt;/div&gt;
+
+			&lt;div id=&#34;footer&#34;&gt;
+
+				&lt;p&gt;Damn Vulnerable Web Application (DVWA) v1.10 *Development*&lt;/p&gt;
+				&lt;script src=&#39;../..//dvwa/js/add_event_listeners.js&#39;&gt;&lt;/script&gt;
+
+			&lt;/div&gt;
+
+		&lt;/div&gt;
+
+	&lt;/body&gt;
+
+&lt;/html&gt;
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-12-1-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/vulnerabilities/sqli/?id=fuzz&amp;Submit=Submit&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-12-1-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;OSHP-X-Content-Type-Options&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>Use the recommendations for hardening your HTTP Security Headers.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-project-secure-headers/#div-bestpractices">OSHP: OWASP Secure Headers Project Best Practices</a></li>
+                    <li><a href="https://www.netsparker.com/blog/web-security/http-security-headers/">Netsparker: HTTP Security Headers: An Easy Way to Harden Your Web Applications</a></li>
+                    <li><a href="https://www.keycdn.com/blog/http-security-headers">KeyCDN: Hardening Your HTTP Security Headers</a></li>
+                    <li><a href="https://owasp.org/www-chapter-ghana/assets/slides/HTTP_Header_Security.pdf">OWASP: HTTP SECURITY HEADERS (Protection For Browsers) (PDF)</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/09-Testing_for_Clickjacking">OWASP: Clickjacking</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting">OWASP: Reflected Cross Site Scripting</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/02-Testing_for_Stored_Cross_Site_Scripting">OWASP: Stored Cross Site Scripting</a></li>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/07-Test_HTTP_Strict_Transport_Security">OWASP: HTTP Strict Transport Security</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_13">HttpOnly Flag cookie</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>HttpOnly is an additional flag included in a Set-Cookie HTTP response header. Using the HttpOnly flag when generating a cookie helps mitigate the risk of client side script accessing the protected cookie (if the browser supports it).</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /vulnerabilities/sqli/</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-13-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-13-0-2">HTTP Request</a>
+                            <a href="#tab-vuln-13-0-4">cURL command line</a>
+                            <a href="#tab-vuln-13-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-13-0-1" style="min-height: 124px;">
+                            <pre>HttpOnly flag is not set in the cookie : PHPSESSID</pre>
+                        </section>
+                        <section id="tab-vuln-13-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /vulnerabilities/sqli/?id=fuzz&amp;Submit=Submit HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: security=low
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-13-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/vulnerabilities/sqli/?id=fuzz&amp;Submit=Submit&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-13-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-SESS-02&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>While creation of the cookie, make sure to set the HttpOnly Flag to True.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html">OWASP: Testing for Cookies Attributes</a></li>
+                    <li><a href="https://owasp.org/www-community/HttpOnly">OWASP: HttpOnly</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_18">Secure Flag cookie</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>The secure flag is an option that can be set by the application server when sending a new cookie to the user within an HTTP Response. The purpose of the secure flag is to prevent cookies from being observed by unauthorized parties due to the transmission of a the cookie in clear text.</dd>
+                </dl>
+
+                        <h4>🟡 Vulnerability found in /vulnerabilities/sqli/</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-18-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-18-0-2">HTTP Request</a>
+                            <a href="#tab-vuln-18-0-4">cURL command line</a>
+                            <a href="#tab-vuln-18-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-18-0-1" style="min-height: 124px;">
+                            <pre>Secure flag is not set in the cookie : PHPSESSID</pre>
+                        </section>
+                        <section id="tab-vuln-18-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /vulnerabilities/sqli/?id=fuzz&amp;Submit=Submit HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: security=low
+                                    <br>
+                            </pre>
+                        </section>
+                        <section id="tab-vuln-18-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/vulnerabilities/sqli/?id=fuzz&amp;Submit=Submit&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-18-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-SESS-02&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>When generating the cookie, make sure to set the Secure Flag to True.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes.html">OWASP: Testing for Cookies Attributes</a></li>
+                    <li><a href="https://owasp.org/www-community/controls/SecureCookieAttribute">OWASP: Secure Cookie Attribute</a></li>
+                </ul>
+                <br />
+                <hr>
+                <h3 id="vuln_type_20">SQL Injection</h3>
+                <dl>
+                    <dt>Description</dt>
+                    <dd>SQL injection vulnerabilities allow an attacker to alter the queries executed on the backend database. An attacker may then be able to extract or modify information stored in the database or even escalate his privileges on the system. Blind SQL injection is a technique that exploits a vulnerability occurring in the database of an application. This kind of vulnerability is harder to detect than basic SQL injections because no error message will be displayed on the webpage.</dd>
+                </dl>
+
+                        <h4>🔥 Vulnerability found in /vulnerabilities/sqli/</h4>
+                        <nav class="tabs" data-kube="tabs" data-equal="true" data-height="equal">
+                            <a href="#tab-vuln-20-0-1" class="is-active">Description</a>
+                            <a href="#tab-vuln-20-0-2">HTTP Request</a>
+                                <a href="#tab-vuln-20-0-3">HTTP Response</a>
+                            <a href="#tab-vuln-20-0-4">cURL command line</a>
+                            <a href="#tab-vuln-20-0-5">WSTG Code</a>
+                        </nav>
+                        <section id="tab-vuln-20-0-1" style="min-height: 124px;">
+                            <pre>SQL Injection (DBMS: MySQL) via injection in the parameter id</pre>
+                        </section>
+                        <section id="tab-vuln-20-0-2" style="min-height: 124px;" class="is-hidden">
+                            <pre style="white-space: normal;">
+                                    GET /vulnerabilities/sqli/?id=fuzz%C2%BF%27%22%28&amp;Submit=Submit HTTP/1.1
+                                    <br>
+                                    host: web
+                                    <br>
+                                    connection: keep-alive
+                                    <br>
+                                    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+                                    <br>
+                                    accept-language: en-US
+                                    <br>
+                                    accept-encoding: gzip, deflate, br
+                                    <br>
+                                    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+                                    <br>
+                                    cookie: security=low
+                                    <br>
+                            </pre>
+                        </section>
+                            <section id="tab-vuln-20-0-3" style="min-height: 124px;" class="is-hidden">
+                                <pre style="white-space: nowrap">
+                                    HTTP 200<br />
+                                            date: Wed, 20 Mar 2024 12:46:13 GMT<br />
+                                            server: Apache/2.4.57 (Debian)<br />
+                                            x-powered-by: PHP/8.2.10<br />
+                                            set-cookie: PHPSESSID=3s2lm7om0rku3k6jt36am520no; path=/<br />
+                                            expires: Thu, 19 Nov 1981 08:52:00 GMT<br />
+                                            cache-control: no-store, no-cache, must-revalidate<br />
+                                            pragma: no-cache<br />
+                                            vary: Accept-Encoding<br />
+                                            content-length: 144<br />
+                                            keep-alive: timeout=5, max=16<br />
+                                            connection: Keep-Alive<br />
+                                            content-type: text/html; charset=UTF-8<br />
+                                    <br />
+                                    
+&lt;pre&gt;You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &#39;&#34;(&#39;&#39; at line 1&lt;/pre&gt;
+                                </pre>
+                            </section>
+                        <section id="tab-vuln-20-0-4" style="min-height: 124px;" class="is-hidden">
+                            <pre>curl &#34;http://web/vulnerabilities/sqli/?id=fuzz%C2%BF%27%22%28&amp;Submit=Submit&#34;</pre>
+                        </section>
+                        <section id="tab-vuln-20-0-5" style="min-height: 124px;" class="is-hidden">
+                            <pre>[&#39;WSTG-INPV-05&#39;]</pre>
+                        </section>
+
+                <dl><dt>Solutions</dt><dd>To protect against SQL injection, user input must not directly be embedded in SQL statements. Instead, user input must be escaped or filtered or parameterized statements must be used.</dd></dl>
+                <h5>References</h5>
+                <ul>
+                    <li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection">OWASP: SQL Injection</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/SQL_injection">Wikipedia: SQL injection</a></li>
+                    <li><a href="https://cwe.mitre.org/data/definitions/89.html">CWE-89: Improper Neutralization of Special Elements used in an SQL Command (&#39;SQL Injection&#39;)</a></li>
+                    <li><a href="https://owasp.org/www-community/attacks/Blind_SQL_Injection">OWASP: Blind SQL Injection</a></li>
+                </ul>
+                <br />
+                <hr>
+        </div>
+        <footer class="small" id="footer"><a href="https://wapiti-scanner.github.io/" id="wapiti_link">Wapiti 3.1.8</a> &copy; Nicolas SURRIBAS 2006-2022</footer>
+	</div>
+    <script type="text/javascript" src="js/kube.min.js"></script>
+    <script>$K.init();</script>
+</body>
+</html>

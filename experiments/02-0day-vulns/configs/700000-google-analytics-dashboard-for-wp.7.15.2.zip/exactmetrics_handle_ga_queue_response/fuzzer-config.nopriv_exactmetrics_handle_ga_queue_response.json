@@ -1,0 +1,35 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "key",
+      "profile",
+      "mp_secret"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "exactmetrics_handle_ga_queue_response"
+      },
+      {
+        "name": "key",
+        "value": "fuzz"
+      },
+      {
+        "name": "profile",
+        "value": "fuzz"
+      },
+      {
+        "name": "mp_secret",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

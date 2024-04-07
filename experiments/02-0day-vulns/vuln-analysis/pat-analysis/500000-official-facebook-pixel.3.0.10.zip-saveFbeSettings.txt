@@ -1,0 +1,1 @@
+../phuzz-output/500000-official-facebook-pixel.3.0.10.zip/saveFbeSettings/output/fuzzer-10/vulnerable-candidates.json,363a3a4a-4a67-4296-bd29-20baa8e5e70c:  query_params:{"action": "save_fbe_settings"} body_params:{"externalBusinessId": "fu6z", "accessToken": "fuzz", "pixelId": "fu"}

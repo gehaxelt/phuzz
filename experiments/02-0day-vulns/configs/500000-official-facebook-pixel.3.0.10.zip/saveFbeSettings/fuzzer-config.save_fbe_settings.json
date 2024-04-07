@@ -1,0 +1,42 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "pixelId",
+      "accessToken",
+      "externalBusinessId"
+    ],
+    "data": [
+      {
+        "name": "pixelId",
+        "value": "fuzz"
+      },
+      {
+        "name": "accessToken",
+        "value": "fuzz"
+      },
+      {
+        "name": "externalBusinessId",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "save_fbe_settings"
+      }
+    ]
+  }
+}

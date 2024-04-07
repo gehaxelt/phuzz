@@ -1,0 +1,56 @@
+# Start: 2023-08-12+12:24:29.5466046520 
+# End:   2023-08-16+02:48:36.9392152210
+# => datetime.timedelta(days=3, seconds=51840), 3d and 14.4h
+
+# Number of findings
+count = 0 
+for k in a:
+	for v in a[k]:
+		count += len(a[k][v])
+# count = 1843
+
+# $ find . -mindepth 2 -name '*.xml' | wc -l
+1074
+
+from collections import Counter
+pc = Counter()
+ec = Counter()
+for k in a:
+	for v in a[k]:
+		for f in a[k][v]:
+			print(f)
+			plugin, endpoint = f.split("/")
+			pc.update([plugin])
+			ec.update([f])
+>>> len(pc)
+114
+>>> len(ec)
+1074
+
+
+# XSS (Info)
+FP: "siteorigin-panels/so_panels_export_layout",
+FP: "astra-sites/ast_block_templates_import_block",
+FP: "ultimate-addons-for-gutenberg/ast_block_templates_import_block",
+FP: "the-events-calendar/tribe_aggregator_fetch_import",
+FP: "wp-migrate-db/wpmdb_migrate_table",
+FP: "mailchimp-for-wp/mc4wp_get_list_details",
+FP: "megamenu/mm_reorder_items",
+FP: "megamenu/mm_save_grid_data"
+FP => Wrong content type to exploit: application/json 
+
+# XSS (Real)
+"wpvivid-backuprestore/wpvivid_get_post_type_list",
+"wpvivid-backuprestore/wpvivid_check_import_file",
+"wpvivid-backuprestore/wpvivid_export_post_step3",
+"wpvivid-backuprestore/wpvivid_is_backup_file_free",
+"wpvivid-backuprestore/wpvivid_export_post_step2",
+"wpvivid-backuprestore/wpvivid_get_exclude_files_list",
+"wpvivid-backuprestore/wpvivid_get_file_id",
+"shortcodes-ultimate/su_generator_preview"
+
+# Path Traversal
+"popup-builder/sgpb_import_subscribers"
+
+# Open Redirect
+"ninja-forms/nf_oauth_connect"

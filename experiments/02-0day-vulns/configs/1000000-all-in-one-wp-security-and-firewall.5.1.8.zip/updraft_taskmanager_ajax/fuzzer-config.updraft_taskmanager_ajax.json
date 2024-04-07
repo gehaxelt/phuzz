@@ -1,0 +1,35 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action",
+      "nonce"
+    ],
+    "fuzz": [
+      "subaction",
+      "action_data"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "updraft_taskmanager_ajax"
+      },
+      {
+        "name": "nonce",
+        "value": "fuzz"
+      },
+      {
+        "name": "subaction",
+        "value": "fuzz"
+      },
+      {
+        "name": "action_data",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

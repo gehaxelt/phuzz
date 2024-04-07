@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<!DOCTYPE issues [
+<!ELEMENT issues (issue*)>
+<!ATTLIST issues burpVersion CDATA "">
+<!ATTLIST issues exportTime CDATA "">
+<!ELEMENT issue (serialNumber, type, name, host, path, location, severity, confidence, issueBackground?, remediationBackground?, references?, vulnerabilityClassifications?, issueDetail?, issueDetailItems?, remediationDetail?, requestresponse*, collaboratorEvent*, infiltratorEvent*, staticAnalysis*, dynamicAnalysis*, prototypePollution*)>
+<!ELEMENT serialNumber (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT severity (#PCDATA)>
+<!ELEMENT confidence (#PCDATA)>
+<!ELEMENT issueBackground (#PCDATA)>
+<!ELEMENT remediationBackground (#PCDATA)>
+<!ELEMENT references (#PCDATA)>
+<!ELEMENT vulnerabilityClassifications (#PCDATA)>
+<!ELEMENT issueDetail (#PCDATA)>
+<!ELEMENT issueDetailItems (issueDetailItem*)>
+<!ELEMENT issueDetailItem (#PCDATA)>
+<!ELEMENT remediationDetail (#PCDATA)>
+<!ELEMENT requestresponse (request?, response?, responseRedirected?)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request method CDATA "">
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT responseRedirected (#PCDATA)>
+<!ELEMENT sender (#PCDATA)>
+<!ELEMENT message (#PCDATA)>
+<!ELEMENT conversation (#PCDATA)>
+<!ELEMENT recipient (#PCDATA)>
+<!ELEMENT recipients (recipient*)>
+<!ELEMENT smtp (sender, recipients, message, conversation)>
+<!ELEMENT collaboratorEvent (interactionType, originIp, time, lookupType?, lookupHost?, requestresponse?, smtp?)>
+<!ELEMENT interactionType (#PCDATA)>
+<!ELEMENT originIp (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT lookupType (#PCDATA)>
+<!ELEMENT lookupHost (#PCDATA)>
+<!ELEMENT infiltratorEvent (parameterName, platform, signature, stackTrace?, parameterValue?, collaboratorEvent)>
+<!ELEMENT parameterName (#PCDATA)>
+<!ELEMENT platform (#PCDATA)>
+<!ELEMENT signature (#PCDATA)>
+<!ELEMENT stackTrace (#PCDATA)>
+<!ELEMENT parameterValue (#PCDATA)>
+<!ELEMENT dynamicAnalysis (source, sink, sourceStackTrace, sinkStackTrace, eventListenerStackTrace, sourceValue, sinkValue, eventHandlerData, eventHandlerDataType, eventHandlerManipulatedData, poc, origin, isOriginChecked, sourceElementId, sourceElementName, eventFiredEventName, eventFiredElementId, eventFiredElementName, eventFiredOuterHtml)>
+<!ELEMENT prototypePollution (poc, pollutionTechnique, pollutionType)>
+<!ELEMENT staticAnalysis (source, sink, codeSnippets)>
+<!ELEMENT source (#PCDATA)>
+<!ELEMENT sink (#PCDATA)>
+<!ELEMENT sourceStackTrace (#PCDATA)>
+<!ELEMENT sinkStackTrace (#PCDATA)>
+<!ELEMENT eventListenerStackTrace (#PCDATA)>
+<!ELEMENT sourceValue (#PCDATA)>
+<!ELEMENT sinkValue (#PCDATA)>
+<!ELEMENT eventHandlerData (#PCDATA)>
+<!ELEMENT eventHandlerDataType (#PCDATA)>
+<!ELEMENT sourceElementId (#PCDATA)>
+<!ELEMENT sourceElementName (#PCDATA)>
+<!ELEMENT eventFiredEventName (#PCDATA)>
+<!ELEMENT eventFiredElementId (#PCDATA)>
+<!ELEMENT eventFiredElementName (#PCDATA)>
+<!ELEMENT eventFiredOuterHtml (#PCDATA)>
+<!ELEMENT eventHandlerManipulatedData (#PCDATA)>
+<!ELEMENT poc (#PCDATA)>
+<!ELEMENT origin (#PCDATA)>
+<!ELEMENT isOriginChecked (#PCDATA)>
+<!ELEMENT codeSnippets (codeSnippet*)>
+<!ELEMENT codeSnippet (#PCDATA)>
+<!ELEMENT pollutionTechnique (#PCDATA)>
+<!ELEMENT pollutionType (#PCDATA)>
+]>
+<issues burpVersion="2023.8.1" exportTime="Thu Aug 10 15:04:05 GMT 2023">
+  <issue>
+    <serialNumber>54733780232429568</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Private IP addresses disclosed]]></name>
+    <host ip="192.168.16.2">http://web</host>
+    <path><![CDATA[/users/login.php]]></path>
+    <location><![CDATA[/users/login.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>RFC 1918 specifies ranges of IP addresses that are reserved for use in private networks and cannot be routed on the public Internet. Although various methods exist by which an attacker can determine the public IP addresses in use by an organization, the private addresses used internally cannot usually be determined in the same ways.</p>
+<p>Discovering the private addresses used within an organization can help an attacker in carrying out network-layer attacks aiming to penetrate the organization's internal infrastructure. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>There is not usually any good reason to disclose the internal IP addresses used within an organization's infrastructure. If these are being returned in service banners or debug messages, then the relevant services should be configured to mask the private addresses. If they are being used to track back-end servers for load balancing purposes, then the addresses should be rewritten with innocuous identifiers from which an attacker cannot infer any useful information about the infrastructure.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[The following RFC 1918 IP address was disclosed in the response:<ul><li>192.168.16.2</li></ul>]]></issueDetail>
+    <issueDetailItems>
+      <issueDetailItem><![CDATA[192.168.16.2]]></issueDetailItem>
+    </issueDetailItems>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvdXNlcnMvbG9naW4ucGhwIEhUVFAvMS4wDQpIb3N0OiB3ZWINCkNvbnRlbnQtTGVuZ3RoOiAyNw0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNCg0KcGFzc3dvcmQ9ZnV6eiZ1c2VybmFtZT1mdXp6]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgNDAwIEJhZCBSZXF1ZXN0DQpEYXRlOiBUaHUsIDEwIEF1ZyAyMDIzIDE1OjAxOjA0IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpDb250ZW50LUxlbmd0aDogMzA0DQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjQwMCBCYWQgUmVxdWVzdDwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPkJhZCBSZXF1ZXN0PC9oMT4KPHA+WW91ciBicm93c2VyIHNlbnQgYSByZXF1ZXN0IHRoYXQgdGhpcyBzZXJ2ZXIgY291bGQgbm90IHVuZGVyc3RhbmQuPGJyIC8+CjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjU3IChEZWJpYW4pIFNlcnZlciBhdCAxOTIuMTY4LjE2LjIgUG9ydCA4MDwvYWRkcmVzcz4KPC9ib2R5PjwvaHRtbD4K]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>1874585257480845312</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[SQL injection]]></name>
+    <host ip="192.168.16.2">http://web</host>
+    <path><![CDATA[/users/login.php]]></path>
+    <location><![CDATA[/users/login.php]]></location>
+    <severity>High</severity>
+    <confidence>Firm</confidence>
+    <issueBackground><![CDATA[<p>SQL injection vulnerabilities arise when user-controllable data is incorporated into database SQL queries in an unsafe manner. An attacker can supply crafted input to break out of the data context in which their input appears and interfere with the structure of the surrounding query.</p>
+<p>A wide range of damaging attacks can often be delivered via SQL injection, including reading or modifying critical application data, interfering with application logic, escalating privileges within the database and taking control of the database server. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>The most effective way to prevent SQL injection attacks is to use parameterized queries (also known as prepared statements) for all database access. This method uses two steps to incorporate potentially tainted data into SQL queries: first, the application specifies the structure of the query, leaving placeholders for each item of user input; second, the application specifies the contents of each placeholder. Because the structure of the query has already been defined in the first step, it is not possible for malformed data in the second step to interfere with the query structure. You should review the documentation for your database and application platform to determine the appropriate APIs which you can use to perform parameterized queries. It is strongly recommended that you parameterize <i>every</i> variable data item that is incorporated into database queries, even if it is not obviously tainted, to prevent oversights occurring and avoid vulnerabilities being introduced by changes elsewhere within the code base of the application.</p>
+<p>You should be aware that some commonly employed and recommended mitigations for SQL injection vulnerabilities are not always effective: </p>
+<ul>
+  <li>One common defense is to double up any single quotation marks appearing within user input before incorporating that input into a SQL query. This defense is designed to prevent malformed data from terminating the string into which it is inserted. However, if the data being incorporated into queries is numeric, then the defense may fail, because numeric data may not be encapsulated within quotes, in which case only a space is required to break out of the data context and interfere with the query. Further, in second-order SQL injection attacks, data that has been safely escaped when initially inserted into the database is subsequently read from the database and then passed back to it again. Quotation marks that have been doubled up initially will return to their original form when the data is reused, allowing the defense to be bypassed.</li>
+  <li>Another often cited defense is to use stored procedures for database access. While stored procedures can provide security benefits, they are not guaranteed to prevent SQL injection attacks. The same kinds of vulnerabilities that arise within standard dynamic SQL queries can arise if any SQL is dynamically constructed within stored procedures. Further, even if the procedure is sound, SQL injection can arise if the procedure is invoked in an unsafe manner using user-controllable data.</li>
+</ul>]]></remediationBackground>
+    <issueDetail><![CDATA[The <b>username</b> parameter appears to be vulnerable to SQL injection attacks. The payloads <b>55478483' or 5428=5428-- </b> and <b>44448562' or 9449=9456-- </b> were each submitted in the username parameter. These two requests resulted in different responses, indicating that the input is being incorporated into a SQL query in an unsafe way. <br><br>Note that automated difference-based tests for SQL injection flaws can often be unreliable and are prone to false positive results. You should manually review the reported requests and responses to confirm whether a vulnerability is actually present.]]></issueDetail>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvdXNlcnMvbG9naW4ucGhwIEhUVFAvMS4wDQpIb3N0OiB3ZWINCkNvbnRlbnQtTGVuZ3RoOiAyNw0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNCg0KcGFzc3dvcmQ9ZnV6eiZ1c2VybmFtZT1mdXp6JyUyMGFuZCUyMChzZWxlY3QqZnJvbShzZWxlY3Qoc2xlZXAoMjApKSlhKS0tJTIw]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBUaHUsIDEwIEF1ZyAyMDIzIDE1OjAxOjA1IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMjINClNldC1Db29raWU6IFBIUFNFU1NJRD1sMXRxYmpzb2tqcGl1cnFibmVqdGwzcThnbTsgcGF0aD0vDQpFeHBpcmVzOiBUaHUsIDE5IE5vdiAxOTgxIDA4OjUyOjAwIEdNVA0KQ2FjaGUtQ29udHJvbDogbm8tc3RvcmUsIG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUNClByYWdtYTogbm8tY2FjaGUNClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29udGVudC1MZW5ndGg6IDI3NjENCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD1VVEYtOA0KDQoKPGh0bWw+CiAgPGhlYWQ+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Ii9jc3MvYmx1ZXByaW50L3NjcmVlbi5jc3MiIHR5cGU9InRleHQvY3NzIiBtZWRpYT0ic2NyZWVuLCBwcm9qZWN0aW9uIj4KICAgIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iL2Nzcy9ibHVlcHJpbnQvcHJpbnQuY3NzIiB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9InByaW50Ij4KICAgIDwhLS1baWYgSUVdPjxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iL2Nzcy9ibHVlcHJpbnQvaWUuY3NzIiB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9InNjcmVlbiwgcHJvamVjdGlvbiI+PCFbZW5kaWZdLS0+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Ii9jc3Mvc3R5bGluZ3MuY3NzIiB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9InNjcmVlbiI+CiAgICA8dGl0bGU+V2Fja29QaWNrby5jb208L3RpdGxlPgogIDwvaGVhZD4KICA8Ym9keT4KICAgIDxkaXYgY2xhc3M9ImNvbnRhaW5lciAiIHN0eWxlPSJib3JkZXI6IDJweCBzb2xpZCAjNWM5NWNmOyI+CiAgICAgIDxkaXYgY2xhc3M9ImNvbHVtbiBzcGFuLTI0IGZpcnN0IGxhc3QiPgoJPGgxIGlkPSJ0aXRsZSI+PGEgaHJlZj0iLyI+V2Fja29QaWNrby5jb208L2E+PC9oMT4KICAgICAgPC9kaXY+CiAgICAgIDxkaXYgaWQ9Im1lbnUiPgoJPGRpdiBjbGFzcz0iY29sdW1uIHByZXBlbmQtMSBzcGFuLTE0IGZpcnN0Ij4KCSAgPHVsIGNsYXNzPSJtZW51Ij4KCSAgICA8bGkgY2xhc3M9IiI+PGEgaHJlZj0iL3VzZXJzL2hvbWUucGhwIj48c3Bhbj5Ib21lPC9zcGFuPjwvYT48L2xpPgoJICAgIDxsaSBjbGFzcz0iIj48YSBocmVmPSIvcGljdHVyZXMvdXBsb2FkLnBocCI+PHNwYW4+VXBsb2FkPC9zcGFuPjwvYT48L2xpPgoJICAgIDxsaSBjbGFzcz0iIj48YSBocmVmPSIvcGljdHVyZXMvcmVjZW50LnBocCI+PHNwYW4+UmVjZW50PC9zcGFuPjwvYT48L2xpPgogICAgICAgICAgICA8bGkgY2xhc3M9IiI+PGEgaHJlZj0iL2d1ZXN0Ym9vay5waHAiPjxzcGFuPkd1ZXN0Ym9vazwvc3Bhbj48L2E+PC9saT4KCiAgICAgIAkgIDwvdWw+Cgk8L2Rpdj4KCTxkaXYgY2xhc3M9ImNvbHVtbiBwcmVwZW5kLTEgc3Bhbi03IGZpcnN0IGxhc3QiPgoJICA8dWwgY2xhc3M9Im1lbnUgdG9wX2xvZ2luIiA+CiAgICAgIAkgICAgPGxpPjxhIGhyZWY9Ii91c2Vycy9sb2dpbi5waHAiPjxTcGFuPkxvZ2luPC9zcGFuPjwvYT48L2xpPgogICAgICAJICA8L3VsPgoJPC9kaXY+CiAgICAgIDwvZGl2PgoKCgogICAgICA8ZGl2IGNsYXNzPSJjb2x1bW4gc3Bhbi0yNCBmaXJzdCBsYXN0IiBpZD0ic2VhcmNoX2Jhcl9ibHVlIj4KCTxkaXYgY2xhc3M9ImNvbHVtbiBwcmVwZW5kLTE3IHNwYW4tNyBmaXJzdCBsYXN0IiBpZD0ic2VhcmNoX2JveCI+CgkgIDxmb3JtIGFjdGlvbj0iL3BpY3R1cmVzL3NlYXJjaC5waHAiIG1ldGhvZD0iZ2V0IiBzdHlsZT0iZGlzcGxheTppbmxpbmU7Ij4KCSAgICA8aW5wdXQgaWQ9InF1ZXJ5MiIgbmFtZT0icXVlcnkiIHNpemU9IjE1IiBzdHlsZT0icGFkZGluZzogMnB4OyBmb250LXNpemU6IDE2cHg7IHRleHQtZGVjb3JhdGlvbjpub25lO2JvcmRlcjpub25lO3ZlcnRpY2FsLWFsaWduOm1pZGRsZTsiIHR5cGU9InRleHQiIHZhbHVlPSIiLz4KCSAgICA8aW5wdXQgc3JjPSIvaW1hZ2VzL3NlYXJjaF9idXR0b25fd2hpdGUuZ2lmIiB0eXBlPSJpbWFnZSIgc3R5bGU9ImJvcmRlcjogMHB0IG5vbmUgOyBwb3NpdGlvbjogcmVsYXRpdmU7IHRvcDogMHB4O3ZlcnRpY2FsLWFsaWduOm1pZGRsZTttYXJnaW4tbGVmdDogMWVtOyIgLz4KCSAgPC9mb3JtPgoJPC9kaXY+CiAgICAgIDwvZGl2PgogICAKPGRpdiBjbGFzcz0iY29sdW1uIHByZXBlbmQtMSBzcGFuLTIzIGZpcnN0IGxhc3QiPgogICAgPGgyPkxvZ2luPC9oMj4KICAgIDxwIGNsYXNzPSJzcGFuLTEwIGVycm9yIj4KCSBUaGUgdXNlcm5hbWUvcGFzc3dvcmQgY29tYmluYXRpb24geW91IGhhdmUgZW50ZXJlZCBpcyBpbnZhbGlkPC9wPgogICAgICAgICAgPHRhYmxlIHN0eWxlPSJ3aWR0aDozMjBweCIgY2VsbHNwYWNpbmc9IjAiPgogICAgICA8Zm9ybSBhY3Rpb249Ii91c2Vycy9sb2dpbi5waHAiIG1ldGhvZD0iUE9TVCI+CiAgICAgIDx0cj48dGQ+VXNlcm5hbWUgOjwvdGQ+PHRkPiA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0idXNlcm5hbWUiIC8+PC90ZD48L3RyPgogICAgICA8dHI+PHRkPlBhc3N3b3JkIDo8L3RkPjx0ZD4gPGlucHV0IHR5cGU9InBhc3N3b3JkIiBuYW1lPSJwYXNzd29yZCIgLz48L3RkPjwvdHI+CiAgICAgIDx0cj48dGQ+PGlucHV0IHR5cGU9InN1Ym1pdCIgdmFsdWU9ImxvZ2luIiAvPjwvdGQ+PHRkPiA8YSBocmVmPSIvdXNlcnMvcmVnaXN0ZXIucGhwIj5SZWdpc3RlcjwvYT48L3RkPjwvdHI+CiAgIDwvZm9ybT4KIDwvdGFibGU+CjwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzcz0iY29sdW1uIHNwYW4tMjQgZmlyc3QgbGFzdCIgaWQ9ImZvb3RlciIgPgoJPHVsPgoJICA8bGk+PGEgaHJlZj0iLyI+SG9tZTwvYT4gfDwvbGk+CiAgICAgICAgICA8bGk+PGEgaHJlZj0iL2FkbWluL2luZGV4LnBocD9wYWdlPWxvZ2luIj5BZG1pbjwvYT4gfDwvbGk+CgkgIDxsaT48YSBocmVmPSJtYWlsdG86Y29udGFjdEB3YWNrb3BpY2tvLmNvbSI+Q29udGFjdDwvYT4gfDwvbGk+CgkgIDxsaT48YSBocmVmPSIvdG9zLnBocCI+VGVybXMgb2YgU2VydmljZTwvYT48L2xpPgoJPC91bD4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICA8L2JvZHk+CjwvaHRtbD4KICAg]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvdXNlcnMvbG9naW4ucGhwIEhUVFAvMS4wDQpIb3N0OiB3ZWINCkNvbnRlbnQtTGVuZ3RoOiAyNw0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNCg0KcGFzc3dvcmQ9ZnV6eiZ1c2VybmFtZT1mdXp6NTU0Nzg0ODMnJTIwb3IlMjA1NDI4JTNkNTQyOC0tJTIw]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMzAzIFNlZSBPdGhlcg0KRGF0ZTogVGh1LCAxMCBBdWcgMjAyMyAxNTowMjoyNSBHTVQNClNlcnZlcjogQXBhY2hlLzIuNC41NyAoRGViaWFuKQ0KWC1Qb3dlcmVkLUJ5OiBQSFAvOC4xLjIyDQpTZXQtQ29va2llOiBQSFBTRVNTSUQ9NThwMWw1ZmlqcmpvdXNxcnRuMXI2bzZqZ2Y7IHBhdGg9Lw0KRXhwaXJlczogVGh1LCAxOSBOb3YgMTk4MSAwODo1MjowMCBHTVQNCkNhY2hlLUNvbnRyb2w6IG5vLXN0b3JlLCBuby1jYWNoZSwgbXVzdC1yZXZhbGlkYXRlDQpQcmFnbWE6IG5vLWNhY2hlDQpMb2NhdGlvbjogL3VzZXJzL2hvbWUucGhwDQpDb250ZW50LUxlbmd0aDogMQ0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sOyBjaGFyc2V0PVVURi04DQoNCgo=]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvdXNlcnMvbG9naW4ucGhwIEhUVFAvMS4wDQpIb3N0OiB3ZWINCkNvbnRlbnQtTGVuZ3RoOiAyNw0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNCg0KcGFzc3dvcmQ9ZnV6eiZ1c2VybmFtZT1mdXp6NDQ0NDg1NjInJTIwb3IlMjA5NDQ5JTNkOTQ1Ni0tJTIw]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBUaHUsIDEwIEF1ZyAyMDIzIDE1OjAyOjI1IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMjINClNldC1Db29raWU6IFBIUFNFU1NJRD0wMWM3OXVqYnM2MGFucnFvMGxlNWg1Y2FiNTsgcGF0aD0vDQpFeHBpcmVzOiBUaHUsIDE5IE5vdiAxOTgxIDA4OjUyOjAwIEdNVA0KQ2FjaGUtQ29udHJvbDogbm8tc3RvcmUsIG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUNClByYWdtYTogbm8tY2FjaGUNClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29udGVudC1MZW5ndGg6IDI3NjENCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD1VVEYtOA0KDQoKPGh0bWw+CiAgPGhlYWQ+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Ii9jc3MvYmx1ZXByaW50L3NjcmVlbi5jc3MiIHR5cGU9InRleHQvY3NzIiBtZWRpYT0ic2NyZWVuLCBwcm9qZWN0aW9uIj4KICAgIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iL2Nzcy9ibHVlcHJpbnQvcHJpbnQuY3NzIiB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9InByaW50Ij4KICAgIDwhLS1baWYgSUVdPjxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iL2Nzcy9ibHVlcHJpbnQvaWUuY3NzIiB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9InNjcmVlbiwgcHJvamVjdGlvbiI+PCFbZW5kaWZdLS0+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Ii9jc3Mvc3R5bGluZ3MuY3NzIiB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9InNjcmVlbiI+CiAgICA8dGl0bGU+V2Fja29QaWNrby5jb208L3RpdGxlPgogIDwvaGVhZD4KICA8Ym9keT4KICAgIDxkaXYgY2xhc3M9ImNvbnRhaW5lciAiIHN0eWxlPSJib3JkZXI6IDJweCBzb2xpZCAjNWM5NWNmOyI+CiAgICAgIDxkaXYgY2xhc3M9ImNvbHVtbiBzcGFuLTI0IGZpcnN0IGxhc3QiPgoJPGgxIGlkPSJ0aXRsZSI+PGEgaHJlZj0iLyI+V2Fja29QaWNrby5jb208L2E+PC9oMT4KICAgICAgPC9kaXY+CiAgICAgIDxkaXYgaWQ9Im1lbnUiPgoJPGRpdiBjbGFzcz0iY29sdW1uIHByZXBlbmQtMSBzcGFuLTE0IGZpcnN0Ij4KCSAgPHVsIGNsYXNzPSJtZW51Ij4KCSAgICA8bGkgY2xhc3M9IiI+PGEgaHJlZj0iL3VzZXJzL2hvbWUucGhwIj48c3Bhbj5Ib21lPC9zcGFuPjwvYT48L2xpPgoJICAgIDxsaSBjbGFzcz0iIj48YSBocmVmPSIvcGljdHVyZXMvdXBsb2FkLnBocCI+PHNwYW4+VXBsb2FkPC9zcGFuPjwvYT48L2xpPgoJICAgIDxsaSBjbGFzcz0iIj48YSBocmVmPSIvcGljdHVyZXMvcmVjZW50LnBocCI+PHNwYW4+UmVjZW50PC9zcGFuPjwvYT48L2xpPgogICAgICAgICAgICA8bGkgY2xhc3M9IiI+PGEgaHJlZj0iL2d1ZXN0Ym9vay5waHAiPjxzcGFuPkd1ZXN0Ym9vazwvc3Bhbj48L2E+PC9saT4KCiAgICAgIAkgIDwvdWw+Cgk8L2Rpdj4KCTxkaXYgY2xhc3M9ImNvbHVtbiBwcmVwZW5kLTEgc3Bhbi03IGZpcnN0IGxhc3QiPgoJICA8dWwgY2xhc3M9Im1lbnUgdG9wX2xvZ2luIiA+CiAgICAgIAkgICAgPGxpPjxhIGhyZWY9Ii91c2Vycy9sb2dpbi5waHAiPjxTcGFuPkxvZ2luPC9zcGFuPjwvYT48L2xpPgogICAgICAJICA8L3VsPgoJPC9kaXY+CiAgICAgIDwvZGl2PgoKCgogICAgICA8ZGl2IGNsYXNzPSJjb2x1bW4gc3Bhbi0yNCBmaXJzdCBsYXN0IiBpZD0ic2VhcmNoX2Jhcl9ibHVlIj4KCTxkaXYgY2xhc3M9ImNvbHVtbiBwcmVwZW5kLTE3IHNwYW4tNyBmaXJzdCBsYXN0IiBpZD0ic2VhcmNoX2JveCI+CgkgIDxmb3JtIGFjdGlvbj0iL3BpY3R1cmVzL3NlYXJjaC5waHAiIG1ldGhvZD0iZ2V0IiBzdHlsZT0iZGlzcGxheTppbmxpbmU7Ij4KCSAgICA8aW5wdXQgaWQ9InF1ZXJ5MiIgbmFtZT0icXVlcnkiIHNpemU9IjE1IiBzdHlsZT0icGFkZGluZzogMnB4OyBmb250LXNpemU6IDE2cHg7IHRleHQtZGVjb3JhdGlvbjpub25lO2JvcmRlcjpub25lO3ZlcnRpY2FsLWFsaWduOm1pZGRsZTsiIHR5cGU9InRleHQiIHZhbHVlPSIiLz4KCSAgICA8aW5wdXQgc3JjPSIvaW1hZ2VzL3NlYXJjaF9idXR0b25fd2hpdGUuZ2lmIiB0eXBlPSJpbWFnZSIgc3R5bGU9ImJvcmRlcjogMHB0IG5vbmUgOyBwb3NpdGlvbjogcmVsYXRpdmU7IHRvcDogMHB4O3ZlcnRpY2FsLWFsaWduOm1pZGRsZTttYXJnaW4tbGVmdDogMWVtOyIgLz4KCSAgPC9mb3JtPgoJPC9kaXY+CiAgICAgIDwvZGl2PgogICAKPGRpdiBjbGFzcz0iY29sdW1uIHByZXBlbmQtMSBzcGFuLTIzIGZpcnN0IGxhc3QiPgogICAgPGgyPkxvZ2luPC9oMj4KICAgIDxwIGNsYXNzPSJzcGFuLTEwIGVycm9yIj4KCSBUaGUgdXNlcm5hbWUvcGFzc3dvcmQgY29tYmluYXRpb24geW91IGhhdmUgZW50ZXJlZCBpcyBpbnZhbGlkPC9wPgogICAgICAgICAgPHRhYmxlIHN0eWxlPSJ3aWR0aDozMjBweCIgY2VsbHNwYWNpbmc9IjAiPgogICAgICA8Zm9ybSBhY3Rpb249Ii91c2Vycy9sb2dpbi5waHAiIG1ldGhvZD0iUE9TVCI+CiAgICAgIDx0cj48dGQ+VXNlcm5hbWUgOjwvdGQ+PHRkPiA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0idXNlcm5hbWUiIC8+PC90ZD48L3RyPgogICAgICA8dHI+PHRkPlBhc3N3b3JkIDo8L3RkPjx0ZD4gPGlucHV0IHR5cGU9InBhc3N3b3JkIiBuYW1lPSJwYXNzd29yZCIgLz48L3RkPjwvdHI+CiAgICAgIDx0cj48dGQ+PGlucHV0IHR5cGU9InN1Ym1pdCIgdmFsdWU9ImxvZ2luIiAvPjwvdGQ+PHRkPiA8YSBocmVmPSIvdXNlcnMvcmVnaXN0ZXIucGhwIj5SZWdpc3RlcjwvYT48L3RkPjwvdHI+CiAgIDwvZm9ybT4KIDwvdGFibGU+CjwvZGl2PgogICAgICAgICAgPGRpdiBjbGFzcz0iY29sdW1uIHNwYW4tMjQgZmlyc3QgbGFzdCIgaWQ9ImZvb3RlciIgPgoJPHVsPgoJICA8bGk+PGEgaHJlZj0iLyI+SG9tZTwvYT4gfDwvbGk+CiAgICAgICAgICA8bGk+PGEgaHJlZj0iL2FkbWluL2luZGV4LnBocD9wYWdlPWxvZ2luIj5BZG1pbjwvYT4gfDwvbGk+CgkgIDxsaT48YSBocmVmPSJtYWlsdG86Y29udGFjdEB3YWNrb3BpY2tvLmNvbSI+Q29udGFjdDwvYT4gfDwvbGk+CgkgIDxsaT48YSBocmVmPSIvdG9zLnBocCI+VGVybXMgb2YgU2VydmljZTwvYT48L2xpPgoJPC91bD4KICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICA8L2JvZHk+CjwvaHRtbD4KICAg]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>2036937428310204416</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Input returned in response (reflected)]]></name>
+    <host ip="192.168.16.2">http://web</host>
+    <path><![CDATA[/users/login.php]]></path>
+    <location><![CDATA[/users/login.php]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>Reflection of input arises when data is copied from a request and echoed into the application's immediate response.</p><p>Input being returned in application responses is not a vulnerability in its own right. However, it is a prerequisite for many client-side vulnerabilities, including cross-site scripting, open redirection, content spoofing, and response header injection. Additionally, some server-side vulnerabilities such as SQL injection are often easier to identify and exploit when input is returned in responses. In applications where input retrieval is rare and the environment is resistant to automated testing (for example, due to a web application firewall), it might be worth subjecting instances of it to focused manual testing. </p>]]></issueBackground>
+    <issueDetail><![CDATA[The name of an arbitrarily supplied URL parameter is copied into the application's response.]]></issueDetail>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvdXNlcnMvbG9naW4ucGhwL2JjZjNybWo4d3kgSFRUUC8xLjANCkhvc3Q6IHdlYg0KQ29udGVudC1MZW5ndGg6IDI3DQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3gtd3d3LWZvcm0tdXJsZW5jb2RlZA0KDQpwYXNzd29yZD1mdXp6JnVzZXJuYW1lPWZ1eno=]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBUaHUsIDEwIEF1ZyAyMDIzIDE1OjAyOjI4IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMjINClNldC1Db29raWU6IFBIUFNFU1NJRD11N25mMjA3aXVnaWQyMHRnYTBxNTJ2YTNmOTsgcGF0aD0vDQpFeHBpcmVzOiBUaHUsIDE5IE5vdiAxOTgxIDA4OjUyOjAwIEdNVA0KQ2FjaGUtQ29udHJvbDogbm8tc3RvcmUsIG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUNClByYWdtYTogbm8tY2FjaGUNClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29udGVudC1MZW5ndGg6IDI3NzINCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD1VVEYtOA0KDQoKPGh0bWw+CiAgPGhlYWQ+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Ii9jc3MvYmx1ZXByaW50L3NjcmVlbi5jc3MiIHR5cGU9InRleHQvY3NzIiBtZWRpYT0ic2NyZWVuLCBwcm9qZWN0aW9uIj4KICAgIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iL2Nzcy9ibHVlcHJpbnQvcHJpbnQuY3NzIiB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9InByaW50Ij4KICAgIDwhLS1baWYgSUVdPjxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iL2Nzcy9ibHVlcHJpbnQvaWUuY3NzIiB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9InNjcmVlbiwgcHJvamVjdGlvbiI+PCFbZW5kaWZdLS0+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Ii9jc3Mvc3R5bGluZ3MuY3NzIiB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9InNjcmVlbiI+CiAgICA8dGl0bGU+V2Fja29QaWNrby5jb208L3RpdGxlPgogIDwvaGVhZD4KICA8Ym9keT4KICAgIDxkaXYgY2xhc3M9ImNvbnRhaW5lciAiIHN0eWxlPSJib3JkZXI6IDJweCBzb2xpZCAjNWM5NWNmOyI+CiAgICAgIDxkaXYgY2xhc3M9ImNvbHVtbiBzcGFuLTI0IGZpcnN0IGxhc3QiPgoJPGgxIGlkPSJ0aXRsZSI+PGEgaHJlZj0iLyI+V2Fja29QaWNrby5jb208L2E+PC9oMT4KICAgICAgPC9kaXY+CiAgICAgIDxkaXYgaWQ9Im1lbnUiPgoJPGRpdiBjbGFzcz0iY29sdW1uIHByZXBlbmQtMSBzcGFuLTE0IGZpcnN0Ij4KCSAgPHVsIGNsYXNzPSJtZW51Ij4KCSAgICA8bGkgY2xhc3M9IiI+PGEgaHJlZj0iL3VzZXJzL2hvbWUucGhwIj48c3Bhbj5Ib21lPC9zcGFuPjwvYT48L2xpPgoJICAgIDxsaSBjbGFzcz0iIj48YSBocmVmPSIvcGljdHVyZXMvdXBsb2FkLnBocCI+PHNwYW4+VXBsb2FkPC9zcGFuPjwvYT48L2xpPgoJICAgIDxsaSBjbGFzcz0iIj48YSBocmVmPSIvcGljdHVyZXMvcmVjZW50LnBocCI+PHNwYW4+UmVjZW50PC9zcGFuPjwvYT48L2xpPgogICAgICAgICAgICA8bGkgY2xhc3M9IiI+PGEgaHJlZj0iL2d1ZXN0Ym9vay5waHAiPjxzcGFuPkd1ZXN0Ym9vazwvc3Bhbj48L2E+PC9saT4KCiAgICAgIAkgIDwvdWw+Cgk8L2Rpdj4KCTxkaXYgY2xhc3M9ImNvbHVtbiBwcmVwZW5kLTEgc3Bhbi03IGZpcnN0IGxhc3QiPgoJICA8dWwgY2xhc3M9Im1lbnUgdG9wX2xvZ2luIiA+CiAgICAgIAkgICAgPGxpPjxhIGhyZWY9Ii91c2Vycy9sb2dpbi5waHAiPjxTcGFuPkxvZ2luPC9zcGFuPjwvYT48L2xpPgogICAgICAJICA8L3VsPgoJPC9kaXY+CiAgICAgIDwvZGl2PgoKCgogICAgICA8ZGl2IGNsYXNzPSJjb2x1bW4gc3Bhbi0yNCBmaXJzdCBsYXN0IiBpZD0ic2VhcmNoX2Jhcl9ibHVlIj4KCTxkaXYgY2xhc3M9ImNvbHVtbiBwcmVwZW5kLTE3IHNwYW4tNyBmaXJzdCBsYXN0IiBpZD0ic2VhcmNoX2JveCI+CgkgIDxmb3JtIGFjdGlvbj0iL3BpY3R1cmVzL3NlYXJjaC5waHAiIG1ldGhvZD0iZ2V0IiBzdHlsZT0iZGlzcGxheTppbmxpbmU7Ij4KCSAgICA8aW5wdXQgaWQ9InF1ZXJ5MiIgbmFtZT0icXVlcnkiIHNpemU9IjE1IiBzdHlsZT0icGFkZGluZzogMnB4OyBmb250LXNpemU6IDE2cHg7IHRleHQtZGVjb3JhdGlvbjpub25lO2JvcmRlcjpub25lO3ZlcnRpY2FsLWFsaWduOm1pZGRsZTsiIHR5cGU9InRleHQiIHZhbHVlPSIiLz4KCSAgICA8aW5wdXQgc3JjPSIvaW1hZ2VzL3NlYXJjaF9idXR0b25fd2hpdGUuZ2lmIiB0eXBlPSJpbWFnZSIgc3R5bGU9ImJvcmRlcjogMHB0IG5vbmUgOyBwb3NpdGlvbjogcmVsYXRpdmU7IHRvcDogMHB4O3ZlcnRpY2FsLWFsaWduOm1pZGRsZTttYXJnaW4tbGVmdDogMWVtOyIgLz4KCSAgPC9mb3JtPgoJPC9kaXY+CiAgICAgIDwvZGl2PgogICAKPGRpdiBjbGFzcz0iY29sdW1uIHByZXBlbmQtMSBzcGFuLTIzIGZpcnN0IGxhc3QiPgogICAgPGgyPkxvZ2luPC9oMj4KICAgIDxwIGNsYXNzPSJzcGFuLTEwIGVycm9yIj4KCSBUaGUgdXNlcm5hbWUvcGFzc3dvcmQgY29tYmluYXRpb24geW91IGhhdmUgZW50ZXJlZCBpcyBpbnZhbGlkPC9wPgogICAgICAgICAgPHRhYmxlIHN0eWxlPSJ3aWR0aDozMjBweCIgY2VsbHNwYWNpbmc9IjAiPgogICAgICA8Zm9ybSBhY3Rpb249Ii91c2Vycy9sb2dpbi5waHAvYmNmM3Jtajh3eSIgbWV0aG9kPSJQT1NUIj4KICAgICAgPHRyPjx0ZD5Vc2VybmFtZSA6PC90ZD48dGQ+IDxpbnB1dCB0eXBlPSJ0ZXh0IiBuYW1lPSJ1c2VybmFtZSIgLz48L3RkPjwvdHI+CiAgICAgIDx0cj48dGQ+UGFzc3dvcmQgOjwvdGQ+PHRkPiA8aW5wdXQgdHlwZT0icGFzc3dvcmQiIG5hbWU9InBhc3N3b3JkIiAvPjwvdGQ+PC90cj4KICAgICAgPHRyPjx0ZD48aW5wdXQgdHlwZT0ic3VibWl0IiB2YWx1ZT0ibG9naW4iIC8+PC90ZD48dGQ+IDxhIGhyZWY9Ii91c2Vycy9yZWdpc3Rlci5waHAiPlJlZ2lzdGVyPC9hPjwvdGQ+PC90cj4KICAgPC9mb3JtPgogPC90YWJsZT4KPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJjb2x1bW4gc3Bhbi0yNCBmaXJzdCBsYXN0IiBpZD0iZm9vdGVyIiA+Cgk8dWw+CgkgIDxsaT48YSBocmVmPSIvIj5Ib21lPC9hPiB8PC9saT4KICAgICAgICAgIDxsaT48YSBocmVmPSIvYWRtaW4vaW5kZXgucGhwP3BhZ2U9bG9naW4iPkFkbWluPC9hPiB8PC9saT4KCSAgPGxpPjxhIGhyZWY9Im1haWx0bzpjb250YWN0QHdhY2tvcGlja28uY29tIj5Db250YWN0PC9hPiB8PC9saT4KCSAgPGxpPjxhIGhyZWY9Ii90b3MucGhwIj5UZXJtcyBvZiBTZXJ2aWNlPC9hPjwvbGk+Cgk8L3VsPgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogIDwvYm9keT4KPC9odG1sPgogICA=]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>4233443401248998400</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Form action hijacking (reflected)]]></name>
+    <host ip="192.168.16.2">http://web</host>
+    <path><![CDATA[/users/login.php]]></path>
+    <location><![CDATA[/users/login.php]]></location>
+    <severity>Low</severity>
+    <confidence>Firm</confidence>
+    <issueBackground><![CDATA[<p>Form action hijacking vulnerabilities arise when an application places user-supplied input into the action URL of an HTML form. An attacker can use this vulnerability to construct a URL that, if visited by another application user, will modify the action URL of a form to point to the attacker's server. If a user submits the form then its contents, including any input from the victim user, will be delivered directly to the attacker.</p>
+<p> Even if the user doesn't enter any sensitive information, the form may still deliver a valid CSRF token to the attacker, enabling them to perform CSRF attacks. In some cases web browsers may help exacerbate this issue by autocompleting forms with previously entered user input. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>Consider hard-coding the form action URL, or implementing a whitelist of allowed values.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[The name of an arbitrarily supplied URL parameter is copied into the response within the  path of a form action URL.<br><br> The payload <b>bcf3rmj8wy</b> was submitted in the name of an arbitrarily supplied URL parameter. This input was echoed unmodified within a form action URL.<br><br>This proof-of-concept attack demonstrates that it is possible to modify the form action to reference an arbitrary path.]]></issueDetail>
+    <requestresponse>
+      <request method="POST" base64="true"><![CDATA[UE9TVCAvdXNlcnMvbG9naW4ucGhwL2JjZjNybWo4d3kgSFRUUC8xLjANCkhvc3Q6IHdlYg0KQ29udGVudC1MZW5ndGg6IDI3DQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3gtd3d3LWZvcm0tdXJsZW5jb2RlZA0KDQpwYXNzd29yZD1mdXp6JnVzZXJuYW1lPWZ1eno=]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBUaHUsIDEwIEF1ZyAyMDIzIDE1OjAyOjI4IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjEuMjINClNldC1Db29raWU6IFBIUFNFU1NJRD11N25mMjA3aXVnaWQyMHRnYTBxNTJ2YTNmOTsgcGF0aD0vDQpFeHBpcmVzOiBUaHUsIDE5IE5vdiAxOTgxIDA4OjUyOjAwIEdNVA0KQ2FjaGUtQ29udHJvbDogbm8tc3RvcmUsIG5vLWNhY2hlLCBtdXN0LXJldmFsaWRhdGUNClByYWdtYTogbm8tY2FjaGUNClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29udGVudC1MZW5ndGg6IDI3NzINCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD1VVEYtOA0KDQoKPGh0bWw+CiAgPGhlYWQ+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Ii9jc3MvYmx1ZXByaW50L3NjcmVlbi5jc3MiIHR5cGU9InRleHQvY3NzIiBtZWRpYT0ic2NyZWVuLCBwcm9qZWN0aW9uIj4KICAgIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iL2Nzcy9ibHVlcHJpbnQvcHJpbnQuY3NzIiB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9InByaW50Ij4KICAgIDwhLS1baWYgSUVdPjxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iL2Nzcy9ibHVlcHJpbnQvaWUuY3NzIiB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9InNjcmVlbiwgcHJvamVjdGlvbiI+PCFbZW5kaWZdLS0+CiAgICA8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Ii9jc3Mvc3R5bGluZ3MuY3NzIiB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9InNjcmVlbiI+CiAgICA8dGl0bGU+V2Fja29QaWNrby5jb208L3RpdGxlPgogIDwvaGVhZD4KICA8Ym9keT4KICAgIDxkaXYgY2xhc3M9ImNvbnRhaW5lciAiIHN0eWxlPSJib3JkZXI6IDJweCBzb2xpZCAjNWM5NWNmOyI+CiAgICAgIDxkaXYgY2xhc3M9ImNvbHVtbiBzcGFuLTI0IGZpcnN0IGxhc3QiPgoJPGgxIGlkPSJ0aXRsZSI+PGEgaHJlZj0iLyI+V2Fja29QaWNrby5jb208L2E+PC9oMT4KICAgICAgPC9kaXY+CiAgICAgIDxkaXYgaWQ9Im1lbnUiPgoJPGRpdiBjbGFzcz0iY29sdW1uIHByZXBlbmQtMSBzcGFuLTE0IGZpcnN0Ij4KCSAgPHVsIGNsYXNzPSJtZW51Ij4KCSAgICA8bGkgY2xhc3M9IiI+PGEgaHJlZj0iL3VzZXJzL2hvbWUucGhwIj48c3Bhbj5Ib21lPC9zcGFuPjwvYT48L2xpPgoJICAgIDxsaSBjbGFzcz0iIj48YSBocmVmPSIvcGljdHVyZXMvdXBsb2FkLnBocCI+PHNwYW4+VXBsb2FkPC9zcGFuPjwvYT48L2xpPgoJICAgIDxsaSBjbGFzcz0iIj48YSBocmVmPSIvcGljdHVyZXMvcmVjZW50LnBocCI+PHNwYW4+UmVjZW50PC9zcGFuPjwvYT48L2xpPgogICAgICAgICAgICA8bGkgY2xhc3M9IiI+PGEgaHJlZj0iL2d1ZXN0Ym9vay5waHAiPjxzcGFuPkd1ZXN0Ym9vazwvc3Bhbj48L2E+PC9saT4KCiAgICAgIAkgIDwvdWw+Cgk8L2Rpdj4KCTxkaXYgY2xhc3M9ImNvbHVtbiBwcmVwZW5kLTEgc3Bhbi03IGZpcnN0IGxhc3QiPgoJICA8dWwgY2xhc3M9Im1lbnUgdG9wX2xvZ2luIiA+CiAgICAgIAkgICAgPGxpPjxhIGhyZWY9Ii91c2Vycy9sb2dpbi5waHAiPjxTcGFuPkxvZ2luPC9zcGFuPjwvYT48L2xpPgogICAgICAJICA8L3VsPgoJPC9kaXY+CiAgICAgIDwvZGl2PgoKCgogICAgICA8ZGl2IGNsYXNzPSJjb2x1bW4gc3Bhbi0yNCBmaXJzdCBsYXN0IiBpZD0ic2VhcmNoX2Jhcl9ibHVlIj4KCTxkaXYgY2xhc3M9ImNvbHVtbiBwcmVwZW5kLTE3IHNwYW4tNyBmaXJzdCBsYXN0IiBpZD0ic2VhcmNoX2JveCI+CgkgIDxmb3JtIGFjdGlvbj0iL3BpY3R1cmVzL3NlYXJjaC5waHAiIG1ldGhvZD0iZ2V0IiBzdHlsZT0iZGlzcGxheTppbmxpbmU7Ij4KCSAgICA8aW5wdXQgaWQ9InF1ZXJ5MiIgbmFtZT0icXVlcnkiIHNpemU9IjE1IiBzdHlsZT0icGFkZGluZzogMnB4OyBmb250LXNpemU6IDE2cHg7IHRleHQtZGVjb3JhdGlvbjpub25lO2JvcmRlcjpub25lO3ZlcnRpY2FsLWFsaWduOm1pZGRsZTsiIHR5cGU9InRleHQiIHZhbHVlPSIiLz4KCSAgICA8aW5wdXQgc3JjPSIvaW1hZ2VzL3NlYXJjaF9idXR0b25fd2hpdGUuZ2lmIiB0eXBlPSJpbWFnZSIgc3R5bGU9ImJvcmRlcjogMHB0IG5vbmUgOyBwb3NpdGlvbjogcmVsYXRpdmU7IHRvcDogMHB4O3ZlcnRpY2FsLWFsaWduOm1pZGRsZTttYXJnaW4tbGVmdDogMWVtOyIgLz4KCSAgPC9mb3JtPgoJPC9kaXY+CiAgICAgIDwvZGl2PgogICAKPGRpdiBjbGFzcz0iY29sdW1uIHByZXBlbmQtMSBzcGFuLTIzIGZpcnN0IGxhc3QiPgogICAgPGgyPkxvZ2luPC9oMj4KICAgIDxwIGNsYXNzPSJzcGFuLTEwIGVycm9yIj4KCSBUaGUgdXNlcm5hbWUvcGFzc3dvcmQgY29tYmluYXRpb24geW91IGhhdmUgZW50ZXJlZCBpcyBpbnZhbGlkPC9wPgogICAgICAgICAgPHRhYmxlIHN0eWxlPSJ3aWR0aDozMjBweCIgY2VsbHNwYWNpbmc9IjAiPgogICAgICA8Zm9ybSBhY3Rpb249Ii91c2Vycy9sb2dpbi5waHAvYmNmM3Jtajh3eSIgbWV0aG9kPSJQT1NUIj4KICAgICAgPHRyPjx0ZD5Vc2VybmFtZSA6PC90ZD48dGQ+IDxpbnB1dCB0eXBlPSJ0ZXh0IiBuYW1lPSJ1c2VybmFtZSIgLz48L3RkPjwvdHI+CiAgICAgIDx0cj48dGQ+UGFzc3dvcmQgOjwvdGQ+PHRkPiA8aW5wdXQgdHlwZT0icGFzc3dvcmQiIG5hbWU9InBhc3N3b3JkIiAvPjwvdGQ+PC90cj4KICAgICAgPHRyPjx0ZD48aW5wdXQgdHlwZT0ic3VibWl0IiB2YWx1ZT0ibG9naW4iIC8+PC90ZD48dGQ+IDxhIGhyZWY9Ii91c2Vycy9yZWdpc3Rlci5waHAiPlJlZ2lzdGVyPC9hPjwvdGQ+PC90cj4KICAgPC9mb3JtPgogPC90YWJsZT4KPC9kaXY+CiAgICAgICAgICA8ZGl2IGNsYXNzPSJjb2x1bW4gc3Bhbi0yNCBmaXJzdCBsYXN0IiBpZD0iZm9vdGVyIiA+Cgk8dWw+CgkgIDxsaT48YSBocmVmPSIvIj5Ib21lPC9hPiB8PC9saT4KICAgICAgICAgIDxsaT48YSBocmVmPSIvYWRtaW4vaW5kZXgucGhwP3BhZ2U9bG9naW4iPkFkbWluPC9hPiB8PC9saT4KCSAgPGxpPjxhIGhyZWY9Im1haWx0bzpjb250YWN0QHdhY2tvcGlja28uY29tIj5Db250YWN0PC9hPiB8PC9saT4KCSAgPGxpPjxhIGhyZWY9Ii90b3MucGhwIj5UZXJtcyBvZiBTZXJ2aWNlPC9hPjwvbGk+Cgk8L3VsPgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgogIDwvYm9keT4KPC9odG1sPgogICA=]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+</issues>

@@ -1,0 +1,94 @@
+Application,VulnType,Config,Found  by Phuzz,DefaultVulnChecker,ParamBasedVulnChecker,"BurpSuite (carbonated,t=180s)",BurpSuite (t=300s),ZAP (t=300s),Wapiti (t=300s),Wfuzz (t=300s),Witcher,Link
+DVWA – RCE high,RCE,rce_high,y,y,y,y,y,n,y,n,,
+DVWA – RCE low,RCE,rce_low,y,y,y,y,y,y,y,n,,
+DVWA – RCE med,RCE,rce_med,y,y,y,y,y,n,y,n,,
+DVWA – SQLi Blind low,SQLi Blind,sqli_blind_low,y,y,y,y,y,y,n,n,,
+DVWA – SQLi Blind med,SQLi Blind,sqli_blind_med,y,y,y,n,n,n,n,n,,
+DVWA – SQLi Blind high,SQLi Blind,sqli_blind_high,y,y,y,y,y,n,n,n,,
+DVWA – SQLi fuzz,SQLi,sqli_fuzz,y,y,y,n,n,n,n,n,,
+DVWA – SQLi low,SQLi,sqli_low,y,y,y,y,y,y,y,n,,
+DVWA – SQLi med,SQLi,sqli_med,y,y,y,y,y,y,y,n,,
+DVWA – SQLi high,SQLi,sqli_high_1 / sqli_high_2,n/a,n/a,y (2 endpoints),n/a,n/a,n/a,n/a,n/a,n/a,
+DVWA – XSS Reflected low,XSS Reflected,xss_r_low,y,y,y,y,y,y,y,n,,
+DVWA – XSS Reflected med,XSS Reflected,xss_r_med,y,y,y,y,y,y,y,n,,
+DVWA – XSS Reflected high,XSS Reflected,xss_r_high,y,y,y,y,y,y,y,n,,
+DVWA – XSS Stored low,XSS Stored,xss_s_low,y,y,y,y,y,y,y,n,,
+DVWA – XSS Stored med,XSS Stored,xss_s_med,y,y,y,y,y,y,y,n,,
+DVWA – XSS Stored high,XSS Stored,xss_s_high,y,y,y,y,y,y,y,n,,
+DVWA – File Inclusion low,PathTraversal,fi_low,x (y – err msg),x (y – err msg),x (y – err msg),y,y,y,y,n,,
+DVWA – File Inclusion med,PathTraversal,fi_med,x (y – err msg),x (y – err msg),x (y – err msg),y,y,y,y,n,,
+DVWA – File Inclusion high,PathTraversal,fi_high,y,y,y,n,n,n,y,n,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+WackoPicko – guestbook,XSS Stored,guestbook,y,y,y,y,y,y,y,n,,
+WackoPicko – login,SQLi,login,y,y,y,y,y,y,n,n,,
+WackoPicko – passcheck,RCE,passcheck,y,y,y,n,n,n (timeout),n (timeout),n (timeout),,
+WackoPicko – search,XSS Reflected,search,y,y,y,y,y,y,y,n,,
+Wackopicko – admin,PathTraversal,admin,x (y – err msg),x (y – err msg),x (y – err msg),n,n,y,y,n,,
+Wackopicko – piccheck,XSS ,piccheck,y,y,y,y,y,y,y,n,,
+WackoPicko – submitname,XSS ,submitname,y,y,y,y,y,y,y,n,,
+,,,,,,,,,,,,
+Wordpress Plugin ,XSS ,show-all-comments-in-one-page,y,y+PathTraversal (FP),y,y,y,y,y,n,,https://wpscan.com/vulnerability/4ced1a4d-0c1f-42ad-8473-241c68b92b56
+Wordpress Plugin ,XSS ,essential-real-estate,y,y+PathTraversal (FP),y,y,y,n (timeout),n,n,,https://wpscan.com/vulnerability/6395f3f1-5cdf-4c55-920c-accc0201baf4
+Wordpress Plugin ,XSS ,crm-perks-forms,y,y,y,y,y,y,y,n,,https://wpscan.com/vulnerability/4b128c9c-366e-46af-9dd2-e3a9624e3a53
+Wordpress Plugin ,XSS ,rezgo,y,y,y,y,y,y,y,n,,https://wpscan.com/vulnerability/005c2300-f6bd-416e-97a6-d42284bbb093
+Wordpress Plugin ,XSS ,gallery-album,y,y+PathTraversal (FP),y,y,y,n (timeout),n (timeout),n,,https://wpscan.com/vulnerability/0903920c-be2e-4515-901f-87253eb30940
+Wordpress Plugin ,SQLi,kivicare-clinic-management-system,y,y+PathTraversal (FP),y,n,n,n (timeout),n (timeout),n,,https://wpscan.com//vulnerability/53f493e9-273b-4349-8a59-f2207e8f8f30
+Wordpress Plugin ,SQLi,nirweb-support,y,y,y,n,n,n (timeout),n,n,,https://wpscan.com//vulnerability/1a8f9c7b-a422-4f45-a516-c3c14eb05161
+Wordpress Plugin ,SQLi,arprice-responsive-pricing-table,y,y,y,n,n,n (timeout),n,n,,https://wpscan.com//vulnerability/62803aae-9896-410b-9398-3497a838e494
+Wordpress Plugin ,SQLi,ubigeo-peru,y,y,y,n,n,n (timeout),n,n,,https://wpscan.com/vulnerability/fd84dc08-0079-4fcf-81c3-a61d652e3269
+Wordpress Plugin ,SQLi,photo-gallery,y,y+PathTraversal (FP),y,n,n,n (timeout),n,n,,https://wpscan.com/vulnerability/2b4866f2-f511-41c6-8135-cf1e0263d8de
+Wordpress Plugin ,PathTraversal,usc-e-shop,y,y,y,y,y,y,y,n,,https://wpscan.com/vulnerability/0d649a7e-3334-48f7-abca-fff0856e12c7
+Wordpress Plugin ,PathTraversal,udraw,y,y,y,n,n,n (timeout),n (timeout),n,,https://wpscan.com/vulnerability/925c4c28-ae94-4684-a365-5f1e34e6c151
+Wordpress Plugin ,PathTraversal,seo-local-rank,n,n,n,n,n,n,n,n,,https://wpscan.com/vulnerability/d48e723c-e3d1-411e-ab8e-629fe1606c79
+Wordpress Plugin ,PathTraversal,hypercomments,y,y,y,n,n,n (timeout),n (timeout),n,,https://wpscan.com/vulnerability/d0ff458f-0a1a-4bae-be50-c11d55813458
+Wordpress Plugin ,PathTraversal,nmedia-user-file-uploader,y,y,y,n,n,n (timeout),n,n,,https://wpscan.com/vulnerability/00f76765-95af-4dbc-8c37-f1b15a0e8608
+Wordpress Plugin ,Deserialization,totop-link,y,y,x,n,n,n,n,n,,https://wpscan.com/vulnerability/518204d8-fbf5-4bfa-9db5-835f908f8d8e
+Wordpress Plugin ,Deserialization,joomsport-sports-league-results-management,y,y,x,n,n,n (timeout),n,n,,https://wpscan.com/vulnerability/fb6c407c-713c-4e83-92ce-4e5f791be696
+Wordpress Plugin ,OpenRedirect,newsletter-optin-box,y,Y + PathTraversal (FP),y,y,y,n (timeout),y,n,,https://wpscan.com/vulnerability/c2d2384c-41b9-4aaf-b918-c1cfda58af5c
+Wordpress Plugin ,OpenRedirect,webp-converter-for-media,y,y,y,y,y,y,y,n,,https://wpscan.com/vulnerability/f3c0a155-9563-4533-97d4-03b9bac83164
+Wordpress Plugin ,OpenRedirect,phastpress,y,Y + PathTraversal (FP),y,y,y,y,y,n,,https://wpscan.com/vulnerability/9b3c5412-8699-49e8-b60c-20d2085857fb
+Wordpress Plugin ,OpenRedirect,pie-register,y,Y + PathTraversal (FP),y,y,y,y,y,n,,https://wpscan.com/vulnerability/f6efa32f-51df-44b4-bbba-e67ed5785dd4
+Wordpress Plugin ,OpenRedirect,all-in-one-wp-security-and-firewall,y,Y + PathTraversal (FP),y,y,y,y,y,n,,https://wpscan.com/vulnerability/467673ad-d0ad-46a3-80c7-8ebb3813a4b3
+,,,,,,,,,,,,
+XVWA – SQLi item,SQLi,sqli_item,y,y,y,n,n,n,n,n,,
+XVWA – SQLi search,SQLi,sqli_search,y,y,y,y,y,n,n,n,,
+XVWA – SQLi blind item,SQLi,sqli_blind_item,y,y,y,n,n,n,n,n,,
+XVWA – SQLi blind search,SQLi,sqli_blind_search,y,y,y,y,y,y,n,n,,
+XVWA – OS command Injection,RCE,rce,y,y,y,y,y,y,y,n,,
+XVWA – PHP Object Injection,Deserialization,phpobject,y,y,y,n,n,n,n,n,,
+XVWA – XSS reflected,XSS Reflected,xss_reflected,y,y,y,y,y,y,y,n,,
+XVWA – XSS stored,XSS Stored,xss_stored,y,y,y,n,n,n (timeout),y,n,,
+XVWA – File Inclusion,PathTraversal,fi,x (y – err msg),x (y – err msg),x (y – err msg),y,y,y,y,n,,
+XVWA – Open Redirection,OpenRedirect,redirect,y,y,y,y,y,y,y,n,,
+,,,,,,,,,,,,
+Bwapp – os cmd,RCE,commandi,y,y,y,n,y,n (timeout),n (timeout),n,,
+Bwapp – os cmd blind,RCE,commandi_blind,y,y,y,y,y,y,n (timeout),n,,
+Bwapp – php code ,RCE,phpi,x (y – err msg),x (y – err msg),x (y – err msg),n,n,y,n,n,,
+Bwapp – sqli get/search,SQLi,sqli_get_search,y,y,y,y,y,y,y,n,,
+Bwapp – sqli get/select,SQLi,sqli_get_select,y,y,y,y,y,y,y,n,,
+Bwapp – sqli post/search,SQLi,sqli_post_search,y,y,y,y,y,y,y,n,,
+Bwapp – sqli post/select,SQLi,sqli_post_select,y,y,y,y,y,y,y,n,,
+Bwapp – sqli AJAX,SQLi,sqli_ajax,y,y,y,y,y,y,n,n,,
+Bwapp – sqli login hero,SQLi,sqli_login_hero,y,y,y,y,y,y,y,n,,
+Bwapp – sqli stored blog,SQLi,sqli_stored_blog,y,y,y,y,y,y,y,n (timeout),,
+Bwapp – sqli blind boolean,SQLi,sqli_blind_boolean,y,y,y,y,y,y,y,n,,
+Bwapp – sqli blind time ,SQLi,sqli_blind_time,y,y,y,y,y,y,n,n,,
+Bwapp – HTMLi get,XSS ,htmli_get,y,y,y,y,y,y,y,n,,
+Bwapp – HTMLi post,XSS ,htmli_post,y,y,y,y,y,y,y,n,,
+Bwapp – HTMLi stored,XSS ,htmli_stored,y,y,y,y,y,n,y,n (timeout),,
+Bwapp – XSS get,XSS ,xss_get,y,y,y,y,y,y,y,n,,
+Bwapp – XSS post,XSS ,xss_post,y,y,y,y,y,y,y,n,,
+Bwapp – XSS json,XSS ,xss_json,y,y,y,y,y,y,y,n,,
+Bwapp – XSS ajax,XSS ,xss_ajax,y,y,y,y,y,y,y,n,,
+Bwapp – XSS back button,XSS ,xss_back_button,y,y,y,y,y,n,n,n,,
+Bwapp – XSS custom header,XSS ,xss_custom_header,y,y,y,n,n,n,n,n,,
+Bwapp – XSS eval,XSS ,xss_eval,y,y,y,y,y,y,y,n,,
+Bwapp – XSS href,XSS ,xss_href,y,y,y,y,y,y,y,n,,
+Bwapp – XSS referer,XSS ,xss_referer,y,y,y,y,y,n,n,n,,
+Bwapp – XSS user agent,XSS ,xss_useragent,y,y,y,y,y,n,n,n,,
+Bwapp – XSS stored,XSS ,xss_stored,y,y,y,y,y,n,y,n (timeout),,
+Bwapp – Directory Traversal,PathTraversal,pathtraversal,y,y,y,y,y,y,y,n (timeout),,
+Bwapp – RFLI,PathTraversal,rlfi,x (y – err msg),x (y – err msg),x (y – err msg),y,y,y,y,n,,
+Bwapp – Open redirect,OpenRedirect,redirect1,y,y,y,y,y,y,y,n,,
+Bwapp – Open redirect 2,OpenRedirect,redirect2,y,y,y,y,y,y,y,n,,

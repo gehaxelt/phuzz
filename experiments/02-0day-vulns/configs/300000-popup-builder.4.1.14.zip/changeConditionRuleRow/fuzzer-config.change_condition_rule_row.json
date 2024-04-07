@@ -1,0 +1,57 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "conditionName",
+      "groupId",
+      "ruleId",
+      "popupId",
+      "paramName",
+      "paramValue"
+    ],
+    "data": [
+      {
+        "name": "conditionName",
+        "value": "fuzz"
+      },
+      {
+        "name": "groupId",
+        "value": "fuzz"
+      },
+      {
+        "name": "ruleId",
+        "value": "fuzz"
+      },
+      {
+        "name": "popupId",
+        "value": "fuzz"
+      },
+      {
+        "name": "paramName",
+        "value": "fuzz"
+      },
+      {
+        "name": "paramValue",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "change_condition_rule_row"
+      }
+    ]
+  }
+}

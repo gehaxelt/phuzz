@@ -1,0 +1,30 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "log_action",
+      "log_module"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "wdev_logger_action"
+      },
+      {
+        "name": "log_action",
+        "value": "fuzz"
+      },
+      {
+        "name": "log_module",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

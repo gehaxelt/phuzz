@@ -1,0 +1,34 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [
+      "interface_sort_nonce"
+    ],
+    "fuzz": [
+      "order"
+    ],
+    "data": [
+      {
+        "name": "interface_sort_nonce",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "update-custom-type-order"
+      }
+    ]
+  }
+}

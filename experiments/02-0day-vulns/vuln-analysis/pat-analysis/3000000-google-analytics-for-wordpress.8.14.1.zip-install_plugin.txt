@@ -1,0 +1,1 @@
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/install_plugin/output/fuzzer-2/vulnerable-candidates.json,823e5ac0-a3c6-4732-b33e-9c7beec09909:  query_params:{"action": "monsterinsights_vue_install_plugin"} body_params:{"slug": "fu"}

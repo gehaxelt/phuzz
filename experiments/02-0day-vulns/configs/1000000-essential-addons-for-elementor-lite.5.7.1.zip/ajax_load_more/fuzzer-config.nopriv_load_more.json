@@ -1,0 +1,85 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [
+      "nonce"
+    ],
+    "fuzz": [
+      "args",
+      "page_id",
+      "widget_id",
+      "exclude_ids",
+      "active_term_id",
+      "active_taxonomy"
+    ],
+    "data": [
+      {
+        "name": "args",
+        "value": "fuzz"
+      },
+      {
+        "name": "nonce",
+        "value": "fuzz"
+      },
+      {
+        "name": "widget_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "exclude_ids",
+        "value": "fuzz"
+      },
+      {
+        "name": "active_term_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "active_taxonomy",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "class",
+      "page",
+      "taxonomy",
+      "post__not_in",
+      "template_info"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "load_more"
+      },
+      {
+        "name": "class",
+        "value": "fuzz"
+      },
+      {
+        "name": "page",
+        "value": "fuzz"
+      },
+      {
+        "name": "taxonomy",
+        "value": "fuzz"
+      },
+      {
+        "name": "post__not_in",
+        "value": "fuzz"
+      },
+      {
+        "name": "template_info",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

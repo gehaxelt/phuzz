@@ -1,0 +1,14 @@
+# Neither the config file or its backup should go
+# into the repo.
+config/config.inc.php.bak
+
+Dockerfile
+
+# Vim swap files
+.*swp
+
+# VS Code editor files
+*.code-workspace
+
+# Used by pytest
+tests/__pycache__/

@@ -1,0 +1,1 @@
+../phuzz-output/3000000-google-analytics-for-wordpress.8.14.1.zip/monsterinsights_ajax_activate_addon/output/fuzzer-1/vulnerable-candidates.json,4edd400f-9a78-455d-bd83-84ba5765b66b:  query_params:{"action": "monsterinsights_activate_addon"} body_params:{"isnetwork": "fu2z", "plugin": "fuzz"}

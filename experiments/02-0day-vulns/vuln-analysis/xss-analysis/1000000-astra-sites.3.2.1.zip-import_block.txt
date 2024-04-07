@@ -1,0 +1,1 @@
+../phuzz-output/1000000-astra-sites.3.2.1.zip/import_block/output/fuzzer-1/vulnerable-candidates.json,2e421421-dc72-4142-9d3b-5a1b1c620b79:  query_params:{"action": "ast_block_templates_import_block", "content": "fu<imgsrc='x' onerror='alert(0xdeadbeef)'>zz"}

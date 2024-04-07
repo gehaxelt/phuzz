@@ -1,0 +1,45 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action",
+      "ewww_manual_nonce"
+    ],
+    "fuzz": [
+      "ewww_attachment_ID",
+      "action",
+      "ewww_force",
+      "ewww_convert"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "ewww_manual_restore"
+      },
+      {
+        "name": "ewww_attachment_ID",
+        "value": "fuzz"
+      },
+      {
+        "name": "action",
+        "value": "fuzz"
+      },
+      {
+        "name": "ewww_manual_nonce",
+        "value": "fuzz"
+      },
+      {
+        "name": "ewww_force",
+        "value": "fuzz"
+      },
+      {
+        "name": "ewww_convert",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

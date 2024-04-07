@@ -1,0 +1,37 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "iframeUrl",
+      "siteUrl"
+    ],
+    "data": [
+      {
+        "name": "iframeUrl",
+        "value": "fuzz"
+      },
+      {
+        "name": "siteUrl",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "check_same_origin"
+      }
+    ]
+  }
+}

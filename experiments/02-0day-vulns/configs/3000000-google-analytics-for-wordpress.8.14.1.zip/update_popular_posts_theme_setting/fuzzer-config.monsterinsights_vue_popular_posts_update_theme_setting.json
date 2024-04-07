@@ -1,0 +1,52 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "POST"
+  ],
+  "body_params": {
+    "weight": 1,
+    "fixed": [],
+    "fuzz": [
+      "type",
+      "theme",
+      "object",
+      "key",
+      "value"
+    ],
+    "data": [
+      {
+        "name": "type",
+        "value": "fuzz"
+      },
+      {
+        "name": "theme",
+        "value": "fuzz"
+      },
+      {
+        "name": "object",
+        "value": "fuzz"
+      },
+      {
+        "name": "key",
+        "value": "fuzz"
+      },
+      {
+        "name": "value",
+        "value": "fuzz"
+      }
+    ]
+  },
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [],
+    "data": [
+      {
+        "name": "action",
+        "value": "monsterinsights_vue_popular_posts_update_theme_setting"
+      }
+    ]
+  }
+}

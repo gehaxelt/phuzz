@@ -1,0 +1,35 @@
+{
+  "target": "http://web/wp-admin/admin-ajax.php",
+  "methods": [
+    "GET"
+  ],
+  "query_params": {
+    "weight": 1,
+    "fixed": [
+      "action"
+    ],
+    "fuzz": [
+      "new_bulk_smush_started",
+      "attachment_id",
+      "is_bulk_resmush"
+    ],
+    "data": [
+      {
+        "name": "action",
+        "value": "wp_smushit_bulk"
+      },
+      {
+        "name": "new_bulk_smush_started",
+        "value": "fuzz"
+      },
+      {
+        "name": "attachment_id",
+        "value": "fuzz"
+      },
+      {
+        "name": "is_bulk_resmush",
+        "value": "fuzz"
+      }
+    ]
+  }
+}

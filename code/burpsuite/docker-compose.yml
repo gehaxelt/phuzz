@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  burpsuite:
+    build:
+      context: ./burpsuite
+      dockerfile: Dockerfile
+    environment:
+      FUZZER_CONFIG: dvwa/sqli_blind_high
+    volumes:
+      - ./fuzzer:/app
+      - ./burpsuite/data:/home/burp/data
+      - ./burpsuite/.java:/home/burp/.java
+    stdin_open: true # docker run -i
+    tty: true # docker run -t

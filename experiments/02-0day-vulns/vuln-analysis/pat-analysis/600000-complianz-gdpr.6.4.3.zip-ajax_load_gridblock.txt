@@ -1,0 +1,1 @@
+../phuzz-output/600000-complianz-gdpr.6.4.3.zip/ajax_load_gridblock/output/fuzzer-1/vulnerable-candidates.json,e6647325-cfee-4c11-8f4f-8d938a460a27:  query_params:{"action": "cmplz_load_gridblock", "template": "fuz"}

