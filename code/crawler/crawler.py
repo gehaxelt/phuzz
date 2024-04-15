@@ -31,19 +31,26 @@ class RequestExtractor:
         try:
             _ = self.context.pages
             return True
-        except Exception:
+        except Exception as e:
+            print(f"Error checking context state: {e}")
             return False
 
     def close_all_other_pages(self, main_page) -> None:
+        print("Closing all other pages...")
         for page in self.context.pages:
             if page != main_page:
                 page.close()
+        print("All other pages closed.")
 
     def interact_with_forms(self) -> None:
+        print("Interacting with forms...")
+        print(f"Context alive before interacting with forms: {self.is_context_alive()}")
         for form in self.page.query_selector_all("form"):
+            print(f"Found form: {form}")
             inputs = form.query_selector_all("input")
             for input_el in inputs:
                 input_type = input_el.get_attribute("type")
+                print(f"Found input of type: {input_type}")
                 if input_type == "text":
                     input_el.fill("test")
                 elif input_type == "password":
@@ -53,26 +60,31 @@ class RequestExtractor:
 
             buttons = form.query_selector_all("button")
             for btn in buttons:
+                print(f"Found button: {btn}")
                 try:
                     btn.click()
                     self.page.wait_for_timeout(self.timeout)
-                except:
-                    pass
+                except Exception as e:
+                    print(f"Error clicking button: {e}")
 
             submits = form.query_selector_all("input[type='submit']")
             for btn in submits:
+                print(f"Found submit button: {btn}")
                 try:
                     btn.click()
                     self.page.wait_for_timeout(self.timeout)
-                except:
-                    pass
+                except Exception as e:
+                    print(f"Error clicking submit: {e}")
+        print(f"Context alive after interacting with forms: {self.is_context_alive()}")
 
     def interact_with_clickables(self, original_url: str) -> None:
+        print("Interacting with clickables...")
+        print(f"Context alive before interacting with clickables: {self.is_context_alive()}")
         clickable_selectors = ["a", "button", "input[type='submit']"]
         main_page = self.page
-
         for selector in clickable_selectors:
             elements = main_page.query_selector_all(selector)
+            print(f"Found {len(elements)} elements for selector: {selector}")
             for index, _ in enumerate(elements):
                 try:
                     self.page.evaluate(
@@ -80,21 +92,25 @@ class RequestExtractor:
                     )
                     self.page.wait_for_timeout(self.timeout)
                     self.interact_with_forms()
-                except:
-                    pass
+                except Exception as e:
+                    print(f"Error interacting with clickable: {e}")
 
             self.interact_with_forms()
             self.scroll_page()
 
         self.close_all_other_pages(main_page)
+        print(f"Context alive after interacting with clickables: {self.is_context_alive()}")
 
     def scroll_page(self) -> None:
+        print("Scrolling page...")
+        print(f"Context alive before scrolling page: {self.is_context_alive()}")
         try:
             self.page.evaluate(
                 "() => { window.scrollTo(0, document.body.scrollHeight); }")
             self.page.wait_for_timeout(self.timeout)
-        except:
-            pass
+        except Exception as e:
+            print(f"Error scrolling page: {e}")
+        print(f"Context alive after scrolling page: {self.is_context_alive()}")
 
 
     def set_cookies(self, cookies):
@@ -147,7 +163,11 @@ class RequestExtractor:
                     self.visited.add(current_url)
 
                     try:
+                        print(f"Navigating to: {current_url}")
                         self.page.goto(current_url, timeout=self.timeout)
+                        print(f"Page loaded: {current_url}")
+                        print(f"Current URL: {self.page.url}")
+                        print(f"Current page title: {self.page.title()}")
                         self.interact_with_forms()
                         self.interact_with_clickables(url)
                         self.scroll_page()
