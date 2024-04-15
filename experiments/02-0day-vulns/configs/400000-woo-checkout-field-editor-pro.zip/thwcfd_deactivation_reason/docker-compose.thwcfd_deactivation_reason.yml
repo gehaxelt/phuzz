@@ -25,14 +25,14 @@ services:
 
   web:
     build:
-      context: ./php-instrumentation
+      context: ./web
       dockerfile: Dockerfile
     environment:
       APPLICATION_TYPE: wordpress
       FUZZER_COVERAGE_PATH: /var/www/html/wp-content/plugins/woo-checkout-field-editor-pro/
       WP_TARGET_PLUGIN: 400000-woo-checkout-field-editor-pro
     volumes:
-      - ./php-instrumentation/applications:/applications/
+      - ./web/applications:/applications/
       - shared-tmpfs:/shared-tmpfs
     ports:
       - 8080:80

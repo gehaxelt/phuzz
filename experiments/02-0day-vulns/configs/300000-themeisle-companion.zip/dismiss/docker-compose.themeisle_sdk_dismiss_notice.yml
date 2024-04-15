@@ -25,14 +25,14 @@ services:
 
   web:
     build:
-      context: ./php-instrumentation
+      context: ./web
       dockerfile: Dockerfile
     environment:
       APPLICATION_TYPE: wordpress
       FUZZER_COVERAGE_PATH: /var/www/html/wp-content/plugins/themeisle-companion/
       WP_TARGET_PLUGIN: 300000-themeisle-companion
     volumes:
-      - ./php-instrumentation/applications:/applications/
+      - ./web/applications:/applications/
       - shared-tmpfs:/shared-tmpfs
     ports:
       - 8080:80

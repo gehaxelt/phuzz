@@ -25,14 +25,14 @@ services:
 
   web:
     build:
-      context: ./php-instrumentation
+      context: ./web
       dockerfile: Dockerfile
     environment:
       APPLICATION_TYPE: wordpress
       FUZZER_COVERAGE_PATH: /var/www/html/wp-content/plugins/all-in-one-wp-security-and-firewall/
       WP_TARGET_PLUGIN: 1000000-all-in-one-wp-security-and-firewall.5.1.8
     volumes:
-      - ./php-instrumentation/applications:/applications/
+      - ./web/applications:/applications/
       - shared-tmpfs:/shared-tmpfs
     ports:
       - 8080:80

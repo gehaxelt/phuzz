@@ -182,14 +182,14 @@ services:
 
   web:
     build:
-      context: ./php-instrumentation
+      context: ./web
       dockerfile: Dockerfile
     environment:
       APPLICATION_TYPE: {application_type}
       FUZZER_COVERAGE_PATH: /var/www/html/{coverage_path}/
       WP_TARGET_PLUGIN: {plugin_name}
     volumes:
-      - ./php-instrumentation/applications:/applications/
+      - ./web/applications:/applications/
       - shared-tmpfs:/shared-tmpfs
     ports:
       - 8080:80
