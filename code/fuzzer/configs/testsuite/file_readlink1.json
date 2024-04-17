@@ -1,0 +1,21 @@
+{
+    "target": "http://web/file_readlink1.php",
+    "methods": [
+        "GET"
+    ],
+    "query_params": {
+        "data": [
+            {
+                "name": "input",
+                "seeds": [
+                    ""
+                ]
+            }
+        ],
+        "fixed": [],
+        "fuzz": [
+            "input"
+        ],
+        "weight": 1.0
+    }
+}

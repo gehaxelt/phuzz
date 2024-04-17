@@ -1,0 +1,34 @@
+{
+    "target": "http://web/xvwa/vulnerabilities/reflected_xss/",
+    "methods": [
+        "GET"
+    ],
+    "cookies": {
+        "data": [
+        ],
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 0.0
+    },
+    "query_params": {
+        "data": [
+            {
+                "name": "item",
+                "seeds": [
+                    "fuzz"
+                ]
+            }
+        ],
+        "fixed": [
+        ],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 1.0
+    }
+}

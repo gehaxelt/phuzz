@@ -1,0 +1,32 @@
+{
+    "target": "http://web/pictures/similar.php",
+    "methods": [
+        "GET"
+    ],
+    "cookies": {
+        "data": [],
+        "fixed": [
+            ".*"
+        ],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 0.0
+    },
+    "query_params": {
+        "data": [
+            {
+                "name": "dummy",
+                "seeds": [
+                    "fuzz"
+                ]
+            }
+        ],
+        "fixed": [
+            "query"
+        ],
+        "fuzz": [
+        ],
+        "weight": 1.0
+    }
+}

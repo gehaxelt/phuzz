@@ -1,0 +1,49 @@
+{
+    "target": "http://web/xss_post.php",
+    "methods": [
+        "POST"
+    ],
+    "cookies": {
+        "data": [
+            {
+                "name": "security_level",
+                "value": "0"
+            }
+        ],
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "login": [
+            "session"
+        ],
+        "weight": 0.0
+    },
+    "body_params": {
+        "data": [
+            {
+                "name": "firstname",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "lastname",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "form",
+                "value": "submit"
+            }
+        ],
+        "fixed": [
+            "form"
+        ],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 1.0
+    }
+}

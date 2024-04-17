@@ -1,0 +1,34 @@
+{
+    "target": "http://web/xvwa/vulnerabilities/fi/",
+    "methods": [
+        "GET"
+    ],
+    "cookies": {
+        "data": [
+        ],
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 0.0
+    },
+    "query_params": {
+        "data": [
+            {
+                "name": "file",
+                "seeds": [
+                    "fuzz"
+                ]
+            }
+        ],
+        "fixed": [
+        ],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 1.0
+    }
+}

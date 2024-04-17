@@ -1,0 +1,43 @@
+{
+    "target": "http://web/xss_href-2.php",
+    "methods": [
+        "GET"
+    ],
+    "cookies": {
+        "data": [
+            {
+                "name": "security_level",
+                "value": "0"
+            }
+        ],
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "login": [
+            "session"
+        ],
+        "weight": 0.0
+    },
+    "query_params": {
+        "data": [
+            {
+                "name": "name",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "action",
+                "value": "vote"
+            }
+        ],
+        "fixed": [
+            "action"
+        ],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 1.0
+    }
+}

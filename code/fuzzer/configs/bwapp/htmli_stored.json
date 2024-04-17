@@ -1,0 +1,48 @@
+{
+    "target": "http://web/htmli_stored.php",
+    "methods": [
+        "POST"
+    ],
+    "cookies": {
+        "data": [
+            {
+                "name": "security_level",
+                "value": "0"
+            }
+        ],
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "login": [
+            "session"
+        ],
+        "weight": 0.0
+    },
+    "body_params": {
+        "data": [
+            {
+                "name": "entry",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "blog",
+                "value": "submit"
+            },
+            {
+                "name": "entry_add",
+                "value": ""
+            }
+        ],
+        "fixed": [
+            "blog",
+            "entry_add"
+        ],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 1.0
+    }
+}

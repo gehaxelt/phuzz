@@ -1,0 +1,25 @@
+{
+    "target": "http://web/index.php?rest_route=/wpfm/v1/file-rename",
+    "methods": [
+        "POST"
+    ],
+    "body_params": {
+        "data": [
+            {
+                "name": "fileid",
+                "value": "45"
+            },
+            {
+                "name": "filename",
+                "value": "fuzz"
+            }
+        ],
+        "fixed": [
+            "fileid"
+        ],
+        "fuzz": [
+            "filename"
+        ],
+        "weight": 1
+    }
+}

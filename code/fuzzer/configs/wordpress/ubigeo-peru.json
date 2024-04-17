@@ -1,0 +1,25 @@
+{
+    "target": "http://web/wp-admin/admin-ajax.php",
+    "methods": [
+        "POST"
+    ],
+    "body_params": {
+        "data": [
+            {
+                "name": "action",
+                "value": "rt_ubigeo_load_distritos_address"
+            },
+            {
+                "name": "idProv",
+                "value": "fuzz"
+            }
+        ],
+        "fixed": [
+            "action"
+        ],
+        "fuzz": [
+            "idProv"
+        ],
+        "weight": 1
+    }
+}

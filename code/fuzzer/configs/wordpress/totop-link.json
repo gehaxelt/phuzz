@@ -1,0 +1,19 @@
+{
+    "target": "http://web/wp-content/plugins/totop-link/totop-link.css.php",
+    "methods": [
+        "GET"
+    ],
+    "query_params": {
+        "data": [
+            {
+                "name": "vars",
+                "value": "fuzz"
+            }
+        ],
+        "fixed": [],
+        "fuzz": [
+            "vars"
+        ],
+        "weight": 1
+    }
+}

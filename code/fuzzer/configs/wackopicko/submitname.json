@@ -1,0 +1,32 @@
+{
+    "target": "http://web/submitname.php",
+    "login": "wackopicko_requests",
+    "methods": [
+        "GET"
+    ],
+    "cookies": {
+        "data": [],
+        "fixed": [
+            ".*"
+        ],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 0.0
+    },
+    "query_params": {
+        "data": [
+            {
+                "name": "value",
+                "seeds": [
+                    "fuzz"
+                ]
+            }
+        ],
+        "fixed": [],
+        "fuzz": [
+            "value"
+        ],
+        "weight": 1.0
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "target": "http://web/index.php",
+    "har_input": "example",
+    "methods": [
+        "GET",
+        "POST"
+    ],
+    "headers": {
+        "data": [
+            {
+                "name": "X-Example",
+                "seeds": [
+                    "fuzz"
+                ]
+            }
+        ],
+        "fixed": [
+            "X-Example"
+        ],
+        "fuzz": [],
+        "weight": 0.5
+    },
+    "cookies": {
+        "filename": "example",
+        "fixed": [
+            "security",
+            "cups",
+            "admin",
+            "PHPSESSID"
+        ],
+        "fuzz": [],
+        "weight": 0.5
+    },
+    "query_params": {
+        "filename": "example",
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "weight": 0.5
+    },
+    "body_params": {
+        "data": [
+            {
+                "name": "submit",
+                "value": "submit"
+            },
+            {
+                "name": "output",
+                "seeds": [
+                    "abc",
+                    "cde"
+                ]
+            }
+        ],
+        "fixed": [
+            "submit"
+        ],
+        "fuzz": [],
+        "weight": 0.3
+    }
+}

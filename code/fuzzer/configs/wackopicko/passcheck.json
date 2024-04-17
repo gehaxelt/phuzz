@@ -1,0 +1,32 @@
+{
+    "target": "http://web/passcheck.php",
+    "request_timeout": 5,
+    "methods": [
+        "POST"
+    ],
+    "cookies": {
+        "data": [],
+        "fixed": [
+            ".*"
+        ],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 0.0
+    },
+    "body_params": {
+        "data": [
+            {
+                "name": "password",
+                "seeds": [
+                    "fuzz"
+                ]
+            }
+        ],
+        "fixed": [],
+        "fuzz": [
+            "password"
+        ],
+        "weight": 1.0
+    }
+}

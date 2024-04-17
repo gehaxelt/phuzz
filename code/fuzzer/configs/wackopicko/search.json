@@ -1,0 +1,45 @@
+{
+    "target": "http://web/pictures/search.php",
+    "methods": [
+        "GET"
+    ],
+    "cookies": {
+        "data": [],
+        "fixed": [
+            ".*"
+        ],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 0.0
+    },
+    "query_params": {
+        "data": [
+            {
+                "name": "query",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "x",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "y",
+                "seeds": [
+                    "fuzz"
+                ]
+            }
+        ],
+        "fixed": [],
+        "fuzz": [
+            "query",
+            "x",
+            "y"
+        ],
+        "weight": 1.0
+    }
+}

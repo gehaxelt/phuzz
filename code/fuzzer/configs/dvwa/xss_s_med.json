@@ -1,0 +1,50 @@
+{
+    "target": "http://web/vulnerabilities/xss_s/",
+    "login": "dvwa_requests",
+    "methods": [
+        "POST"
+    ],
+    "cookies": {
+        "data": [
+            {
+                "name": "security",
+                "value": "medium"
+            }
+        ],
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 0.0
+    },
+    "body_params": {
+        "data": [
+            {
+                "name": "txtName",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "mtxMessage",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "btnSign",
+                "value": "Sign Guestbook"
+            }
+        ],
+        "fixed": [
+            "btnSign"
+        ],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 1.0
+    }
+}

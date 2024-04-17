@@ -1,0 +1,45 @@
+{
+    "target": "http://web/piccheck.php",
+    "methods": [
+        "POST"
+    ],
+    "cookies": {
+        "data": [],
+        "fixed": [
+            ".*"
+        ],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 0.0
+    },
+    "body_params": {
+        "data": [
+            {
+                "name": "MAX_FILE_SIZE",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "userfile",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "name",
+                "seeds": [
+                    "fuzz"
+                ]
+            }
+        ],
+        "fixed": [],
+        "fuzz": [
+            "MAX_FILE_SIZE",
+            "userfile",
+            "name"
+        ],
+        "weight": 1.0
+    }
+}

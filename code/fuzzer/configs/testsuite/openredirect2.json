@@ -1,0 +1,21 @@
+{
+    "target": "http://web/openredirect2.php",
+    "methods": [
+        "GET"
+    ],
+    "query_params": {
+        "data": [
+            {
+                "name": "l",
+                "seeds": [
+                    ""
+                ]
+            }
+        ],
+        "fixed": [],
+        "fuzz": [
+            "l"
+        ],
+        "weight": 1.0
+    }
+}

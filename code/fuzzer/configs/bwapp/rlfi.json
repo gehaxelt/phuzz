@@ -1,0 +1,43 @@
+{
+    "target": "http://web/rlfi.php",
+    "methods": [
+        "GET"
+    ],
+    "cookies": {
+        "data": [
+            {
+                "name": "security_level",
+                "value": "0"
+            }
+        ],
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "login": [
+            "session"
+        ],
+        "weight": 0.0
+    },
+    "query_params": {
+        "data": [
+            {
+                "name": "language",
+                "seeds": [
+                    "fuzz"
+                ]
+            }, 
+            {
+                "name": "action",
+                "value": "go"
+            }
+        ],
+        "fixed": [
+            "action"
+        ],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 1.0
+    }
+}

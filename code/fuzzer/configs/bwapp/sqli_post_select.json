@@ -1,0 +1,43 @@
+{
+    "target": "http://web/sqli_13.php",
+    "methods": [
+        "POST"
+    ],
+    "cookies": {
+        "data": [
+            {
+                "name": "security_level",
+                "value": "0"
+            }
+        ],
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "login": [
+            "session"
+        ],
+        "weight": 0.0
+    },
+    "body_params": {
+        "data": [
+            {
+                "name": "movie",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "action",
+                "value": "go"
+            }
+        ],
+        "fixed": [
+            "action"
+        ],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 1.0
+    }
+}

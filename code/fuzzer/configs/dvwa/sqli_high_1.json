@@ -1,0 +1,39 @@
+{
+    "target": "http://web/vulnerabilities/sqli/",
+    "methods": [
+        "GET"
+    ],
+    "cookies": {
+        "data": [
+            {
+                "name": "security",
+                "value": "high"
+            },
+            {
+                "name": "PHPSESSID",
+                "value": "mjcg99nnfrgfau5dlnf27il0dv"
+            }
+        ],
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "login": [],
+        "weight": 0.0
+    },
+    "query_params": {
+        "data": [
+            {
+                "name": "dummy",
+                "seeds": [
+                    "fuzz"
+                ]
+            }
+        ],
+        "fixed": [],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 1.0
+    }
+}

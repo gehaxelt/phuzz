@@ -1,0 +1,38 @@
+{
+    "target": "http://web/guestbook.php",
+    "methods": [
+        "POST"
+    ],
+    "cookies": {
+        "data": [],
+        "fixed": [
+            ".*"
+        ],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 0.0
+    },
+    "body_params": {
+        "data": [
+            {
+                "name": "comment",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "name",
+                "seeds": [
+                    "fuzz"
+                ]
+            }
+        ],
+        "fixed": [],
+        "fuzz": [
+            "name",
+            "comment"
+        ],
+        "weight": 1.0
+    }
+}

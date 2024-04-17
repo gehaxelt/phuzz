@@ -1,0 +1,45 @@
+{
+    "target": "http://web/vulnerabilities/sqli/session-input.php",
+    "methods": [
+        "POST"
+    ],
+    "cookies": {
+        "data": [
+            {
+                "name": "security",
+                "value": "high"
+            },
+            {
+                "name": "PHPSESSID",
+                "value": "mjcg99nnfrgfau5dlnf27il0dv"
+            }
+        ],
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "login": [],
+        "weight": 0.0
+    },
+    "body_params": {
+        "data": [
+            {
+                "name": "id",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "Submit",
+                "value": "Submit"
+            }
+        ],
+        "fixed": [
+            "Submit"
+        ],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 1.0
+    }
+}

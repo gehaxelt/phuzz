@@ -1,0 +1,19 @@
+{
+    "target": "http://web/wp-content/plugins/seo-local-rank/admin/vendor/datatables/examples/resources/examples.php",
+    "methods": [
+        "POST"
+    ],
+    "body_params": {
+        "data": [
+            {
+                "name": "src",
+                "value": "fuzz"
+            }
+        ],
+        "fixed": [],
+        "fuzz": [
+            "src"
+        ],
+        "weight": 1
+    }
+}

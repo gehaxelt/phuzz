@@ -1,0 +1,38 @@
+{
+    "target": "http://web/directory_traversal_1.php",
+    "methods": [
+        "GET"
+    ],
+    "cookies": {
+        "data": [
+            {
+                "name": "security_level",
+                "value": "0"
+            }
+        ],
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "login": [
+            "session"
+        ],
+        "weight": 0.0
+    },
+    "query_params": {
+        "data": [
+            {
+                "name": "page",
+                "seeds": [
+                    "fuzz"
+                ]
+            }
+        ],
+        "fixed": [
+        ],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 1.0
+    }
+}

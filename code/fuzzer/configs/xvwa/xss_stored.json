@@ -1,0 +1,40 @@
+{
+    "target": "http://web/xvwa/vulnerabilities/stored_xss/",
+    "methods": [
+        "POST"
+    ],
+    "cookies": {
+        "data": [
+        ],
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 0.0
+    },
+    "body_params": {
+        "data": [
+            {
+                "name": "name",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "msg",
+                "seeds": [
+                    "fuzz"
+                ]
+            }
+        ],
+        "fixed": [
+        ],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 1.0
+    }
+}

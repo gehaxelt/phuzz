@@ -1,0 +1,38 @@
+{
+    "target": "http://web/vulnerabilities/xss_d/",
+    "login": "dvwa_requests",
+    "methods": [
+        "GET"
+    ],
+    "cookies": {
+        "data": [
+            {
+                "name": "security",
+                "value": "low"
+            }
+        ],
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 0.0
+    },
+    "query_params": {
+        "data": [
+            {
+                "name": "default",
+                "seeds": [
+                    "fuzz"
+                ]
+            }
+        ],
+        "fixed": [],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 1.0
+    }
+}

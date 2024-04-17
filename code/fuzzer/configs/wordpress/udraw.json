@@ -1,0 +1,25 @@
+{
+    "target": "http://web/wp-admin/admin-ajax.php",
+    "methods": [
+        "POST"
+    ],
+    "body_params": {
+        "data": [
+            {
+                "name": "action",
+                "value": "udraw_convert_url_to_base64"
+            },
+            {
+                "name": "url",
+                "value": "fuzz"
+            }
+        ],
+        "fixed": [
+            "action"
+        ],
+        "fuzz": [
+            "url"
+        ],
+        "weight": 1
+    }
+}

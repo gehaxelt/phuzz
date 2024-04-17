@@ -1,0 +1,19 @@
+{
+    "target": "http://web/wp-content/plugins/usc-e-shop/functions/content-log.php",
+    "methods": [
+        "GET"
+    ],
+    "query_params": {
+        "data": [
+            {
+                "name": "logfile",
+                "value": "fuzz"
+            }
+        ],
+        "fixed": [],
+        "fuzz": [
+            "logfile"
+        ],
+        "weight": 1
+    }
+}

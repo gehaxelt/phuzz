@@ -1,0 +1,44 @@
+{
+    "target": "http://web/vulnerabilities/exec/",
+    "login": "dvwa_requests",
+    "methods": [
+        "POST"
+    ],
+    "cookies": {
+        "data": [
+            {
+                "name": "security",
+                "value": "low"
+            }
+        ],
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 0.0
+    },
+    "body_params": {
+        "data": [
+            {
+                "name": "ip",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "Submit",
+                "value": "Submit"
+            }
+        ],
+        "fixed": [
+            "Submit"
+        ],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 1.0
+    }
+}

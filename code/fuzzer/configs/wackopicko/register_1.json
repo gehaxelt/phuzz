@@ -1,0 +1,59 @@
+{
+    "target": "http://web/users/register.php",
+    "methods": [
+        "POST"
+    ],
+    "cookies": {
+        "data": [],
+        "fixed": [
+            ".*"
+        ],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 0.0
+    },
+    "body_params": {
+        "data": [
+            {
+                "name": "username",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "firstname",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "lastname",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "password",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "againpass",
+                "seeds": [
+                    "fuzz"
+                ]
+            }
+        ],
+        "fixed": [],
+        "fuzz": [
+            "username",
+            "firstname",
+            "lastname",
+            "password",
+            "againpass"
+        ],
+        "weight": 1.0
+    }
+}

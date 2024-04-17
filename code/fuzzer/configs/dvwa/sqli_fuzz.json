@@ -1,0 +1,50 @@
+{
+    "target": "http://web/vulnerabilities/sqli/",
+    "login": "dvwa_requests",
+    "methods": [
+        "GET"
+    ],
+    "cookies": {
+        "data": [
+            {
+                "name": "security",
+                "value": "fuzz"
+            }
+        ],
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 0.0
+    },
+    "query_params": {
+        "data": [
+            {
+                "name": "role",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "id",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "Submit",
+                "value": "Submit"
+            }
+        ],
+        "fixed": [
+            "Submit"
+        ],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 1.0
+    }
+}

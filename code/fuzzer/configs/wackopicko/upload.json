@@ -1,0 +1,66 @@
+{
+    "target": "http://web/pictures/upload.php",
+    "methods": [
+        "POST"
+    ],
+    "cookies": {
+        "data": [],
+        "fixed": [
+            ".*"
+        ],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 0.0
+    },
+    "body_params": {
+        "data": [
+            {
+                "name": "MAX_FILE_SIZE",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "tag",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "name",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "title",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "price",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "pic",
+                "seeds": [
+                    "fuzz"
+                ]
+            }
+        ],
+        "fixed": [],
+        "fuzz": [
+            "MAX_FILE_SIZE",
+            "name",
+            "title",
+            "price",
+            "pic",
+            "tag"
+        ],
+        "weight": 1.0
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "target": "http://web/xvwa/vulnerabilities/sqli_blind/",
+    "methods": [
+        "POST"
+    ],
+    "cookies": {
+        "data": [
+        ],
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 0.0
+    },
+    "body_params": {
+        "data": [
+            {
+                "name": "item",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "search",
+                "value": ""
+            }
+        ],
+        "fixed": [
+            "search"
+        ],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 1.0
+    }
+}

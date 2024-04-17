@@ -1,0 +1,21 @@
+{
+    "target": "http://web/xxe1.php",
+    "methods": [
+        "GET"
+    ],
+    "query_params": {
+        "data": [
+            {
+                "name": "input",
+                "seeds": [
+                    "<root><node/></root>"
+                ]
+            }
+        ],
+        "fixed": [],
+        "fuzz": [
+            "input"
+        ],
+        "weight": 1.0
+    }
+}

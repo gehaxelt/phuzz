@@ -1,0 +1,38 @@
+{
+    "target": "http://web/users/login.php",
+    "methods": [
+        "POST"
+    ],
+    "cookies": {
+        "data": [],
+        "fixed": [
+            ".*"
+        ],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 0.0
+    },
+    "body_params": {
+        "data": [
+            {
+                "name": "username",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "password",
+                "seeds": [
+                    "fuzz"
+                ]
+            }
+        ],
+        "fixed": [],
+        "fuzz": [
+            "password",
+            "username"
+        ],
+        "weight": 1.0
+    }
+}

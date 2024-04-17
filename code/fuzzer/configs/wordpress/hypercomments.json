@@ -1,0 +1,30 @@
+{
+    "target": "http://web",
+    "methods": [
+        "GET"
+    ],
+    "query_params": {
+        "data": [
+            {
+                "name": "hc_action",
+                "value": "delete_xml"
+            },
+            {
+                "name": "result",
+                "value": "success"
+            },
+            {
+                "name": "xml",
+                "value": "fuzz"
+            }
+        ],
+        "fixed": [
+            "hc_action",
+            "result"
+        ],
+        "fuzz": [
+            "xml"
+        ],
+        "weight": 1
+    }
+}

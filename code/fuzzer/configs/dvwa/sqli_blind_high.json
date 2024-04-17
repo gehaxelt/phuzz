@@ -1,0 +1,40 @@
+{
+    "target": "http://web/vulnerabilities/sqli_blind/",
+    "login": "dvwa_requests",
+    "methods": [
+        "GET"
+    ],
+    "cookies": {
+        "data": [
+            {
+                "name": "security",
+                "value": "high"
+            },
+            {
+                "name": "id",
+                "value": "fuzz"
+            }
+        ],
+        "fixed": [
+            "security",
+            "PHPSESSID"
+        ],
+        "fuzz": [
+            "id"
+        ],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 1.0
+    },
+    "query_params": {
+        "data": [
+        ],
+        "fixed": [
+        ],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 0.0
+    }
+}

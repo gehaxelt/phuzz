@@ -1,0 +1,43 @@
+{
+    "target": "http://web/sqli_4.php",
+    "methods": [
+        "GET"
+    ],
+    "cookies": {
+        "data": [
+            {
+                "name": "security_level",
+                "value": "0"
+            }
+        ],
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "login": [
+            "session"
+        ],
+        "weight": 0.0
+    },
+    "query_params": {
+        "data": [
+            {
+                "name": "title",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "action",
+                "value": "search"
+            }
+        ],
+        "fixed": [
+            "action"
+        ],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 1.0
+    }
+}

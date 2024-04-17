@@ -1,0 +1,39 @@
+{
+    "target": "http://web/xvwa/vulnerabilities/sqli/",
+    "methods": [
+        "POST"
+    ],
+    "cookies": {
+        "data": [
+        ],
+        "fixed": [
+            ".*"
+        ],
+        "fuzz": [],
+        "login": [
+            "PHPSESSID"
+        ],
+        "weight": 0.0
+    },
+    "body_params": {
+        "data": [
+            {
+                "name": "search",
+                "seeds": [
+                    "fuzz"
+                ]
+            },
+            {
+                "name": "item",
+                "value": ""
+            }
+        ],
+        "fixed": [
+            "item"
+        ],
+        "fuzz": [
+            ".*"
+        ],
+        "weight": 1.0
+    }
+}
