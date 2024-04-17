@@ -58,7 +58,7 @@ See `./fuzzer/automated_logins/` for more details, but in theory, the same can u
 
 ### Web server / Database / Instrumentation
 
-PHUZZ comes with a `db` container that contains a MySQL server. If the web application requires a different database, add a new container definition to the `docker-compose.yml` and adjust the `web` container definition.
+PHUZZ comes with a `db` container that includes a MySQL server. If the web application requires a different database, add a new container definition to the `docker-compose.yml` and adjust the `web` container definition.
 
 The fuzzed web application has to run in the `web` container. See `./fuzzer/` for how to add a new web application. By default, this repo comes with DVWA, XVWA, bWAPP, WackoPicko, WordPress and a testsuite. 
 
@@ -77,6 +77,8 @@ Last, `REQUIRES_DB` enables a wait-loop for the database container, so that the 
 
 For the WordPress application, the option `WP_TARGET_PLUGIN` defines which plugin should be automatically installed. The plugin has to exist in the `./web/applications/wordpress/_plugins/` folder as a zip file. 
 
+Additionally, each web application in `./web/applications/` can its own `init.sh` shell script to perform additional modifications to the environment within the container upon startup. By default, it waits for the MySQL database to become available and then installs the web application and instrumentation to `/var/www/html/`.
+
 
 ### Fuzzer 
 The fuzzer component can also be configured with several environment options.
@@ -92,6 +94,10 @@ Most important is `FUZZER_CONFIG` which defines what configuration file should b
 
 Furthermore, `FUZZER_SEED` can be set to initialize python's `random.seed` function with a specific seed, e.g. to always generate the same mutations. 
 
+PHUZZ' is modular and thus allows to implement the fuzzing algorithms, e.g. for Mutation, Candidate scoring, Vulnerability detection, as separate python modules.
+By default, it comes with two vulnerability checking modules: `DefaultVulnChecker` and `ParamBasedVulnChecker`. The latter improves the former by checking that fuzzer-generated input actually reaches a vulnerable function, which should provide higher accuracy in the reported findings.
+To change what algorithm modules are used, edit `./fuzzers/fuzzer.py` and change the respective lines at the top of the file and between the `Define Fuzzing modules` comments.
+
 ## Usage
 
 Usually, three docker containers need to be started to run the fuzzer: The database, the webserver and the fuzzer. 
@@ -102,7 +108,7 @@ We suggest to use tmux [3] to have three shells next to each other.
 
 ### Database
 
-Usually, web applications require a database to function. Thus, PHUZZ comes with a MySQL database container named `db`.
+Usually, web applications require a database to function. Thus, PHUZZ comes with a MySQL database container named `db`. However, any other DBMS for which a Docker container exists can be added to PHUZZ. Just edit the docker-compose.yml to include the respective container defintion and change the wait-for-database-lines in the web application's `init.sh`. 
 
 This one should be started first with `docker-compose up db --force-recreate`. Then wait for mysqld to finish the initialization as indicated by the following line:
 

@@ -87,6 +87,9 @@ class Fuzzer:
             shutil.rmtree(self.output_dir)
         os.mkdir(self.output_dir)
 
+        ### 
+        # BEGIN Define Fuzzing modules
+        ####
         self.scoring_formula = DefaultScoringFormula()
         self.mutator = DefaultMutator()
         #self.vulnchecker = DefaultVulnChecker(
@@ -97,7 +100,9 @@ class Fuzzer:
             pathtraversal_errors_folder=self.pathtraversal_errors_folder,
             xxe_errors_folder=self.xxe_errors_folder,
             )
-
+        ### 
+        # END Define Fuzzing modules
+        ####
         os.umask(0)
 
     def _open(self, filepath):

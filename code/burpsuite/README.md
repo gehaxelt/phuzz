@@ -1,7 +1,7 @@
 Burpsuite
 ====================
 
-We instrument BurpSuite Professional [0] using a modified Carbonator [1] to run the blackbox scanner within a headless docker-container.
+We instrument BurpSuite Professional [0] using a modified Carbonator extension [1] to run the blackbox scanner within a headless docker-container.
 
 # Setup
 

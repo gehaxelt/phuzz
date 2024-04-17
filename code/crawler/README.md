@@ -1,9 +1,9 @@
 Crawler Component
 =====================
 
-The crawler component uses a headless Chrome browser instrumented using the playwright library to crawl the web application and output a HAR file with all discovered endpoints. The crawler performs basic interaction with the web application, e.g. following links and submitting forms.
+The crawler component uses a headless Chrome browser instrumented using the playwright library to crawl the web application and output a HAR file with all discovered endpoints. The crawler performs very basic interaction with the web application, e.g. following links and submitting forms.
 
-By default, the entrypoint `http://web/` of the web container, no login scripts and a timeout of 3600s are configured (cf. `crawler.sh`). 
+By default, the entrypoint `http://web/` of the web container, no login scripts and a timeout of 3600s are configured (see `crawler.sh`). 
 
 To run the crawler, execute `docker-compose up crawler --build --force-recreate` from the parent directory, after having brought up the `web` container and the database, if needed.
 
