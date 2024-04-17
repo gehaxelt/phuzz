@@ -35,6 +35,24 @@ The results of our experiments are available in `./experiments/`.
 
 Please also check the subfolders as many have a README with additional information.
 
+## Quick run
+
+```
+# Clone the repository
+git@github.com:gehaxelt/phuzz.git
+cd phuzz/code/
+
+sudo docker-compose up -d db --build --force-recreate
+sleep 15s # give the DB some time to start up - might be shorter or longer depending on your hardware. When in doubt, check with docker-compose logs -f db.
+sudo docker-compose up -d web --build --force-recreate
+sleep 15s # give the DB some time to start up - might be shorter or longer depending on your hardware. When in doubt, check with docker-compose logs -f db.
+
+sudo docker-compose up fuzzer-dvwa-sqli-low-1 --build --force-recreate
+# Let the fuzzer run for a while and terminate it with ctrl+c
+# View the results with
+less fuzzer/output/fuzzer-1/vulnerable-candidates.json
+```
+
 ## Contributions & Future Work
 
 We acknowledge that PHUZZ is research-grade code, although we tried to keep it as usable for future work as possible. For that, PHUZZ is divided into several modules/components using object oriented programming. Thus, incremental improvements to different aspects can be made, e.g. mutation, candidate selection, etc.
