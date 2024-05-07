@@ -3,24 +3,24 @@ import json
 import os
 import queue
 import subprocess
+import time
 import urllib.parse
 
 from playwright.sync_api import sync_playwright
 
-#TIMEOUT = 3000
-
 
 class RequestExtractor:
-    def __init__(self, harfile: str, cookie_path: str, timeout: int) -> None:
+    def __init__(self, harfile: str, cookie_path: str, timeout: int, baseurl: str) -> None:
         self.harfile = harfile
         self.browser = None
         self.context = None
         self.page = None
         self.visited = set()
-        self.queue = queue.Queue()
+        self.queue = [] #queue.Queue()
         self.login_script_path = None
         self.cookie_path = cookie_path
         self.timeout = timeout
+        self.baseurl = baseurl
 
     def setup_browser_and_page(self) -> None:
         self.browser = self.playwright.chromium.launch(headless=True)
@@ -66,6 +66,8 @@ class RequestExtractor:
                     self.page.wait_for_timeout(self.timeout)
                 except Exception as e:
                     print(f"Error clicking button: {e}")
+                    self.page.screenshot(path=f"screenshots/{time.time()}_button_click_error.png")
+                    print("Screenshot captured for button click error.")
 
             submits = form.query_selector_all("input[type='submit']")
             for btn in submits:
@@ -75,31 +77,9 @@ class RequestExtractor:
                     self.page.wait_for_timeout(self.timeout)
                 except Exception as e:
                     print(f"Error clicking submit: {e}")
+                    self.page.screenshot(path=f"screenshots/{time.time()}_submit_click_error.png")
+                    print("Screenshot captured for submit click error.")
         print(f"Context alive after interacting with forms: {self.is_context_alive()}")
-
-    def interact_with_clickables(self, original_url: str) -> None:
-        print("Interacting with clickables...")
-        print(f"Context alive before interacting with clickables: {self.is_context_alive()}")
-        clickable_selectors = ["a", "button", "input[type='submit']"]
-        main_page = self.page
-        for selector in clickable_selectors:
-            elements = main_page.query_selector_all(selector)
-            print(f"Found {len(elements)} elements for selector: {selector}")
-            for index, _ in enumerate(elements):
-                try:
-                    self.page.evaluate(
-                        f"document.querySelectorAll('{selector}')" f"[{index}].click();"
-                    )
-                    self.page.wait_for_timeout(self.timeout)
-                    self.interact_with_forms()
-                except Exception as e:
-                    print(f"Error interacting with clickable: {e}")
-
-            self.interact_with_forms()
-            self.scroll_page()
-
-        self.close_all_other_pages(main_page)
-        print(f"Context alive after interacting with clickables: {self.is_context_alive()}")
 
     def scroll_page(self) -> None:
         print("Scrolling page...")
@@ -110,6 +90,8 @@ class RequestExtractor:
             self.page.wait_for_timeout(self.timeout)
         except Exception as e:
             print(f"Error scrolling page: {e}")
+            self.page.screenshot(path=f"screenshots/{time.time()}_scroll_error.png")
+            print("Screenshot captured for scroll error.")
         print(f"Context alive after scrolling page: {self.is_context_alive()}")
 
 
@@ -141,6 +123,32 @@ class RequestExtractor:
         print("Found login cookies", login_cookies)
         return login_cookies
 
+    def collect_links(self):
+        print("Collecting links...")
+        print(f"Context alive before interacting with clickables: {self.is_context_alive()}")
+        main_page = self.page
+        ahrefs = main_page.query_selector_all("a")
+        #print(f"Found {len(ahrefs)} ahrefs")
+        for ahref in ahrefs:
+            try:
+                href = ahref.get_attribute('href')
+                if href.startswith("#"):
+                    # Ignore links to elements on the same page
+                    continue
+                new_url = urllib.parse.urljoin(self.baseurl, href)
+                if not new_url.startswith(self.baseurl):
+                    continue
+                if new_url in self.visited or new_url in self.queue:
+                    continue
+                print(f"Adding new URL to queue: {new_url}")
+                self.queue.append(new_url)
+            except Exception as e:
+                print(f"Error getting href")
+                self.page.screenshot(path=f"screenshots/{time.time()}_clickable_interaction_error.png")
+                print("Screenshot captured for clickable interaction error.")
+
+        print(f"Context alive after collecting links: {self.is_context_alive()}")
+
     def extract_requests(self, url: str) -> None:
         with sync_playwright() as playwright:
             self.playwright = playwright
@@ -151,15 +159,17 @@ class RequestExtractor:
                 if cookies:
                     self.set_cookies(cookies)
 
-            self.queue.put(url)
+            self.queue.append(url)
 
             try:
-                while not self.queue.empty():
-                    current_url = self.queue.get()
+                while len(self.queue):
+                    current_url = self.queue.pop(0)
                     if current_url in self.visited or not is_same_domain(
                         url, current_url
                     ):
                         continue
+                    print(f"The queue has {len(self.queue)} URLs left.")
+                    print(f"I will work on URL: {current_url}")
                     self.visited.add(current_url)
 
                     try:
@@ -168,14 +178,17 @@ class RequestExtractor:
                         print(f"Page loaded: {current_url}")
                         print(f"Current URL: {self.page.url}")
                         print(f"Current page title: {self.page.title()}")
-                        self.interact_with_forms()
-                        self.interact_with_clickables(url)
                         self.scroll_page()
+                        self.collect_links()
+                        self.interact_with_forms()
+                        # self.interact_with_clickables(url)
                         if not self.is_context_alive():
                             print("Context was destroyed, breaking out...")
                             break
                     except Exception as e:
                         print(f"Error navigating to {current_url}: {e}")
+                        self.page.screenshot(path=f"screenshots/{time.time()}_navigation_error.png")
+                        print("Screenshot captured for navigation error.")
 
             finally:
                 if self.is_context_alive():
@@ -192,6 +205,13 @@ def is_same_domain(original_url: str, new_url: str) -> bool:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Extract requests from a website.")
+    parser.add_argument(
+        "--baseurl",
+        metavar="URL",
+        type=str,
+        required=True,
+        help="The baseurl URL to use for URLs",
+    )
     parser.add_argument(
         "--entrypoint",
         metavar="URL",
@@ -230,7 +250,7 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    request_extractor = RequestExtractor(args.harfile, args.cookie_path, args.timeout)
+    request_extractor = RequestExtractor(args.harfile, args.cookie_path, args.timeout, args.baseurl)
     request_extractor.login_script_path = args.login_script_path
     request_extractor.extract_requests(args.entrypoint)
 
