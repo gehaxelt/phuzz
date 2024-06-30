@@ -21,7 +21,22 @@ PHUZZ is a grey-box coverage-guided fuzzer for PHP web applications developed by
 If you use PHUZZ, please cite it as:
 
 ```
-TBA
+@inproceedings{10.1145/3634737.3661137,
+author = {Neef, Sebastian and Kleissner, Lorenz and Seifert, Jean-Pierre},
+title = {What All the PHUZZ Is About: A Coverage-guided Fuzzer for Finding Vulnerabilities in PHP Web Applications},
+year = {2024},
+isbn = {9798400704826},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3634737.3661137},
+doi = {10.1145/3634737.3661137},
+booktitle = {Proceedings of the 19th ACM Asia Conference on Computer and Communications Security},
+pages = {1523–1538},
+numpages = {16},
+keywords = {PHUZZ, coverage-guided fuzzing, greybox fuzzing, fuzz testing, PHP, vulnerability discovery, web security, SQL injection, remote command execution, cross-site scripting},
+location = {Singapore, Singapore},
+series = {ASIA CCS '24}
+}
 ```
 
 ![PHUZZ overview](./doc/phuzz-overview.png)
@@ -72,4 +87,4 @@ Again, feel free to reach out to us if you would like to have a quick chat on ho
 
 ## References
 
-- [0] Link to paper TBA
+- [0] https://dl.acm.org/doi/10.1145/3634737.3661137
