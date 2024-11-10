@@ -85,6 +85,11 @@ As for future work, the following features would be great to see in PHUZZ:
 
 Again, feel free to reach out to us if you would like to have a quick chat on how to improve PHUZZ.
 
+## CSAW'24 Poster
+This work has won the CSAW'24 Applied Research Competition. 
+
+![PHUZZ poster](./doc/poster/csaw-poster.png)
+
 ## References
 
 - [0] https://dl.acm.org/doi/10.1145/3634737.3661137
