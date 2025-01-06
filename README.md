@@ -54,7 +54,7 @@ Please also check the subfolders as many have a README with additional informati
 
 ```
 # Clone the repository
-git@github.com:gehaxelt/phuzz.git
+git clone https://github.com/gehaxelt/phuzz.git
 cd phuzz/code/
 
 sudo docker-compose up -d db --build --force-recreate
