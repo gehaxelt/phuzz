@@ -63,7 +63,7 @@ services:
       - 8181:8181
 
   db:
-    image: mysql:5
+    image: mysql
     command: mysqld
     environment:
       MYSQL_DATABASE: db
