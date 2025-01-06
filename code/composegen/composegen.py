@@ -6,7 +6,7 @@ from typing import List
 
 
 def get_template(application_type, coverage_path) -> str:
-    return f"""version: "3.7"
+    return f"""
 services:
   composegen:
     build:
