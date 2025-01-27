@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y iputils-ping dnsutils zip # For web too
 
 RUN docker-php-ext-configure bcmath
 RUN docker-php-ext-configure exif
-RUN docker-php-ext-configure gd
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp
 RUN docker-php-ext-configure intl
 RUN docker-php-ext-configure pdo_mysql 
 RUN docker-php-ext-configure mysqli
