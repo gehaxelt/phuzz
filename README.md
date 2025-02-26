@@ -1,7 +1,7 @@
 PHUZZ
 =====================================
 
-PHUZZ is a grey-box coverage-guided fuzzer for PHP web applications developed by TBA to be published at AsiaCCS 2024 [0]. 
+PHUZZ is a grey-box coverage-guided fuzzer for PHP web applications developed by Sebastian Neef, Lorenz Kleissner & Jean-Pierre Seifert and was published at AsiaCCS 2024 [0]. 
 
 ## Features
 
